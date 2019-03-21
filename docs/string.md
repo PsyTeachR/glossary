@@ -1,0 +1,4 @@
+
+## string
+
+A piece of text inside of quotes. For example, `"I sense the rains down in Africa"` is a string. Numbers inside of quotes can be a string; `"19"` is a string, while `19` is not.
