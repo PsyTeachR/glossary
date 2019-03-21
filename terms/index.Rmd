@@ -1,4 +1,4 @@
-## index {#index_}
+## index
 
 The number that represents an [element](#element)'s location in a [vector](#vector).
 
