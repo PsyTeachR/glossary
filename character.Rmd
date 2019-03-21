@@ -1,0 +1,12 @@
+## character
+
+A [data type](#data-type) representing [strings](#string) of text.
+
+Examples of character data are:
+
+```{r character-ex}
+"I am a string of characters"
+paste("The answer is ", 6+6)
+as.character(100)
+```
+

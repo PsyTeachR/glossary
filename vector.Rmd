@@ -13,7 +13,7 @@ fun_to_play_at <- c(25, 13, 3, 1)
 likert <- 1:7
 ```
 
-The variable `letters` is a built-in vector with the latin letters in order. You can select part of a vector by putting the numeric location of what element you want inside of square brackets after the vector. You can even put a vector of numbers inside the square brackets to select several elements.
+The variable `letters` is a built-in vector with the latin letters in order. You can select part of a vector by putting the numeric location of what [element](#element) you want inside of square brackets after the vector. You can even put a vector of numbers inside the square brackets to select several elements.
 
 ```{r vector-demo2}
 letters[26]
