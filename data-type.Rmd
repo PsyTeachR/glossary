@@ -7,9 +7,18 @@
 
 If you want to know what data type a variable is, use the function `typeof`.
 
-```{r data-type-demo}
+```{r data-type-demo-1}
 typeof(10)
+```
+
+```{r data-type-demo-2}
 typeof("10")
+```
+
+```{r data-type-demo-3}
 typeof(10L)
+```
+
+```{r data-type-demo-4}
 typeof(10 == 10)
 ```
