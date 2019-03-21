@@ -2,7 +2,7 @@
 
 * [integer](#integer) (whole numbers like 1L, -10L, 3000L)
 * [double](#double) (numbers like -0.223, 10.324, 1e4)
-* [character](#character)
+* [character](#character) (letters or words like "I love R")
 * logical (`TRUE` or `FALSE`)
 
 If you want to know what data type a variable is, use the function `typeof`.
