@@ -1,7 +1,7 @@
 ## data type
 
 * [integer](#integer) (whole numbers like 1L, -10L, 3000L)
-* double (numbers like -0.223, 10.324, 1e4)
+* [double](#double) (numbers like -0.223, 10.324, 1e4)
 * [string](#string)
 * logical (`TRUE` or `FALSE`)
 
