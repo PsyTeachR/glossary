@@ -1,0 +1,8 @@
+## project
+
+A project is a way to organise related files in RStudio. Choose **`New Project...`** under the **`File`** menu to create a new project in a new folder, organise an existing folder of files as a project, or download a version controlled repository as a project.
+
+```{r new-project, fig.cap="Start a new project"}
+knitr::include_graphics("../images/new_project.png")
+```
+
