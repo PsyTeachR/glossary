@@ -1,3 +1,5 @@
 ## double
 
-Doubles are a [data type](#data-type) representing any type of number. Examples of doubles are `1`, `1.0`, `-0.01`, or `1e4`.
+A [data type](#data-type) representing <span class="shortdef">a real decimal number</span>. 
+
+Examples of doubles are `1`, `1.0`, `-0.01`, or `1e4`.

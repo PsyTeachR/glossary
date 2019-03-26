@@ -1,6 +1,6 @@
 ## argument
 
-A variable that provides input to a [function](#function).
+<span class="shortdef">A variable that provides input to a [function](#function).</span>
 
 For example, the first **argument** to the function `rnorm()` is `n` (the number of observations).
 

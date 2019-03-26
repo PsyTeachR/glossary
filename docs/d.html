@@ -105,7 +105,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./">Glossary</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#numeric"><i class="fa fa-check"></i>numeric</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html"><i class="fa fa-check"></i>A</a><ul>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 </ul></li>
@@ -141,7 +143,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="l.html"><a href="l.html"><i class="fa fa-check"></i>L</a></li>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html"><i class="fa fa-check"></i>M</a></li>
 <li class="chapter" data-level="" data-path="g-1.html"><a href="g-1.html"><i class="fa fa-check"></i>G</a><ul>
-<li class="chapter" data-level="" data-path="g-1.html"><a href="g-1.html#numeric"><i class="fa fa-check"></i>numeric</a></li>
+<li class="chapter" data-level="" data-path="g-1.html"><a href="g-1.html#numeric-1"><i class="fa fa-check"></i>numeric</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html"><i class="fa fa-check"></i>O</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html"><i class="fa fa-check"></i>P</a><ul>
@@ -195,11 +197,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <div id="data-type" class="section level2">
 <h2>data type</h2>
+<p><span class="shortdef">The kind of data represented by an object.</span></p>
 <ul>
-<li><a href="i.html#integer">integer</a> (whole numbers like 1L, -10L, 3000L)</li>
-<li><a href="d.html#double">double</a> (numbers like -0.223, 10.324, 1e4)</li>
+<li><a href="i.html#integer">integer</a> (whole numbers like <code>1L</code>, <code>-10L</code>, <code>3000L</code>)</li>
+<li><a href="index.html#numeric">numeric</a>/<a href="d.html#double">double</a> (numbers like <code>-0.223</code>, <code>10.324</code>, <code>1e4</code>)</li>
 <li><a href="c.html#character">character</a> (letters or words like &quot;I love R&quot;)</li>
 <li>logical (<code>TRUE</code> or <code>FALSE</code>)</li>
+<li>complex (numbers with real and imaginary parts like <code>2i</code>)</li>
 </ul>
 <p>If you want to know what data type a variable is, use the function <code>typeof</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(<span class="dv">10</span>)</code></pre></div>
@@ -210,6 +214,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <pre><code>## [1] &quot;integer&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(<span class="dv">10</span> <span class="op">==</span><span class="st"> </span><span class="dv">10</span>)</code></pre></div>
 <pre><code>## [1] &quot;logical&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">typeof</span>(10i)</code></pre></div>
+<pre><code>## [1] &quot;complex&quot;</code></pre>
 
 </div>
 <div id="data-wrangling" class="section level2">
@@ -219,7 +225,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="double" class="section level2">
 <h2>double</h2>
-<p>Doubles are a <a href="d.html#data-type">data type</a> representing any type of number. Examples of doubles are <code>1</code>, <code>1.0</code>, <code>-0.01</code>, or <code>1e4</code>.</p>
+<p>A <a href="d.html#data-type">data type</a> representing <span class="shortdef">a real decimal number</span>.</p>
+<p>Examples of doubles are <code>1</code>, <code>1.0</code>, <code>-0.01</code>, or <code>1e4</code>.</p>
 
 </div>
 </div>

@@ -105,7 +105,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./">Glossary</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#numeric"><i class="fa fa-check"></i>numeric</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html"><i class="fa fa-check"></i>A</a><ul>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 </ul></li>
@@ -141,7 +143,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="l.html"><a href="l.html"><i class="fa fa-check"></i>L</a></li>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html"><i class="fa fa-check"></i>M</a></li>
 <li class="chapter" data-level="" data-path="g-1.html"><a href="g-1.html"><i class="fa fa-check"></i>G</a><ul>
-<li class="chapter" data-level="" data-path="g-1.html"><a href="g-1.html#numeric"><i class="fa fa-check"></i>numeric</a></li>
+<li class="chapter" data-level="" data-path="g-1.html"><a href="g-1.html#numeric-1"><i class="fa fa-check"></i>numeric</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html"><i class="fa fa-check"></i>O</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html"><i class="fa fa-check"></i>P</a><ul>
@@ -195,7 +197,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <div id="character" class="section level2">
 <h2>character</h2>
-<p>A <a href="d.html#data-type">data type</a> representing <a href="s.html#string">strings</a> of text.</p>
+<p><span class="shortdef">A <a href="d.html#data-type">data type</a> representing <a href="s.html#string">strings</a> of text.</span></p>
 <p>Examples of character data are:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;I am a string of characters&quot;</span>
 <span class="kw">paste</span>(<span class="st">&quot;The answer is &quot;</span>, <span class="dv">6</span><span class="op">+</span><span class="dv">6</span>)
@@ -236,7 +238,7 @@ v2 &lt;-<span class="st"> </span><span class="dv">11</span><span class="op">:</s
 <pre><code>##  [1]  1  2  3  4  5 11 12 13 14 15</code></pre>
 <div class="warning">
 <p>
-Remember, a <a href="v.html#vector">vector</a> can only have one <a href="#data_type">data type</a>. So if you concatenate a <a href="s.html#string">string</a> vector and a <a href="g-1.html#numeric">numeric</a> vector, the numbers will get turned into their string versions. If you concatenate an <a href="i.html#integer">integer</a> and a <a href="i.html#integer">double</a> vector, the integers will be converted to doubles.
+Remember, a <a href="v.html#vector">vector</a> can only have one <a href="#data_type">data type</a>. So if you concatenate a <a href="s.html#string">string</a> vector and a <a href="index.html#numeric">numeric</a> vector, the numbers will get turned into their string versions. If you concatenate an <a href="i.html#integer">integer</a> and a <a href="i.html#integer">double</a> vector, the integers will be converted to doubles.
 </p>
 </div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;e&quot;</span>)
