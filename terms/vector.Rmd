@@ -1,6 +1,8 @@
 ## vector
 
-This is a type of data structure that is basically a list of things like T/F values, numbers, or strings. It can get very complicated (see [Ch 20 of R for Data Science](http://r4ds.had.co.nz/vectors.html) for a thorough explanation), but at first you just need to be able to understand that the following things are examples of vectors:
+<dfn>A type of data structure that is basically a list of things like T/F values, numbers, or strings.</dfn> 
+
+It can get very complicated (see [Ch 20 of R for Data Science](http://r4ds.had.co.nz/vectors.html) for a thorough explanation), but at first you just need to be able to understand that the following things are examples of vectors:
 
 ```{r vector-demo1}
 # use the c() function to make a vector of strings or numbers

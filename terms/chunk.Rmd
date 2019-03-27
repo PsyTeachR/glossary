@@ -1,6 +1,8 @@
 ## chunk
 
-In an RMarkdown file (`.Rmd`), you can include a block (or "chunk") of R code by surrounding the code as in the example below:
+<dfn>A block of R code in an R Markdown file.</dfn>
+
+In an R Markdown file (`.Rmd`), you can include a chunk by surrounding the code as in the example below:
 
 ```{r chunk-example, eval = FALSE, verbatim="r chunk-name"}
 mean_age <- mean(ages) %>% round(2)

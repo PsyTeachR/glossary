@@ -1,6 +1,6 @@
 ## version control
 
-Version control is a way to save a record of changes to your files. 
+<dfn>A way to save a record of changes to your files.</dfn>
 
 [Git](#git) is one type of version control that is most commonly used with RStudio. [GitHub](#github) is a cloud-based service for storing and sharing your version controlled files.
 

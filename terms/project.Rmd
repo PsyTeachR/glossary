@@ -1,6 +1,8 @@
 ## project
 
-A project is <span class="shortdef">a way to organise related files in RStudio</span>. Choose **`New Project...`** under the **`File`** menu to create a new project in a new folder, organise an existing folder of files as a project, or download a version controlled repository as a project.
+<dfn>A way to organise related files in RStudio</dfn>. 
+
+Choose **`New Project...`** under the **`File`** menu to create a new project in a new folder, organise an existing folder of files as a project, or download a version controlled repository as a project.
 
 ```{r new-project, echo=FALSE, fig.cap="Start a new project"}
 knitr::include_graphics("images/new_project.png")

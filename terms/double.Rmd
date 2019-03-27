@@ -1,5 +1,5 @@
 ## double
 
-A [data type](#data-type) representing <span class="shortdef">a real decimal number</span>. 
+<dfn>A [data type](#data-type) representing a real decimal number</dfn>. 
 
 Examples of doubles are `1`, `1.0`, `-0.01`, or `1e4`.

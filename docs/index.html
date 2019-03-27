@@ -25,7 +25,7 @@
 <meta name="author" content="psyTeachR Team">
 
 
-<meta name="date" content="2019-03-26">
+<meta name="date" content="2019-03-27">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -105,9 +105,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./">Glossary</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#numeric"><i class="fa fa-check"></i>numeric</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html"><i class="fa fa-check"></i>A</a><ul>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 </ul></li>
@@ -143,7 +141,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="l.html"><a href="l.html"><i class="fa fa-check"></i>L</a></li>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html"><i class="fa fa-check"></i>M</a></li>
 <li class="chapter" data-level="" data-path="g-1.html"><a href="g-1.html"><i class="fa fa-check"></i>G</a><ul>
-<li class="chapter" data-level="" data-path="g-1.html"><a href="g-1.html#numeric-1"><i class="fa fa-check"></i>numeric</a></li>
+<li class="chapter" data-level="" data-path="g-1.html"><a href="g-1.html#numeric"><i class="fa fa-check"></i>numeric</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html"><i class="fa fa-check"></i>O</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html"><i class="fa fa-check"></i>P</a><ul>
@@ -195,45 +193,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="header">
 <h1 class="title">Glossary</h1>
 <p class="author"><em>psyTeachR Team</em></p>
-<p class="date"><em>2019-03-26</em></p>
+<p class="date"><em>2019-03-27</em></p>
 </div>
 <div id="overview" class="section level1 unnumbered">
 <h1>Overview</h1>
 <p>I hope this glossary is useful!</p>
 
-<div id="numeric" class="section level2">
-<h2>numeric</h2>
-<p>A <a href="d.html#data-type">data type</a> representing <span class="shortdef">a real decimal number or integer</span>. The <a href="i.html#integer">integer</a> and <a href="d.html#double">double</a> data types are numeric.</p>
-<p>You can check if a variable is numeric using the function <code>is.numeric</code> and you can convert a variable to its numeric representation using the function <code>as.numeric</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.numeric</span>(<span class="fl">2.4</span>)</code></pre></div>
-<pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.numeric</span>(2L)</code></pre></div>
-<pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># complex numbers are not numeric </span>
-<span class="kw">is.numeric</span>(2i)</code></pre></div>
-<pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.numeric</span>(<span class="st">&quot;A&quot;</span>)</code></pre></div>
-<pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># numbers represented as strings are not numeric</span>
-<span class="kw">is.numeric</span>(<span class="st">&quot;3&quot;</span>)</code></pre></div>
-<pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">as.numeric</span>(<span class="fl">2.4</span>)</code></pre></div>
-<pre><code>## [1] 2.4</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">as.numeric</span>(2L)</code></pre></div>
-<pre><code>## [1] 2</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># the imaginary part of complex numbers is discarded when converting to numeric</span>
-<span class="kw">as.numeric</span>(<span class="dv">3</span><span class="op">+</span>2i)</code></pre></div>
-<pre><code>## Warning: imaginary parts discarded in coercion</code></pre>
-<pre><code>## [1] 3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># strings that do not represent numbers are converted to NA</span>
-<span class="kw">as.numeric</span>(<span class="st">&quot;A&quot;</span>)</code></pre></div>
-<pre><code>## Warning: NAs introduced by coercion</code></pre>
-<pre><code>## [1] NA</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># numbers represented as strings can be convertd to their numeric version</span>
-<span class="kw">as.numeric</span>(<span class="st">&quot;3&quot;</span>)</code></pre></div>
-<pre><code>## [1] 3</code></pre>
-
-</div>
 </div>
 <div class="psyteachr_footer">
   

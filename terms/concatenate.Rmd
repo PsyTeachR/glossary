@@ -1,6 +1,8 @@
 ## concatenate
 
-When referring to strings, concatenate means to paste them together using the function `paste` (adds a space between strings) or `paste0` (doesn't add anything between strings). 
+<dfn>To combine strings or vectors.</dfn>
+
+When referring to strings, concatenate means to add strings together using the function `paste` (adds a space between strings) or `paste0` (doesn't add anything between strings). 
 
 ```{r concatenate-demo1}
 subject_name <- "Lisa"

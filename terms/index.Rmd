@@ -1,5 +1,5 @@
 ## index
 
-The number that represents an [element](#element)'s location in a [vector](#vector).
+<dfn>The number that represents an [element](#element)'s location in a [vector](#vector).</dfn>
 
 For example, the **index** of the letter `E` in the vector `LETTERS` is 5.

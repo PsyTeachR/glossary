@@ -1,5 +1,5 @@
 ## git
 
-Git is one type of [version control](#version-control) software.
+<dfn>One type of [version control](#version-control) software.</dfn>
 
 [Set up git and github](https://debruine.github.io/tutorials/git-and-github.html) with RStudio.

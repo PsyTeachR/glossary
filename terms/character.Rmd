@@ -1,6 +1,6 @@
 ## character
 
-<span class="shortdef">A [data type](#data-type) representing [strings](#string) of text.</span>
+<dfn>A [data type](#data-type) representing [strings](#string) of text.</dfn>
 
 Examples of character data are:
 

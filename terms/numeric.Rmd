@@ -1,3 +1,51 @@
 ## numeric
 
-The integer and double [data types](#data-type) are numeric.
+<dfn>A [data type](#data-type) representing a real decimal number or integer</dfn>. The [integer](#integer) and [double](#double) data types are numeric.
+
+You can check if a variable is numeric using the function `is.numeric` and you can convert a variable to its numeric representation using the function `as.numeric`.
+
+```{r is-numeric1}
+is.numeric(2.4)
+```
+
+```{r is-numeric2}
+is.numeric(2L)
+```
+
+```{r is-numeric3}
+# complex numbers are not numeric 
+is.numeric(2i)
+```
+
+```{r is-numeric4}
+is.numeric("A")
+```
+
+```{r is-numeric5}
+# numbers represented as strings are not numeric
+is.numeric("3")
+```
+
+```{r as-numeric1}
+as.numeric(2.4)
+```
+
+```{r as-numeric2}
+as.numeric(2L)
+```
+
+```{r as-numeric3}
+# the imaginary part of complex numbers is discarded when converting to numeric
+as.numeric(3+2i)
+```
+
+```{r as-numeric4}
+# strings that do not represent numbers are converted to NA
+as.numeric("A")
+```
+
+```{r as-numeric5}
+# numbers represented as strings can be convertd to their numeric version
+as.numeric("3")
+```
+

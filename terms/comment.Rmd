@@ -1,6 +1,6 @@
 ## comment
 
-You can annotate `.R` files or [chunks](#chunk) in `.Rmd` files with comments by prefacing each line of the coment with one or more hash symbols (`#`).
+<dfn>You can annotate `.R` files or [chunks](#chunk) in `.Rmd` files with comments by prefacing each line of the coment with one or more hash symbols (`#`).</dfn>
 
 ```{r comment-demo}
 # I'm demonstrating comments in this chunk
