@@ -1,0 +1,28 @@
+## value
+
+<dfn>A single number or piece of data.</dfn> 
+
+In a tidy dataset, each cell contains only one value.
+
+The `age` column contains 3 values: mean, minimum and maximum.
+
+```{r, message=FALSE}
+library(dplyr)
+library(tidyr)
+
+untidy <- data.frame(
+  group = c("A", "B"),
+  age = c("20.4 [18-25]", "19.9 [18-24]")
+)
+```
+
+`r knitr::kable(untidy)`
+
+```{r}
+tidy <- untidy %>%
+  separate(age, c("mean", "min", "max"), 
+           sep = "( \\[|-|\\])",
+           extra = "drop")
+```
+
+`r knitr::kable(tidy)`

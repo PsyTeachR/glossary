@@ -1,0 +1,36 @@
+## observation
+
+<dfn>All of the data about a single trial or question.</dfn>
+
+In a tidy dataset, each row contains only one observation.
+
+Each row contains 3 observations:
+
+```{r, message=FALSE}
+library(dplyr)
+library(tidyr)
+
+untidy <- data.frame(
+  id = 1:5,
+  score_1 = sample(1:7, 5),
+  score_2 = sample(1:7, 5),
+  score_3 = sample(1:7, 5),
+  rt_1 = rnorm(5, 800, 100) %>% round(),
+  rt_2 = rnorm(5, 800, 100) %>% round(),
+  rt_3 = rnorm(5, 800, 100) %>% round()
+)
+```
+
+`r knitr::kable(untidy)`
+
+Now each row contains 1 observation:
+
+```{r}
+tidy <- untidy %>%
+  gather(var, val, score_1:rt_3) %>%
+  separate(var, c("var", "trial")) %>%
+  spread(var, val)
+```
+
+`r knitr::kable(tidy)`
+

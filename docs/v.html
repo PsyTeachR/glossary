@@ -176,7 +176,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html"><i class="fa fa-check"></i>N</a><ul>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html#numeric"><i class="fa fa-check"></i>numeric</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="o.html"><a href="o.html"><i class="fa fa-check"></i>O</a></li>
+<li class="chapter" data-level="" data-path="o.html"><a href="o.html"><i class="fa fa-check"></i>O</a><ul>
+<li class="chapter" data-level="" data-path="o.html"><a href="o.html#observation"><i class="fa fa-check"></i>observation</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html"><i class="fa fa-check"></i>P</a><ul>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#package"><i class="fa fa-check"></i>package</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
@@ -195,6 +197,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html"><i class="fa fa-check"></i>T</a></li>
 <li class="chapter" data-level="" data-path="u.html"><a href="u.html"><i class="fa fa-check"></i>U</a></li>
 <li class="chapter" data-level="" data-path="v.html"><a href="v.html"><i class="fa fa-check"></i>V</a><ul>
+<li class="chapter" data-level="" data-path="v.html"><a href="v.html#value"><i class="fa fa-check"></i>value</a></li>
 <li class="chapter" data-level="" data-path="v.html"><a href="v.html#variable"><i class="fa fa-check"></i>variable</a></li>
 <li class="chapter" data-level="" data-path="v.html"><a href="v.html#vector"><i class="fa fa-check"></i>vector</a></li>
 <li class="chapter" data-level="" data-path="v.html"><a href="v.html#version-control"><i class="fa fa-check"></i>version control</a></li>
@@ -232,6 +235,66 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="v" class="section level1">
 <h1>V</h1>
 
+<div id="value" class="section level2">
+<h2>value</h2>
+<p><dfn>A single number or piece of data.</dfn></p>
+<p>In a tidy dataset, each cell contains only one value.</p>
+<p>The <code>age</code> column contains 3 values: mean, minimum and maximum.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
+<span class="kw">library</span>(tidyr)
+
+untidy &lt;-<span class="st"> </span><span class="kw">data.frame</span>(
+  <span class="dt">group =</span> <span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>),
+  <span class="dt">age =</span> <span class="kw">c</span>(<span class="st">&quot;20.4 [18-25]&quot;</span>, <span class="st">&quot;19.9 [18-24]&quot;</span>)
+)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">group</th>
+<th align="left">age</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">A</td>
+<td align="left">20.4 [18-25]</td>
+</tr>
+<tr class="even">
+<td align="left">B</td>
+<td align="left">19.9 [18-24]</td>
+</tr>
+</tbody>
+</table>
+<pre class="sourceCode r"><code class="sourceCode r">tidy &lt;-<span class="st"> </span>untidy <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">separate</span>(age, <span class="kw">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;min&quot;</span>, <span class="st">&quot;max&quot;</span>), 
+           <span class="dt">sep =</span> <span class="st">&quot;( </span><span class="ch">\\</span><span class="st">[|-|</span><span class="ch">\\</span><span class="st">])&quot;</span>,
+           <span class="dt">extra =</span> <span class="st">&quot;drop&quot;</span>)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">group</th>
+<th align="left">mean</th>
+<th align="left">min</th>
+<th align="left">max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">A</td>
+<td align="left">20.4</td>
+<td align="left">18</td>
+<td align="left">25</td>
+</tr>
+<tr class="even">
+<td align="left">B</td>
+<td align="left">19.9</td>
+<td align="left">18</td>
+<td align="left">24</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <div id="variable" class="section level2">
 <h2>variable</h2>
 <p><dfn>A word that identifies and stores the value of some data for later use.</dfn></p>
