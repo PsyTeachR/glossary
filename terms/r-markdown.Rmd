@@ -2,7 +2,7 @@
 
 <dfn>The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code.</dfn>
 
-### Resources
+Resources:
 
 * [Introduction to R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
 * [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
