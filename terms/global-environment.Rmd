@@ -1,0 +1,9 @@
+## global environment
+
+<dfn>The interactive workspace where your script runs</dfn> 
+
+When you create a variable, it is usually stored in the global environment. You can view this in the environment tab of the top right [pane](#panes) of RStudio.
+
+If you create a variable inside of a function, it is usually not accessible outside of that function and you won't see it in the global environment tab.
+
+You don't need to know much about environments to use R until you start developing packages; they are covered in [Advanced R](http://adv-r.had.co.nz/Environments.html).

@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2019-06-27" />
+<meta name="date" content="2019-06-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -130,7 +130,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Glossary</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#using-the-glossary"><i class="fa fa-check"></i>Using the glossary</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html"><i class="fa fa-check"></i>A</a><ul>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 </ul></li>
@@ -148,6 +150,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a><ul>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#element"><i class="fa fa-check"></i>element</a></li>
+<li class="chapter" data-level="" data-path="e.html"><a href="e.html#escape"><i class="fa fa-check"></i>escape</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html"><i class="fa fa-check"></i>F</a><ul>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#function"><i class="fa fa-check"></i>function</a></li>
@@ -155,6 +158,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html"><i class="fa fa-check"></i>G</a><ul>
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html#git"><i class="fa fa-check"></i>git</a></li>
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html#github"><i class="fa fa-check"></i>github</a></li>
+<li class="chapter" data-level="" data-path="g.html"><a href="g.html#global-environment"><i class="fa fa-check"></i>global environment</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="h.html"><a href="h.html"><i class="fa fa-check"></i>H</a></li>
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html"><i class="fa fa-check"></i>I</a><ul>
@@ -162,7 +166,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html#integer"><i class="fa fa-check"></i>integer</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="j.html"><a href="j.html"><i class="fa fa-check"></i>J</a></li>
-<li class="chapter" data-level="" data-path="k.html"><a href="k.html"><i class="fa fa-check"></i>K</a></li>
+<li class="chapter" data-level="" data-path="k.html"><a href="k.html"><i class="fa fa-check"></i>K</a><ul>
+<li class="chapter" data-level="" data-path="k.html"><a href="k.html#knit"><i class="fa fa-check"></i>knit</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="l.html"><a href="l.html"><i class="fa fa-check"></i>L</a></li>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html"><i class="fa fa-check"></i>M</a></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html"><i class="fa fa-check"></i>N</a><ul>
@@ -219,11 +225,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Glossary</h1>
 <p class="author"><em>psyTeachR Team</em></p>
-<p class="date"><em>2019-06-27</em></p>
+<p class="date"><em>2019-06-29</em></p>
 </div>
 <div id="overview" class="section level1 unnumbered">
 <h1>Overview</h1>
+<p>The glossary defines common jargon you might encounter while learning R. This specialised vocabulary can help you to communicate more efficiently about coding and to search for solutions to problems, but the terms aren’t always self-explanatory.</p>
+<div id="using-the-glossary" class="section level2">
+<h2>Using the glossary</h2>
 <p>If you are using the [psyTeachR book template](](/book-template/), you can use the glossary function to automatically link to a term in the and automatically include a tooltip with a short definition when you hover over the term. Use the following syntax in inline r: <code>glossary(&quot;word&quot;)</code>. For example, common <a class='glossary' target='_blank' title='The kind of data represented by an object.' href='https://psyteachr.github.io/glossary/d#data-type'>data types</a> are <a class='glossary' target='_blank' title='A data type representing whole numbers.' href='https://psyteachr.github.io/glossary/i#integer'>integer</a>, <a class='glossary' target='_blank' title='A data type representing a real decimal number' href='https://psyteachr.github.io/glossary/d#double'>double</a>, and <a class='glossary' target='_blank' title='A data type representing strings of text.' href='https://psyteachr.github.io/glossary/c#character'>character</a>.</p>
+<p>If you’re not using the psyTeachR book template, the functions are below.</p>
+<pre class="sourceCode r"><code class="sourceCode r">myglossary &lt;-<span class="st"> </span><span class="kw">list</span>()
+
+<span class="co">## link to glossary with shortdef on hover</span>
+glossary &lt;-<span class="st"> </span><span class="cf">function</span>(term, <span class="dt">display =</span> <span class="ot">NULL</span>, <span class="dt">shortdef =</span> <span class="st">&quot;&quot;</span>, <span class="dt">link =</span> <span class="ot">TRUE</span>) {
+  lcterm &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot; &quot;</span>, <span class="st">&quot;-&quot;</span>, <span class="kw">tolower</span>(term), <span class="dt">fixed =</span> <span class="ot">TRUE</span>)
+  <span class="cf">if</span> (<span class="kw">is.null</span>(display)) display &lt;-<span class="st"> </span>term
+  first_letter &lt;-<span class="st"> </span><span class="kw">substr</span>(lcterm, <span class="dv">1</span>, <span class="dv">1</span>)
+  url &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;https://psyteachr.github.io/glossary/&quot;</span>, first_letter)
+  <span class="cf">if</span> (shortdef <span class="op">==</span><span class="st"> &quot;&quot;</span>) {
+    hash &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;#&quot;</span>, lcterm, <span class="st">&quot; dfn&quot;</span>)
+    shortdef &lt;-<span class="st"> </span><span class="kw">tryCatch</span>(xml2<span class="op">::</span><span class="kw">read_html</span>(url) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">                           </span>rvest<span class="op">::</span><span class="kw">html_node</span>(hash) <span class="op">%&gt;%</span>
+<span class="st">                           </span>rvest<span class="op">::</span><span class="kw">html_text</span>() <span class="op">%&gt;%</span>
+<span class="st">                           </span><span class="kw">gsub</span>(<span class="st">&quot;</span><span class="ch">\&#39;</span><span class="st">&quot;</span>, <span class="st">&quot;&amp;#39;&quot;</span>, .),
+                         <span class="dt">error =</span> <span class="cf">function</span>(e) { <span class="st">&quot;&quot;</span> })
+  }
+  
+  <span class="co">## add to global glossary for this book</span>
+  myglossary[lcterm] &lt;&lt;-<span class="st"> </span>shortdef
+  
+  <span class="cf">if</span> (link) {
+    <span class="kw">paste0</span>(<span class="st">&quot;&lt;a class=&#39;glossary&#39; target=&#39;_blank&#39; title=&#39;&quot;</span>, shortdef, 
+         <span class="st">&quot;&#39; href=&#39;&quot;</span>, url, <span class="st">&quot;#&quot;</span>, lcterm, <span class="st">&quot;&#39;&gt;&quot;</span>, display, <span class="st">&quot;&lt;/a&gt;&quot;</span>)
+  } <span class="cf">else</span> {
+    <span class="kw">paste0</span>(<span class="st">&quot;&lt;a class=&#39;glossary&#39; title=&#39;&quot;</span>, shortdef, <span class="st">&quot;&#39;&gt;&quot;</span>, display, <span class="st">&quot;&lt;/a&gt;&quot;</span>)
+  }
+}
+
+glossary_table &lt;-<span class="st"> </span><span class="cf">function</span>() {
+  <span class="kw">as.data.frame</span>(myglossary) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">t</span>() <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">as.data.frame</span>() <span class="op">%&gt;%</span>
+<span class="st">    </span><span class="kw">rownames_to_column</span>(<span class="dt">var=</span><span class="st">&quot;term&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">    </span><span class="kw">rename</span>(<span class="st">&quot;definition&quot;</span> =<span class="st"> </span>V1) <span class="op">%&gt;%</span>
+<span class="st">    </span><span class="kw">mutate</span>(<span class="dt">term =</span> <span class="kw">paste0</span>(<span class="st">&quot;&lt;a class=&#39;glossary&#39; target=&#39;_blank&#39; &quot;</span>,
+                         <span class="st">&quot;href=&#39;https://psyteachr.github.io/glossary/&quot;</span>,
+                         <span class="kw">substr</span>(term, <span class="dv">1</span>, <span class="dv">1</span>), <span class="st">&quot;#&quot;</span>, term, <span class="st">&quot;&#39;&gt;&quot;</span>,
+                         <span class="kw">gsub</span>(<span class="st">&quot;.&quot;</span>, <span class="st">&quot; &quot;</span>, term, <span class="dt">fixed =</span> <span class="dv">1</span>), <span class="st">&quot;&lt;/a&gt;&quot;</span>)) <span class="op">%&gt;%</span>
+<span class="st">    </span><span class="kw">arrange</span>(term) <span class="op">%&gt;%</span>
+<span class="st">    </span>knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">escape =</span> <span class="ot">FALSE</span>)
+}</code></pre>
 <p>If you need to link to a definition, but are using a different form of the word, add the display version as the second argument (<code>display</code>). You can also override the automatic short definition by providing your own in the third argument (<code>shortdef</code>). Add the argument <code>link = FALSE</code> if you just want the hover definition and not a link to the psyTeachR glossary.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">glossary</span>(<span class="st">&quot;data type&quot;</span>, 
          <span class="dt">display=</span><span class="st">&quot;Data Types&quot;</span>, 
@@ -245,25 +296,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><a class='glossary' target='_blank' href='https://psyteachr.github.io/glossary/c#character'>character</a></td>
-<td align="left">A data type representing strings of text.</td>
-</tr>
-<tr class="even">
 <td align="left"><a class='glossary' target='_blank' href='https://psyteachr.github.io/glossary/d#data.type'>data type</a></td>
 <td align="left">My custom definition of data types</td>
-</tr>
-<tr class="odd">
-<td align="left"><a class='glossary' target='_blank' href='https://psyteachr.github.io/glossary/d#double'>double</a></td>
-<td align="left">A data type representing a real decimal number</td>
-</tr>
-<tr class="even">
-<td align="left"><a class='glossary' target='_blank' href='https://psyteachr.github.io/glossary/i#integer'>integer</a></td>
-<td align="left">A data type representing whole numbers.</td>
 </tr>
 </tbody>
 </table>
 <p>If you want to contribute to the glossary, fork the <a href="https://github.com/PsyTeachR/glossary">github project</a>, add your terms and submit a pull request, or suggest a new term at the <a href="https://github.com/PsyTeachR/glossary/issues">issues page</a>.</p>
 
+</div>
 </div>
 <div class="psyteachr_footer">
   

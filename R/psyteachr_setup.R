@@ -56,10 +56,11 @@ glossary <- function(term, display = NULL, shortdef = "", link = TRUE) {
   url <- paste0("https://psyteachr.github.io/glossary/", first_letter)
   if (shortdef == "") {
     hash <- paste0("#", lcterm, " dfn")
-    shortdef <- xml2::read_html(url) %>% 
-      rvest::html_node(hash) %>%
-      rvest::html_text() %>%
-      gsub("\'", "&#39;", .)
+    shortdef <- tryCatch(xml2::read_html(url) %>% 
+                           rvest::html_node(hash) %>%
+                           rvest::html_text() %>%
+                           gsub("\'", "&#39;", .),
+                         error = function(e) { "" })
   }
   
   ## add to global glossary for this book

@@ -1,0 +1,9 @@
+## escape
+
+<dfn>Include special characters like " inside of a string by prefacing them with a backslash.</dfn>
+
+```{r}
+str <- "This prints a \"quote\""
+```
+
+`r str`
