@@ -184,12 +184,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a><ul>
-<li class="chapter" data-level="" data-path="q.html"><a href="q.html#r-markdown"><i class="fa fa-check"></i>R markdown</a><ul>
-<li class="chapter" data-level="" data-path="q.html"><a href="q.html#resources"><i class="fa fa-check"></i>Resources</a></li>
-</ul></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a><ul>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#resources"><i class="fa fa-check"></i>Resources</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#relative-path"><i class="fa fa-check"></i>relative path</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html"><i class="fa fa-check"></i>S</a><ul>
@@ -236,6 +235,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="r" class="section level1">
 <h1>R</h1>
 
+<div id="r-markdown" class="section level2">
+<h2>R markdown</h2>
+<p><dfn>The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code.</dfn></p>
+<div id="resources" class="section level3">
+<h3>Resources</h3>
+<ul>
+<li><a href="https://rmarkdown.rstudio.com/lesson-1.html">Introduction to R Markdown</a></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">R Markdown Cheatsheet</a></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">R Markdown Reference</a></li>
+</ul>
+
+</div>
+</div>
 <div id="relative-path" class="section level2">
 <h2>relative path</h2>
 <p><dfn>The location of a file in relation to the working directory.</dfn></p>
@@ -247,7 +259,7 @@ qdat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class=
 
 <span class="co"># read a file outside the wd: /Users/lisad/other_study/data/exp.csv</span>
 xdat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;../other_study/data/exp.csv&quot;</span>)</code></pre>
-<p>Make sure you always use relative paths in an <a href="q.html#r-markdown">R Markdown</a> document, which automatically sets the working directory to the directory that contains the .Rmd file.</p>
+<p>Make sure you always use relative paths in an <a href="r.html#r-markdown">R Markdown</a> document, which automatically sets the working directory to the directory that contains the .Rmd file.</p>
 
 </div>
 </div>
