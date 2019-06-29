@@ -31,7 +31,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="q.html">
+<link rel="prev" href="r-markdown.html">
 <link rel="next" href="s.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -170,7 +170,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="k.html"><a href="k.html#knit"><i class="fa fa-check"></i>knit</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="l.html"><a href="l.html"><i class="fa fa-check"></i>L</a></li>
-<li class="chapter" data-level="" data-path="m.html"><a href="m.html"><i class="fa fa-check"></i>M</a></li>
+<li class="chapter" data-level="" data-path="m.html"><a href="m.html"><i class="fa fa-check"></i>M</a><ul>
+<li class="chapter" data-level="" data-path="m.html"><a href="m.html#markdown"><i class="fa fa-check"></i>markdown</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html"><i class="fa fa-check"></i>N</a><ul>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html#numeric"><i class="fa fa-check"></i>numeric</a></li>
 </ul></li>
@@ -181,7 +183,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
-<li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a></li>
+<li class="chapter" data-level="" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i>R markdown</a><ul>
+<li class="chapter" data-level="" data-path="r-markdown.html"><a href="r-markdown.html#resources"><i class="fa fa-check"></i>Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#relative-path"><i class="fa fa-check"></i>relative path</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html"><i class="fa fa-check"></i>S</a><ul>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#string"><i class="fa fa-check"></i>string</a></li>
 </ul></li>
@@ -225,6 +232,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="r" class="section level1">
 <h1>R</h1>
 
+<div id="relative-path" class="section level2">
+<h2>relative path</h2>
+<p><dfn>The location of a file in relation to the working directory.</dfn></p>
+<p>For example, if your working directory is <code>/Users/lisad/face_study/</code> and you want to refer to a file in the directory <code>/Users/lisad/face_study/data/faces.csv</code>, the relative path is <code>data/faces.csv</code>. Use <code>../</code> to move up one directory.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># the working directory: /Users/lisad/face_study/</span>
+
+<span class="co"># read a file inside the wd: /Users/lisad/face_study/data/faces.csv</span>
+qdat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/faces.csv&quot;</span>)
+
+<span class="co"># read a file outside the wd: /Users/lisad/other_study/data/exp.csv</span>
+xdat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;../other_study/data/exp.csv&quot;</span>)</code></pre>
+<p>Make sure you always use relative paths in an <a href="r-markdown.html#r-markdown">R Markdown</a> document, which automatically sets the working directory to the directory that contains the .Rmd file.</p>
+
+</div>
 </div>
 <div class="psyteachr_footer">
   
@@ -336,7 +357,7 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="q.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-markdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="s.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

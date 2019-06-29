@@ -1,0 +1,6 @@
+## markdown
+
+<dfn>A way to specify formatting, such as headers, paragraphs, lists, bolding, and links.</dfn>
+
+See [R Markdown](#r-markdown) for more infomation on the R-specific version.
+
