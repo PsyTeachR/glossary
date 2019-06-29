@@ -1,4 +1,4 @@
-# R markdown
+## R markdown
 
 <dfn>The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code.</dfn>
 
