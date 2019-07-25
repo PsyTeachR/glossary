@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>E | Glossary</title>
   <meta name="description" content="Definitions of technical terms" />
-  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
   <meta property="og:title" content="E | Glossary" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2019-06-30" />
+<meta name="date" content="2019-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,7 +55,6 @@ a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
 a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -187,13 +186,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#reactivity"><i class="fa fa-check"></i>reactivity</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#relative-path"><i class="fa fa-check"></i>relative path</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html"><i class="fa fa-check"></i>S</a><ul>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#server"><i class="fa fa-check"></i>server</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#shinydashboard"><i class="fa fa-check"></i>shinydashboard</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#string"><i class="fa fa-check"></i>string</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html"><i class="fa fa-check"></i>T</a></li>
-<li class="chapter" data-level="" data-path="u.html"><a href="u.html"><i class="fa fa-check"></i>U</a></li>
+<li class="chapter" data-level="" data-path="u.html"><a href="u.html"><i class="fa fa-check"></i>U</a><ul>
+<li class="chapter" data-level="" data-path="u.html"><a href="u.html#ui"><i class="fa fa-check"></i>UI</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="v.html"><a href="v.html"><i class="fa fa-check"></i>V</a><ul>
 <li class="chapter" data-level="" data-path="v.html"><a href="v.html#value"><i class="fa fa-check"></i>value</a></li>
 <li class="chapter" data-level="" data-path="v.html"><a href="v.html#variable"><i class="fa fa-check"></i>variable</a></li>
@@ -237,15 +241,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>element</h2>
 <p><dfn>One item in a <a href="v.html#vector">vector</a>.</dfn></p>
 <p>For example, the built-in vector <code>LETTERS</code> contains 26 elements: the uppercase latin letters A through Z. You can select an element from a vector by putting its <a href="i.html#index">index</a> in square brackets.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># get the tenth upppercase letter</span>
-LETTERS[<span class="dv">10</span>]</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="co"># get the tenth upppercase letter</span></a>
+<a class="sourceLine" id="cb24-2" data-line-number="2">LETTERS[<span class="dv">10</span>]</a></code></pre></div>
 <pre><code>## [1] &quot;J&quot;</code></pre>
 
 </div>
 <div id="escape" class="section level2">
 <h2>escape</h2>
 <p><dfn>Include special characters like &quot; inside of a string by prefacing them with a backslash.</dfn></p>
-<pre class="sourceCode r"><code class="sourceCode r">str &lt;-<span class="st"> &quot;This prints a </span><span class="ch">\&quot;</span><span class="st">quote</span><span class="ch">\&quot;</span><span class="st">&quot;</span></code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">str &lt;-<span class="st"> &quot;This prints a </span><span class="ch">\&quot;</span><span class="st">quote</span><span class="ch">\&quot;</span><span class="st">&quot;</span></a></code></pre></div>
 <p>This prints a “quote”</p>
 
 </div>

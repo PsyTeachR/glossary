@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>C | Glossary</title>
   <meta name="description" content="Definitions of technical terms" />
-  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
   <meta property="og:title" content="C | Glossary" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2019-06-30" />
+<meta name="date" content="2019-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,7 +55,6 @@ a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
 a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -187,13 +186,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#reactivity"><i class="fa fa-check"></i>reactivity</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#relative-path"><i class="fa fa-check"></i>relative path</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html"><i class="fa fa-check"></i>S</a><ul>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#server"><i class="fa fa-check"></i>server</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#shinydashboard"><i class="fa fa-check"></i>shinydashboard</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#string"><i class="fa fa-check"></i>string</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html"><i class="fa fa-check"></i>T</a></li>
-<li class="chapter" data-level="" data-path="u.html"><a href="u.html"><i class="fa fa-check"></i>U</a></li>
+<li class="chapter" data-level="" data-path="u.html"><a href="u.html"><i class="fa fa-check"></i>U</a><ul>
+<li class="chapter" data-level="" data-path="u.html"><a href="u.html#ui"><i class="fa fa-check"></i>UI</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="v.html"><a href="v.html"><i class="fa fa-check"></i>V</a><ul>
 <li class="chapter" data-level="" data-path="v.html"><a href="v.html#value"><i class="fa fa-check"></i>value</a></li>
 <li class="chapter" data-level="" data-path="v.html"><a href="v.html#variable"><i class="fa fa-check"></i>variable</a></li>
@@ -237,9 +241,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>character</h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing <a href="s.html#string">strings</a> of text.</dfn></p>
 <p>Examples of character data are:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;I am a string of characters&quot;</span>
-<span class="kw">paste</span>(<span class="st">&quot;The answer is &quot;</span>, <span class="dv">6</span><span class="op">+</span><span class="dv">6</span>)
-<span class="kw">as.character</span>(<span class="dv">100</span>)</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="st">&quot;I am a string of characters&quot;</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw">paste</span>(<span class="st">&quot;The answer is &quot;</span>, <span class="dv">6</span><span class="op">+</span><span class="dv">6</span>)</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw">as.character</span>(<span class="dv">100</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;I am a string of characters&quot;
 ## [1] &quot;The answer is  12&quot;
 ## [1] &quot;100&quot;</code></pre>
@@ -251,7 +255,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In an R Markdown file (<code>.Rmd</code>), you can include a chunk by surrounding the code as in the example below:</p>
 <div class="verbatim">
 <p><code>```{r chunk-name}</code></p>
-<pre class="sourceCode r"><code class="sourceCode r">mean_age &lt;-<span class="st"> </span><span class="kw">mean</span>(ages) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">round</span>(<span class="dv">2</span>)</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">mean_age &lt;-<span class="st"> </span><span class="kw">mean</span>(ages) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">round</span>(<span class="dv">2</span>)</a></code></pre></div>
 <code>```</code>
 </div>
 
@@ -259,8 +263,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="comment" class="section level2">
 <h2>comment</h2>
 <p><dfn>You can annotate <code>.R</code> files or <a href="c.html#chunk">chunks</a> in <code>.Rmd</code> files with comments by prefacing each line of the coment with one or more hash symbols (<code>#</code>).</dfn></p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># I&#39;m demonstrating comments in this chunk</span>
-<span class="co"># This comment will be added to the document outline ----</span></code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="co"># I&#39;m demonstrating comments in this chunk</span></a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="co"># This comment will be added to the document outline ----</span></a></code></pre></div>
 <p>Comments get added to the document outline if you put four or more dashes, equal signs, or hashes at the end. This is a great way to keep track of more complicated scripts.</p>
 
 </div>
@@ -268,24 +272,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>concatenate</h2>
 <p><dfn>To combine strings or vectors.</dfn></p>
 <p>When referring to strings, concatenate means to add strings together using the function <code>paste</code> (adds a space between strings) or <code>paste0</code> (doesn’t add anything between strings).</p>
-<pre class="sourceCode r"><code class="sourceCode r">subject_name &lt;-<span class="st"> &quot;Lisa&quot;</span>
-<span class="kw">paste</span>(<span class="st">&quot;Hello,&quot;</span>, subject_name)</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">subject_name &lt;-<span class="st"> &quot;Lisa&quot;</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="kw">paste</span>(<span class="st">&quot;Hello,&quot;</span>, subject_name)</a></code></pre></div>
 <pre><code>## [1] &quot;Hello, Lisa&quot;</code></pre>
 <p>When referring to other types of variables, concatenate can mean to create a vector with those variables, usually using the <code>c</code> function. For example, you could concatenate the numbers 1, 3, 6, and 10 like this: <code>c(1, 3, 6, 10)</code>. You can concatenate two <a href="v.html#vector">vector</a>s as well:</p>
-<pre class="sourceCode r"><code class="sourceCode r">v1 &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">5</span>
-v2 &lt;-<span class="st"> </span><span class="dv">11</span><span class="op">:</span><span class="dv">15</span>
-<span class="kw">c</span>(v1, v2)</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">v1 &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb10-2" data-line-number="2">v2 &lt;-<span class="st"> </span><span class="dv">11</span><span class="op">:</span><span class="dv">15</span></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="kw">c</span>(v1, v2)</a></code></pre></div>
 <pre><code>##  [1]  1  2  3  4  5 11 12 13 14 15</code></pre>
 <div class="warning">
 <p>
 Remember, a <a href="v.html#vector">vector</a> can only have one <a href="#data_type">data type</a>. So if you concatenate a <a href="s.html#string">string</a> vector and a <a href="n.html#numeric">numeric</a> vector, the numbers will get turned into their string versions. If you concatenate an <a href="i.html#integer">integer</a> and a <a href="i.html#integer">double</a> vector, the integers will be converted to doubles.
 </p>
 </div>
-<pre class="sourceCode r"><code class="sourceCode r">strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;e&quot;</span>)
-integers &lt;-<span class="st"> </span><span class="kw">c</span>(1L, 3L, 5L)
-doubles &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">1.1</span>, <span class="fl">3.3</span>, <span class="fl">5.5</span>)
-<span class="kw">c</span>(strings, integers)
-<span class="kw">c</span>(doubles, integers)</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;e&quot;</span>)</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">integers &lt;-<span class="st"> </span><span class="kw">c</span>(1L, 3L, 5L)</a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">doubles &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">1.1</span>, <span class="fl">3.3</span>, <span class="fl">5.5</span>)</a>
+<a class="sourceLine" id="cb12-4" data-line-number="4"><span class="kw">c</span>(strings, integers)</a>
+<a class="sourceLine" id="cb12-5" data-line-number="5"><span class="kw">c</span>(doubles, integers)</a></code></pre></div>
 <pre><code>## [1] &quot;a&quot; &quot;c&quot; &quot;e&quot; &quot;1&quot; &quot;3&quot; &quot;5&quot;
 ## [1] 1.1 3.3 5.5 1.0 3.0 5.0</code></pre>
 
