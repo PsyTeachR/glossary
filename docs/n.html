@@ -131,6 +131,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#using-the-glossary"><i class="fa fa-check"></i>Using the glossary</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#glossary-table"><i class="fa fa-check"></i>Glossary Table</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#contribute-to-the-glossary"><i class="fa fa-check"></i>Contribute to the Glossary</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html"><i class="fa fa-check"></i>A</a><ul>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
@@ -241,32 +243,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>numeric</h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing a real decimal number or integer</dfn>. The <a href="i.html#integer">integer</a> and <a href="d.html#double">double</a> data types are numeric.</p>
 <p>You can check if a variable is numeric using the function <code>is.numeric</code> and you can convert a variable to its numeric representation using the function <code>as.numeric</code>.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="kw">is.numeric</span>(<span class="fl">2.4</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="kw">is.numeric</span>(<span class="fl">2.4</span>)</a></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="kw">is.numeric</span>(2L)</a></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw">is.numeric</span>(2L)</a></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="co"># complex numbers are not numeric </span></a>
-<a class="sourceLine" id="cb31-2" data-line-number="2"><span class="kw">is.numeric</span>(2i)</a></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="co"># complex numbers are not numeric </span></a>
+<a class="sourceLine" id="cb30-2" data-line-number="2"><span class="kw">is.numeric</span>(2i)</a></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw">is.numeric</span>(<span class="st">&quot;A&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="kw">is.numeric</span>(<span class="st">&quot;A&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="co"># numbers represented as strings are not numeric</span></a>
-<a class="sourceLine" id="cb35-2" data-line-number="2"><span class="kw">is.numeric</span>(<span class="st">&quot;3&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1"><span class="co"># numbers represented as strings are not numeric</span></a>
+<a class="sourceLine" id="cb34-2" data-line-number="2"><span class="kw">is.numeric</span>(<span class="st">&quot;3&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" data-line-number="1"><span class="kw">as.numeric</span>(<span class="fl">2.4</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1"><span class="kw">as.numeric</span>(<span class="fl">2.4</span>)</a></code></pre></div>
 <pre><code>## [1] 2.4</code></pre>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" data-line-number="1"><span class="kw">as.numeric</span>(2L)</a></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" data-line-number="1"><span class="kw">as.numeric</span>(2L)</a></code></pre></div>
 <pre><code>## [1] 2</code></pre>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" data-line-number="1"><span class="co"># the imaginary part of complex numbers is discarded when converting to numeric</span></a>
-<a class="sourceLine" id="cb41-2" data-line-number="2"><span class="kw">as.numeric</span>(<span class="dv">3</span><span class="op">+</span>2i)</a></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" data-line-number="1"><span class="co"># the imaginary part of complex numbers is discarded when converting to numeric</span></a>
+<a class="sourceLine" id="cb40-2" data-line-number="2"><span class="kw">as.numeric</span>(<span class="dv">3</span><span class="op">+</span>2i)</a></code></pre></div>
 <pre><code>## Warning: imaginary parts discarded in coercion</code></pre>
 <pre><code>## [1] 3</code></pre>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" data-line-number="1"><span class="co"># strings that do not represent numbers are converted to NA</span></a>
-<a class="sourceLine" id="cb44-2" data-line-number="2"><span class="kw">as.numeric</span>(<span class="st">&quot;A&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" data-line-number="1"><span class="co"># strings that do not represent numbers are converted to NA</span></a>
+<a class="sourceLine" id="cb43-2" data-line-number="2"><span class="kw">as.numeric</span>(<span class="st">&quot;A&quot;</span>)</a></code></pre></div>
 <pre><code>## Warning: NAs introduced by coercion</code></pre>
 <pre><code>## [1] NA</code></pre>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" data-line-number="1"><span class="co"># numbers represented as strings can be convertd to their numeric version</span></a>
-<a class="sourceLine" id="cb47-2" data-line-number="2"><span class="kw">as.numeric</span>(<span class="st">&quot;3&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" data-line-number="1"><span class="co"># numbers represented as strings can be convertd to their numeric version</span></a>
+<a class="sourceLine" id="cb46-2" data-line-number="2"><span class="kw">as.numeric</span>(<span class="st">&quot;3&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] 3</code></pre>
 
 </div>
