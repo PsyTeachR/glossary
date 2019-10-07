@@ -21,35 +21,4 @@ knitr::write_bib(c(
 
 # Overview {-}
 
-The glossary defines common jargon you might encounter while learning R. This specialised vocabulary can help you to communicate more efficiently about coding and to search for solutions to problems, but the terms aren't always self-explanatory.
-
-## Using the glossary
-
-If you are using the [psyTeachR book template](/book-template/), you can use the glossary function to automatically link to a term in the text and automatically include a tooltip with a short definition when you hover over the term. Use the following syntax in inline r: `glossary("word")`. For example, common `r glossary("data type", "data types")` are `r glossary("integer")`, `r glossary("double")`, and `r glossary("character")`.
-
-If you're not using the psyTeachR book template, the functions are in the file [glossary_functions.R](R/glossary_functions.R). Include it at the beginning of each webpage using `source("glossary_functions.R")`. 
-
-If you need to link to a definition, but are using a different form of the word, add the display version as the second argument (`display`). You can also override the automatic short definition by providing your own in the third argument (`shortdef`). Add the argument `link = FALSE` if you just want the hover definition and not a link to the psyTeachR glossary.
-
-```{r glossary-example, results='asis'}
-glossary("data type", 
-         display="Data Types", 
-         shortdef="My custom definition of data types",
-         link = FALSE)
-```
-
-## Glossary Table
-
-You can add a glossary table to the end of a chapter with the following code. It creates a table of all terms used in that chapter or webpage previous to the `glossary_table()` function.
-
-```{r, eval=FALSE, verbatim="r, echo=FALSE, results='asis'"} 
-glossary_table()
-```
-
-`r glossary_table()`
-
-## Contribute to the Glossary
-
-If you want to contribute to the glossary, fork the [github project](https://github.com/PsyTeachR/glossary), add your terms and submit a pull request, or suggest a new term at the [issues page](https://github.com/PsyTeachR/glossary/issues).
-
-
+The glossary defines common jargon you might encounter while learning R. This specialised vocabulary can help you to communicate more efficiently about coding and statistics and to search for solutions to problems.
