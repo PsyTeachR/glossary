@@ -187,8 +187,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" 
     target="blank"><img alt="Creative Commons License" 
     style="border-width:0" 
-    src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><li>
-<li><a href="https://psyteachr.github.io/" target="blank">PsyTeachR</a></li>
+    src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a></li>
+<li><a href="https://psyteachr.github.io/books" target="blank">PsyTeachR Books</a></li>
 
 </ul>
 
@@ -229,145 +229,61 @@ untidy &lt;-<span class="st"> </span><span class="kw">data.frame</span>(
 )</code></pre></div>
 <table>
 <thead>
-<tr>
-<th style="text-align:right;">
-id
-</th>
-<th style="text-align:right;">
-score_1
-</th>
-<th style="text-align:right;">
-score_2
-</th>
-<th style="text-align:right;">
-score_3
-</th>
-<th style="text-align:right;">
-rt_1
-</th>
-<th style="text-align:right;">
-rt_2
-</th>
-<th style="text-align:right;">
-rt_3
-</th>
+<tr class="header">
+<th align="right">id</th>
+<th align="right">score_1</th>
+<th align="right">score_2</th>
+<th align="right">score_3</th>
+<th align="right">rt_1</th>
+<th align="right">rt_2</th>
+<th align="right">rt_3</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-941
-</td>
-<td style="text-align:right;">
-828
-</td>
-<td style="text-align:right;">
-803
-</td>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">6</td>
+<td align="right">2</td>
+<td align="right">784</td>
+<td align="right">738</td>
+<td align="right">893</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-597
-</td>
-<td style="text-align:right;">
-665
-</td>
-<td style="text-align:right;">
-887
-</td>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">7</td>
+<td align="right">2</td>
+<td align="right">5</td>
+<td align="right">686</td>
+<td align="right">669</td>
+<td align="right">988</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-768
-</td>
-<td style="text-align:right;">
-709
-</td>
-<td style="text-align:right;">
-765
-</td>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">1</td>
+<td align="right">725</td>
+<td align="right">748</td>
+<td align="right">971</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-958
-</td>
-<td style="text-align:right;">
-902
-</td>
-<td style="text-align:right;">
-902
-</td>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="right">7</td>
+<td align="right">4</td>
+<td align="right">883</td>
+<td align="right">813</td>
+<td align="right">693</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-690
-</td>
-<td style="text-align:right;">
-852
-</td>
-<td style="text-align:right;">
-797
-</td>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">1</td>
+<td align="right">5</td>
+<td align="right">7</td>
+<td align="right">864</td>
+<td align="right">727</td>
+<td align="right">805</td>
 </tr>
 </tbody>
 </table>
@@ -378,231 +294,103 @@ rt_3
 <span class="st">  </span><span class="kw">spread</span>(var, val)</code></pre></div>
 <table>
 <thead>
-<tr>
-<th style="text-align:right;">
-id
-</th>
-<th style="text-align:left;">
-trial
-</th>
-<th style="text-align:right;">
-rt
-</th>
-<th style="text-align:right;">
-score
-</th>
+<tr class="header">
+<th align="right">id</th>
+<th align="left">trial</th>
+<th align="right">rt</th>
+<th align="right">score</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-1
-</td>
-<td style="text-align:right;">
-941
-</td>
-<td style="text-align:right;">
-2
-</td>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">1</td>
+<td align="right">784</td>
+<td align="right">2</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-2
-</td>
-<td style="text-align:right;">
-828
-</td>
-<td style="text-align:right;">
-7
-</td>
+<tr class="even">
+<td align="right">1</td>
+<td align="left">2</td>
+<td align="right">738</td>
+<td align="right">6</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-3
-</td>
-<td style="text-align:right;">
-803
-</td>
-<td style="text-align:right;">
-2
-</td>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">3</td>
+<td align="right">893</td>
+<td align="right">2</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-1
-</td>
-<td style="text-align:right;">
-597
-</td>
-<td style="text-align:right;">
-5
-</td>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">1</td>
+<td align="right">686</td>
+<td align="right">7</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-2
-</td>
-<td style="text-align:right;">
-665
-</td>
-<td style="text-align:right;">
-1
-</td>
+<tr class="odd">
+<td align="right">2</td>
+<td align="left">2</td>
+<td align="right">669</td>
+<td align="right">2</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-3
-</td>
-<td style="text-align:right;">
-887
-</td>
-<td style="text-align:right;">
-1
-</td>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">3</td>
+<td align="right">988</td>
+<td align="right">5</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-1
-</td>
-<td style="text-align:right;">
-768
-</td>
-<td style="text-align:right;">
-3
-</td>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">1</td>
+<td align="right">725</td>
+<td align="right">3</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-2
-</td>
-<td style="text-align:right;">
-709
-</td>
-<td style="text-align:right;">
-4
-</td>
+<tr class="even">
+<td align="right">3</td>
+<td align="left">2</td>
+<td align="right">748</td>
+<td align="right">3</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-3
-</td>
-<td style="text-align:right;">
-765
-</td>
-<td style="text-align:right;">
-3
-</td>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">3</td>
+<td align="right">971</td>
+<td align="right">1</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-1
-</td>
-<td style="text-align:right;">
-958
-</td>
-<td style="text-align:right;">
-4
-</td>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">1</td>
+<td align="right">883</td>
+<td align="right">5</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-2
-</td>
-<td style="text-align:right;">
-902
-</td>
-<td style="text-align:right;">
-6
-</td>
+<tr class="odd">
+<td align="right">4</td>
+<td align="left">2</td>
+<td align="right">813</td>
+<td align="right">7</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-3
-</td>
-<td style="text-align:right;">
-902
-</td>
-<td style="text-align:right;">
-7
-</td>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">3</td>
+<td align="right">693</td>
+<td align="right">4</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:left;">
-1
-</td>
-<td style="text-align:right;">
-690
-</td>
-<td style="text-align:right;">
-1
-</td>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">1</td>
+<td align="right">864</td>
+<td align="right">1</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:left;">
-2
-</td>
-<td style="text-align:right;">
-852
-</td>
-<td style="text-align:right;">
-2
-</td>
+<tr class="even">
+<td align="right">5</td>
+<td align="left">2</td>
+<td align="right">727</td>
+<td align="right">5</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:left;">
-3
-</td>
-<td style="text-align:right;">
-797
-</td>
-<td style="text-align:right;">
-6
-</td>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">3</td>
+<td align="right">805</td>
+<td align="right">7</td>
 </tr>
 </tbody>
 </table>
