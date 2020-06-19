@@ -14,7 +14,7 @@ lowerCI <- 10 - 1.25*1.96
 
 For example, given $\mu$ = 10 and $SD$ = 1.25, the $95CI = [`r lowerCI`, `r upperCI`]$
 
-THere are a number of misconceptions about Confidence Intervals and it would be worth reading the following papers:
+There are a number of misconceptions about Confidence Intervals and it would be worth reading the following papers:
 
 * <a href = "https://link.springer.com/article/10.1007/s10654-016-0149-3" target = "_blank">Greenland, S., Senn, S.J., Rothman, K.J. et al. Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. Eur J Epidemiol 31, 337–350 (2016). https://doi.org/10.1007/s10654-016-0149-3</a>
 
