@@ -1,4 +1,4 @@
-## confidence intervals
+## confidence intervals (CI)
 
 <dfn>A type of interval estimate used to summarise a given statistic or measurement where a proportion of intervals calculated from the sample(s) will contain the true value of the statistic. For example, 95% Confidence Intervals of the mean state that if you were to run the same study on 100 samples and calculate this interval for each iteration of the study, then 95 of the intervals calculated will contain the true mean of the population.</dfn>
 
