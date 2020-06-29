@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#escape"><i class="fa fa-check"></i>escape</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html"><i class="fa fa-check"></i>F</a><ul>
+<li class="chapter" data-level="" data-path="f.html"><a href="f.html#fixed-effect"><i class="fa fa-check"></i>Fixed effect</a></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#fixed-factor"><i class="fa fa-check"></i>fixed factor</a></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#function"><i class="fa fa-check"></i>function</a></li>
 </ul></li>
@@ -171,7 +172,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="k.html"><a href="k.html"><i class="fa fa-check"></i>K</a><ul>
 <li class="chapter" data-level="" data-path="k.html"><a href="k.html#knit"><i class="fa fa-check"></i>knit</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="l.html"><a href="l.html"><i class="fa fa-check"></i>L</a></li>
+<li class="chapter" data-level="" data-path="l.html"><a href="l.html"><i class="fa fa-check"></i>L</a><ul>
+<li class="chapter" data-level="" data-path="l.html"><a href="l.html#linear-mixed-effects-model"><i class="fa fa-check"></i>Linear mixed-effects model</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html"><i class="fa fa-check"></i>M</a><ul>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html#markdown"><i class="fa fa-check"></i>markdown</a></li>
 </ul></li>
@@ -191,6 +194,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-effect"><i class="fa fa-check"></i>Random effect</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-factor"><i class="fa fa-check"></i>random factor</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#reactivity"><i class="fa fa-check"></i>reactivity</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#relative-path"><i class="fa fa-check"></i>relative path</a></li>
@@ -255,10 +259,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 
 </div>
+<div id="random-effect" class="section level2">
+<h2>Random effect</h2>
+<p><dfn>An effect associated with an individual sampling unit, usually represented by an offset from a fixed effect.</dfn></p>
+<p><strong>Example:</strong> If the grand mean response time in a population is 600 milliseconds, that number represents the typical value. The mean response time for an individual subject <span class="math inline">\(s\)</span> can be represented as an offset (deviation) from that value. For example, if subject <span class="math inline">\(s\)</span> has a mean reaction time of 650 ms, that would imply a random effect for that subject of +50 ms.</p>
+<p>Unlike <a class='glossary' target='_blank' title='NA' href='https://psyteachr.github.io/glossary/f#fixed-effect'>fixed effects</a>, we expect the underlying random effects to change from experiment to experiment as the sampling units (e.g., subjects) change.</p>
+
+</div>
 <div id="random-factor" class="section level2">
 <h2>random factor</h2>
 <p><dfn>A factor whose levels are taken to represent a proper subset of a population of interest, typically because the observed levels are the result of sampling.</dfn></p>
-<p>If you perform a study where the population of interest is “undergraduates at the University of Glasgow”, you are very unlikely to obtain data from all approximately 20,000 undergraduate students. Instead, you would likely obtain a (hopefully random) sample of undergraduates, with each undergraduate forming a single ‘level’ of the ‘subject’ factor. By treating ‘subject’ as random rather than <a class='glossary' target='_blank' title='NA' href='https://psyteachr.github.io/glossary/f#fixed-factor'>fixed</a> in your analysis, you will obtain parameter estimates that are closer to the true population values.</p>
+<p>If you perform a study where the population of interest is “undergraduates at the University of Glasgow”, you are very unlikely to obtain data from all approximately 20,000 undergraduate students. Instead, you would likely obtain a (hopefully random) sample of undergraduates, with each undergraduate forming a single ‘level’ of the ‘subject’ factor. By treating ‘subject’ as random rather than <a class='glossary' target='_blank' title='A factor whose levels are assumed to represent all the levels of interest in a population; its levels would remain fixed across replications of the study.' href='https://psyteachr.github.io/glossary/f#fixed-factor'>fixed</a> in your analysis, you will obtain parameter estimates that are closer to the true population values.</p>
 
 </div>
 <div id="reactivity" class="section level2">

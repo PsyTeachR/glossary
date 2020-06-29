@@ -1,0 +1,9 @@
+## Fixed effect
+
+<dfn>An effect assumed to be identical over all sampling units.</dfn>
+
+In the standard regression model
+
+$$Y_i = \beta_0 + \beta_1 X_i + e_i$$
+
+the parameters $\beta_0$ (the intercept) and $\beta_1$ (the slope) are assumed to be constant across all sampling units (e.g. subjects). These are contrasted with `r glossary("random effect", display = "random effects")`, which are effects that differ across the units.

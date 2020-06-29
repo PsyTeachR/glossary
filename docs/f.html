@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#escape"><i class="fa fa-check"></i>escape</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html"><i class="fa fa-check"></i>F</a><ul>
+<li class="chapter" data-level="" data-path="f.html"><a href="f.html#fixed-effect"><i class="fa fa-check"></i>Fixed effect</a></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#fixed-factor"><i class="fa fa-check"></i>fixed factor</a></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#function"><i class="fa fa-check"></i>function</a></li>
 </ul></li>
@@ -171,7 +172,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="k.html"><a href="k.html"><i class="fa fa-check"></i>K</a><ul>
 <li class="chapter" data-level="" data-path="k.html"><a href="k.html#knit"><i class="fa fa-check"></i>knit</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="l.html"><a href="l.html"><i class="fa fa-check"></i>L</a></li>
+<li class="chapter" data-level="" data-path="l.html"><a href="l.html"><i class="fa fa-check"></i>L</a><ul>
+<li class="chapter" data-level="" data-path="l.html"><a href="l.html#linear-mixed-effects-model"><i class="fa fa-check"></i>Linear mixed-effects model</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html"><i class="fa fa-check"></i>M</a><ul>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html#markdown"><i class="fa fa-check"></i>markdown</a></li>
 </ul></li>
@@ -191,6 +194,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-effect"><i class="fa fa-check"></i>Random effect</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-factor"><i class="fa fa-check"></i>random factor</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#reactivity"><i class="fa fa-check"></i>reactivity</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#relative-path"><i class="fa fa-check"></i>relative path</a></li>
@@ -244,11 +248,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="f" class="section level1">
 <h1>F</h1>
 
+<div id="fixed-effect" class="section level2">
+<h2>Fixed effect</h2>
+<p><dfn>An effect assumed to be identical over all sampling units.</dfn></p>
+<p>In the standard regression model</p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_1 X_i + e_i\]</span></p>
+<p>the parameters <span class="math inline">\(\beta_0\)</span> (the intercept) and <span class="math inline">\(\beta_1\)</span> (the slope) are assumed to be constant across all sampling units (e.g. subjects). These are contrasted with <a class='glossary' target='_blank' title='NA' href='https://psyteachr.github.io/glossary/r#random-effect'>random effects</a>, which are effects that differ across the units.</p>
+
+</div>
 <div id="fixed-factor" class="section level2">
 <h2>fixed factor</h2>
 <p><dfn>A factor whose levels are assumed to represent all the levels of interest in a population; its levels would remain fixed across replications of the study.</dfn></p>
 <p>For example, if you were studying the nations making up the United Kingdom, you would have a factor with the levels England, Northern Ireland, Scotland, and Wales. If you would replicate a study, you would include these exact same levels. These four levels represent all the nations comprising the union, and there usually would be no interest in generalizing beyond the data to other (hypothetical) nations.</p>
-<p>Fixed factors are usually contrasted with <a class='glossary' target='_blank' title='NA' href='https://psyteachr.github.io/glossary/r#random-factor'>random factors</a>, whose levels usually are assumed to be the result of (quasi-)random sampling.</p>
+<p>Fixed factors are usually contrasted with <a class='glossary' target='_blank' title='A factor whose levels are taken to represent a proper subset of a population of interest, typically because the observed levels are the result of sampling.' href='https://psyteachr.github.io/glossary/r#random-factor'>random factors</a>, whose levels usually are assumed to be the result of (quasi-)random sampling.</p>
 
 </div>
 <div id="function" class="section level2">
