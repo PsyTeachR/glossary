@@ -1,4 +1,4 @@
-## Fixed effect
+## fixed effect
 
 <dfn>An effect assumed to be identical over all sampling units.</dfn>
 
