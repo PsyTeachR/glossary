@@ -4,7 +4,7 @@ rmd_subdir: ["terms/"]
 output_dir: "docs"
 before_chapter_script: ["R/psyteachr_setup.R", "R/my_setup.R"]
 delete_merged_file: true
-clean: []
+clean: 
 language:
   ui:
     chapter_name: ""
