@@ -1,6 +1,0 @@
-
-## panes
-
-RStudio is arranged with four window "panes". By default, the upper left pane is the *source pane*, where you view and edit source code from files. The bottom left pane is usually the *console pane*, where you can type in commands and view output messages You can change the location of panes and what tabs are shown under `Preferences > Pane Layout`.
-
-![](images/defs/panes.png)
