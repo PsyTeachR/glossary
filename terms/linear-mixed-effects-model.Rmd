@@ -1,0 +1,11 @@
+## Linear mixed-effects model
+
+<dfn>A type of regression model that involves estimating both `r glossary("fixed effect", display = "fixed effects")` and `r glossary("random effect", display = "random effects")`.</dfn>
+
+Most conventional regression models only estimate parameters associated with fixed effects and residual error. Mixed-effects models additionally estimate random effects parameters that capture variability associated with sampling units. In psychology, these sampling units are usually human participants or stimulus items.
+
+Linear mixed-effects models are often called **multi-level models** or **hierarchical models**; these terms are roughly interchangeable. Linear mixed-effects models (LMEMs) are still **linear models** in the sense that they model a response variable in terms of a linear combination of predictor variables whose values are weighted by parameter estimates.
+
+Because there is no closed form solution to finding the optimal parameter estimates, their values are typically estimated through an iterative procedure that searches the space of possible values for the optimum.
+
+The function `lmer()` from the R package **`lme4`** is often used to estimate mixed-effects models. The **`brms`** package in R allows Bayesian estimation of mixed-effects models.
