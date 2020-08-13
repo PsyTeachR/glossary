@@ -1,1 +1,11 @@
 ^_setup\.R$
+^.*\.Rproj$
+^.*\.Rmd$
+^.*\.yml$
+^.*\.bib$
+^.*\.tex$
+^.*\.rds$
+^terms$
+^images$
+^\.Rproj\.user$
+^README\.Rmd$

@@ -6,3 +6,9 @@ new_entry <- function(term, dfn = "", open = FALSE) {
 }
 
 bookdown::render_book("index.Rmd")
+
+R.utils::copyDirectory(
+  from = "docs", 
+  to = "inst/book", 
+  overwrite = TRUE, 
+  recursive = TRUE)
