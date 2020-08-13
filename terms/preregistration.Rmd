@@ -2,7 +2,7 @@
 
 <dfn>Specifying the methods and analysis of a study before it is run.</dfn>
 
-### Resources
+Resources
 
 * [Center for Open Science](https://www.cos.io/our-services/prereg){target="_blank"}
 * The Preregistration Revolution: [PNAS](https://doi.org/10.1073/pnas.1708274114){target="_blank"} / [Preprint](https://osf.io/2dxu5/){target="_blank"}
