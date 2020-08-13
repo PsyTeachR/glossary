@@ -148,12 +148,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#comment"><i class="fa fa-check"></i>comment</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#concatenate"><i class="fa fa-check"></i>concatenate</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#confidence-intervals-ci"><i class="fa fa-check"></i>confidence intervals (CI)</a></li>
+<li class="chapter" data-level="" data-path="c.html"><a href="c.html#continuous"><i class="fa fa-check"></i>continuous</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#csv"><i class="fa fa-check"></i>CSV</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html"><i class="fa fa-check"></i>D</a><ul>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-type"><i class="fa fa-check"></i>data type</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-wrangling"><i class="fa fa-check"></i>data wrangling</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a><ul>
@@ -173,7 +175,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html#github"><i class="fa fa-check"></i>github</a></li>
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html#global-environment"><i class="fa fa-check"></i>global environment</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="h.html"><a href="h.html"><i class="fa fa-check"></i>H</a></li>
+<li class="chapter" data-level="" data-path="h.html"><a href="h.html"><i class="fa fa-check"></i>H</a><ul>
+<li class="chapter" data-level="" data-path="h.html"><a href="h.html#hypothesis"><i class="fa fa-check"></i>hypothesis</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html"><i class="fa fa-check"></i>I</a><ul>
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html#index"><i class="fa fa-check"></i>index</a></li>
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html#integer"><i class="fa fa-check"></i>integer</a></li>
@@ -201,6 +205,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#package"><i class="fa fa-check"></i>package</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#power"><i class="fa fa-check"></i>power</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#preregistration"><i class="fa fa-check"></i>preregistration</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
 </ul></li>
@@ -220,8 +225,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html"><i class="fa fa-check"></i>T</a><ul>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#tabular-data"><i class="fa fa-check"></i>tabular data</a></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#tibble"><i class="fa fa-check"></i>tibble</a></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#tidy-data"><i class="fa fa-check"></i>tidy data</a></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#tidyverse"><i class="fa fa-check"></i>tidyverse</a></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#two-tailed"><i class="fa fa-check"></i>two-tailed</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="u.html"><a href="u.html"><i class="fa fa-check"></i>U</a><ul>
 <li class="chapter" data-level="" data-path="u.html"><a href="u.html#ui"><i class="fa fa-check"></i>UI</a></li>
@@ -298,48 +305,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="right">1</td>
-<td align="right">6</td>
-<td align="right">5</td>
-<td align="right">4</td>
-<td align="right">894</td>
-<td align="right">841</td>
-<td align="right">796</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="right">3</td>
-<td align="right">6</td>
-<td align="right">3</td>
-<td align="right">912</td>
-<td align="right">819</td>
-<td align="right">902</td>
-</tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="right">2</td>
-<td align="right">2</td>
-<td align="right">6</td>
-<td align="right">775</td>
-<td align="right">852</td>
-<td align="right">831</td>
-</tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="right">7</td>
-<td align="right">4</td>
-<td align="right">5</td>
-<td align="right">683</td>
-<td align="right">999</td>
-<td align="right">925</td>
-</tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="right">5</td>
 <td align="right">1</td>
-<td align="right">7</td>
-<td align="right">796</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">921</td>
+<td align="right">725</td>
 <td align="right">713</td>
-<td align="right">840</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">4</td>
+<td align="right">1</td>
+<td align="right">5</td>
+<td align="right">759</td>
+<td align="right">663</td>
+<td align="right">819</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">6</td>
+<td align="right">2</td>
+<td align="right">634</td>
+<td align="right">693</td>
+<td align="right">853</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">7</td>
+<td align="right">7</td>
+<td align="right">4</td>
+<td align="right">1001</td>
+<td align="right">922</td>
+<td align="right">874</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">6</td>
+<td align="right">4</td>
+<td align="right">6</td>
+<td align="right">845</td>
+<td align="right">852</td>
+<td align="right">885</td>
 </tr>
 </tbody>
 </table>
@@ -361,92 +368,92 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="right">1</td>
 <td align="left">1</td>
-<td align="right">894</td>
-<td align="right">6</td>
+<td align="right">921</td>
+<td align="right">1</td>
 </tr>
 <tr class="even">
 <td align="right">1</td>
 <td align="left">2</td>
-<td align="right">841</td>
+<td align="right">725</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">3</td>
+<td align="right">713</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">1</td>
+<td align="right">759</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="left">2</td>
+<td align="right">663</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">3</td>
+<td align="right">819</td>
 <td align="right">5</td>
 </tr>
 <tr class="odd">
-<td align="right">1</td>
-<td align="left">3</td>
-<td align="right">796</td>
-<td align="right">4</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
+<td align="right">3</td>
 <td align="left">1</td>
-<td align="right">912</td>
+<td align="right">634</td>
 <td align="right">3</td>
 </tr>
-<tr class="odd">
-<td align="right">2</td>
+<tr class="even">
+<td align="right">3</td>
 <td align="left">2</td>
-<td align="right">819</td>
+<td align="right">693</td>
+<td align="right">6</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">3</td>
+<td align="right">853</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">1</td>
+<td align="right">1001</td>
+<td align="right">7</td>
+</tr>
+<tr class="odd">
+<td align="right">4</td>
+<td align="left">2</td>
+<td align="right">922</td>
+<td align="right">7</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">3</td>
+<td align="right">874</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">1</td>
+<td align="right">845</td>
 <td align="right">6</td>
 </tr>
 <tr class="even">
-<td align="right">2</td>
-<td align="left">3</td>
-<td align="right">902</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">1</td>
-<td align="right">775</td>
-<td align="right">2</td>
-</tr>
-<tr class="even">
-<td align="right">3</td>
+<td align="right">5</td>
 <td align="left">2</td>
 <td align="right">852</td>
-<td align="right">2</td>
+<td align="right">4</td>
 </tr>
 <tr class="odd">
-<td align="right">3</td>
+<td align="right">5</td>
 <td align="left">3</td>
-<td align="right">831</td>
+<td align="right">885</td>
 <td align="right">6</td>
-</tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left">1</td>
-<td align="right">683</td>
-<td align="right">7</td>
-</tr>
-<tr class="odd">
-<td align="right">4</td>
-<td align="left">2</td>
-<td align="right">999</td>
-<td align="right">4</td>
-</tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left">3</td>
-<td align="right">925</td>
-<td align="right">5</td>
-</tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="left">1</td>
-<td align="right">796</td>
-<td align="right">5</td>
-</tr>
-<tr class="even">
-<td align="right">5</td>
-<td align="left">2</td>
-<td align="right">713</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="left">3</td>
-<td align="right">840</td>
-<td align="right">7</td>
 </tr>
 </tbody>
 </table>

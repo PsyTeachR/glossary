@@ -1,0 +1,5 @@
+## power
+
+<dfn>The probability of rejecting the null hypothesis when it is false.</dfn>
+
+

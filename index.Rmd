@@ -22,3 +22,5 @@ knitr::write_bib(c(
 # Overview {-}
 
 The glossary defines common jargon you might encounter while learning R. This specialised vocabulary can help you to communicate more efficiently about coding and statistics and to search for solutions to problems.
+
+Suggest additions or changes at the [github issues page](https://github.com/PsyTeachR/glossary/issues){target="_blank"}.
