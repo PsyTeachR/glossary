@@ -1,0 +1,5 @@
+## deviation score
+
+<dfn>A score minus the mean</dfn>
+
+

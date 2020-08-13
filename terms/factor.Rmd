@@ -1,0 +1,5 @@
+## factor
+
+<dfn>A data type where a specific set of values are stored with labels</dfn>
+
+

@@ -1,0 +1,35 @@
+## operator
+
+<dfn>A symbol that performs a mathematical operation, such as `+`, `-`, `*`, `/`</dfn>
+
+Arithmetic operators in R
+
+| Operator | Definition | Example |
+|:---------|:-----------|:--------|
+| `+`      | Addition: adds two numbers | `3+2 = 5` |
+| `-`      | Subtraction: subtracts the second number from the first (`3-2 = 1`) |
+| `*`      | Multiplication: multiplies two numbers | `3*2 = 6` |
+| `/`      | Division: divides the first number by the second | `3/2 = 1.5` |
+| `%%`     | Modulus: returns the remainder after dividing the first number by the second | `3%%2 = 1` |
+| `^`      | Exponent: raises the first number to the power of the second | `3^2 = 9` |
+
+Relational operators in R
+
+| Operator | Definition | Example |
+|:---------|:-----------|:--------|
+| `==`     | Equal to   | `1 == 1` or `"A" == "A"` |
+| `!=`     | Not equal to | `1 != 2` or `"A" != "B"` |
+| `>`      | Greater than | `2 > 1` or `"B" > "A"` |
+| `>=`    | Greater than or equal to | `2 >= 1` or `"B" >= "A"` |
+| `<`      | Less than | `1 < 2` or `"A" < "B"` |
+| `<=`     | Less than or equal to | `1 <= 2` or `"A" <= "B"` |
+
+Logical operators in R
+
+| Operator | Definition | Example |
+|:---------|:-----------|:--------|
+| `&`      | AND (compares each element of vectors)       | `c(T, T, F, F) & c(T, F, T, F) == c(T, F, F, F)` |
+| `|`      | OR (compares each element of vectors)        | `c(T, T, F, F) | c(T, F, T, F) == c(T, T, T, F)` |
+| `&&`      | AND (only compares the first element of vectors)       | `c(T, F) && c(T, F) == TRUE` |
+| `||`      | OR (only compares the first element of vectors)       | `c(T, F) || c(F, F) == TRUE` |
+| `!`       | NOT | `!TRUE == FALSE` |

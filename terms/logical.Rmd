@@ -1,0 +1,23 @@
+## logical
+
+<dfn>A [data type](#data-type) representing `TRUE` or `FALSE` values.</dfn>
+
+```{r}
+true_logical_values <- list(
+  TRUE,
+  T,
+  as.logical(1),
+  "A" == "A"
+)
+
+false_logical_values <- list(
+  FALSE,
+  F,
+  as.logical(0),
+  "A" == "B"
+)
+
+str(true_logical_values)
+str(false_logical_values)
+```
+

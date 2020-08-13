@@ -1,0 +1,15 @@
+## extension
+
+<dfn>The end part of a file name that tells you what type of file it is (e.g., .R or .Rmd).</dfn>
+
+Common file types and their extensions
+
+| File type                 | extension   |
+|:--------------------------|:------------|
+| R script                  | .R          |
+| R Markdown                | .Rmd        |
+| Comma-separated variable  | .csv        |
+| Plain text                | .txt        |
+| Web file                  | .html       |
+| Word document             | .doc, .docx |
+| PDF                       | .pdf        |

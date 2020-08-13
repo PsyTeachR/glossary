@@ -1,0 +1,5 @@
+## tabular data
+
+<dfn>Data in a rectangular table format, where each row has an entry for each column.</dfn>
+
+

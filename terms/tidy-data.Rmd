@@ -1,0 +1,9 @@
+## tidy data
+
+<dfn>A format for data that maps the meaning onto the structure.</dfn>
+
+Tidy data has three rules:
+
+* Each [variable](#variable) must have its own column
+* Each [observation](#observation) must have its own row
+* Each [value](#value) must have its own cell

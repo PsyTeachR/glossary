@@ -1,0 +1,30 @@
+## extract operator
+
+<dfn>A symbol used to get values from a [container](#container) object, such as `[`, `[[`, or `$`</dfn>
+
+
+You can extract values from a [vector](#vector) by [index](#index) or name using `[` and `[[`.
+
+```{r}
+my_vector <- c(A = "first", B = "second")
+my_vector[1] # by index, retains name
+my_vector[[1]] # by index, removes name
+my_vector["B"] # by name, retains name
+my_vector[["B"]] # by name, removes name
+```
+
+You can extract values from a [list](#list) by [index](#index) or name using `[` and `[[` and by name using `$`.
+
+```{r}
+my_list <- list(
+  A = "First item",
+  B = 2
+)
+
+my_list[1] # by index, returns a (named) list 
+my_list[[1]] # by index, returns an (unnamed) vector
+my_list["B"] # by name, returns a (named) list 
+my_list[["B"]] # by name, returns an (unnamed) vector
+my_list$A # by name, returns an (unnamed) vector
+```
+
