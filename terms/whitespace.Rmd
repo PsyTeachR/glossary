@@ -1,0 +1,15 @@
+## whitespace
+
+<dfn>Spaces, tabs and line breaks</dfn>
+
+R mostly ignores whitespace, so you can use it to help you organise your code.
+
+```{r}
+# a and b are identical
+a <- list(ctl = "Control Condition", exp1 = "Experimental Condition 1", exp2 = "Experimental Condition 2")
+
+# but b is much easier to read
+b <- list(ctl  = "Control Condition", 
+          exp1 = "Experimental Condition 1", 
+          exp2 = "Experimental Condition 2")
+```

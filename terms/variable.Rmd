@@ -2,27 +2,4 @@
 
 <dfn>A word that identifies and stores the value of some data for later use.</dfn> 
 
-A variable in R:
-
-* contains only letters, numbers, fulls stops, and underscores
-* starts with a letter or a full stop and a letter
-* distinguishes uppercase and lowercase letters (`rickastley` is not the same as `RickAstley`)
-
-The following are valid and different variables:
-
-* songdata
-* SongData
-* song_data
-* song.data
-* .song.data
-* never_gonna_give_you_up_never_gonna_let_you_down
-
-The following are not valid variables:
-
-* _song_data
-* 1song
-* .1song
-* song data
-* song-data
-
-
+Variables in R are usually referred to as objects. See the definition for [object](#object).

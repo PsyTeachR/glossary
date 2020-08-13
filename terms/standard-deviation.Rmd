@@ -1,0 +1,20 @@
+## standard deviation
+
+<dfn>A statistic that measures how spread out data are relative to the mean.</dfn>
+
+If the data points are further from the mean, there is a higher standard deviation. Standard deviation is calculated as the square root of the [variance](#variance). 
+
+Normal distributions with means of 0 and SDs of 1 (red), 2 (blue) and 3 (purple).
+
+```{r, echo = FALSE}
+library(ggplot2)
+ggplot(data = data.frame(x = c(-10, 10)), aes(x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = 0, sd = 3), color = "purple", size = 2) + 
+  stat_function(fun = dnorm, n = 101, args = list(mean = 0, sd = 2), color = "blue", size = 2) + 
+  stat_function(fun = dnorm, n = 101, args = list(mean = 0, sd = 1), color = "red", size = 2) + 
+  ylab("") +
+  scale_y_continuous(breaks = NULL) +
+  scale_x_continuous(breaks = -10:10) +
+  theme_minimal()
+```
+

@@ -1,0 +1,10 @@
+## assignment operator
+
+<dfn>The symbol `<-`, which functions like `=` and assigns the value on the right to the object on the left</dfn>
+
+```{r}
+a <- 1
+
+a
+```
+

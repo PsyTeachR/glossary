@@ -1,0 +1,29 @@
+## object
+
+<dfn>A word that identifies and stores the value of some data for later use.</dfn>
+
+Sometimes objects are also called "variables". An object in R:
+
+* contains only letters, numbers, full stops, and underscores
+* starts with a letter or a full stop and a letter
+* distinguishes uppercase and lowercase letters (`rickastley` is not the same as `RickAstley`)
+
+The following are valid and different objects:
+
+* songdata
+* SongData
+* song_data
+* song.data
+* .song.data
+* never_gonna_give_you_up_never_gonna_let_you_down
+
+The following are not valid objects:
+
+* _song_data
+* 1song
+* .1song
+* song data
+* song-data
+
+
+

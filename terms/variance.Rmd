@@ -1,0 +1,5 @@
+## variance
+
+<dfn>A statistical measure for how much an average data point varies from the mean.</dfn>
+
+

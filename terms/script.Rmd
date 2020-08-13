@@ -1,0 +1,5 @@
+## script
+
+<dfn>A plain-text file that contains commands in a coding language, such as R.</dfn>
+
+

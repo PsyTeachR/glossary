@@ -1,0 +1,5 @@
+## absolute path
+
+<dfn>A file path that starts with / and is not appended to the working directory</dfn>
+
+

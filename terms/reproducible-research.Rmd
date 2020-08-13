@@ -1,0 +1,5 @@
+## reproducible research
+
+<dfn>Research that documents all of the steps between raw data and results in a way that can be verified.</dfn>
+
+
