@@ -286,11 +286,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>The kind of data represented by an object.</dfn></p>
 <ul>
 <li><a href="i.html#integer">integer</a> (whole numbers like <code>1L</code>, <code>-10L</code>, <code>3000L</code>)</li>
-<li><a href="n.html#numeric">numeric</a>/<a href="d.html#double">double</a> (numbers like <code>-0.223</code>, <code>10.324</code>, <code>1e4</code>)</li>
+<li><a href="d.html#double">double</a> (numbers like <code>-0.223</code>, <code>10.324</code>, <code>1e4</code>)</li>
 <li><a href="c.html#character">character</a> (letters or words like “I love R”)</li>
-<li>logical (<code>TRUE</code> or <code>FALSE</code>)</li>
+<li><a href="l.html#logical">logical</a> (<code>TRUE</code> or <code>FALSE</code>)</li>
 <li>complex (numbers with real and imaginary parts like <code>2i</code>)</li>
 </ul>
+<p>Integers and doubles are both <a href="n.html#numeric">numeric</a>.</p>
 <p>If you want to know what data type a variable is, use the function <code>typeof</code>.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="d.html#cb9-1"></a><span class="kw">typeof</span>(<span class="dv">10</span>)</span>
 <span id="cb9-2"><a href="d.html#cb9-2"></a><span class="co">#&gt; [1] &quot;double&quot;</span></span></code></pre></div>

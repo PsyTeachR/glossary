@@ -3,10 +3,12 @@
 <dfn>The kind of data represented by an object.</dfn>
 
 * [integer](#integer) (whole numbers like `1L`, `-10L`, `3000L`)
-* [numeric](#numeric)/[double](#double) (numbers like `-0.223`, `10.324`, `1e4`)
+* [double](#double) (numbers like `-0.223`, `10.324`, `1e4`)
 * [character](#character) (letters or words like "I love R")
-* logical (`TRUE` or `FALSE`)
+* [logical](#logical) (`TRUE` or `FALSE`)
 * complex (numbers with real and imaginary parts like `2i`)
+
+Integers and doubles are both [numeric](#numeric).
 
 If you want to know what data type a variable is, use the function `typeof`.
 
