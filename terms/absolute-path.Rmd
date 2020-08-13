@@ -2,4 +2,15 @@
 
 <dfn>A file path that starts with / and is not appended to the working directory</dfn>
 
+The package R.utils has a function `getAbsolutePath()` that returns the absolute path of a file [path](#path) or a file [object](#object).
+
+```{r}
+R.utils::getAbsolutePath("../index.Rmd")
+```
+
+
+```{r}
+f <- file()
+R.utils::getAbsolutePath(f)
+```
 

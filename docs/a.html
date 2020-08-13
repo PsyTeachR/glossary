@@ -214,6 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html"><i class="fa fa-check"></i>P</a><ul>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#package"><i class="fa fa-check"></i>package</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#power"><i class="fa fa-check"></i>power</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#preregistration"><i class="fa fa-check"></i>preregistration</a><ul>
@@ -295,6 +296,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="absolute-path" class="section level2">
 <h2>absolute path</h2>
 <p><dfn>A file path that starts with / and is not appended to the working directory</dfn></p>
+<p>The package R.utils has a function <code>getAbsolutePath()</code> that returns the absolute path of a file <a href="p.html#path">path</a> or a file <a href="o.html#object">object</a>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="a.html#cb3-1"></a>R.utils<span class="op">::</span><span class="kw">getAbsolutePath</span>(<span class="st">&quot;../index.Rmd&quot;</span>)</span>
+<span id="cb3-2"><a href="a.html#cb3-2"></a><span class="co">#&gt; [1] &quot;/Users/lisad/rproj/psyteachr/index.Rmd&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="a.html#cb4-1"></a>f &lt;-<span class="st"> </span><span class="kw">file</span>()</span>
+<span id="cb4-2"><a href="a.html#cb4-2"></a>R.utils<span class="op">::</span><span class="kw">getAbsolutePath</span>(f)</span>
+<span id="cb4-3"><a href="a.html#cb4-3"></a><span class="co">#&gt; [1] &quot;/Users/lisad/rproj/psyteachr/glossary/5&quot;</span></span></code></pre></div>
 
 </div>
 <div id="argument" class="section level2">
@@ -306,10 +313,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="assignment-operator" class="section level2">
 <h2>assignment operator</h2>
 <p><dfn>The symbol <code>&lt;-</code>, which functions like <code>=</code> and assigns the value on the right to the object on the left</dfn></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="a.html#cb3-1"></a>a &lt;-<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb3-2"><a href="a.html#cb3-2"></a></span>
-<span id="cb3-3"><a href="a.html#cb3-3"></a>a</span>
-<span id="cb3-4"><a href="a.html#cb3-4"></a><span class="co">#&gt; [1] 1</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="a.html#cb5-1"></a>a &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb5-2"><a href="a.html#cb5-2"></a></span>
+<span id="cb5-3"><a href="a.html#cb5-3"></a>a</span>
+<span id="cb5-4"><a href="a.html#cb5-4"></a><span class="co">#&gt; [1] 1</span></span></code></pre></div>
 
 </div>
 </div>

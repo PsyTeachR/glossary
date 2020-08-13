@@ -214,6 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html"><i class="fa fa-check"></i>P</a><ul>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#package"><i class="fa fa-check"></i>package</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#power"><i class="fa fa-check"></i>power</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#preregistration"><i class="fa fa-check"></i>preregistration</a><ul>
@@ -304,16 +305,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Integers and doubles are both <a href="n.html#numeric">numeric</a>.</p>
 <p>If you want to know what data type a variable is, use the function <code>typeof</code>.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="d.html#cb10-1"></a><span class="kw">typeof</span>(<span class="dv">10</span>)</span>
-<span id="cb10-2"><a href="d.html#cb10-2"></a><span class="co">#&gt; [1] &quot;double&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="d.html#cb11-1"></a><span class="kw">typeof</span>(<span class="st">&quot;10&quot;</span>)</span>
-<span id="cb11-2"><a href="d.html#cb11-2"></a><span class="co">#&gt; [1] &quot;character&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="d.html#cb12-1"></a><span class="kw">typeof</span>(10L)</span>
-<span id="cb12-2"><a href="d.html#cb12-2"></a><span class="co">#&gt; [1] &quot;integer&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="d.html#cb13-1"></a><span class="kw">typeof</span>(<span class="dv">10</span> <span class="op">==</span><span class="st"> </span><span class="dv">10</span>)</span>
-<span id="cb13-2"><a href="d.html#cb13-2"></a><span class="co">#&gt; [1] &quot;logical&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="d.html#cb14-1"></a><span class="kw">typeof</span>(10i)</span>
-<span id="cb14-2"><a href="d.html#cb14-2"></a><span class="co">#&gt; [1] &quot;complex&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="d.html#cb12-1"></a><span class="kw">typeof</span>(<span class="dv">10</span>)</span>
+<span id="cb12-2"><a href="d.html#cb12-2"></a><span class="co">#&gt; [1] &quot;double&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="d.html#cb13-1"></a><span class="kw">typeof</span>(<span class="st">&quot;10&quot;</span>)</span>
+<span id="cb13-2"><a href="d.html#cb13-2"></a><span class="co">#&gt; [1] &quot;character&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="d.html#cb14-1"></a><span class="kw">typeof</span>(10L)</span>
+<span id="cb14-2"><a href="d.html#cb14-2"></a><span class="co">#&gt; [1] &quot;integer&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="d.html#cb15-1"></a><span class="kw">typeof</span>(<span class="dv">10</span> <span class="op">==</span><span class="st"> </span><span class="dv">10</span>)</span>
+<span id="cb15-2"><a href="d.html#cb15-2"></a><span class="co">#&gt; [1] &quot;logical&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="d.html#cb16-1"></a><span class="kw">typeof</span>(10i)</span>
+<span id="cb16-2"><a href="d.html#cb16-2"></a><span class="co">#&gt; [1] &quot;complex&quot;</span></span></code></pre></div>
 
 </div>
 <div id="data-wrangling" class="section level2">

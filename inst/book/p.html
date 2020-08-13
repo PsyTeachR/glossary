@@ -214,6 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html"><i class="fa fa-check"></i>P</a><ul>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#package"><i class="fa fa-check"></i>package</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#power"><i class="fa fa-check"></i>power</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#preregistration"><i class="fa fa-check"></i>preregistration</a><ul>
@@ -312,6 +313,18 @@ You can alternatively type the package name and two colons before any function f
 Figure 3: Pane layout
 </p>
 </div>
+
+</div>
+<div id="path" class="section level2">
+<h2>path</h2>
+<p><dfn>A string representing the location of a file or directory.</dfn></p>
+<p>A file path can be <a href="#relative.path">relative</a> to the <a href="#working.directory">working directory</a> or <a href="#absolute.path">absolute</a>.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="p.html#cb37-1"></a><span class="co"># list all files in the images directory, </span></span>
+<span id="cb37-2"><a href="p.html#cb37-2"></a><span class="co"># use relative path</span></span>
+<span id="cb37-3"><a href="p.html#cb37-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;images/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="p.html#cb38-1"></a><span class="co"># list all files on the Desktop, </span></span>
+<span id="cb38-2"><a href="p.html#cb38-2"></a><span class="co"># use absolute path</span></span>
+<span id="cb38-3"><a href="p.html#cb38-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;/Users/myaccount/Desktop/&quot;</span>)</span></code></pre></div>
 
 </div>
 <div id="population" class="section level2">

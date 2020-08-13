@@ -1,0 +1,18 @@
+## path
+
+<dfn>A string representing the location of a file or directory.</dfn>
+
+A file path can be [relative](#relative.path) to the [working directory](#working.directory) or [absolute](#absolute.path).
+
+```{r, eval = FALSE}
+# list all files in the images directory, 
+# use relative path
+list.files(path = "images/")
+```
+
+
+```{r, eval = FALSE}
+# list all files on the Desktop, 
+# use absolute path
+list.files(path = "/Users/myaccount/Desktop/")
+```
