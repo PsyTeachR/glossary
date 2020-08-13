@@ -1,0 +1,5 @@
+## probability
+
+<dfn>A number between 0 and 1 where 0 indicates impossibility of the event and 1 indicates certainty</dfn>
+
+

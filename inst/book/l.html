@@ -136,6 +136,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i>glossary</a><ul>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#installation"><i class="fa fa-check"></i>Installation</a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#access-the-book-offline"><i class="fa fa-check"></i>Access the book offline</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html"><i class="fa fa-check"></i>A</a><ul>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 </ul></li>
@@ -195,6 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html#markdown"><i class="fa fa-check"></i>markdown</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html"><i class="fa fa-check"></i>N</a><ul>
+<li class="chapter" data-level="" data-path="n.html"><a href="n.html#normal-distribution"><i class="fa fa-check"></i>normal distribution</a></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html#numeric"><i class="fa fa-check"></i>numeric</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html"><i class="fa fa-check"></i>O</a><ul>
@@ -206,7 +211,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#power"><i class="fa fa-check"></i>power</a></li>
-<li class="chapter" data-level="" data-path="p.html"><a href="p.html#preregistration"><i class="fa fa-check"></i>preregistration</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#preregistration"><i class="fa fa-check"></i>preregistration</a><ul>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#resources"><i class="fa fa-check"></i>Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#probability"><i class="fa fa-check"></i>probability</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
@@ -290,32 +298,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="logical" class="section level2">
 <h2>logical</h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing <code>TRUE</code> or <code>FALSE</code> values.</dfn></p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="l.html#cb28-1"></a>true_logical_values &lt;-<span class="st"> </span><span class="kw">list</span>(</span>
-<span id="cb28-2"><a href="l.html#cb28-2"></a>  <span class="ot">TRUE</span>,</span>
-<span id="cb28-3"><a href="l.html#cb28-3"></a>  T,</span>
-<span id="cb28-4"><a href="l.html#cb28-4"></a>  <span class="kw">as.logical</span>(<span class="dv">1</span>),</span>
-<span id="cb28-5"><a href="l.html#cb28-5"></a>  <span class="st">&quot;A&quot;</span> <span class="op">==</span><span class="st"> &quot;A&quot;</span></span>
-<span id="cb28-6"><a href="l.html#cb28-6"></a>)</span>
-<span id="cb28-7"><a href="l.html#cb28-7"></a></span>
-<span id="cb28-8"><a href="l.html#cb28-8"></a>false_logical_values &lt;-<span class="st"> </span><span class="kw">list</span>(</span>
-<span id="cb28-9"><a href="l.html#cb28-9"></a>  <span class="ot">FALSE</span>,</span>
-<span id="cb28-10"><a href="l.html#cb28-10"></a>  F,</span>
-<span id="cb28-11"><a href="l.html#cb28-11"></a>  <span class="kw">as.logical</span>(<span class="dv">0</span>),</span>
-<span id="cb28-12"><a href="l.html#cb28-12"></a>  <span class="st">&quot;A&quot;</span> <span class="op">==</span><span class="st"> &quot;B&quot;</span></span>
-<span id="cb28-13"><a href="l.html#cb28-13"></a>)</span>
-<span id="cb28-14"><a href="l.html#cb28-14"></a></span>
-<span id="cb28-15"><a href="l.html#cb28-15"></a><span class="kw">str</span>(true_logical_values)</span>
-<span id="cb28-16"><a href="l.html#cb28-16"></a><span class="kw">str</span>(false_logical_values)</span></code></pre></div>
-<pre><code>## List of 4
-##  $ : logi TRUE
-##  $ : logi TRUE
-##  $ : logi TRUE
-##  $ : logi TRUE
-## List of 4
-##  $ : logi FALSE
-##  $ : logi FALSE
-##  $ : logi FALSE
-##  $ : logi FALSE</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="l.html#cb18-1"></a>true_logical_values &lt;-<span class="st"> </span><span class="kw">list</span>(</span>
+<span id="cb18-2"><a href="l.html#cb18-2"></a>  <span class="ot">TRUE</span>,</span>
+<span id="cb18-3"><a href="l.html#cb18-3"></a>  T,</span>
+<span id="cb18-4"><a href="l.html#cb18-4"></a>  <span class="kw">as.logical</span>(<span class="dv">1</span>),</span>
+<span id="cb18-5"><a href="l.html#cb18-5"></a>  <span class="st">&quot;A&quot;</span> <span class="op">==</span><span class="st"> &quot;A&quot;</span></span>
+<span id="cb18-6"><a href="l.html#cb18-6"></a>)</span>
+<span id="cb18-7"><a href="l.html#cb18-7"></a></span>
+<span id="cb18-8"><a href="l.html#cb18-8"></a>false_logical_values &lt;-<span class="st"> </span><span class="kw">list</span>(</span>
+<span id="cb18-9"><a href="l.html#cb18-9"></a>  <span class="ot">FALSE</span>,</span>
+<span id="cb18-10"><a href="l.html#cb18-10"></a>  F,</span>
+<span id="cb18-11"><a href="l.html#cb18-11"></a>  <span class="kw">as.logical</span>(<span class="dv">0</span>),</span>
+<span id="cb18-12"><a href="l.html#cb18-12"></a>  <span class="st">&quot;A&quot;</span> <span class="op">==</span><span class="st"> &quot;B&quot;</span></span>
+<span id="cb18-13"><a href="l.html#cb18-13"></a>)</span>
+<span id="cb18-14"><a href="l.html#cb18-14"></a></span>
+<span id="cb18-15"><a href="l.html#cb18-15"></a><span class="kw">str</span>(true_logical_values)</span>
+<span id="cb18-16"><a href="l.html#cb18-16"></a><span class="kw">str</span>(false_logical_values)</span>
+<span id="cb18-17"><a href="l.html#cb18-17"></a><span class="co">#&gt; List of 4</span></span>
+<span id="cb18-18"><a href="l.html#cb18-18"></a><span class="co">#&gt;  $ : logi TRUE</span></span>
+<span id="cb18-19"><a href="l.html#cb18-19"></a><span class="co">#&gt;  $ : logi TRUE</span></span>
+<span id="cb18-20"><a href="l.html#cb18-20"></a><span class="co">#&gt;  $ : logi TRUE</span></span>
+<span id="cb18-21"><a href="l.html#cb18-21"></a><span class="co">#&gt;  $ : logi TRUE</span></span>
+<span id="cb18-22"><a href="l.html#cb18-22"></a><span class="co">#&gt; List of 4</span></span>
+<span id="cb18-23"><a href="l.html#cb18-23"></a><span class="co">#&gt;  $ : logi FALSE</span></span>
+<span id="cb18-24"><a href="l.html#cb18-24"></a><span class="co">#&gt;  $ : logi FALSE</span></span>
+<span id="cb18-25"><a href="l.html#cb18-25"></a><span class="co">#&gt;  $ : logi FALSE</span></span>
+<span id="cb18-26"><a href="l.html#cb18-26"></a><span class="co">#&gt;  $ : logi FALSE</span></span></code></pre></div>
 
 </div>
 </div>

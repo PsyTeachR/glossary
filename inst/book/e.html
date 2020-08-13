@@ -136,6 +136,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i>glossary</a><ul>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#installation"><i class="fa fa-check"></i>Installation</a></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#access-the-book-offline"><i class="fa fa-check"></i>Access the book offline</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html"><i class="fa fa-check"></i>A</a><ul>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 </ul></li>
@@ -195,6 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html#markdown"><i class="fa fa-check"></i>markdown</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html"><i class="fa fa-check"></i>N</a><ul>
+<li class="chapter" data-level="" data-path="n.html"><a href="n.html#normal-distribution"><i class="fa fa-check"></i>normal distribution</a></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html#numeric"><i class="fa fa-check"></i>numeric</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html"><i class="fa fa-check"></i>O</a><ul>
@@ -206,7 +211,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#power"><i class="fa fa-check"></i>power</a></li>
-<li class="chapter" data-level="" data-path="p.html"><a href="p.html#preregistration"><i class="fa fa-check"></i>preregistration</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#preregistration"><i class="fa fa-check"></i>preregistration</a><ul>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#resources"><i class="fa fa-check"></i>Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#probability"><i class="fa fa-check"></i>probability</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
@@ -277,15 +285,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>element</h2>
 <p><dfn>One item in a <a href="v.html#vector">vector</a>.</dfn></p>
 <p>For example, the built-in vector <code>LETTERS</code> contains 26 elements: the uppercase latin letters A through Z. You can select an element from a vector by putting its <a href="i.html#index">index</a> in square brackets.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="e.html#cb21-1"></a><span class="co"># get the tenth upppercase letter</span></span>
-<span id="cb21-2"><a href="e.html#cb21-2"></a>LETTERS[<span class="dv">10</span>]</span></code></pre></div>
-<pre><code>## [1] &quot;J&quot;</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="e.html#cb14-1"></a><span class="co"># get the tenth upppercase letter</span></span>
+<span id="cb14-2"><a href="e.html#cb14-2"></a>LETTERS[<span class="dv">10</span>]</span>
+<span id="cb14-3"><a href="e.html#cb14-3"></a><span class="co">#&gt; [1] &quot;J&quot;</span></span></code></pre></div>
 
 </div>
 <div id="escape" class="section level2">
 <h2>escape</h2>
 <p><dfn>Include special characters like " inside of a string by prefacing them with a backslash.</dfn></p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="e.html#cb23-1"></a>str &lt;-<span class="st"> &quot;This prints a </span><span class="ch">\&quot;</span><span class="st">quote</span><span class="ch">\&quot;</span><span class="st">&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="e.html#cb15-1"></a>str &lt;-<span class="st"> &quot;This prints a </span><span class="ch">\&quot;</span><span class="st">quote</span><span class="ch">\&quot;</span><span class="st">&quot;</span></span></code></pre></div>
 <p>This prints a “quote”</p>
 
 </div>
@@ -337,37 +345,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>extract operator</h2>
 <p><dfn>A symbol used to get values from a <a href="#container">container</a> object, such as <code>[</code>, <code>[[</code>, or <code>$</code></dfn></p>
 <p>You can extract values from a <a href="v.html#vector">vector</a> by <a href="i.html#index">index</a> or name using <code>[</code> and <code>[[</code>.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="e.html#cb24-1"></a>my_vector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">A =</span> <span class="st">&quot;first&quot;</span>, <span class="dt">B =</span> <span class="st">&quot;second&quot;</span>)</span>
-<span id="cb24-2"><a href="e.html#cb24-2"></a>my_vector[<span class="dv">1</span>] <span class="co"># by index, retains name</span></span>
-<span id="cb24-3"><a href="e.html#cb24-3"></a>my_vector[[<span class="dv">1</span>]] <span class="co"># by index, removes name</span></span>
-<span id="cb24-4"><a href="e.html#cb24-4"></a>my_vector[<span class="st">&quot;B&quot;</span>] <span class="co"># by name, retains name</span></span>
-<span id="cb24-5"><a href="e.html#cb24-5"></a>my_vector[[<span class="st">&quot;B&quot;</span>]] <span class="co"># by name, removes name</span></span></code></pre></div>
-<pre><code>##       A 
-## &quot;first&quot; 
-## [1] &quot;first&quot;
-##        B 
-## &quot;second&quot; 
-## [1] &quot;second&quot;</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="e.html#cb16-1"></a>my_vector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">A =</span> <span class="st">&quot;first&quot;</span>, <span class="dt">B =</span> <span class="st">&quot;second&quot;</span>)</span>
+<span id="cb16-2"><a href="e.html#cb16-2"></a>my_vector[<span class="dv">1</span>] <span class="co"># by index, retains name</span></span>
+<span id="cb16-3"><a href="e.html#cb16-3"></a>my_vector[[<span class="dv">1</span>]] <span class="co"># by index, removes name</span></span>
+<span id="cb16-4"><a href="e.html#cb16-4"></a>my_vector[<span class="st">&quot;B&quot;</span>] <span class="co"># by name, retains name</span></span>
+<span id="cb16-5"><a href="e.html#cb16-5"></a>my_vector[[<span class="st">&quot;B&quot;</span>]] <span class="co"># by name, removes name</span></span>
+<span id="cb16-6"><a href="e.html#cb16-6"></a><span class="co">#&gt;       A </span></span>
+<span id="cb16-7"><a href="e.html#cb16-7"></a><span class="co">#&gt; &quot;first&quot; </span></span>
+<span id="cb16-8"><a href="e.html#cb16-8"></a><span class="co">#&gt; [1] &quot;first&quot;</span></span>
+<span id="cb16-9"><a href="e.html#cb16-9"></a><span class="co">#&gt;        B </span></span>
+<span id="cb16-10"><a href="e.html#cb16-10"></a><span class="co">#&gt; &quot;second&quot; </span></span>
+<span id="cb16-11"><a href="e.html#cb16-11"></a><span class="co">#&gt; [1] &quot;second&quot;</span></span></code></pre></div>
 <p>You can extract values from a <a href="l.html#list">list</a> by <a href="i.html#index">index</a> or name using <code>[</code> and <code>[[</code> and by name using <code>$</code>.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="e.html#cb26-1"></a>my_list &lt;-<span class="st"> </span><span class="kw">list</span>(</span>
-<span id="cb26-2"><a href="e.html#cb26-2"></a>  <span class="dt">A =</span> <span class="st">&quot;First item&quot;</span>,</span>
-<span id="cb26-3"><a href="e.html#cb26-3"></a>  <span class="dt">B =</span> <span class="dv">2</span></span>
-<span id="cb26-4"><a href="e.html#cb26-4"></a>)</span>
-<span id="cb26-5"><a href="e.html#cb26-5"></a></span>
-<span id="cb26-6"><a href="e.html#cb26-6"></a>my_list[<span class="dv">1</span>] <span class="co"># by index, returns a (named) list </span></span>
-<span id="cb26-7"><a href="e.html#cb26-7"></a>my_list[[<span class="dv">1</span>]] <span class="co"># by index, returns an (unnamed) vector</span></span>
-<span id="cb26-8"><a href="e.html#cb26-8"></a>my_list[<span class="st">&quot;B&quot;</span>] <span class="co"># by name, returns a (named) list </span></span>
-<span id="cb26-9"><a href="e.html#cb26-9"></a>my_list[[<span class="st">&quot;B&quot;</span>]] <span class="co"># by name, returns an (unnamed) vector</span></span>
-<span id="cb26-10"><a href="e.html#cb26-10"></a>my_list<span class="op">$</span>A <span class="co"># by name, returns an (unnamed) vector</span></span></code></pre></div>
-<pre><code>## $A
-## [1] &quot;First item&quot;
-## 
-## [1] &quot;First item&quot;
-## $B
-## [1] 2
-## 
-## [1] 2
-## [1] &quot;First item&quot;</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="e.html#cb17-1"></a>my_list &lt;-<span class="st"> </span><span class="kw">list</span>(</span>
+<span id="cb17-2"><a href="e.html#cb17-2"></a>  <span class="dt">A =</span> <span class="st">&quot;First item&quot;</span>,</span>
+<span id="cb17-3"><a href="e.html#cb17-3"></a>  <span class="dt">B =</span> <span class="dv">2</span></span>
+<span id="cb17-4"><a href="e.html#cb17-4"></a>)</span>
+<span id="cb17-5"><a href="e.html#cb17-5"></a></span>
+<span id="cb17-6"><a href="e.html#cb17-6"></a>my_list[<span class="dv">1</span>] <span class="co"># by index, returns a (named) list </span></span>
+<span id="cb17-7"><a href="e.html#cb17-7"></a>my_list[[<span class="dv">1</span>]] <span class="co"># by index, returns an (unnamed) vector</span></span>
+<span id="cb17-8"><a href="e.html#cb17-8"></a>my_list[<span class="st">&quot;B&quot;</span>] <span class="co"># by name, returns a (named) list </span></span>
+<span id="cb17-9"><a href="e.html#cb17-9"></a>my_list[[<span class="st">&quot;B&quot;</span>]] <span class="co"># by name, returns an (unnamed) vector</span></span>
+<span id="cb17-10"><a href="e.html#cb17-10"></a>my_list<span class="op">$</span>A <span class="co"># by name, returns an (unnamed) vector</span></span>
+<span id="cb17-11"><a href="e.html#cb17-11"></a><span class="co">#&gt; $A</span></span>
+<span id="cb17-12"><a href="e.html#cb17-12"></a><span class="co">#&gt; [1] &quot;First item&quot;</span></span>
+<span id="cb17-13"><a href="e.html#cb17-13"></a><span class="co">#&gt; </span></span>
+<span id="cb17-14"><a href="e.html#cb17-14"></a><span class="co">#&gt; [1] &quot;First item&quot;</span></span>
+<span id="cb17-15"><a href="e.html#cb17-15"></a><span class="co">#&gt; $B</span></span>
+<span id="cb17-16"><a href="e.html#cb17-16"></a><span class="co">#&gt; [1] 2</span></span>
+<span id="cb17-17"><a href="e.html#cb17-17"></a><span class="co">#&gt; </span></span>
+<span id="cb17-18"><a href="e.html#cb17-18"></a><span class="co">#&gt; [1] 2</span></span>
+<span id="cb17-19"><a href="e.html#cb17-19"></a><span class="co">#&gt; [1] &quot;First item&quot;</span></span></code></pre></div>
 
 </div>
 </div>

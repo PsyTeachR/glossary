@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>V | Glossary</title>
+  <title>glossary | Glossary</title>
   <meta name="description" content="Definitions of technical terms" />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="V | Glossary" />
+  <meta property="og:title" content="glossary | Glossary" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="V | Glossary" />
+  <meta name="twitter:title" content="glossary | Glossary" />
   
   <meta name="twitter:description" content="Definitions of technical terms" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="u.html"/>
-<link rel="next" href="w.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="a.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -278,137 +278,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="v" class="section level1">
-<h1>V</h1>
-
-<div id="value" class="section level2">
-<h2>value</h2>
-<p><dfn>A single number or piece of data.</dfn></p>
-<p>In a tidy dataset, each cell contains only one value.</p>
-<p>The <code>age</code> column contains 3 values: mean, minimum and maximum.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="v.html#cb37-1"></a><span class="kw">library</span>(dplyr)</span>
-<span id="cb37-2"><a href="v.html#cb37-2"></a><span class="kw">library</span>(tidyr)</span>
-<span id="cb37-3"><a href="v.html#cb37-3"></a></span>
-<span id="cb37-4"><a href="v.html#cb37-4"></a>untidy &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
-<span id="cb37-5"><a href="v.html#cb37-5"></a>  <span class="dt">group =</span> <span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>),</span>
-<span id="cb37-6"><a href="v.html#cb37-6"></a>  <span class="dt">age =</span> <span class="kw">c</span>(<span class="st">&quot;20.4 [18-25]&quot;</span>, <span class="st">&quot;19.9 [18-24]&quot;</span>)</span>
-<span id="cb37-7"><a href="v.html#cb37-7"></a>)</span></code></pre></div>
-<table>
-<thead>
-<tr class="header">
-<th align="left">group</th>
-<th align="left">age</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">A</td>
-<td align="left">20.4 [18-25]</td>
-</tr>
-<tr class="even">
-<td align="left">B</td>
-<td align="left">19.9 [18-24]</td>
-</tr>
-</tbody>
-</table>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="v.html#cb38-1"></a>tidy &lt;-<span class="st"> </span>untidy <span class="op">%&gt;%</span></span>
-<span id="cb38-2"><a href="v.html#cb38-2"></a><span class="st">  </span><span class="kw">separate</span>(age, <span class="kw">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;min&quot;</span>, <span class="st">&quot;max&quot;</span>), </span>
-<span id="cb38-3"><a href="v.html#cb38-3"></a>           <span class="dt">sep =</span> <span class="st">&quot;( </span><span class="ch">\\</span><span class="st">[|-|</span><span class="ch">\\</span><span class="st">])&quot;</span>,</span>
-<span id="cb38-4"><a href="v.html#cb38-4"></a>           <span class="dt">extra =</span> <span class="st">&quot;drop&quot;</span>)</span></code></pre></div>
-<table>
-<thead>
-<tr class="header">
-<th align="left">group</th>
-<th align="left">mean</th>
-<th align="left">min</th>
-<th align="left">max</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">A</td>
-<td align="left">20.4</td>
-<td align="left">18</td>
-<td align="left">25</td>
-</tr>
-<tr class="even">
-<td align="left">B</td>
-<td align="left">19.9</td>
-<td align="left">18</td>
-<td align="left">24</td>
-</tr>
-</tbody>
-</table>
-
+<div id="glossary" class="section level1">
+<h1>glossary</h1>
+<!-- badges: start -->
+<!-- badges: end -->
+<p>The goal of glossary is to provide a glossary of statistical and R coding terms used in the <a href="https://psyteachr.github.io/" target="_blank">PsyTeachR books</a> that can be accessed offline.</p>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<p>You can install the development version of glossary from <a href="https://github.com/PsyTeachR/">GitHub</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="glossary.html#cb1-1"></a><span class="co"># install.packages(&quot;devtools&quot;)</span></span>
+<span id="cb1-2"><a href="glossary.html#cb1-2"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;psyteachr/glossary&quot;</span>)</span></code></pre></div>
 </div>
-<div id="variable" class="section level2">
-<h2>variable</h2>
-<p><dfn>A word that identifies and stores the value of some data for later use.</dfn></p>
-<p>A variable in R:</p>
-<ul>
-<li>contains only letters, numbers, fulls stops, and underscores</li>
-<li>starts with a letter or a full stop and a letter</li>
-<li>distinguishes uppercase and lowercase letters (<code>rickastley</code> is not the same as <code>RickAstley</code>)</li>
-</ul>
-<p>The following are valid and different variables:</p>
-<ul>
-<li>songdata</li>
-<li>SongData</li>
-<li>song_data</li>
-<li>song.data</li>
-<li>.song.data</li>
-<li>never_gonna_give_you_up_never_gonna_let_you_down</li>
-</ul>
-<p>The following are not valid variables:</p>
-<ul>
-<li>_song_data</li>
-<li>1song</li>
-<li>.1song</li>
-<li>song data</li>
-<li>song-data</li>
-</ul>
-
-</div>
-<div id="vector" class="section level2">
-<h2>vector</h2>
-<p><dfn>A type of data structure that is basically a list of things like T/F values, numbers, or strings.</dfn></p>
-<p>It can get very complicated (see <a href="http://r4ds.had.co.nz/vectors.html">Ch 20 of R for Data Science</a> for a thorough explanation), but at first you just need to be able to understand that the following things are examples of vectors:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="v.html#cb39-1"></a><span class="co"># use the c() function to make a vector of strings or numbers</span></span>
-<span id="cb39-2"><a href="v.html#cb39-2"></a>liit_ingredients &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;vodka&quot;</span>, <span class="st">&quot;gin&quot;</span>, <span class="st">&quot;rum&quot;</span>, <span class="st">&quot;tequila&quot;</span>, <span class="st">&quot;triple sec&quot;</span>, </span>
-<span id="cb39-3"><a href="v.html#cb39-3"></a>                      <span class="st">&quot;orange juice&quot;</span>, <span class="st">&quot;coke&quot;</span>, <span class="st">&quot;sour mix&quot;</span>)</span>
-<span id="cb39-4"><a href="v.html#cb39-4"></a></span>
-<span id="cb39-5"><a href="v.html#cb39-5"></a>fun_to_play_at &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">25</span>, <span class="dv">13</span>, <span class="dv">3</span>, <span class="dv">1</span>)</span>
-<span id="cb39-6"><a href="v.html#cb39-6"></a></span>
-<span id="cb39-7"><a href="v.html#cb39-7"></a><span class="co"># the colon between two integers gives you all the numbers from the first to the last integer</span></span>
-<span id="cb39-8"><a href="v.html#cb39-8"></a>likert &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">7</span></span></code></pre></div>
-<p>The variable <code>letters</code> is a built-in vector with the latin letters in order. You can select part of a vector by putting the numeric location (or <a href="i.html#index">index</a>) of what <a href="e.html#element">element</a> you want inside of square brackets after the vector. You can even put a vector of numbers inside the square brackets to select several elements.</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="v.html#cb40-1"></a>letters[<span class="dv">26</span>]</span>
-<span id="cb40-2"><a href="v.html#cb40-2"></a>letters[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]</span>
-<span id="cb40-3"><a href="v.html#cb40-3"></a>letters[fun_to_play_at]</span>
-<span id="cb40-4"><a href="v.html#cb40-4"></a><span class="co">#&gt; [1] &quot;z&quot;</span></span>
-<span id="cb40-5"><a href="v.html#cb40-5"></a><span class="co">#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;</span></span>
-<span id="cb40-6"><a href="v.html#cb40-6"></a><span class="co">#&gt; [1] &quot;y&quot; &quot;m&quot; &quot;c&quot; &quot;a&quot;</span></span></code></pre></div>
-
-</div>
-<div id="vectorized" class="section level2">
-<h2>vectorized</h2>
-<p><dfn>An <a href="o.html#operator">operator</a> or <a href="f.html#function">function</a> that acts on each <a href="e.html#element">element</a> in a <a href="v.html#vector">vector</a></dfn></p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="v.html#cb41-1"></a><span class="co"># Add 10 to each element in the vector a</span></span>
-<span id="cb41-2"><a href="v.html#cb41-2"></a>a &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">5</span></span>
-<span id="cb41-3"><a href="v.html#cb41-3"></a>a <span class="op">+</span><span class="st"> </span><span class="dv">10</span></span>
-<span id="cb41-4"><a href="v.html#cb41-4"></a></span>
-<span id="cb41-5"><a href="v.html#cb41-5"></a><span class="co"># paste &quot;!&quot; to the end of each element in the vector b</span></span>
-<span id="cb41-6"><a href="v.html#cb41-6"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Hey&quot;</span>, <span class="st">&quot;You&quot;</span>)</span>
-<span id="cb41-7"><a href="v.html#cb41-7"></a><span class="kw">paste0</span>(b, <span class="st">&quot;!&quot;</span>)</span>
-<span id="cb41-8"><a href="v.html#cb41-8"></a><span class="co">#&gt; [1] 11 12 13 14 15</span></span>
-<span id="cb41-9"><a href="v.html#cb41-9"></a><span class="co">#&gt; [1] &quot;Hey!&quot; &quot;You!&quot;</span></span></code></pre></div>
-
-</div>
-<div id="version-control" class="section level2">
-<h2>version control</h2>
-<p><dfn>A way to save a record of changes to your files.</dfn></p>
-<p><a href="g.html#git">Git</a> is one type of version control that is most commonly used with RStudio. <a href="g.html#github">GitHub</a> is a cloud-based service for storing and sharing your version controlled files.</p>
-<p><a href="https://debruine.github.io/tutorials/git-and-github.html">Set up git and github</a> with RStudio.</p>
+<div id="access-the-book-offline" class="section level2">
+<h2>Access the book offline</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="glossary.html#cb2-1"></a>glossary<span class="op">::</span><span class="kw">book</span>()</span></code></pre></div>
 
 </div>
 </div>
@@ -522,8 +405,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="u.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="w.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
