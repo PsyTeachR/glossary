@@ -1,0 +1,11 @@
+## population
+
+<dfn>All members of a group that we wish to generalise our findings to. E.g. all students taking Psychology at the University of Glasgow. We draw our testing [sample](#sample) from the population.</dfn>. 
+
+The population of interest can be any group and it is important that you define this in your study when considering the generalisability of your tests and how you will conduct your sampling. If you want to generalise to everyone in the world then that is the population you should sample from. If you want to generalise to everyone taking Psychology at the University of Glasgow then those are the people you should specifically sample from.
+
+Remember that populations don't have to be humans but could refer to all possible variations of a face for example. The key question is who or what do your results generalise to.
+
+For an interesting paper on populations, samples and generalisability, see:
+
+* <a href = "https://journals.sagepub.com/doi/10.1177/1745691617708630" target = "_blank">Simons, D. J., Shoda, Y., & Lindsay, D. S. (2017). Constraints on Generality (COG): A Proposed Addition to All Empirical Papers. Perspectives on Psychological Science, 12(6), 1123–1128. https://doi.org/10.1177/1745691617708630</a>

@@ -1,8 +1,0 @@
-
-## package
-
-Many useful functions are built into R and available by default whenever you start it up. But some of the most powerful things you can do with R require packages of functions that are written by the community. The functions in these packages aren't available until you install the package (using `install.packages("package_name")` or clicking Install on the Packages pane; this only needs to be done if the package isn't already installed). Once that package is installed (kind of like downloading an app to your phone), you can use it in any script by loading that package as a library at the top of your script (e.g., (`library(ggplot2)`). 
-
-<div class="info">
-<p>You can alternatively type the package name and two colons before any function from that package to use it without loading all of its functions into the library (e.g., <code>ggplot2::geom_histogram()</code>). This sort of notation is also used to disambiguate function names if two packages have functions with the same names.</p>
-</div>

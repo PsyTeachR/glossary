@@ -1,0 +1,7 @@
+## random effect
+
+<dfn>An effect associated with an individual sampling unit, usually represented by an offset from a fixed effect.</dfn>
+
+**Example:** If the grand mean response time in a population is 600 milliseconds, that number represents the typical value. The mean response time for an individual subject $s$ can be represented as an offset (deviation) from that value. For example, if subject $s$ has a mean reaction time of 650 ms, that would imply a random effect for that subject of +50 ms.
+
+Unlike `r glossary("fixed effect", display="fixed effects")`, we expect the underlying random effects to change from experiment to experiment as the sampling units (e.g., subjects) change.

@@ -1,0 +1,22 @@
+## confidence intervals (CI)
+
+<dfn>A type of interval estimate used to summarise a given statistic or measurement where a proportion of intervals calculated from the sample(s) will contain the true value of the statistic. For example, 95% Confidence Intervals of the mean state that if you were to run the same study on 100 samples and calculate this interval for each iteration of the study, then 95 of the intervals calculated will contain the true mean of the population.</dfn>
+
+Most commonly cited Confidence Intervals are the 95% Confidence Interval and the 99% Confidence Interval. The 95% CI and 99% CI of the mean are calculated as follows:
+
+* $95\%\ CI = \mu ± 1.96 \times SD$
+* $99\%\ CI = \mu ± 2.58 \times SD$
+
+```{r conf-int, echo = FALSE}
+upperCI <- 10 + 1.25*1.96
+lowerCI <- 10 - 1.25*1.96
+```
+
+For example, given $\mu$ = 10 and $SD$ = 1.25, the $95\%\ CI = [`r lowerCI`, `r upperCI`]$
+
+There are a number of misconceptions about Confidence Intervals and it would be worth reading the following papers:
+
+* <a href = "https://link.springer.com/article/10.1007/s10654-016-0149-3" target = "_blank">Greenland, S., Senn, S.J., Rothman, K.J. et al. Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. Eur J Epidemiol 31, 337–350 (2016). https://doi.org/10.1007/s10654-016-0149-3</a>
+
+* <a href = "https://link.springer.com/article/10.3758%2Fs13423-013-0572-3" target = "_blank">Hoekstra, R., Morey, R.D., Rouder, J.N. et al. Robust misinterpretation of confidence intervals. Psychon Bull Rev 21, 1157–1164 (2014). https://doi.org/10.3758/s13423-013-0572-3</a>
+
