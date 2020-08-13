@@ -24,7 +24,7 @@ The goal of glossary is to provide a glossary of statistical and R coding terms 
 
 You can install the development version of glossary from [GitHub](https://github.com/PsyTeachR/) with:
 
-```{r, eval = FALSE}
+``` r
 # install.packages("devtools")
 devtools::install_github("psyteachr/glossary")
 ```
@@ -32,7 +32,7 @@ devtools::install_github("psyteachr/glossary")
 
 ## Access the book offline
 
-```{r example, eval = FALSE}
+``` r
 glossary::book()
 ```
 
