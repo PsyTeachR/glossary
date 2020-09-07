@@ -2,4 +2,4 @@
 
 <dfn>Data that can only take certain values, such as integers.</dfn>
 
-Discrete data are not [continuous](#continuous), so it doesn't make sense to have a value that is partway between two values. For example, the number of texts you send per day is discrete; you can't send 12.5 texts.
+Discrete data are not [continuous](#continuous), so it doesn't make sense to have a value that is partway between two values. For example, the number of texts you send per day is discrete; you can't send 12.5 texts. Discrete data can be [ordinal](#ordinal) or [nominal](#nominal).

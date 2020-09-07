@@ -1,0 +1,12 @@
+## Likert
+
+<dfn>A rating scale with a small number of discrete points in order</dfn>
+
+An example of a Likert scale is the following:
+
+| Question | 1 = Much less than average | 2 = Less than average | 3 = Average | 4 = More than average | 5 = Much more than average |
+|-|-|-|-|-|-|
+| I like R | <input type="radio" name = "a"> | <input type="radio" name = "a"> | <input type="radio" name = "a"> | <input type="radio" name = "a"> | <input type="radio" name = "a"> |
+| I like stats | <input type="radio" name = "b"> | <input type="radio" name = "b"> | <input type="radio" name = "b"> | <input type="radio" name = "b"> | <input type="radio" name = "b"> |
+
+The points on Likert scales are [ordinal](#ordinal), but not necessarily [continuous](#continuous). That is, you can assume 3 is higher than 2, but the difference between 2 and 3 isn't always the same as the difference between 1 and 2. Therefore, think carefully before averaging Likert values, since the average of 2 and 4 is not necessarily equal to 3.

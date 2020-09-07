@@ -1,0 +1,29 @@
+## geom
+
+<dfn>The geometric style in which data are displayed, such as boxplot, density, or histogram.</dfn>
+
+In ggplot2, the geoms control how your data are visualised. You can start with the same base plot...
+
+```{r}
+gg <- ggplot(mtcars, aes(as.factor(gear), hp)) +
+  labs(x = "Number of gears", 
+       y = "Horsepower")
+```
+
+...  and use different geoms to visualise it:
+
+```{r geom-boxplot, fig.cap= "Visualisation using geom_boxplot"}
+gg + geom_boxplot()
+```
+
+```{r geom-violin, fig.cap= "Visualisation using geom_violin"}
+gg + geom_violin()
+```
+
+```{r geom-pointrange, fig.cap= "Visualisation using pointrange"}
+gg + stat_summary(geom = "pointrange")
+```
+
+```{r geom-crossbar, fig.cap= "Visualisation using crossbar"}
+gg + stat_summary(geom = "crossbar")
+```

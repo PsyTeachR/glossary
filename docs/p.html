@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>P | Glossary</title>
   <meta name="description" content="Definitions of technical terms" />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="P | Glossary" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2020-08-13" />
+<meta name="date" content="2020-09-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -149,6 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#base-r"><i class="fa fa-check"></i>base R</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html"><i class="fa fa-check"></i>C</a><ul>
+<li class="chapter" data-level="" data-path="c.html"><a href="c.html#categorical"><i class="fa fa-check"></i>categorical</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#character"><i class="fa fa-check"></i>character</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#chunk"><i class="fa fa-check"></i>chunk</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#comment"><i class="fa fa-check"></i>comment</a></li>
@@ -178,6 +179,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#function"><i class="fa fa-check"></i>function</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html"><i class="fa fa-check"></i>G</a><ul>
+<li class="chapter" data-level="" data-path="g.html"><a href="g.html#geom"><i class="fa fa-check"></i>geom</a></li>
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html#git"><i class="fa fa-check"></i>git</a></li>
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html#github"><i class="fa fa-check"></i>github</a></li>
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html#global-environment"><i class="fa fa-check"></i>global environment</a></li>
@@ -195,6 +197,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="k.html"><a href="k.html#knit"><i class="fa fa-check"></i>knit</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="l.html"><a href="l.html"><i class="fa fa-check"></i>L</a><ul>
+<li class="chapter" data-level="" data-path="l.html"><a href="l.html#likert"><i class="fa fa-check"></i>Likert</a></li>
 <li class="chapter" data-level="" data-path="l.html"><a href="l.html#linear-mixed-effects-model"><i class="fa fa-check"></i>Linear mixed-effects model</a></li>
 <li class="chapter" data-level="" data-path="l.html"><a href="l.html#list"><i class="fa fa-check"></i>list</a></li>
 <li class="chapter" data-level="" data-path="l.html"><a href="l.html#logical"><i class="fa fa-check"></i>logical</a></li>
@@ -203,6 +206,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html#markdown"><i class="fa fa-check"></i>markdown</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html"><i class="fa fa-check"></i>N</a><ul>
+<li class="chapter" data-level="" data-path="n.html"><a href="n.html#nominal"><i class="fa fa-check"></i>nominal</a></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html#normal-distribution"><i class="fa fa-check"></i>normal distribution</a></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html#numeric"><i class="fa fa-check"></i>numeric</a></li>
 </ul></li>
@@ -210,6 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html#object"><i class="fa fa-check"></i>object</a></li>
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html#observation"><i class="fa fa-check"></i>observation</a></li>
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html#operator"><i class="fa fa-check"></i>operator</a></li>
+<li class="chapter" data-level="" data-path="o.html"><a href="o.html#ordinal"><i class="fa fa-check"></i>ordinal</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html"><i class="fa fa-check"></i>P</a><ul>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#package"><i class="fa fa-check"></i>package</a></li>
@@ -308,7 +313,7 @@ You can alternatively type the package name and two colons before any function f
 <div class="figure" style="text-align: center"><span id="fig:img-panes"></span>
 <img src="images/defs/panes.png" alt="Pane layout" width="100%" />
 <p class="caption">
-Figure 3: Pane layout
+Figure 7: Pane layout
 </p>
 </div>
 
@@ -317,12 +322,12 @@ Figure 3: Pane layout
 <h2>path</h2>
 <p><dfn>A string representing the location of a file or directory.</dfn></p>
 <p>A file path can be <a href="r.html#relative-path">relative</a> to the <a href="w.html#working-directory">working directory</a> or <a href="a.html#absolute-path">absolute</a>.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="p.html#cb37-1"></a><span class="co"># list all files in the images directory, </span></span>
-<span id="cb37-2"><a href="p.html#cb37-2"></a><span class="co"># use relative path</span></span>
-<span id="cb37-3"><a href="p.html#cb37-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;images/&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="p.html#cb38-1"></a><span class="co"># list all files on the Desktop, </span></span>
-<span id="cb38-2"><a href="p.html#cb38-2"></a><span class="co"># use absolute path</span></span>
-<span id="cb38-3"><a href="p.html#cb38-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;/Users/myaccount/Desktop/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="p.html#cb42-1"></a><span class="co"># list all files in the images directory, </span></span>
+<span id="cb42-2"><a href="p.html#cb42-2"></a><span class="co"># use relative path</span></span>
+<span id="cb42-3"><a href="p.html#cb42-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;images/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="p.html#cb43-1"></a><span class="co"># list all files on the Desktop, </span></span>
+<span id="cb43-2"><a href="p.html#cb43-2"></a><span class="co"># use absolute path</span></span>
+<span id="cb43-3"><a href="p.html#cb43-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;/Users/myaccount/Desktop/&quot;</span>)</span></code></pre></div>
 
 </div>
 <div id="population" class="section level2">
@@ -363,7 +368,7 @@ Figure 3: Pane layout
 <div class="figure" style="text-align: center"><span id="fig:new-project"></span>
 <img src="images/new_project.png" alt="Start a new project" width="100%" />
 <p class="caption">
-Figure 4: Start a new project
+Figure 8: Start a new project
 </p>
 </div>
 

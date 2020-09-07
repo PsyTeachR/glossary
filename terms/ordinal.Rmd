@@ -1,0 +1,9 @@
+## ordinal
+
+<dfn>[Discrete](#discrete) variables that have an inherent order, such as number of legs</dfn>
+
+Ordinal variables are not necessarily [continuous](#continuous). That is, you can assume 3 is higher than 2, but the difference between 2 and 3 isn't always the same as the difference between 1 and 2. Therefore, think carefully before averaging ordinal values, since the average of 2 and 4 is not necessarily equal to 3.
+
+
+
+
