@@ -1,0 +1,16 @@
+## wide
+
+<dfn>Data where all of the observations about one subject are in the same row</dfn>
+
+```{r wide-data, echo = FALSE, render = "asis"}
+x <- tibble::tibble(id = c("A", "B"),
+            Q1 = c(1,4),
+            Q2 = c(2,5),
+            Q3 = c(3,6))
+
+knitr::kable(x, caption = "Wide data")
+```
+
+Contrast with [long data](#long).
+
+

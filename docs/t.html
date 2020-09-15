@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2020-09-07" />
+<meta name="date" content="2020-09-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -201,6 +201,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="l.html"><a href="l.html#linear-mixed-effects-model"><i class="fa fa-check"></i>Linear mixed-effects model</a></li>
 <li class="chapter" data-level="" data-path="l.html"><a href="l.html#list"><i class="fa fa-check"></i>list</a></li>
 <li class="chapter" data-level="" data-path="l.html"><a href="l.html#logical"><i class="fa fa-check"></i>logical</a></li>
+<li class="chapter" data-level="" data-path="l.html"><a href="l.html#long"><i class="fa fa-check"></i>long</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html"><i class="fa fa-check"></i>M</a><ul>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html#markdown"><i class="fa fa-check"></i>markdown</a></li>
@@ -263,6 +264,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="w.html"><a href="w.html"><i class="fa fa-check"></i>W</a><ul>
 <li class="chapter" data-level="" data-path="w.html"><a href="w.html#whitespace"><i class="fa fa-check"></i>whitespace</a></li>
+<li class="chapter" data-level="" data-path="w.html"><a href="w.html#wide"><i class="fa fa-check"></i>wide</a></li>
 <li class="chapter" data-level="" data-path="w.html"><a href="w.html#widget"><i class="fa fa-check"></i>widget</a></li>
 <li class="chapter" data-level="" data-path="w.html"><a href="w.html#working-directory"><i class="fa fa-check"></i>working directory</a></li>
 </ul></li>
@@ -343,18 +345,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="t.html#cb46-1"></a><span class="co"># convert the mtcars data frame to a tibble</span></span>
 <span id="cb46-2"><a href="t.html#cb46-2"></a>tibble<span class="op">::</span><span class="kw">as_tibble</span>(mtcars, <span class="dt">rownames =</span> <span class="st">&quot;name&quot;</span>)</span>
 <span id="cb46-3"><a href="t.html#cb46-3"></a><span class="co">#&gt; # A tibble: 32 x 12</span></span>
-<span id="cb46-4"><a href="t.html#cb46-4"></a><span class="co">#&gt;    name     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb</span></span>
-<span id="cb46-5"><a href="t.html#cb46-5"></a><span class="co">#&gt;    &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></span>
-<span id="cb46-6"><a href="t.html#cb46-6"></a><span class="co">#&gt;  1 Mazda…  21       6  160    110  3.9   2.62  16.5     0     1     4     4</span></span>
-<span id="cb46-7"><a href="t.html#cb46-7"></a><span class="co">#&gt;  2 Mazda…  21       6  160    110  3.9   2.88  17.0     0     1     4     4</span></span>
-<span id="cb46-8"><a href="t.html#cb46-8"></a><span class="co">#&gt;  3 Datsu…  22.8     4  108     93  3.85  2.32  18.6     1     1     4     1</span></span>
-<span id="cb46-9"><a href="t.html#cb46-9"></a><span class="co">#&gt;  4 Horne…  21.4     6  258    110  3.08  3.22  19.4     1     0     3     1</span></span>
-<span id="cb46-10"><a href="t.html#cb46-10"></a><span class="co">#&gt;  5 Horne…  18.7     8  360    175  3.15  3.44  17.0     0     0     3     2</span></span>
-<span id="cb46-11"><a href="t.html#cb46-11"></a><span class="co">#&gt;  6 Valia…  18.1     6  225    105  2.76  3.46  20.2     1     0     3     1</span></span>
-<span id="cb46-12"><a href="t.html#cb46-12"></a><span class="co">#&gt;  7 Duste…  14.3     8  360    245  3.21  3.57  15.8     0     0     3     4</span></span>
-<span id="cb46-13"><a href="t.html#cb46-13"></a><span class="co">#&gt;  8 Merc …  24.4     4  147.    62  3.69  3.19  20       1     0     4     2</span></span>
-<span id="cb46-14"><a href="t.html#cb46-14"></a><span class="co">#&gt;  9 Merc …  22.8     4  141.    95  3.92  3.15  22.9     1     0     4     2</span></span>
-<span id="cb46-15"><a href="t.html#cb46-15"></a><span class="co">#&gt; 10 Merc …  19.2     6  168.   123  3.92  3.44  18.3     1     0     4     4</span></span>
+<span id="cb46-4"><a href="t.html#cb46-4"></a><span class="co">#&gt;    name                mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb</span></span>
+<span id="cb46-5"><a href="t.html#cb46-5"></a><span class="co">#&gt;    &lt;chr&gt;             &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></span>
+<span id="cb46-6"><a href="t.html#cb46-6"></a><span class="co">#&gt;  1 Mazda RX4          21       6  160    110  3.9   2.62  16.5     0     1     4     4</span></span>
+<span id="cb46-7"><a href="t.html#cb46-7"></a><span class="co">#&gt;  2 Mazda RX4 Wag      21       6  160    110  3.9   2.88  17.0     0     1     4     4</span></span>
+<span id="cb46-8"><a href="t.html#cb46-8"></a><span class="co">#&gt;  3 Datsun 710         22.8     4  108     93  3.85  2.32  18.6     1     1     4     1</span></span>
+<span id="cb46-9"><a href="t.html#cb46-9"></a><span class="co">#&gt;  4 Hornet 4 Drive     21.4     6  258    110  3.08  3.22  19.4     1     0     3     1</span></span>
+<span id="cb46-10"><a href="t.html#cb46-10"></a><span class="co">#&gt;  5 Hornet Sportabout  18.7     8  360    175  3.15  3.44  17.0     0     0     3     2</span></span>
+<span id="cb46-11"><a href="t.html#cb46-11"></a><span class="co">#&gt;  6 Valiant            18.1     6  225    105  2.76  3.46  20.2     1     0     3     1</span></span>
+<span id="cb46-12"><a href="t.html#cb46-12"></a><span class="co">#&gt;  7 Duster 360         14.3     8  360    245  3.21  3.57  15.8     0     0     3     4</span></span>
+<span id="cb46-13"><a href="t.html#cb46-13"></a><span class="co">#&gt;  8 Merc 240D          24.4     4  147.    62  3.69  3.19  20       1     0     4     2</span></span>
+<span id="cb46-14"><a href="t.html#cb46-14"></a><span class="co">#&gt;  9 Merc 230           22.8     4  141.    95  3.92  3.15  22.9     1     0     4     2</span></span>
+<span id="cb46-15"><a href="t.html#cb46-15"></a><span class="co">#&gt; 10 Merc 280           19.2     6  168.   123  3.92  3.44  18.3     1     0     4     4</span></span>
 <span id="cb46-16"><a href="t.html#cb46-16"></a><span class="co">#&gt; # … with 22 more rows</span></span></code></pre></div>
 
 </div>
