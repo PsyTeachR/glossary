@@ -1,0 +1,5 @@
+## univariate
+
+<dfn>Relating to a single variable.</dfn>
+
+Usually used in the context of the analysis of a single [dependent variable](#dependent-variable).

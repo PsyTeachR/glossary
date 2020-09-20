@@ -1,0 +1,5 @@
+## generalizability
+
+<dfn>A term referring to the degree to which findings can be readily applied to situations beyond the particular context in which the data were collected.</dfn>
+
+In the ideal case, we want our findings to be as generalizable as possible. However, when collecting data, we face limitations in the kinds of people, stimuli, and situations we are able to observe. Findings from a study are not generalizable if they do not apply beyond the context in which they are collected. Subjects, stimuli, tasks, and situations are all factors to consider when assessing the generalizability of a study.
