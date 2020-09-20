@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2020-09-15" />
+<meta name="date" content="2020-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,13 +50,12 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -65,16 +64,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -83,9 +80,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -162,6 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html"><i class="fa fa-check"></i>D</a><ul>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-type"><i class="fa fa-check"></i>data type</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-wrangling"><i class="fa fa-check"></i>data wrangling</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
@@ -179,6 +177,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#function"><i class="fa fa-check"></i>function</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html"><i class="fa fa-check"></i>G</a><ul>
+<li class="chapter" data-level="" data-path="g.html"><a href="g.html#generalizability"><i class="fa fa-check"></i>generalizability</a></li>
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html#geom"><i class="fa fa-check"></i>geom</a></li>
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html#git"><i class="fa fa-check"></i>git</a></li>
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html#github"><i class="fa fa-check"></i>github</a></li>
@@ -189,6 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html"><i class="fa fa-check"></i>I</a><ul>
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html#ide"><i class="fa fa-check"></i>IDE</a></li>
+<li class="chapter" data-level="" data-path="i.html"><a href="i.html#independent-variable"><i class="fa fa-check"></i>independent variable</a></li>
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html#index"><i class="fa fa-check"></i>index</a></li>
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html#integer"><i class="fa fa-check"></i>integer</a></li>
 </ul></li>
@@ -205,6 +205,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html"><i class="fa fa-check"></i>M</a><ul>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html#markdown"><i class="fa fa-check"></i>markdown</a></li>
+<li class="chapter" data-level="" data-path="m.html"><a href="m.html#multilevel"><i class="fa fa-check"></i>multilevel</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html"><i class="fa fa-check"></i>N</a><ul>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html#nominal"><i class="fa fa-check"></i>nominal</a></li>
@@ -223,6 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#power"><i class="fa fa-check"></i>power</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#predictor-variable"><i class="fa fa-check"></i>predictor variable</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#preregistration"><i class="fa fa-check"></i>preregistration</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#probability"><i class="fa fa-check"></i>probability</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
@@ -234,7 +236,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-factor"><i class="fa fa-check"></i>random factor</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#reactivity"><i class="fa fa-check"></i>reactivity</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#relative-path"><i class="fa fa-check"></i>relative path</a></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#repeated-measures"><i class="fa fa-check"></i>repeated measures</a></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#reproducibility"><i class="fa fa-check"></i>reproducibility</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#reproducible-research"><i class="fa fa-check"></i>reproducible research</a></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#response-variable"><i class="fa fa-check"></i>response variable</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html"><i class="fa fa-check"></i>S</a><ul>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sample"><i class="fa fa-check"></i>sample</a></li>
@@ -253,6 +258,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="u.html"><a href="u.html"><i class="fa fa-check"></i>U</a><ul>
 <li class="chapter" data-level="" data-path="u.html"><a href="u.html#ui"><i class="fa fa-check"></i>UI</a></li>
+<li class="chapter" data-level="" data-path="u.html"><a href="u.html#univariate"><i class="fa fa-check"></i>univariate</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="v.html"><a href="v.html"><i class="fa fa-check"></i>V</a><ul>
 <li class="chapter" data-level="" data-path="v.html"><a href="v.html#value"><i class="fa fa-check"></i>value</a></li>
@@ -302,13 +308,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>whitespace</h2>
 <p><dfn>Spaces, tabs and line breaks</dfn></p>
 <p>R mostly ignores whitespace, so you can use it to help you organise your code.</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="w.html#cb52-1"></a><span class="co"># a and b are identical</span></span>
-<span id="cb52-2"><a href="w.html#cb52-2"></a>a &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl =</span> <span class="st">&quot;Control Condition&quot;</span>, <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span>
-<span id="cb52-3"><a href="w.html#cb52-3"></a></span>
-<span id="cb52-4"><a href="w.html#cb52-4"></a><span class="co"># but b is much easier to read</span></span>
-<span id="cb52-5"><a href="w.html#cb52-5"></a>b &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl  =</span> <span class="st">&quot;Control Condition&quot;</span>, </span>
-<span id="cb52-6"><a href="w.html#cb52-6"></a>          <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, </span>
-<span id="cb52-7"><a href="w.html#cb52-7"></a>          <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" title="1"><span class="co"># a and b are identical</span></a>
+<a class="sourceLine" id="cb52-2" title="2">a &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl =</span> <span class="st">&quot;Control Condition&quot;</span>, <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</a>
+<a class="sourceLine" id="cb52-3" title="3"></a>
+<a class="sourceLine" id="cb52-4" title="4"><span class="co"># but b is much easier to read</span></a>
+<a class="sourceLine" id="cb52-5" title="5">b &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl  =</span> <span class="st">&quot;Control Condition&quot;</span>, </a>
+<a class="sourceLine" id="cb52-6" title="6">          <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, </a>
+<a class="sourceLine" id="cb52-7" title="7">          <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</a></code></pre></div>
 
 </div>
 <div id="wide" class="section level2">
@@ -352,8 +358,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>working directory</h2>
 <p><dfn>The filepath where R is currently reading and writing files.</dfn></p>
 <p>If you are working in a <a href="p.html#project">project</a>(#project], the working directory is usually the main project directory. So if you want to save a file into a folder called “data” in that project folder, you can use a <a href="r.html#relative-path">relative path</a>, which is automatically appended to the working directory, such as <code>readr::write_csv(my_data, "data/my_data.csv")</code>.</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="w.html#cb53-1"></a><span class="kw">getwd</span>() <span class="co"># get the current working directory</span></span>
-<span id="cb53-2"><a href="w.html#cb53-2"></a><span class="kw">setwd</span>(<span class="st">&quot;~/r/myfiles&quot;</span>) <span class="co"># change the working directory</span></span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" title="1"><span class="kw">getwd</span>() <span class="co"># get the current working directory</span></a>
+<a class="sourceLine" id="cb53-2" title="2"><span class="kw">setwd</span>(<span class="st">&quot;~/r/myfiles&quot;</span>) <span class="co"># change the working directory</span></a></code></pre></div>
 <div class="warning">
 <p>
 Never set or change your working directory in a script.
