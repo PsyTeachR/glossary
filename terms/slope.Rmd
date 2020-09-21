@@ -1,0 +1,5 @@
+## slope
+
+<dfn>A quantity that captures how much change in one variable is associated with a unit increase in another variable.</dfn>
+
+If you have a slope of 3, that means that a unit increase in the $X$ variable is associated with a 3 unit change in the $Y$ variable. If you have a slope of -1/2, then a unit increase in the $X$ variable is associated with a decrease of 1/2 in the $Y$ variable.

@@ -1,0 +1,5 @@
+## population parameter
+
+<dfn>A quantity representing a property of a population of interest.</dfn>
+
+In a psychology context, parameters are constants that are assumed to reflect a typical values for some property appearing in some human group to which we want to generalized. For instance, it may reflect an overall reaction time or an overall priming effect, with individual subjects varying from this fixed value. Population parameters are typically unobserved and usually unobservable due to sampling error and measurement error, and are estimated from the values in the sample. The exception is in data simulation, where hypothetical population parameters can be fixed by the researcher.

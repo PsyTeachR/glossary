@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2020-09-20" />
+<meta name="date" content="2020-09-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -191,6 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html#independent-variable"><i class="fa fa-check"></i>independent variable</a></li>
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html#index"><i class="fa fa-check"></i>index</a></li>
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html#integer"><i class="fa fa-check"></i>integer</a></li>
+<li class="chapter" data-level="" data-path="i.html"><a href="i.html#intercept"><i class="fa fa-check"></i>intercept</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="j.html"><a href="j.html"><i class="fa fa-check"></i>J</a></li>
 <li class="chapter" data-level="" data-path="k.html"><a href="k.html"><i class="fa fa-check"></i>K</a><ul>
@@ -222,6 +223,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#package"><i class="fa fa-check"></i>package</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#population-parameter"><i class="fa fa-check"></i>population parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#power"><i class="fa fa-check"></i>power</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#predictor-variable"><i class="fa fa-check"></i>predictor variable</a></li>
@@ -246,6 +248,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#script"><i class="fa fa-check"></i>script</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#server"><i class="fa fa-check"></i>server</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#shinydashboard"><i class="fa fa-check"></i>shinydashboard</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#slope"><i class="fa fa-check"></i>slope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#standard-deviation"><i class="fa fa-check"></i>standard deviation</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#string"><i class="fa fa-check"></i>string</a></li>
 </ul></li>
@@ -254,6 +257,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#tibble"><i class="fa fa-check"></i>tibble</a></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#tidy-data"><i class="fa fa-check"></i>tidy data</a></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#tidyverse"><i class="fa fa-check"></i>tidyverse</a></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#transparency"><i class="fa fa-check"></i>transparency</a></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#two-tailed"><i class="fa fa-check"></i>two-tailed</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="u.html"><a href="u.html"><i class="fa fa-check"></i>U</a><ul>
@@ -318,8 +322,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb27-3" title="3">x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">1000000</span>, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">1</span>)</a>
 <a class="sourceLine" id="cb27-4" title="4"></a>
 <a class="sourceLine" id="cb27-5" title="5"><span class="kw">hist</span>(x, <span class="dt">breaks =</span> <span class="dv">100</span>)</a></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-75"></span>
-<img src="man/figures/README-unnamed-chunk-75-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-76"></span>
+<img src="man/figures/README-unnamed-chunk-76-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
 <p class="caption">
 Figure 6: <strong>CAPTION THIS FIGURE!!</strong>
 </p>
@@ -327,11 +331,11 @@ Figure 6: <strong>CAPTION THIS FIGURE!!</strong>
 <p>About 68% of the values are within 1 SD of the mean.</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1"><span class="co"># proportion between -1 and 1</span></a>
 <a class="sourceLine" id="cb28-2" title="2"><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">-1</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;</span><span class="st"> </span><span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb28-3" title="3"><span class="co">#&gt; [1] 0.68251</span></a></code></pre></div>
+<a class="sourceLine" id="cb28-3" title="3"><span class="co">#&gt; [1] 0.683394</span></a></code></pre></div>
 <p>About 95% of the values are within 2 SDs of the mean.</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" title="1"><span class="co"># proportion between -2 and 2</span></a>
 <a class="sourceLine" id="cb29-2" title="2"><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">-2</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;</span><span class="st"> </span><span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb29-3" title="3"><span class="co">#&gt; [1] 0.954347</span></a></code></pre></div>
+<a class="sourceLine" id="cb29-3" title="3"><span class="co">#&gt; [1] 0.9545</span></a></code></pre></div>
 
 </div>
 <div id="numeric" class="section level2">
