@@ -1,0 +1,3 @@
+## intercept
+
+<dfn>Also referred to as **y-intercept**, this is a constant corresponding to the value of the $y$ variable (in a regression context, the [response variable](#response-variable)) when all [predictor variables](#predictor-variable) are set to zero.</dfn>
