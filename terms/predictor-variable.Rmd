@@ -1,5 +1,5 @@
 ## predictor variable
 
-<dfn>A variable whose value is used (in a model) to predict the value of a [response variable](#response-variable).</dfn>
+<dfn>A variable whose value is used (in a model) to predict the value of a [response variable](r.html#response-variable).</dfn>
 
-In an experimental context, predictor variables are often referred to as [independent variables](#independent-variable).
+In an experimental context, predictor variables are often referred to as [independent variables](i.html#independent-variable).

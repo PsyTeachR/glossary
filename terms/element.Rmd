@@ -1,8 +1,8 @@
 ## element
 
-<dfn>One item in a [vector](#vector).</dfn>
+<dfn>One item in a [vector](v.html#vector).</dfn>
 
-For example, the built-in vector `LETTERS` contains 26 elements: the uppercase latin letters A through Z. You can select an element from a vector by putting its [index](#index) in square brackets.
+For example, the built-in vector `LETTERS` contains 26 elements: the uppercase latin letters A through Z. You can select an element from a vector by putting its [index](i.html#index) in square brackets.
 
 ```{r}
 # get the tenth upppercase letter

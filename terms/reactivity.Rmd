@@ -2,4 +2,4 @@
 
 <dfn>Changes in a Shiny app that occur in response to user input.</dfn> 
 
-Reactive features of your [UI](#ui) are rendered in the [server](#server).
+Reactive features of your [UI](u.html#ui) are rendered in the [server](s.html#server).

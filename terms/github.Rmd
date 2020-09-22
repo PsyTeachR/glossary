@@ -1,5 +1,5 @@
 ## github
 
-<dfn>A cloud-based service for storing and sharing your [version controlled](#version-control) files.</dfn>
+<dfn>A cloud-based service for storing and sharing your [version controlled](v.html#version-control) files.</dfn>
 
 [Set up git and github](https://debruine.github.io/tutorials/git-and-github.html) with RStudio.

@@ -1,0 +1,7 @@
+## computational reproducibility
+
+<dfn>The extent to which the findings of a study can be repeated with the same raw data but analyzed by different researchers or by the same researchers on a different occasion.</dfn>
+
+See also [reproducibility](r.html#reproducibility).
+
+

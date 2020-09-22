@@ -1,8 +1,8 @@
 ## tibble
 
-<dfn>A [container](#container) for [tabular data](#tabular-data) with some different properties to a [data frame](#data-frame)</dfn>
+<dfn>A [container](c.html#container) for [tabular data](t.html#tabular-data) with some different properties to a [data frame](d.html#data-frame)</dfn>
 
-Tibbles are almost exactly like the [base R](#base-r) `data.frame` container type, but has some special printing functions, does not coerce character columns to factors, and does not typically use row names.
+Tibbles are almost exactly like the [base R](b.html#base-r) `data.frame` container type, but has some special printing functions, does not coerce character columns to factors, and does not typically use row names.
 
 ```{r}
 # display the mtcars data frame

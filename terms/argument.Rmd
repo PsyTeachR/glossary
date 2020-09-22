@@ -1,6 +1,6 @@
 ## argument
 
-<dfn>A variable that provides input to a [function](#function).</dfn>
+<dfn>A variable that provides input to a [function](f.html#function).</dfn>
 
 For example, the first **argument** to the function `rnorm()` is `n` (the number of observations).
 

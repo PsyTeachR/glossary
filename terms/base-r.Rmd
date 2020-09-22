@@ -1,5 +1,5 @@
 ## base R
 
-<dfn>The set of R functions that come with a basic installation of R, before you add external [packages](#package)</dfn>
+<dfn>The set of R functions that come with a basic installation of R, before you add external [packages](p.html#package)</dfn>
 
 

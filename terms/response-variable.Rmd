@@ -2,4 +2,4 @@
 
 <dfn>A variable (in a regression) whose value is assumed to be influenced by one or more predictor variables.</dfn>
 
-In an experimental context, the response variable is often referred to as the [dependent variable](#dependent-variable).
+In an experimental context, the response variable is often referred to as the [dependent variable](d.html#dependent-variable).

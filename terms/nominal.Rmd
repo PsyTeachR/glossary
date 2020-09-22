@@ -1,5 +1,5 @@
 ## nominal
 
-<dfn>[Categorical](#categorical) variables that don't have an inherent order, such as types of animal</dfn>
+<dfn>[Categorical](c.html#categorical) variables that don't have an inherent order, such as types of animal.</dfn>
 
 

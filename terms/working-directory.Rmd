@@ -2,11 +2,11 @@
 
 <dfn>The filepath where R is currently reading and writing files.</dfn>
 
-If you are working in a [project](#project], the working directory is usually the main project directory. So if you want to save a file into a folder called "data" in that project folder, you can use a [relative path](#relative-path), which is automatically appended to the working directory, such as `readr::write_csv(my_data, "data/my_data.csv")`.
+If you are working in a [project](p.html#project), the working directory is usually the main project directory. So if you want to save a file into a folder called "data" in that project folder, you can use a [relative path](r.html#relative-path), which is automatically appended to the working directory, such as `readr::write_csv(my_data, "data/my_data.csv")`.
 
 ```{r, eval = FALSE}
-getwd() # get the current working directory
-setwd("~/r/myfiles") # change the working directory
+getwd() .html# get the current working directory
+setwd("~/r/myfiles") .html# change the working directory
 ```
 
 ```{block, type="warning"}

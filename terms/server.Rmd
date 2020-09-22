@@ -2,4 +2,4 @@
 
 <dfn>This is the part of a Shiny app that works with logic.</dfn>
 
-The server is a function that processes the user's input in the UI, and allows the app to render appropriate output. See [this shiny basics article](https://shiny.rstudio.com/articles/basics.html) for more.
+The server is a function that processes the user's input in the [UI](u.html#ui), and allows the app to render appropriate output. See [this shiny basics article](https://shiny.rstudio.com/articles/basics.html) for more.

@@ -1,5 +1,5 @@
 ## index
 
-<dfn>The number that represents an [element](#element)'s location in a [vector](#vector).</dfn>
+<dfn>The number that represents an [element](e.html#element)'s location in a [vector](v.html#vector).</dfn>
 
 For example, the **index** of the letter `E` in the vector `LETTERS` is 5.

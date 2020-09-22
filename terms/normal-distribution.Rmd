@@ -2,7 +2,7 @@
 
 <dfn>A symmetric distribution of data where values near the centre are most probable.</dfn>
 
-A normal distribution is characterised by its [mean](#mean) and [standard deviation](#standard-deviation). You can sample numbers from a simulated normal distribution with the function `rnorm()`. 
+A normal distribution is characterised by its [mean](m.html#mean) and [standard deviation](s.html#standard-deviation). You can sample numbers from a simulated normal distribution with the function `rnorm()`. 
 
 ```{r}
 # sample 1 million numbers from a normal distribution with 

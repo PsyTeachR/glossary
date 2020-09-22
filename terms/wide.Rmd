@@ -11,6 +11,6 @@ x <- tibble::tibble(id = c("A", "B"),
 knitr::kable(x, caption = "Wide data")
 ```
 
-Contrast with [long data](#long).
+Contrast with [long data](l.html#long).
 
 

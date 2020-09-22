@@ -2,4 +2,4 @@
 
 <dfn>The Comprehensive R Archive Network: a network of ftp and web servers around the world that store identical, up-to-date, versions of code and documentation for R.</dfn>
 
-[Packages](#package) that you download from CRAN have been checked to make sure they won't harm your computer. You can learn more about CRAN at <https://cran.r-project.org/>.
+[Packages](p.html#package) that you download from CRAN have been checked to make sure they won't harm your computer. You can learn more about CRAN at <https://cran.r-project.org/>.

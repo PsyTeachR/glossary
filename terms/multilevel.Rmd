@@ -2,8 +2,8 @@
 
 <dfn>(or *multi-level*) Relating to datasets where there are multiple observations taken on the same variable on the same sampling units (usually subjects or stimuli).</dfn>
 
-A multilevel dataset is one where there are repeated measurements on the same subjects on the same variable. If you have multiple measurements on the same subjects but on *different* variables, with no more than one measurement per subject per variable, you have *multivariate* data, not multilevel data. It is called "multilevel" because different measurements might be taken at different levels. For example, in a simple reaction time study, you may measure how quickly someone presses a button in response to a flashing light. You can have measurements at the level of the individual trial (the intensity of the flash) as well as measurements at the level of the individual subject (the subject's age in years).
+A multilevel dataset is one where there are [repeated measurements](r.html#repeated-measures) on the same subjects on the same [variable](v.html#variable). If you have multiple measurements on the same subjects but on *different* variables, with no more than one measurement per subject per variable, you have *[multivariate](m.html#multivariate)* data, not multilevel data. It is called "multilevel" because different measurements might be taken at different levels. For example, in a simple reaction time study, you may measure how quickly someone presses a button in response to a flashing light. You can have measurements at the level of the individual trial (the intensity of the flash) as well as measurements at the level of the individual subject (the subject's age in years).
 
 A multilevel model is one that can account for the variance introduced at the various levels.
 
-See also [repeated measures](#repeated-measures).
+See also [repeated measures](r.html#repeated-measures).

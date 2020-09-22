@@ -1,0 +1,5 @@
+## RStudio
+
+<dfn>An integrated development environment ([IDE](i.html#ide)) that helps you process R code.</dfn>
+
+Download RStudio at <https://rstudio.com/>

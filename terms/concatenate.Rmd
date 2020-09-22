@@ -9,7 +9,7 @@ subject_name <- "Lisa"
 paste("Hello,", subject_name)
 ```
 
-When referring to other types of variables, concatenate can mean to create a vector with those variables, usually using the `c` function. For example, you could concatenate the numbers 1, 3, 6, and 10 like this: `c(1, 3, 6, 10)`. You can concatenate two [vector](#vector)s as well:
+When referring to other types of variables, concatenate can mean to create a vector with those variables, usually using the `c` function. For example, you could concatenate the numbers 1, 3, 6, and 10 like this: `c(1, 3, 6, 10)`. You can concatenate two [vectors](v.html#vector) as well:
 
 ```{r concatenate-demo2}
 v1 <- 1:5
@@ -18,7 +18,7 @@ c(v1, v2)
 ```
 
 ```{block, type="warning"}
-Remember, a [vector](#vector) can only have one [data type](#data_type). So if you concatenate a [string](#string) vector and a [numeric](#numeric) vector, the numbers will get turned into their string versions. If you concatenate an [integer](#integer) and a [double](#integer) vector, the integers will be converted to doubles.
+Remember, a [vector](v.html#vector) can only have one [data type](d.html#data_type). So if you concatenate a [string](s.html#string) vector and a [numeric](n.html#numeric) vector, the numbers will get turned into their string versions. If you concatenate an [integer](i.html#integer) and a [double](d.html#double) vector, the integers will be converted to doubles.
 ```
 
 ```{r concatenate-demo3}

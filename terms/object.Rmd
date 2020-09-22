@@ -2,7 +2,7 @@
 
 <dfn>A word that identifies and stores the value of some data for later use.</dfn>
 
-Sometimes objects are also called "variables". An object in R:
+Sometimes objects are also called [variables](v.html#variable). An object in R:
 
 * contains only letters, numbers, full stops, and underscores
 * starts with a letter or a full stop and a letter

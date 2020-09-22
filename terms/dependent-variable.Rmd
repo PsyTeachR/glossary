@@ -2,5 +2,5 @@
 
 <dfn>The target variable that is being analyzed, whose value is assumed to depend on other variables.</dfn>
 
-You are generally interested in how other variables you have measured impact the dependent variable. For example, if you are testing the effect of stress on anxiety, stress would be your [independent variable](#independent-variable) and anxiety would be the dependent variable. The terms independent/dependent variable are typically used in an experimental context. In the context of regression, the dependent variable is often referred to as the [response variable](#response-variable).
+You are generally interested in how other variables you have measured impact the dependent variable. For example, if you are testing the effect of stress on anxiety, stress would be your [independent variable](i.html#independent-variable) and anxiety would be the dependent variable. The terms independent/dependent variable are typically used in an experimental context. In the context of regression, the dependent variable is often referred to as the [response variable](r.html#response-variable).
 

@@ -4,6 +4,6 @@
 
 Tidy data has three rules:
 
-* Each [variable](#variable) must have its own column
-* Each [observation](#observation) must have its own row
-* Each [value](#value) must have its own cell
+* Each [variable](v.html#variable) must have its own column
+* Each [observation](o.html#observation) must have its own row
+* Each [value](v.html#value) must have its own cell

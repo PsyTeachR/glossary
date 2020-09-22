@@ -1,0 +1,5 @@
+## multilevel model
+
+<dfn>A type of regression model that involves estimating both [fixed effects](f.html#fixed-effect) and [random effects](r.html#random-effect).</dfn>
+
+See [linear mixed effects model](l.html#linear-mixed-effects-model).

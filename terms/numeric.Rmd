@@ -1,6 +1,8 @@
 ## numeric
 
-<dfn>A [data type](#data-type) representing a real decimal number or integer</dfn>. The [integer](#integer) and [double](#double) data types are numeric.
+<dfn>A [data type](d.html#data-type) representing a real decimal number or integer.</dfn> 
+
+The [integer](i.html#integer) and [double](d.html#double) data types are numeric.
 
 You can check if a variable is numeric using the function `is.numeric` and you can convert a variable to its numeric representation using the function `as.numeric`.
 

@@ -1,0 +1,5 @@
+## replicability
+
+<dfn>The extent to which the findings of a study can be repeated with new samples from the same population.</dfn>
+
+See also [reproducibility](r.html#reproducibility).

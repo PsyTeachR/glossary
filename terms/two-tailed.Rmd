@@ -1,5 +1,5 @@
 ## two-tailed
 
-<dfn>A statistical test for which the critical region consists of all values of the test statistic greater than a given value plus all values less than another given value</dfn>
+<dfn>A statistical test for which the critical region consists of all values of the test statistic greater than a given value plus all values less than another given value.</dfn>
 
 

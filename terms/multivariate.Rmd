@@ -1,0 +1,5 @@
+## multivariate
+
+<dfn>Having multiple measurements on the same subjects but on *different* variables, with no more than one measurement per subject per variable.</dfn>
+
+Contrast with [univariate](u.html#univariate).

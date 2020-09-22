@@ -1,5 +1,5 @@
 ## integer
 
-<dfn>A [data type](#data-type) representing whole numbers.</dfn>
+<dfn>A [data type](d.html#data-type) representing whole numbers.</dfn>
 
 In R, you specify that a number is an integer by adding an L at the end, like `1L`, `-36L`, or `100L`.

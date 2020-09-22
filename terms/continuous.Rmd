@@ -2,4 +2,4 @@
 
 <dfn>Data that can take on any values between other existing values.</dfn>
 
-As opposed to [discrete](#discrete) data, where fractional values don't make sense, continuous data can take fractional values (as far as the sensitivity of the measurement allows). So even if you are measuring height to the nearest whole centimeter, this is continuous data because it is possible and makes sense for intermediate values to exist.
+As opposed to [discrete](d.html#discrete) data, where fractional values don't make sense, continuous data can take fractional values (as far as the sensitivity of the measurement allows). So even if you are measuring height to the nearest whole centimeter, this is continuous data because it is possible and makes sense for intermediate values to exist.

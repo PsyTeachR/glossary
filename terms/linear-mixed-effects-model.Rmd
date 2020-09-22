@@ -1,6 +1,6 @@
 ## Linear mixed-effects model
 
-<dfn>A type of regression model that involves estimating both `r glossary("fixed effect", display = "fixed effects")` and `r glossary("random effect", display = "random effects")`.</dfn>
+<dfn>A type of regression model that involves estimating both [fixed effects](f.html#fixed-effect) and [random effects](r.html#random-effect).</dfn>
 
 Most conventional regression models only estimate parameters associated with fixed effects and residual error. Mixed-effects models additionally estimate random effects parameters that capture variability associated with sampling units. In psychology, these sampling units are usually human participants or stimulus items.
 

@@ -2,6 +2,6 @@
 
 <dfn>A way to save a record of changes to your files.</dfn>
 
-[Git](#git) is one type of version control that is most commonly used with RStudio. [GitHub](#github) is a cloud-based service for storing and sharing your version controlled files.
+[Git](g.html#git) is one type of version control that is most commonly used with RStudio. [GitHub](g.html#github) is a cloud-based service for storing and sharing your version controlled files.
 
 [Set up git and github](https://debruine.github.io/tutorials/git-and-github.html) with RStudio.

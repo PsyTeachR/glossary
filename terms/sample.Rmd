@@ -1,6 +1,6 @@
 ## sample
 
-<dfn>A subset of the [population](#population) that you wish to make an inference about through your test. The sample is a smaller group obtained from your population but it is key that the sample is representative of the population</dfn>
+<dfn>A subset of the [population](p.html#population) that you wish to make an inference about through your test. The sample is a smaller group obtained from your population but it is key that the sample is representative of the population</dfn>
 
 As in most instances it is realistically impossible to test all members of a population, a sample is derived, that represents the population of interest, from the population. The sample should have the same demographic characteristics as the population for example. If your sample is not representative of the population then any conclusions derived from your test are invalid.
 
