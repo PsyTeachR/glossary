@@ -4,4 +4,4 @@
 
 For example, if you were studying the nations making up the United Kingdom, you would have a factor with the levels England, Northern Ireland, Scotland, and Wales. If you would replicate a study, you would include these exact same levels. These four levels represent all the nations comprising the union, and there usually would be no interest in generalizing beyond the data to other (hypothetical) nations.
 
-Fixed factors are usually contrasted with `r glossary("random factor", display="random factors")`, whose levels usually are assumed to be the result of (quasi-)random sampling.
+Fixed factors are usually contrasted with [random factors](r.html#random-factor), whose levels usually are assumed to be the result of (quasi-)random sampling.

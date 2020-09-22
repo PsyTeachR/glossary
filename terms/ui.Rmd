@@ -2,4 +2,4 @@
 
 <dfn>The User Interface. This usually refers to a Shiny App as the user will see it.</dfn> 
 
-The UI is defined as an object using (e.g.) `fluidPage()` or `dashboardPage()`. The UI is in contrast to the server object, which processes information the user inputs (e.g. via [widgets](#widget)) to the UI, and can reactively render the app's UI. This means that the UI can look completely different depending on the actions of the user. See [this shiny basics article](https://shiny.rstudio.com/articles/basics.html) for more.
+The UI is defined as an object using (e.g.) `fluidPage()` or `dashboardPage()`. The UI is in contrast to the server object, which processes information the user inputs (e.g. via [widgets](w.html#widget)) to the UI, and can reactively render the app's UI. This means that the UI can look completely different depending on the actions of the user. See [this shiny basics article](https://shiny.rstudio.com/articles/basics.html) for more.

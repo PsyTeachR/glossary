@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2020-09-21" />
+<meta name="date" content="2020-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,12 +50,13 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -64,14 +65,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -80,9 +83,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -150,6 +153,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#character"><i class="fa fa-check"></i>character</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#chunk"><i class="fa fa-check"></i>chunk</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#comment"><i class="fa fa-check"></i>comment</a></li>
+<li class="chapter" data-level="" data-path="c.html"><a href="c.html#computational-reproducibility"><i class="fa fa-check"></i>computational reproducibility</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#concatenate"><i class="fa fa-check"></i>concatenate</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#confidence-intervals-ci"><i class="fa fa-check"></i>confidence intervals (CI)</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#continuous"><i class="fa fa-check"></i>continuous</a></li>
@@ -184,6 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html#global-environment"><i class="fa fa-check"></i>global environment</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="h.html"><a href="h.html"><i class="fa fa-check"></i>H</a><ul>
+<li class="chapter" data-level="" data-path="h.html"><a href="h.html#hierarchical-model"><i class="fa fa-check"></i>hierarchical model</a></li>
 <li class="chapter" data-level="" data-path="h.html"><a href="h.html#hypothesis"><i class="fa fa-check"></i>hypothesis</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html"><i class="fa fa-check"></i>I</a><ul>
@@ -206,7 +211,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html"><i class="fa fa-check"></i>M</a><ul>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html#markdown"><i class="fa fa-check"></i>markdown</a></li>
+<li class="chapter" data-level="" data-path="m.html"><a href="m.html#match-operator"><i class="fa fa-check"></i>match operator</a></li>
+<li class="chapter" data-level="" data-path="m.html"><a href="m.html#multilevel-model"><i class="fa fa-check"></i>multilevel model</a></li>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html#multilevel"><i class="fa fa-check"></i>multilevel</a></li>
+<li class="chapter" data-level="" data-path="m.html"><a href="m.html#multivariate"><i class="fa fa-check"></i>multivariate</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html"><i class="fa fa-check"></i>N</a><ul>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html#nominal"><i class="fa fa-check"></i>nominal</a></li>
@@ -239,9 +247,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#reactivity"><i class="fa fa-check"></i>reactivity</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#relative-path"><i class="fa fa-check"></i>relative path</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#repeated-measures"><i class="fa fa-check"></i>repeated measures</a></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#replicability"><i class="fa fa-check"></i>replicability</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#reproducibility"><i class="fa fa-check"></i>reproducibility</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#reproducible-research"><i class="fa fa-check"></i>reproducible research</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#response-variable"><i class="fa fa-check"></i>response variable</a></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html"><i class="fa fa-check"></i>S</a><ul>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sample"><i class="fa fa-check"></i>sample</a></li>
@@ -318,20 +328,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>An effect assumed to be identical over all sampling units.</dfn></p>
 <p>In the standard regression model</p>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 X_i + e_i\]</span></p>
-<p>the parameters <span class="math inline">\(\beta_0\)</span> (the intercept) and <span class="math inline">\(\beta_1\)</span> (the slope) are assumed to be constant across all sampling units (e.g. subjects). These are contrasted with <a class='glossary' target='_blank' title='An effect associated with an individual sampling unit, usually represented by an offset from a fixed effect.' href='https://psyteachr.github.io/glossary/r#random-effect'>random effects</a>, which are effects that differ across the units.</p>
+<p>the parameters <span class="math inline">\(\beta_0\)</span> (the intercept) and <span class="math inline">\(\beta_1\)</span> (the slope) are assumed to be constant across all sampling units (e.g. subjects). These are contrasted with <a href="r.html#random%20effect">random effects</a>, which are effects that differ across the units.</p>
 
 </div>
 <div id="fixed-factor" class="section level2">
 <h2>fixed factor</h2>
 <p><dfn>A factor whose levels are assumed to represent all the levels of interest in a population; its levels would remain fixed across replications of the study.</dfn></p>
 <p>For example, if you were studying the nations making up the United Kingdom, you would have a factor with the levels England, Northern Ireland, Scotland, and Wales. If you would replicate a study, you would include these exact same levels. These four levels represent all the nations comprising the union, and there usually would be no interest in generalizing beyond the data to other (hypothetical) nations.</p>
-<p>Fixed factors are usually contrasted with <a class='glossary' target='_blank' title='A factor whose levels are taken to represent a proper subset of a population of interest, typically because the observed levels are the result of sampling.' href='https://psyteachr.github.io/glossary/r#random-factor'>random factors</a>, whose levels usually are assumed to be the result of (quasi-)random sampling.</p>
+<p>Fixed factors are usually contrasted with <a href="r.html#random-factor">random factors</a>, whose levels usually are assumed to be the result of (quasi-)random sampling.</p>
 
 </div>
 <div id="function" class="section level2">
 <h2>function</h2>
 <p><dfn>A named section of code that can be reused.</dfn></p>
-<p>For example, <code>sd</code> is a function that returns the standard deviation of the <a href="v.html#vector">vector</a> of numbers that you provide as the input <a href="a.html#argument">argument</a>. Functions are set up like this: <code>function_name(argument1 = a1, argument2 = a2)</code>. The <a href="a.html#argument">argument</a>s in parentheses can be named (like, <code>x = c(1,3,5,8)</code>) or you can skip the names if you put them in the exact same order that they’re defined in the function. You can check this by typing <code>?sd</code> (or whatever function name you’re looking up) into the console and the Help pane will show you the default order under <strong>Usage</strong>.</p>
+<p>For example, <code>sd</code> is a function that returns the standard deviation of the <a href="v.html#vector">vector</a> of numbers that you provide as the input <a href="a.html#argument">argument</a>. Functions are set up like this: <code>function_name(argument1 = a1, argument2 = a2)</code>. The <a href="a.html#argument">arguments</a> in parentheses can be named (like, <code>x = c(1,3,5,8)</code>) or you can skip the names if you put them in the exact same order that they’re defined in the function. You can check this by typing <code>?sd</code> (or whatever function name you’re looking up) into the console and the Help pane will show you the default order under <strong>Usage</strong>.</p>
 <div class="figure" style="text-align: center"><span id="fig:img-function-help"></span>
 <img src="images/defs/function-sd-help.png" alt="Function help" width="100%" />
 <p class="caption">

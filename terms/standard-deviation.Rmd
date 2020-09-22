@@ -2,7 +2,7 @@
 
 <dfn>A statistic that measures how spread out data are relative to the mean.</dfn>
 
-If the data points are further from the mean, there is a higher standard deviation. Standard deviation is calculated as the square root of the [variance](#variance). 
+If the data points are further from the mean, there is a higher standard deviation. Standard deviation is calculated as the square root of the [variance](v.html#variance). 
 
 Normal distributions with means of 0 and SDs of 1 (red), 2 (blue) and 3 (purple).
 

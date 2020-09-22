@@ -1,6 +1,6 @@
 ## population
 
-<dfn>All members of a group that we wish to generalise our findings to. E.g. all students taking Psychology at the University of Glasgow. We draw our testing [sample](#sample) from the population.</dfn>. 
+<dfn>All members of a group that we wish to generalise our findings to. E.g. all students taking Psychology at the University of Glasgow. We draw our testing [sample](s.html#sample) from the population.</dfn>. 
 
 The population of interest can be any group and it is important that you define this in your study when considering the generalisability of your tests and how you will conduct your sampling. If you want to generalise to everyone in the world then that is the population you should sample from. If you want to generalise to everyone taking Psychology at the University of Glasgow then those are the people you should specifically sample from.
 

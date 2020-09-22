@@ -2,6 +2,6 @@
 
 <dfn>Relating to a single variable.</dfn>
 
-Usually used in the context of the analysis of a single [dependent variable](#dependent-variable).
+Usually used in the context of the analysis of a single [dependent variable](d.html#dependent-variable).
 
-Contrast with [multivariate](#multivariate).
+Contrast with [multivariate](m.html#multivariate).

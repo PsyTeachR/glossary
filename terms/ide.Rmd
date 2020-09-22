@@ -1,5 +1,5 @@
 ## IDE
 
-<dfn>Integrated Development Environment: a program that serves as a text editor, file manager, and provides functions to help you read and write code. RStudio is an IDE for R.</dfn>
+<dfn>Integrated Development Environment: a program that serves as a text editor, file manager, and provides functions to help you read and write code. [RStudio](r.html#rstudio) is an IDE for R.</dfn>
 
 

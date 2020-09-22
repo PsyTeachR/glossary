@@ -2,4 +2,4 @@
 
 <dfn>A word that identifies and stores the value of some data for later use.</dfn> 
 
-Variables in R are usually referred to as objects. See the definition for [object](#object).
+Variables in R are usually referred to as objects. See the definition for [object](o.html#object).

@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2020-09-21" />
+<meta name="date" content="2020-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,12 +50,13 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -64,14 +65,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -80,9 +83,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -150,6 +153,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#character"><i class="fa fa-check"></i>character</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#chunk"><i class="fa fa-check"></i>chunk</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#comment"><i class="fa fa-check"></i>comment</a></li>
+<li class="chapter" data-level="" data-path="c.html"><a href="c.html#computational-reproducibility"><i class="fa fa-check"></i>computational reproducibility</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#concatenate"><i class="fa fa-check"></i>concatenate</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#confidence-intervals-ci"><i class="fa fa-check"></i>confidence intervals (CI)</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#continuous"><i class="fa fa-check"></i>continuous</a></li>
@@ -184,6 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="g.html"><a href="g.html#global-environment"><i class="fa fa-check"></i>global environment</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="h.html"><a href="h.html"><i class="fa fa-check"></i>H</a><ul>
+<li class="chapter" data-level="" data-path="h.html"><a href="h.html#hierarchical-model"><i class="fa fa-check"></i>hierarchical model</a></li>
 <li class="chapter" data-level="" data-path="h.html"><a href="h.html#hypothesis"><i class="fa fa-check"></i>hypothesis</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="i.html"><a href="i.html"><i class="fa fa-check"></i>I</a><ul>
@@ -206,7 +211,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html"><i class="fa fa-check"></i>M</a><ul>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html#markdown"><i class="fa fa-check"></i>markdown</a></li>
+<li class="chapter" data-level="" data-path="m.html"><a href="m.html#match-operator"><i class="fa fa-check"></i>match operator</a></li>
+<li class="chapter" data-level="" data-path="m.html"><a href="m.html#multilevel-model"><i class="fa fa-check"></i>multilevel model</a></li>
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html#multilevel"><i class="fa fa-check"></i>multilevel</a></li>
+<li class="chapter" data-level="" data-path="m.html"><a href="m.html#multivariate"><i class="fa fa-check"></i>multivariate</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html"><i class="fa fa-check"></i>N</a><ul>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html#nominal"><i class="fa fa-check"></i>nominal</a></li>
@@ -239,9 +247,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#reactivity"><i class="fa fa-check"></i>reactivity</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#relative-path"><i class="fa fa-check"></i>relative path</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#repeated-measures"><i class="fa fa-check"></i>repeated measures</a></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#replicability"><i class="fa fa-check"></i>replicability</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#reproducibility"><i class="fa fa-check"></i>reproducibility</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#reproducible-research"><i class="fa fa-check"></i>reproducible research</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#response-variable"><i class="fa fa-check"></i>response variable</a></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html"><i class="fa fa-check"></i>S</a><ul>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sample"><i class="fa fa-check"></i>sample</a></li>
@@ -314,12 +324,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>See <a href="r.html#r-markdown">R Markdown</a> for more infomation on the R-specific version.</p>
 
 </div>
+<div id="match-operator" class="section level2">
+<h2>match operator</h2>
+<p><dfn>A binary operator (%in%) that returns a logical vector indicating if there is a match or not for its left operand.</dfn></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="m.html#cb28-1"></a><span class="co"># check if a single value is in a vector</span></span>
+<span id="cb28-2"><a href="m.html#cb28-2"></a><span class="st">&quot;West Dakota&quot;</span> <span class="op">%in%</span><span class="st"> </span>state.name</span>
+<span id="cb28-3"><a href="m.html#cb28-3"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="m.html#cb29-1"></a><span class="co"># check if each item in the lefthand vector is in the righthand vector</span></span>
+<span id="cb29-2"><a href="m.html#cb29-2"></a><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;1&quot;</span>) <span class="op">%in%</span><span class="st"> </span>LETTERS</span>
+<span id="cb29-3"><a href="m.html#cb29-3"></a><span class="co">#&gt; [1]  TRUE  TRUE FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="m.html#cb30-1"></a>pangram &lt;-<span class="st"> &quot;the quick brown fox jumps over the lazy dog&quot;</span></span>
+<span id="cb30-2"><a href="m.html#cb30-2"></a>pangram_chars &lt;-<span class="st"> </span><span class="kw">strsplit</span>(pangram, <span class="st">&quot;&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb30-3"><a href="m.html#cb30-3"></a>letters <span class="op">%in%</span><span class="st"> </span>pangram_chars</span>
+<span id="cb30-4"><a href="m.html#cb30-4"></a><span class="co">#&gt;  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span></span>
+<span id="cb30-5"><a href="m.html#cb30-5"></a><span class="co">#&gt; [14] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span></span></code></pre></div>
+
+</div>
+<div id="multilevel-model" class="section level2">
+<h2>multilevel model</h2>
+<p><dfn>A type of regression model that involves estimating both <a href="f.html#fixed-effect">fixed effects</a> and <a href="r.html#random-effect">random effects</a>.</dfn></p>
+<p>See <a href="l.html#linear-mixed-effects-model">linear mixed effects model</a>.</p>
+
+</div>
 <div id="multilevel" class="section level2">
 <h2>multilevel</h2>
 <p><dfn>(or <em>multi-level</em>) Relating to datasets where there are multiple observations taken on the same variable on the same sampling units (usually subjects or stimuli).</dfn></p>
-<p>A multilevel dataset is one where there are repeated measurements on the same subjects on the same variable. If you have multiple measurements on the same subjects but on <em>different</em> variables, with no more than one measurement per subject per variable, you have <em>multivariate</em> data, not multilevel data. It is called “multilevel” because different measurements might be taken at different levels. For example, in a simple reaction time study, you may measure how quickly someone presses a button in response to a flashing light. You can have measurements at the level of the individual trial (the intensity of the flash) as well as measurements at the level of the individual subject (the subject’s age in years).</p>
+<p>A multilevel dataset is one where there are <a href="r.html#repeated-measures">repeated measurements</a> on the same subjects on the same <a href="v.html#variable">variable</a>. If you have multiple measurements on the same subjects but on <em>different</em> variables, with no more than one measurement per subject per variable, you have <em><a href="m.html#multivariate">multivariate</a></em> data, not multilevel data. It is called “multilevel” because different measurements might be taken at different levels. For example, in a simple reaction time study, you may measure how quickly someone presses a button in response to a flashing light. You can have measurements at the level of the individual trial (the intensity of the flash) as well as measurements at the level of the individual subject (the subject’s age in years).</p>
 <p>A multilevel model is one that can account for the variance introduced at the various levels.</p>
 <p>See also <a href="r.html#repeated-measures">repeated measures</a>.</p>
+
+</div>
+<div id="multivariate" class="section level2">
+<h2>multivariate</h2>
+<p><dfn>Having multiple measurements on the same subjects but on <em>different</em> variables, with no more than one measurement per subject per variable.</dfn></p>
+<p>Contrast with <a href="u.html#univariate">univariate</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,6 @@
 ## vectorized
 
-<dfn>An [operator](#operator) or [function](#function) that acts on each [element](#element) in a [vector](#vector)</dfn>
+<dfn>An [operator](o.html#operator) or [function](f.html#function) that acts on each [element](e.html#element) in a [vector](v.html#vector)</dfn>
 
 ```{r}
 # Add 10 to each element in the vector a

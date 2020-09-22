@@ -1,6 +1,6 @@
 ## character
 
-<dfn>A [data type](#data-type) representing [strings](#string) of text.</dfn>
+<dfn>A [data type](d.html#data-type) representing [strings](s.html#string) of text.</dfn>
 
 Examples of character data are:
 

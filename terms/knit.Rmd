@@ -2,5 +2,5 @@
 
 <dfn>To create an HTML, PDF, or Word document from an R Markdown (Rmd) document</dfn>
 
-You can knit your Rmd file by clicking on the **`Knit`** button at the top of the [source pane](#panes) or typing `knitr::knit("file.Rmd", "file.html")` in the [console pane](#panes).
+You can knit your Rmd file by clicking on the **`Knit`** button at the top of the [source pane](p.html#panes) or typing `knitr::knit("file.Rmd", "file.html")` in the [console pane](p.html#panes).
 

@@ -2,6 +2,6 @@
 
 <dfn>Data that can only take certain values, such as types of pet.</dfn>
 
-See [discrete](#discrete) or [nominal](#nominal).
+See [discrete](d.html#discrete) or [nominal](n.html#nominal).
 
 

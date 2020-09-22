@@ -1,6 +1,6 @@
 ## logical
 
-<dfn>A [data type](#data-type) representing `TRUE` or `FALSE` values.</dfn>
+<dfn>A [data type](d.html#data-type) representing `TRUE` or `FALSE` values.</dfn>
 
 ```{r}
 true_logical_values <- list(
