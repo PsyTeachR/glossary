@@ -50,13 +50,12 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -65,16 +64,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -83,9 +80,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -327,17 +324,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="match-operator" class="section level2">
 <h2>match operator</h2>
 <p><dfn>A binary operator (%in%) that returns a logical vector indicating if there is a match or not for its left operand.</dfn></p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="m.html#cb28-1"></a><span class="co"># check if a single value is in a vector</span></span>
-<span id="cb28-2"><a href="m.html#cb28-2"></a><span class="st">&quot;West Dakota&quot;</span> <span class="op">%in%</span><span class="st"> </span>state.name</span>
-<span id="cb28-3"><a href="m.html#cb28-3"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="m.html#cb29-1"></a><span class="co"># check if each item in the lefthand vector is in the righthand vector</span></span>
-<span id="cb29-2"><a href="m.html#cb29-2"></a><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;1&quot;</span>) <span class="op">%in%</span><span class="st"> </span>LETTERS</span>
-<span id="cb29-3"><a href="m.html#cb29-3"></a><span class="co">#&gt; [1]  TRUE  TRUE FALSE</span></span></code></pre></div>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="m.html#cb30-1"></a>pangram &lt;-<span class="st"> &quot;the quick brown fox jumps over the lazy dog&quot;</span></span>
-<span id="cb30-2"><a href="m.html#cb30-2"></a>pangram_chars &lt;-<span class="st"> </span><span class="kw">strsplit</span>(pangram, <span class="st">&quot;&quot;</span>)[[<span class="dv">1</span>]]</span>
-<span id="cb30-3"><a href="m.html#cb30-3"></a>letters <span class="op">%in%</span><span class="st"> </span>pangram_chars</span>
-<span id="cb30-4"><a href="m.html#cb30-4"></a><span class="co">#&gt;  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span></span>
-<span id="cb30-5"><a href="m.html#cb30-5"></a><span class="co">#&gt; [14] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span></span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1"><span class="co"># check if a single value is in a vector</span></a>
+<a class="sourceLine" id="cb28-2" title="2"><span class="st">&quot;West Dakota&quot;</span> <span class="op">%in%</span><span class="st"> </span>state.name</a>
+<a class="sourceLine" id="cb28-3" title="3"><span class="co">#&gt; [1] FALSE</span></a></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" title="1"><span class="co"># check if each item in the lefthand vector is in the righthand vector</span></a>
+<a class="sourceLine" id="cb29-2" title="2"><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;1&quot;</span>) <span class="op">%in%</span><span class="st"> </span>LETTERS</a>
+<a class="sourceLine" id="cb29-3" title="3"><span class="co">#&gt; [1]  TRUE  TRUE FALSE</span></a></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" title="1">pangram &lt;-<span class="st"> &quot;the quick brown fox jumps over the lazy dog&quot;</span></a>
+<a class="sourceLine" id="cb30-2" title="2">pangram_chars &lt;-<span class="st"> </span><span class="kw">strsplit</span>(pangram, <span class="st">&quot;&quot;</span>)[[<span class="dv">1</span>]]</a>
+<a class="sourceLine" id="cb30-3" title="3">letters <span class="op">%in%</span><span class="st"> </span>pangram_chars</a>
+<a class="sourceLine" id="cb30-4" title="4"><span class="co">#&gt;  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span></a>
+<a class="sourceLine" id="cb30-5" title="5"><span class="co">#&gt; [16] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span></a></code></pre></div>
 
 </div>
 <div id="multilevel-model" class="section level2">

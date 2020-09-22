@@ -50,13 +50,12 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -65,16 +64,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -83,9 +80,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -322,13 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>whitespace</h2>
 <p><dfn>Spaces, tabs and line breaks</dfn></p>
 <p>R mostly ignores whitespace, so you can use it to help you organise your code.</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="w.html#cb56-1"></a><span class="co"># a and b are identical</span></span>
-<span id="cb56-2"><a href="w.html#cb56-2"></a>a &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl =</span> <span class="st">&quot;Control Condition&quot;</span>, <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span>
-<span id="cb56-3"><a href="w.html#cb56-3"></a></span>
-<span id="cb56-4"><a href="w.html#cb56-4"></a><span class="co"># but b is much easier to read</span></span>
-<span id="cb56-5"><a href="w.html#cb56-5"></a>b &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl  =</span> <span class="st">&quot;Control Condition&quot;</span>, </span>
-<span id="cb56-6"><a href="w.html#cb56-6"></a>          <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, </span>
-<span id="cb56-7"><a href="w.html#cb56-7"></a>          <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" title="1"><span class="co"># a and b are identical</span></a>
+<a class="sourceLine" id="cb56-2" title="2">a &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl =</span> <span class="st">&quot;Control Condition&quot;</span>, <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</a>
+<a class="sourceLine" id="cb56-3" title="3"></a>
+<a class="sourceLine" id="cb56-4" title="4"><span class="co"># but b is much easier to read</span></a>
+<a class="sourceLine" id="cb56-5" title="5">b &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl  =</span> <span class="st">&quot;Control Condition&quot;</span>, </a>
+<a class="sourceLine" id="cb56-6" title="6">          <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, </a>
+<a class="sourceLine" id="cb56-7" title="7">          <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</a></code></pre></div>
 
 </div>
 <div id="wide" class="section level2">
@@ -372,8 +369,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>working directory</h2>
 <p><dfn>The filepath where R is currently reading and writing files.</dfn></p>
 <p>If you are working in a <a href="p.html#project">project</a>, the working directory is usually the main project directory. So if you want to save a file into a folder called “data” in that project folder, you can use a <a href="r.html#relative-path">relative path</a>, which is automatically appended to the working directory, such as <code>readr::write_csv(my_data, "data/my_data.csv")</code>.</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="w.html#cb57-1"></a><span class="kw">getwd</span>() .html<span class="co"># get the current working directory</span></span>
-<span id="cb57-2"><a href="w.html#cb57-2"></a><span class="kw">setwd</span>(<span class="st">&quot;~/r/myfiles&quot;</span>) .html<span class="co"># change the working directory</span></span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" title="1"><span class="kw">getwd</span>() .html<span class="co"># get the current working directory</span></a>
+<a class="sourceLine" id="cb57-2" title="2"><span class="kw">setwd</span>(<span class="st">&quot;~/r/myfiles&quot;</span>) .html<span class="co"># change the working directory</span></a></code></pre></div>
 <div class="warning">
 <p>
 Never set or change your working directory in a script.
