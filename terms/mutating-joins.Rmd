@@ -1,0 +1,28 @@
+## mutating joins
+
+<dfn>Joins that act like the `dplyr::mutate()` function in that they add new columns to one table based on values in another table.</dfn>
+
+A `left_join` keeps all the data from the first (left) table and joins anything that matches from the second (right) table.
+
+```{r left-join, echo=FALSE, fig.cap="Left Join"}
+knitr::include_graphics("images/joins/left_join.png")
+```
+
+A `right_join` keeps all the data from the second (right) table and joins anything that matches from the first (left) table.
+
+```{r right-join, echo=FALSE, fig.cap="Right Join"}
+knitr::include_graphics("images/joins/right_join.png")
+```
+
+An `inner_join` returns all the rows that have a match in the other table.
+
+```{r inner-join, echo=FALSE, fig.cap="Inner Join"}
+knitr::include_graphics("images/joins/inner_join.png")
+```
+
+A `full_join` lets you join up rows in two tables while keeping all of the information from both tables.
+
+```{r full-join, echo=FALSE, fig.cap="Full Join"}
+knitr::include_graphics("images/joins/full_join.png")
+```
+
