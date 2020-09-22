@@ -50,13 +50,12 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -65,16 +64,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -83,9 +80,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -351,18 +348,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>All of the data about a single trial or question.</dfn></p>
 <p>In a tidy dataset, each row contains only one observation.</p>
 <p>Each row contains 3 observations:</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="o.html#cb44-1"></a><span class="kw">library</span>(dplyr)</span>
-<span id="cb44-2"><a href="o.html#cb44-2"></a><span class="kw">library</span>(tidyr)</span>
-<span id="cb44-3"><a href="o.html#cb44-3"></a></span>
-<span id="cb44-4"><a href="o.html#cb44-4"></a>untidy &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
-<span id="cb44-5"><a href="o.html#cb44-5"></a>  <span class="dt">id =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,</span>
-<span id="cb44-6"><a href="o.html#cb44-6"></a>  <span class="dt">score_1 =</span> <span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
-<span id="cb44-7"><a href="o.html#cb44-7"></a>  <span class="dt">score_2 =</span> <span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
-<span id="cb44-8"><a href="o.html#cb44-8"></a>  <span class="dt">score_3 =</span> <span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
-<span id="cb44-9"><a href="o.html#cb44-9"></a>  <span class="dt">rt_1 =</span> <span class="kw">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">round</span>(),</span>
-<span id="cb44-10"><a href="o.html#cb44-10"></a>  <span class="dt">rt_2 =</span> <span class="kw">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">round</span>(),</span>
-<span id="cb44-11"><a href="o.html#cb44-11"></a>  <span class="dt">rt_3 =</span> <span class="kw">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">round</span>()</span>
-<span id="cb44-12"><a href="o.html#cb44-12"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" title="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb44-2" title="2"><span class="kw">library</span>(tidyr)</a>
+<a class="sourceLine" id="cb44-3" title="3"></a>
+<a class="sourceLine" id="cb44-4" title="4">untidy &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb44-5" title="5">  <span class="dt">id =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,</a>
+<a class="sourceLine" id="cb44-6" title="6">  <span class="dt">score_1 =</span> <span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">7</span>, <span class="dv">5</span>),</a>
+<a class="sourceLine" id="cb44-7" title="7">  <span class="dt">score_2 =</span> <span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">7</span>, <span class="dv">5</span>),</a>
+<a class="sourceLine" id="cb44-8" title="8">  <span class="dt">score_3 =</span> <span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">7</span>, <span class="dv">5</span>),</a>
+<a class="sourceLine" id="cb44-9" title="9">  <span class="dt">rt_1 =</span> <span class="kw">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">round</span>(),</a>
+<a class="sourceLine" id="cb44-10" title="10">  <span class="dt">rt_2 =</span> <span class="kw">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">round</span>(),</a>
+<a class="sourceLine" id="cb44-11" title="11">  <span class="dt">rt_3 =</span> <span class="kw">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">round</span>()</a>
+<a class="sourceLine" id="cb44-12" title="12">)</a></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -378,56 +375,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="right">1</td>
-<td align="right">2</td>
-<td align="right">1</td>
-<td align="right">2</td>
-<td align="right">558</td>
-<td align="right">782</td>
-<td align="right">989</td>
+<td align="right">6</td>
+<td align="right">5</td>
+<td align="right">4</td>
+<td align="right">747</td>
+<td align="right">813</td>
+<td align="right">734</td>
 </tr>
 <tr class="even">
 <td align="right">2</td>
-<td align="right">5</td>
-<td align="right">3</td>
 <td align="right">1</td>
-<td align="right">820</td>
-<td align="right">869</td>
-<td align="right">868</td>
+<td align="right">3</td>
+<td align="right">6</td>
+<td align="right">1030</td>
+<td align="right">819</td>
+<td align="right">1009</td>
 </tr>
 <tr class="odd">
 <td align="right">3</td>
-<td align="right">1</td>
+<td align="right">7</td>
 <td align="right">6</td>
-<td align="right">3</td>
-<td align="right">908</td>
-<td align="right">795</td>
-<td align="right">690</td>
+<td align="right">2</td>
+<td align="right">824</td>
+<td align="right">780</td>
+<td align="right">758</td>
 </tr>
 <tr class="even">
 <td align="right">4</td>
+<td align="right">3</td>
 <td align="right">7</td>
-<td align="right">2</td>
-<td align="right">6</td>
-<td align="right">668</td>
-<td align="right">947</td>
-<td align="right">904</td>
+<td align="right">3</td>
+<td align="right">897</td>
+<td align="right">742</td>
+<td align="right">711</td>
 </tr>
 <tr class="odd">
 <td align="right">5</td>
-<td align="right">3</td>
+<td align="right">2</td>
+<td align="right">4</td>
 <td align="right">7</td>
-<td align="right">5</td>
-<td align="right">645</td>
-<td align="right">736</td>
-<td align="right">893</td>
+<td align="right">824</td>
+<td align="right">836</td>
+<td align="right">814</td>
 </tr>
 </tbody>
 </table>
 <p>Now each row contains 1 observation:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="o.html#cb45-1"></a>tidy &lt;-<span class="st"> </span>untidy <span class="op">%&gt;%</span></span>
-<span id="cb45-2"><a href="o.html#cb45-2"></a><span class="st">  </span><span class="kw">gather</span>(var, val, score_<span class="dv">1</span><span class="op">:</span>rt_<span class="dv">3</span>) <span class="op">%&gt;%</span></span>
-<span id="cb45-3"><a href="o.html#cb45-3"></a><span class="st">  </span><span class="kw">separate</span>(var, <span class="kw">c</span>(<span class="st">&quot;var&quot;</span>, <span class="st">&quot;trial&quot;</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb45-4"><a href="o.html#cb45-4"></a><span class="st">  </span><span class="kw">spread</span>(var, val)</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" title="1">tidy &lt;-<span class="st"> </span>untidy <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb45-2" title="2"><span class="st">  </span><span class="kw">gather</span>(var, val, score_<span class="dv">1</span><span class="op">:</span>rt_<span class="dv">3</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb45-3" title="3"><span class="st">  </span><span class="kw">separate</span>(var, <span class="kw">c</span>(<span class="st">&quot;var&quot;</span>, <span class="st">&quot;trial&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb45-4" title="4"><span class="st">  </span><span class="kw">spread</span>(var, val)</a></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -441,92 +438,92 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="right">1</td>
 <td align="left">1</td>
-<td align="right">558</td>
-<td align="right">2</td>
+<td align="right">747</td>
+<td align="right">6</td>
 </tr>
 <tr class="even">
 <td align="right">1</td>
 <td align="left">2</td>
-<td align="right">782</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">3</td>
-<td align="right">989</td>
-<td align="right">2</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">1</td>
-<td align="right">820</td>
+<td align="right">813</td>
 <td align="right">5</td>
 </tr>
 <tr class="odd">
+<td align="right">1</td>
+<td align="left">3</td>
+<td align="right">734</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">1</td>
+<td align="right">1030</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
 <td align="right">2</td>
 <td align="left">2</td>
-<td align="right">869</td>
+<td align="right">819</td>
 <td align="right">3</td>
 </tr>
 <tr class="even">
 <td align="right">2</td>
 <td align="left">3</td>
-<td align="right">868</td>
-<td align="right">1</td>
+<td align="right">1009</td>
+<td align="right">6</td>
 </tr>
 <tr class="odd">
 <td align="right">3</td>
 <td align="left">1</td>
-<td align="right">908</td>
-<td align="right">1</td>
+<td align="right">824</td>
+<td align="right">7</td>
 </tr>
 <tr class="even">
 <td align="right">3</td>
 <td align="left">2</td>
-<td align="right">795</td>
+<td align="right">780</td>
 <td align="right">6</td>
 </tr>
 <tr class="odd">
 <td align="right">3</td>
 <td align="left">3</td>
-<td align="right">690</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left">1</td>
-<td align="right">668</td>
-<td align="right">7</td>
-</tr>
-<tr class="odd">
-<td align="right">4</td>
-<td align="left">2</td>
-<td align="right">947</td>
+<td align="right">758</td>
 <td align="right">2</td>
 </tr>
 <tr class="even">
 <td align="right">4</td>
+<td align="left">1</td>
+<td align="right">897</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td align="right">4</td>
+<td align="left">2</td>
+<td align="right">742</td>
+<td align="right">7</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
 <td align="left">3</td>
-<td align="right">904</td>
-<td align="right">6</td>
+<td align="right">711</td>
+<td align="right">3</td>
 </tr>
 <tr class="odd">
 <td align="right">5</td>
 <td align="left">1</td>
-<td align="right">645</td>
-<td align="right">3</td>
+<td align="right">824</td>
+<td align="right">2</td>
 </tr>
 <tr class="even">
 <td align="right">5</td>
 <td align="left">2</td>
-<td align="right">736</td>
-<td align="right">7</td>
+<td align="right">836</td>
+<td align="right">4</td>
 </tr>
 <tr class="odd">
 <td align="right">5</td>
 <td align="left">3</td>
-<td align="right">893</td>
-<td align="right">5</td>
+<td align="right">814</td>
+<td align="right">7</td>
 </tr>
 </tbody>
 </table>

@@ -50,13 +50,12 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -65,16 +64,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -83,9 +80,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -328,34 +325,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>geom</h2>
 <p><dfn>The geometric style in which data are displayed, such as boxplot, density, or histogram.</dfn></p>
 <p>In ggplot2, the geoms control how your data are visualised. You can start with the same base plot…</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="g.html#cb22-1"></a>gg &lt;-<span class="st"> </span><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(<span class="kw">as.factor</span>(gear), hp)) <span class="op">+</span></span>
-<span id="cb22-2"><a href="g.html#cb22-2"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Number of gears&quot;</span>, </span>
-<span id="cb22-3"><a href="g.html#cb22-3"></a>       <span class="dt">y =</span> <span class="st">&quot;Horsepower&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1">gg &lt;-<span class="st"> </span><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(<span class="kw">as.factor</span>(gear), hp)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb22-2" title="2"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Number of gears&quot;</span>, </a>
+<a class="sourceLine" id="cb22-3" title="3">       <span class="dt">y =</span> <span class="st">&quot;Horsepower&quot;</span>)</a></code></pre></div>
 <p>… and use different geoms to visualise it:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="g.html#cb23-1"></a>gg <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" title="1">gg <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geom-boxplot"></span>
 <img src="man/figures/README-geom-boxplot-1.png" alt="Visualisation using geom_boxplot" width="100%" />
 <p class="caption">
 Figure 2: Visualisation using geom_boxplot
 </p>
 </div>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="g.html#cb24-1"></a>gg <span class="op">+</span><span class="st"> </span><span class="kw">geom_violin</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1">gg <span class="op">+</span><span class="st"> </span><span class="kw">geom_violin</span>()</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geom-violin"></span>
 <img src="man/figures/README-geom-violin-1.png" alt="Visualisation using geom_violin" width="100%" />
 <p class="caption">
 Figure 3: Visualisation using geom_violin
 </p>
 </div>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="g.html#cb25-1"></a>gg <span class="op">+</span><span class="st"> </span><span class="kw">stat_summary</span>(<span class="dt">geom =</span> <span class="st">&quot;pointrange&quot;</span>)</span>
-<span id="cb25-2"><a href="g.html#cb25-2"></a><span class="co">#&gt; No summary function supplied, defaulting to `mean_se()`</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" title="1">gg <span class="op">+</span><span class="st"> </span><span class="kw">stat_summary</span>(<span class="dt">geom =</span> <span class="st">&quot;pointrange&quot;</span>)</a>
+<a class="sourceLine" id="cb25-2" title="2"><span class="co">#&gt; No summary function supplied, defaulting to `mean_se()`</span></a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geom-pointrange"></span>
 <img src="man/figures/README-geom-pointrange-1.png" alt="Visualisation using pointrange" width="100%" />
 <p class="caption">
 Figure 4: Visualisation using pointrange
 </p>
 </div>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="g.html#cb26-1"></a>gg <span class="op">+</span><span class="st"> </span><span class="kw">stat_summary</span>(<span class="dt">geom =</span> <span class="st">&quot;crossbar&quot;</span>)</span>
-<span id="cb26-2"><a href="g.html#cb26-2"></a><span class="co">#&gt; No summary function supplied, defaulting to `mean_se()`</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1">gg <span class="op">+</span><span class="st"> </span><span class="kw">stat_summary</span>(<span class="dt">geom =</span> <span class="st">&quot;crossbar&quot;</span>)</a>
+<a class="sourceLine" id="cb26-2" title="2"><span class="co">#&gt; No summary function supplied, defaulting to `mean_se()`</span></a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geom-crossbar"></span>
 <img src="man/figures/README-geom-crossbar-1.png" alt="Visualisation using crossbar" width="100%" />
 <p class="caption">
