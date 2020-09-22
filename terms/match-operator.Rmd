@@ -1,0 +1,23 @@
+## match operator
+
+<dfn>A binary operator (%in%) that returns a logical vector indicating if there is a match or not for its left operand.</dfn>
+
+```{r}
+# check if a single value is in a vector
+"West Dakota" %in% state.name
+```
+
+
+```{r}
+# check if each item in the lefthand vector is in the righthand vector
+c("A", "B", "1") %in% LETTERS
+```
+
+
+```{r}
+pangram <- "the quick brown fox jumps over the lazy dog"
+pangram_chars <- strsplit(pangram, "")[[1]]
+letters %in% pangram_chars
+```
+
+

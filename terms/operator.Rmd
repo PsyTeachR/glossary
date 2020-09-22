@@ -23,6 +23,7 @@ Relational operators in R
 | `>=`    | Greater than or equal to | `2 >= 1` or `"B" >= "A"` |
 | `<`      | Less than | `1 < 2` or `"A" < "B"` |
 | `<=`     | Less than or equal to | `1 <= 2` or `"A" <= "B"` |
+| `%in%`   | [Match operator](#match-operator) | `"A" %in% LETTERS` |
 
 Logical operators in R
 

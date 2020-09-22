@@ -1,0 +1,5 @@
+## hierarchical model
+
+<dfn>A type of regression model that involves estimating both [fixed effects](#fixed-effects) and [random effects](#random-effects).</dfn>
+
+See [linear mixed effects model](#linear-mixed-effects-model).

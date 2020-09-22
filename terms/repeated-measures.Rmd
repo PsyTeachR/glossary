@@ -1,5 +1,5 @@
 ## repeated measures
 
-<def>A dataset has repeated measures if there are multiple measurements taken on the same variable for individual sampling units.</def>
+<def>A dataset has repeated measures if there are multiple measurements taken on the same [variable](#variable) for individual [sampling units](#sampling unit).</def>
 
 See also [multilevel](#multilevel).
