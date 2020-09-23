@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="r.html"/>
-<link rel="next" href="u.html"/>
+<link rel="next" href="t.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,13 +50,12 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -65,16 +64,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -83,9 +80,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -179,6 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html"><i class="fa fa-check"></i>F</a><ul>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#factor"><i class="fa fa-check"></i>factor</a></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#filtering-joins"><i class="fa fa-check"></i>filtering joins</a></li>
+<li class="chapter" data-level="" data-path="f.html"><a href="f.html#fitted-value"><i class="fa fa-check"></i>fitted value</a></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#fixed-effect"><i class="fa fa-check"></i>fixed effect</a></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#fixed-factor"><i class="fa fa-check"></i>fixed factor</a></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#function"><i class="fa fa-check"></i>function</a></li>
@@ -248,12 +246,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-effect"><i class="fa fa-check"></i>random effect</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-factor"><i class="fa fa-check"></i>random factor</a></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-seed"><i class="fa fa-check"></i>random seed</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#reactivity"><i class="fa fa-check"></i>reactivity</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#relative-path"><i class="fa fa-check"></i>relative path</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#repeated-measures"><i class="fa fa-check"></i>repeated measures</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#replicability"><i class="fa fa-check"></i>replicability</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#reproducibility"><i class="fa fa-check"></i>reproducibility</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#reproducible-research"><i class="fa fa-check"></i>reproducible research</a></li>
+<li class="chapter" data-level="" data-path="r.html"><a href="r.html#residual-error"><i class="fa fa-check"></i>residual error</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#response-variable"><i class="fa fa-check"></i>response variable</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#rstudio"><i class="fa fa-check"></i>RStudio</a></li>
 </ul></li>
@@ -262,10 +262,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#script"><i class="fa fa-check"></i>script</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#server"><i class="fa fa-check"></i>server</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#set-operations"><i class="fa fa-check"></i>Set operations</a></li>
-<li class="chapter" data-level="" data-path="s.html"><a href="s.html#tidy-data"><i class="fa fa-check"></i>tidy data</a></li>
-<li class="chapter" data-level="" data-path="s.html"><a href="s.html#tidyverse"><i class="fa fa-check"></i>tidyverse</a></li>
-<li class="chapter" data-level="" data-path="s.html"><a href="s.html#transparency"><i class="fa fa-check"></i>transparency</a></li>
-<li class="chapter" data-level="" data-path="s.html"><a href="s.html#two-tailed"><i class="fa fa-check"></i>two-tailed</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#shinydashboard"><i class="fa fa-check"></i>shinydashboard</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#slope"><i class="fa fa-check"></i>slope</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#standard-deviation"><i class="fa fa-check"></i>standard deviation</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#string"><i class="fa fa-check"></i>string</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html"><i class="fa fa-check"></i>T</a><ul>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#tabular-data"><i class="fa fa-check"></i>tabular data</a></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#tibble"><i class="fa fa-check"></i>tibble</a></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#tidy-data"><i class="fa fa-check"></i>tidy data</a></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#tidyverse"><i class="fa fa-check"></i>tidyverse</a></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#transparency"><i class="fa fa-check"></i>transparency</a></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#two-tailed"><i class="fa fa-check"></i>two-tailed</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="u.html"><a href="u.html"><i class="fa fa-check"></i>U</a><ul>
 <li class="chapter" data-level="" data-path="u.html"><a href="u.html#ui"><i class="fa fa-check"></i>UI</a></li>
@@ -341,189 +349,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Set operations</h2>
 <p><dfn>Functions that compare two tables and return rows that match (intersect), are in either table (union), or are in one table but not the other (setdiff).</dfn></p>
 <p>The examples below use two small datasets. <code>a</code> has <code>id</code>s 1 to 5, and <code>b</code> has <code>id</code>s 3 to 7.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="s.html#cb51-1"></a>a &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>)</span>
-<span id="cb51-2"><a href="s.html#cb51-2"></a>b &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="dv">3</span><span class="op">:</span><span class="dv">7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" title="1">a &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb51-2" title="2">b &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="dv">3</span><span class="op">:</span><span class="dv">7</span>)</a></code></pre></div>
 <p><code>intersect()</code> returns all rows in two tables that match exactly. The columns don’t have to be in the same order.</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="s.html#cb52-1"></a>dplyr<span class="op">::</span><span class="kw">intersect</span>(a, b)</span>
-<span id="cb52-2"><a href="s.html#cb52-2"></a><span class="co">#&gt; # A tibble: 3 x 1</span></span>
-<span id="cb52-3"><a href="s.html#cb52-3"></a><span class="co">#&gt;      id</span></span>
-<span id="cb52-4"><a href="s.html#cb52-4"></a><span class="co">#&gt;   &lt;int&gt;</span></span>
-<span id="cb52-5"><a href="s.html#cb52-5"></a><span class="co">#&gt; 1     3</span></span>
-<span id="cb52-6"><a href="s.html#cb52-6"></a><span class="co">#&gt; 2     4</span></span>
-<span id="cb52-7"><a href="s.html#cb52-7"></a><span class="co">#&gt; 3     5</span></span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" title="1">dplyr<span class="op">::</span><span class="kw">intersect</span>(a, b)</a>
+<a class="sourceLine" id="cb52-2" title="2"><span class="co">#&gt; # A tibble: 3 x 1</span></a>
+<a class="sourceLine" id="cb52-3" title="3"><span class="co">#&gt;      id</span></a>
+<a class="sourceLine" id="cb52-4" title="4"><span class="co">#&gt;   &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb52-5" title="5"><span class="co">#&gt; 1     3</span></a>
+<a class="sourceLine" id="cb52-6" title="6"><span class="co">#&gt; 2     4</span></a>
+<a class="sourceLine" id="cb52-7" title="7"><span class="co">#&gt; 3     5</span></a></code></pre></div>
 <p><code>union()</code> returns all the rows from both tables, removing duplicate rows.</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="s.html#cb53-1"></a>dplyr<span class="op">::</span><span class="kw">union</span>(a, b)</span>
-<span id="cb53-2"><a href="s.html#cb53-2"></a><span class="co">#&gt; # A tibble: 7 x 1</span></span>
-<span id="cb53-3"><a href="s.html#cb53-3"></a><span class="co">#&gt;      id</span></span>
-<span id="cb53-4"><a href="s.html#cb53-4"></a><span class="co">#&gt;   &lt;int&gt;</span></span>
-<span id="cb53-5"><a href="s.html#cb53-5"></a><span class="co">#&gt; 1     1</span></span>
-<span id="cb53-6"><a href="s.html#cb53-6"></a><span class="co">#&gt; 2     2</span></span>
-<span id="cb53-7"><a href="s.html#cb53-7"></a><span class="co">#&gt; 3     3</span></span>
-<span id="cb53-8"><a href="s.html#cb53-8"></a><span class="co">#&gt; 4     4</span></span>
-<span id="cb53-9"><a href="s.html#cb53-9"></a><span class="co">#&gt; 5     5</span></span>
-<span id="cb53-10"><a href="s.html#cb53-10"></a><span class="co">#&gt; 6     6</span></span>
-<span id="cb53-11"><a href="s.html#cb53-11"></a><span class="co">#&gt; 7     7</span></span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" title="1">dplyr<span class="op">::</span><span class="kw">union</span>(a, b)</a>
+<a class="sourceLine" id="cb53-2" title="2"><span class="co">#&gt; # A tibble: 7 x 1</span></a>
+<a class="sourceLine" id="cb53-3" title="3"><span class="co">#&gt;      id</span></a>
+<a class="sourceLine" id="cb53-4" title="4"><span class="co">#&gt;   &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb53-5" title="5"><span class="co">#&gt; 1     1</span></a>
+<a class="sourceLine" id="cb53-6" title="6"><span class="co">#&gt; 2     2</span></a>
+<a class="sourceLine" id="cb53-7" title="7"><span class="co">#&gt; 3     3</span></a>
+<a class="sourceLine" id="cb53-8" title="8"><span class="co">#&gt; 4     4</span></a>
+<a class="sourceLine" id="cb53-9" title="9"><span class="co">#&gt; 5     5</span></a>
+<a class="sourceLine" id="cb53-10" title="10"><span class="co">#&gt; 6     6</span></a>
+<a class="sourceLine" id="cb53-11" title="11"><span class="co">#&gt; 7     7</span></a></code></pre></div>
 <p><code>setdiff</code> returns rows that are in the first table, but not in the second table.</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="s.html#cb54-1"></a>dplyr<span class="op">::</span><span class="kw">setdiff</span>(a, b)</span>
-<span id="cb54-2"><a href="s.html#cb54-2"></a><span class="co">#&gt; # A tibble: 2 x 1</span></span>
-<span id="cb54-3"><a href="s.html#cb54-3"></a><span class="co">#&gt;      id</span></span>
-<span id="cb54-4"><a href="s.html#cb54-4"></a><span class="co">#&gt;   &lt;int&gt;</span></span>
-<span id="cb54-5"><a href="s.html#cb54-5"></a><span class="co">#&gt; 1     1</span></span>
-<span id="cb54-6"><a href="s.html#cb54-6"></a><span class="co">#&gt; 2     2</span></span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" title="1">dplyr<span class="op">::</span><span class="kw">setdiff</span>(a, b)</a>
+<a class="sourceLine" id="cb54-2" title="2"><span class="co">#&gt; # A tibble: 2 x 1</span></a>
+<a class="sourceLine" id="cb54-3" title="3"><span class="co">#&gt;      id</span></a>
+<a class="sourceLine" id="cb54-4" title="4"><span class="co">#&gt;   &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb54-5" title="5"><span class="co">#&gt; 1     1</span></a>
+<a class="sourceLine" id="cb54-6" title="6"><span class="co">#&gt; 2     2</span></a></code></pre></div>
 <div class="warning">
 <p>If you’ve forgotten to load dplyr or the tidyverse, <a href="b#base-r">base R</a> also has these functions. You will either get an error message or unexpected output if you try to use them with data tables.</p>
 </div>
-<pre><code>
-
-&lt;!--chapter:end:terms//set-operations.Rmd--&gt;
-
-
-## shinydashboard
-
-&lt;dfn&gt;A package for R that builds on [Shiny](s.html#shiny) for more flexible and visually appealing [UI](u.html#ui)s.&lt;/dfn&gt;
-
-[Shiny Dashboard or shinydashboard](https://rstudio.github.io/shinydashboard/) can be installed with `install.packages(&quot;shinydashboard&quot;)`, and can be loaded with `library(shinydashboard)`. The [shinydashboard documentation](https://rstudio.github.io/shinydashboard/get_started.html) is a great introduction to this package.
-
-&lt;!--chapter:end:terms//shinydashboard.Rmd--&gt;
-
-
-## slope
-
-&lt;dfn&gt;A quantity that captures how much change in one variable is associated with a unit increase in another variable.&lt;/dfn&gt;
-
-If you have a slope of 3, that means that a unit increase in the $X$ variable is associated with a 3 unit change in the $Y$ variable. If you have a slope of -1/2, then a unit increase in the $X$ variable is associated with a decrease of 1/2 in the $Y$ variable.
-
-&lt;!--chapter:end:terms//slope.Rmd--&gt;
-
-
-## standard deviation
-
-&lt;dfn&gt;A statistic that measures how spread out data are relative to the mean.&lt;/dfn&gt;
-
-If the data points are further from the mean, there is a higher standard deviation. Standard deviation is calculated as the square root of the [variance](v.html#variance). 
-
-Normal distributions with means of 0 and SDs of 1 (red), 2 (blue) and 3 (purple).
-
-&lt;div class=&quot;figure&quot; style=&quot;text-align: center&quot;&gt;
-&lt;img src=&quot;man/figures/README-unnamed-chunk-136-1.png&quot; alt=&quot;**CAPTION THIS FIGURE!!**&quot; width=&quot;100%&quot; /&gt;
-&lt;p class=&quot;caption&quot;&gt;(\#fig:unnamed-chunk-136)**CAPTION THIS FIGURE!!**&lt;/p&gt;
-&lt;/div&gt;
-
-
-&lt;!--chapter:end:terms//standard-deviation.Rmd--&gt;
-
-
-## string
-
-&lt;dfn&gt;A piece of text inside of quotes.&lt;/dfn&gt; 
-
-For example, `&quot;I sense the rains down in Africa&quot;` is a string. Numbers inside of quotes can be a string; `&quot;19&quot;` is a string, while `19` is not.
-
-Strings are a [character](c.html#character) [data type](d.html#data-type).
-
-&lt;!--chapter:end:terms//string.Rmd--&gt;
-
-
-# T
-
-&lt;!--chapter:end:terms//t.Rmd--&gt;
-
-
-## tabular data
-
-&lt;dfn&gt;Data in a rectangular table format, where each row has an entry for each column.&lt;/dfn&gt;
-
-
-
-&lt;!--chapter:end:terms//tabular-data.Rmd--&gt;
-
-
-## tibble
-
-&lt;dfn&gt;A [container](c.html#container) for [tabular data](t.html#tabular-data) with some different properties to a [data frame](d.html#data-frame)&lt;/dfn&gt;
-
-Tibbles are almost exactly like the [base R](b.html#base-r) `data.frame` container type, but has some special printing functions, does not coerce character columns to factors, and does not typically use row names.
-
-
-```r
-# display the mtcars data frame
-mtcars
-#&gt;                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb
-#&gt; Mazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
-#&gt; Mazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
-#&gt; Datsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
-#&gt; Hornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
-#&gt; Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
-#&gt; Valiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
-#&gt; Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
-#&gt; Merc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
-#&gt; Merc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
-#&gt; Merc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
-#&gt; Merc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
-#&gt; Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
-#&gt; Merc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
-#&gt; Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
-#&gt; Cadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
-#&gt; Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
-#&gt; Chrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4
-#&gt; Fiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
-#&gt; Honda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2
-#&gt; Toyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1
-#&gt; Toyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1
-#&gt; Dodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2
-#&gt; AMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2
-#&gt; Camaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4
-#&gt; Pontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2
-#&gt; Fiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1
-#&gt; Porsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2
-#&gt; Lotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
-#&gt; Ford Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4
-#&gt; Ferrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
-#&gt; Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
-#&gt; Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2</code></pre>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="s.html#cb56-1"></a><span class="co"># convert the mtcars data frame to a tibble</span></span>
-<span id="cb56-2"><a href="s.html#cb56-2"></a>tibble<span class="op">::</span><span class="kw">as_tibble</span>(mtcars, <span class="dt">rownames =</span> <span class="st">&quot;name&quot;</span>)</span>
-<span id="cb56-3"><a href="s.html#cb56-3"></a><span class="co">#&gt; # A tibble: 32 x 12</span></span>
-<span id="cb56-4"><a href="s.html#cb56-4"></a><span class="co">#&gt;    name              mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb</span></span>
-<span id="cb56-5"><a href="s.html#cb56-5"></a><span class="co">#&gt;    &lt;chr&gt;           &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></span>
-<span id="cb56-6"><a href="s.html#cb56-6"></a><span class="co">#&gt;  1 Mazda RX4        21       6  160    110  3.9   2.62  16.5     0     1     4     4</span></span>
-<span id="cb56-7"><a href="s.html#cb56-7"></a><span class="co">#&gt;  2 Mazda RX4 Wag    21       6  160    110  3.9   2.88  17.0     0     1     4     4</span></span>
-<span id="cb56-8"><a href="s.html#cb56-8"></a><span class="co">#&gt;  3 Datsun 710       22.8     4  108     93  3.85  2.32  18.6     1     1     4     1</span></span>
-<span id="cb56-9"><a href="s.html#cb56-9"></a><span class="co">#&gt;  4 Hornet 4 Drive   21.4     6  258    110  3.08  3.22  19.4     1     0     3     1</span></span>
-<span id="cb56-10"><a href="s.html#cb56-10"></a><span class="co">#&gt;  5 Hornet Sportab…  18.7     8  360    175  3.15  3.44  17.0     0     0     3     2</span></span>
-<span id="cb56-11"><a href="s.html#cb56-11"></a><span class="co">#&gt;  6 Valiant          18.1     6  225    105  2.76  3.46  20.2     1     0     3     1</span></span>
-<span id="cb56-12"><a href="s.html#cb56-12"></a><span class="co">#&gt;  7 Duster 360       14.3     8  360    245  3.21  3.57  15.8     0     0     3     4</span></span>
-<span id="cb56-13"><a href="s.html#cb56-13"></a><span class="co">#&gt;  8 Merc 240D        24.4     4  147.    62  3.69  3.19  20       1     0     4     2</span></span>
-<span id="cb56-14"><a href="s.html#cb56-14"></a><span class="co">#&gt;  9 Merc 230         22.8     4  141.    95  3.92  3.15  22.9     1     0     4     2</span></span>
-<span id="cb56-15"><a href="s.html#cb56-15"></a><span class="co">#&gt; 10 Merc 280         19.2     6  168.   123  3.92  3.44  18.3     1     0     4     4</span></span>
-<span id="cb56-16"><a href="s.html#cb56-16"></a><span class="co">#&gt; # … with 22 more rows</span></span></code></pre></div>
+<p>```</p>
 
 </div>
-<div id="tidy-data" class="section level2">
-<h2>tidy data</h2>
-<p><dfn>A format for data that maps the meaning onto the structure.</dfn></p>
-<p>Tidy data has three rules:</p>
-<ul>
-<li>Each <a href="v.html#variable">variable</a> must have its own column</li>
-<li>Each <a href="o.html#observation">observation</a> must have its own row</li>
-<li>Each <a href="v.html#value">value</a> must have its own cell</li>
-</ul>
+<div id="shinydashboard" class="section level2">
+<h2>shinydashboard</h2>
+<p><dfn>A package for R that builds on <a href="s.html#shiny">Shiny</a> for more flexible and visually appealing <a href="u.html#ui">UI</a>s.</dfn></p>
+<p><a href="https://rstudio.github.io/shinydashboard/">Shiny Dashboard or shinydashboard</a> can be installed with <code>install.packages("shinydashboard")</code>, and can be loaded with <code>library(shinydashboard)</code>. The <a href="https://rstudio.github.io/shinydashboard/get_started.html">shinydashboard documentation</a> is a great introduction to this package.</p>
 
 </div>
-<div id="tidyverse" class="section level2">
-<h2>tidyverse</h2>
-<p><dfn>A set of R packages that help you create and work with <a href="t.html#tidy-data">tidy data</a></dfn></p>
-<p>See <a href="https://www.tidyverse.org/" class="uri">https://www.tidyverse.org/</a></p>
+<div id="slope" class="section level2">
+<h2>slope</h2>
+<p><dfn>A quantity that captures how much change in one variable is associated with a unit increase in another variable.</dfn></p>
+<p>If you have a slope of 3, that means that a unit increase in the <span class="math inline">\(X\)</span> variable is associated with a 3 unit change in the <span class="math inline">\(Y\)</span> variable. If you have a slope of -1/2, then a unit increase in the <span class="math inline">\(X\)</span> variable is associated with a decrease of 1/2 in the <span class="math inline">\(Y\)</span> variable.</p>
 
 </div>
-<div id="transparency" class="section level2">
-<h2>transparency</h2>
-<p><dfn>The degree to which all the steps and decisions in a study have been documented and made available for verification.</dfn></p>
+<div id="standard-deviation" class="section level2">
+<h2>standard deviation</h2>
+<p><dfn>A statistic that measures how spread out data are relative to the mean.</dfn></p>
+<p>If the data points are further from the mean, there is a higher standard deviation. Standard deviation is calculated as the square root of the <a href="v.html#variance">variance</a>.</p>
+<p>Normal distributions with means of 0 and SDs of 1 (red), 2 (blue) and 3 (purple).</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-139"></span>
+<img src="man/figures/README-unnamed-chunk-139-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
+<p class="caption">
+Figure 15: <strong>CAPTION THIS FIGURE!!</strong>
+</p>
+</div>
 
 </div>
-<div id="two-tailed" class="section level2">
-<h2>two-tailed</h2>
-<p><dfn>A statistical test for which the critical region consists of all values of the test statistic greater than a given value plus all values less than another given value.</dfn></p>
+<div id="string" class="section level2">
+<h2>string</h2>
+<p><dfn>A piece of text inside of quotes.</dfn></p>
+<p>For example, <code>"I sense the rains down in Africa"</code> is a string. Numbers inside of quotes can be a string; <code>"19"</code> is a string, while <code>19</code> is not.</p>
+<p>Strings are a <a href="c.html#character">character</a> <a href="d.html#data-type">data type</a>.</p>
 
 </div>
 </div>
@@ -638,7 +528,7 @@ window.onload = function() {
         </div>
       </div>
 <a href="r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="u.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="t.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
