@@ -1,0 +1,9 @@
+## fitted value
+
+<dfn>The value of the response variable predicted by the model given certain values for any predictor variables.</dfn>
+
+If you have a model
+
+$$Y_i = \beta_0 + \beta_1 X_i + e_i$$
+
+then the fitted value for observation $i$ equals $\beta_0 + \beta_1 X_i$; that is, the model's prediction for a residual ($e_i$) of zero.

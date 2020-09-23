@@ -1,0 +1,7 @@
+## random seed
+
+<dfn>A value used to set the initial state of a random number generator.</dfn>
+
+Random seeds are used in random number generation. Each time you generate a random number, the number you get depends on the state of the underlying random number generator. If you set this state to a known value, you will get the same random numbers in the same order.
+
+Random seeds are used to make processes that involve random values reproducible. In R, you can set a random seed using the `set.seed()` function. If you put `set.seed()` at the start of your script, you will get the same output every time.
