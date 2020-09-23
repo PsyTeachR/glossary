@@ -1,0 +1,31 @@
+## binding joins
+
+<dfn>Joins that bind one table to another by adding their rows or columns together.</dfn>
+
+```{r bind-rows}
+a <- tibble(
+  id = 1:5,
+  a = LETTERS[1:5]
+)
+
+b <- tibble(
+  id = 6:10,
+  b = LETTERS[6:10]
+)
+
+bind_rows(a, b)
+```
+
+```{r bind-cols}
+a <- tibble(
+  id = 1:5,
+  a = LETTERS[1:5]
+)
+
+b <- tibble(
+  b = LETTERS[6:10],
+  c = 6:10
+)
+
+bind_cols(a, b)
+```

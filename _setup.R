@@ -17,3 +17,6 @@ R.utils::copyDirectory(
   to = "inst/book", 
   overwrite = TRUE, 
   recursive = TRUE)
+
+devtools::install()
+glossary::book()

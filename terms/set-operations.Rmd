@@ -1,0 +1,35 @@
+## Set operations
+
+<dfn>Functions that compare two tables and return rows that match (intersect), are in either table (union), or are in one table but not the other (setdiff).</dfn>
+
+The examples below use two small datasets. `a` has `id`s 1 to 5, and `b` has `id`s 3 to 7.
+
+```{r set-operations-data}
+a <- tibble(id = 1:5)
+b <- tibble(id = 3:7)
+```
+
+`intersect()` returns all rows in two tables that match exactly. The columns don't have to be in the same order.
+
+```{r intersect}
+dplyr::intersect(a, b)
+```
+
+`union()` returns all the rows from both tables, removing duplicate rows.
+
+```{r union}
+dplyr::union(a, b)
+```
+
+`setdiff` returns rows that are in the first table, but not in the second table.
+
+```{r setdiff}
+dplyr::setdiff(a, b)
+```
+
+<div class="warning">
+If you've forgotten to load dplyr or the tidyverse, [base R](b#base-r) also has these functions. You will either get an error message or unexpected output if you try to use them with data tables.
+</div>
+
+```
+

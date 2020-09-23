@@ -1,0 +1,5 @@
+## console
+
+<dfn>The [pane](p.html#panes) in RStudio where you can type in commands and view output messages.</dfn>
+
+Commands typed into the console are not saved in a script, although they may be saved in the history.
