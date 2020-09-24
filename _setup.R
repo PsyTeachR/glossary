@@ -18,5 +18,6 @@ R.utils::copyDirectory(
   overwrite = TRUE, 
   recursive = TRUE)
 
-devtools::install()
-glossary::book()
+unlink("inst/book/.nojekyll")
+
+glossary::open_glossary()

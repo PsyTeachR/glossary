@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2020-09-23" />
+<meta name="date" content="2020-09-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,12 +50,13 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -64,14 +65,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -80,9 +83,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -132,11 +135,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Glossary</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a></li>
-<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i>glossary</a><ul>
-<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#installation"><i class="fa fa-check"></i>Installation</a></li>
-<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#access-the-book-offline"><i class="fa fa-check"></i>Access the book offline</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#offline-access"><i class="fa fa-check"></i>Offline Access</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="symbols.html"><a href="symbols.html"><i class="fa fa-check"></i>Symbols</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html"><i class="fa fa-check"></i>A</a><ul>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#absolute-path"><i class="fa fa-check"></i>absolute path</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
@@ -261,19 +263,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sample"><i class="fa fa-check"></i>sample</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#script"><i class="fa fa-check"></i>script</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#server"><i class="fa fa-check"></i>server</a></li>
-<li class="chapter" data-level="" data-path="s.html"><a href="s.html#set-operations"><i class="fa fa-check"></i>Set operations</a></li>
-<li class="chapter" data-level="" data-path="s.html"><a href="s.html#shinydashboard"><i class="fa fa-check"></i>shinydashboard</a></li>
-<li class="chapter" data-level="" data-path="s.html"><a href="s.html#slope"><i class="fa fa-check"></i>slope</a></li>
-<li class="chapter" data-level="" data-path="s.html"><a href="s.html#standard-deviation"><i class="fa fa-check"></i>standard deviation</a></li>
-<li class="chapter" data-level="" data-path="s.html"><a href="s.html#string"><i class="fa fa-check"></i>string</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="t.html"><a href="t.html"><i class="fa fa-check"></i>T</a><ul>
-<li class="chapter" data-level="" data-path="t.html"><a href="t.html#tabular-data"><i class="fa fa-check"></i>tabular data</a></li>
-<li class="chapter" data-level="" data-path="t.html"><a href="t.html#tibble"><i class="fa fa-check"></i>tibble</a></li>
-<li class="chapter" data-level="" data-path="t.html"><a href="t.html#tidy-data"><i class="fa fa-check"></i>tidy data</a></li>
-<li class="chapter" data-level="" data-path="t.html"><a href="t.html#tidyverse"><i class="fa fa-check"></i>tidyverse</a></li>
-<li class="chapter" data-level="" data-path="t.html"><a href="t.html#transparency"><i class="fa fa-check"></i>transparency</a></li>
-<li class="chapter" data-level="" data-path="t.html"><a href="t.html#two-tailed"><i class="fa fa-check"></i>two-tailed</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#set-operations"><i class="fa fa-check"></i>set operations</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#tidy-data"><i class="fa fa-check"></i>tidy data</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#tidyverse"><i class="fa fa-check"></i>tidyverse</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#transparency"><i class="fa fa-check"></i>transparency</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#two-tailed"><i class="fa fa-check"></i>two-tailed</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="u.html"><a href="u.html"><i class="fa fa-check"></i>U</a><ul>
 <li class="chapter" data-level="" data-path="u.html"><a href="u.html#ui"><i class="fa fa-check"></i>UI</a></li>
@@ -332,25 +326,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>normal distribution</h2>
 <p><dfn>A symmetric distribution of data where values near the centre are most probable.</dfn></p>
 <p>A normal distribution is characterised by its <a href="m.html#mean">mean</a> and <a href="s.html#standard-deviation">standard deviation</a>. You can sample numbers from a simulated normal distribution with the function <code>rnorm()</code>.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1"><span class="co"># sample 1 million numbers from a normal distribution with </span></a>
-<a class="sourceLine" id="cb33-2" title="2"><span class="co"># a mean of 0 and a standard deviation of 1</span></a>
-<a class="sourceLine" id="cb33-3" title="3">x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">1000000</span>, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb33-4" title="4"></a>
-<a class="sourceLine" id="cb33-5" title="5"><span class="kw">hist</span>(x, <span class="dt">breaks =</span> <span class="dv">100</span>)</a></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-90"></span>
-<img src="man/figures/README-unnamed-chunk-90-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="n.html#cb56-1"></a><span class="co"># sample 1 million numbers from a normal distribution with </span></span>
+<span id="cb56-2"><a href="n.html#cb56-2"></a><span class="co"># a mean of 0 and a standard deviation of 1</span></span>
+<span id="cb56-3"><a href="n.html#cb56-3"></a>x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">1000000</span>, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">1</span>)</span>
+<span id="cb56-4"><a href="n.html#cb56-4"></a></span>
+<span id="cb56-5"><a href="n.html#cb56-5"></a><span class="kw">hist</span>(x, <span class="dt">breaks =</span> <span class="dv">100</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-88"></span>
+<img src="_main_files/figure-html/unnamed-chunk-88-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
 <p class="caption">
 Figure 12: <strong>CAPTION THIS FIGURE!!</strong>
 </p>
 </div>
 <p>About 68% of the values are within 1 SD of the mean.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" title="1"><span class="co"># proportion between -1 and 1</span></a>
-<a class="sourceLine" id="cb34-2" title="2"><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">-1</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;</span><span class="st"> </span><span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb34-3" title="3"><span class="co">#&gt; [1] 0.68233</span></a></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="n.html#cb57-1"></a><span class="co"># proportion between -1 and 1</span></span>
+<span id="cb57-2"><a href="n.html#cb57-2"></a><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">-1</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;</span><span class="st"> </span><span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] 0.682152</code></pre>
 <p>About 95% of the values are within 2 SDs of the mean.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" title="1"><span class="co"># proportion between -2 and 2</span></a>
-<a class="sourceLine" id="cb35-2" title="2"><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">-2</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;</span><span class="st"> </span><span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb35-3" title="3"><span class="co">#&gt; [1] 0.954356</span></a></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="n.html#cb59-1"></a><span class="co"># proportion between -2 and 2</span></span>
+<span id="cb59-2"><a href="n.html#cb59-2"></a><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">-2</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;</span><span class="st"> </span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 0.954549</code></pre>
 
 </div>
 <div id="numeric" class="section level2">
@@ -358,33 +352,33 @@ Figure 12: <strong>CAPTION THIS FIGURE!!</strong>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing a real decimal number or integer.</dfn></p>
 <p>The <a href="i.html#integer">integer</a> and <a href="d.html#double">double</a> data types are numeric.</p>
 <p>You can check if a variable is numeric using the function <code>is.numeric</code> and you can convert a variable to its numeric representation using the function <code>as.numeric</code>.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1"><span class="kw">is.numeric</span>(<span class="fl">2.4</span>)</a>
-<a class="sourceLine" id="cb36-2" title="2"><span class="co">#&gt; [1] TRUE</span></a></code></pre></div>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1"><span class="kw">is.numeric</span>(2L)</a>
-<a class="sourceLine" id="cb37-2" title="2"><span class="co">#&gt; [1] TRUE</span></a></code></pre></div>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" title="1"><span class="co"># complex numbers are not numeric </span></a>
-<a class="sourceLine" id="cb38-2" title="2"><span class="kw">is.numeric</span>(2i)</a>
-<a class="sourceLine" id="cb38-3" title="3"><span class="co">#&gt; [1] FALSE</span></a></code></pre></div>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" title="1"><span class="kw">is.numeric</span>(<span class="st">&quot;A&quot;</span>)</a>
-<a class="sourceLine" id="cb39-2" title="2"><span class="co">#&gt; [1] FALSE</span></a></code></pre></div>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" title="1"><span class="co"># numbers represented as strings are not numeric</span></a>
-<a class="sourceLine" id="cb40-2" title="2"><span class="kw">is.numeric</span>(<span class="st">&quot;3&quot;</span>)</a>
-<a class="sourceLine" id="cb40-3" title="3"><span class="co">#&gt; [1] FALSE</span></a></code></pre></div>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" title="1"><span class="kw">as.numeric</span>(<span class="fl">2.4</span>)</a>
-<a class="sourceLine" id="cb41-2" title="2"><span class="co">#&gt; [1] 2.4</span></a></code></pre></div>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" title="1"><span class="kw">as.numeric</span>(2L)</a>
-<a class="sourceLine" id="cb42-2" title="2"><span class="co">#&gt; [1] 2</span></a></code></pre></div>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" title="1"><span class="co"># the imaginary part of complex numbers is discarded when converting to numeric</span></a>
-<a class="sourceLine" id="cb43-2" title="2"><span class="kw">as.numeric</span>(<span class="dv">3</span><span class="op">+</span>2i)</a>
-<a class="sourceLine" id="cb43-3" title="3"><span class="co">#&gt; Warning: imaginary parts discarded in coercion</span></a>
-<a class="sourceLine" id="cb43-4" title="4"><span class="co">#&gt; [1] 3</span></a></code></pre></div>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" title="1"><span class="co"># strings that do not represent numbers are converted to NA</span></a>
-<a class="sourceLine" id="cb44-2" title="2"><span class="kw">as.numeric</span>(<span class="st">&quot;A&quot;</span>)</a>
-<a class="sourceLine" id="cb44-3" title="3"><span class="co">#&gt; Warning: NAs introduced by coercion</span></a>
-<a class="sourceLine" id="cb44-4" title="4"><span class="co">#&gt; [1] NA</span></a></code></pre></div>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" title="1"><span class="co"># numbers represented as strings can be convertd to their numeric version</span></a>
-<a class="sourceLine" id="cb45-2" title="2"><span class="kw">as.numeric</span>(<span class="st">&quot;3&quot;</span>)</a>
-<a class="sourceLine" id="cb45-3" title="3"><span class="co">#&gt; [1] 3</span></a></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="n.html#cb61-1"></a><span class="kw">is.numeric</span>(<span class="fl">2.4</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="n.html#cb63-1"></a><span class="kw">is.numeric</span>(2L)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="n.html#cb65-1"></a><span class="co"># complex numbers are not numeric </span></span>
+<span id="cb65-2"><a href="n.html#cb65-2"></a><span class="kw">is.numeric</span>(2i)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="n.html#cb67-1"></a><span class="kw">is.numeric</span>(<span class="st">&quot;A&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="n.html#cb69-1"></a><span class="co"># numbers represented as strings are not numeric</span></span>
+<span id="cb69-2"><a href="n.html#cb69-2"></a><span class="kw">is.numeric</span>(<span class="st">&quot;3&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="n.html#cb71-1"></a><span class="kw">as.numeric</span>(<span class="fl">2.4</span>)</span></code></pre></div>
+<pre><code>## [1] 2.4</code></pre>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="n.html#cb73-1"></a><span class="kw">as.numeric</span>(2L)</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="n.html#cb75-1"></a><span class="co"># the imaginary part of complex numbers is discarded when converting to numeric</span></span>
+<span id="cb75-2"><a href="n.html#cb75-2"></a><span class="kw">as.numeric</span>(<span class="dv">3</span><span class="op">+</span>2i)</span></code></pre></div>
+<pre><code>## Warning: imaginary parts discarded in coercion</code></pre>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="n.html#cb78-1"></a><span class="co"># strings that do not represent numbers are converted to NA</span></span>
+<span id="cb78-2"><a href="n.html#cb78-2"></a><span class="kw">as.numeric</span>(<span class="st">&quot;A&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning: NAs introduced by coercion</code></pre>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="n.html#cb81-1"></a><span class="co"># numbers represented as strings can be convertd to their numeric version</span></span>
+<span id="cb81-2"><a href="n.html#cb81-2"></a><span class="kw">as.numeric</span>(<span class="st">&quot;3&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
 
 </div>
 </div>
