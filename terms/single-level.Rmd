@@ -1,0 +1,5 @@
+## single-level
+
+<dfn>Relating to datasets that lack [repeated measures](r.html#repeated-measures).</dfn>
+
+A single-level dataset has no more than one observation on each measurement variable.
