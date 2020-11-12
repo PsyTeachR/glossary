@@ -241,9 +241,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html#observation"><i class="fa fa-check"></i>observation</a></li>
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html#operator"><i class="fa fa-check"></i>operator</a></li>
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html#ordinal"><i class="fa fa-check"></i>ordinal</a></li>
-<li class="chapter" data-level="" data-path="o.html"><a href="o.html#p-value"><i class="fa fa-check"></i>p-value</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html"><i class="fa fa-check"></i>P</a><ul>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#p-value"><i class="fa fa-check"></i>p-value</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#package"><i class="fa fa-check"></i>package</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#parameter"><i class="fa fa-check"></i>parameter</a></li>
@@ -341,13 +341,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>whitespace</h2>
 <p><dfn>Spaces, tabs and line breaks</dfn></p>
 <p>R mostly ignores whitespace, so you can use it to help you organise your code.</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="w.html#cb106-1"></a><span class="co"># a and b are identical</span></span>
-<span id="cb106-2"><a href="w.html#cb106-2"></a>a &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl =</span> <span class="st">&quot;Control Condition&quot;</span>, <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span>
-<span id="cb106-3"><a href="w.html#cb106-3"></a></span>
-<span id="cb106-4"><a href="w.html#cb106-4"></a><span class="co"># but b is much easier to read</span></span>
-<span id="cb106-5"><a href="w.html#cb106-5"></a>b &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl  =</span> <span class="st">&quot;Control Condition&quot;</span>, </span>
-<span id="cb106-6"><a href="w.html#cb106-6"></a>          <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, </span>
-<span id="cb106-7"><a href="w.html#cb106-7"></a>          <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="w.html#cb109-1"></a><span class="co"># a and b are identical</span></span>
+<span id="cb109-2"><a href="w.html#cb109-2"></a>a &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl =</span> <span class="st">&quot;Control Condition&quot;</span>, <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span>
+<span id="cb109-3"><a href="w.html#cb109-3"></a></span>
+<span id="cb109-4"><a href="w.html#cb109-4"></a><span class="co"># but b is much easier to read</span></span>
+<span id="cb109-5"><a href="w.html#cb109-5"></a>b &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl  =</span> <span class="st">&quot;Control Condition&quot;</span>, </span>
+<span id="cb109-6"><a href="w.html#cb109-6"></a>          <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, </span>
+<span id="cb109-7"><a href="w.html#cb109-7"></a>          <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span></code></pre></div>
 
 </div>
 <div id="wide" class="section level2">
@@ -391,8 +391,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>working directory</h2>
 <p><dfn>The filepath where R is currently reading and writing files.</dfn></p>
 <p>If you are working in a <a href="p.html#project">project</a>, the working directory is usually the main project directory. So if you want to save a file into a folder called “data” in that project folder, you can use a <a href="r.html#relative-path">relative path</a>, which is automatically appended to the working directory, such as <code>readr::write_csv(my_data, "data/my_data.csv")</code>.</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="w.html#cb107-1"></a><span class="kw">getwd</span>() .html<span class="co"># get the current working directory</span></span>
-<span id="cb107-2"><a href="w.html#cb107-2"></a><span class="kw">setwd</span>(<span class="st">&quot;~/r/myfiles&quot;</span>) .html<span class="co"># change the working directory</span></span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="w.html#cb110-1"></a><span class="kw">getwd</span>() .html<span class="co"># get the current working directory</span></span>
+<span id="cb110-2"><a href="w.html#cb110-2"></a><span class="kw">setwd</span>(<span class="st">&quot;~/r/myfiles&quot;</span>) .html<span class="co"># change the working directory</span></span></code></pre></div>
 <div class="warning">
 <p>
 Never set or change your working directory in a script.

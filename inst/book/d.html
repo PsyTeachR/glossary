@@ -241,9 +241,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html#observation"><i class="fa fa-check"></i>observation</a></li>
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html#operator"><i class="fa fa-check"></i>operator</a></li>
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html#ordinal"><i class="fa fa-check"></i>ordinal</a></li>
-<li class="chapter" data-level="" data-path="o.html"><a href="o.html#p-value"><i class="fa fa-check"></i>p-value</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html"><i class="fa fa-check"></i>P</a><ul>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#p-value"><i class="fa fa-check"></i>p-value</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#package"><i class="fa fa-check"></i>package</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#parameter"><i class="fa fa-check"></i>parameter</a></li>
@@ -349,15 +349,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Integers and doubles are both <a href="n.html#numeric">numeric</a>.</p>
 <p>If you want to know what data type a variable is, use the function <code>typeof</code>.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="d.html#cb22-1"></a><span class="kw">typeof</span>(<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="d.html#cb23-1"></a><span class="kw">typeof</span>(<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;double&quot;</code></pre>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="d.html#cb24-1"></a><span class="kw">typeof</span>(<span class="st">&quot;10&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="d.html#cb25-1"></a><span class="kw">typeof</span>(<span class="st">&quot;10&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="d.html#cb26-1"></a><span class="kw">typeof</span>(10L)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="d.html#cb27-1"></a><span class="kw">typeof</span>(10L)</span></code></pre></div>
 <pre><code>## [1] &quot;integer&quot;</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="d.html#cb28-1"></a><span class="kw">typeof</span>(<span class="dv">10</span> <span class="op">==</span><span class="st"> </span><span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="d.html#cb29-1"></a><span class="kw">typeof</span>(<span class="dv">10</span> <span class="op">==</span><span class="st"> </span><span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;logical&quot;</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="d.html#cb30-1"></a><span class="kw">typeof</span>(10i)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="d.html#cb31-1"></a><span class="kw">typeof</span>(10i)</span></code></pre></div>
 <pre><code>## [1] &quot;complex&quot;</code></pre>
 
 </div>
@@ -375,11 +375,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="deviation-score" class="section level2">
 <h2>deviation score</h2>
 <p><dfn>A score minus the mean</dfn></p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="d.html#cb32-1"></a><span class="kw">tibble</span>(</span>
-<span id="cb32-2"><a href="d.html#cb32-2"></a>  <span class="dt">score =</span> <span class="dv">8</span><span class="op">:</span><span class="dv">12</span></span>
-<span id="cb32-3"><a href="d.html#cb32-3"></a>) <span class="op">%&gt;%</span></span>
-<span id="cb32-4"><a href="d.html#cb32-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(score),</span>
-<span id="cb32-5"><a href="d.html#cb32-5"></a>         <span class="dt">deviation_score =</span> score <span class="op">-</span><span class="st"> </span>mean)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="d.html#cb33-1"></a><span class="kw">tibble</span>(</span>
+<span id="cb33-2"><a href="d.html#cb33-2"></a>  <span class="dt">score =</span> <span class="dv">8</span><span class="op">:</span><span class="dv">12</span></span>
+<span id="cb33-3"><a href="d.html#cb33-3"></a>) <span class="op">%&gt;%</span></span>
+<span id="cb33-4"><a href="d.html#cb33-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(score),</span>
+<span id="cb33-5"><a href="d.html#cb33-5"></a>         <span class="dt">deviation_score =</span> score <span class="op">-</span><span class="st"> </span>mean)</span></code></pre></div>
 <pre><code>## # A tibble: 5 x 3
 ##   score  mean deviation_score
 ##   &lt;int&gt; &lt;dbl&gt;           &lt;dbl&gt;

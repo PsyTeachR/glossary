@@ -241,9 +241,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html#observation"><i class="fa fa-check"></i>observation</a></li>
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html#operator"><i class="fa fa-check"></i>operator</a></li>
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html#ordinal"><i class="fa fa-check"></i>ordinal</a></li>
-<li class="chapter" data-level="" data-path="o.html"><a href="o.html#p-value"><i class="fa fa-check"></i>p-value</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html"><i class="fa fa-check"></i>P</a><ul>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#p-value"><i class="fa fa-check"></i>p-value</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#package"><i class="fa fa-check"></i>package</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#parameter"><i class="fa fa-check"></i>parameter</a></li>
@@ -342,13 +342,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>A single number or piece of data.</dfn></p>
 <p>In a tidy dataset, each cell contains only one value.</p>
 <p>The <code>age</code> column contains 3 values: mean, minimum and maximum.</p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="v.html#cb99-1"></a><span class="kw">library</span>(dplyr)</span>
-<span id="cb99-2"><a href="v.html#cb99-2"></a><span class="kw">library</span>(tidyr)</span>
-<span id="cb99-3"><a href="v.html#cb99-3"></a></span>
-<span id="cb99-4"><a href="v.html#cb99-4"></a>untidy &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
-<span id="cb99-5"><a href="v.html#cb99-5"></a>  <span class="dt">group =</span> <span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>),</span>
-<span id="cb99-6"><a href="v.html#cb99-6"></a>  <span class="dt">age =</span> <span class="kw">c</span>(<span class="st">&quot;20.4 [18-25]&quot;</span>, <span class="st">&quot;19.9 [18-24]&quot;</span>)</span>
-<span id="cb99-7"><a href="v.html#cb99-7"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="v.html#cb102-1"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb102-2"><a href="v.html#cb102-2"></a><span class="kw">library</span>(tidyr)</span>
+<span id="cb102-3"><a href="v.html#cb102-3"></a></span>
+<span id="cb102-4"><a href="v.html#cb102-4"></a>untidy &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
+<span id="cb102-5"><a href="v.html#cb102-5"></a>  <span class="dt">group =</span> <span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>),</span>
+<span id="cb102-6"><a href="v.html#cb102-6"></a>  <span class="dt">age =</span> <span class="kw">c</span>(<span class="st">&quot;20.4 [18-25]&quot;</span>, <span class="st">&quot;19.9 [18-24]&quot;</span>)</span>
+<span id="cb102-7"><a href="v.html#cb102-7"></a>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -367,10 +367,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="v.html#cb100-1"></a>tidy &lt;-<span class="st"> </span>untidy <span class="op">%&gt;%</span></span>
-<span id="cb100-2"><a href="v.html#cb100-2"></a><span class="st">  </span><span class="kw">separate</span>(age, <span class="kw">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;min&quot;</span>, <span class="st">&quot;max&quot;</span>), </span>
-<span id="cb100-3"><a href="v.html#cb100-3"></a>           <span class="dt">sep =</span> <span class="st">&quot;( </span><span class="ch">\\</span><span class="st">[|-|</span><span class="ch">\\</span><span class="st">])&quot;</span>,</span>
-<span id="cb100-4"><a href="v.html#cb100-4"></a>           <span class="dt">extra =</span> <span class="st">&quot;drop&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="v.html#cb103-1"></a>tidy &lt;-<span class="st"> </span>untidy <span class="op">%&gt;%</span></span>
+<span id="cb103-2"><a href="v.html#cb103-2"></a><span class="st">  </span><span class="kw">separate</span>(age, <span class="kw">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;min&quot;</span>, <span class="st">&quot;max&quot;</span>), </span>
+<span id="cb103-3"><a href="v.html#cb103-3"></a>           <span class="dt">sep =</span> <span class="st">&quot;( </span><span class="ch">\\</span><span class="st">[|-|</span><span class="ch">\\</span><span class="st">])&quot;</span>,</span>
+<span id="cb103-4"><a href="v.html#cb103-4"></a>           <span class="dt">extra =</span> <span class="st">&quot;drop&quot;</span>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -412,18 +412,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>vector</h2>
 <p><dfn>A type of data structure that is basically a list of things like T/F values, numbers, or strings.</dfn></p>
 <p>It can get very complicated (see <a href="http://r4ds.had.co.nz/vectors.html">Ch 20 of R for Data Science</a> for a thorough explanation), but at first you just need to be able to understand that the following things are examples of vectors:</p>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="v.html#cb101-1"></a><span class="co"># use the c() function to make a vector of strings or numbers</span></span>
-<span id="cb101-2"><a href="v.html#cb101-2"></a>liit_ingredients &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;vodka&quot;</span>, <span class="st">&quot;gin&quot;</span>, <span class="st">&quot;rum&quot;</span>, <span class="st">&quot;tequila&quot;</span>, <span class="st">&quot;triple sec&quot;</span>, </span>
-<span id="cb101-3"><a href="v.html#cb101-3"></a>                      <span class="st">&quot;orange juice&quot;</span>, <span class="st">&quot;coke&quot;</span>, <span class="st">&quot;sour mix&quot;</span>)</span>
-<span id="cb101-4"><a href="v.html#cb101-4"></a></span>
-<span id="cb101-5"><a href="v.html#cb101-5"></a>fun_to_play_at &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">25</span>, <span class="dv">13</span>, <span class="dv">3</span>, <span class="dv">1</span>)</span>
-<span id="cb101-6"><a href="v.html#cb101-6"></a></span>
-<span id="cb101-7"><a href="v.html#cb101-7"></a><span class="co"># the colon between two integers gives you all the numbers from the first to the last integer</span></span>
-<span id="cb101-8"><a href="v.html#cb101-8"></a>likert &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">7</span></span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="v.html#cb104-1"></a><span class="co"># use the c() function to make a vector of strings or numbers</span></span>
+<span id="cb104-2"><a href="v.html#cb104-2"></a>liit_ingredients &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;vodka&quot;</span>, <span class="st">&quot;gin&quot;</span>, <span class="st">&quot;rum&quot;</span>, <span class="st">&quot;tequila&quot;</span>, <span class="st">&quot;triple sec&quot;</span>, </span>
+<span id="cb104-3"><a href="v.html#cb104-3"></a>                      <span class="st">&quot;orange juice&quot;</span>, <span class="st">&quot;coke&quot;</span>, <span class="st">&quot;sour mix&quot;</span>)</span>
+<span id="cb104-4"><a href="v.html#cb104-4"></a></span>
+<span id="cb104-5"><a href="v.html#cb104-5"></a>fun_to_play_at &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">25</span>, <span class="dv">13</span>, <span class="dv">3</span>, <span class="dv">1</span>)</span>
+<span id="cb104-6"><a href="v.html#cb104-6"></a></span>
+<span id="cb104-7"><a href="v.html#cb104-7"></a><span class="co"># the colon between two integers gives you all the numbers from the first to the last integer</span></span>
+<span id="cb104-8"><a href="v.html#cb104-8"></a>likert &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">7</span></span></code></pre></div>
 <p>The variable <code>letters</code> is a built-in vector with the latin letters in order. You can select part of a vector by putting the numeric location (or <a href="i.html#index">index</a>) of what <a href="e.html#element">element</a> you want inside of square brackets after the vector. You can even put a vector of numbers inside the square brackets to select several elements.</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="v.html#cb102-1"></a>letters[<span class="dv">26</span>]</span>
-<span id="cb102-2"><a href="v.html#cb102-2"></a>letters[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]</span>
-<span id="cb102-3"><a href="v.html#cb102-3"></a>letters[fun_to_play_at]</span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="v.html#cb105-1"></a>letters[<span class="dv">26</span>]</span>
+<span id="cb105-2"><a href="v.html#cb105-2"></a>letters[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]</span>
+<span id="cb105-3"><a href="v.html#cb105-3"></a>letters[fun_to_play_at]</span></code></pre></div>
 <pre><code>## [1] &quot;z&quot;
 ## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;
 ## [1] &quot;y&quot; &quot;m&quot; &quot;c&quot; &quot;a&quot;</code></pre>
@@ -432,13 +432,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="vectorized" class="section level2">
 <h2>vectorized</h2>
 <p><dfn>An <a href="o.html#operator">operator</a> or <a href="f.html#function">function</a> that acts on each <a href="e.html#element">element</a> in a <a href="v.html#vector">vector</a></dfn></p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="v.html#cb104-1"></a><span class="co"># Add 10 to each element in the vector a</span></span>
-<span id="cb104-2"><a href="v.html#cb104-2"></a>a &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">5</span></span>
-<span id="cb104-3"><a href="v.html#cb104-3"></a>a <span class="op">+</span><span class="st"> </span><span class="dv">10</span></span>
-<span id="cb104-4"><a href="v.html#cb104-4"></a></span>
-<span id="cb104-5"><a href="v.html#cb104-5"></a><span class="co"># paste &quot;!&quot; to the end of each element in the vector b</span></span>
-<span id="cb104-6"><a href="v.html#cb104-6"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Hey&quot;</span>, <span class="st">&quot;You&quot;</span>)</span>
-<span id="cb104-7"><a href="v.html#cb104-7"></a><span class="kw">paste0</span>(b, <span class="st">&quot;!&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="v.html#cb107-1"></a><span class="co"># Add 10 to each element in the vector a</span></span>
+<span id="cb107-2"><a href="v.html#cb107-2"></a>a &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">5</span></span>
+<span id="cb107-3"><a href="v.html#cb107-3"></a>a <span class="op">+</span><span class="st"> </span><span class="dv">10</span></span>
+<span id="cb107-4"><a href="v.html#cb107-4"></a></span>
+<span id="cb107-5"><a href="v.html#cb107-5"></a><span class="co"># paste &quot;!&quot; to the end of each element in the vector b</span></span>
+<span id="cb107-6"><a href="v.html#cb107-6"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Hey&quot;</span>, <span class="st">&quot;You&quot;</span>)</span>
+<span id="cb107-7"><a href="v.html#cb107-7"></a><span class="kw">paste0</span>(b, <span class="st">&quot;!&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] 11 12 13 14 15
 ## [1] &quot;Hey!&quot; &quot;You!&quot;</code></pre>
 
