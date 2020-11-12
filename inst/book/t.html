@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2020-09-23" />
+<meta name="date" content="2020-11-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,12 +50,13 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -64,14 +65,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -80,9 +83,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -132,30 +135,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Glossary</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a></li>
-<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i>glossary</a><ul>
-<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#installation"><i class="fa fa-check"></i>Installation</a></li>
-<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html#access-the-book-offline"><i class="fa fa-check"></i>Access the book offline</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#offline-access"><i class="fa fa-check"></i>Offline Access</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="symbols.html"><a href="symbols.html"><i class="fa fa-check"></i>Symbols</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html"><i class="fa fa-check"></i>A</a><ul>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#absolute-path"><i class="fa fa-check"></i>absolute path</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha"><i class="fa fa-check"></i>alpha</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#assignment-operator"><i class="fa fa-check"></i>assignment operator</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html"><i class="fa fa-check"></i>B</a><ul>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#base-r"><i class="fa fa-check"></i>base R</a></li>
+<li class="chapter" data-level="" data-path="b.html"><a href="b.html#beta"><i class="fa fa-check"></i>beta</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binding-joins"><i class="fa fa-check"></i>binding joins</a></li>
+<li class="chapter" data-level="" data-path="b.html"><a href="b.html#binomial-distribution"><i class="fa fa-check"></i>binomial distribution</a></li>
+<li class="chapter" data-level="" data-path="b.html"><a href="b.html#bivariate-normal"><i class="fa fa-check"></i>bivariate normal</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html"><i class="fa fa-check"></i>C</a><ul>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#categorical"><i class="fa fa-check"></i>categorical</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#character"><i class="fa fa-check"></i>character</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#chunk"><i class="fa fa-check"></i>chunk</a></li>
+<li class="chapter" data-level="" data-path="c.html"><a href="c.html#ci"><i class="fa fa-check"></i>CI</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#comment"><i class="fa fa-check"></i>comment</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#computational-reproducibility"><i class="fa fa-check"></i>computational reproducibility</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#concatenate"><i class="fa fa-check"></i>concatenate</a></li>
-<li class="chapter" data-level="" data-path="c.html"><a href="c.html#confidence-intervals-ci"><i class="fa fa-check"></i>confidence intervals (CI)</a></li>
+<li class="chapter" data-level="" data-path="c.html"><a href="c.html#confidence-interval"><i class="fa fa-check"></i>confidence interval</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#console"><i class="fa fa-check"></i>console</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#continuous"><i class="fa fa-check"></i>continuous</a></li>
+<li class="chapter" data-level="" data-path="c.html"><a href="c.html#correlation"><i class="fa fa-check"></i>correlation</a></li>
+<li class="chapter" data-level="" data-path="c.html"><a href="c.html#covariance-matrix"><i class="fa fa-check"></i>covariance matrix</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#cran"><i class="fa fa-check"></i>CRAN</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#csv"><i class="fa fa-check"></i>CSV</a></li>
 </ul></li>
@@ -168,6 +177,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a><ul>
+<li class="chapter" data-level="" data-path="e.html"><a href="e.html#effect-size"><i class="fa fa-check"></i>effect size</a></li>
+<li class="chapter" data-level="" data-path="e.html"><a href="e.html#effect"><i class="fa fa-check"></i>effect</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#element"><i class="fa fa-check"></i>element</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#escape"><i class="fa fa-check"></i>escape</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#extension"><i class="fa fa-check"></i>extension</a></li>
@@ -175,6 +186,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html"><i class="fa fa-check"></i>F</a><ul>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#factor"><i class="fa fa-check"></i>factor</a></li>
+<li class="chapter" data-level="" data-path="f.html"><a href="f.html#false-negative"><i class="fa fa-check"></i>false negative</a></li>
+<li class="chapter" data-level="" data-path="f.html"><a href="f.html#false-positive"><i class="fa fa-check"></i>false positive</a></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#filtering-joins"><i class="fa fa-check"></i>filtering joins</a></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#fitted-value"><i class="fa fa-check"></i>fitted value</a></li>
 <li class="chapter" data-level="" data-path="f.html"><a href="f.html#fixed-effect"><i class="fa fa-check"></i>fixed effect</a></li>
@@ -219,6 +232,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="m.html"><a href="m.html#mutating-joins"><i class="fa fa-check"></i>mutating joins</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html"><i class="fa fa-check"></i>N</a><ul>
+<li class="chapter" data-level="" data-path="n.html"><a href="n.html#nhst"><i class="fa fa-check"></i>NHST</a></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html#nominal"><i class="fa fa-check"></i>nominal</a></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html#normal-distribution"><i class="fa fa-check"></i>normal distribution</a></li>
 <li class="chapter" data-level="" data-path="n.html"><a href="n.html#numeric"><i class="fa fa-check"></i>numeric</a></li>
@@ -230,9 +244,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="o.html"><a href="o.html#ordinal"><i class="fa fa-check"></i>ordinal</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html"><i class="fa fa-check"></i>P</a><ul>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#p-value"><i class="fa fa-check"></i>p-value</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#package"><i class="fa fa-check"></i>package</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#parameter"><i class="fa fa-check"></i>parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#poisson-distribution"><i class="fa fa-check"></i>Poisson distribution</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population-parameter"><i class="fa fa-check"></i>population parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#power"><i class="fa fa-check"></i>power</a></li>
@@ -261,8 +278,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sample"><i class="fa fa-check"></i>sample</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#script"><i class="fa fa-check"></i>script</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#server"><i class="fa fa-check"></i>server</a></li>
-<li class="chapter" data-level="" data-path="s.html"><a href="s.html#set-operations"><i class="fa fa-check"></i>Set operations</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#sesoi"><i class="fa fa-check"></i>SESOI</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#set-operations"><i class="fa fa-check"></i>set operations</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#shinydashboard"><i class="fa fa-check"></i>shinydashboard</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#significant"><i class="fa fa-check"></i>significant</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#simulation"><i class="fa fa-check"></i>simulation</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#slope"><i class="fa fa-check"></i>slope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#standard-deviation"><i class="fa fa-check"></i>standard deviation</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#string"><i class="fa fa-check"></i>string</a></li>
@@ -273,10 +293,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#tidy-data"><i class="fa fa-check"></i>tidy data</a></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#tidyverse"><i class="fa fa-check"></i>tidyverse</a></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#transparency"><i class="fa fa-check"></i>transparency</a></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#true-negative"><i class="fa fa-check"></i>true negative</a></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#true-positive"><i class="fa fa-check"></i>true positive</a></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#two-tailed"><i class="fa fa-check"></i>two-tailed</a></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#type-i-error"><i class="fa fa-check"></i>Type I Error</a></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#type-ii-error"><i class="fa fa-check"></i>Type II Error</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="u.html"><a href="u.html"><i class="fa fa-check"></i>U</a><ul>
 <li class="chapter" data-level="" data-path="u.html"><a href="u.html#ui"><i class="fa fa-check"></i>UI</a></li>
+<li class="chapter" data-level="" data-path="u.html"><a href="u.html#uniform-distribution"><i class="fa fa-check"></i>uniform distribution</a></li>
 <li class="chapter" data-level="" data-path="u.html"><a href="u.html#univariate"><i class="fa fa-check"></i>univariate</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="v.html"><a href="v.html"><i class="fa fa-check"></i>V</a><ul>
@@ -332,57 +357,92 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>tibble</h2>
 <p><dfn>A <a href="c.html#container">container</a> for <a href="t.html#tabular-data">tabular data</a> with some different properties to a <a href="d.html#data-frame">data frame</a></dfn></p>
 <p>Tibbles are almost exactly like the <a href="b.html#base-r">base R</a> <code>data.frame</code> container type, but has some special printing functions, does not coerce character columns to factors, and does not typically use row names.</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb55-1" title="1"><span class="co"># display the mtcars data frame</span></a>
-<a class="sourceLine" id="cb55-2" title="2">mtcars</a>
-<a class="sourceLine" id="cb55-3" title="3"><span class="co">#&gt;                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb</span></a>
-<a class="sourceLine" id="cb55-4" title="4"><span class="co">#&gt; Mazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4</span></a>
-<a class="sourceLine" id="cb55-5" title="5"><span class="co">#&gt; Mazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4</span></a>
-<a class="sourceLine" id="cb55-6" title="6"><span class="co">#&gt; Datsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1</span></a>
-<a class="sourceLine" id="cb55-7" title="7"><span class="co">#&gt; Hornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1</span></a>
-<a class="sourceLine" id="cb55-8" title="8"><span class="co">#&gt; Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2</span></a>
-<a class="sourceLine" id="cb55-9" title="9"><span class="co">#&gt; Valiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1</span></a>
-<a class="sourceLine" id="cb55-10" title="10"><span class="co">#&gt; Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4</span></a>
-<a class="sourceLine" id="cb55-11" title="11"><span class="co">#&gt; Merc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2</span></a>
-<a class="sourceLine" id="cb55-12" title="12"><span class="co">#&gt; Merc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2</span></a>
-<a class="sourceLine" id="cb55-13" title="13"><span class="co">#&gt; Merc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4</span></a>
-<a class="sourceLine" id="cb55-14" title="14"><span class="co">#&gt; Merc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4</span></a>
-<a class="sourceLine" id="cb55-15" title="15"><span class="co">#&gt; Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3</span></a>
-<a class="sourceLine" id="cb55-16" title="16"><span class="co">#&gt; Merc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3</span></a>
-<a class="sourceLine" id="cb55-17" title="17"><span class="co">#&gt; Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3</span></a>
-<a class="sourceLine" id="cb55-18" title="18"><span class="co">#&gt; Cadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4</span></a>
-<a class="sourceLine" id="cb55-19" title="19"><span class="co">#&gt; Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4</span></a>
-<a class="sourceLine" id="cb55-20" title="20"><span class="co">#&gt; Chrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4</span></a>
-<a class="sourceLine" id="cb55-21" title="21"><span class="co">#&gt; Fiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1</span></a>
-<a class="sourceLine" id="cb55-22" title="22"><span class="co">#&gt; Honda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2</span></a>
-<a class="sourceLine" id="cb55-23" title="23"><span class="co">#&gt; Toyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1</span></a>
-<a class="sourceLine" id="cb55-24" title="24"><span class="co">#&gt; Toyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1</span></a>
-<a class="sourceLine" id="cb55-25" title="25"><span class="co">#&gt; Dodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2</span></a>
-<a class="sourceLine" id="cb55-26" title="26"><span class="co">#&gt; AMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2</span></a>
-<a class="sourceLine" id="cb55-27" title="27"><span class="co">#&gt; Camaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4</span></a>
-<a class="sourceLine" id="cb55-28" title="28"><span class="co">#&gt; Pontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2</span></a>
-<a class="sourceLine" id="cb55-29" title="29"><span class="co">#&gt; Fiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1</span></a>
-<a class="sourceLine" id="cb55-30" title="30"><span class="co">#&gt; Porsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2</span></a>
-<a class="sourceLine" id="cb55-31" title="31"><span class="co">#&gt; Lotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2</span></a>
-<a class="sourceLine" id="cb55-32" title="32"><span class="co">#&gt; Ford Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4</span></a>
-<a class="sourceLine" id="cb55-33" title="33"><span class="co">#&gt; Ferrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6</span></a>
-<a class="sourceLine" id="cb55-34" title="34"><span class="co">#&gt; Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8</span></a>
-<a class="sourceLine" id="cb55-35" title="35"><span class="co">#&gt; Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2</span></a></code></pre></div>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" title="1"><span class="co"># convert the mtcars data frame to a tibble</span></a>
-<a class="sourceLine" id="cb56-2" title="2">tibble<span class="op">::</span><span class="kw">as_tibble</span>(mtcars, <span class="dt">rownames =</span> <span class="st">&quot;name&quot;</span>)</a>
-<a class="sourceLine" id="cb56-3" title="3"><span class="co">#&gt; # A tibble: 32 x 12</span></a>
-<a class="sourceLine" id="cb56-4" title="4"><span class="co">#&gt;    name          mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb</span></a>
-<a class="sourceLine" id="cb56-5" title="5"><span class="co">#&gt;    &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb56-6" title="6"><span class="co">#&gt;  1 Mazda RX4    21       6  160    110  3.9   2.62  16.5     0     1     4     4</span></a>
-<a class="sourceLine" id="cb56-7" title="7"><span class="co">#&gt;  2 Mazda RX4 …  21       6  160    110  3.9   2.88  17.0     0     1     4     4</span></a>
-<a class="sourceLine" id="cb56-8" title="8"><span class="co">#&gt;  3 Datsun 710   22.8     4  108     93  3.85  2.32  18.6     1     1     4     1</span></a>
-<a class="sourceLine" id="cb56-9" title="9"><span class="co">#&gt;  4 Hornet 4 D…  21.4     6  258    110  3.08  3.22  19.4     1     0     3     1</span></a>
-<a class="sourceLine" id="cb56-10" title="10"><span class="co">#&gt;  5 Hornet Spo…  18.7     8  360    175  3.15  3.44  17.0     0     0     3     2</span></a>
-<a class="sourceLine" id="cb56-11" title="11"><span class="co">#&gt;  6 Valiant      18.1     6  225    105  2.76  3.46  20.2     1     0     3     1</span></a>
-<a class="sourceLine" id="cb56-12" title="12"><span class="co">#&gt;  7 Duster 360   14.3     8  360    245  3.21  3.57  15.8     0     0     3     4</span></a>
-<a class="sourceLine" id="cb56-13" title="13"><span class="co">#&gt;  8 Merc 240D    24.4     4  147.    62  3.69  3.19  20       1     0     4     2</span></a>
-<a class="sourceLine" id="cb56-14" title="14"><span class="co">#&gt;  9 Merc 230     22.8     4  141.    95  3.92  3.15  22.9     1     0     4     2</span></a>
-<a class="sourceLine" id="cb56-15" title="15"><span class="co">#&gt; 10 Merc 280     19.2     6  168.   123  3.92  3.44  18.3     1     0     4     4</span></a>
-<a class="sourceLine" id="cb56-16" title="16"><span class="co">#&gt; # … with 22 more rows</span></a></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="t.html#cb97-1"></a><span class="co"># display the mtcars data frame</span></span>
+<span id="cb97-2"><a href="t.html#cb97-2"></a>mtcars</span></code></pre></div>
+<pre><code>##                      mpg cyl  disp  hp drat
+## Mazda RX4           21.0   6 160.0 110 3.90
+## Mazda RX4 Wag       21.0   6 160.0 110 3.90
+## Datsun 710          22.8   4 108.0  93 3.85
+## Hornet 4 Drive      21.4   6 258.0 110 3.08
+## Hornet Sportabout   18.7   8 360.0 175 3.15
+## Valiant             18.1   6 225.0 105 2.76
+## Duster 360          14.3   8 360.0 245 3.21
+## Merc 240D           24.4   4 146.7  62 3.69
+## Merc 230            22.8   4 140.8  95 3.92
+## Merc 280            19.2   6 167.6 123 3.92
+## Merc 280C           17.8   6 167.6 123 3.92
+## Merc 450SE          16.4   8 275.8 180 3.07
+## Merc 450SL          17.3   8 275.8 180 3.07
+## Merc 450SLC         15.2   8 275.8 180 3.07
+## Cadillac Fleetwood  10.4   8 472.0 205 2.93
+## Lincoln Continental 10.4   8 460.0 215 3.00
+## Chrysler Imperial   14.7   8 440.0 230 3.23
+## Fiat 128            32.4   4  78.7  66 4.08
+## Honda Civic         30.4   4  75.7  52 4.93
+## Toyota Corolla      33.9   4  71.1  65 4.22
+## Toyota Corona       21.5   4 120.1  97 3.70
+## Dodge Challenger    15.5   8 318.0 150 2.76
+## AMC Javelin         15.2   8 304.0 150 3.15
+## Camaro Z28          13.3   8 350.0 245 3.73
+## Pontiac Firebird    19.2   8 400.0 175 3.08
+## Fiat X1-9           27.3   4  79.0  66 4.08
+## Porsche 914-2       26.0   4 120.3  91 4.43
+## Lotus Europa        30.4   4  95.1 113 3.77
+## Ford Pantera L      15.8   8 351.0 264 4.22
+## Ferrari Dino        19.7   6 145.0 175 3.62
+## Maserati Bora       15.0   8 301.0 335 3.54
+## Volvo 142E          21.4   4 121.0 109 4.11
+##                        wt  qsec vs am gear carb
+## Mazda RX4           2.620 16.46  0  1    4    4
+## Mazda RX4 Wag       2.875 17.02  0  1    4    4
+## Datsun 710          2.320 18.61  1  1    4    1
+## Hornet 4 Drive      3.215 19.44  1  0    3    1
+## Hornet Sportabout   3.440 17.02  0  0    3    2
+## Valiant             3.460 20.22  1  0    3    1
+## Duster 360          3.570 15.84  0  0    3    4
+## Merc 240D           3.190 20.00  1  0    4    2
+## Merc 230            3.150 22.90  1  0    4    2
+## Merc 280            3.440 18.30  1  0    4    4
+## Merc 280C           3.440 18.90  1  0    4    4
+## Merc 450SE          4.070 17.40  0  0    3    3
+## Merc 450SL          3.730 17.60  0  0    3    3
+## Merc 450SLC         3.780 18.00  0  0    3    3
+## Cadillac Fleetwood  5.250 17.98  0  0    3    4
+## Lincoln Continental 5.424 17.82  0  0    3    4
+## Chrysler Imperial   5.345 17.42  0  0    3    4
+## Fiat 128            2.200 19.47  1  1    4    1
+## Honda Civic         1.615 18.52  1  1    4    2
+## Toyota Corolla      1.835 19.90  1  1    4    1
+## Toyota Corona       2.465 20.01  1  0    3    1
+## Dodge Challenger    3.520 16.87  0  0    3    2
+## AMC Javelin         3.435 17.30  0  0    3    2
+## Camaro Z28          3.840 15.41  0  0    3    4
+## Pontiac Firebird    3.845 17.05  0  0    3    2
+## Fiat X1-9           1.935 18.90  1  1    4    1
+## Porsche 914-2       2.140 16.70  0  1    5    2
+## Lotus Europa        1.513 16.90  1  1    5    2
+## Ford Pantera L      3.170 14.50  0  1    5    4
+## Ferrari Dino        2.770 15.50  0  1    5    6
+## Maserati Bora       3.570 14.60  0  1    5    8
+## Volvo 142E          2.780 18.60  1  1    4    2</code></pre>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="t.html#cb99-1"></a><span class="co"># convert the mtcars data frame to a tibble</span></span>
+<span id="cb99-2"><a href="t.html#cb99-2"></a>tibble<span class="op">::</span><span class="kw">as_tibble</span>(mtcars, <span class="dt">rownames =</span> <span class="st">&quot;name&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 32 x 12
+##    name         mpg   cyl  disp    hp  drat    wt
+##    &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1 Mazda RX4   21       6  160    110  3.9   2.62
+##  2 Mazda RX4…  21       6  160    110  3.9   2.88
+##  3 Datsun 710  22.8     4  108     93  3.85  2.32
+##  4 Hornet 4 …  21.4     6  258    110  3.08  3.22
+##  5 Hornet Sp…  18.7     8  360    175  3.15  3.44
+##  6 Valiant     18.1     6  225    105  2.76  3.46
+##  7 Duster 360  14.3     8  360    245  3.21  3.57
+##  8 Merc 240D   24.4     4  147.    62  3.69  3.19
+##  9 Merc 230    22.8     4  141.    95  3.92  3.15
+## 10 Merc 280    19.2     6  168.   123  3.92  3.44
+## # … with 22 more rows, and 5 more variables:
+## #   qsec &lt;dbl&gt;, vs &lt;dbl&gt;, am &lt;dbl&gt;, gear &lt;dbl&gt;,
+## #   carb &lt;dbl&gt;</code></pre>
 
 </div>
 <div id="tidy-data" class="section level2">
@@ -407,9 +467,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>The degree to which all the steps and decisions in a study have been documented and made available for verification.</dfn></p>
 
 </div>
+<div id="true-negative" class="section level2">
+<h2>true negative</h2>
+<p><dfn>When a test concludes there is no effect when there is really is no effect</dfn></p>
+
+</div>
+<div id="true-positive" class="section level2">
+<h2>true positive</h2>
+<p><dfn>When a test concludes there is an effect when there is really is an effect</dfn></p>
+
+</div>
 <div id="two-tailed" class="section level2">
 <h2>two-tailed</h2>
 <p><dfn>A statistical test for which the critical region consists of all values of the test statistic greater than a given value plus all values less than another given value.</dfn></p>
+
+</div>
+<div id="type-i-error" class="section level2">
+<h2>Type I Error</h2>
+<p><dfn>A false positive; When a test concludes there is an effect when there is really is no effect</dfn></p>
+
+</div>
+<div id="type-ii-error" class="section level2">
+<h2>Type II Error</h2>
+<p><dfn>A false negative; When a test concludes there is no effect when there is really is an effect</dfn></p>
 
 </div>
 </div>
