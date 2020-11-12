@@ -2,4 +2,17 @@
 
 <dfn>The distribution of data where each observation can have one of two outcomes, like success/failure, yes/no or head/tails. </dfn>
 
+```{r binomial-dist}
+# flip 10 coins 10000 times
+x <- rbinom(10000, 10, prob = 0.5)
+```
 
+
+```{r binom-plot, echo = FALSE}
+ggplot() + geom_histogram(
+  aes(x), binwidth = 1,
+  colour = "black", fill = "white") +
+  scale_x_continuous(breaks = 0:10) +
+  labs(x = "Number of heads in 10 coin flips",
+       title = "Binomial Distribution")
+```

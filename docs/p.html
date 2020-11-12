@@ -355,7 +355,7 @@ You can alternatively type the package name and two colons before any function f
 <div class="figure" style="text-align: center"><span id="fig:img-panes"></span>
 <img src="images/defs/panes.png" alt="Pane layout" width="100%" />
 <p class="caption">
-Figure 13: Pane layout
+Figure 14: Pane layout
 </p>
 </div>
 
@@ -369,17 +369,25 @@ Figure 13: Pane layout
 <h2>path</h2>
 <p><dfn>A string representing the location of a file or directory.</dfn></p>
 <p>A file path can be <a href="r.html#relative-path">relative</a> to the <a href="w.html#working-directory">working directory</a> or <a href="a.html#absolute-path">absolute</a>.</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="p.html#cb85-1"></a><span class="co"># list all files in the images directory, </span></span>
-<span id="cb85-2"><a href="p.html#cb85-2"></a><span class="co"># use relative path</span></span>
-<span id="cb85-3"><a href="p.html#cb85-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;images/&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="p.html#cb86-1"></a><span class="co"># list all files on the Desktop, </span></span>
-<span id="cb86-2"><a href="p.html#cb86-2"></a><span class="co"># use absolute path</span></span>
-<span id="cb86-3"><a href="p.html#cb86-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;/Users/myaccount/Desktop/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="p.html#cb86-1"></a><span class="co"># list all files in the images directory, </span></span>
+<span id="cb86-2"><a href="p.html#cb86-2"></a><span class="co"># use relative path</span></span>
+<span id="cb86-3"><a href="p.html#cb86-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;images/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="p.html#cb87-1"></a><span class="co"># list all files on the Desktop, </span></span>
+<span id="cb87-2"><a href="p.html#cb87-2"></a><span class="co"># use absolute path</span></span>
+<span id="cb87-3"><a href="p.html#cb87-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;/Users/myaccount/Desktop/&quot;</span>)</span></code></pre></div>
 
 </div>
 <div id="poisson-distribution" class="section level2">
 <h2>Poisson distribution</h2>
 <p><dfn>A distribution that models independent events happening over a unit of time</dfn></p>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="p.html#cb88-1"></a>lambda &lt;-<span class="st"> </span><span class="dv">3</span> <span class="co"># mean number of events</span></span>
+<span id="cb88-2"><a href="p.html#cb88-2"></a>x &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class="dv">10000</span>, lambda)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:piosson-plot"></span>
+<img src="_main_files/figure-html/piosson-plot-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
+<p class="caption">
+Figure 15: <strong>CAPTION THIS FIGURE!!</strong>
+</p>
+</div>
 
 </div>
 <div id="population-parameter" class="section level2">
@@ -432,7 +440,7 @@ Figure 13: Pane layout
 <div class="figure" style="text-align: center"><span id="fig:new-project"></span>
 <img src="images/new_project.png" alt="Start a new project" width="100%" />
 <p class="caption">
-Figure 14: Start a new project
+Figure 16: Start a new project
 </p>
 </div>
 

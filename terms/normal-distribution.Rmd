@@ -8,8 +8,12 @@ A normal distribution is characterised by its [mean](m.html#mean) and [standard 
 # sample 1 million numbers from a normal distribution with 
 # a mean of 0 and a standard deviation of 1
 x <- rnorm(1000000, mean = 0, sd = 1)
+```
 
-hist(x, breaks = 100)
+```{r normal-plot, echo = FALSE}
+ggplot() + geom_density(aes(x)) +
+  labs(x = "Values from the normal distribution",
+       title = "Normal Distribution")
 ```
 
 
