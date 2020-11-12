@@ -31,5 +31,3 @@ dplyr::setdiff(a, b)
 If you've forgotten to load dplyr or the tidyverse, [base R](b#base-r) also has these functions. You will either get an error message or unexpected output if you try to use them with data tables.
 </div>
 
-```
-
