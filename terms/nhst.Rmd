@@ -1,5 +1,5 @@
 ## NHST
 
-<dfn>Null Hypothesis Signficant Testing</dfn>
+<dfn>Null Hypothesis Signficance Testing</dfn>
 
 
