@@ -1,0 +1,5 @@
+## true negative
+
+<dfn>When a test concludes there is no effect when there is really is no effect</dfn>
+
+

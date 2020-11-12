@@ -1,0 +1,5 @@
+## p-value
+
+<dfn>The probability of seeing an effect at least as extreme as what you have, if the real effect was the value you are testing against (e.g., a null effect)</dfn>
+
+

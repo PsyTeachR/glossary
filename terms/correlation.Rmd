@@ -1,0 +1,5 @@
+## correlation
+
+<dfn>The relationship two vectors have to each other.</dfn>
+
+

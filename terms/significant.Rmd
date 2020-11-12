@@ -1,0 +1,5 @@
+## significant
+
+<dfn>The conclusion when the p-value is less than the critical alpha. </dfn>
+
+

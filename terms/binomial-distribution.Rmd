@@ -1,0 +1,5 @@
+## binomial distribution
+
+<dfn>The distribution of data where each observation can have one of two outcomes, like success/failure, yes/no or head/tails. </dfn>
+
+

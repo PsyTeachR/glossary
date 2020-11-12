@@ -1,0 +1,5 @@
+## Poisson distribution
+
+<dfn>A distribution that models independent events happening over a unit of time</dfn>
+
+

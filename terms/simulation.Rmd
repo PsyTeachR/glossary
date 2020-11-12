@@ -1,0 +1,5 @@
+## simulation
+
+<dfn>Generating data from summary parameters</dfn>
+
+

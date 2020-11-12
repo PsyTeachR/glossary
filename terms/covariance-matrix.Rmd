@@ -1,0 +1,5 @@
+## covariance matrix
+
+<dfn>Parameters showing how a set of vectors vary and are correlated.</dfn>
+
+

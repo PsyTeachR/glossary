@@ -1,0 +1,5 @@
+## alpha
+
+<dfn>The cutoff value for making a decision to reject the null hypothesis</dfn>
+
+

@@ -1,0 +1,5 @@
+## beta
+
+<dfn>The false negative rate we accept for a statistical test.</dfn>
+
+

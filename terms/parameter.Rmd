@@ -1,0 +1,5 @@
+## parameter
+
+<dfn>A value that describes a distribution, such as the mean or SD</dfn>
+
+

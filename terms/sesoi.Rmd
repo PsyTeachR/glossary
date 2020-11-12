@@ -1,0 +1,8 @@
+## SESOI
+
+<dfn>Smallest Effect Size of Interest: the smallest effect that is theoretically or practically meaningful</dfn>
+
+
+See [Equivalence Testing for Psychological Research: A Tutorial ](https://doi.org/10.1177/2515245918770963) for a tutorial on methods for choosing an SESOI.
+
+Lakens, D. (2017a). Equivalence tests: A practical primer for t tests, correlations, and meta-analyses. Social Psychological & Personality Science, 8, 355–362. [doi:10.1177/1948550617697177](https://doi.org/10.1177/1948550617697177)

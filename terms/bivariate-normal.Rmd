@@ -1,0 +1,5 @@
+## bivariate normal
+
+<dfn>Two normally distributed vectors that have a specified correlation with each other.</dfn>
+
+

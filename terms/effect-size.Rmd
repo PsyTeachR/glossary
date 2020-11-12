@@ -1,0 +1,5 @@
+## effect size
+
+<dfn>The difference between the effect in your data and the null effect (usually a chance value)</dfn>
+
+
