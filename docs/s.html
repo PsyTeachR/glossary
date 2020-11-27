@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2020-11-13" />
+<meta name="date" content="2020-11-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -157,6 +157,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#character"><i class="fa fa-check"></i>character</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#chunk"><i class="fa fa-check"></i>chunk</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#ci"><i class="fa fa-check"></i>CI</a></li>
+<li class="chapter" data-level="" data-path="c.html"><a href="c.html#coding-scheme"><i class="fa fa-check"></i>coding scheme</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#comment"><i class="fa fa-check"></i>comment</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#computational-reproducibility"><i class="fa fa-check"></i>computational reproducibility</a></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html#concatenate"><i class="fa fa-check"></i>concatenate</a></li>
@@ -177,6 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a><ul>
+<li class="chapter" data-level="" data-path="e.html"><a href="e.html#effect-code"><i class="fa fa-check"></i>effect code</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#effect-size"><i class="fa fa-check"></i>effect size</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#effect"><i class="fa fa-check"></i>effect</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#element"><i class="fa fa-check"></i>element</a></li>
@@ -289,6 +291,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#slope"><i class="fa fa-check"></i>slope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#standard-deviation"><i class="fa fa-check"></i>standard deviation</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#string"><i class="fa fa-check"></i>string</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#sum-code"><i class="fa fa-check"></i>sum code</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html"><i class="fa fa-check"></i>T</a><ul>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#tabular-data"><i class="fa fa-check"></i>tabular data</a></li>
@@ -296,6 +299,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#tidy-data"><i class="fa fa-check"></i>tidy data</a></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#tidyverse"><i class="fa fa-check"></i>tidyverse</a></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#transparency"><i class="fa fa-check"></i>transparency</a></li>
+<li class="chapter" data-level="" data-path="t.html"><a href="t.html#treatment-code"><i class="fa fa-check"></i>treatment code</a></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#true-negative"><i class="fa fa-check"></i>true negative</a></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#true-positive"><i class="fa fa-check"></i>true positive</a></li>
 <li class="chapter" data-level="" data-path="t.html"><a href="t.html#two-tailed"><i class="fa fa-check"></i>two-tailed</a></li>
@@ -445,8 +449,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>A statistic that measures how spread out data are relative to the mean.</dfn></p>
 <p>If the data points are further from the mean, there is a higher standard deviation. Standard deviation is calculated as the square root of the <a href="v.html#variance">variance</a>.</p>
 <p>Normal distributions with means of 0 and SDs of 1 (red), 2 (blue) and 3 (purple).</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-158"></span>
-<img src="_main_files/figure-html/unnamed-chunk-158-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-160"></span>
+<img src="_main_files/figure-html/unnamed-chunk-160-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
 <p class="caption">
 Figure 17: <strong>CAPTION THIS FIGURE!!</strong>
 </p>
@@ -458,6 +462,11 @@ Figure 17: <strong>CAPTION THIS FIGURE!!</strong>
 <p><dfn>A piece of text inside of quotes.</dfn></p>
 <p>For example, <code>"I sense the rains down in Africa"</code> is a string. Numbers inside of quotes can be a string; <code>"19"</code> is a string, while <code>19</code> is not.</p>
 <p>Strings are a <a href="c.html#character">character</a> <a href="d.html#data-type">data type</a>.</p>
+
+</div>
+<div id="sum-code" class="section level2">
+<h2>sum code</h2>
+<p><dfn>A <a href="c.html#coding-scheme">coding scheme</a> for categorical variables that compares the mean for each level to the overall mean.</dfn></p>
 
 </div>
 </div>

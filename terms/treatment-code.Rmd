@@ -1,0 +1,7 @@
+## treatment code
+
+<dfn>A [coding scheme](c.html#coding-scheme) for categorical variables that creates (n_levels -1) dichotomous variables where each level of the categorical variable is contrasted to a reference level.</dfn>
+
+Also referred to as **dummy-coding**.
+
+

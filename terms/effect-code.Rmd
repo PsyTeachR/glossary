@@ -1,0 +1,6 @@
+## effect code
+
+<dfn>A [coding scheme](c.html#coding-scheme) for categorical variables that contrasts each group mean with the mean of all the group means.</dfn>
+
+Also referred to as **contrast coding**.
+

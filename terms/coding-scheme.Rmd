@@ -1,0 +1,11 @@
+## coding scheme
+
+<dfn>How to represent [categorical](c.html#categorical) variables with numbers for use in models.</dfn>
+
+* [effect code](e.html#effect-code)
+* [sum code](e.html#sum-code)
+* [treatment code](e.html#treatment-code) (dummy code)
+
+[Example of different coding schemes for the same data](https://debruine.github.io/posts/coding-schemes/)
+
+[Contrast coding in R](https://marissabarlaz.github.io/portfolio/contrastcoding/) by Marissa Barlaz

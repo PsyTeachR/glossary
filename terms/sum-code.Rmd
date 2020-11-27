@@ -1,0 +1,5 @@
+## sum code
+
+<dfn>A [coding scheme](c.html#coding-scheme) for categorical variables that compares the mean for each level to the overall mean.</dfn>
+
+
