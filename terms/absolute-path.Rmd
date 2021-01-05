@@ -2,15 +2,14 @@
 
 <dfn>A file path that starts with / and is not appended to the working directory</dfn>
 
+For example, if your [working directory](w.html#working-directory) is `/Users/me/study/` and you want to refer to a file in the directory `data` called `faces.csv`, the absolute path is `/Users/me/study/data/faces.csv`. 
+
+However, you should normally use [relative patha](r.html#relative-path) in scripts, not absolute paths, which can change when you move a project directory to a new computer or even a new place on your computer.
+
 The package R.utils has a function `getAbsolutePath()` that returns the absolute path of a file [path](p.html#path) or a file [object](o.html#object).
 
 ```{r}
 R.utils::getAbsolutePath("../index.Rmd")
 ```
 
-
-```{r}
-f <- file()
-R.utils::getAbsolutePath(f)
-```
 

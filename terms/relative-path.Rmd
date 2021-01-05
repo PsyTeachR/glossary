@@ -2,16 +2,18 @@
 
 <dfn>The location of a file in relation to the working directory.</dfn> 
 
-For example, if your [working directory](w.html#working-directory) is `/Users/lisad/face_study/` and you want to refer to a file in the directory `/Users/lisad/face_study/data/faces.csv`, the relative path is `data/faces.csv`. Use `../` to move up one directory.
+For example, if your [working directory](w.html#working-directory) is `/Users/me/study/` and you want to refer to a file at `/Users/me/study/data/faces.csv`, the relative path is `data/faces.csv`. Use `../` to move up one directory.
 
 ```{r, eval = FALSE}
-# the working directory: /Users/lisad/face_study/
+# the working directory: /Users/me/study/
 
-# read a file inside the wd: /Users/lisad/face_study/data/faces.csv
+# read a file inside the wd: /Users/me/study/data/faces.csv
 qdat <- read_csv("data/faces.csv")
 
-# read a file outside the wd: /Users/lisad/other_study/data/exp.csv
+# read a file outside the wd: /Users/me/other_study/data/exp.csv
 xdat <- read_csv("../other_study/data/exp.csv")
 ```
 
 Make sure you always use relative paths in an [R Markdown](r.html#r-markdown) document, which automatically sets the working directory to the directory that contains the .Rmd file.
+
+Contrast with [absolute path](a.html#absolute-path).

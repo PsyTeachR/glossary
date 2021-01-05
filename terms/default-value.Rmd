@@ -1,0 +1,25 @@
+## default value
+
+<dfn>A value that a [function](f.html#function) uses for an [argument](a.html#argument) if it is skipped.</dfn>
+
+For example, `rnorm()` has default values of 0 and 1 for the `mean` and `sd`. Therefore, if you omit mean or sd from the function, it is the same as setting them to 0 and 1.
+
+```{r}
+a = rnorm(1000)
+b = rnorm(1000, 0)
+c = rnorm(1000, 0, 1)
+
+
+ggplot() +
+  geom_density(aes(a), color = "red") + 
+  geom_density(aes(b), color = "green") + 
+  geom_density(aes(c), color = "blue")
+```
+
+If an argument does not have a default value, you can't omit it. In the example below, there is no default value for `n`.
+
+```{r, error = TRUE}
+x = rnorm()
+```
+
+

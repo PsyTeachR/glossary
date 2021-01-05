@@ -23,7 +23,7 @@ knitr::write_bib(c(
 
 The glossary defines common jargon you might encounter while learning R. This specialised vocabulary can help you to communicate more efficiently about coding and statistics and to search for solutions to problems.
 
-Suggest additions or changes at the [github issues page](https://github.com/PsyTeachR/glossary/issues){target="_blank"}.
+The glossary was developed to link to the [PsyTeachR books](https://psyteachr.github.io/){target="_blank"}, but you can link to it from any resource. Suggest additions or changes at the [github issues page](https://github.com/PsyTeachR/glossary/issues){target="_blank"}.
 
 
 ## Offline Access
@@ -68,4 +68,12 @@ glossary::open_glossary() # open a local copy
 | ;      | semi-colon        |                   |
 | :      | colon             |                   |
 | @      | "at" symbol       | [various hilarious regional terms](https://www.theguardian.com/notesandqueries/query/0,5753,-1773,00.html) |
+| ...    | [ellipsis](e.html#ellipsis)| dots     |
+
+```{r img-soundimals-hash, echo=FALSE, fig.cap="[Image by James Chapman/Soundimals](https://soundimals.tumblr.com/post/167354564886/chapmangamo-the-symbol-has-too-many-names)"}
+
+knitr::include_graphics("images/soundimals_hash.png")
+
+```
+
 

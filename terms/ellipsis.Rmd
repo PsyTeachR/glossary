@@ -1,0 +1,24 @@
+## ellipsis
+
+<dfn>Three dots (...) representing further unspecified [arguments](a.html#argument) to a [function](f.html#function).</dfn>
+
+When you look up the help for a function, you often see one of the arguments is `...`. This means that you can supply your own argument names and values here.
+
+For example, the help page for `dplyr::mutate()` shows a usage of `mutate(.data, ...)`, which means that the first argument is called `.data` and is the data table you want to mutate, and the second argument is `...`, which means that you can add as many new arguments as you want and each one will create a new column with the argument name and value.
+
+```{r}
+# create a data frame with letters and numbers 
+df <- data.frame(
+  number = 1:5,
+  letter = LETTERS[1:5]
+)
+
+# the mutate function lets you add custom arguments
+# like lower and plus_10
+mutate(
+  .data = df,
+  lower = tolower(letter),
+  plus_10 = number + 10
+)
+
+```

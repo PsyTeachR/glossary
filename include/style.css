@@ -1,2 +1,29 @@
 /* (edit style.css for your own book styles) */
 
+dfn { 
+  font-style: normal;
+  font-weight: bold;
+}
+
+h2 {
+  border-top: 1px solid black;
+}
+
+div:nth-child(2) h2 { border-top-color: var(--pink); }
+div:nth-child(3) h2 { border-top-color: var(--orange); }
+div:nth-child(4) h2 { border-top-color: var(--yellow); }
+div:nth-child(5) h2 { border-top-color: var(--green); }
+div:nth-child(6) h2 { border-top-color: var(--blue); }
+div:nth-child(7) h2 { border-top-color: var(--purple); }
+div:nth-child(8) h2 { border-top-color: var(--pink); }
+div:nth-child(9) h2 { border-top-color: var(--orange); }
+div:nth-child(10) h2 { border-top-color: var(--yellow); }
+div:nth-child(11) h2 { border-top-color: var(--green); }
+div:nth-child(12) h2 { border-top-color: var(--blue); }
+div:nth-child(13) h2 { border-top-color: var(--purple); }
+div:nth-child(14) h2 { border-top-color: var(--pink); }
+div:nth-child(15) h2 { border-top-color: var(--orange); }
+div:nth-child(16) h2 { border-top-color: var(--yellow); }
+div:nth-child(17) h2 { border-top-color: var(--green); }
+div:nth-child(18) h2 { border-top-color: var(--blue); }
+div:nth-child(19) h2 { border-top-color: var(--purple); }
