@@ -1,0 +1,7 @@
+## general linear model
+
+<dfn>A mathematical model comparing how one or more independent variables affect a continuous dependent variable</dfn>
+
+
+The GLM is a general mathematical framework for expressing relationships among variables that can express or test linear relationships between a numerical [dependent variable](d.html#dependent-variable) and any combination of [categorical](c.html#categorical) or [continuous](c.html#continuous) [independent variables](i.html#independent-variable).
+

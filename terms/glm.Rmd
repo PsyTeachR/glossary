@@ -1,0 +1,5 @@
+## glm
+
+<dfn>A mathematical model comparing how one or more independent variables affect a continuous dependent variable</dfn>
+
+See [general linear model](g.html#general-linear-model)
