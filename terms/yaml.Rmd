@@ -1,0 +1,34 @@
+## YAML
+
+<dfn>A structured format for information</dfn>
+
+You'll most commonly encounter YAML in the header of an [R Markdown](r.html#r-markdown.html) document. It consists of key and value pairs separated by a colon, where the key is an unquoted label, like `title`, and the value is quoted or unquoted text like `"My Document"` or a further list of keys and values.
+
+```
+---
+title: "My Document"
+subtitle: "It's Just a Demo"
+author: "Me"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  html_document:
+    theme: spacelab
+    highlight: tango
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 3
+    number_sections: false
+---
+```
+
+The spacing and line breaks need to be exactly right or YAML won't parse and you will get error messages when you try to knit the R Markdown document. For example, the header above won't knit if you change the spacing before `theme: spacelab` like this:
+
+```
+output: 
+  html_document:
+  theme: spacelab
+```
+
+[YAML](https://yaml.org/){target="_blank"} stands for YAML Ain't Markup Language.

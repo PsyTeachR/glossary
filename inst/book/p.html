@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2020-11-27" />
+<meta name="date" content="2021-01-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -172,6 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html"><i class="fa fa-check"></i>D</a><ul>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-type"><i class="fa fa-check"></i>data type</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-wrangling"><i class="fa fa-check"></i>data wrangling</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#default-value"><i class="fa fa-check"></i>default value</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
@@ -182,6 +183,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#effect-size"><i class="fa fa-check"></i>effect size</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#effect"><i class="fa fa-check"></i>effect</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#element"><i class="fa fa-check"></i>element</a></li>
+<li class="chapter" data-level="" data-path="e.html"><a href="e.html#ellipsis"><i class="fa fa-check"></i>ellipsis</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#escape"><i class="fa fa-check"></i>escape</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#extension"><i class="fa fa-check"></i>extension</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#extract-operator"><i class="fa fa-check"></i>extract operator</a></li>
@@ -326,7 +328,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="w.html"><a href="w.html#working-directory"><i class="fa fa-check"></i>working directory</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="x.html"><a href="x.html"><i class="fa fa-check"></i>X</a></li>
-<li class="chapter" data-level="" data-path="y.html"><a href="y.html"><i class="fa fa-check"></i>Y</a></li>
+<li class="chapter" data-level="" data-path="y.html"><a href="y.html"><i class="fa fa-check"></i>Y</a><ul>
+<li class="chapter" data-level="" data-path="y.html"><a href="y.html#yaml"><i class="fa fa-check"></i>YAML</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="z.html"><a href="z.html"><i class="fa fa-check"></i>Z</a></li>
 <li class="divider"></li>
 <li><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" 
@@ -378,7 +382,7 @@ You can alternatively type the package name and two colons before any function f
 <div class="figure" style="text-align: center"><span id="fig:img-panes"></span>
 <img src="images/defs/panes.png" alt="Pane layout" width="100%" />
 <p class="caption">
-Figure 14: Pane layout
+Figure 16: Pane layout
 </p>
 </div>
 
@@ -392,23 +396,23 @@ Figure 14: Pane layout
 <h2>path</h2>
 <p><dfn>A string representing the location of a file or directory.</dfn></p>
 <p>A file path can be <a href="r.html#relative-path">relative</a> to the <a href="w.html#working-directory">working directory</a> or <a href="a.html#absolute-path">absolute</a>.</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="p.html#cb86-1"></a><span class="co"># list all files in the images directory, </span></span>
-<span id="cb86-2"><a href="p.html#cb86-2"></a><span class="co"># use relative path</span></span>
-<span id="cb86-3"><a href="p.html#cb86-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;images/&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="p.html#cb87-1"></a><span class="co"># list all files on the Desktop, </span></span>
-<span id="cb87-2"><a href="p.html#cb87-2"></a><span class="co"># use absolute path</span></span>
-<span id="cb87-3"><a href="p.html#cb87-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;/Users/myaccount/Desktop/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="p.html#cb91-1"></a><span class="co"># list all files in the images directory, </span></span>
+<span id="cb91-2"><a href="p.html#cb91-2"></a><span class="co"># use relative path</span></span>
+<span id="cb91-3"><a href="p.html#cb91-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;images/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="p.html#cb92-1"></a><span class="co"># list all files on the Desktop, </span></span>
+<span id="cb92-2"><a href="p.html#cb92-2"></a><span class="co"># use absolute path</span></span>
+<span id="cb92-3"><a href="p.html#cb92-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;/Users/myaccount/Desktop/&quot;</span>)</span></code></pre></div>
 
 </div>
 <div id="poisson-distribution" class="section level2">
 <h2>Poisson distribution</h2>
 <p><dfn>A distribution that models independent events happening over a unit of time</dfn></p>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="p.html#cb88-1"></a>lambda &lt;-<span class="st"> </span><span class="dv">3</span> <span class="co"># mean number of events</span></span>
-<span id="cb88-2"><a href="p.html#cb88-2"></a>x &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class="dv">10000</span>, lambda)</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="p.html#cb93-1"></a>lambda &lt;-<span class="st"> </span><span class="dv">3</span> <span class="co"># mean number of events</span></span>
+<span id="cb93-2"><a href="p.html#cb93-2"></a>x &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class="dv">10000</span>, lambda)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:piosson-plot"></span>
 <img src="_main_files/figure-html/piosson-plot-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
 <p class="caption">
-Figure 15: <strong>CAPTION THIS FIGURE!!</strong>
+Figure 17: <strong>CAPTION THIS FIGURE!!</strong>
 </p>
 </div>
 
@@ -463,7 +467,7 @@ Figure 15: <strong>CAPTION THIS FIGURE!!</strong>
 <div class="figure" style="text-align: center"><span id="fig:new-project"></span>
 <img src="images/new_project.png" alt="Start a new project" width="100%" />
 <p class="caption">
-Figure 16: Start a new project
+Figure 18: Start a new project
 </p>
 </div>
 
