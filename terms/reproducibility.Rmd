@@ -1,3 +1,5 @@
 ## reproducibility
 
-<dfn>The extent to which the findings of a study can be repeated in some other context, either with new samples from the same population (replicability) or with the same raw data but analyzed by different researchers or by the same researchers on a different occasion (computational or analytical reproducibility).</dfn>
+<dfn>The extent to which the findings of a study can be repeated in some other context</dfn>
+
+Reproducibility can be either with new samples from the same population ([replicability](r.html#replicability)) or with the same raw data but analyzed by different researchers or by the same researchers on a different occasion ([computational](c.html#computational-reproducibility) or analytical reproducibility).

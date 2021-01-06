@@ -368,8 +368,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>tibble</h2>
 <p><dfn>A <a href="c.html#container">container</a> for <a href="t.html#tabular-data">tabular data</a> with some different properties to a <a href="d.html#data-frame">data frame</a></dfn></p>
 <p>Tibbles are almost exactly like the <a href="b.html#base-r">base R</a> <code>data.frame</code> container type, but has some special printing functions, does not coerce character columns to factors, and does not typically use row names.</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="t.html#cb102-1"></a><span class="co"># display the mtcars data frame</span></span>
-<span id="cb102-2"><a href="t.html#cb102-2"></a>mtcars</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="t.html#cb108-1"></a><span class="co"># display the mtcars data frame</span></span>
+<span id="cb108-2"><a href="t.html#cb108-2"></a>mtcars</span></code></pre></div>
 <pre><code>##                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb
 ## Mazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
 ## Mazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
@@ -403,8 +403,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Ferrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
 ## Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
 ## Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2</code></pre>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="t.html#cb104-1"></a><span class="co"># convert the mtcars data frame to a tibble</span></span>
-<span id="cb104-2"><a href="t.html#cb104-2"></a>tibble<span class="op">::</span><span class="kw">as_tibble</span>(mtcars, <span class="dt">rownames =</span> <span class="st">&quot;name&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="t.html#cb110-1"></a><span class="co"># convert the mtcars data frame to a tibble</span></span>
+<span id="cb110-2"><a href="t.html#cb110-2"></a>tibble<span class="op">::</span><span class="kw">as_tibble</span>(mtcars, <span class="dt">rownames =</span> <span class="st">&quot;name&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 32 x 12
 ##    name           mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
 ##    &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;

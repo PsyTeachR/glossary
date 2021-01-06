@@ -363,13 +363,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>whitespace</h2>
 <p><dfn>Spaces, tabs and line breaks</dfn></p>
 <p>R mostly ignores whitespace, so you can use it to help you organise your code.</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="w.html#cb114-1"></a><span class="co"># a and b are identical</span></span>
-<span id="cb114-2"><a href="w.html#cb114-2"></a>a &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl =</span> <span class="st">&quot;Control Condition&quot;</span>, <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span>
-<span id="cb114-3"><a href="w.html#cb114-3"></a></span>
-<span id="cb114-4"><a href="w.html#cb114-4"></a><span class="co"># but b is much easier to read</span></span>
-<span id="cb114-5"><a href="w.html#cb114-5"></a>b &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl  =</span> <span class="st">&quot;Control Condition&quot;</span>, </span>
-<span id="cb114-6"><a href="w.html#cb114-6"></a>          <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, </span>
-<span id="cb114-7"><a href="w.html#cb114-7"></a>          <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="w.html#cb120-1"></a><span class="co"># a and b are identical</span></span>
+<span id="cb120-2"><a href="w.html#cb120-2"></a>a &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl =</span> <span class="st">&quot;Control Condition&quot;</span>, <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span>
+<span id="cb120-3"><a href="w.html#cb120-3"></a></span>
+<span id="cb120-4"><a href="w.html#cb120-4"></a><span class="co"># but b is much easier to read</span></span>
+<span id="cb120-5"><a href="w.html#cb120-5"></a>b &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ctl  =</span> <span class="st">&quot;Control Condition&quot;</span>, </span>
+<span id="cb120-6"><a href="w.html#cb120-6"></a>          <span class="dt">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, </span>
+<span id="cb120-7"><a href="w.html#cb120-7"></a>          <span class="dt">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span></code></pre></div>
 
 </div>
 <div id="wide" class="section level2">
@@ -413,8 +413,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>working directory</h2>
 <p><dfn>The filepath where R is currently reading and writing files.</dfn></p>
 <p>If you are working in a <a href="p.html#project">project</a>, the working directory is usually the main project directory. So if you want to save a file into a folder called “data” in that project folder, you can use a <a href="r.html#relative-path">relative path</a>, which is automatically appended to the working directory, such as <code>readr::write_csv(my_data, "data/my_data.csv")</code>.</p>
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="w.html#cb115-1"></a><span class="kw">getwd</span>() .html<span class="co"># get the current working directory</span></span>
-<span id="cb115-2"><a href="w.html#cb115-2"></a><span class="kw">setwd</span>(<span class="st">&quot;~/r/myfiles&quot;</span>) .html<span class="co"># change the working directory</span></span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="w.html#cb121-1"></a><span class="kw">getwd</span>() .html<span class="co"># get the current working directory</span></span>
+<span id="cb121-2"><a href="w.html#cb121-2"></a><span class="kw">setwd</span>(<span class="st">&quot;~/r/myfiles&quot;</span>) .html<span class="co"># change the working directory</span></span></code></pre></div>
 <div class="warning">
 <p>
 Never set or change your working directory in a script.

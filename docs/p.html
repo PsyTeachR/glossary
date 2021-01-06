@@ -362,6 +362,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="p-value" class="section level2">
 <h2>p-value</h2>
 <p><dfn>The probability of seeing an effect at least as extreme as what you have, if the real effect was the value you are testing against (e.g., a null effect)</dfn></p>
+<p>For example, if you used a binomial test to test against a chance probability of 1/2 (e.g., the probability of heads when flipping a fair coin), then a p-value of 0.37 means that you could expect to see effects at least as extreme as your data (i.e., 55 or more heads <strong>or</strong> tails) 37% of the time just by chance alone.</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="p.html#cb91-1"></a><span class="co"># test how likely 55 heads (or a more extreme value)</span></span>
+<span id="cb91-2"><a href="p.html#cb91-2"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
+<span id="cb91-3"><a href="p.html#cb91-3"></a><span class="kw">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>)</span></code></pre></div>
+<pre><code>## 
+##  Exact binomial test
+## 
+## data:  55 and 100
+## number of successes = 55, number of trials = 100, p-value = 0.3682
+## alternative hypothesis: true probability of success is not equal to 0.5
+## 95 percent confidence interval:
+##  0.4472802 0.6496798
+## sample estimates:
+## probability of success 
+##                   0.55</code></pre>
+<p>P-values can be one-tailed or two-tailed. The example above if two-tailed because we didn’t specify a direction and are testing whether there were more <strong>or</strong> fewer heads than expected by chance with a fair coin. The example below is one-tailed, and indicates that you have an 18% chance of getting 55 <strong>or more</strong> heads when flipping a fair coin 100 times.</p>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="p.html#cb93-1"></a><span class="co"># test how likely 55 (or more) heads</span></span>
+<span id="cb93-2"><a href="p.html#cb93-2"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
+<span id="cb93-3"><a href="p.html#cb93-3"></a><span class="kw">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>, <span class="dt">alternative =</span> <span class="st">&quot;greater&quot;</span>)</span></code></pre></div>
+<pre><code>## 
+##  Exact binomial test
+## 
+## data:  55 and 100
+## number of successes = 55, number of trials = 100, p-value = 0.1841
+## alternative hypothesis: true probability of success is greater than 0.5
+## 95 percent confidence interval:
+##  0.4628896 1.0000000
+## sample estimates:
+## probability of success 
+##                   0.55</code></pre>
+<p>You can see that the p-value is half of the two-tailed value; this is true for symmetric distributions like the <a href="b.html#binomial-distribution">binomial distribution</a>, but not for all distributions.</p>
+<p>If you do a one-tailed test using “less”, the p-value is much higher, indicating that you have an 86% chance of getting 55 <strong>or fewer</strong> heads when flipping a fair coin 100 times.</p>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="p.html#cb95-1"></a><span class="co"># test how likely 55 (or fewer) heads</span></span>
+<span id="cb95-2"><a href="p.html#cb95-2"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
+<span id="cb95-3"><a href="p.html#cb95-3"></a><span class="kw">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>, <span class="dt">alternative =</span> <span class="st">&quot;less&quot;</span>)</span></code></pre></div>
+<pre><code>## 
+##  Exact binomial test
+## 
+## data:  55 and 100
+## number of successes = 55, number of trials = 100, p-value = 0.8644
+## alternative hypothesis: true probability of success is less than 0.5
+## 95 percent confidence interval:
+##  0.0000000 0.6348377
+## sample estimates:
+## probability of success 
+##                   0.55</code></pre>
 
 </div>
 <div id="package" class="section level2">
@@ -396,19 +442,19 @@ Figure 16: Pane layout
 <h2>path</h2>
 <p><dfn>A string representing the location of a file or directory.</dfn></p>
 <p>A file path can be <a href="r.html#relative-path">relative</a> to the <a href="w.html#working-directory">working directory</a> or <a href="a.html#absolute-path">absolute</a>.</p>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="p.html#cb91-1"></a><span class="co"># list all files in the images directory, </span></span>
-<span id="cb91-2"><a href="p.html#cb91-2"></a><span class="co"># use relative path</span></span>
-<span id="cb91-3"><a href="p.html#cb91-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;images/&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="p.html#cb92-1"></a><span class="co"># list all files on the Desktop, </span></span>
-<span id="cb92-2"><a href="p.html#cb92-2"></a><span class="co"># use absolute path</span></span>
-<span id="cb92-3"><a href="p.html#cb92-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;/Users/myaccount/Desktop/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="p.html#cb97-1"></a><span class="co"># list all files in the images directory, </span></span>
+<span id="cb97-2"><a href="p.html#cb97-2"></a><span class="co"># use relative path</span></span>
+<span id="cb97-3"><a href="p.html#cb97-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;images/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="p.html#cb98-1"></a><span class="co"># list all files on the Desktop, </span></span>
+<span id="cb98-2"><a href="p.html#cb98-2"></a><span class="co"># use absolute path</span></span>
+<span id="cb98-3"><a href="p.html#cb98-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;/Users/myaccount/Desktop/&quot;</span>)</span></code></pre></div>
 
 </div>
 <div id="poisson-distribution" class="section level2">
 <h2>Poisson distribution</h2>
 <p><dfn>A distribution that models independent events happening over a unit of time</dfn></p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="p.html#cb93-1"></a>lambda &lt;-<span class="st"> </span><span class="dv">3</span> <span class="co"># mean number of events</span></span>
-<span id="cb93-2"><a href="p.html#cb93-2"></a>x &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class="dv">10000</span>, lambda)</span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="p.html#cb99-1"></a>lambda &lt;-<span class="st"> </span><span class="dv">3</span> <span class="co"># mean number of events</span></span>
+<span id="cb99-2"><a href="p.html#cb99-2"></a>x &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class="dv">10000</span>, lambda)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:piosson-plot"></span>
 <img src="_main_files/figure-html/piosson-plot-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
 <p class="caption">

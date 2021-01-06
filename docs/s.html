@@ -392,10 +392,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>set operations</h2>
 <p><dfn>Functions that compare two tables and return rows that match (intersect), are in either table (union), or are in one table but not the other (setdiff).</dfn></p>
 <p>The examples below use two small datasets. <code>a</code> has <code>id</code>s 1 to 5, and <code>b</code> has <code>id</code>s 3 to 7.</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="s.html#cb95-1"></a>a &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>)</span>
-<span id="cb95-2"><a href="s.html#cb95-2"></a>b &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="dv">3</span><span class="op">:</span><span class="dv">7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="s.html#cb101-1"></a>a &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>)</span>
+<span id="cb101-2"><a href="s.html#cb101-2"></a>b &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="dv">3</span><span class="op">:</span><span class="dv">7</span>)</span></code></pre></div>
 <p><code>intersect()</code> returns all rows in two tables that match exactly. The columns don’t have to be in the same order.</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="s.html#cb96-1"></a>dplyr<span class="op">::</span><span class="kw">intersect</span>(a, b)</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="s.html#cb102-1"></a>dplyr<span class="op">::</span><span class="kw">intersect</span>(a, b)</span></code></pre></div>
 <pre><code>## # A tibble: 3 x 1
 ##      id
 ##   &lt;int&gt;
@@ -403,7 +403,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 2     4
 ## 3     5</code></pre>
 <p><code>union()</code> returns all the rows from both tables, removing duplicate rows.</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="s.html#cb98-1"></a>dplyr<span class="op">::</span><span class="kw">union</span>(a, b)</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="s.html#cb104-1"></a>dplyr<span class="op">::</span><span class="kw">union</span>(a, b)</span></code></pre></div>
 <pre><code>## # A tibble: 7 x 1
 ##      id
 ##   &lt;int&gt;
@@ -415,7 +415,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 6     6
 ## 7     7</code></pre>
 <p><code>setdiff</code> returns rows that are in the first table, but not in the second table.</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="s.html#cb100-1"></a>dplyr<span class="op">::</span><span class="kw">setdiff</span>(a, b)</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="s.html#cb106-1"></a>dplyr<span class="op">::</span><span class="kw">setdiff</span>(a, b)</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 1
 ##      id
 ##   &lt;int&gt;
@@ -453,8 +453,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>A statistic that measures how spread out data are relative to the mean.</dfn></p>
 <p>If the data points are further from the mean, there is a higher standard deviation. Standard deviation is calculated as the square root of the <a href="v.html#variance">variance</a>.</p>
 <p>Normal distributions with means of 0 and SDs of 1 (red), 2 (blue) and 3 (purple).</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-165"></span>
-<img src="_main_files/figure-html/unnamed-chunk-165-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-188"></span>
+<img src="_main_files/figure-html/unnamed-chunk-188-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
 <p class="caption">
 Figure 19: <strong>CAPTION THIS FIGURE!!</strong>
 </p>

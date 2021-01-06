@@ -2,7 +2,7 @@
 
 <dfn>A structured format for information</dfn>
 
-You'll most commonly encounter YAML in the header of an [R Markdown](r.html#r-markdown.html) document. It consists of key and value pairs separated by a colon, where the key is an unquoted label, like `title`, and the value is quoted or unquoted text like `"My Document"` or a further list of keys and values.
+You'll most commonly encounter YAML in the header of an [R Markdown](r.html#r-markdown) document. It consists of key and value pairs separated by a colon, where the key is an unquoted label, like `title`, and the value is quoted or unquoted text like `"My Document"` or a further list of keys and values.
 
 ```
 ---

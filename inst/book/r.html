@@ -400,13 +400,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>relative path</h2>
 <p><dfn>The location of a file in relation to the working directory.</dfn></p>
 <p>For example, if your <a href="w.html#working-directory">working directory</a> is <code>/Users/me/study/</code> and you want to refer to a file at <code>/Users/me/study/data/faces.csv</code>, the relative path is <code>data/faces.csv</code>. Use <code>../</code> to move up one directory.</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="r.html#cb94-1"></a><span class="co"># the working directory: /Users/me/study/</span></span>
-<span id="cb94-2"><a href="r.html#cb94-2"></a></span>
-<span id="cb94-3"><a href="r.html#cb94-3"></a><span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span></span>
-<span id="cb94-4"><a href="r.html#cb94-4"></a>qdat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/faces.csv&quot;</span>)</span>
-<span id="cb94-5"><a href="r.html#cb94-5"></a></span>
-<span id="cb94-6"><a href="r.html#cb94-6"></a><span class="co"># read a file outside the wd: /Users/me/other_study/data/exp.csv</span></span>
-<span id="cb94-7"><a href="r.html#cb94-7"></a>xdat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;../other_study/data/exp.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="r.html#cb100-1"></a><span class="co"># the working directory: /Users/me/study/</span></span>
+<span id="cb100-2"><a href="r.html#cb100-2"></a></span>
+<span id="cb100-3"><a href="r.html#cb100-3"></a><span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span></span>
+<span id="cb100-4"><a href="r.html#cb100-4"></a>qdat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/faces.csv&quot;</span>)</span>
+<span id="cb100-5"><a href="r.html#cb100-5"></a></span>
+<span id="cb100-6"><a href="r.html#cb100-6"></a><span class="co"># read a file outside the wd: /Users/me/other_study/data/exp.csv</span></span>
+<span id="cb100-7"><a href="r.html#cb100-7"></a>xdat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;../other_study/data/exp.csv&quot;</span>)</span></code></pre></div>
 <p>Make sure you always use relative paths in an <a href="r.html#r-markdown">R Markdown</a> document, which automatically sets the working directory to the directory that contains the .Rmd file.</p>
 <p>Contrast with <a href="a.html#absolute-path">absolute path</a>.</p>
 
@@ -425,7 +425,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="reproducibility" class="section level2">
 <h2>reproducibility</h2>
-<p><dfn>The extent to which the findings of a study can be repeated in some other context, either with new samples from the same population (replicability) or with the same raw data but analyzed by different researchers or by the same researchers on a different occasion (computational or analytical reproducibility).</dfn></p>
+<p><dfn>The extent to which the findings of a study can be repeated in some other context</dfn></p>
+<p>Reproducibility can be either with new samples from the same population (<a href="r.html#replicability">replicability</a>) or with the same raw data but analyzed by different researchers or by the same researchers on a different occasion (<a href="c.html#computational-reproducibility">computational</a> or analytical reproducibility).</p>
 
 </div>
 <div id="reproducible-research" class="section level2">
