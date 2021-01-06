@@ -2,4 +2,4 @@
 
 <dfn>A statistical test for which the critical region consists of all values of the test statistic greater than a given value plus all values less than another given value.</dfn>
 
-
+See [p-value](p.html#p-value) for a comparison of [one-tailed](o.html#one-tailed) and two-tailed tests.

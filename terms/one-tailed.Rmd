@@ -1,0 +1,7 @@
+## one-tailed
+
+<dfn>A statistical test for which the critical region consists of all values of the test statistic greater **or** less than a given value.</dfn>
+
+See [p-value](p.html#p-value) for a comparison of one-tailed and [two-tailed](t.html#two-tailed) tests.
+
+
