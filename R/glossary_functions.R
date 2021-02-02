@@ -25,9 +25,9 @@ glossary <- function(term, display = NULL, shortdef = "", link = TRUE) {
     shortdef <- tryCatch({
       the_html <- xml2::read_html(url)
       the_node <- rvest::html_node(the_html, hash)
-      
       if (is.na(the_node)) stop("No glossary entry for ", lcterm)
-      the_text <- rvest::html_text(the_node)
+      the_dfn <- rvest::html_node(the_node, "dfn")
+      the_text <- rvest::html_text(the_dfn)
       def <- gsub("\'", "&#39;", the_text)
       if (is.na(def)) stop("No glossary shortdef for ", lcterm)
       def
@@ -39,10 +39,11 @@ glossary <- function(term, display = NULL, shortdef = "", link = TRUE) {
   }
   
   ## add to global glossary for this book
-  glossary <- options()$glossary
-  if (is.null(glossary)) glossary <- list()
-  glossary[lcterm] <- shortdef
-  options(glossary = glossary)
+  env <- .GlobalEnv
+  if (!exists(".myglossary", envir = env)) {
+    assign(".myglossary", list(), envir = env)
+  }
+  .myglossary[lcterm] <<- shortdef
   
   if (link) {
     # make a link that opens the definition webpage in a new window
@@ -66,7 +67,8 @@ glossary <- function(term, display = NULL, shortdef = "", link = TRUE) {
 #' reset_glossary()
 #' 
 reset_glossary <- function() {
-  options(glossary = list())
+  env <- .GlobalEnv
+  assign(".myglossary", list(), envir = env)
 }
 
 #' Display glossary table
@@ -82,7 +84,11 @@ reset_glossary <- function() {
 #' glossary("beta")
 #' glossary_table()
 glossary_table <- function(link = TRUE, as_kable = TRUE) {
-  glossary <- options()$glossary
+  env <- .GlobalEnv
+  if (!exists(".myglossary", envir = env)) {
+    assign(".myglossary", list(), envir = env)
+  }
+  glossary <- .myglossary
   if (is.null(glossary)) glossary <- list()
   
   term <- names(glossary)

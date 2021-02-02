@@ -1,8 +1,9 @@
 # psyTeachR styles and functions
 # do not edit!!!!!
 
-library(tidyverse)
-library(glossary)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
 library(webex)
 
 # default knitr options
