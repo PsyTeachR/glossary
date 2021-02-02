@@ -1,0 +1,46 @@
+## quantile
+
+<dfn>Cutoffs dividing the range of a [distribution](#d.htmldistribution) into continuous intervals with equal probabilities.</dfn>
+
+You can take a sample of numbers on divide them into N equally-sized groups. Let's use these 12 numbers as an example:
+
+```{r}
+x <- c(1, 1, 2, 2, 3, 4, 4, 5, 7, 7, 7, 10)
+```
+
+The `quantile()` function gives you the cutoffs for each quantile from the data. Set the argument `probs` to `seq(0, 1, 1/N)` for any N-tile.
+
+```{r}
+# median
+quantile(x, probs = seq(0, 1, 1/2))
+```
+
+```{r}
+# tertile
+quantile(x, probs = seq(0, 1, 1/3))
+```
+
+```{r}
+# quartile
+quantile(x, probs = seq(0, 1, 1/4))
+```
+
+```{r}
+dat <- data.frame(
+  x = x
+) %>%
+  mutate(
+  `2-tile` = ntile(x, 2),
+  `3-tile` = ntile(x, 3),
+  `4-tile` = ntile(x, 4),
+  `6-tile` = ntile(x, 6)
+)
+```
+`r knitr::kable(dat)`
+
+
+See [Q_Q plots](q.html#q-q-plots).
+
+
+
+

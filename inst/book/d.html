@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2021-01-06" />
+<meta name="date" content="2021-02-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,6 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#distribution"><i class="fa fa-check"></i>distribution</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a><ul>
@@ -270,7 +271,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#pseudoreplication"><i class="fa fa-check"></i>pseudoreplication</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a><ul>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#q-q-plot"><i class="fa fa-check"></i>Q-Q plot</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#quantile"><i class="fa fa-check"></i>quantile</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-effect"><i class="fa fa-check"></i>random effect</a></li>
@@ -396,24 +400,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="default-value" class="section level2">
 <h2>default value</h2>
 <p><dfn>A value that a <a href="f.html#function">function</a> uses for an <a href="a.html#argument">argument</a> if it is skipped.</dfn></p>
-<p>For example, <code>rnorm()</code> has default values of 0 and 1 for the <code>mean</code> and <code>sd</code>. Therefore, if you omit mean or sd from the function, it is the same as setting them to 0 and 1.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="d.html#cb33-1"></a>a =<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">1000</span>)</span>
-<span id="cb33-2"><a href="d.html#cb33-2"></a>b =<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">1000</span>, <span class="dv">0</span>)</span>
-<span id="cb33-3"><a href="d.html#cb33-3"></a>c =<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">1000</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb33-4"><a href="d.html#cb33-4"></a></span>
-<span id="cb33-5"><a href="d.html#cb33-5"></a></span>
-<span id="cb33-6"><a href="d.html#cb33-6"></a><span class="kw">ggplot</span>() <span class="op">+</span></span>
-<span id="cb33-7"><a href="d.html#cb33-7"></a><span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(a), <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb33-8"><a href="d.html#cb33-8"></a><span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(b), <span class="dt">color =</span> <span class="st">&quot;green&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb33-9"><a href="d.html#cb33-9"></a><span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(c), <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-60"></span>
-<img src="_main_files/figure-html/unnamed-chunk-60-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
-<p class="caption">
-Figure 3: <strong>CAPTION THIS FIGURE!!</strong>
-</p>
-</div>
+<p>For example, <code>mean()</code> has a default value of <code>FALSE</code> for the argument <code>na.rm</code> (don’t ignore NA values).</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="d.html#cb33-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="ot">NA</span>)</span>
+<span id="cb33-2"><a href="d.html#cb33-2"></a><span class="kw">mean</span>(x)</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<p>So if you leave that argument out, it’s the same as setting it to <code>FALSE</code>.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="d.html#cb35-1"></a><span class="kw">mean</span>(x, <span class="dt">na.rm =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<p>And you have to explicitly set it if you want it to be different.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="d.html#cb37-1"></a><span class="kw">mean</span>(x, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
 <p>If an argument does not have a default value, you can’t omit it. In the example below, there is no default value for <code>n</code>.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="d.html#cb34-1"></a>x =<span class="st"> </span><span class="kw">rnorm</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="d.html#cb39-1"></a>x =<span class="st"> </span><span class="kw">rnorm</span>()</span></code></pre></div>
 <pre><code>## Error in rnorm(): argument &quot;n&quot; is missing, with no default</code></pre>
 
 </div>
@@ -426,11 +424,11 @@ Figure 3: <strong>CAPTION THIS FIGURE!!</strong>
 <div id="deviation-score" class="section level2">
 <h2>deviation score</h2>
 <p><dfn>A score minus the mean</dfn></p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="d.html#cb36-1"></a><span class="kw">tibble</span>(</span>
-<span id="cb36-2"><a href="d.html#cb36-2"></a>  <span class="dt">score =</span> <span class="dv">8</span><span class="op">:</span><span class="dv">12</span></span>
-<span id="cb36-3"><a href="d.html#cb36-3"></a>) <span class="op">%&gt;%</span></span>
-<span id="cb36-4"><a href="d.html#cb36-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(score),</span>
-<span id="cb36-5"><a href="d.html#cb36-5"></a>         <span class="dt">deviation_score =</span> score <span class="op">-</span><span class="st"> </span>mean)</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="d.html#cb41-1"></a><span class="kw">tibble</span>(</span>
+<span id="cb41-2"><a href="d.html#cb41-2"></a>  <span class="dt">score =</span> <span class="dv">8</span><span class="op">:</span><span class="dv">12</span></span>
+<span id="cb41-3"><a href="d.html#cb41-3"></a>) <span class="op">%&gt;%</span></span>
+<span id="cb41-4"><a href="d.html#cb41-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(score),</span>
+<span id="cb41-5"><a href="d.html#cb41-5"></a>         <span class="dt">deviation_score =</span> score <span class="op">-</span><span class="st"> </span>mean)</span></code></pre></div>
 <pre><code>## # A tibble: 5 x 3
 ##   score  mean deviation_score
 ##   &lt;int&gt; &lt;dbl&gt;           &lt;dbl&gt;
@@ -445,6 +443,17 @@ Figure 3: <strong>CAPTION THIS FIGURE!!</strong>
 <h2>discrete</h2>
 <p><dfn>Data that can only take certain values, such as integers.</dfn></p>
 <p>Discrete data are not <a href="c.html#continuous">continuous</a>, so it doesn’t make sense to have a value that is partway between two values. For example, the number of texts you send per day is discrete; you can’t send 12.5 texts. Discrete data can be <a href="o.html#ordinal">ordinal</a> or <a href="n.html#nominal">nominal</a>.</p>
+
+</div>
+<div id="distribution" class="section level2">
+<h2>distribution</h2>
+<p><dfn>A way to describe the shape of data</dfn></p>
+<ul>
+<li><a href="n.html#normal-distribution">normal distribution</a></li>
+<li><a href="n.html#binomial-distribution">binomial distribution</a></li>
+<li><a href="n.html#poisson-distribution">Poisson distribution</a></li>
+<li><a href="n.html#uniform-distribution">uniform distribution</a></li>
+</ul>
 
 </div>
 <div id="double" class="section level2">

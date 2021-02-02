@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2021-01-06" />
+<meta name="date" content="2021-02-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,6 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#distribution"><i class="fa fa-check"></i>distribution</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a><ul>
@@ -270,7 +271,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#pseudoreplication"><i class="fa fa-check"></i>pseudoreplication</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a><ul>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#q-q-plot"><i class="fa fa-check"></i>Q-Q plot</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#quantile"><i class="fa fa-check"></i>quantile</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-effect"><i class="fa fa-check"></i>random effect</a></li>
@@ -405,13 +409,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>relative path</h2>
 <p><dfn>The location of a file in relation to the working directory.</dfn></p>
 <p>For example, if your <a href="w.html#working-directory">working directory</a> is <code>/Users/me/study/</code> and you want to refer to a file at <code>/Users/me/study/data/faces.csv</code>, the relative path is <code>data/faces.csv</code>. Use <code>../</code> to move up one directory.</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="r.html#cb100-1"></a><span class="co"># the working directory: /Users/me/study/</span></span>
-<span id="cb100-2"><a href="r.html#cb100-2"></a></span>
-<span id="cb100-3"><a href="r.html#cb100-3"></a><span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span></span>
-<span id="cb100-4"><a href="r.html#cb100-4"></a>qdat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/faces.csv&quot;</span>)</span>
-<span id="cb100-5"><a href="r.html#cb100-5"></a></span>
-<span id="cb100-6"><a href="r.html#cb100-6"></a><span class="co"># read a file outside the wd: /Users/me/other_study/data/exp.csv</span></span>
-<span id="cb100-7"><a href="r.html#cb100-7"></a>xdat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;../other_study/data/exp.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="r.html#cb120-1"></a><span class="co"># the working directory: /Users/me/study/</span></span>
+<span id="cb120-2"><a href="r.html#cb120-2"></a></span>
+<span id="cb120-3"><a href="r.html#cb120-3"></a><span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span></span>
+<span id="cb120-4"><a href="r.html#cb120-4"></a>qdat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/faces.csv&quot;</span>)</span>
+<span id="cb120-5"><a href="r.html#cb120-5"></a></span>
+<span id="cb120-6"><a href="r.html#cb120-6"></a><span class="co"># read a file outside the wd: /Users/me/other_study/data/exp.csv</span></span>
+<span id="cb120-7"><a href="r.html#cb120-7"></a>xdat &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;../other_study/data/exp.csv&quot;</span>)</span></code></pre></div>
 <p>Make sure you always use relative paths in an <a href="r.html#r-markdown">R Markdown</a> document, which automatically sets the working directory to the directory that contains the .Rmd file.</p>
 <p>Contrast with <a href="a.html#absolute-path">absolute path</a>.</p>
 

@@ -10,7 +10,7 @@ new_entry <- function(term, dfn = "", open = FALSE, overwrite = FALSE) {
 }
 
 options(bookdown.render.file_scope = FALSE)
-bookdown::render_book("index.Rmd", )
+bookdown::render_book("index.Rmd")
 
 R.utils::copyDirectory(
   from = "docs", 

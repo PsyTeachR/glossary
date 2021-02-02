@@ -10,10 +10,9 @@ A normal distribution is characterised by its [mean](m.html#mean) and [standard 
 x <- rnorm(1000000, mean = 0, sd = 1)
 ```
 
-```{r normal-plot, echo = FALSE}
+```{r normal-plot, echo = FALSE, fig.cap = "Normal Distribution"}
 ggplot() + geom_density(aes(x)) +
-  labs(x = "Values from the normal distribution",
-       title = "Normal Distribution")
+  labs(x = "Values from the normal distribution")
 ```
 
 

@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2021-01-06" />
+<meta name="date" content="2021-02-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,6 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#distribution"><i class="fa fa-check"></i>distribution</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a><ul>
@@ -270,7 +271,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#pseudoreplication"><i class="fa fa-check"></i>pseudoreplication</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a><ul>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#q-q-plot"><i class="fa fa-check"></i>Q-Q plot</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#quantile"><i class="fa fa-check"></i>quantile</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-effect"><i class="fa fa-check"></i>random effect</a></li>
@@ -397,10 +401,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>set operations</h2>
 <p><dfn>Functions that compare two tables and return rows that match (intersect), are in either table (union), or are in one table but not the other (setdiff).</dfn></p>
 <p>The examples below use two small datasets. <code>a</code> has <code>id</code>s 1 to 5, and <code>b</code> has <code>id</code>s 3 to 7.</p>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="s.html#cb101-1"></a>a &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>)</span>
-<span id="cb101-2"><a href="s.html#cb101-2"></a>b &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="dv">3</span><span class="op">:</span><span class="dv">7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="s.html#cb121-1"></a>a &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>)</span>
+<span id="cb121-2"><a href="s.html#cb121-2"></a>b &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">id =</span> <span class="dv">3</span><span class="op">:</span><span class="dv">7</span>)</span></code></pre></div>
 <p><code>intersect()</code> returns all rows in two tables that match exactly. The columns don’t have to be in the same order.</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="s.html#cb102-1"></a>dplyr<span class="op">::</span><span class="kw">intersect</span>(a, b)</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="s.html#cb122-1"></a>dplyr<span class="op">::</span><span class="kw">intersect</span>(a, b)</span></code></pre></div>
 <pre><code>## # A tibble: 3 x 1
 ##      id
 ##   &lt;int&gt;
@@ -408,7 +412,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 2     4
 ## 3     5</code></pre>
 <p><code>union()</code> returns all the rows from both tables, removing duplicate rows.</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="s.html#cb104-1"></a>dplyr<span class="op">::</span><span class="kw">union</span>(a, b)</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="s.html#cb124-1"></a>dplyr<span class="op">::</span><span class="kw">union</span>(a, b)</span></code></pre></div>
 <pre><code>## # A tibble: 7 x 1
 ##      id
 ##   &lt;int&gt;
@@ -420,7 +424,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 6     6
 ## 7     7</code></pre>
 <p><code>setdiff</code> returns rows that are in the first table, but not in the second table.</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="s.html#cb106-1"></a>dplyr<span class="op">::</span><span class="kw">setdiff</span>(a, b)</span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="s.html#cb126-1"></a>dplyr<span class="op">::</span><span class="kw">setdiff</span>(a, b)</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 1
 ##      id
 ##   &lt;int&gt;
@@ -458,10 +462,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>A statistic that measures how spread out data are relative to the mean.</dfn></p>
 <p>If the data points are further from the mean, there is a higher standard deviation. Standard deviation is calculated as the square root of the <a href="v.html#variance">variance</a>.</p>
 <p>Normal distributions with means of 0 and SDs of 1 (red), 2 (blue) and 3 (purple).</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-196"></span>
-<img src="_main_files/figure-html/unnamed-chunk-196-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-217"></span>
+<img src="_main_files/figure-html/unnamed-chunk-217-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
 <p class="caption">
-Figure 19: <strong>CAPTION THIS FIGURE!!</strong>
+Figure 21: <strong>CAPTION THIS FIGURE!!</strong>
 </p>
 </div>
 

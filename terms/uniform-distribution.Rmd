@@ -6,11 +6,10 @@
 x <- runif(100000, min = 0, max = 100)
 ```
 
-```{r unif-plot, echo = FALSE}
+```{r unif-plot, echo = FALSE, fig.cap = "Uniform Distribution"}
 ggplot() + geom_histogram(
   aes(x), binwidth = 5, boundary = 0,
   colour = "black", fill = "white") +
   scale_x_continuous(breaks =seq(0,100,10)) +
-  labs(x = "Values from the uniform distribution",
-       title = "Uniform Distribution")
+  labs(x = "Values from the uniform distribution")
 ```

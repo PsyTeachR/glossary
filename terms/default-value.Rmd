@@ -2,18 +2,22 @@
 
 <dfn>A value that a [function](f.html#function) uses for an [argument](a.html#argument) if it is skipped.</dfn>
 
-For example, `rnorm()` has default values of 0 and 1 for the `mean` and `sd`. Therefore, if you omit mean or sd from the function, it is the same as setting them to 0 and 1.
+For example, `mean()` has a default value of `FALSE` for the argument `na.rm` (don't ignore NA values). 
 
 ```{r}
-a = rnorm(1000)
-b = rnorm(1000, 0)
-c = rnorm(1000, 0, 1)
+x <- c(1,2,3,NA)
+mean(x)
+```
+So if you leave that argument out, it's the same as setting it to `FALSE`.
 
+```{r}
+mean(x, na.rm = FALSE)
+```
 
-ggplot() +
-  geom_density(aes(a), color = "red") + 
-  geom_density(aes(b), color = "green") + 
-  geom_density(aes(c), color = "blue")
+And you have to explicitly set it if you want it to be different.
+
+```{r}
+mean(x, na.rm = TRUE)
 ```
 
 If an argument does not have a default value, you can't omit it. In the example below, there is no default value for `n`.

@@ -4,4 +4,15 @@
 
 Usually used in the context of the analysis of a single [dependent variable](d.html#dependent-variable).
 
+```{r, echo = FALSE, results='asis'}
+set.seed(8675309)
+data.frame(
+  id = paste0("S", 1:5),
+  stroop_1 = rbinom(5, 20, .6),
+  stroop_2 = rbinom(5, 20, .5),
+  stroop_3 = rbinom(5, 20, .4)
+) %>%
+  knitr::kable(caption = "Uniivariate data with 3 scores on the same task per person")
+```
+
 Contrast with [multivariate](m.html#multivariate).

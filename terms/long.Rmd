@@ -3,7 +3,7 @@
 <dfn>Data where each observation is on a separate row</dfn>
 
 ```{r long-data, echo = FALSE, render = "asis"}
-x <- tibble::tibble(id = c("A", "B"),
+tibble::tibble(id = c("A", "B"),
             Q1 = c(1,4),
             Q2 = c(2,5),
             Q3 = c(3,6)) %>%

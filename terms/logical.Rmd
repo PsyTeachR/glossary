@@ -4,20 +4,22 @@
 
 ```{r}
 true_logical_values <- list(
-  TRUE,
-  T,
-  as.logical(1),
-  "A" == "A"
+  full = TRUE,
+  abbreviated = T,
+  integer = as.logical(1),
+  equation = "A" == "A"
 )
-
-false_logical_values <- list(
-  FALSE,
-  F,
-  as.logical(0),
-  "A" == "B"
-)
-
 str(true_logical_values)
+```
+
+```{r}
+false_logical_values <- list(
+  full = FALSE,
+  abbreviated = F,
+  integer = as.logical(0),
+  equation = "A" == "B"
+)
+
 str(false_logical_values)
 ```
 

@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2021-01-06" />
+<meta name="date" content="2021-02-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,6 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#distribution"><i class="fa fa-check"></i>distribution</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a><ul>
@@ -270,7 +271,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#pseudoreplication"><i class="fa fa-check"></i>pseudoreplication</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a><ul>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#q-q-plot"><i class="fa fa-check"></i>Q-Q plot</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#quantile"><i class="fa fa-check"></i>quantile</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-effect"><i class="fa fa-check"></i>random effect</a></li>
@@ -373,8 +377,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>tibble</h2>
 <p><dfn>A <a href="c.html#container">container</a> for <a href="t.html#tabular-data">tabular data</a> with some different properties to a <a href="d.html#data-frame">data frame</a></dfn></p>
 <p>Tibbles are almost exactly like the <a href="b.html#base-r">base R</a> <code>data.frame</code> container type, but has some special printing functions, does not coerce character columns to factors, and does not typically use row names.</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="t.html#cb108-1"></a><span class="co"># display the mtcars data frame</span></span>
-<span id="cb108-2"><a href="t.html#cb108-2"></a>mtcars</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="t.html#cb128-1"></a><span class="co"># display the mtcars data frame</span></span>
+<span id="cb128-2"><a href="t.html#cb128-2"></a>mtcars</span></code></pre></div>
 <pre><code>##                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb
 ## Mazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
 ## Mazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
@@ -408,21 +412,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Ferrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
 ## Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
 ## Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2</code></pre>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="t.html#cb110-1"></a><span class="co"># convert the mtcars data frame to a tibble</span></span>
-<span id="cb110-2"><a href="t.html#cb110-2"></a>tibble<span class="op">::</span><span class="kw">as_tibble</span>(mtcars, <span class="dt">rownames =</span> <span class="st">&quot;name&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="t.html#cb130-1"></a><span class="co"># convert the mtcars data frame to a tibble</span></span>
+<span id="cb130-2"><a href="t.html#cb130-2"></a>tibble<span class="op">::</span><span class="kw">as_tibble</span>(mtcars, <span class="dt">rownames =</span> <span class="st">&quot;name&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 32 x 12
-##    name           mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
-##    &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1 Mazda RX4     21       6  160    110  3.9   2.62  16.5     0     1     4     4
-##  2 Mazda RX4 W…  21       6  160    110  3.9   2.88  17.0     0     1     4     4
-##  3 Datsun 710    22.8     4  108     93  3.85  2.32  18.6     1     1     4     1
-##  4 Hornet 4 Dr…  21.4     6  258    110  3.08  3.22  19.4     1     0     3     1
-##  5 Hornet Spor…  18.7     8  360    175  3.15  3.44  17.0     0     0     3     2
-##  6 Valiant       18.1     6  225    105  2.76  3.46  20.2     1     0     3     1
-##  7 Duster 360    14.3     8  360    245  3.21  3.57  15.8     0     0     3     4
-##  8 Merc 240D     24.4     4  147.    62  3.69  3.19  20       1     0     4     2
-##  9 Merc 230      22.8     4  141.    95  3.92  3.15  22.9     1     0     4     2
-## 10 Merc 280      19.2     6  168.   123  3.92  3.44  18.3     1     0     4     4
+##    name                mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
+##    &lt;chr&gt;             &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1 Mazda RX4          21       6  160    110  3.9   2.62  16.5     0     1     4     4
+##  2 Mazda RX4 Wag      21       6  160    110  3.9   2.88  17.0     0     1     4     4
+##  3 Datsun 710         22.8     4  108     93  3.85  2.32  18.6     1     1     4     1
+##  4 Hornet 4 Drive     21.4     6  258    110  3.08  3.22  19.4     1     0     3     1
+##  5 Hornet Sportabout  18.7     8  360    175  3.15  3.44  17.0     0     0     3     2
+##  6 Valiant            18.1     6  225    105  2.76  3.46  20.2     1     0     3     1
+##  7 Duster 360         14.3     8  360    245  3.21  3.57  15.8     0     0     3     4
+##  8 Merc 240D          24.4     4  147.    62  3.69  3.19  20       1     0     4     2
+##  9 Merc 230           22.8     4  141.    95  3.92  3.15  22.9     1     0     4     2
+## 10 Merc 280           19.2     6  168.   123  3.92  3.44  18.3     1     0     4     4
 ## # … with 22 more rows</code></pre>
 
 </div>

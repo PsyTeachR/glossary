@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2021-01-06" />
+<meta name="date" content="2021-02-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,6 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#distribution"><i class="fa fa-check"></i>distribution</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a><ul>
@@ -270,7 +271,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#pseudoreplication"><i class="fa fa-check"></i>pseudoreplication</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a><ul>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#q-q-plot"><i class="fa fa-check"></i>Q-Q plot</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#quantile"><i class="fa fa-check"></i>quantile</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-effect"><i class="fa fa-check"></i>random effect</a></li>
@@ -373,22 +377,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="match-operator" class="section level2">
 <h2>match operator</h2>
 <p><dfn>A binary operator (%in%) that returns a logical vector indicating if there is a match or not for its left operand.</dfn></p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="m.html#cb56-1"></a><span class="co"># check if a single value is in a vector</span></span>
-<span id="cb56-2"><a href="m.html#cb56-2"></a><span class="st">&quot;West Dakota&quot;</span> <span class="op">%in%</span><span class="st"> </span>state.name</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="m.html#cb61-1"></a><span class="co"># check if a single value is in a vector</span></span>
+<span id="cb61-2"><a href="m.html#cb61-2"></a><span class="st">&quot;West Dakota&quot;</span> <span class="op">%in%</span><span class="st"> </span>state.name</span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="m.html#cb58-1"></a><span class="co"># check if each item in the lefthand vector is in the righthand vector</span></span>
-<span id="cb58-2"><a href="m.html#cb58-2"></a><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;1&quot;</span>) <span class="op">%in%</span><span class="st"> </span>LETTERS</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="m.html#cb63-1"></a><span class="co"># check if each item in the lefthand vector is in the righthand vector</span></span>
+<span id="cb63-2"><a href="m.html#cb63-2"></a><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;1&quot;</span>) <span class="op">%in%</span><span class="st"> </span>LETTERS</span></code></pre></div>
 <pre><code>## [1]  TRUE  TRUE FALSE</code></pre>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="m.html#cb60-1"></a>pangram &lt;-<span class="st"> &quot;the quick brown fox jumps over the lazy dog&quot;</span></span>
-<span id="cb60-2"><a href="m.html#cb60-2"></a>pangram_chars &lt;-<span class="st"> </span><span class="kw">strsplit</span>(pangram, <span class="st">&quot;&quot;</span>)[[<span class="dv">1</span>]]</span>
-<span id="cb60-3"><a href="m.html#cb60-3"></a>letters <span class="op">%in%</span><span class="st"> </span>pangram_chars</span></code></pre></div>
-<pre><code>##  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
-## [16] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</code></pre>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="m.html#cb65-1"></a>pangram &lt;-<span class="st"> &quot;the quick brown fox jumps over the lazy dog&quot;</span></span>
+<span id="cb65-2"><a href="m.html#cb65-2"></a>pangram_chars &lt;-<span class="st"> </span><span class="kw">strsplit</span>(pangram, <span class="st">&quot;&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb65-3"><a href="m.html#cb65-3"></a>letters <span class="op">%in%</span><span class="st"> </span>pangram_chars</span></code></pre></div>
+<pre><code>##  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+## [17] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</code></pre>
 
 </div>
 <div id="matrix" class="section level2">
 <h2>matrix</h2>
 <p><dfn>A collection of numbers arranged into a fixed number of rows and columns</dfn></p>
+<p>You can use the <code>matrix()</code> function to set up a <a href="v.htm#vector">vector</a> of numbers as a matrix with a specified number of rows of columns.</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="m.html#cb67-1"></a><span class="co"># a 4x4 matrix</span></span>
+<span id="cb67-2"><a href="m.html#cb67-2"></a><span class="kw">matrix</span>(<span class="dt">data =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">16</span>, <span class="dt">nrow =</span> <span class="dv">4</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    5    9   13
+## [2,]    2    6   10   14
+## [3,]    3    7   11   15
+## [4,]    4    8   12   16</code></pre>
+<p>Set <code>byrow = TRUE</code> to assign the vector across rows rather than down columns.</p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="m.html#cb69-1"></a><span class="kw">matrix</span>(<span class="dt">data =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">16</span>, <span class="dt">nrow =</span> <span class="dv">4</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    2    3    4
+## [2,]    5    6    7    8
+## [3,]    9   10   11   12
+## [4,]   13   14   15   16</code></pre>
 
 </div>
 <div id="multilevel-model" class="section level2">
@@ -408,6 +427,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="multivariate" class="section level2">
 <h2>multivariate</h2>
 <p><dfn>Having multiple measurements on the same subjects but on <em>different</em> variables, with no more than one measurement per subject per variable.</dfn></p>
+<table>
+<caption><span id="tab:unnamed-chunk-141">Table 2: </span>Multivariate data with 3 scores on different tasks per person</caption>
+<thead>
+<tr class="header">
+<th align="left">id</th>
+<th align="right">stroop</th>
+<th align="right">memory</th>
+<th align="right">iat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">S1</td>
+<td align="right">14</td>
+<td align="right">78</td>
+<td align="right">7</td>
+</tr>
+<tr class="even">
+<td align="left">S2</td>
+<td align="right">12</td>
+<td align="right">72</td>
+<td align="right">5</td>
+</tr>
+<tr class="odd">
+<td align="left">S3</td>
+<td align="right">10</td>
+<td align="right">76</td>
+<td align="right">5</td>
+</tr>
+<tr class="even">
+<td align="left">S4</td>
+<td align="right">10</td>
+<td align="right">76</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="left">S5</td>
+<td align="right">13</td>
+<td align="right">81</td>
+<td align="right">6</td>
+</tr>
+</tbody>
+</table>
 <p>Contrast with <a href="u.html#univariate">univariate</a>.</p>
 
 </div>
@@ -418,28 +480,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="figure" style="text-align: center"><span id="fig:left-join"></span>
 <img src="images/joins/left_join.png" alt="Left Join" width="100%" />
 <p class="caption">
-Figure 11: Left Join
+Figure 10: Left Join
 </p>
 </div>
 <p>A <code>right_join</code> keeps all the data from the second (right) table and joins anything that matches from the first (left) table.</p>
 <div class="figure" style="text-align: center"><span id="fig:right-join"></span>
 <img src="images/joins/right_join.png" alt="Right Join" width="100%" />
 <p class="caption">
-Figure 12: Right Join
+Figure 11: Right Join
 </p>
 </div>
 <p>An <code>inner_join</code> returns all the rows that have a match in the other table.</p>
 <div class="figure" style="text-align: center"><span id="fig:inner-join"></span>
 <img src="images/joins/inner_join.png" alt="Inner Join" width="100%" />
 <p class="caption">
-Figure 13: Inner Join
+Figure 12: Inner Join
 </p>
 </div>
 <p>A <code>full_join</code> lets you join up rows in two tables while keeping all of the information from both tables.</p>
 <div class="figure" style="text-align: center"><span id="fig:full-join"></span>
 <img src="images/joins/full_join.png" alt="Full Join" width="100%" />
 <p class="caption">
-Figure 14: Full Join
+Figure 13: Full Join
 </p>
 </div>
 

@@ -2,4 +2,18 @@
 
 <dfn>A collection of numbers arranged into a fixed number of rows and columns</dfn>
 
+You can use the `matrix()` function to set up a [vector](v.htm#vector) of numbers as a matrix with a specified number of rows of columns.
+
+```{r}
+# a 4x4 matrix
+matrix(data = 1:16, nrow = 4)
+```
+
+Set `byrow = TRUE` to assign the vector across rows rather than down columns.
+
+```{r}
+matrix(data = 1:16, nrow = 4, byrow = TRUE)
+```
+
+
 

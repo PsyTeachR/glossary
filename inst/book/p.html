@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2021-01-06" />
+<meta name="date" content="2021-02-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,6 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#distribution"><i class="fa fa-check"></i>distribution</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a><ul>
@@ -270,7 +271,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#pseudoreplication"><i class="fa fa-check"></i>pseudoreplication</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a><ul>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#q-q-plot"><i class="fa fa-check"></i>Q-Q plot</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#quantile"><i class="fa fa-check"></i>quantile</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-effect"><i class="fa fa-check"></i>random effect</a></li>
@@ -368,9 +372,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>p-value</h2>
 <p><dfn>The probability of seeing an effect at least as extreme as what you have, if the real effect was the value you are testing against (e.g., a null effect)</dfn></p>
 <p>For example, if you used a binomial test to test against a chance probability of 1/2 (e.g., the probability of heads when flipping a fair coin), then a p-value of 0.37 means that you could expect to see effects at least as extreme as your data (i.e., 55 or more heads <strong>or</strong> tails) 37% of the time just by chance alone.</p>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="p.html#cb91-1"></a><span class="co"># test how likely 55 heads (or a more extreme value)</span></span>
-<span id="cb91-2"><a href="p.html#cb91-2"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
-<span id="cb91-3"><a href="p.html#cb91-3"></a><span class="kw">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="p.html#cb100-1"></a><span class="co"># test how likely 55 heads (or a more extreme value)</span></span>
+<span id="cb100-2"><a href="p.html#cb100-2"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
+<span id="cb100-3"><a href="p.html#cb100-3"></a><span class="kw">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>)</span></code></pre></div>
 <pre><code>## 
 ##  Exact binomial test
 ## 
@@ -383,9 +387,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## probability of success 
 ##                   0.55</code></pre>
 <p>P-values can be one-tailed or two-tailed. The example above if two-tailed because we didn’t specify a direction and are testing whether there were more <strong>or</strong> fewer heads than expected by chance with a fair coin. The example below is one-tailed, and indicates that you have an 18% chance of getting 55 <strong>or more</strong> heads when flipping a fair coin 100 times.</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="p.html#cb93-1"></a><span class="co"># test how likely 55 (or more) heads</span></span>
-<span id="cb93-2"><a href="p.html#cb93-2"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
-<span id="cb93-3"><a href="p.html#cb93-3"></a><span class="kw">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>, <span class="dt">alternative =</span> <span class="st">&quot;greater&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="p.html#cb102-1"></a><span class="co"># test how likely 55 (or more) heads</span></span>
+<span id="cb102-2"><a href="p.html#cb102-2"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
+<span id="cb102-3"><a href="p.html#cb102-3"></a><span class="kw">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>, <span class="dt">alternative =</span> <span class="st">&quot;greater&quot;</span>)</span></code></pre></div>
 <pre><code>## 
 ##  Exact binomial test
 ## 
@@ -399,9 +403,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##                   0.55</code></pre>
 <p>You can see that the p-value is half of the two-tailed value; this is true for symmetric distributions like the <a href="b.html#binomial-distribution">binomial distribution</a>, but not for all distributions.</p>
 <p>If you do a one-tailed test using “less”, the p-value is much higher, indicating that you have an 86% chance of getting 55 <strong>or fewer</strong> heads when flipping a fair coin 100 times.</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="p.html#cb95-1"></a><span class="co"># test how likely 55 (or fewer) heads</span></span>
-<span id="cb95-2"><a href="p.html#cb95-2"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
-<span id="cb95-3"><a href="p.html#cb95-3"></a><span class="kw">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>, <span class="dt">alternative =</span> <span class="st">&quot;less&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="p.html#cb104-1"></a><span class="co"># test how likely 55 (or fewer) heads</span></span>
+<span id="cb104-2"><a href="p.html#cb104-2"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
+<span id="cb104-3"><a href="p.html#cb104-3"></a><span class="kw">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>, <span class="dt">alternative =</span> <span class="st">&quot;less&quot;</span>)</span></code></pre></div>
 <pre><code>## 
 ##  Exact binomial test
 ## 
@@ -433,7 +437,7 @@ You can alternatively type the package name and two colons before any function f
 <div class="figure" style="text-align: center"><span id="fig:img-panes"></span>
 <img src="images/defs/panes.png" alt="Pane layout" width="100%" />
 <p class="caption">
-Figure 16: Pane layout
+Figure 15: Pane layout
 </p>
 </div>
 
@@ -447,23 +451,23 @@ Figure 16: Pane layout
 <h2>path</h2>
 <p><dfn>A string representing the location of a file or directory.</dfn></p>
 <p>A file path can be <a href="r.html#relative-path">relative</a> to the <a href="w.html#working-directory">working directory</a> or <a href="a.html#absolute-path">absolute</a>.</p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="p.html#cb97-1"></a><span class="co"># list all files in the images directory, </span></span>
-<span id="cb97-2"><a href="p.html#cb97-2"></a><span class="co"># use relative path</span></span>
-<span id="cb97-3"><a href="p.html#cb97-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;images/&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="p.html#cb98-1"></a><span class="co"># list all files on the Desktop, </span></span>
-<span id="cb98-2"><a href="p.html#cb98-2"></a><span class="co"># use absolute path</span></span>
-<span id="cb98-3"><a href="p.html#cb98-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;/Users/myaccount/Desktop/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="p.html#cb106-1"></a><span class="co"># list all files in the images directory, </span></span>
+<span id="cb106-2"><a href="p.html#cb106-2"></a><span class="co"># use relative path</span></span>
+<span id="cb106-3"><a href="p.html#cb106-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;images/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="p.html#cb107-1"></a><span class="co"># list all files on the Desktop, </span></span>
+<span id="cb107-2"><a href="p.html#cb107-2"></a><span class="co"># use absolute path</span></span>
+<span id="cb107-3"><a href="p.html#cb107-3"></a><span class="kw">list.files</span>(<span class="dt">path =</span> <span class="st">&quot;/Users/myaccount/Desktop/&quot;</span>)</span></code></pre></div>
 
 </div>
 <div id="poisson-distribution" class="section level2">
 <h2>Poisson distribution</h2>
 <p><dfn>A distribution that models independent events happening over a unit of time</dfn></p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="p.html#cb99-1"></a>lambda &lt;-<span class="st"> </span><span class="dv">3</span> <span class="co"># mean number of events</span></span>
-<span id="cb99-2"><a href="p.html#cb99-2"></a>x &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class="dv">10000</span>, lambda)</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="p.html#cb108-1"></a>lambda &lt;-<span class="st"> </span><span class="dv">3</span> <span class="co"># mean number of events</span></span>
+<span id="cb108-2"><a href="p.html#cb108-2"></a>x &lt;-<span class="st"> </span><span class="kw">rpois</span>(<span class="dv">10000</span>, lambda)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:piosson-plot"></span>
 <img src="_main_files/figure-html/piosson-plot-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
 <p class="caption">
-Figure 17: <strong>CAPTION THIS FIGURE!!</strong>
+Figure 16: <strong>CAPTION THIS FIGURE!!</strong>
 </p>
 </div>
 
@@ -518,7 +522,7 @@ Figure 17: <strong>CAPTION THIS FIGURE!!</strong>
 <div class="figure" style="text-align: center"><span id="fig:new-project"></span>
 <img src="images/new_project.png" alt="Start a new project" width="100%" />
 <p class="caption">
-Figure 18: Start a new project
+Figure 17: Start a new project
 </p>
 </div>
 

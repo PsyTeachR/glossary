@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2021-01-06" />
+<meta name="date" content="2021-02-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,6 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#distribution"><i class="fa fa-check"></i>distribution</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a><ul>
@@ -270,7 +271,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#pseudoreplication"><i class="fa fa-check"></i>pseudoreplication</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a><ul>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#q-q-plot"><i class="fa fa-check"></i>Q-Q plot</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#quantile"><i class="fa fa-check"></i>quantile</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-effect"><i class="fa fa-check"></i>random effect</a></li>
@@ -364,6 +368,170 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="q" class="section level1">
 <h1>Q</h1>
 
+<div id="q-q-plot" class="section level2">
+<h2>Q-Q plot</h2>
+<p><dfn>A scatterplot created by plotting two sets of <a href="q.html#quantile">quantiles</a> against each other, used to check if data come from a specified <a href="d.html#distribution">distribution</a></dfn></p>
+<p>It is pretty difficult to tell from looking at a density plot if data are distributed in a specific way. We often want to determine if, for example, the residuals of a model are normally distributed. Q-Q plots can help with this.</p>
+<p>Let’s simulate 25 data points from a normal distribution with a mean of 100 and SD of 10. Since there are not many data points, the resulting plot will be pretty lumpy. The red line is a perfect normal distribution.</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="q.html#cb109-1"></a>A &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">25</span>, <span class="dv">100</span>, <span class="dv">10</span>)</span>
+<span id="cb109-2"><a href="q.html#cb109-2"></a></span>
+<span id="cb109-3"><a href="q.html#cb109-3"></a><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb109-4"><a href="q.html#cb109-4"></a><span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(A)) <span class="op">+</span></span>
+<span id="cb109-5"><a href="q.html#cb109-5"></a><span class="st">  </span><span class="kw">geom_function</span>(<span class="dt">fun =</span> dnorm, </span>
+<span id="cb109-6"><a href="q.html#cb109-6"></a>                <span class="dt">args =</span> <span class="kw">list</span>(<span class="dt">mean =</span> <span class="dv">100</span>, <span class="dt">sd =</span> <span class="dv">10</span>),</span>
+<span id="cb109-7"><a href="q.html#cb109-7"></a>                <span class="dt">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-184"></span>
+<img src="_main_files/figure-html/unnamed-chunk-184-1.png" alt="Density plot of sample data and the noraml distribution it was drawn from" width="100%" />
+<p class="caption">
+Figure 18: Density plot of sample data and the noraml distribution it was drawn from
+</p>
+</div>
+<p>A Q-Q plot calculates what <a href="q.html#quantile">quantile</a> each data point is in, and plots that against the theoretical quantiles from the normal distribution. The red line is the theoretically perfect noraml distribution, so you just need to assess if most of the points fall on this line.</p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="q.html#cb110-1"></a><span class="kw">qplot</span>(<span class="dt">sample =</span> A) <span class="op">+</span><span class="st"> </span><span class="kw">geom_qq_line</span>(<span class="dt">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:qq-A"></span>
+<img src="_main_files/figure-html/qq-A-1.png" alt="Q-Q plot of a small sample from a normal distribution" width="100%" />
+<p class="caption">
+Figure 19: Q-Q plot of a small sample from a normal distribution
+</p>
+</div>
+<p>Here’s what it might look like if your data are actually from a uniform distribution.</p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="q.html#cb111-1"></a>U &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">25</span>, <span class="dv">0</span>, <span class="dv">10</span>)</span>
+<span id="cb111-2"><a href="q.html#cb111-2"></a><span class="kw">qplot</span>(<span class="dt">sample =</span> U) <span class="op">+</span><span class="st"> </span><span class="kw">geom_qq_line</span>(<span class="dt">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:qq-unif"></span>
+<img src="_main_files/figure-html/qq-unif-1.png" alt="Q-Q plot of a uniform distribution" width="100%" />
+<p class="caption">
+Figure 20: Q-Q plot of a uniform distribution
+</p>
+</div>
+
+</div>
+<div id="quantile" class="section level2">
+<h2>quantile</h2>
+<p><dfn>Cutoffs dividing the range of a <a href="#d.htmldistribution">distribution</a> into continuous intervals with equal probabilities.</dfn></p>
+<p>You can take a sample of numbers on divide them into N equally-sized groups. Let’s use these 12 numbers as an example:</p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="q.html#cb112-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">7</span>, <span class="dv">7</span>, <span class="dv">10</span>)</span></code></pre></div>
+<p>The <code>quantile()</code> function gives you the cutoffs for each quantile from the data. Set the argument <code>probs</code> to <code>seq(0, 1, 1/N)</code> for any N-tile.</p>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="q.html#cb113-1"></a><span class="co"># median</span></span>
+<span id="cb113-2"><a href="q.html#cb113-2"></a><span class="kw">quantile</span>(x, <span class="dt">probs =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="op">/</span><span class="dv">2</span>))</span></code></pre></div>
+<pre><code>##   0%  50% 100% 
+##    1    4   10</code></pre>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="q.html#cb115-1"></a><span class="co"># tertile</span></span>
+<span id="cb115-2"><a href="q.html#cb115-2"></a><span class="kw">quantile</span>(x, <span class="dt">probs =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="op">/</span><span class="dv">3</span>))</span></code></pre></div>
+<pre><code>##        0% 33.33333% 66.66667%      100% 
+##  1.000000  2.666667  5.666667 10.000000</code></pre>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="q.html#cb117-1"></a><span class="co"># quartile</span></span>
+<span id="cb117-2"><a href="q.html#cb117-2"></a><span class="kw">quantile</span>(x, <span class="dt">probs =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="op">/</span><span class="dv">4</span>))</span></code></pre></div>
+<pre><code>##   0%  25%  50%  75% 100% 
+##    1    2    4    7   10</code></pre>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="q.html#cb119-1"></a>dat &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
+<span id="cb119-2"><a href="q.html#cb119-2"></a>  <span class="dt">x =</span> x</span>
+<span id="cb119-3"><a href="q.html#cb119-3"></a>) <span class="op">%&gt;%</span></span>
+<span id="cb119-4"><a href="q.html#cb119-4"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb119-5"><a href="q.html#cb119-5"></a>  <span class="st">`</span><span class="dt">2-tile</span><span class="st">`</span> =<span class="st"> </span><span class="kw">ntile</span>(x, <span class="dv">2</span>),</span>
+<span id="cb119-6"><a href="q.html#cb119-6"></a>  <span class="st">`</span><span class="dt">3-tile</span><span class="st">`</span> =<span class="st"> </span><span class="kw">ntile</span>(x, <span class="dv">3</span>),</span>
+<span id="cb119-7"><a href="q.html#cb119-7"></a>  <span class="st">`</span><span class="dt">4-tile</span><span class="st">`</span> =<span class="st"> </span><span class="kw">ntile</span>(x, <span class="dv">4</span>),</span>
+<span id="cb119-8"><a href="q.html#cb119-8"></a>  <span class="st">`</span><span class="dt">6-tile</span><span class="st">`</span> =<span class="st"> </span><span class="kw">ntile</span>(x, <span class="dv">6</span>)</span>
+<span id="cb119-9"><a href="q.html#cb119-9"></a>)</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">x</th>
+<th align="right">2-tile</th>
+<th align="right">3-tile</th>
+<th align="right">4-tile</th>
+<th align="right">6-tile</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td align="right">4</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">5</td>
+</tr>
+<tr class="even">
+<td align="right">7</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">5</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">6</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">6</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="q.html#q-q-plots">Q_Q plots</a>.</p>
+
+</div>
 </div>
 <div class="psyteachr_footer">
   

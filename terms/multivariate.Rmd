@@ -2,4 +2,16 @@
 
 <dfn>Having multiple measurements on the same subjects but on *different* variables, with no more than one measurement per subject per variable.</dfn>
 
+```{r, echo = FALSE, results='asis'}
+set.seed(8675309)
+data.frame(
+  id = paste0("S", 1:5),
+  stroop = rbinom(5, 20, .6),
+  memory = rbinom(5, 100, .8),
+  iat = rbinom(5, 10, .5)
+) %>%
+  knitr::kable(caption = "Multivariate data with 3 scores on different tasks per person")
+```
+
+
 Contrast with [univariate](u.html#univariate).

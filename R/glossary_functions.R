@@ -1,7 +1,19 @@
-# collects glossary entries for a list at the end of the page
-myglossary <- list() 
-
 ## link to glossary with shortdef on hover
+#' Display glossary entry
+#'
+#' @param term The glossary term to link to, can contain spaces
+#' @param display The display (if different than the term)
+#' @param shortdef The short definition to display on hover and in the glossary table; if blank, this will be looked up from https://psyteachr.github.io/glossary/
+#' @param link whether to include a link to https://psyteachr.github.io/glossary/
+#'
+#' @return string with the link and hover text
+#' @export
+#'
+#' @examples
+#' glossary("alpha")
+#' glossary("argument", "Arguments")
+#' glossary("PSYCH1001", shortdef = "Your class", link = FALSE)
+#' 
 glossary <- function(term, display = NULL, shortdef = "", link = TRUE) {
   lcterm <- gsub(" ", "-", tolower(term), fixed = TRUE)
   if (is.null(display)) display <- term
@@ -9,19 +21,28 @@ glossary <- function(term, display = NULL, shortdef = "", link = TRUE) {
   url <- paste0("https://psyteachr.github.io/glossary/", first_letter)
   if (shortdef == "") {
     # look up short definition from glossary site
-    hash <- paste0("#", lcterm, " dfn")
+    hash <- paste0("#", lcterm, ".level2")
     shortdef <- tryCatch({
       the_html <- xml2::read_html(url)
       the_node <- rvest::html_node(the_html, hash)
+      
+      if (is.na(the_node)) stop("No glossary entry for ", lcterm)
       the_text <- rvest::html_text(the_node)
-      gsub("\'", "&#39;", the_text)
+      def <- gsub("\'", "&#39;", the_text)
+      if (is.na(def)) stop("No glossary shortdef for ", lcterm)
+      def
     },
-    error = function(e) { "" }
-    )
+    error = function(e) { 
+      warning(e, call. = FALSE)
+      return("")
+    })
   }
   
   ## add to global glossary for this book
-  myglossary[lcterm] <<- shortdef
+  glossary <- options()$glossary
+  if (is.null(glossary)) glossary <- list()
+  glossary[lcterm] <- shortdef
+  options(glossary = glossary)
   
   if (link) {
     # make a link that opens the definition webpage in a new window
@@ -33,16 +54,55 @@ glossary <- function(term, display = NULL, shortdef = "", link = TRUE) {
   }
 }
 
-glossary_table <- function() {
-  term <- names(myglossary)
-  link_term <- paste0("<a class='glossary' target='_blank' ",
-                      "href='https://psyteachr.github.io/glossary/",
-                      substr(term, 1, 1), "#", term, "'>",
-                      gsub(".", " ", term, fixed = 1), "</a>")
+
+#' Reset glossary table
+#' 
+#' Resets the list .myglossary in the parent environment that collects glossary entries for the table
+#'
+#' @return NULL
+#' @export
+#'
+#' @examples
+#' reset_glossary()
+#' 
+reset_glossary <- function() {
+  options(glossary = list())
+}
+
+#' Display glossary table
+#'
+#' @param link whether to include a link to https://psyteachr.github.io/glossary/
+#' @param as_kable if the output should be a kable table or a data table
+#'
+#' @return kable table or data table
+#' @export
+#'
+#' @examples
+#' glossary("alpha")
+#' glossary("beta")
+#' glossary_table()
+glossary_table <- function(link = TRUE, as_kable = TRUE) {
+  glossary <- options()$glossary
+  if (is.null(glossary)) glossary <- list()
+  
+  term <- names(glossary)
+  if (link) {
+    link_term <- paste0("<a class='glossary' target='_blank' ",
+                         "href='https://psyteachr.github.io/glossary/",
+                         substr(term, 1, 1), "#", term, "'>",
+                         gsub(".", " ", term, fixed = 1), "</a>")
+  } else {
+    link_term <- term
+  }
+  
   the_list <- data.frame(
     term = link_term,
-    definition = unlist(myglossary)
+    definition = unlist(glossary)
   )
   
-  knitr::kable(the_list[order(term),], escape = FALSE, row.names = FALSE)
+  if (as_kable) {
+    knitr::kable(the_list[order(term),], escape = FALSE, row.names = FALSE)
+  } else {
+    the_list[order(term),]
+  }
 }

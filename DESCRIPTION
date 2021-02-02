@@ -32,3 +32,6 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Depends: 
     tidyverse
+Imports: 
+    rvest,
+    xml2

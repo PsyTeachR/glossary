@@ -10,7 +10,7 @@ gg <- ggplot(mtcars, aes(as.factor(gear), hp)) +
        y = "Horsepower")
 ```
 
-...  and use different geoms to visualise it:
+...and use different geoms to visualise it:
 
 ```{r geom-boxplot, fig.cap= "Visualisation using geom_boxplot"}
 gg + geom_boxplot()
@@ -20,10 +20,10 @@ gg + geom_boxplot()
 gg + geom_violin()
 ```
 
-```{r geom-pointrange, fig.cap= "Visualisation using pointrange"}
+```{r geom-pointrange, fig.cap= "Visualisation using pointrange", message = FALSE}
 gg + stat_summary(geom = "pointrange")
 ```
 
-```{r geom-crossbar, fig.cap= "Visualisation using crossbar"}
+```{r geom-crossbar, fig.cap= "Visualisation using crossbar", message = FALSE}
 gg + stat_summary(geom = "crossbar")
 ```

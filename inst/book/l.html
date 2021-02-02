@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2021-01-06" />
+<meta name="date" content="2021-02-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,6 +176,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#distribution"><i class="fa fa-check"></i>distribution</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a><ul>
@@ -270,7 +271,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#project"><i class="fa fa-check"></i>project</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#pseudoreplication"><i class="fa fa-check"></i>pseudoreplication</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html"><i class="fa fa-check"></i>Q</a><ul>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#q-q-plot"><i class="fa fa-check"></i>Q-Q plot</a></li>
+<li class="chapter" data-level="" data-path="q.html"><a href="q.html#quantile"><i class="fa fa-check"></i>quantile</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i>R</a><ul>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#r-markdown"><i class="fa fa-check"></i>R markdown</a></li>
 <li class="chapter" data-level="" data-path="r.html"><a href="r.html#random-effect"><i class="fa fa-check"></i>random effect</a></li>
@@ -426,37 +430,78 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="logical" class="section level2">
 <h2>logical</h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing <code>TRUE</code> or <code>FALSE</code> values.</dfn></p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="l.html#cb54-1"></a>true_logical_values &lt;-<span class="st"> </span><span class="kw">list</span>(</span>
-<span id="cb54-2"><a href="l.html#cb54-2"></a>  <span class="ot">TRUE</span>,</span>
-<span id="cb54-3"><a href="l.html#cb54-3"></a>  T,</span>
-<span id="cb54-4"><a href="l.html#cb54-4"></a>  <span class="kw">as.logical</span>(<span class="dv">1</span>),</span>
-<span id="cb54-5"><a href="l.html#cb54-5"></a>  <span class="st">&quot;A&quot;</span> <span class="op">==</span><span class="st"> &quot;A&quot;</span></span>
-<span id="cb54-6"><a href="l.html#cb54-6"></a>)</span>
-<span id="cb54-7"><a href="l.html#cb54-7"></a></span>
-<span id="cb54-8"><a href="l.html#cb54-8"></a>false_logical_values &lt;-<span class="st"> </span><span class="kw">list</span>(</span>
-<span id="cb54-9"><a href="l.html#cb54-9"></a>  <span class="ot">FALSE</span>,</span>
-<span id="cb54-10"><a href="l.html#cb54-10"></a>  F,</span>
-<span id="cb54-11"><a href="l.html#cb54-11"></a>  <span class="kw">as.logical</span>(<span class="dv">0</span>),</span>
-<span id="cb54-12"><a href="l.html#cb54-12"></a>  <span class="st">&quot;A&quot;</span> <span class="op">==</span><span class="st"> &quot;B&quot;</span></span>
-<span id="cb54-13"><a href="l.html#cb54-13"></a>)</span>
-<span id="cb54-14"><a href="l.html#cb54-14"></a></span>
-<span id="cb54-15"><a href="l.html#cb54-15"></a><span class="kw">str</span>(true_logical_values)</span>
-<span id="cb54-16"><a href="l.html#cb54-16"></a><span class="kw">str</span>(false_logical_values)</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="l.html#cb57-1"></a>true_logical_values &lt;-<span class="st"> </span><span class="kw">list</span>(</span>
+<span id="cb57-2"><a href="l.html#cb57-2"></a>  <span class="dt">full =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb57-3"><a href="l.html#cb57-3"></a>  <span class="dt">abbreviated =</span> T,</span>
+<span id="cb57-4"><a href="l.html#cb57-4"></a>  <span class="dt">integer =</span> <span class="kw">as.logical</span>(<span class="dv">1</span>),</span>
+<span id="cb57-5"><a href="l.html#cb57-5"></a>  <span class="dt">equation =</span> <span class="st">&quot;A&quot;</span> <span class="op">==</span><span class="st"> &quot;A&quot;</span></span>
+<span id="cb57-6"><a href="l.html#cb57-6"></a>)</span>
+<span id="cb57-7"><a href="l.html#cb57-7"></a><span class="kw">str</span>(true_logical_values)</span></code></pre></div>
 <pre><code>## List of 4
-##  $ : logi TRUE
-##  $ : logi TRUE
-##  $ : logi TRUE
-##  $ : logi TRUE
-## List of 4
-##  $ : logi FALSE
-##  $ : logi FALSE
-##  $ : logi FALSE
-##  $ : logi FALSE</code></pre>
+##  $ full       : logi TRUE
+##  $ abbreviated: logi TRUE
+##  $ integer    : logi TRUE
+##  $ equation   : logi TRUE</code></pre>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="l.html#cb59-1"></a>false_logical_values &lt;-<span class="st"> </span><span class="kw">list</span>(</span>
+<span id="cb59-2"><a href="l.html#cb59-2"></a>  <span class="dt">full =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb59-3"><a href="l.html#cb59-3"></a>  <span class="dt">abbreviated =</span> F,</span>
+<span id="cb59-4"><a href="l.html#cb59-4"></a>  <span class="dt">integer =</span> <span class="kw">as.logical</span>(<span class="dv">0</span>),</span>
+<span id="cb59-5"><a href="l.html#cb59-5"></a>  <span class="dt">equation =</span> <span class="st">&quot;A&quot;</span> <span class="op">==</span><span class="st"> &quot;B&quot;</span></span>
+<span id="cb59-6"><a href="l.html#cb59-6"></a>)</span>
+<span id="cb59-7"><a href="l.html#cb59-7"></a></span>
+<span id="cb59-8"><a href="l.html#cb59-8"></a><span class="kw">str</span>(false_logical_values)</span></code></pre></div>
+<pre><code>## List of 4
+##  $ full       : logi FALSE
+##  $ abbreviated: logi FALSE
+##  $ integer    : logi FALSE
+##  $ equation   : logi FALSE</code></pre>
 
 </div>
 <div id="long" class="section level2">
 <h2>long</h2>
 <p><dfn>Data where each observation is on a separate row</dfn></p>
+<table>
+<caption><span id="tab:long-data">Table 1: </span>Long data</caption>
+<thead>
+<tr class="header">
+<th align="left">id</th>
+<th align="left">item</th>
+<th align="right">value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">A</td>
+<td align="left">Q1</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left">B</td>
+<td align="left">Q1</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="left">A</td>
+<td align="left">Q2</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">B</td>
+<td align="left">Q2</td>
+<td align="right">5</td>
+</tr>
+<tr class="odd">
+<td align="left">A</td>
+<td align="left">Q3</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">B</td>
+<td align="left">Q3</td>
+<td align="right">6</td>
+</tr>
+</tbody>
+</table>
 <p>Contrast with <a href="w.html#wide">wide data</a>.</p>
 
 </div>
