@@ -3,8 +3,9 @@
 #'
 #' @param term The glossary term to link to, can contain spaces
 #' @param display The display (if different than the term)
-#' @param shortdef The short definition to display on hover and in the glossary table; if blank, this will be looked up from https://psyteachr.github.io/glossary/
+#' @param def The short definition to display on hover and in the glossary table; if NULL, this will be looked up from https://psyteachr.github.io/glossary/
 #' @param link whether to include a link to https://psyteachr.github.io/glossary/
+#' @param add_to_table whether to add to the table created by glossary_table()
 #'
 #' @return string with the link and hover text
 #' @export
@@ -14,44 +15,50 @@
 #' glossary("argument", "Arguments")
 #' glossary("PSYCH1001", shortdef = "Your class", link = FALSE)
 #' 
-glossary <- function(term, display = NULL, shortdef = "", link = TRUE) {
+glossary <- function(term, display = NULL, def = NULL, link = TRUE, add_to_table = TRUE) {
   lcterm <- gsub(" ", "-", tolower(term), fixed = TRUE)
   if (is.null(display)) display <- term
   first_letter <- substr(lcterm, 1, 1)
   url <- paste0("https://psyteachr.github.io/glossary/", first_letter)
-  if (shortdef == "") {
+  if (is.null(def) || def == "") {
     # look up short definition from glossary site
     hash <- paste0("#", lcterm, ".level2")
-    shortdef <- tryCatch({
+    tabledef <- tryCatch({
       the_html <- xml2::read_html(url)
       the_node <- rvest::html_node(the_html, hash)
       if (is.na(the_node)) stop("No glossary entry for ", lcterm)
       the_dfn <- rvest::html_node(the_node, "dfn")
       the_text <- rvest::html_text(the_dfn)
-      def <- gsub("\'", "&#39;", the_text)
-      if (is.na(def)) stop("No glossary shortdef for ", lcterm)
-      def
+      the_def <- gsub("\'", "&#39;", the_text)
+      if (is.na(the_def)) stop("No glossary shortdef for ", lcterm)
+      the_def
     },
     error = function(e) { 
       warning(e, call. = FALSE)
       return("")
     })
+    
+    if (is.null(def)) def <- tabledef
+  } else {
+    tabledef <- def
   }
   
   ## add to global glossary for this book
-  env <- .GlobalEnv
-  if (!exists(".myglossary", envir = env)) {
-    assign(".myglossary", list(), envir = env)
+  if (add_to_table) {
+    env <- .GlobalEnv
+    if (!exists(".myglossary", envir = env)) {
+      assign(".myglossary", list(), envir = env)
+    }
+    .myglossary[lcterm] <<- tabledef
   }
-  .myglossary[lcterm] <<- shortdef
   
   if (link) {
     # make a link that opens the definition webpage in a new window
-    paste0("<a class='glossary' target='_blank' title='", shortdef, 
+    paste0("<a class='glossary' target='_blank' title='", def, 
            "' href='", url, "#", lcterm, "'>", display, "</a>")
   } else {
     # just add the tooltip and don't link to the definition webpage
-    paste0("<a class='glossary' title='", shortdef, "'>", display, "</a>")
+    paste0("<a class='glossary' title='", def, "'>", display, "</a>")
   }
 }
 

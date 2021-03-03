@@ -4,16 +4,18 @@
 \alias{glossary}
 \title{Display glossary entry}
 \usage{
-glossary(term, display = NULL, shortdef = "", link = TRUE)
+glossary(term, display = NULL, def = NULL, link = TRUE, add_to_table = TRUE)
 }
 \arguments{
 \item{term}{The glossary term to link to, can contain spaces}
 
 \item{display}{The display (if different than the term)}
 
-\item{shortdef}{The short definition to display on hover and in the glossary table; if blank, this will be looked up from https://psyteachr.github.io/glossary/}
+\item{def}{The short definition to display on hover and in the glossary table; if NULL, this will be looked up from https://psyteachr.github.io/glossary/}
 
 \item{link}{whether to include a link to https://psyteachr.github.io/glossary/}
+
+\item{add_to_table}{whether to add to the table created by glossary_table()}
 }
 \value{
 string with the link and hover text
