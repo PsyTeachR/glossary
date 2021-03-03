@@ -1,6 +1,6 @@
 ## binomial distribution
 
-<dfn>The distribution of data where each observation can have one of two outcomes, like success/failure, yes/no or head/tails. </dfn>
+<dfn>The [distribution](d.html#distribution) of data where each observation can have one of two outcomes, like success/failure, yes/no or head/tails. </dfn>
 
 ```{r binomial-dist}
 # flip 10 coins 10000 times
