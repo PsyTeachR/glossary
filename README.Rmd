@@ -1,0 +1,44 @@
+# glossary
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+The goal of glossary is to provide a glossary of statistical and R coding terms used in the [PsyTeachR books](https://psyteachr.github.io/) that can be accessed offline.
+
+```{r, include = FALSE}
+library(glossary)
+```
+
+
+## Installation
+
+You can install the development version of glossary from [GitHub](https://github.com/PsyTeachR/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("psyteachr/glossary")
+```
+
+## Access the book offline
+
+``` r
+glossary::open_glossary()
+```
+
+You can use the glossary to define terms in a markdown document. By default, the term links to the online glossary and shows a short definition when you hover over the link. You can change what text displays in the link, what the short definition displays, whether the link opens the online glossary, and whether it's added to the glossary table.
+
+* `glossary("alpha")`: `r glossary("alpha")`
+* `glossary("beta", display = "β")`: `r glossary("beta", "β")`
+* `glossary("power", def = "custom definition of power")`: `r glossary("power", def = "custom definition of power")`
+* `glossary("probability", def = "")`: `r glossary("probability", def = "")`
+* `glossary("p-value", link = FALSE)`: `r glossary("p-value", link = FALSE)`
+* `glossary("replicability", add_to_table = FALSE)`: `r glossary("replicability", add_to_table = FALSE)`
+
+
+You can include a glossary table at the end of a document that includes all of the terms you defined above.
+
+```{r}
+glossary_table()
+```
+
