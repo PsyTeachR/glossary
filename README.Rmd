@@ -1,3 +1,7 @@
+---
+output: github_document
+---
+
 # glossary
 
 <!-- badges: start -->
