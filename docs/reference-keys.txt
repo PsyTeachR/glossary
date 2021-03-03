@@ -17,10 +17,10 @@ fig:normal-plot
 fig:img-panes
 fig:piosson-plot
 fig:new-project
-fig:unnamed-chunk-166
+fig:unnamed-chunk-167
 fig:qq-A
 fig:qq-unif
-fig:unnamed-chunk-202
+fig:unnamed-chunk-203
 fig:unif-plot
-tab:unnamed-chunk-224
+tab:unnamed-chunk-225
 tab:wide-data

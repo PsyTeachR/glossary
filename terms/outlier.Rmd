@@ -1,0 +1,9 @@
+## outlier
+
+<dfn>A data point that is extremely distant from most of the other data points</dfn>
+
+Outliers can be clear errors (e.g., a value of 1.56 cm for human height), fully random extreme values (e.g., 0.27% of values from a normal distribution are *expected* to be more than 3 SD from the mean), or reflect potential moderators (e.g., reaction times when paying attention versus being distracted).
+
+The unthinking "rule" to label all data points more than 3 SD from the mean as outliers is not considered to be a good way to deal with outliers. The paper below contains useful suggestions.
+
+Leys, C., Delacre, M., Mora, Y. L., Lakens, D., & Ley, C. (2019). How to Classify, Detect, and Manage Univariate and Multivariate Outliers, With Emphasis on Pre-Registration. International Review of Social Psychology, 32(1), 5. DOI: <a href="http://doi.org/10.5334/irsp.289">10.5334/irsp.289</a>
