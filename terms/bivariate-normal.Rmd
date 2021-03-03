@@ -1,5 +1,5 @@
 ## bivariate normal
 
-<dfn>Two [normally distributed](n.html#normal-distribution) [vectors](v.html#vector) that have a specified correlation with each other.</dfn>
+<dfn>Two [normally distributed](n.html#normal-distribution) [vectors](v.html#vector) that have a specified [correlation](c.html#correlation) with each other.</dfn>
 
 
