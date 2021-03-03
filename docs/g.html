@@ -198,6 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#effect"><i class="fa fa-check"></i>effect</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#element"><i class="fa fa-check"></i>element</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#ellipsis"><i class="fa fa-check"></i>ellipsis</a></li>
+<li class="chapter" data-level="" data-path="e.html"><a href="e.html#environment"><i class="fa fa-check"></i>environment</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#error-term"><i class="fa fa-check"></i>error term</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#escape"><i class="fa fa-check"></i>escape</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#extension"><i class="fa fa-check"></i>extension</a></li>
@@ -318,6 +319,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html"><i class="fa fa-check"></i>S</a>
 <ul>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sample"><i class="fa fa-check"></i>sample</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#scope"><i class="fa fa-check"></i>scope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#script"><i class="fa fa-check"></i>script</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#server"><i class="fa fa-check"></i>server</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sesoi"><i class="fa fa-check"></i>SESOI</a></li>
@@ -415,32 +417,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>geom</h2>
 <p><dfn>The geometric style in which data are displayed, such as boxplot, density, or histogram.</dfn></p>
 <p>In ggplot2, the geoms control how your data are visualised. You can start with the same base plot…</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="g.html#cb59-1" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">as.factor</span>(gear), hp)) <span class="sc">+</span></span>
-<span id="cb59-2"><a href="g.html#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Number of gears&quot;</span>, </span>
-<span id="cb59-3"><a href="g.html#cb59-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Horsepower&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="g.html#cb34-1" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">as.factor</span>(gear), hp)) <span class="sc">+</span></span>
+<span id="cb34-2"><a href="g.html#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Number of gears&quot;</span>, </span>
+<span id="cb34-3"><a href="g.html#cb34-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Horsepower&quot;</span>)</span></code></pre></div>
 <p>…and use different geoms to visualise it:</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="g.html#cb60-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="g.html#cb35-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geom-boxplot"></span>
 <img src="_main_files/figure-html/geom-boxplot-1.png" alt="Visualisation using geom_boxplot" width="100%" />
 <p class="caption">
 Figure 6: Visualisation using geom_boxplot
 </p>
 </div>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="g.html#cb61-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">geom_violin</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="g.html#cb36-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">geom_violin</span>()</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geom-violin"></span>
 <img src="_main_files/figure-html/geom-violin-1.png" alt="Visualisation using geom_violin" width="100%" />
 <p class="caption">
 Figure 7: Visualisation using geom_violin
 </p>
 </div>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="g.html#cb62-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">&quot;pointrange&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="g.html#cb37-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">&quot;pointrange&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geom-pointrange"></span>
 <img src="_main_files/figure-html/geom-pointrange-1.png" alt="Visualisation using pointrange" width="100%" />
 <p class="caption">
 Figure 8: Visualisation using pointrange
 </p>
 </div>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="g.html#cb63-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">&quot;crossbar&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="g.html#cb38-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">&quot;crossbar&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geom-crossbar"></span>
 <img src="_main_files/figure-html/geom-crossbar-1.png" alt="Visualisation using crossbar" width="100%" />
 <p class="caption">

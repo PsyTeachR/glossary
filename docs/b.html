@@ -198,6 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#effect"><i class="fa fa-check"></i>effect</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#element"><i class="fa fa-check"></i>element</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#ellipsis"><i class="fa fa-check"></i>ellipsis</a></li>
+<li class="chapter" data-level="" data-path="e.html"><a href="e.html#environment"><i class="fa fa-check"></i>environment</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#error-term"><i class="fa fa-check"></i>error term</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#escape"><i class="fa fa-check"></i>escape</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#extension"><i class="fa fa-check"></i>extension</a></li>
@@ -318,6 +319,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html"><i class="fa fa-check"></i>S</a>
 <ul>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sample"><i class="fa fa-check"></i>sample</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#scope"><i class="fa fa-check"></i>scope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#script"><i class="fa fa-check"></i>script</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#server"><i class="fa fa-check"></i>server</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sesoi"><i class="fa fa-check"></i>SESOI</a></li>
@@ -419,56 +421,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="binding-joins" class="section level2">
 <h2>binding joins</h2>
 <p><dfn>Joins that bind one table to another by adding their rows or columns together.</dfn></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="b.html#cb11-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb11-2"><a href="b.html#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
-<span id="cb11-3"><a href="b.html#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
-<span id="cb11-4"><a href="b.html#cb11-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb11-5"><a href="b.html#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="b.html#cb11-6" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb11-7"><a href="b.html#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">6</span><span class="sc">:</span><span class="dv">10</span>,</span>
-<span id="cb11-8"><a href="b.html#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> LETTERS[<span class="dv">6</span><span class="sc">:</span><span class="dv">10</span>]</span>
-<span id="cb11-9"><a href="b.html#cb11-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb11-10"><a href="b.html#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-11"><a href="b.html#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(a, b)</span></code></pre></div>
-<pre><code>## # A tibble: 10 x 3
-##       id a     b    
-##    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
-##  1     1 A     &lt;NA&gt; 
-##  2     2 B     &lt;NA&gt; 
-##  3     3 C     &lt;NA&gt; 
-##  4     4 D     &lt;NA&gt; 
-##  5     5 E     &lt;NA&gt; 
-##  6     6 &lt;NA&gt;  F    
-##  7     7 &lt;NA&gt;  G    
-##  8     8 &lt;NA&gt;  H    
-##  9     9 &lt;NA&gt;  I    
-## 10    10 &lt;NA&gt;  J</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="b.html#cb13-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb13-2"><a href="b.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
-<span id="cb13-3"><a href="b.html#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
-<span id="cb13-4"><a href="b.html#cb13-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-5"><a href="b.html#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="b.html#cb13-6" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb13-7"><a href="b.html#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> LETTERS[<span class="dv">6</span><span class="sc">:</span><span class="dv">10</span>],</span>
-<span id="cb13-8"><a href="b.html#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">c =</span> <span class="dv">6</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb13-9"><a href="b.html#cb13-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-10"><a href="b.html#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-11"><a href="b.html#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_cols</span>(a, b)</span></code></pre></div>
-<pre><code>## # A tibble: 5 x 4
-##      id a     b         c
-##   &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
-## 1     1 A     F         6
-## 2     2 B     G         7
-## 3     3 C     H         8
-## 4     4 D     I         9
-## 5     5 E     J        10</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="b.html#cb8-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb8-2"><a href="b.html#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb8-3"><a href="b.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb8-4"><a href="b.html#cb8-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-5"><a href="b.html#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="b.html#cb8-6" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb8-7"><a href="b.html#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">6</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="cb8-8"><a href="b.html#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> LETTERS[<span class="dv">6</span><span class="sc">:</span><span class="dv">10</span>]</span>
+<span id="cb8-9"><a href="b.html#cb8-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-10"><a href="b.html#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="b.html#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(a, b)</span>
+<span id="cb8-12"><a href="b.html#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 10 x 3</span></span>
+<span id="cb8-13"><a href="b.html#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       id a     b    </span></span>
+<span id="cb8-14"><a href="b.html#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;</span></span>
+<span id="cb8-15"><a href="b.html#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1     1 A     &lt;NA&gt; </span></span>
+<span id="cb8-16"><a href="b.html#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2     2 B     &lt;NA&gt; </span></span>
+<span id="cb8-17"><a href="b.html#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3     3 C     &lt;NA&gt; </span></span>
+<span id="cb8-18"><a href="b.html#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4     4 D     &lt;NA&gt; </span></span>
+<span id="cb8-19"><a href="b.html#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5     5 E     &lt;NA&gt; </span></span>
+<span id="cb8-20"><a href="b.html#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6     6 &lt;NA&gt;  F    </span></span>
+<span id="cb8-21"><a href="b.html#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7     7 &lt;NA&gt;  G    </span></span>
+<span id="cb8-22"><a href="b.html#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8     8 &lt;NA&gt;  H    </span></span>
+<span id="cb8-23"><a href="b.html#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9     9 &lt;NA&gt;  I    </span></span>
+<span id="cb8-24"><a href="b.html#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10    10 &lt;NA&gt;  J</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="b.html#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb9-2"><a href="b.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb9-3"><a href="b.html#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb9-4"><a href="b.html#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-5"><a href="b.html#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="b.html#cb9-6" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb9-7"><a href="b.html#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">b =</span> LETTERS[<span class="dv">6</span><span class="sc">:</span><span class="dv">10</span>],</span>
+<span id="cb9-8"><a href="b.html#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">c =</span> <span class="dv">6</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb9-9"><a href="b.html#cb9-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-10"><a href="b.html#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="b.html#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_cols</span>(a, b)</span>
+<span id="cb9-12"><a href="b.html#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 5 x 4</span></span>
+<span id="cb9-13"><a href="b.html#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      id a     b         c</span></span>
+<span id="cb9-14"><a href="b.html#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;</span></span>
+<span id="cb9-15"><a href="b.html#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1     1 A     F         6</span></span>
+<span id="cb9-16"><a href="b.html#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2     2 B     G         7</span></span>
+<span id="cb9-17"><a href="b.html#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3     3 C     H         8</span></span>
+<span id="cb9-18"><a href="b.html#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4     4 D     I         9</span></span>
+<span id="cb9-19"><a href="b.html#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5     5 E     J        10</span></span></code></pre></div>
 
 </div>
 <div id="binomial-distribution" class="section level2">
 <h2>binomial distribution</h2>
 <p><dfn>The <a href="d.html#distribution">distribution</a> of data where each observation can have one of two outcomes, like success/failure, yes/no or head/tails. </dfn></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="b.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># flip 10 coins 10000 times</span></span>
-<span id="cb15-2"><a href="b.html#cb15-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">10000</span>, <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="b.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># flip 10 coins 10000 times</span></span>
+<span id="cb10-2"><a href="b.html#cb10-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">10000</span>, <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:binom-plot"></span>
 <img src="_main_files/figure-html/binom-plot-1.png" alt="Binomial Distribution" width="100%" />
 <p class="caption">

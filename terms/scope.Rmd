@@ -1,0 +1,32 @@
+## scope
+
+<dfn>The [environment](e.html#environment) where an [object](o.html#object) is available</dfn>
+
+The main thing you need to know about scope involves writing your own [functions](f.html#function). Objects created inside a function are only available inside the function and not outside. 
+
+```{r}
+y <- 5 # this y is global
+
+x <- function() {
+  y <- 10 # this y is local
+  return(y)
+}
+
+x() # returns the local value of y
+y # returns the global value of y
+```
+
+If you have arguments to a function, they are local variables inside the function and their values will overwrite any global variables with the same name.
+
+```{r}
+y <- 5 # this y is global
+
+x <- function(y) {
+  y <- y + 1 # this uses the local value of y
+  return(y)
+}
+
+x(10) # returns 10 + 1
+y     # y is still 5
+```
+

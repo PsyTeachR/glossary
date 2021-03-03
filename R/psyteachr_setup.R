@@ -9,11 +9,13 @@ library(webex)
 # default knitr options
 knitr::opts_chunk$set(
   echo       = TRUE,
-  results    = "hold",
+  #results    = "hold",
   out.width = '100%',
   fig.width  = 8, 
   fig.height = 5, 
   fig.align = 'center',
+  collapse = TRUE,
+  comment = "#>",
   fig.cap='**CAPTION THIS FIGURE!!**'
 )
 

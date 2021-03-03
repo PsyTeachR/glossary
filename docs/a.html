@@ -198,6 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#effect"><i class="fa fa-check"></i>effect</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#element"><i class="fa fa-check"></i>element</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#ellipsis"><i class="fa fa-check"></i>ellipsis</a></li>
+<li class="chapter" data-level="" data-path="e.html"><a href="e.html#environment"><i class="fa fa-check"></i>environment</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#error-term"><i class="fa fa-check"></i>error term</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#escape"><i class="fa fa-check"></i>escape</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#extension"><i class="fa fa-check"></i>extension</a></li>
@@ -318,6 +319,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html"><i class="fa fa-check"></i>S</a>
 <ul>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sample"><i class="fa fa-check"></i>sample</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#scope"><i class="fa fa-check"></i>scope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#script"><i class="fa fa-check"></i>script</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#server"><i class="fa fa-check"></i>server</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sesoi"><i class="fa fa-check"></i>SESOI</a></li>
@@ -405,8 +407,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>For example, if your <a href="w.html#working-directory">working directory</a> is <code>/Users/me/study/</code> and you want to refer to a file in the directory <code>data</code> called <code>faces.csv</code>, the absolute path is <code>/Users/me/study/data/faces.csv</code>.</p>
 <p>However, you should normally use <a href="r.html#relative-path">relative paths</a> in scripts, not absolute paths, which can change when you move a project directory to a new computer or even a new place on your computer.</p>
 <p>The package R.utils has a function <code>getAbsolutePath()</code> that returns the absolute path of a file <a href="p.html#path">path</a> or a file <a href="o.html#object">object</a>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="a.html#cb5-1" aria-hidden="true" tabindex="-1"></a>R.utils<span class="sc">::</span><span class="fu">getAbsolutePath</span>(<span class="st">&quot;../index.Rmd&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;/Users/lisad/rproj/psyteachr/index.Rmd&quot;</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="a.html#cb5-1" aria-hidden="true" tabindex="-1"></a>R.utils<span class="sc">::</span><span class="fu">getAbsolutePath</span>(<span class="st">&quot;../index.Rmd&quot;</span>)</span>
+<span id="cb5-2"><a href="a.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;/Users/lisad/rproj/psyteachr/index.Rmd&quot;</span></span></code></pre></div>
 
 </div>
 <div id="alpha" class="section level2">
@@ -422,18 +424,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>For example, the first <strong>argument</strong> to the function <code>rnorm()</code> is <code>n</code> (the number of observations).</p>
 <p>When you look up the help for a function (e.g., <code>?sd</code>), you will see a section called <strong><code>Arguments</code></strong>, which lists the argument names and their definitions.</p>
 <p>The function <code>args()</code> will show you the argument names and their <a href="d.html#default-value">default values</a> (if any) for any function.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="a.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">args</span>(rnorm)</span></code></pre></div>
-<pre><code>## function (n, mean = 0, sd = 1) 
-## NULL</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="a.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">args</span>(rnorm)</span>
+<span id="cb6-2"><a href="a.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; function (n, mean = 0, sd = 1) </span></span>
+<span id="cb6-3"><a href="a.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; NULL</span></span></code></pre></div>
 
 </div>
 <div id="assignment-operator" class="section level2">
 <h2>assignment operator</h2>
 <p><dfn>The symbol <code>&lt;-</code>, which functions like <code>=</code> and assigns the value on the right to the object on the left</dfn></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="a.html#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb9-2"><a href="a.html#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="a.html#cb9-3" aria-hidden="true" tabindex="-1"></a>a</span></code></pre></div>
-<pre><code>## [1] 1</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="a.html#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb7-2"><a href="a.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="a.html#cb7-3" aria-hidden="true" tabindex="-1"></a>a</span>
+<span id="cb7-4"><a href="a.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span></code></pre></div>
 
 </div>
 </div>

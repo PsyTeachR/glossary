@@ -8,7 +8,7 @@ fig:geom-violin
 fig:geom-pointrange
 fig:geom-crossbar
 tab:long-data
-tab:unnamed-chunk-127
+tab:unnamed-chunk-123
 fig:left-join
 fig:right-join
 fig:inner-join
@@ -17,10 +17,10 @@ fig:normal-plot
 fig:img-panes
 fig:piosson-plot
 fig:new-project
-fig:unnamed-chunk-170
+fig:unnamed-chunk-166
 fig:qq-A
 fig:qq-unif
-fig:unnamed-chunk-203
+fig:unnamed-chunk-202
 fig:unif-plot
-tab:unnamed-chunk-225
+tab:unnamed-chunk-224
 tab:wide-data

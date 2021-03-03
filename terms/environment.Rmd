@@ -1,0 +1,13 @@
+## environment
+
+<dfn>A data structure that contains R objects such as variables and functions</dfn>
+
+The Environment [pane](p.html#panes) defaults to showing the contents of the Global Environment. This is where [objects](o.html#object) defined in the [console](c.html#console) or interactively running [scripts](s.html#script) are stored. You can also use the code `ls()` to list all objects.
+
+When you restart R, the global environment should clear. If it doesn't, go to **`Global Options...`** under the Tools menu (⌘,), and uncheck the box that says Restore .RData into workspace at startup. If you keep things around in your workspace, things will get messy, and unexpected things will happen. You should always start with a clear workspace. This also means that you never want to save your workspace when you exit, so set this to Never. The only thing you want to save are your scripts.
+
+You can also use the code `rm(list = ls())` or click on the broom icon in the Environment pane to clear the global environment without restarting R.
+
+When you [knit](k.html#knit) an [R markdown](r.html#r-markdown) file, this happens in a new environment, so if any of your code relies on objects you created outside your script, that code will run interactively in R Studio, but will fail when you knit because the objects in the gloabl environment are not available in the knitting environment.
+
+If you start writing your own functions, you need to understand a little about [scope](s.html#scope) and how the environment inside a function is not the same as the global environment. The [Environments chapter](http://adv-r.had.co.nz/Environments.html) in Advanced R is a good resource for advanced understanding.

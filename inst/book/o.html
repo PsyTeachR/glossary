@@ -198,6 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#effect"><i class="fa fa-check"></i>effect</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#element"><i class="fa fa-check"></i>element</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#ellipsis"><i class="fa fa-check"></i>ellipsis</a></li>
+<li class="chapter" data-level="" data-path="e.html"><a href="e.html#environment"><i class="fa fa-check"></i>environment</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#error-term"><i class="fa fa-check"></i>error term</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#escape"><i class="fa fa-check"></i>escape</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#extension"><i class="fa fa-check"></i>extension</a></li>
@@ -318,6 +319,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html"><i class="fa fa-check"></i>S</a>
 <ul>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sample"><i class="fa fa-check"></i>sample</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#scope"><i class="fa fa-check"></i>scope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#script"><i class="fa fa-check"></i>script</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#server"><i class="fa fa-check"></i>server</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sesoi"><i class="fa fa-check"></i>SESOI</a></li>
@@ -432,18 +434,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>All of the data about a single trial or question.</dfn></p>
 <p>In a tidy dataset, each row contains only one observation.</p>
 <p>Each row contains 3 observations:</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="o.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb107-2"><a href="o.html#cb107-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb107-3"><a href="o.html#cb107-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb107-4"><a href="o.html#cb107-4" aria-hidden="true" tabindex="-1"></a>untidy <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb107-5"><a href="o.html#cb107-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
-<span id="cb107-6"><a href="o.html#cb107-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">score_1 =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
-<span id="cb107-7"><a href="o.html#cb107-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">score_2 =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
-<span id="cb107-8"><a href="o.html#cb107-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">score_3 =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
-<span id="cb107-9"><a href="o.html#cb107-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">rt_1 =</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>(),</span>
-<span id="cb107-10"><a href="o.html#cb107-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">rt_2 =</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>(),</span>
-<span id="cb107-11"><a href="o.html#cb107-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">rt_3 =</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>()</span>
-<span id="cb107-12"><a href="o.html#cb107-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="o.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb60-2"><a href="o.html#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb60-3"><a href="o.html#cb60-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-4"><a href="o.html#cb60-4" aria-hidden="true" tabindex="-1"></a>untidy <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb60-5"><a href="o.html#cb60-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb60-6"><a href="o.html#cb60-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">score_1 =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
+<span id="cb60-7"><a href="o.html#cb60-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">score_2 =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
+<span id="cb60-8"><a href="o.html#cb60-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">score_3 =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
+<span id="cb60-9"><a href="o.html#cb60-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">rt_1 =</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>(),</span>
+<span id="cb60-10"><a href="o.html#cb60-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">rt_2 =</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>(),</span>
+<span id="cb60-11"><a href="o.html#cb60-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">rt_3 =</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>()</span>
+<span id="cb60-12"><a href="o.html#cb60-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -505,10 +507,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 <p>Now each row contains 1 observation:</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="o.html#cb108-1" aria-hidden="true" tabindex="-1"></a>tidy <span class="ot">&lt;-</span> untidy <span class="sc">%&gt;%</span></span>
-<span id="cb108-2"><a href="o.html#cb108-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gather</span>(var, val, score_1<span class="sc">:</span>rt_3) <span class="sc">%&gt;%</span></span>
-<span id="cb108-3"><a href="o.html#cb108-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(var, <span class="fu">c</span>(<span class="st">&quot;var&quot;</span>, <span class="st">&quot;trial&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb108-4"><a href="o.html#cb108-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">spread</span>(var, val)</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="o.html#cb61-1" aria-hidden="true" tabindex="-1"></a>tidy <span class="ot">&lt;-</span> untidy <span class="sc">%&gt;%</span></span>
+<span id="cb61-2"><a href="o.html#cb61-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gather</span>(var, val, score_1<span class="sc">:</span>rt_3) <span class="sc">%&gt;%</span></span>
+<span id="cb61-3"><a href="o.html#cb61-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(var, <span class="fu">c</span>(<span class="st">&quot;var&quot;</span>, <span class="st">&quot;trial&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb61-4"><a href="o.html#cb61-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">spread</span>(var, val)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">

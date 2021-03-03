@@ -198,6 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#effect"><i class="fa fa-check"></i>effect</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#element"><i class="fa fa-check"></i>element</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#ellipsis"><i class="fa fa-check"></i>ellipsis</a></li>
+<li class="chapter" data-level="" data-path="e.html"><a href="e.html#environment"><i class="fa fa-check"></i>environment</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#error-term"><i class="fa fa-check"></i>error term</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#escape"><i class="fa fa-check"></i>escape</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#extension"><i class="fa fa-check"></i>extension</a></li>
@@ -318,6 +319,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html"><i class="fa fa-check"></i>S</a>
 <ul>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sample"><i class="fa fa-check"></i>sample</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#scope"><i class="fa fa-check"></i>scope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#script"><i class="fa fa-check"></i>script</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#server"><i class="fa fa-check"></i>server</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sesoi"><i class="fa fa-check"></i>SESOI</a></li>
@@ -440,13 +442,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>relative path</h2>
 <p><dfn>The location of a file in relation to the working directory.</dfn></p>
 <p>For example, if your <a href="w.html#working-directory">working directory</a> is <code>/Users/me/study/</code> and you want to refer to a file at <code>/Users/me/study/data/faces.csv</code>, the relative path is <code>data/faces.csv</code>. Use <code>../</code> to move up one directory.</p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="r.html#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the working directory: /Users/me/study/</span></span>
-<span id="cb129-2"><a href="r.html#cb129-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb129-3"><a href="r.html#cb129-3" aria-hidden="true" tabindex="-1"></a><span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span></span>
-<span id="cb129-4"><a href="r.html#cb129-4" aria-hidden="true" tabindex="-1"></a>qdat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/faces.csv&quot;</span>)</span>
-<span id="cb129-5"><a href="r.html#cb129-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb129-6"><a href="r.html#cb129-6" aria-hidden="true" tabindex="-1"></a><span class="co"># read a file outside the wd: /Users/me/other_study/data/exp.csv</span></span>
-<span id="cb129-7"><a href="r.html#cb129-7" aria-hidden="true" tabindex="-1"></a>xdat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;../other_study/data/exp.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="r.html#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the working directory: /Users/me/study/</span></span>
+<span id="cb76-2"><a href="r.html#cb76-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-3"><a href="r.html#cb76-3" aria-hidden="true" tabindex="-1"></a><span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span></span>
+<span id="cb76-4"><a href="r.html#cb76-4" aria-hidden="true" tabindex="-1"></a>qdat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/faces.csv&quot;</span>)</span>
+<span id="cb76-5"><a href="r.html#cb76-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-6"><a href="r.html#cb76-6" aria-hidden="true" tabindex="-1"></a><span class="co"># read a file outside the wd: /Users/me/other_study/data/exp.csv</span></span>
+<span id="cb76-7"><a href="r.html#cb76-7" aria-hidden="true" tabindex="-1"></a>xdat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;../other_study/data/exp.csv&quot;</span>)</span></code></pre></div>
 <p>Make sure you always use relative paths in an <a href="r.html#r-markdown">R Markdown</a> document, which automatically sets the working directory to the directory that contains the .Rmd file.</p>
 <p>Contrast with <a href="a.html#absolute-path">absolute path</a>.</p>
 

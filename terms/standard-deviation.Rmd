@@ -4,9 +4,7 @@
 
 If the data points are further from the mean, there is a higher standard deviation. Standard deviation is calculated as the square root of the [variance](v.html#variance). 
 
-Normal distributions with means of 0 and SDs of 1 (red), 2 (blue) and 3 (purple).
-
-```{r, echo = FALSE}
+```{r, echo = FALSE, fig.cap = "Normal distributions with means of 0 and SDs of 1 (red), 2 (blue) and 3 (purple)."}
 library(ggplot2)
 ggplot(data = data.frame(x = c(-10, 10)), aes(x)) +
   stat_function(fun = dnorm, n = 101, args = list(mean = 0, sd = 3), color = "purple", size = 2) + 

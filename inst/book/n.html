@@ -198,6 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#effect"><i class="fa fa-check"></i>effect</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#element"><i class="fa fa-check"></i>element</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#ellipsis"><i class="fa fa-check"></i>ellipsis</a></li>
+<li class="chapter" data-level="" data-path="e.html"><a href="e.html#environment"><i class="fa fa-check"></i>environment</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#error-term"><i class="fa fa-check"></i>error term</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#escape"><i class="fa fa-check"></i>escape</a></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html#extension"><i class="fa fa-check"></i>extension</a></li>
@@ -318,6 +319,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html"><i class="fa fa-check"></i>S</a>
 <ul>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sample"><i class="fa fa-check"></i>sample</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#scope"><i class="fa fa-check"></i>scope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#script"><i class="fa fa-check"></i>script</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#server"><i class="fa fa-check"></i>server</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#sesoi"><i class="fa fa-check"></i>SESOI</a></li>
@@ -413,9 +415,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>normal distribution</h2>
 <p><dfn>A symmetric distribution of data where values near the centre are most probable.</dfn></p>
 <p>A normal distribution is characterised by its <a href="m.html#mean">mean</a> and <a href="s.html#standard-deviation">standard deviation</a>. You can sample numbers from a simulated normal distribution with the function <code>rnorm()</code>.</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="n.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sample 1 million numbers from a normal distribution with </span></span>
-<span id="cb80-2"><a href="n.html#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="co"># a mean of 0 and a standard deviation of 1</span></span>
-<span id="cb80-3"><a href="n.html#cb80-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000000</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="n.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sample 1 million numbers from a normal distribution with </span></span>
+<span id="cb47-2"><a href="n.html#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="co"># a mean of 0 and a standard deviation of 1</span></span>
+<span id="cb47-3"><a href="n.html#cb47-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000000</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:normal-plot"></span>
 <img src="_main_files/figure-html/normal-plot-1.png" alt="Normal Distribution" width="100%" />
 <p class="caption">
@@ -423,13 +425,13 @@ Figure 14: Normal Distribution
 </p>
 </div>
 <p>About 68% of the values are within 1 SD of the mean.</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="n.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="co"># proportion between -1 and 1</span></span>
-<span id="cb81-2"><a href="n.html#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x <span class="sc">&gt;</span> <span class="sc">-</span><span class="dv">1</span> <span class="sc">&amp;</span> x <span class="sc">&lt;</span> <span class="dv">1</span>)</span></code></pre></div>
-<pre><code>## [1] 0.682617</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="n.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># proportion between -1 and 1</span></span>
+<span id="cb48-2"><a href="n.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x <span class="sc">&gt;</span> <span class="sc">-</span><span class="dv">1</span> <span class="sc">&amp;</span> x <span class="sc">&lt;</span> <span class="dv">1</span>)</span>
+<span id="cb48-3"><a href="n.html#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.682617</span></span></code></pre></div>
 <p>About 95% of the values are within 2 SDs of the mean.</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="n.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="co"># proportion between -2 and 2</span></span>
-<span id="cb83-2"><a href="n.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x <span class="sc">&gt;</span> <span class="sc">-</span><span class="dv">2</span> <span class="sc">&amp;</span> x <span class="sc">&lt;</span> <span class="dv">2</span>)</span></code></pre></div>
-<pre><code>## [1] 0.954465</code></pre>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="n.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># proportion between -2 and 2</span></span>
+<span id="cb49-2"><a href="n.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x <span class="sc">&gt;</span> <span class="sc">-</span><span class="dv">2</span> <span class="sc">&amp;</span> x <span class="sc">&lt;</span> <span class="dv">2</span>)</span>
+<span id="cb49-3"><a href="n.html#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.954465</span></span></code></pre></div>
 
 </div>
 <div id="null-effect" class="section level2">
@@ -443,33 +445,33 @@ Figure 14: Normal Distribution
 <p><dfn>A <a href="d.html#data-type">data type</a> representing a real decimal number or integer.</dfn></p>
 <p>The <a href="i.html#integer">integer</a> and <a href="d.html#double">double</a> data types are numeric.</p>
 <p>You can check if a variable is numeric using the function <code>is.numeric</code> and you can convert a variable to its numeric representation using the function <code>as.numeric</code>.</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="n.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(<span class="fl">2.4</span>)</span></code></pre></div>
-<pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="n.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(2L)</span></code></pre></div>
-<pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="n.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co"># complex numbers are not numeric </span></span>
-<span id="cb89-2"><a href="n.html#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(2i)</span></code></pre></div>
-<pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="n.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(<span class="st">&quot;A&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="n.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># numbers represented as strings are not numeric</span></span>
-<span id="cb93-2"><a href="n.html#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(<span class="st">&quot;3&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="n.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="fl">2.4</span>)</span></code></pre></div>
-<pre><code>## [1] 2.4</code></pre>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="n.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(2L)</span></code></pre></div>
-<pre><code>## [1] 2</code></pre>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="n.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the imaginary part of complex numbers is discarded when converting to numeric</span></span>
-<span id="cb99-2"><a href="n.html#cb99-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="dv">3</span><span class="sc">+</span>2i)</span></code></pre></div>
-<pre><code>## Warning: imaginary parts discarded in coercion</code></pre>
-<pre><code>## [1] 3</code></pre>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="n.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="co"># strings that do not represent numbers are converted to NA</span></span>
-<span id="cb102-2"><a href="n.html#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="st">&quot;A&quot;</span>)</span></code></pre></div>
-<pre><code>## Warning: NAs introduced by coercion</code></pre>
-<pre><code>## [1] NA</code></pre>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="n.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="co"># numbers represented as strings can be convertd to their numeric version</span></span>
-<span id="cb105-2"><a href="n.html#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="st">&quot;3&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="n.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(<span class="fl">2.4</span>)</span>
+<span id="cb50-2"><a href="n.html#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="n.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(2L)</span>
+<span id="cb51-2"><a href="n.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="n.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># complex numbers are not numeric </span></span>
+<span id="cb52-2"><a href="n.html#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(2i)</span>
+<span id="cb52-3"><a href="n.html#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="n.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(<span class="st">&quot;A&quot;</span>)</span>
+<span id="cb53-2"><a href="n.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="n.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># numbers represented as strings are not numeric</span></span>
+<span id="cb54-2"><a href="n.html#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(<span class="st">&quot;3&quot;</span>)</span>
+<span id="cb54-3"><a href="n.html#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="n.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="fl">2.4</span>)</span>
+<span id="cb55-2"><a href="n.html#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2.4</span></span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="n.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(2L)</span>
+<span id="cb56-2"><a href="n.html#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2</span></span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="n.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the imaginary part of complex numbers is discarded when converting to numeric</span></span>
+<span id="cb57-2"><a href="n.html#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="dv">3</span><span class="sc">+</span>2i)</span>
+<span id="cb57-3"><a href="n.html#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: imaginary parts discarded in coercion</span></span>
+<span id="cb57-4"><a href="n.html#cb57-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 3</span></span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="n.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># strings that do not represent numbers are converted to NA</span></span>
+<span id="cb58-2"><a href="n.html#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="st">&quot;A&quot;</span>)</span>
+<span id="cb58-3"><a href="n.html#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: NAs introduced by coercion</span></span>
+<span id="cb58-4"><a href="n.html#cb58-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] NA</span></span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="n.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co"># numbers represented as strings can be convertd to their numeric version</span></span>
+<span id="cb59-2"><a href="n.html#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="st">&quot;3&quot;</span>)</span>
+<span id="cb59-3"><a href="n.html#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 3</span></span></code></pre></div>
 
 </div>
 </div>
