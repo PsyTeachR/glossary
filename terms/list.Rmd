@@ -2,4 +2,15 @@
 
 <dfn>A [container](c.html#container) data type that allows items with different data types to be grouped together.</dfn>
 
+Each item in a list can be any type of R [object](o.html#object), but is usually a [vector](v.html#vector) or another list.
+
+```{r}
+list(
+  integers = 1:10,
+  strings = LETTERS,
+  another_list = list(1, "A", TRUE),
+  object = rnorm
+)
+```
+
 

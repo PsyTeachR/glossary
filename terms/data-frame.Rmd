@@ -1,0 +1,15 @@
+## data frame
+
+<dfn>A [container](c.html#container) data type for storing [tabular data](t.html#tabular-data).</dfn>
+
+```{r}
+data.frame(
+  id = 1:5,
+  name = c("Lisa", "Phil", "Helena", "Rachel", "Jack")
+)
+```
+
+
+
+
+

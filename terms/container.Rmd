@@ -1,6 +1,23 @@
 ## container
 
-<dfn>A data structure that aggregates data, such as a list or data frame</dfn>
+<dfn>A data structure that aggregates data, such as a [vector](v.html#vector), [list](l.html#list), [matrix](m.html#matrix), or [data frame](d.html#data-frame)</dfn>
+
+```{r}
+# vector
+c(1,2,3,4) 
+# list
+list(1, "A", TRUE)
+# matrix
+matrix(1:6, nrow = 2)
+# data frame
+data.frame(
+  id = 1:5,
+  name = c("Lisa", "Phil", "Helena", "Rachel", "Jack")
+)
+```
+
+
+A container may also refer to a virtual software environment that can be used to make sure that your code has the intended versions of all packages. [Docker](https://www.docker.com/){target="_blank"}, [Binder](https://mybinder.org/){target="_blank"} and [Code Ocean](https://codeocean.com/){target="_blank"} are popular conatiner types.
 
 
 

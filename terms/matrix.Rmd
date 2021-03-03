@@ -1,6 +1,6 @@
 ## matrix
 
-<dfn>A collection of numbers arranged into a fixed number of rows and columns</dfn>
+<dfn>A [container](c.html#container) data type consisting of numbers arranged into a fixed number of rows and columns</dfn>
 
 You can use the `matrix()` function to set up a [vector](v.htm#vector) of numbers as a matrix with a specified number of rows of columns.
 

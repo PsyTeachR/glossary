@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html"><i class="fa fa-check"></i>B</a>
 <ul>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#base-r"><i class="fa fa-check"></i>base R</a></li>
+<li class="chapter" data-level="" data-path="b.html"><a href="b.html#beta-distribution"><i class="fa fa-check"></i>beta distribution</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#beta"><i class="fa fa-check"></i>beta</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binding-joins"><i class="fa fa-check"></i>binding joins</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binomial-distribution"><i class="fa fa-check"></i>binomial distribution</a></li>
@@ -180,6 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html"><i class="fa fa-check"></i>D</a>
 <ul>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-frame"><i class="fa fa-check"></i>data frame</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-type"><i class="fa fa-check"></i>data type</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-wrangling"><i class="fa fa-check"></i>data wrangling</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#default-value"><i class="fa fa-check"></i>default value</a></li>
@@ -508,7 +510,38 @@ Remember, a <a href="v.html#vector">vector</a> can only have one <a href="d.html
 </div>
 <div id="container" class="section level2">
 <h2>container</h2>
-<p><dfn>A data structure that aggregates data, such as a list or data frame</dfn></p>
+<p><dfn>A data structure that aggregates data, such as a <a href="v.html#vector">vector</a>, <a href="l.html#list">list</a>, <a href="m.html#matrix">matrix</a>, or <a href="d.html#data-frame">data frame</a></dfn></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="c.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># vector</span></span>
+<span id="cb26-2"><a href="c.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>) </span>
+<span id="cb26-3"><a href="c.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># list</span></span>
+<span id="cb26-4"><a href="c.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(<span class="dv">1</span>, <span class="st">&quot;A&quot;</span>, <span class="cn">TRUE</span>)</span>
+<span id="cb26-5"><a href="c.html#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="co"># matrix</span></span>
+<span id="cb26-6"><a href="c.html#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb26-7"><a href="c.html#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co"># data frame</span></span>
+<span id="cb26-8"><a href="c.html#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb26-9"><a href="c.html#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb26-10"><a href="c.html#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">&quot;Lisa&quot;</span>, <span class="st">&quot;Phil&quot;</span>, <span class="st">&quot;Helena&quot;</span>, <span class="st">&quot;Rachel&quot;</span>, <span class="st">&quot;Jack&quot;</span>)</span>
+<span id="cb26-11"><a href="c.html#cb26-11" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## [1] 1 2 3 4
+## [[1]]
+## [1] 1
+## 
+## [[2]]
+## [1] &quot;A&quot;
+## 
+## [[3]]
+## [1] TRUE
+## 
+##      [,1] [,2] [,3]
+## [1,]    1    3    5
+## [2,]    2    4    6
+##   id   name
+## 1  1   Lisa
+## 2  2   Phil
+## 3  3 Helena
+## 4  4 Rachel
+## 5  5   Jack</code></pre>
+<p>A container may also refer to a virtual software environment that can be used to make sure that your code has the intended versions of all packages. <a href="https://www.docker.com/" target="_blank">Docker</a>, <a href="https://mybinder.org/" target="_blank">Binder</a> and <a href="https://codeocean.com/" target="_blank">Code Ocean</a> are popular conatiner types.</p>
 
 </div>
 <div id="continuous" class="section level2">

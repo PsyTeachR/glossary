@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html"><i class="fa fa-check"></i>B</a>
 <ul>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#base-r"><i class="fa fa-check"></i>base R</a></li>
+<li class="chapter" data-level="" data-path="b.html"><a href="b.html#beta-distribution"><i class="fa fa-check"></i>beta distribution</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#beta"><i class="fa fa-check"></i>beta</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binding-joins"><i class="fa fa-check"></i>binding joins</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binomial-distribution"><i class="fa fa-check"></i>binomial distribution</a></li>
@@ -180,6 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html"><i class="fa fa-check"></i>D</a>
 <ul>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-frame"><i class="fa fa-check"></i>data frame</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-type"><i class="fa fa-check"></i>data type</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-wrangling"><i class="fa fa-check"></i>data wrangling</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#default-value"><i class="fa fa-check"></i>default value</a></li>
@@ -454,31 +456,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="list" class="section level2">
 <h2>list</h2>
 <p><dfn>A <a href="c.html#container">container</a> data type that allows items with different data types to be grouped together.</dfn></p>
+<p>Each item in a list can be any type of R <a href="o.html#object">object</a>, but is usually a <a href="v.html#vector">vector</a> or another list.</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="l.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb64-2"><a href="l.html#cb64-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">integers =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="cb64-3"><a href="l.html#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">strings =</span> LETTERS,</span>
+<span id="cb64-4"><a href="l.html#cb64-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">another_list =</span> <span class="fu">list</span>(<span class="dv">1</span>, <span class="st">&quot;A&quot;</span>, <span class="cn">TRUE</span>),</span>
+<span id="cb64-5"><a href="l.html#cb64-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">object =</span> rnorm</span>
+<span id="cb64-6"><a href="l.html#cb64-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## $integers
+##  [1]  1  2  3  4  5  6  7  8  9 10
+## 
+## $strings
+##  [1] &quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;D&quot; &quot;E&quot; &quot;F&quot; &quot;G&quot; &quot;H&quot; &quot;I&quot; &quot;J&quot; &quot;K&quot; &quot;L&quot; &quot;M&quot; &quot;N&quot; &quot;O&quot; &quot;P&quot; &quot;Q&quot; &quot;R&quot;
+## [19] &quot;S&quot; &quot;T&quot; &quot;U&quot; &quot;V&quot; &quot;W&quot; &quot;X&quot; &quot;Y&quot; &quot;Z&quot;
+## 
+## $another_list
+## $another_list[[1]]
+## [1] 1
+## 
+## $another_list[[2]]
+## [1] &quot;A&quot;
+## 
+## $another_list[[3]]
+## [1] TRUE
+## 
+## 
+## $object
+## function (n, mean = 0, sd = 1) 
+## .Call(C_rnorm, n, mean, sd)
+## &lt;bytecode: 0x7fbb40bbd158&gt;
+## &lt;environment: namespace:stats&gt;</code></pre>
 
 </div>
 <div id="logical" class="section level2">
 <h2>logical</h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing <code>TRUE</code> or <code>FALSE</code> values.</dfn></p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="l.html#cb60-1" aria-hidden="true" tabindex="-1"></a>true_logical_values <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb60-2"><a href="l.html#cb60-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">full =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb60-3"><a href="l.html#cb60-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">abbreviated =</span> T,</span>
-<span id="cb60-4"><a href="l.html#cb60-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">integer =</span> <span class="fu">as.logical</span>(<span class="dv">1</span>),</span>
-<span id="cb60-5"><a href="l.html#cb60-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">equation =</span> <span class="st">&quot;A&quot;</span> <span class="sc">==</span> <span class="st">&quot;A&quot;</span></span>
-<span id="cb60-6"><a href="l.html#cb60-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb60-7"><a href="l.html#cb60-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(true_logical_values)</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="l.html#cb66-1" aria-hidden="true" tabindex="-1"></a>true_logical_values <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb66-2"><a href="l.html#cb66-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">full =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb66-3"><a href="l.html#cb66-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">abbreviated =</span> T,</span>
+<span id="cb66-4"><a href="l.html#cb66-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">integer =</span> <span class="fu">as.logical</span>(<span class="dv">1</span>),</span>
+<span id="cb66-5"><a href="l.html#cb66-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">equation =</span> <span class="st">&quot;A&quot;</span> <span class="sc">==</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb66-6"><a href="l.html#cb66-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb66-7"><a href="l.html#cb66-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(true_logical_values)</span></code></pre></div>
 <pre><code>## List of 4
 ##  $ full       : logi TRUE
 ##  $ abbreviated: logi TRUE
 ##  $ integer    : logi TRUE
 ##  $ equation   : logi TRUE</code></pre>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="l.html#cb62-1" aria-hidden="true" tabindex="-1"></a>false_logical_values <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb62-2"><a href="l.html#cb62-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">full =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb62-3"><a href="l.html#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">abbreviated =</span> F,</span>
-<span id="cb62-4"><a href="l.html#cb62-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">integer =</span> <span class="fu">as.logical</span>(<span class="dv">0</span>),</span>
-<span id="cb62-5"><a href="l.html#cb62-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">equation =</span> <span class="st">&quot;A&quot;</span> <span class="sc">==</span> <span class="st">&quot;B&quot;</span></span>
-<span id="cb62-6"><a href="l.html#cb62-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb62-7"><a href="l.html#cb62-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb62-8"><a href="l.html#cb62-8" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(false_logical_values)</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="l.html#cb68-1" aria-hidden="true" tabindex="-1"></a>false_logical_values <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb68-2"><a href="l.html#cb68-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">full =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb68-3"><a href="l.html#cb68-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">abbreviated =</span> F,</span>
+<span id="cb68-4"><a href="l.html#cb68-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">integer =</span> <span class="fu">as.logical</span>(<span class="dv">0</span>),</span>
+<span id="cb68-5"><a href="l.html#cb68-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">equation =</span> <span class="st">&quot;A&quot;</span> <span class="sc">==</span> <span class="st">&quot;B&quot;</span></span>
+<span id="cb68-6"><a href="l.html#cb68-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb68-7"><a href="l.html#cb68-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-8"><a href="l.html#cb68-8" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(false_logical_values)</span></code></pre></div>
 <pre><code>## List of 4
 ##  $ full       : logi FALSE
 ##  $ abbreviated: logi FALSE

@@ -2,4 +2,4 @@
 
 <dfn>A statistical measure for how much an average data point varies from the mean.</dfn>
 
-Variance is equal to [standard deviation](w.html#standard-deviation) squared. 
+Variance is equal to [standard deviation](s.html#standard-deviation) squared. 

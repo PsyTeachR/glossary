@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html"><i class="fa fa-check"></i>B</a>
 <ul>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#base-r"><i class="fa fa-check"></i>base R</a></li>
+<li class="chapter" data-level="" data-path="b.html"><a href="b.html#beta-distribution"><i class="fa fa-check"></i>beta distribution</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#beta"><i class="fa fa-check"></i>beta</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binding-joins"><i class="fa fa-check"></i>binding joins</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binomial-distribution"><i class="fa fa-check"></i>binomial distribution</a></li>
@@ -180,6 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html"><i class="fa fa-check"></i>D</a>
 <ul>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-frame"><i class="fa fa-check"></i>data frame</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-type"><i class="fa fa-check"></i>data type</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-wrangling"><i class="fa fa-check"></i>data wrangling</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#default-value"><i class="fa fa-check"></i>default value</a></li>
@@ -401,13 +403,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>whitespace</h2>
 <p><dfn>Spaces, tabs and line breaks</dfn></p>
 <p>R mostly ignores whitespace, so you can use it to help you organise your code.</p>
-<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="w.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a and b are identical</span></span>
-<span id="cb143-2"><a href="w.html#cb143-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">ctl =</span> <span class="st">&quot;Control Condition&quot;</span>, <span class="at">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, <span class="at">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span>
-<span id="cb143-3"><a href="w.html#cb143-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb143-4"><a href="w.html#cb143-4" aria-hidden="true" tabindex="-1"></a><span class="co"># but b is much easier to read</span></span>
-<span id="cb143-5"><a href="w.html#cb143-5" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">ctl  =</span> <span class="st">&quot;Control Condition&quot;</span>, </span>
-<span id="cb143-6"><a href="w.html#cb143-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, </span>
-<span id="cb143-7"><a href="w.html#cb143-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="w.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a and b are identical</span></span>
+<span id="cb150-2"><a href="w.html#cb150-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">ctl =</span> <span class="st">&quot;Control Condition&quot;</span>, <span class="at">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, <span class="at">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span>
+<span id="cb150-3"><a href="w.html#cb150-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb150-4"><a href="w.html#cb150-4" aria-hidden="true" tabindex="-1"></a><span class="co"># but b is much easier to read</span></span>
+<span id="cb150-5"><a href="w.html#cb150-5" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">ctl  =</span> <span class="st">&quot;Control Condition&quot;</span>, </span>
+<span id="cb150-6"><a href="w.html#cb150-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">exp1 =</span> <span class="st">&quot;Experimental Condition 1&quot;</span>, </span>
+<span id="cb150-7"><a href="w.html#cb150-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">exp2 =</span> <span class="st">&quot;Experimental Condition 2&quot;</span>)</span></code></pre></div>
+<p>You may also encounter the term in the context of formatting statistics. For example, the APA recommends using whitespace around equal signs.</p>
+<ul>
+<li>with whitespace: t(49) = 1.50, p = .140, d = 0.20</li>
+<li>without whitespace: t(49)=1.50, p=.140, d=0.20</li>
+</ul>
 
 </div>
 <div id="wide" class="section level2">
@@ -451,8 +458,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>working directory</h2>
 <p><dfn>The filepath where R is currently reading and writing files.</dfn></p>
 <p>If you are working in a <a href="p.html#project">project</a>, the working directory is usually the main project directory. So if you want to save a file into a folder called “data” in that project folder, you can use a <a href="r.html#relative-path">relative path</a>, which is automatically appended to the working directory, such as <code>readr::write_csv(my_data, "data/my_data.csv")</code>.</p>
-<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="w.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() .html<span class="co"># get the current working directory</span></span>
-<span id="cb144-2"><a href="w.html#cb144-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/r/myfiles&quot;</span>) .html<span class="co"># change the working directory</span></span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="w.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() .html<span class="co"># get the current working directory</span></span>
+<span id="cb151-2"><a href="w.html#cb151-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~/r/myfiles&quot;</span>) .html<span class="co"># change the working directory</span></span></code></pre></div>
 <div class="warning">
 <p>
 Never set or change your working directory in a script.

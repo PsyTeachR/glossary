@@ -13,3 +13,8 @@ b <- list(ctl  = "Control Condition",
           exp1 = "Experimental Condition 1", 
           exp2 = "Experimental Condition 2")
 ```
+
+You may also encounter the term in the context of formatting statistics. For example, the APA recommends using whitespace around equal signs.
+
+* with whitespace: t(49) = 1.50, p = .140, d = 0.20
+* without whitespace: t(49)=1.50, p=.140, d=0.20

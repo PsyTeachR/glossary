@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html"><i class="fa fa-check"></i>B</a>
 <ul>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#base-r"><i class="fa fa-check"></i>base R</a></li>
+<li class="chapter" data-level="" data-path="b.html"><a href="b.html#beta-distribution"><i class="fa fa-check"></i>beta distribution</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#beta"><i class="fa fa-check"></i>beta</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binding-joins"><i class="fa fa-check"></i>binding joins</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binomial-distribution"><i class="fa fa-check"></i>binomial distribution</a></li>
@@ -180,6 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html"><i class="fa fa-check"></i>D</a>
 <ul>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-frame"><i class="fa fa-check"></i>data frame</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-type"><i class="fa fa-check"></i>data type</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#data-wrangling"><i class="fa fa-check"></i>data wrangling</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#default-value"><i class="fa fa-check"></i>default value</a></li>
@@ -430,10 +432,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>set operations</h2>
 <p><dfn>Functions that compare two tables and return rows that match (intersect), are in either table (union), or are in one table but not the other (setdiff).</dfn></p>
 <p>The examples below use two small datasets. <code>a</code> has <code>id</code>s 1 to 5, and <code>b</code> has <code>id</code>s 3 to 7.</p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="s.html#cb124-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
-<span id="cb124-2"><a href="s.html#cb124-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">id =</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="s.html#cb130-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb130-2"><a href="s.html#cb130-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">id =</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>)</span></code></pre></div>
 <p><code>intersect()</code> returns all rows in two tables that match exactly. The columns don’t have to be in the same order.</p>
-<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="s.html#cb125-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">intersect</span>(a, b)</span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="s.html#cb131-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">intersect</span>(a, b)</span></code></pre></div>
 <pre><code>## # A tibble: 3 x 1
 ##      id
 ##   &lt;int&gt;
@@ -441,7 +443,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 2     4
 ## 3     5</code></pre>
 <p><code>union()</code> returns all the rows from both tables, removing duplicate rows.</p>
-<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="s.html#cb127-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">union</span>(a, b)</span></code></pre></div>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="s.html#cb133-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">union</span>(a, b)</span></code></pre></div>
 <pre><code>## # A tibble: 7 x 1
 ##      id
 ##   &lt;int&gt;
@@ -453,7 +455,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 6     6
 ## 7     7</code></pre>
 <p><code>setdiff</code> returns rows that are in the first table, but not in the second table.</p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="s.html#cb129-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">setdiff</span>(a, b)</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="s.html#cb135-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">setdiff</span>(a, b)</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 1
 ##      id
 ##   &lt;int&gt;
@@ -491,8 +493,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>A statistic that measures how spread out data are relative to the mean.</dfn></p>
 <p>If the data points are further from the mean, there is a higher standard deviation. Standard deviation is calculated as the square root of the <a href="v.html#variance">variance</a>.</p>
 <p>Normal distributions with means of 0 and SDs of 1 (red), 2 (blue) and 3 (purple).</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-193"></span>
-<img src="_main_files/figure-html/unnamed-chunk-193-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-203"></span>
+<img src="_main_files/figure-html/unnamed-chunk-203-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
 <p class="caption">
 Figure 21: <strong>CAPTION THIS FIGURE!!</strong>
 </p>
