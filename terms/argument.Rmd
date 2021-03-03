@@ -6,7 +6,7 @@ For example, the first **argument** to the function `rnorm()` is `n` (the number
 
 When you look up the help for a function (e.g., `?sd`), you will see a section called **`Arguments`**, which lists the argument names and their definitions.
 
-The function `args()` will show you the argument names and their [default values](d.html?default-value) (if any) for any function.
+The function `args()` will show you the argument names and their [default values](d.html#default-value) (if any) for any function.
 
 ```{r}
 args(rnorm)
