@@ -1,0 +1,7 @@
+## container
+
+<dfn>A data structure that aggregates data, such as a list or data frame</dfn>
+
+
+
+
