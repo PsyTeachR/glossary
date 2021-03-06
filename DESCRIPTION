@@ -23,7 +23,12 @@ Authors@R:
         role = c("ctb"), 
         email = "philip.mcaleer@glasgow.ac.uk", 
         comment = c(ORCID = "0000-0002-4523-2097")
-    ))
+    ),
+    person(given = "Helena",
+           family = "Paterson",
+           role = c("ctb"),
+           email = "Helena.Paterson@glasgow.ac.uk",
+           comment = c(ORCID = "0000-0001-7715-5973")))
 Description: Provides a glossary of statistical and R coding terms used in the PsyTeachR books in a bookdown format that can be accessed offline. 
 License: CC-BY-SA 4.0
 Encoding: UTF-8

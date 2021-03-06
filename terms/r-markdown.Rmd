@@ -2,6 +2,33 @@
 
 <dfn>The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code.</dfn>
 
+An R markdown file starts with a [YAML](y.html#yaml) header that usually contains the title, author, and output type. 
+
+```
+---
+title: "Analysis Plan Template"
+author: "School of Psychology, University of Glasgow"
+output: html_document
+---
+```
+
+The rest of the file is a mix of [markdown](m.html#markdown) and [code chunks](c.html#chunk). Here is an example of two section titles. The first section has an r chunk for loading the packages and the second section has a list of steps.
+
+````
+## Packages used
+
+```{r setup, include = FALSE}`r ''`
+# every time you add a new package, include it in this section
+library(tidyverse)
+```
+
+## Data Processing
+
+1. load in packages
+2. load in dataset
+3. Wrangle data into appropriate format for analysis and checks. You might want to reshape the data or combine different values to make a new variable. 
+````
+
 Resources:
 
 * [Introduction to R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)

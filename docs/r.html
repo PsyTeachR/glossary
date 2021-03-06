@@ -137,6 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#offline-access"><i class="fa fa-check"></i>Offline Access</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#cite"><i class="fa fa-check"></i>Cite</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="symbols.html"><a href="symbols.html"><i class="fa fa-check"></i>Symbols</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html"><i class="fa fa-check"></i>A</a>
@@ -432,6 +433,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="r-markdown" class="section level2">
 <h2>R markdown</h2>
 <p><dfn>The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code.</dfn></p>
+<p>An R markdown file starts with a <a href="y.html#yaml">YAML</a> header that usually contains the title, author, and output type.</p>
+<pre><code>---
+title: &quot;Analysis Plan Template&quot;
+author: &quot;School of Psychology, University of Glasgow&quot;
+output: html_document
+---</code></pre>
+<p>The rest of the file is a mix of <a href="m.html#markdown">markdown</a> and <a href="c.html#chunk">code chunks</a>. Here is an example of two section titles. The first section has an r chunk for loading the packages and the second section has a list of steps.</p>
+<pre><code>## Packages used
+
+```{r setup, include = FALSE}
+# every time you add a new package, include it in this section
+library(tidyverse)
+```
+
+## Data Processing
+
+1. load in packages
+2. load in dataset
+3. Wrangle data into appropriate format for analysis and checks. You might want to reshape the data or combine different values to make a new variable. </code></pre>
 <p>Resources:</p>
 <ul>
 <li><a href="https://rmarkdown.rstudio.com/lesson-1.html">Introduction to R Markdown</a></li>
@@ -471,13 +491,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>relative path</h2>
 <p><dfn>The location of a file in relation to the working directory.</dfn></p>
 <p>For example, if your <a href="w.html#working-directory">working directory</a> is <code>/Users/me/study/</code> and you want to refer to a file at <code>/Users/me/study/data/faces.csv</code>, the relative path is <code>data/faces.csv</code>. Use <code>../</code> to move up one directory.</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="r.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the working directory: /Users/me/study/</span></span>
-<span id="cb102-2"><a href="r.html#cb102-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb102-3"><a href="r.html#cb102-3" aria-hidden="true" tabindex="-1"></a><span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span></span>
-<span id="cb102-4"><a href="r.html#cb102-4" aria-hidden="true" tabindex="-1"></a>qdat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/faces.csv&quot;</span>)</span>
-<span id="cb102-5"><a href="r.html#cb102-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb102-6"><a href="r.html#cb102-6" aria-hidden="true" tabindex="-1"></a><span class="co"># read a file outside the wd: /Users/me/other_study/data/exp.csv</span></span>
-<span id="cb102-7"><a href="r.html#cb102-7" aria-hidden="true" tabindex="-1"></a>xdat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;../other_study/data/exp.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="r.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the working directory: /Users/me/study/</span></span>
+<span id="cb104-2"><a href="r.html#cb104-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb104-3"><a href="r.html#cb104-3" aria-hidden="true" tabindex="-1"></a><span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span></span>
+<span id="cb104-4"><a href="r.html#cb104-4" aria-hidden="true" tabindex="-1"></a>qdat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/faces.csv&quot;</span>)</span>
+<span id="cb104-5"><a href="r.html#cb104-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb104-6"><a href="r.html#cb104-6" aria-hidden="true" tabindex="-1"></a><span class="co"># read a file outside the wd: /Users/me/other_study/data/exp.csv</span></span>
+<span id="cb104-7"><a href="r.html#cb104-7" aria-hidden="true" tabindex="-1"></a>xdat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;../other_study/data/exp.csv&quot;</span>)</span></code></pre></div>
 <p>Make sure you always use relative paths in an <a href="r.html#r-markdown">R Markdown</a> document, which automatically sets the working directory to the directory that contains the .Rmd file.</p>
 <p>Contrast with <a href="a.html#absolute-path">absolute path</a>.</p>
 
@@ -526,15 +546,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Figure 23: Right Join
 </p>
 </div>
-<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="r.html#cb103-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb103-2"><a href="r.html#cb103-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
-<span id="cb103-3"><a href="r.html#cb103-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
-<span id="cb103-4"><a href="r.html#cb103-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb103-5"><a href="r.html#cb103-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb103-6"><a href="r.html#cb103-6" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb103-7"><a href="r.html#cb103-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>,</span>
-<span id="cb103-8"><a href="r.html#cb103-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> LETTERS[<span class="dv">22</span><span class="sc">:</span><span class="dv">26</span>]</span>
-<span id="cb103-9"><a href="r.html#cb103-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="r.html#cb105-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb105-2"><a href="r.html#cb105-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb105-3"><a href="r.html#cb105-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb105-4"><a href="r.html#cb105-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb105-5"><a href="r.html#cb105-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-6"><a href="r.html#cb105-6" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb105-7"><a href="r.html#cb105-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>,</span>
+<span id="cb105-8"><a href="r.html#cb105-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> LETTERS[<span class="dv">22</span><span class="sc">:</span><span class="dv">26</span>]</span>
+<span id="cb105-9"><a href="r.html#cb105-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <table>
 <tr>
 <th>
@@ -612,8 +632,8 @@ Table Y
 </tr>
 </table>
 <p>If there is no matching data in the left table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="r.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a is the right table</span></span>
-<span id="cb104-2"><a href="r.html#cb104-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">right_join</span>(a, b, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="r.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a is the right table</span></span>
+<span id="cb106-2"><a href="r.html#cb106-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">right_join</span>(a, b, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -645,8 +665,8 @@ Table Y
 </tbody>
 </table>
 <p>Order is important for right joins.</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="r.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="co"># b is the right table</span></span>
-<span id="cb105-2"><a href="r.html#cb105-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">right_join</span>(b, a, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="r.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="co"># b is the right table</span></span>
+<span id="cb107-2"><a href="r.html#cb107-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">right_join</span>(b, a, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
