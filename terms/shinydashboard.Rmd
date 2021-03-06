@@ -2,4 +2,4 @@
 
 <dfn>A package for R that builds on [Shiny](s.html#shiny) for more flexible and visually appealing [UI](u.html#ui)s.</dfn>
 
-[Shiny Dashboard or shinydashboard](https://rstudio.github.io/shinydashboard/) can be installed with `install.packages("shinydashboard")`, and can be loaded with `library(shinydashboard)`. The [shinydashboard documentation](https://rstudio.github.io/shinydashboard/get_started.html) is a great introduction to this package.
+[Shiny Dashboard or shinydashboard](https://rstudio.github.io/shinydashboard/){target="_blank"} can be installed with `install.packages("shinydashboard")`, and can be loaded with `library(shinydashboard)`. The [shinydashboard documentation](https://rstudio.github.io/shinydashboard/get_started.html){target="_blank"} is a great introduction to this package.

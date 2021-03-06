@@ -6,4 +6,4 @@ When you create a variable, it is usually stored in the global environment. You 
 
 If you create a variable inside of a function, it is usually not accessible outside of that function and you won't see it in the global environment tab.
 
-You don't need to know much about environments to use R until you start developing packages; they are covered in [Advanced R](http://adv-r.had.co.nz/Environments.html).
+You don't need to know much about environments to use R until you start developing packages; they are covered in [Advanced R](http://adv-r.had.co.nz/Environments.html){target="_blank"}.

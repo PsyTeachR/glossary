@@ -41,7 +41,7 @@ You can filter a table down to only rows with no NA values using `na.omit()`.
 complete_dat <- na.omit(dat)
 ```
 
-`r kable(dat)`
+`r kable(na.omit(dat))`
 
 
 

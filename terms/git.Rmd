@@ -2,4 +2,4 @@
 
 <dfn>One type of [version control](v.html#version-control) software.</dfn>
 
-[Set up git and github](https://debruine.github.io/tutorials/git-and-github.html) with RStudio.
+[Set up git and github](https://debruine.github.io/tutorials/git-and-github.html){target="_blank"} with RStudio.

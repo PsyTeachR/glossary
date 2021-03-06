@@ -10,4 +10,4 @@ You can also use the code `rm(list = ls())` or click on the broom icon in the En
 
 When you [knit](k.html#knit) an [R markdown](r.html#r-markdown) file, this happens in a new environment, so if any of your code relies on objects you created outside your script, that code will run interactively in R Studio, but will fail when you knit because the objects in the gloabl environment are not available in the knitting environment.
 
-If you start writing your own functions, you need to understand a little about [scope](s.html#scope) and how the environment inside a function is not the same as the global environment. The [Environments chapter](http://adv-r.had.co.nz/Environments.html) in Advanced R is a good resource for advanced understanding.
+If you start writing your own functions, you need to understand a little about [scope](s.html#scope) and how the environment inside a function is not the same as the global environment. The [Environments chapter](http://adv-r.had.co.nz/Environments.html){target="_blank"} in Advanced R is a good resource for advanced understanding.

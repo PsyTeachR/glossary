@@ -67,10 +67,10 @@ glossary::open_glossary() # open a local copy
 | ,      | comma             |                   |
 | ;      | semi-colon        |                   |
 | :      | colon             |                   |
-| @      | "at" symbol       | [various hilarious regional terms](https://www.theguardian.com/notesandqueries/query/0,5753,-1773,00.html) |
+| @      | "at" symbol       | [various hilarious regional terms](https://www.theguardian.com/notesandqueries/query/0,5753,-1773,00.html){target="_blank"} |
 | ...    | [ellipsis](e.html#ellipsis)| dots     |
 
-```{r img-soundimals-hash, echo=FALSE, fig.cap="[Image by James Chapman/Soundimals](https://soundimals.tumblr.com/post/167354564886/chapmangamo-the-symbol-has-too-many-names)"}
+```{r img-soundimals-hash, echo=FALSE, fig.cap="[Image by James Chapman/Soundimals](https://soundimals.tumblr.com/post/167354564886/chapmangamo-the-symbol-has-too-many-names){target='_blank'}"}
 
 knitr::include_graphics("images/soundimals_hash.png")
 
