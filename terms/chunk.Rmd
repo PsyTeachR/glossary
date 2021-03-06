@@ -1,9 +1,11 @@
 ## chunk
 
-<dfn>A block of R code in an R Markdown file.</dfn>
+<dfn>A section of code in an [R Markdown](r.html#r-markdown) file</dfn>
 
-In an [R Markdown](r.html#r-markdown) file (`.Rmd`), you can include a chunk by surrounding the code as in the example below:
+In an `Rmd` file, you can include a chunk by surrounding the code as in the example below:
 
 ```{r chunk-example, eval = FALSE, verbatim="r chunk-name"}
 mean_age <- mean(ages) %>% round(2)
 ```
+
+Also sometimes called a [block](b.html#block).

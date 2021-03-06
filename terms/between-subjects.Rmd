@@ -1,0 +1,9 @@
+## between subjects
+
+<dfn>Not varying within unit of observation, such that each has only one value</dfn>
+
+For example, imagine an experiment where you test half of subjects in a dark room and the other half in a light. This experiment has one [factor](f.html#factor-experimental), room darkness, which is **between subjects** because each subject only experiences one [level](l.html#level) of room darkness, not both. This experiment may also be described as "between subjects".
+
+Contrast with [within subjects](w.html#within-subjects).
+
+

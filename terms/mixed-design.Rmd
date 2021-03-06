@@ -1,0 +1,5 @@
+## mixed design
+
+<dfn>An experimental design that has both [within-subject](w.html#within-subject) and [between-subject](b.html#between-subject) [factors](f.html#factor).</dfn>
+
+For example, imagine an experiment where you test half of subjects in a dark room with easy, medium, and hard tasks, and the other half in a light room with easy and hard tasks. This experiment has two [factors](f.html#factor): room darkness and task difficulty. The factor of room darkness is [between subjects](b.html#between-subjects) and has two [levels](l.html#level): dark and light. The factor of task difficulty is [within subjects](w.html#within-subjects) has three levels: easy, medium, and hard. Because this experiment has both within- and between-subject factors, it is described as having a **mixed design**.

@@ -1,5 +1,5 @@
 ## independent variable
 
-<dfn>A variable whose value is assumed to influence the value of a dependent variable.</dfn>
+<dfn>A variable whose value is assumed to influence the value of a [dependent variable](d.html#dependent-variable).</dfn>
 
 This term is often used in an experimental context. In a regression context, this is equivalent in meaning to [predictor variable](p.html#predictor-variable).

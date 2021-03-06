@@ -8,7 +8,7 @@ When you look up the help for a function (e.g., `?sd`), you will see a section c
 
 The function `args()` will show you the argument names and their [default values](d.html#default-value) (if any) for any function.
 
-```{r}
+```{r args}
 args(rnorm)
 ```
 

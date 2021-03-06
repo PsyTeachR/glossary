@@ -3,3 +3,5 @@
 <dfn>The number that represents an [element](e.html#element)'s location in a [vector](v.html#vector).</dfn>
 
 For example, the **index** of the letter `E` in the vector `LETTERS` is 5.
+
+This can also refer to the main page of a website. For example, the address for the main page of the glossary is technically `https://psyteachr.github.io/glossary/index.html` (but `https://psyteachr.github.io/glossary/` invisibly directs you to the index page).

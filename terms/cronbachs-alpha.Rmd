@@ -1,0 +1,50 @@
+## Cronbach's alpha {#cronbachs-alpha}
+
+<dfn>A measure used to assess the internal consistency of scale items</dfn>
+
+If a scale is a reliable measure of a concept, then the items of the scale should consistently measure that concept. A scale where all the items perfectly measure the same concept will have a Cronbach's alpha close to 1.0, basically meaning that all the items are nearly perfectly correlated. A scale where each item measures a totally different concept will have a Cronbach's alpha close to 0.0, meaning that each item is uncorrelated with the others.
+
+```{block type="warning"}
+Remember that internal reliability is not the same as external reliability. A scale can have a very high Cronbach's alpha, meaning it measures *something* well, but that thing may not be what you meant to measure.
+```
+
+We can use the function `psych::alpha()` to calculate Cronbach's alpha.
+
+```{r cronbachs-alpha, message = FALSE}
+# read in data from the 3 domains of disgust scale
+disgust <- read_csv("https://psyteachr.github.io/msc-data-skills/data/disgust.csv")
+  
+# select just the items that measure pathogen disgust
+pathogen_alpha <- disgust %>%
+  select(pathogen1:pathogen7) %>%
+  psych::alpha()
+```
+
+You often just want to report the raw or standard alpha.
+
+```{r}
+pathogen_alpha$total$raw_alpha
+pathogen_alpha$total$std.alpha
+```
+
+The `item.stats` section gives you some [descriptive](d.html#descriptive) statistics about each item (see `?psych::alpha` for more info).
+
+```{r}
+pathogen_alpha$item.stats
+```
+
+You can look at the `alpha.drop` section to see what the alpha would be if you dropped an item. If we add an item from the moral disgust scale, you can see that the alpha increases if you drop it.
+
+```{r}
+mixed_alpha <- disgust %>%
+  select(pathogen1:pathogen7, moral1) %>%
+  psych::alpha()
+
+select(mixed_alpha$alpha.drop, raw_alpha, std.alpha)
+```
+
+
+
+
+
+

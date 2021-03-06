@@ -1,0 +1,26 @@
+## level
+
+<dfn>The set of valid values for a [factor](f.html#factor)</dfn>
+
+Setting the levels for a [factor](f.html#factor) can be helpful to make sure they display and plot in the intended order.
+
+```{r}
+# levels in the right order
+day_levels <- c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+
+# repeat each day 1:7 times
+days <- rep(day_levels, 1:7) 
+
+# make into factors with and without levels
+without_levels <- factor(days)
+with_levels <- factor(days, levels = day_levels)
+```
+
+```{r levels-without, fig.cap="Without setting levels, categories display in alphabetical order."}
+ggplot() + geom_bar(aes(x = without_levels))
+```
+
+```{r levels-with, fig.cap="With setting levels, categories display in the level order"}
+ggplot() + geom_bar(aes(x = with_levels))
+```
+

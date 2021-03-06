@@ -3,8 +3,8 @@
 <dfn>A way to describe the shape of data</dfn>
 
 * [normal distribution](n.html#normal-distribution)
-* [binomial distribution](n.html#binomial-distribution)
-* [Poisson distribution](n.html#poisson-distribution)
-* [uniform distribution](n.html#uniform-distribution)
+* [binomial distribution](b.html#binomial-distribution)
+* [Poisson distribution](p.html#poisson-distribution)
+* [uniform distribution](u.html#uniform-distribution)
 
 

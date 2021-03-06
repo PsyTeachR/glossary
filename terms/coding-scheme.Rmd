@@ -1,6 +1,6 @@
 ## coding scheme
 
-<dfn>How to represent [categorical](c.html#categorical) variables with numbers for use in models.</dfn>
+<dfn>How to represent [categorical](c.html#categorical) variables with numbers for use in models</dfn>
 
 * [effect code](e.html#effect-code)
 * [sum code](e.html#sum-code)

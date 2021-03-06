@@ -1,6 +1,6 @@
 ## Poisson distribution
 
-<dfn>A distribution that models independent events happening over a unit of time</dfn>
+<dfn>A [distribution](d.html#distribution) that models independent events happening over a unit of time</dfn>
 
 ```{r poisson-dist}
 lambda <- 3 # mean number of events

@@ -1,5 +1,56 @@
 ## factor
 
+<dfn>A data type where a specific set of values are stored with labels; An explanatory variable manipulated by the experimenter</dfn>
+
+## factor (data type) {#factor-data-type}
+
 <dfn>A data type where a specific set of values are stored with labels</dfn>
+
+In tables, you can store strings as [characters](c.html#character) or factors.
+
+```{r factor}
+data <- tibble(
+  chr = c("A", "B", "C"),
+  fctr = factor(c("A", "B", "C"))
+)
+```
+
+If you print a character [vector](v.html#vector), it will have quotes around each values, while a factor vector will show the [Levels](l.html#level) after.
+
+```{r factor-vector}
+data$chr
+
+data$fctr
+```
+
+In a [tibble](t.html#tibble), these types will have "<chr>" or "<fctr>" under the column header. 
+
+```{r factor-tibble}
+data
+```
+
+You can convert between characters and factors like this:
+
+```{r factor-convert}
+as.character(data$fctr)
+
+# set the levels to the order you want
+factor(data$chr, levels = c("C", "B", "A"))
+```
+
+
+### Resources
+
+* [Factors](https://r4ds.had.co.nz/factors.html) in R for Data Science
+
+
+
+## factor (experimental) {#factor-experimental}
+
+<dfn>An explanatory variable manipulated by the experimenter</dfn>
+
+For example, imagine an experiment where you test half of subjects in a dark room with easy, medium, and hard tasks, and the other half in a light room with easy and hard tasks. This experiment has two **factors**: room darkness and task difficulty. The factor of room darkness is [between subjects](b.html#between-subjects) and has two [levels](l.html#level): dark and light. The factor of task difficulty is [within subjects](w.html#within-subjects) has three levels: easy, medium, and hard.
+
+See [independent variable](i.html#independent-variable)
 
 

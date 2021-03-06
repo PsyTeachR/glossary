@@ -1,0 +1,9 @@
+## within subjects
+
+<dfn>Varying such that each unit of observation has more than one value</dfn>
+
+For example, imagine an experiment where you test subjects with easy, medium, and hard tasks. This experiment has one [factor](f.html#factor-experimental), task difficulty, which is **within subjects** because each subject experiences all three [levels](l.html#level): easy, medium, and hard. This experiment may also be described as "within subjects".
+
+Contrast with [between subjects](b.html#between-subjects).
+
+

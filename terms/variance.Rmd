@@ -1,5 +1,26 @@
 ## variance
 
-<dfn>A statistical measure for how much an average data point varies from the mean.</dfn>
+<dfn>A [descriptive](d.html#descriptive) statistic for how much an average data point varies from the mean.</dfn>
+
+```{r var}
+data <- c(1,2,3,4,5,6,7,8,9)
+var(data)
+```
 
 Variance is equal to [standard deviation](s.html#standard-deviation) squared. 
+
+```{r var-sd}
+sd(data)^2
+```
+
+You calculate variance by summing the squared differences between each data point and their mean (`sum(diff^2)`) and dividing this by the number of data points minus 1 (`(n-1)`)
+
+```{r var-calc}
+m <- mean(data)   # calculate the mean
+diff <- data - m  # difference between each data point and the mean
+n <- length(data) # number of data points
+sum(diff^2)/(n-1) # variance
+```
+
+
+

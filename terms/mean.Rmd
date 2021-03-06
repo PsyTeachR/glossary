@@ -1,0 +1,10 @@
+## mean
+
+<dfn>A [descriptive](d.html#descriptive) statistic that measures the average value of a set of numbers.</dfn>
+
+```{r}
+x <- c(1,2,3,4,5)
+mean(x)
+```
+
+

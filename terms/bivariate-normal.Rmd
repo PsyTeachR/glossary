@@ -2,4 +2,22 @@
 
 <dfn>Two [normally distributed](n.html#normal-distribution) [vectors](v.html#vector) that have a specified [correlation](c.html#correlation) with each other.</dfn>
 
+You can use the {[faux](https://debruine.github.io/faux){target="_blank"}} package to quickly create variables from a bivariate normal distribution with a specified correlation.
+
+```{r bvn-data}
+data <- faux::rnorm_multi(
+  n = 10000, vars = 2, 
+  mu = 0, sd = 1, r = 0.5,
+  varnames = c("x", "y")
+)
+```
+
+
+```{r bvn-plot, fig.width = 5, fig.height = 5, fig.cap = "A bivariate normal distribution where both variables have mu = 0 and SD = 1, with r = 0.5", echo = FALSE}
+g <- ggplot(data, aes(x, y)) + geom_point(alpha = 0.2)
+ggExtra::ggMarginal(g, type = "histogram")
+```
+
+
+
 

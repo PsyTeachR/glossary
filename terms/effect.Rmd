@@ -1,5 +1,5 @@
 ## effect
 
-<dfn>Some measure of your data, such as the mean value, or the number of standard deviations the mean differs from a chance value.</dfn>
+<dfn>Some measure of your data, such as the [mean](m.html#mean) value, or the number of [standard deviations](s.html#standard-deviation) the mean differs from a chance value.</dfn>
 
 

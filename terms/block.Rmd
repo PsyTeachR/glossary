@@ -1,0 +1,7 @@
+## block
+
+<dfn>A section of code in an [R Markdown](r.html#r-markdown) file</dfn>
+
+See [chunk](c.html#chunk).
+
+

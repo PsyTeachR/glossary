@@ -1,0 +1,5 @@
+## inferential
+
+<dfn>Statistics that allow you to make predictions about or comparisons between data (e.g., t-value, F-value, rho)</dfn>
+
+Contrast with [descriptive](d.html#descriptive) statistics.

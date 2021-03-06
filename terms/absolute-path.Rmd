@@ -8,7 +8,7 @@ However, you should normally use [relative paths](r.html#relative-path) in scrip
 
 The package R.utils has a function `getAbsolutePath()` that returns the absolute path of a file [path](p.html#path) or a file [object](o.html#object).
 
-```{r}
+```{r absolute-path}
 R.utils::getAbsolutePath("../index.Rmd")
 ```
 

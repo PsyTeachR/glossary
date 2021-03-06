@@ -1,6 +1,6 @@
 ## uniform distribution
 
-<dfn>All numbers in the range have an equal probability of being sampled</dfn>
+<dfn>A [distribution](d.html#distribution)  where all numbers in the range have an equal probability of being sampled</dfn>
 
 ```{r uniform-dist}
 x <- runif(100000, min = 0, max = 100)

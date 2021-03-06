@@ -11,7 +11,7 @@ It is pretty difficult to tell from looking at a density plot if data are distri
 
 Let's simulate 25 data points from a normal distribution with a mean of 100 and SD of 10. Since there are not many data points, the resulting plot will be pretty lumpy. The red line is a perfect normal distribution.
 
-```{r, fig.cap = "Density plot of sample data and the normal distribution it was drawn from"}
+```{r qq-density, fig.cap = "Density plot of sample data and the normal distribution it was drawn from"}
 A <- rnorm(25, 100, 10)
 
 ggplot() + 
