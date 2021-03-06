@@ -1,0 +1,9 @@
+## render
+
+<dfn>To create a file (usually an image or PDF) or [widget](w.html#widget) from source code</dfn>
+
+In the context of [Shiny](s.html#shiny) apps, render usually means to create the [HTML](h.html#html) to display in a [reactive](r.html#reactivity) output from code in the [server](s.html#server) section.
+
+In the context of [R Markdown](r.html#r-markdown) files, [knit](k.html#knit), render and [compile](c.html#compile) tend to be used interchangeably.
+
+

@@ -1,0 +1,25 @@
+## HTML
+
+<dfn>Hyper-Text Markup Language: A system for semantically tagging structure and information on web pages.</dfn>
+
+[R Markdown](r.html#r-markdown) scripts are often [knit](k.html#knit) to HTML. Therefore, you can also include HTML and [CSS](c.html#css) (a way to control visual style) in your scripts.
+
+Here is an example of some simple HTML. 
+
+```
+<h1>My Title</h1>
+
+<p>A paragraph of stuff...</p>
+
+<ul>
+  <li>List item</li>
+  <li>Another list item</li>
+</ul>
+
+<img src="images/darwin.jpg" title="The cutest ferret">
+```
+
+### Resources
+
+* [W3Schools Learn HTML](https://www.w3schools.com/html/){target="_blank"}
+* [Academic Webpages](https://debruine.github.io/tutorials/webpages.html#webpage-content){target="_blank"}

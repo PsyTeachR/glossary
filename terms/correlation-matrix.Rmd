@@ -1,0 +1,21 @@
+## correlation matrix
+
+<dfn>[Parameters](p.html#parameter) showing how a set of [vectors](v.html#vector) are [correlated](c.html#correlation).</dfn>
+
+This is set up as a [matrix](m.html#matrix) with 1.0 along the diagonal, meaning that every variable is perfectly correlated with itself.
+
+```{r, echo = FALSE}
+set.seed(1)
+```
+
+
+```{r}
+data <- tibble(
+  A = rnorm(100),
+  B = rnorm(100), # uncorrelated with A
+  C = rnorm(100) + A, # positively correlated with A
+  D = rnorm(100) - A # negatively correlated with A
+)
+
+cor(data) # correlation matrix
+```

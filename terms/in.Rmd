@@ -1,0 +1,5 @@
+## %in% {#in}
+
+<dfn>The [match operator](m.html#match-operator), a binary operator that returns a logical vector indicating if there is a match or not for its left operand.</dfn>
+
+

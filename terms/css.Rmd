@@ -1,0 +1,24 @@
+## CSS
+
+<dfn>Cascading Style Sheet: A system for controlling the visual presentation of [HTML](h.html#html) in web pages.</dfn>
+
+[R Markdown](r.html#r-markdown) scripts are often [knit](k.html#knit) to HTML. Therefore, you can also include HTML (a way to semantically tag information) and CSS in your scripts.
+
+Here is an example of some simple CSS (in the style tag) and HTML. 
+```
+<style>
+  h3 { color: red; }
+  .ferret { width: 200px; height: 150px; }
+</style>
+
+<h3>Red Title</h3>
+
+<img src="images/darwin.jpg" 
+     title="The cutest ferret" 
+     class="ferret">
+```
+
+### Resources
+
+* [W3Schools Learn CSS](https://www.w3schools.com/css/){target="_blank"}
+* [Academic Webpages](https://debruine.github.io/tutorials/webpages.html#webpage-styles){target="_blank"}

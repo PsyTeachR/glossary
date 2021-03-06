@@ -3,6 +3,7 @@ fig:alpha-plot
 fig:ani-join
 fig:binom-plot
 fig:bvn-plot
+fig:cor
 fig:full-join
 fig:img-function-help
 fig:geom-boxplot
@@ -14,7 +15,7 @@ fig:left-join
 fig:levels-without
 fig:levels-with
 tab:long-data
-tab:unnamed-chunk-138
+tab:unnamed-chunk-147
 fig:normal-plot
 fig:img-panes
 fig:piosson-plot
@@ -26,5 +27,5 @@ fig:right-join
 fig:semi-join
 fig:sd-plot
 fig:unif-plot
-tab:unnamed-chunk-244
+tab:unnamed-chunk-255
 tab:wide-data

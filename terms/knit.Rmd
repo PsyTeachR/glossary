@@ -4,3 +4,5 @@
 
 You can knit your Rmd file by clicking on the **`Knit`** button at the top of the [source pane](p.html#panes) or typing `knitr::knit("file.Rmd", "file.html")` in the [console pane](p.html#panes).
 
+In the context of [R Markdown](r.html#r-markdown) files, knit, [render](r.html#render) and [compile](c.html#compile) tend to be used interchangeably.
+

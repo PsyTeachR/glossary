@@ -1,4 +1,4 @@
-## full-join
+## full_join
 
 <dfn>A [mutating join](f.html#mutating-joins) that lets you join up rows in two tables while keeping all of the information from both tables</dfn>
 

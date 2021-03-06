@@ -1,5 +1,5 @@
 ## parameter
 
-<dfn>A value that describes a distribution, such as the mean or SD</dfn>
+<dfn>A value that describes a [distribution](d.html#distribution), such as the [mean](m.html#mean) or [SD](s.html#standard-deviation)</dfn>
 
 

@@ -1,5 +1,22 @@
 ## correlation
 
-<dfn>The relationship two vectors have to each other.</dfn>
+<dfn>The relationship two [vectors](v.html#vector) have to each other.</dfn>
 
+If you sample two sets of numbers independently, they will have a correlation close to 0 (on average). If one number perfectly predicts the other, the correlation is 1 if one gets bigger as the other gets bigger and -1 if one gets smaller as the other gets smaller.
 
+```{r cor, fig.cap="Different Correlations (n = 100)", echo = FALSE}
+r <- c(-.99, seq(-.75, .75, .25), .99)
+data <- map_df(r, 
+  ~faux::rnorm_multi(n = 100, vars = 2, r = .x, varnames = c("x", "y"), empirical = TRUE)
+) %>%
+  mutate(r = rep(seq(-1, 1, .25), each = 100),
+         y = case_when(r == -1 ~ -x,
+                       r == 1 ~ x,
+                       TRUE ~ y))
+
+data %>%
+  ggplot(aes(x, y, color = as.factor(r))) +
+  geom_point(show.legend = FALSE) +
+  geom_smooth(method = lm, formula = y~x, show.legend = FALSE) +
+  facet_wrap(~r, labeller = label_both)
+```

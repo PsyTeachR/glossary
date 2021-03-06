@@ -1,0 +1,7 @@
+## compile
+
+<dfn>To create another resource, such as an app, from source code.</dfn>
+
+Compiling usually refers to taking human-readable code and converting it into code that is more efficient for a computer to run, but that a human can't read.
+
+In the context of [R Markdown](r.html#r-markdown) files, [knit](k.html#knit), [render](r.html#render) and compile are sometimes used interchangeably.

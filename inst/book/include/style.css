@@ -5,6 +5,10 @@ dfn {
   font-weight: bold;
 }
 
+h3 {
+  color: #888;
+}
+
 h2 {
   border-top: 1px solid black;
 }

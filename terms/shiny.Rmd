@@ -1,0 +1,6 @@
+## Shiny
+
+<dfn>An R package that builds interactive web apps</dfn>
+
+* [Shiny](https://shiny.rstudio.com/){target="_blank"} website
+* [psyTeachR Shiny Tutorials](https://psyteachr.github.io/shiny-tutorials/){target="_blank"} 
