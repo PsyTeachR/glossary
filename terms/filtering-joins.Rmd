@@ -1,16 +1,11 @@
 ## filtering joins
 
-<dfn>Joins that act like the `dplyr::filter()` function in that they remove rows from the data in one table based on the values in another table. The result of a filtering join will only contain rows from the left table and have the same number or fewer rows than the left table.</dfn>
+<dfn>[Joins](j.html#joins) that act like the `dplyr::filter()` function in that they remove rows from the data in one table based on the values in another table.</dfn>
+
+The result of a filtering join will only contain rows from the left table and have the same number or fewer rows than the left table.
+
+* [anti_join](a.html#anti_join)
+* [semi_join](s.html#semi_join)
 
 
-A `semi_join` returns all rows from the left table where there are matching values in the right table, keeping just columns from the left table.
 
-```{r semi-join, echo=FALSE, fig.cap="Semi Join"}
-knitr::include_graphics("images/joins/semi_join.png")
-```
-
-An `anti_join` return all rows from the left table where there are *not* matching values in the right table, keeping just columns from the left table.
-
-```{r ani-join, echo=FALSE, fig.cap="Anti Join"}
-knitr::include_graphics("images/joins/anti_join.png")
-```

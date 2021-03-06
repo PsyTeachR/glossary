@@ -1,0 +1,24 @@
+## bind_rows
+
+<dfn>A [binding join](b.html#binding-joins) that joins one table to another by adding their rows together</dfn>
+
+`bind_rows` takes two tables, finds all columns with the same name, and appends the second one to the first. If a column doesn't have a match in the other table, that columns' values are set to [NA](n.html#na).
+
+```{r bind-rows}
+a <- tibble(
+  id = 1:3,
+  x = LETTERS[1:3],
+  y = c(T, T, F)
+)
+
+b <- tibble(
+  x = LETTERS[4:6],
+  id = 4:6
+)
+
+data <- dplyr::bind_rows(a, b)
+```
+
+`r kable(data)`
+
+See [joins](j.html#joins) for other types of joins and further resources.

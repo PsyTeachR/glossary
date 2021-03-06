@@ -1,0 +1,48 @@
+## left_join
+
+<dfn>A [mutating join](f.html#mutating-joins) that keeps all the data from the first (left) table and joins anything that matches from the second (right) table.</dfn>
+
+```{r left-join, echo=FALSE, fig.cap="Left Join"}
+knitr::include_graphics("images/joins/left_join.png")
+```
+
+
+```{r left-join-example-setup}
+X <- tibble(
+  id = 1:5,
+  x = LETTERS[1:5]
+)
+
+Y <- tibble(
+  id = 2:6,
+  y = LETTERS[22:26]
+)
+```
+
+<table>
+  <tr><th>Table X</th><th>Table Y</th></td>
+  <tr>
+    <td>`r kable(X)`</td>
+    <td>`r kable(Y)`</td>
+  </tr>
+</table>
+
+If there is no matching data in the right table for a row, the values are set to [NA](n.html#na).
+
+```{r left-join-example-a-b}
+# X is the left table
+data <- left_join(X, Y, by = "id")
+```
+
+`r kable(data)`
+
+Order is important for left joins.
+
+```{r left-join-example-b-a}
+# Y is the left table
+data <- left_join(Y, X, by = "id")
+```
+
+`r kable(data)`
+
+See [joins](j.html#joins) for other types of joins and further resources.

@@ -5,6 +5,7 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 library(webex)
+library(knitr)
 
 # default knitr options
 knitr::opts_chunk$set(

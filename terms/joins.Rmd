@@ -1,0 +1,21 @@
+## joins
+
+<dfn>Ways to combine data from two tables</dfn>
+
+* [binding joins](b.html#binding-joins)
+    * [bind_rows](b.html#bind_rows)
+    * [bind_cols](b.html#bind_cols)
+* [filtering joins](f.html#filtering-joins): 
+    * [anti_join](a.html#anti_join)
+    * [semi_join](s.html#semi_join)
+* [mutating joins](m.html#mutating-joins): 
+    * [left_join](l.html#left_join)
+    * [right_join](r.html#right_join)
+    * [inner_join](i.html#inner_join)
+    * [full_join](f.html#full_join)
+
+### Further Resources
+
+* [Data Relations](https://psyteachr.github.io/msc-data-skills/joins.html){target="_blank"} in Data Skills for Reproducible Science
+* [Relational Data](http://r4ds.had.co.nz/relational-data.html){target="_blank"} in R for Data Science
+* [Cheatsheet](http://stat545.com/bit001_dplyr-cheatsheet.html){target="_blank"} for dplyr join functions

@@ -1,0 +1,49 @@
+## NA
+
+<dfn>A missing value that is "Not Available"</dfn>
+
+You can use `NA` to represent missing values in a [vector](v.html#vector). Use the function `is.na()` to check if values are missing.
+
+```{r na-ex-1}
+values <- c(1,4,NA,3,4)
+is.na(values)
+```
+
+If the results of a calculation like `mean()` or `sd()` is `NA`, this usually means that you have some missing values in your vector. You can remove `NA` values using `na.rm = TRUE` in many functions.
+
+```{r na-rm}
+mean(values)
+mean(values, na.rm = TRUE)
+```
+
+Dealing with missing values when calculating correlations is a little trickier.
+
+```{r na-cor}
+dat <- tribble(
+  ~x, ~y, ~z,
+   1,  3, NA, # x-y included when p.c.o
+   2,  1,  4, 
+   3,  5,  3,
+   4,  1,  2,
+  NA,  5,  1  # y-z included when p.c.o
+)
+
+
+# uses only rows 2:4 for all correlations
+cor(dat, use = "complete.obs")
+
+# uses rows 1:4 for x-y, 2:5 for y-z, and 2:4 for x-z
+cor(dat, use = "pairwise.complete.obs")
+```
+You can filter a table down to only rows with no NA values using `na.omit()`.
+
+```{r}
+complete_dat <- na.omit(dat)
+```
+
+`r kable(dat)`
+
+
+
+
+

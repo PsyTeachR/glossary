@@ -1,0 +1,40 @@
+## bind_cols
+
+<dfn>A [binding join](b.html#binding-joins) that joins one table to another by adding their columns together</dfn>
+
+`bind_cols` takes two tables with the same number of rows and adds the columns from the second table to the first.
+
+```{r bind-cols}
+a <- tibble(
+  id = 1:3,
+  x = LETTERS[1:3]
+)
+
+b <- tibble(
+  y = c(T, T, F)
+)
+
+data <- dplyr::bind_cols(a, b)
+```
+
+`r kable(data)`
+
+
+If any column has the same name in both tables, you will see a warning that the columns have been given new names.
+
+```{r bind-cols-warning}
+a <- tibble(
+  id = 1:3,
+  x = LETTERS[1:3]
+)
+
+b <- tibble(
+  x = c(T, T, F)
+)
+
+data <- dplyr::bind_cols(a, b)
+```
+
+`r kable(data)`
+
+See [joins](j.html#joins) for other types of joins and further resources.

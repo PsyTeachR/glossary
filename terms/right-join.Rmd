@@ -1,0 +1,49 @@
+## right_join
+
+<dfn>A [mutating join](f.html#mutating-joins) that keeps all the data from the second (right) table and joins anything that matches from the first (left) table.</dfn>
+
+```{r right-join, echo=FALSE, fig.cap="Right Join"}
+knitr::include_graphics("images/joins/right_join.png")
+```
+
+
+```{r right-join-example-setup}
+X <- tibble(
+  id = 1:5,
+  x = LETTERS[1:5]
+)
+
+Y <- tibble(
+  id = 2:6,
+  y = LETTERS[22:26]
+)
+```
+
+<table>
+  <tr><th>Table X</th><th>Table Y</th></td>
+  <tr>
+    <td>`r kable(X)`</td>
+    <td>`r kable(Y)`</td>
+  </tr>
+</table>
+
+If there is no matching data in the left table for a row, the values are set to [NA](n.html#na).
+
+```{r right-join-example-a-b}
+# a is the right table
+data <- right_join(a, b, by = "id")
+```
+
+`r kable(data)`
+
+Order is important for right joins.
+
+```{r right-join-example-b-a}
+# b is the right table
+data <- right_join(b, a, by = "id")
+```
+
+`r kable(data)`
+
+
+See [joins](j.html#joins) for other types of joins and further resources.

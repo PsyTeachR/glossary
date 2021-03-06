@@ -1,0 +1,26 @@
+## anti_join
+
+<dfn>A [filtering join](f.html#filtering-joins) that returns all rows from the left table where there are *not* matching values in the right table, keeping just columns from the left table.</dfn>
+
+```{r ani-join, echo=FALSE, fig.cap="Anti Join"}
+knitr::include_graphics("images/joins/anti_join.png")
+```
+
+This is useful when you have a table of data that contains IDs you want to exclude from your main dataset.
+
+```{r anti-join-example}
+all_data <- tibble(
+  id = 1:5,
+  x = LETTERS[1:5]
+)
+
+to_exclude <- tibble(
+  id = 2:4
+)
+
+data <- anti_join(all_data, to_exclude, by = "id")
+```
+
+`r kable(data)`
+
+See [joins](j.html#joins) for other types of joins and further resources.

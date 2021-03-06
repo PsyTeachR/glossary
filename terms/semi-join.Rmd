@@ -1,0 +1,28 @@
+## semi_join
+
+<dfn>A [filtering join](f.html#filtering-joins) that returns all rows from the left table where there are matching values in the right table, keeping just columns from the left table.</dfn>
+
+```{r semi-join, echo=FALSE, fig.cap="Semi Join"}
+knitr::include_graphics("images/joins/semi_join.png")
+```
+
+This is useful when you have a table of data that contains IDs of data that passes your exclusion criteria.
+
+```{r semi-join-example}
+all_data <- tibble(
+  id = 1:5,
+  x = LETTERS[1:5]
+)
+
+to_keep <- tibble(
+  id = 2:4
+)
+
+data <- semi_join(all_data, to_keep, by = "id")
+```
+
+`r kable(data)`
+
+See [joins](j.html#joins) for other types of joins and further resources.
+
+
