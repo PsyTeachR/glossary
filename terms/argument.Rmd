@@ -2,7 +2,7 @@
 
 <dfn>A variable that provides input to a [function](f.html#function).</dfn>
 
-For example, the first **argument** to the function `rnorm()` is `n` (the number of observations).
+For example, the first **argument** to the function `rnorm()` is `n` (the number of [observations](o.html#observation)).
 
 When you look up the help for a function (e.g., `?sd`), you will see a section called **`Arguments`**, which lists the argument names and their definitions.
 

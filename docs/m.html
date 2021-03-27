@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha"><i class="fa fa-check"></i>alpha</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-stats"><i class="fa fa-check"></i>alpha (stats)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#ampersand"><i class="fa fa-check"></i>ampersand</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
@@ -335,6 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#parameter"><i class="fa fa-check"></i>parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#pipe"><i class="fa fa-check"></i>pipe</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#poisson-distribution"><i class="fa fa-check"></i>Poisson distribution</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population-parameter"><i class="fa fa-check"></i>population parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
@@ -466,45 +468,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="match-operator" class="section level2">
 <h2>match operator</h2>
 <p><dfn>A binary operator (%in%) that returns a logical vector indicating if there is a match or not for its left operand.</dfn></p>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="m.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check if a single value is in a vector</span></span>
-<span id="cb92-2"><a href="m.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;West Dakota&quot;</span> <span class="sc">%in%</span> state.name</span>
-<span id="cb92-3"><a href="m.html#cb92-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="m.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check if each item in the lefthand vector is in the righthand vector</span></span>
-<span id="cb93-2"><a href="m.html#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;1&quot;</span>) <span class="sc">%in%</span> LETTERS</span>
-<span id="cb93-3"><a href="m.html#cb93-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1]  TRUE  TRUE FALSE</span></span></code></pre></div>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="m.html#cb94-1" aria-hidden="true" tabindex="-1"></a>pangram <span class="ot">&lt;-</span> <span class="st">&quot;the quick brown fox jumps over the lazy dog&quot;</span></span>
-<span id="cb94-2"><a href="m.html#cb94-2" aria-hidden="true" tabindex="-1"></a>pangram_chars <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(pangram, <span class="st">&quot;&quot;</span>)[[<span class="dv">1</span>]]</span>
-<span id="cb94-3"><a href="m.html#cb94-3" aria-hidden="true" tabindex="-1"></a>letters <span class="sc">%in%</span> pangram_chars</span>
-<span id="cb94-4"><a href="m.html#cb94-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span></span>
-<span id="cb94-5"><a href="m.html#cb94-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [16] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span></span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="m.html#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check if a single value is in a vector</span></span>
+<span id="cb98-2"><a href="m.html#cb98-2" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;West Dakota&quot;</span> <span class="sc">%in%</span> state.name</span>
+<span id="cb98-3"><a href="m.html#cb98-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="m.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check if each item in the lefthand vector is in the righthand vector</span></span>
+<span id="cb99-2"><a href="m.html#cb99-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;1&quot;</span>) <span class="sc">%in%</span> LETTERS</span>
+<span id="cb99-3"><a href="m.html#cb99-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1]  TRUE  TRUE FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="m.html#cb100-1" aria-hidden="true" tabindex="-1"></a>pangram <span class="ot">&lt;-</span> <span class="st">&quot;the quick brown fox jumps over the lazy dog&quot;</span></span>
+<span id="cb100-2"><a href="m.html#cb100-2" aria-hidden="true" tabindex="-1"></a>pangram_chars <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(pangram, <span class="st">&quot;&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb100-3"><a href="m.html#cb100-3" aria-hidden="true" tabindex="-1"></a>letters <span class="sc">%in%</span> pangram_chars</span>
+<span id="cb100-4"><a href="m.html#cb100-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span></span>
+<span id="cb100-5"><a href="m.html#cb100-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [17] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span></span></code></pre></div>
 
 </div>
 <div id="matrix" class="section level2">
 <h2>matrix</h2>
 <p><dfn>A <a href="c.html#container">container</a> data type consisting of numbers arranged into a fixed number of rows and columns</dfn></p>
 <p>You can use the <code>matrix()</code> function to set up a <a href="v.htm#vector">vector</a> of numbers as a matrix with a specified number of rows of columns.</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="m.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a 4x4 matrix</span></span>
-<span id="cb95-2"><a href="m.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="at">data =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>, <span class="at">nrow =</span> <span class="dv">4</span>)</span>
-<span id="cb95-3"><a href="m.html#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      [,1] [,2] [,3] [,4]</span></span>
-<span id="cb95-4"><a href="m.html#cb95-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,]    1    5    9   13</span></span>
-<span id="cb95-5"><a href="m.html#cb95-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,]    2    6   10   14</span></span>
-<span id="cb95-6"><a href="m.html#cb95-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,]    3    7   11   15</span></span>
-<span id="cb95-7"><a href="m.html#cb95-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,]    4    8   12   16</span></span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="m.html#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a 4x4 matrix</span></span>
+<span id="cb101-2"><a href="m.html#cb101-2" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="at">data =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>, <span class="at">nrow =</span> <span class="dv">4</span>)</span>
+<span id="cb101-3"><a href="m.html#cb101-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      [,1] [,2] [,3] [,4]</span></span>
+<span id="cb101-4"><a href="m.html#cb101-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,]    1    5    9   13</span></span>
+<span id="cb101-5"><a href="m.html#cb101-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,]    2    6   10   14</span></span>
+<span id="cb101-6"><a href="m.html#cb101-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,]    3    7   11   15</span></span>
+<span id="cb101-7"><a href="m.html#cb101-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,]    4    8   12   16</span></span></code></pre></div>
 <p>Set <code>byrow = TRUE</code> to assign the vector across rows rather than down columns.</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="m.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="at">data =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>, <span class="at">nrow =</span> <span class="dv">4</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb96-2"><a href="m.html#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      [,1] [,2] [,3] [,4]</span></span>
-<span id="cb96-3"><a href="m.html#cb96-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,]    1    2    3    4</span></span>
-<span id="cb96-4"><a href="m.html#cb96-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,]    5    6    7    8</span></span>
-<span id="cb96-5"><a href="m.html#cb96-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,]    9   10   11   12</span></span>
-<span id="cb96-6"><a href="m.html#cb96-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,]   13   14   15   16</span></span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="m.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="at">data =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>, <span class="at">nrow =</span> <span class="dv">4</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb102-2"><a href="m.html#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      [,1] [,2] [,3] [,4]</span></span>
+<span id="cb102-3"><a href="m.html#cb102-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,]    1    2    3    4</span></span>
+<span id="cb102-4"><a href="m.html#cb102-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,]    5    6    7    8</span></span>
+<span id="cb102-5"><a href="m.html#cb102-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,]    9   10   11   12</span></span>
+<span id="cb102-6"><a href="m.html#cb102-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,]   13   14   15   16</span></span></code></pre></div>
 
 </div>
 <div id="mean" class="section level2">
 <h2>mean</h2>
 <p><dfn>A <a href="d.html#descriptive">descriptive</a> statistic that measures the average value of a set of numbers.</dfn></p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="m.html#cb97-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
-<span id="cb97-2"><a href="m.html#cb97-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span>
-<span id="cb97-3"><a href="m.html#cb97-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 3</span></span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="m.html#cb103-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb103-2"><a href="m.html#cb103-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span>
+<span id="cb103-3"><a href="m.html#cb103-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 3</span></span></code></pre></div>
 
 </div>
 <div id="mixed-design" class="section level2">
@@ -531,7 +533,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>multivariate</h2>
 <p><dfn>Having multiple measurements on the same subjects but on <em>different</em> variables, with no more than one measurement per subject per variable.</dfn></p>
 <table>
-<caption><span id="tab:unnamed-chunk-174">Table 2: </span>Multivariate data with 3 scores on different tasks per person</caption>
+<caption><span id="tab:unnamed-chunk-181">Table 2: </span>Multivariate data with 3 scores on different tasks per person</caption>
 <thead>
 <tr class="header">
 <th align="left">id</th>

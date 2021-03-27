@@ -2,4 +2,4 @@
 
 <dfn>A family of  [distributions](d.html#distribution) of data that are characterised by two [parameters](p.html#paremeter): &alpha; and &beta;</dfn>
 
-[Wikipedia](https://en.wikipedia.org/wiki/Beta_distribution) actually has really good definitions and examples.
+[Wikipedia](https://en.wikipedia.org/wiki/Beta_distribution){target="_blank"} actually has really good definitions and examples.

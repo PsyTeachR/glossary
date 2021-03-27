@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha"><i class="fa fa-check"></i>alpha</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-stats"><i class="fa fa-check"></i>alpha (stats)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#ampersand"><i class="fa fa-check"></i>ampersand</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
@@ -335,6 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#parameter"><i class="fa fa-check"></i>parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#pipe"><i class="fa fa-check"></i>pipe</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#poisson-distribution"><i class="fa fa-check"></i>Poisson distribution</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population-parameter"><i class="fa fa-check"></i>population parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
@@ -465,33 +467,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>factor (data type)</h2>
 <p><dfn>A data type where a specific set of values are stored with labels</dfn></p>
 <p>In tables, you can store strings as <a href="c.html#character">characters</a> or factors.</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="f.html#cb67-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb67-2"><a href="f.html#cb67-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">chr =</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>),</span>
-<span id="cb67-3"><a href="f.html#cb67-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">fctr =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>))</span>
-<span id="cb67-4"><a href="f.html#cb67-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="f.html#cb72-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb72-2"><a href="f.html#cb72-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">chr =</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>),</span>
+<span id="cb72-3"><a href="f.html#cb72-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">fctr =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>))</span>
+<span id="cb72-4"><a href="f.html#cb72-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <p>If you print a character <a href="v.html#vector">vector</a>, it will have quotes around each values, while a factor vector will show the <a href="l.html#level">Levels</a> after.</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="f.html#cb68-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>chr</span>
-<span id="cb68-2"><a href="f.html#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;A&quot; &quot;B&quot; &quot;C&quot;</span></span>
-<span id="cb68-3"><a href="f.html#cb68-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-4"><a href="f.html#cb68-4" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>fctr</span>
-<span id="cb68-5"><a href="f.html#cb68-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] A B C</span></span>
-<span id="cb68-6"><a href="f.html#cb68-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Levels: A B C</span></span></code></pre></div>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="f.html#cb73-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>chr</span>
+<span id="cb73-2"><a href="f.html#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;A&quot; &quot;B&quot; &quot;C&quot;</span></span>
+<span id="cb73-3"><a href="f.html#cb73-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-4"><a href="f.html#cb73-4" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>fctr</span>
+<span id="cb73-5"><a href="f.html#cb73-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] A B C</span></span>
+<span id="cb73-6"><a href="f.html#cb73-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Levels: A B C</span></span></code></pre></div>
 <p>In a <a href="t.html#tibble">tibble</a>, these types will have “<chr>” or “<fctr>” under the column header.</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="f.html#cb69-1" aria-hidden="true" tabindex="-1"></a>data</span>
-<span id="cb69-2"><a href="f.html#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 3 x 2</span></span>
-<span id="cb69-3"><a href="f.html#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   chr   fctr </span></span>
-<span id="cb69-4"><a href="f.html#cb69-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt; &lt;fct&gt;</span></span>
-<span id="cb69-5"><a href="f.html#cb69-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 A     A    </span></span>
-<span id="cb69-6"><a href="f.html#cb69-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 B     B    </span></span>
-<span id="cb69-7"><a href="f.html#cb69-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 C     C</span></span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="f.html#cb74-1" aria-hidden="true" tabindex="-1"></a>data</span>
+<span id="cb74-2"><a href="f.html#cb74-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 3 x 2</span></span>
+<span id="cb74-3"><a href="f.html#cb74-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   chr   fctr </span></span>
+<span id="cb74-4"><a href="f.html#cb74-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt; &lt;fct&gt;</span></span>
+<span id="cb74-5"><a href="f.html#cb74-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 A     A    </span></span>
+<span id="cb74-6"><a href="f.html#cb74-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 B     B    </span></span>
+<span id="cb74-7"><a href="f.html#cb74-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 C     C</span></span></code></pre></div>
 <p>You can convert between characters and factors like this:</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="f.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.character</span>(data<span class="sc">$</span>fctr)</span>
-<span id="cb70-2"><a href="f.html#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;A&quot; &quot;B&quot; &quot;C&quot;</span></span>
-<span id="cb70-3"><a href="f.html#cb70-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-4"><a href="f.html#cb70-4" aria-hidden="true" tabindex="-1"></a><span class="co"># set the levels to the order you want</span></span>
-<span id="cb70-5"><a href="f.html#cb70-5" aria-hidden="true" tabindex="-1"></a><span class="fu">factor</span>(data<span class="sc">$</span>chr, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;C&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;A&quot;</span>))</span>
-<span id="cb70-6"><a href="f.html#cb70-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] A B C</span></span>
-<span id="cb70-7"><a href="f.html#cb70-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Levels: C B A</span></span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="f.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.character</span>(data<span class="sc">$</span>fctr)</span>
+<span id="cb75-2"><a href="f.html#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;A&quot; &quot;B&quot; &quot;C&quot;</span></span>
+<span id="cb75-3"><a href="f.html#cb75-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-4"><a href="f.html#cb75-4" aria-hidden="true" tabindex="-1"></a><span class="co"># set the levels to the order you want</span></span>
+<span id="cb75-5"><a href="f.html#cb75-5" aria-hidden="true" tabindex="-1"></a><span class="fu">factor</span>(data<span class="sc">$</span>chr, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;C&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;A&quot;</span>))</span>
+<span id="cb75-6"><a href="f.html#cb75-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] A B C</span></span>
+<span id="cb75-7"><a href="f.html#cb75-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Levels: C B A</span></span></code></pre></div>
 <div id="resources-1" class="section level3">
 <h3>Resources</h3>
 <ul>
@@ -509,11 +511,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="false-negative" class="section level2">
 <h2>false negative</h2>
 <p><dfn>When a test concludes there is no effect when there really is an effect</dfn></p>
+<p>Also called a <a href="t.html#type-ii-error">type II error</a>, but we prefer the more descriptive “false negative.”</p>
+<p>See also <a href="f.html#false-positive">false positive</a> and <a href="b.html#beta">beta</a>.</p>
 
 </div>
 <div id="false-positive" class="section level2">
 <h2>false positive</h2>
 <p><dfn>When a test concludes there is an effect when there really is no effect</dfn></p>
+<p>Also called a <a href="t.html#type-i-error">type I error</a>, but we prefer the more descriptive “false positive.”</p>
+<p>See also <a href="f.html#false-negative">false negative</a> and <a href="a.html#alpha-stats">alpha (stats)</a>.</p>
 
 </div>
 <div id="filtering-joins" class="section level2">
@@ -540,6 +546,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In the standard regression model</p>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 X_i + e_i\]</span></p>
 <p>the parameters <span class="math inline">\(\beta_0\)</span> (the intercept) and <span class="math inline">\(\beta_1\)</span> (the slope) are assumed to be constant across all sampling units (e.g. subjects). These are contrasted with <a href="r.html#random%20effect">random effects</a>, which are effects that differ across the units.</p>
+<p>In a mixed effects model, you can get a table of just the fixed effects with the code below:</p>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="f.html#cb76-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> afex<span class="sc">::</span><span class="fu">lmer</span>(</span>
+<span id="cb76-2"><a href="f.html#cb76-2" aria-hidden="true" tabindex="-1"></a>  rating <span class="sc">~</span> rater_age <span class="sc">*</span> face_age <span class="sc">+</span> <span class="co"># fixed effects</span></span>
+<span id="cb76-3"><a href="f.html#cb76-3" aria-hidden="true" tabindex="-1"></a>  (<span class="dv">1</span> <span class="sc">|</span> rater_id) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> face_id), <span class="co"># random effects</span></span>
+<span id="cb76-4"><a href="f.html#cb76-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> faux<span class="sc">::</span>fr4</span>
+<span id="cb76-5"><a href="f.html#cb76-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb76-6"><a href="f.html#cb76-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-7"><a href="f.html#cb76-7" aria-hidden="true" tabindex="-1"></a>broom.mixed<span class="sc">::</span><span class="fu">tidy</span>(model, <span class="at">effects =</span> <span class="st">&quot;fixed&quot;</span>)</span>
+<span id="cb76-8"><a href="f.html#cb76-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 4 x 7</span></span>
+<span id="cb76-9"><a href="f.html#cb76-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   effect term                estimate std.error statistic    df   p.value</span></span>
+<span id="cb76-10"><a href="f.html#cb76-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;                  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;</span></span>
+<span id="cb76-11"><a href="f.html#cb76-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 fixed  (Intercept)         3.81      0.882        4.32   92.6 0.0000387</span></span>
+<span id="cb76-12"><a href="f.html#cb76-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 fixed  rater_age           0.00415   0.0251       0.165  71.1 0.869    </span></span>
+<span id="cb76-13"><a href="f.html#cb76-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 fixed  face_age           -0.0353    0.0253      -1.40   92.2 0.165    </span></span>
+<span id="cb76-14"><a href="f.html#cb76-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 fixed  rater_age:face_age -0.000382  0.000617    -0.619 712.  0.536</span></span></code></pre></div>
 
 </div>
 <div id="fixed-factor" class="section level2">
@@ -551,22 +572,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="full_join" class="section level2">
 <h2>full_join</h2>
-<p><dfn>A <a href="f.html#mutating-joins">mutating join</a> that lets you join up rows in two tables while keeping all of the information from both tables</dfn></p>
+<p><dfn>A <a href="m.html#mutating-joins">mutating join</a> that lets you join up rows in two tables while keeping all of the information from both tables</dfn></p>
 <div class="figure" style="text-align: center"><span id="fig:full-join"></span>
 <img src="images/joins/full_join.png" alt="Full Join" width="100%" />
 <p class="caption">
 Figure 9: Full Join
 </p>
 </div>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="f.html#cb71-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb71-2"><a href="f.html#cb71-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
-<span id="cb71-3"><a href="f.html#cb71-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
-<span id="cb71-4"><a href="f.html#cb71-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb71-5"><a href="f.html#cb71-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-6"><a href="f.html#cb71-6" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb71-7"><a href="f.html#cb71-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>,</span>
-<span id="cb71-8"><a href="f.html#cb71-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> LETTERS[<span class="dv">22</span><span class="sc">:</span><span class="dv">26</span>]</span>
-<span id="cb71-9"><a href="f.html#cb71-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="f.html#cb77-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb77-2"><a href="f.html#cb77-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb77-3"><a href="f.html#cb77-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb77-4"><a href="f.html#cb77-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb77-5"><a href="f.html#cb77-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-6"><a href="f.html#cb77-6" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb77-7"><a href="f.html#cb77-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>,</span>
+<span id="cb77-8"><a href="f.html#cb77-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> LETTERS[<span class="dv">22</span><span class="sc">:</span><span class="dv">26</span>]</span>
+<span id="cb77-9"><a href="f.html#cb77-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <table>
 <tr>
 <th>
@@ -644,8 +665,8 @@ Table Y
 </tr>
 </table>
 <p>If there is no matching data in the other table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="f.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a columns come first</span></span>
-<span id="cb72-2"><a href="f.html#cb72-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">full_join</span>(a, b, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="f.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a columns come first</span></span>
+<span id="cb78-2"><a href="f.html#cb78-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">full_join</span>(a, b, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -695,8 +716,8 @@ Table Y
 </tbody>
 </table>
 <p>Order is not important for full joins, but does change the order of columns in the resulting table.</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="f.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># b columns come first</span></span>
-<span id="cb73-2"><a href="f.html#cb73-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">full_join</span>(b, a, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="f.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="co"># b columns come first</span></span>
+<span id="cb79-2"><a href="f.html#cb79-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">full_join</span>(b, a, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">

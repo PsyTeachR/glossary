@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha"><i class="fa fa-check"></i>alpha</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-stats"><i class="fa fa-check"></i>alpha (stats)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#ampersand"><i class="fa fa-check"></i>ampersand</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
@@ -335,6 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#parameter"><i class="fa fa-check"></i>parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#pipe"><i class="fa fa-check"></i>pipe</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#poisson-distribution"><i class="fa fa-check"></i>Poisson distribution</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population-parameter"><i class="fa fa-check"></i>population parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
@@ -459,22 +461,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div id="left_join" class="section level2">
 <h2>left_join</h2>
-<p><dfn>A <a href="f.html#mutating-joins">mutating join</a> that keeps all the data from the first (left) table and joins anything that matches from the second (right) table.</dfn></p>
+<p><dfn>A <a href="m.html#mutating-joins">mutating join</a> that keeps all the data from the first (left) table and joins anything that matches from the second (right) table.</dfn></p>
 <div class="figure" style="text-align: center"><span id="fig:left-join"></span>
 <img src="images/joins/left_join.png" alt="Left Join" width="100%" />
 <p class="caption">
 Figure 16: Left Join
 </p>
 </div>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="l.html#cb83-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb83-2"><a href="l.html#cb83-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
-<span id="cb83-3"><a href="l.html#cb83-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
-<span id="cb83-4"><a href="l.html#cb83-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb83-5"><a href="l.html#cb83-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb83-6"><a href="l.html#cb83-6" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb83-7"><a href="l.html#cb83-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>,</span>
-<span id="cb83-8"><a href="l.html#cb83-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> LETTERS[<span class="dv">22</span><span class="sc">:</span><span class="dv">26</span>]</span>
-<span id="cb83-9"><a href="l.html#cb83-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="l.html#cb89-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb89-2"><a href="l.html#cb89-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb89-3"><a href="l.html#cb89-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb89-4"><a href="l.html#cb89-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb89-5"><a href="l.html#cb89-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb89-6"><a href="l.html#cb89-6" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb89-7"><a href="l.html#cb89-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>,</span>
+<span id="cb89-8"><a href="l.html#cb89-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> LETTERS[<span class="dv">22</span><span class="sc">:</span><span class="dv">26</span>]</span>
+<span id="cb89-9"><a href="l.html#cb89-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <table>
 <tr>
 <th>
@@ -552,8 +554,8 @@ Table Y
 </tr>
 </table>
 <p>If there is no matching data in the right table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="l.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="co"># X is the left table</span></span>
-<span id="cb84-2"><a href="l.html#cb84-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(X, Y, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="l.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co"># X is the left table</span></span>
+<span id="cb90-2"><a href="l.html#cb90-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(X, Y, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -591,8 +593,8 @@ Table Y
 </tbody>
 </table>
 <p>Order is important for left joins.</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="l.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Y is the left table</span></span>
-<span id="cb85-2"><a href="l.html#cb85-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(Y, X, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="l.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Y is the left table</span></span>
+<span id="cb91-2"><a href="l.html#cb91-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(Y, X, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -636,23 +638,23 @@ Table Y
 <h2>level</h2>
 <p><dfn>The set of valid values for a <a href="f.html#factor">factor</a></dfn></p>
 <p>Setting the levels for a <a href="f.html#factor">factor</a> can be helpful to make sure they display and plot in the intended order.</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="l.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co"># levels in the right order</span></span>
-<span id="cb86-2"><a href="l.html#cb86-2" aria-hidden="true" tabindex="-1"></a>day_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Mon&quot;</span>, <span class="st">&quot;Tue&quot;</span>, <span class="st">&quot;Wed&quot;</span>, <span class="st">&quot;Thu&quot;</span>, <span class="st">&quot;Fri&quot;</span>, <span class="st">&quot;Sat&quot;</span>, <span class="st">&quot;Sun&quot;</span>)</span>
-<span id="cb86-3"><a href="l.html#cb86-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb86-4"><a href="l.html#cb86-4" aria-hidden="true" tabindex="-1"></a><span class="co"># repeat each day 1:7 times</span></span>
-<span id="cb86-5"><a href="l.html#cb86-5" aria-hidden="true" tabindex="-1"></a>days <span class="ot">&lt;-</span> <span class="fu">rep</span>(day_levels, <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>) </span>
-<span id="cb86-6"><a href="l.html#cb86-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb86-7"><a href="l.html#cb86-7" aria-hidden="true" tabindex="-1"></a><span class="co"># make into factors with and without levels</span></span>
-<span id="cb86-8"><a href="l.html#cb86-8" aria-hidden="true" tabindex="-1"></a>without_levels <span class="ot">&lt;-</span> <span class="fu">factor</span>(days)</span>
-<span id="cb86-9"><a href="l.html#cb86-9" aria-hidden="true" tabindex="-1"></a>with_levels <span class="ot">&lt;-</span> <span class="fu">factor</span>(days, <span class="at">levels =</span> day_levels)</span></code></pre></div>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="l.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> without_levels))</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="l.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co"># levels in the right order</span></span>
+<span id="cb92-2"><a href="l.html#cb92-2" aria-hidden="true" tabindex="-1"></a>day_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Mon&quot;</span>, <span class="st">&quot;Tue&quot;</span>, <span class="st">&quot;Wed&quot;</span>, <span class="st">&quot;Thu&quot;</span>, <span class="st">&quot;Fri&quot;</span>, <span class="st">&quot;Sat&quot;</span>, <span class="st">&quot;Sun&quot;</span>)</span>
+<span id="cb92-3"><a href="l.html#cb92-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb92-4"><a href="l.html#cb92-4" aria-hidden="true" tabindex="-1"></a><span class="co"># repeat each day 1:7 times</span></span>
+<span id="cb92-5"><a href="l.html#cb92-5" aria-hidden="true" tabindex="-1"></a>days <span class="ot">&lt;-</span> <span class="fu">rep</span>(day_levels, <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>) </span>
+<span id="cb92-6"><a href="l.html#cb92-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb92-7"><a href="l.html#cb92-7" aria-hidden="true" tabindex="-1"></a><span class="co"># make into factors with and without levels</span></span>
+<span id="cb92-8"><a href="l.html#cb92-8" aria-hidden="true" tabindex="-1"></a>without_levels <span class="ot">&lt;-</span> <span class="fu">factor</span>(days)</span>
+<span id="cb92-9"><a href="l.html#cb92-9" aria-hidden="true" tabindex="-1"></a>with_levels <span class="ot">&lt;-</span> <span class="fu">factor</span>(days, <span class="at">levels =</span> day_levels)</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="l.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> without_levels))</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:levels-without"></span>
 <img src="_main_files/figure-html/levels-without-1.png" alt="Without setting levels, categories display in alphabetical order." width="100%" />
 <p class="caption">
 Figure 17: Without setting levels, categories display in alphabetical order.
 </p>
 </div>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="l.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> with_levels))</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="l.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> with_levels))</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:levels-with"></span>
 <img src="_main_files/figure-html/levels-with-1.png" alt="With setting levels, categories display in the level order" width="100%" />
 <p class="caption">
@@ -719,65 +721,65 @@ Figure 18: With setting levels, categories display in the level order
 <h2>list</h2>
 <p><dfn>A <a href="c.html#container">container</a> data type that allows items with different data types to be grouped together.</dfn></p>
 <p>Each item in a list can be any type of R <a href="o.html#object">object</a>, but is usually a <a href="v.html#vector">vector</a> or another list.</p>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="l.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(</span>
-<span id="cb89-2"><a href="l.html#cb89-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">integers =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
-<span id="cb89-3"><a href="l.html#cb89-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">strings =</span> LETTERS,</span>
-<span id="cb89-4"><a href="l.html#cb89-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">another_list =</span> <span class="fu">list</span>(<span class="dv">1</span>, <span class="st">&quot;A&quot;</span>, <span class="cn">TRUE</span>),</span>
-<span id="cb89-5"><a href="l.html#cb89-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">object =</span> rnorm</span>
-<span id="cb89-6"><a href="l.html#cb89-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb89-7"><a href="l.html#cb89-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $integers</span></span>
-<span id="cb89-8"><a href="l.html#cb89-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]  1  2  3  4  5  6  7  8  9 10</span></span>
-<span id="cb89-9"><a href="l.html#cb89-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb89-10"><a href="l.html#cb89-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $strings</span></span>
-<span id="cb89-11"><a href="l.html#cb89-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] &quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;D&quot; &quot;E&quot; &quot;F&quot; &quot;G&quot; &quot;H&quot; &quot;I&quot; &quot;J&quot; &quot;K&quot; &quot;L&quot; &quot;M&quot; &quot;N&quot; &quot;O&quot; &quot;P&quot; &quot;Q&quot; &quot;R&quot; &quot;S&quot;</span></span>
-<span id="cb89-12"><a href="l.html#cb89-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [20] &quot;T&quot; &quot;U&quot; &quot;V&quot; &quot;W&quot; &quot;X&quot; &quot;Y&quot; &quot;Z&quot;</span></span>
-<span id="cb89-13"><a href="l.html#cb89-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb89-14"><a href="l.html#cb89-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $another_list</span></span>
-<span id="cb89-15"><a href="l.html#cb89-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $another_list[[1]]</span></span>
-<span id="cb89-16"><a href="l.html#cb89-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span>
-<span id="cb89-17"><a href="l.html#cb89-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb89-18"><a href="l.html#cb89-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $another_list[[2]]</span></span>
-<span id="cb89-19"><a href="l.html#cb89-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;A&quot;</span></span>
-<span id="cb89-20"><a href="l.html#cb89-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb89-21"><a href="l.html#cb89-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $another_list[[3]]</span></span>
-<span id="cb89-22"><a href="l.html#cb89-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span>
-<span id="cb89-23"><a href="l.html#cb89-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb89-24"><a href="l.html#cb89-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb89-25"><a href="l.html#cb89-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $object</span></span>
-<span id="cb89-26"><a href="l.html#cb89-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; function (n, mean = 0, sd = 1) </span></span>
-<span id="cb89-27"><a href="l.html#cb89-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; .Call(C_rnorm, n, mean, sd)</span></span>
-<span id="cb89-28"><a href="l.html#cb89-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;bytecode: 0x7fe07478f1c0&gt;</span></span>
-<span id="cb89-29"><a href="l.html#cb89-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;environment: namespace:stats&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="l.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb95-2"><a href="l.html#cb95-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">integers =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="cb95-3"><a href="l.html#cb95-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">strings =</span> LETTERS,</span>
+<span id="cb95-4"><a href="l.html#cb95-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">another_list =</span> <span class="fu">list</span>(<span class="dv">1</span>, <span class="st">&quot;A&quot;</span>, <span class="cn">TRUE</span>),</span>
+<span id="cb95-5"><a href="l.html#cb95-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">object =</span> rnorm</span>
+<span id="cb95-6"><a href="l.html#cb95-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb95-7"><a href="l.html#cb95-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $integers</span></span>
+<span id="cb95-8"><a href="l.html#cb95-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]  1  2  3  4  5  6  7  8  9 10</span></span>
+<span id="cb95-9"><a href="l.html#cb95-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb95-10"><a href="l.html#cb95-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $strings</span></span>
+<span id="cb95-11"><a href="l.html#cb95-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] &quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;D&quot; &quot;E&quot; &quot;F&quot; &quot;G&quot; &quot;H&quot; &quot;I&quot; &quot;J&quot; &quot;K&quot; &quot;L&quot; &quot;M&quot; &quot;N&quot; &quot;O&quot; &quot;P&quot; &quot;Q&quot; &quot;R&quot; &quot;S&quot; &quot;T&quot;</span></span>
+<span id="cb95-12"><a href="l.html#cb95-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [21] &quot;U&quot; &quot;V&quot; &quot;W&quot; &quot;X&quot; &quot;Y&quot; &quot;Z&quot;</span></span>
+<span id="cb95-13"><a href="l.html#cb95-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb95-14"><a href="l.html#cb95-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $another_list</span></span>
+<span id="cb95-15"><a href="l.html#cb95-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $another_list[[1]]</span></span>
+<span id="cb95-16"><a href="l.html#cb95-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span>
+<span id="cb95-17"><a href="l.html#cb95-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb95-18"><a href="l.html#cb95-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $another_list[[2]]</span></span>
+<span id="cb95-19"><a href="l.html#cb95-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;A&quot;</span></span>
+<span id="cb95-20"><a href="l.html#cb95-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb95-21"><a href="l.html#cb95-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $another_list[[3]]</span></span>
+<span id="cb95-22"><a href="l.html#cb95-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span>
+<span id="cb95-23"><a href="l.html#cb95-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb95-24"><a href="l.html#cb95-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb95-25"><a href="l.html#cb95-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $object</span></span>
+<span id="cb95-26"><a href="l.html#cb95-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; function (n, mean = 0, sd = 1) </span></span>
+<span id="cb95-27"><a href="l.html#cb95-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; .Call(C_rnorm, n, mean, sd)</span></span>
+<span id="cb95-28"><a href="l.html#cb95-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;bytecode: 0x7fd613a5c410&gt;</span></span>
+<span id="cb95-29"><a href="l.html#cb95-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &lt;environment: namespace:stats&gt;</span></span></code></pre></div>
 
 </div>
 <div id="logical" class="section level2">
 <h2>logical</h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing <code>TRUE</code> or <code>FALSE</code> values.</dfn></p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="l.html#cb90-1" aria-hidden="true" tabindex="-1"></a>true_logical_values <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb90-2"><a href="l.html#cb90-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">full =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb90-3"><a href="l.html#cb90-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">abbreviated =</span> T,</span>
-<span id="cb90-4"><a href="l.html#cb90-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">integer =</span> <span class="fu">as.logical</span>(<span class="dv">1</span>),</span>
-<span id="cb90-5"><a href="l.html#cb90-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">equation =</span> <span class="st">&quot;A&quot;</span> <span class="sc">==</span> <span class="st">&quot;A&quot;</span></span>
-<span id="cb90-6"><a href="l.html#cb90-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb90-7"><a href="l.html#cb90-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(true_logical_values)</span>
-<span id="cb90-8"><a href="l.html#cb90-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; List of 4</span></span>
-<span id="cb90-9"><a href="l.html#cb90-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ full       : logi TRUE</span></span>
-<span id="cb90-10"><a href="l.html#cb90-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ abbreviated: logi TRUE</span></span>
-<span id="cb90-11"><a href="l.html#cb90-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ integer    : logi TRUE</span></span>
-<span id="cb90-12"><a href="l.html#cb90-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ equation   : logi TRUE</span></span></code></pre></div>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="l.html#cb91-1" aria-hidden="true" tabindex="-1"></a>false_logical_values <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb91-2"><a href="l.html#cb91-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">full =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb91-3"><a href="l.html#cb91-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">abbreviated =</span> F,</span>
-<span id="cb91-4"><a href="l.html#cb91-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">integer =</span> <span class="fu">as.logical</span>(<span class="dv">0</span>),</span>
-<span id="cb91-5"><a href="l.html#cb91-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">equation =</span> <span class="st">&quot;A&quot;</span> <span class="sc">==</span> <span class="st">&quot;B&quot;</span></span>
-<span id="cb91-6"><a href="l.html#cb91-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb91-7"><a href="l.html#cb91-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb91-8"><a href="l.html#cb91-8" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(false_logical_values)</span>
-<span id="cb91-9"><a href="l.html#cb91-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; List of 4</span></span>
-<span id="cb91-10"><a href="l.html#cb91-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ full       : logi FALSE</span></span>
-<span id="cb91-11"><a href="l.html#cb91-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ abbreviated: logi FALSE</span></span>
-<span id="cb91-12"><a href="l.html#cb91-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ integer    : logi FALSE</span></span>
-<span id="cb91-13"><a href="l.html#cb91-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ equation   : logi FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="l.html#cb96-1" aria-hidden="true" tabindex="-1"></a>true_logical_values <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb96-2"><a href="l.html#cb96-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">full =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb96-3"><a href="l.html#cb96-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">abbreviated =</span> T,</span>
+<span id="cb96-4"><a href="l.html#cb96-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">integer =</span> <span class="fu">as.logical</span>(<span class="dv">1</span>),</span>
+<span id="cb96-5"><a href="l.html#cb96-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">equation =</span> <span class="st">&quot;A&quot;</span> <span class="sc">==</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb96-6"><a href="l.html#cb96-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb96-7"><a href="l.html#cb96-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(true_logical_values)</span>
+<span id="cb96-8"><a href="l.html#cb96-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; List of 4</span></span>
+<span id="cb96-9"><a href="l.html#cb96-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ full       : logi TRUE</span></span>
+<span id="cb96-10"><a href="l.html#cb96-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ abbreviated: logi TRUE</span></span>
+<span id="cb96-11"><a href="l.html#cb96-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ integer    : logi TRUE</span></span>
+<span id="cb96-12"><a href="l.html#cb96-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ equation   : logi TRUE</span></span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="l.html#cb97-1" aria-hidden="true" tabindex="-1"></a>false_logical_values <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb97-2"><a href="l.html#cb97-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">full =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb97-3"><a href="l.html#cb97-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">abbreviated =</span> F,</span>
+<span id="cb97-4"><a href="l.html#cb97-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">integer =</span> <span class="fu">as.logical</span>(<span class="dv">0</span>),</span>
+<span id="cb97-5"><a href="l.html#cb97-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">equation =</span> <span class="st">&quot;A&quot;</span> <span class="sc">==</span> <span class="st">&quot;B&quot;</span></span>
+<span id="cb97-6"><a href="l.html#cb97-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb97-7"><a href="l.html#cb97-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb97-8"><a href="l.html#cb97-8" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(false_logical_values)</span>
+<span id="cb97-9"><a href="l.html#cb97-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; List of 4</span></span>
+<span id="cb97-10"><a href="l.html#cb97-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ full       : logi FALSE</span></span>
+<span id="cb97-11"><a href="l.html#cb97-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ abbreviated: logi FALSE</span></span>
+<span id="cb97-12"><a href="l.html#cb97-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ integer    : logi FALSE</span></span>
+<span id="cb97-13"><a href="l.html#cb97-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  $ equation   : logi FALSE</span></span></code></pre></div>
 
 </div>
 <div id="long" class="section level2">

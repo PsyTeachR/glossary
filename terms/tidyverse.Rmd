@@ -2,4 +2,15 @@
 
 <dfn>A set of R packages that help you create and work with [tidy data](t.html#tidy-data)</dfn>
 
-See <https://www.tidyverse.org/>
+The [tidyverse](https://www.tidyverse.org/){target="_blank"} can be loaded with `library(tidyverse)` and loads the following packages:
+
+* {ggplot2} for data visualisation
+* {tibble} for data tables
+* {tidyr} for [tidy data](t.html#tidy-data)
+* {readr} for reading in data
+* {purrr} for [iteration](i.html#iteration)
+* {dplyr} for [data wrangling](d.html#data-wrangling)
+* {stringr} for string manipulation
+* {forcats} for factors
+
+Compare with [base R](b.html#base-r)

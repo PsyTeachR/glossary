@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha"><i class="fa fa-check"></i>alpha</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-stats"><i class="fa fa-check"></i>alpha (stats)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#ampersand"><i class="fa fa-check"></i>ampersand</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
@@ -335,6 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#parameter"><i class="fa fa-check"></i>parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#pipe"><i class="fa fa-check"></i>pipe</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#poisson-distribution"><i class="fa fa-check"></i>Poisson distribution</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population-parameter"><i class="fa fa-check"></i>population parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
@@ -497,6 +499,27 @@ Figure 2: Setting alpha to a number lower than 1 lets you see parts of the plot 
 </div>
 
 </div>
+<div id="ampersand" class="section level2">
+<h2>ampersand</h2>
+<p><dfn>The <a href="symbols.html">symbol</a> &amp;, an <a href="o.html#operator">operator</a> meaning “AND.”</dfn></p>
+<p>A single ampersand is <a href="v.html#vectorized">vectorized</a>, so compares each item in the first <a href="v.html#vector">vector</a> with the corresponding item in the second vector.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="a.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(T, T, F, F) <span class="sc">&amp;</span> <span class="fu">c</span>(T, T, F, F)</span>
+<span id="cb4-2"><a href="a.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1]  TRUE  TRUE FALSE FALSE</span></span></code></pre></div>
+<p>A double ampersand is not vectorised, so will ignore all but the first item in vectors.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="a.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(T, T, F, F) <span class="sc">&amp;&amp;</span> <span class="fu">c</span>(T, T, F, F)</span>
+<span id="cb5-2"><a href="a.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<div class="info">
+<p>The advantage of a double ampersand is that it will stop as soon as the conclusion is obvious. So if the first item is FALSE, the second item won’t even be run. This is useful for testing whether an object exists before checking something that requires the object to exist.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="a.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">is.character</span>(x)) { </span>
+<span id="cb6-2"><a href="a.html#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># do something</span></span>
+<span id="cb6-3"><a href="a.html#cb6-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-4"><a href="a.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in eval(expr, envir, enclos): object &#39;x&#39; not found</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="a.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">exists</span>(<span class="st">&quot;x&quot;</span>) <span class="sc">&amp;&amp;</span> <span class="fu">is.character</span>(x)) { </span>
+<span id="cb7-2"><a href="a.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># do something</span></span>
+<span id="cb7-3"><a href="a.html#cb7-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+
+</div>
 <div id="anti_join" class="section level2">
 <h2>anti_join</h2>
 <p><dfn>A <a href="f.html#filtering-joins">filtering join</a> that returns all rows from the left table where there are <em>not</em> matching values in the right table, keeping just columns from the left table.</dfn></p>
@@ -507,16 +530,16 @@ Figure 3: Anti Join
 </p>
 </div>
 <p>This is useful when you have a table of data that contains IDs you want to exclude from your main dataset.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="a.html#cb4-1" aria-hidden="true" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb4-2"><a href="a.html#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
-<span id="cb4-3"><a href="a.html#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
-<span id="cb4-4"><a href="a.html#cb4-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-5"><a href="a.html#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="a.html#cb4-6" aria-hidden="true" tabindex="-1"></a>to_exclude <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb4-7"><a href="a.html#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">4</span></span>
-<span id="cb4-8"><a href="a.html#cb4-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-9"><a href="a.html#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="a.html#cb4-10" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">anti_join</span>(all_data, to_exclude, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="a.html#cb8-1" aria-hidden="true" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb8-2"><a href="a.html#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb8-3"><a href="a.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb8-4"><a href="a.html#cb8-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-5"><a href="a.html#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="a.html#cb8-6" aria-hidden="true" tabindex="-1"></a>to_exclude <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb8-7"><a href="a.html#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">4</span></span>
+<span id="cb8-8"><a href="a.html#cb8-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-9"><a href="a.html#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="a.html#cb8-10" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">anti_join</span>(all_data, to_exclude, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -541,120 +564,125 @@ Figure 3: Anti Join
 <div id="argument" class="section level2">
 <h2>argument</h2>
 <p><dfn>A variable that provides input to a <a href="f.html#function">function</a>.</dfn></p>
-<p>For example, the first <strong>argument</strong> to the function <code>rnorm()</code> is <code>n</code> (the number of observations).</p>
+<p>For example, the first <strong>argument</strong> to the function <code>rnorm()</code> is <code>n</code> (the number of <a href="o.html#observation">observations</a>).</p>
 <p>When you look up the help for a function (e.g., <code>?sd</code>), you will see a section called <strong><code>Arguments</code></strong>, which lists the argument names and their definitions.</p>
 <p>The function <code>args()</code> will show you the argument names and their <a href="d.html#default-value">default values</a> (if any) for any function.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="a.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">args</span>(rnorm)</span>
-<span id="cb5-2"><a href="a.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; function (n, mean = 0, sd = 1) </span></span>
-<span id="cb5-3"><a href="a.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; NULL</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="a.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">args</span>(rnorm)</span>
+<span id="cb9-2"><a href="a.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; function (n, mean = 0, sd = 1) </span></span>
+<span id="cb9-3"><a href="a.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; NULL</span></span></code></pre></div>
 
 </div>
 <div id="array" class="section level2">
 <h2>array</h2>
-<p><dfn>A <a href="c.html">container</a> that stores <a href="o.html#object">objects</a> in one or more dimensions.</dfn></p>
+<p><dfn>A <a href="c.html#container">container</a> that stores <a href="o.html#object">objects</a> in one or more dimensions.</dfn></p>
 <p>You can create an array by specifying a list or vector of values and the number of dimensions. The first two dimensions are rows and columns; each dimension after that is printed separately as a facet.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="a.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3-dimensional array with 4 rows, 3 columns, and 2 facets</span></span>
-<span id="cb6-2"><a href="a.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">array</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>, <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>))</span>
-<span id="cb6-3"><a href="a.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; , , 1</span></span>
-<span id="cb6-4"><a href="a.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb6-5"><a href="a.html#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      [,1] [,2] [,3]</span></span>
-<span id="cb6-6"><a href="a.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,]    1    5    9</span></span>
-<span id="cb6-7"><a href="a.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,]    2    6   10</span></span>
-<span id="cb6-8"><a href="a.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,]    3    7   11</span></span>
-<span id="cb6-9"><a href="a.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,]    4    8   12</span></span>
-<span id="cb6-10"><a href="a.html#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb6-11"><a href="a.html#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; , , 2</span></span>
-<span id="cb6-12"><a href="a.html#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb6-13"><a href="a.html#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      [,1] [,2] [,3]</span></span>
-<span id="cb6-14"><a href="a.html#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,]   13   17   21</span></span>
-<span id="cb6-15"><a href="a.html#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,]   14   18   22</span></span>
-<span id="cb6-16"><a href="a.html#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,]   15   19   23</span></span>
-<span id="cb6-17"><a href="a.html#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,]   16   20   24</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="a.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3-dimensional array with 4 rows, 3 columns, and 2 facets</span></span>
+<span id="cb10-2"><a href="a.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">array</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>, <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>))</span>
+<span id="cb10-3"><a href="a.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; , , 1</span></span>
+<span id="cb10-4"><a href="a.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb10-5"><a href="a.html#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      [,1] [,2] [,3]</span></span>
+<span id="cb10-6"><a href="a.html#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,]    1    5    9</span></span>
+<span id="cb10-7"><a href="a.html#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,]    2    6   10</span></span>
+<span id="cb10-8"><a href="a.html#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,]    3    7   11</span></span>
+<span id="cb10-9"><a href="a.html#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,]    4    8   12</span></span>
+<span id="cb10-10"><a href="a.html#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb10-11"><a href="a.html#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; , , 2</span></span>
+<span id="cb10-12"><a href="a.html#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb10-13"><a href="a.html#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      [,1] [,2] [,3]</span></span>
+<span id="cb10-14"><a href="a.html#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,]   13   17   21</span></span>
+<span id="cb10-15"><a href="a.html#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,]   14   18   22</span></span>
+<span id="cb10-16"><a href="a.html#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,]   15   19   23</span></span>
+<span id="cb10-17"><a href="a.html#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,]   16   20   24</span></span></code></pre></div>
 <p>You can give your array dimensions names.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="a.html#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-2"><a href="a.html#cb7-2" aria-hidden="true" tabindex="-1"></a>dimnames <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb7-3"><a href="a.html#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">subj_id =</span> <span class="fu">c</span>(<span class="st">&quot;S1&quot;</span>, <span class="st">&quot;S2&quot;</span>, <span class="st">&quot;S3&quot;</span>, <span class="st">&quot;S4&quot;</span>),</span>
-<span id="cb7-4"><a href="a.html#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">face_id =</span> <span class="fu">c</span>(<span class="st">&quot;F1&quot;</span>, <span class="st">&quot;F2&quot;</span>, <span class="st">&quot;F3&quot;</span>),</span>
-<span id="cb7-5"><a href="a.html#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">condition =</span> <span class="fu">c</span>(<span class="st">&quot;Control&quot;</span>, <span class="st">&quot;experimental&quot;</span>)</span>
-<span id="cb7-6"><a href="a.html#cb7-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb7-7"><a href="a.html#cb7-7" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-8"><a href="a.html#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">array</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>, <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>), <span class="at">dimnames =</span> dimnames)</span>
-<span id="cb7-9"><a href="a.html#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; , , condition = Control</span></span>
-<span id="cb7-10"><a href="a.html#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb7-11"><a href="a.html#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        face_id</span></span>
-<span id="cb7-12"><a href="a.html#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; subj_id F1 F2 F3</span></span>
-<span id="cb7-13"><a href="a.html#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S1  1  5  9</span></span>
-<span id="cb7-14"><a href="a.html#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S2  2  6 10</span></span>
-<span id="cb7-15"><a href="a.html#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S3  3  7 11</span></span>
-<span id="cb7-16"><a href="a.html#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S4  4  8 12</span></span>
-<span id="cb7-17"><a href="a.html#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb7-18"><a href="a.html#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; , , condition = experimental</span></span>
-<span id="cb7-19"><a href="a.html#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb7-20"><a href="a.html#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        face_id</span></span>
-<span id="cb7-21"><a href="a.html#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; subj_id F1 F2 F3</span></span>
-<span id="cb7-22"><a href="a.html#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S1 13 17 21</span></span>
-<span id="cb7-23"><a href="a.html#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S2 14 18 22</span></span>
-<span id="cb7-24"><a href="a.html#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S3 15 19 23</span></span>
-<span id="cb7-25"><a href="a.html#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S4 16 20 24</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="a.html#cb11-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-2"><a href="a.html#cb11-2" aria-hidden="true" tabindex="-1"></a>dimnames <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb11-3"><a href="a.html#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">subj_id =</span> <span class="fu">c</span>(<span class="st">&quot;S1&quot;</span>, <span class="st">&quot;S2&quot;</span>, <span class="st">&quot;S3&quot;</span>, <span class="st">&quot;S4&quot;</span>),</span>
+<span id="cb11-4"><a href="a.html#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">face_id =</span> <span class="fu">c</span>(<span class="st">&quot;F1&quot;</span>, <span class="st">&quot;F2&quot;</span>, <span class="st">&quot;F3&quot;</span>),</span>
+<span id="cb11-5"><a href="a.html#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">condition =</span> <span class="fu">c</span>(<span class="st">&quot;Control&quot;</span>, <span class="st">&quot;experimental&quot;</span>)</span>
+<span id="cb11-6"><a href="a.html#cb11-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-7"><a href="a.html#cb11-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-8"><a href="a.html#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">array</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>, <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>), <span class="at">dimnames =</span> dimnames)</span>
+<span id="cb11-9"><a href="a.html#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; , , condition = Control</span></span>
+<span id="cb11-10"><a href="a.html#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb11-11"><a href="a.html#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        face_id</span></span>
+<span id="cb11-12"><a href="a.html#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; subj_id F1 F2 F3</span></span>
+<span id="cb11-13"><a href="a.html#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S1  1  5  9</span></span>
+<span id="cb11-14"><a href="a.html#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S2  2  6 10</span></span>
+<span id="cb11-15"><a href="a.html#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S3  3  7 11</span></span>
+<span id="cb11-16"><a href="a.html#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S4  4  8 12</span></span>
+<span id="cb11-17"><a href="a.html#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb11-18"><a href="a.html#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; , , condition = experimental</span></span>
+<span id="cb11-19"><a href="a.html#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb11-20"><a href="a.html#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        face_id</span></span>
+<span id="cb11-21"><a href="a.html#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; subj_id F1 F2 F3</span></span>
+<span id="cb11-22"><a href="a.html#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S1 13 17 21</span></span>
+<span id="cb11-23"><a href="a.html#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S2 14 18 22</span></span>
+<span id="cb11-24"><a href="a.html#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S3 15 19 23</span></span>
+<span id="cb11-25"><a href="a.html#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S4 16 20 24</span></span></code></pre></div>
 <p>Objects not need to be the same <a href="d.html#data-type">data type</a>.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="a.html#cb8-1" aria-hidden="true" tabindex="-1"></a>mylist <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;A&quot;</span>, <span class="cn">TRUE</span>, 2L, <span class="fl">3.1</span>)</span>
-<span id="cb8-2"><a href="a.html#cb8-2" aria-hidden="true" tabindex="-1"></a>myarray <span class="ot">&lt;-</span> <span class="fu">array</span>(mylist, <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
-<span id="cb8-3"><a href="a.html#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="a.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb8-5"><a href="a.html#cb8-5" aria-hidden="true" tabindex="-1"></a>  myarray[[<span class="dv">1</span>,<span class="dv">1</span>]] <span class="sc">%&gt;%</span> <span class="fu">class</span>(),</span>
-<span id="cb8-6"><a href="a.html#cb8-6" aria-hidden="true" tabindex="-1"></a>  myarray[[<span class="dv">1</span>,<span class="dv">2</span>]] <span class="sc">%&gt;%</span> <span class="fu">class</span>(),</span>
-<span id="cb8-7"><a href="a.html#cb8-7" aria-hidden="true" tabindex="-1"></a>  myarray[[<span class="dv">2</span>,<span class="dv">1</span>]] <span class="sc">%&gt;%</span> <span class="fu">class</span>(),</span>
-<span id="cb8-8"><a href="a.html#cb8-8" aria-hidden="true" tabindex="-1"></a>  myarray[[<span class="dv">2</span>,<span class="dv">2</span>]] <span class="sc">%&gt;%</span> <span class="fu">class</span>()</span>
-<span id="cb8-9"><a href="a.html#cb8-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb8-10"><a href="a.html#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;character&quot; &quot;integer&quot;   &quot;logical&quot;   &quot;numeric&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="a.html#cb12-1" aria-hidden="true" tabindex="-1"></a>mylist <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;A&quot;</span>, <span class="cn">TRUE</span>, 2L, <span class="fl">3.1</span>)</span>
+<span id="cb12-2"><a href="a.html#cb12-2" aria-hidden="true" tabindex="-1"></a>myarray <span class="ot">&lt;-</span> <span class="fu">array</span>(mylist, <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb12-3"><a href="a.html#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="a.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb12-5"><a href="a.html#cb12-5" aria-hidden="true" tabindex="-1"></a>  myarray[[<span class="dv">1</span>,<span class="dv">1</span>]] <span class="sc">%&gt;%</span> <span class="fu">class</span>(),</span>
+<span id="cb12-6"><a href="a.html#cb12-6" aria-hidden="true" tabindex="-1"></a>  myarray[[<span class="dv">1</span>,<span class="dv">2</span>]] <span class="sc">%&gt;%</span> <span class="fu">class</span>(),</span>
+<span id="cb12-7"><a href="a.html#cb12-7" aria-hidden="true" tabindex="-1"></a>  myarray[[<span class="dv">2</span>,<span class="dv">1</span>]] <span class="sc">%&gt;%</span> <span class="fu">class</span>(),</span>
+<span id="cb12-8"><a href="a.html#cb12-8" aria-hidden="true" tabindex="-1"></a>  myarray[[<span class="dv">2</span>,<span class="dv">2</span>]] <span class="sc">%&gt;%</span> <span class="fu">class</span>()</span>
+<span id="cb12-9"><a href="a.html#cb12-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb12-10"><a href="a.html#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;character&quot; &quot;integer&quot;   &quot;logical&quot;   &quot;numeric&quot;</span></span></code></pre></div>
 
 </div>
 <div id="aspect-ratio" class="section level2">
 <h2>aspect ratio</h2>
 <p><dfn>The ratio between the width and height of an image.</dfn></p>
 <p>You can specify the aspect ratio of your plots by setting the width and height in the first chunk of an R Markdown file like this:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="a.html#cb9-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
-<span id="cb9-2"><a href="a.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">fig.width =</span> <span class="dv">7</span>, <span class="co"># default value is 7</span></span>
-<span id="cb9-3"><a href="a.html#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">fig.height =</span> <span class="dv">7</span><span class="sc">/</span><span class="fl">1.618</span> <span class="co"># rolden ratio; default value is 7</span></span>
-<span id="cb9-4"><a href="a.html#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="a.html#cb13-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
+<span id="cb13-2"><a href="a.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">fig.width =</span> <span class="dv">7</span>, <span class="co"># default value is 7</span></span>
+<span id="cb13-3"><a href="a.html#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">fig.height =</span> <span class="dv">7</span><span class="sc">/</span><span class="fl">1.618</span> <span class="co"># rolden ratio; default value is 7</span></span>
+<span id="cb13-4"><a href="a.html#cb13-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <p>Or in the <a href="c.html#chunk">chunk</a> options:</p>
 <div class="verbatim">
 <p><code>```{r fig-golden-ratio, fig.width = 7, fig.height = 4.32}</code></p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="a.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(Sepal.Width, Sepal.Length, <span class="at">color =</span> Species)) <span class="sc">+</span></span>
-<span id="cb10-2"><a href="a.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb10-3"><a href="a.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">formula =</span> y<span class="sc">~</span>x)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:aspect-ratio-1"></span>
-<img src="_main_files/figure-html/aspect-ratio-1-1.png" alt="Plot with a 1.618:1 aspect ratio (golden ratio)" width="100%" />
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="a.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(Sepal.Width, Sepal.Length, <span class="at">color =</span> Species)) <span class="sc">+</span></span>
+<span id="cb14-2"><a href="a.html#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb14-3"><a href="a.html#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">formula =</span> y<span class="sc">~</span>x)</span></code></pre></div>
+<code>```</code>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:aspect-ratio-1-displ"></span>
+<img src="_main_files/figure-html/aspect-ratio-1-displ-1.png" alt="Plot with a 1.618:1 aspect ratio (golden ratio)" width="100%" />
 <p class="caption">
 Figure 4: Plot with a 1.618:1 aspect ratio (golden ratio)
 </p>
 </div>
-<code>```</code>
-</div>
 <div class="verbatim">
 <p><code>```{r fig-square, fig.width = 7, fig.height = 7}</code></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="a.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(Sepal.Width, Sepal.Length, <span class="at">color =</span> Species)) <span class="sc">+</span></span>
-<span id="cb11-2"><a href="a.html#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb11-3"><a href="a.html#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">formula =</span> y<span class="sc">~</span>x)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:aspect-ratio-2"></span>
-<img src="_main_files/figure-html/aspect-ratio-2-1.png" alt="Plot with a 1:1 aspect ratio" width="100%" />
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="a.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(Sepal.Width, Sepal.Length, <span class="at">color =</span> Species)) <span class="sc">+</span></span>
+<span id="cb15-2"><a href="a.html#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb15-3"><a href="a.html#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">formula =</span> y<span class="sc">~</span>x)</span></code></pre></div>
+<code>```</code>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:aspect-ratio-2-disp"></span>
+<img src="_main_files/figure-html/aspect-ratio-2-disp-1.png" alt="Plot with a 1:1 aspect ratio" width="100%" />
 <p class="caption">
 Figure 5: Plot with a 1:1 aspect ratio
 </p>
 </div>
-<code>```</code>
-</div>
 <p>Or when you save the image:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="a.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;golden-ratio.jpg&quot;</span>, <span class="at">width =</span> <span class="dv">7</span>, <span class="at">height =</span> <span class="dv">7</span><span class="sc">/</span><span class="fl">1.618</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="a.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;golden-ratio.jpg&quot;</span>, <span class="at">width =</span> <span class="dv">7</span>, <span class="at">height =</span> <span class="dv">7</span><span class="sc">/</span><span class="fl">1.618</span>)</span></code></pre></div>
 
 </div>
 <div id="assignment-operator" class="section level2">
 <h2>assignment operator</h2>
-<p><dfn>The symbol <code>&lt;-</code>, which functions like <code>=</code> and assigns the value on the right to the object on the left</dfn></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="a.html#cb13-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb13-2"><a href="a.html#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="a.html#cb13-3" aria-hidden="true" tabindex="-1"></a>a</span>
-<span id="cb13-4"><a href="a.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span></code></pre></div>
+<p><dfn>The <a href="symbols.html">symbol</a> <code>&lt;-</code>, which functions like <code>=</code> and assigns the value on the right to the object on the left</dfn></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="a.html#cb17-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb17-2"><a href="a.html#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="a.html#cb17-3" aria-hidden="true" tabindex="-1"></a>a</span>
+<span id="cb17-4"><a href="a.html#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span></code></pre></div>
+<p>The assignment operator can also be reversed</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="a.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="ot">-&gt;</span> b</span>
+<span id="cb18-2"><a href="a.html#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="a.html#cb18-3" aria-hidden="true" tabindex="-1"></a>b</span>
+<span id="cb18-4"><a href="a.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2</span></span></code></pre></div>
 
 </div>
 </div>

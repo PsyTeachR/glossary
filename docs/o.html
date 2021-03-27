@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha"><i class="fa fa-check"></i>alpha</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-stats"><i class="fa fa-check"></i>alpha (stats)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#ampersand"><i class="fa fa-check"></i>ampersand</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
@@ -335,6 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#parameter"><i class="fa fa-check"></i>parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#pipe"><i class="fa fa-check"></i>pipe</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#poisson-distribution"><i class="fa fa-check"></i>Poisson distribution</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population-parameter"><i class="fa fa-check"></i>population parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
@@ -473,7 +475,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>song_data</li>
 <li>song.data</li>
 <li>.song.data</li>
-<li>never_gonna_give_you_up_never_gonna_let_you_down</li>
+<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">never_gonna_give_you_up_never_gonna_let_you_down</a></li>
 </ul>
 <p>The following are not valid objects:</p>
 <ul>
@@ -488,20 +490,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="observation" class="section level2">
 <h2>observation</h2>
 <p><dfn>All of the data about a single trial or question.</dfn></p>
-<p>In a tidy dataset, each row contains only one observation.</p>
+<p>In a <a href="t.html$tidy-data">tidy</a> dataset, each row contains only one observation.</p>
 <p>Each row contains 3 observations:</p>
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="o.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb115-2"><a href="o.html#cb115-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb115-3"><a href="o.html#cb115-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb115-4"><a href="o.html#cb115-4" aria-hidden="true" tabindex="-1"></a>untidy <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb115-5"><a href="o.html#cb115-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
-<span id="cb115-6"><a href="o.html#cb115-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">score_1 =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
-<span id="cb115-7"><a href="o.html#cb115-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">score_2 =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
-<span id="cb115-8"><a href="o.html#cb115-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">score_3 =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
-<span id="cb115-9"><a href="o.html#cb115-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">rt_1 =</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>(),</span>
-<span id="cb115-10"><a href="o.html#cb115-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">rt_2 =</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>(),</span>
-<span id="cb115-11"><a href="o.html#cb115-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">rt_3 =</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>()</span>
-<span id="cb115-12"><a href="o.html#cb115-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="o.html#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb121-2"><a href="o.html#cb121-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb121-3"><a href="o.html#cb121-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb121-4"><a href="o.html#cb121-4" aria-hidden="true" tabindex="-1"></a>untidy <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb121-5"><a href="o.html#cb121-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb121-6"><a href="o.html#cb121-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">score_1 =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
+<span id="cb121-7"><a href="o.html#cb121-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">score_2 =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
+<span id="cb121-8"><a href="o.html#cb121-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">score_3 =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">5</span>),</span>
+<span id="cb121-9"><a href="o.html#cb121-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">rt_1 =</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>(),</span>
+<span id="cb121-10"><a href="o.html#cb121-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">rt_2 =</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>(),</span>
+<span id="cb121-11"><a href="o.html#cb121-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">rt_3 =</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="dv">800</span>, <span class="dv">100</span>) <span class="sc">%&gt;%</span> <span class="fu">round</span>()</span>
+<span id="cb121-12"><a href="o.html#cb121-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -563,10 +565,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 <p>Now each row contains 1 observation:</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="o.html#cb116-1" aria-hidden="true" tabindex="-1"></a>tidy <span class="ot">&lt;-</span> untidy <span class="sc">%&gt;%</span></span>
-<span id="cb116-2"><a href="o.html#cb116-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gather</span>(var, val, score_1<span class="sc">:</span>rt_3) <span class="sc">%&gt;%</span></span>
-<span id="cb116-3"><a href="o.html#cb116-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(var, <span class="fu">c</span>(<span class="st">&quot;var&quot;</span>, <span class="st">&quot;trial&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb116-4"><a href="o.html#cb116-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">spread</span>(var, val)</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="o.html#cb122-1" aria-hidden="true" tabindex="-1"></a>tidy <span class="ot">&lt;-</span> untidy <span class="sc">%&gt;%</span></span>
+<span id="cb122-2"><a href="o.html#cb122-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gather</span>(var, val, score_1<span class="sc">:</span>rt_3) <span class="sc">%&gt;%</span></span>
+<span id="cb122-3"><a href="o.html#cb122-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(var, <span class="fu">c</span>(<span class="st">&quot;var&quot;</span>, <span class="st">&quot;trial&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb122-4"><a href="o.html#cb122-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">spread</span>(var, val)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -821,12 +823,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="ordinal" class="section level2">
 <h2>ordinal</h2>
 <p><dfn><a href="d.html#discrete">Discrete</a> variables that have an inherent order, such as number of legs</dfn></p>
-<p>Ordinal variables are not necessarily <a href="c.html#continuous">continuous</a>. That is, you can assume 3 is higher than 2, but the difference between 2 and 3 isn’t always the same as the difference between 1 and 2. Therefore, think carefully before averaging ordinal values, since the average of 2 and 4 is not necessarily equal to 3.</p>
+<p>Ordinal variables are not necessarily <a href="c.html#continuous">continuous</a>. That is, you can assume 3 is higher than 2 on a <a href="l.html#likert">likert scale</a>, but the difference between 2 and 3 isn’t always the same as the difference between 1 and 2. Therefore, think carefully before averaging ordinal values, since the average of 2 and 4 is not necessarily equal to 3.</p>
 
 </div>
 <div id="outer-join" class="section level2">
 <h2>outer join</h2>
-<p><dfn>A <a href="f.html#mutating-joins">mutating join</a> that lets you join up rows in two tables while keeping all of the information from both tables (full_join)</dfn></p>
+<p><dfn>A <a href="m.html#mutating-joins">mutating join</a> that lets you join up rows in two tables while keeping all of the information from both tables (full_join)</dfn></p>
 <p>The term “outer join” is more commonly used in SQL. See <a href="f.html#full_join">full_join</a> for the R version.</p>
 
 </div>

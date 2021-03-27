@@ -1,5 +1,5 @@
 ## Type II Error
 
-<dfn>A false negative; When a test concludes there is no effect when there is really is an effect</dfn>
+<dfn>A [false negative](f.html#false-negative); When a test concludes there is no effect when there is really is an effect</dfn>
 
 

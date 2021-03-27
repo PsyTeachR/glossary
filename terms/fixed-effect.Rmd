@@ -7,3 +7,16 @@ In the standard regression model
 $$Y_i = \beta_0 + \beta_1 X_i + e_i$$
 
 the parameters $\beta_0$ (the intercept) and $\beta_1$ (the slope) are assumed to be constant across all sampling units (e.g. subjects). These are contrasted with [random effects](r.html#random effect), which are effects that differ across the units.
+
+In a mixed effects model, you can get a table of just the fixed effects with the code below:
+
+```{r}
+model <- afex::lmer(
+  rating ~ rater_age * face_age + # fixed effects
+  (1 | rater_id) + (1 | face_id), # random effects
+  data = faux::fr4
+)
+
+broom.mixed::tidy(model, effects = "fixed")
+```
+

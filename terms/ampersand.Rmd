@@ -1,0 +1,37 @@
+## ampersand
+
+<dfn>The [symbol](symbols.html) &, an [operator](o.html#operator) meaning "AND".</dfn>
+
+A single ampersand is [vectorized](v.html#vectorized), so compares each item in the first [vector](v.html#vector) with the corresponding item in the second vector.
+
+```{r}
+c(T, T, F, F) & c(T, T, F, F)
+```
+
+A double ampersand is not vectorised, so will ignore all but the first item in vectors.
+
+```{r}
+c(T, T, F, F) && c(T, T, F, F)
+```
+
+<div class="info">
+
+The advantage of a double ampersand is that it will stop as soon as the conclusion is obvious. So if the first item is FALSE, the second item won't even be run. This is useful for testing whether an object exists before checking something that requires the object to exist.
+
+```{r, include = FALSE}
+if (exists("x")) rm(x) # removes x from the environment
+```
+
+
+```{r, error = TRUE}
+if (is.character(x)) { 
+  # do something
+}
+```
+```{r}
+if (exists("x") && is.character(x)) { 
+  # do something
+}
+```
+
+</div>

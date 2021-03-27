@@ -2,6 +2,6 @@
 
 <dfn>The [false negative](f.html#false-negative) rate we accept for a statistical test.</dfn>
 
-Beta is equal to 1 - [power](p.html#power), so if a test has power of 0.8 for a specific [effect size](e.html#effect-size) and [alpha](a.html#alpha), then beta = 0.2.
+Beta is equal to 1 - [power](p.html#power), so if a test has power of 0.8 for a specific [effect size](e.html#effect-size) and [alpha](a.html#alpha-stats), then beta = 0.2.
 
 Beta can also refer to a parameter of the [beta distribution](b.html#beta-distribution)

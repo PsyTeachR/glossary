@@ -2,4 +2,6 @@
 
 <dfn>When a test concludes there is an effect when there really is no effect</dfn>
 
+Also called a [type I error](t.html#type-i-error), but we prefer the more descriptive "false positive".
 
+See also [false negative](f.html#false-negative) and [alpha (stats)](a.html#alpha-stats).

@@ -1,0 +1,58 @@
+## pipe
+
+<dfn></dfn>
+
+Pipes are a way to order your code in a more readable format.
+
+The symbol `%>%` takes the [object](o.html#object) created by a function and sends it to the next function. By default, it will be used as the first [argument](a.html#argument), and most [tidyverse](t.html#tidyverse) functions are optimised for this, but you can also include the result as another argument using `.` (see the example below).
+
+
+Instead of making a new object for each step:
+
+```{r, include = FALSE}
+set.seed(1)
+```
+
+```{r}
+# this makes 4 unnecessary objects
+data <- rnorm(20)         # simulate 20 values
+t <- t.test(data)         # 1-sample t-test
+p <- t$p.value            # extract p-value
+rounded_p <- round(p, 3)  # round to 3 digits
+paste("p = ", rounded_p)  # format
+```
+
+Or nesting functions:
+
+```{r, include = FALSE}
+set.seed(1)
+```
+
+```{r}
+# this is unreadable; never do this
+paste("p = ", round(t.test(rnorm(20))$p.value, 3))
+```
+
+You can pipe the results of each function to the next function:
+
+```{r, include = FALSE}
+set.seed(1)
+```
+
+
+```{r}
+rnorm(20) %>%         # simulate 20 values
+  t.test() %>%        # 1-sample t-test
+  `[[`("p.value") %>% # extract p-value, `[[`(data, "x") is the same as data[["x"]]
+  round(3) %>%        # round to 3 digits
+  paste("p = ", .)    # format 
+                      # use . to represent the previous data if it's not the first argument
+```
+
+
+See a more [detailed example](https://debruine.github.io/posts/pipes/){target="_blank"}. 
+
+
+The [symbol](symbols.html) `|` is also called a "pipe" and means "OR" in R, although it has other meanings that are more similar to the `%>%` pipe in some other programming languages.
+
+

@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha"><i class="fa fa-check"></i>alpha</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-stats"><i class="fa fa-check"></i>alpha (stats)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#ampersand"><i class="fa fa-check"></i>ampersand</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
@@ -335,6 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#parameter"><i class="fa fa-check"></i>parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#pipe"><i class="fa fa-check"></i>pipe</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#poisson-distribution"><i class="fa fa-check"></i>Poisson distribution</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population-parameter"><i class="fa fa-check"></i>population parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
@@ -477,9 +479,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>element</h2>
 <p><dfn>One item in a <a href="v.html#vector">vector</a>.</dfn></p>
 <p>For example, the built-in vector <code>LETTERS</code> contains 26 elements: the uppercase latin letters A through Z. You can select an element from a vector by putting its <a href="i.html#index">index</a> in square brackets.</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="e.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the tenth upppercase letter</span></span>
-<span id="cb62-2"><a href="e.html#cb62-2" aria-hidden="true" tabindex="-1"></a>LETTERS[<span class="dv">10</span>]</span>
-<span id="cb62-3"><a href="e.html#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;J&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="e.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the tenth upppercase letter</span></span>
+<span id="cb67-2"><a href="e.html#cb67-2" aria-hidden="true" tabindex="-1"></a>LETTERS[<span class="dv">10</span>]</span>
+<span id="cb67-3"><a href="e.html#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;J&quot;</span></span></code></pre></div>
 
 </div>
 <div id="ellipsis" class="section level2">
@@ -487,25 +489,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>Three dots (…) representing further unspecified <a href="a.html#argument">arguments</a> to a <a href="f.html#function">function</a>.</dfn></p>
 <p>When you look up the help for a function, you often see one of the arguments is <code>...</code>. This means that you can supply your own argument names and values here.</p>
 <p>For example, the help page for <code>dplyr::mutate()</code> shows a usage of <code>mutate(.data, ...)</code>, which means that the first argument is called <code>.data</code> and is the data table you want to mutate, and the second argument is <code>...</code>, which means that you can add as many new arguments as you want and each one will create a new column with the argument name and value.</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="e.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a data frame with letters and numbers </span></span>
-<span id="cb63-2"><a href="e.html#cb63-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb63-3"><a href="e.html#cb63-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">number =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
-<span id="cb63-4"><a href="e.html#cb63-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">letter =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
-<span id="cb63-5"><a href="e.html#cb63-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb63-6"><a href="e.html#cb63-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-7"><a href="e.html#cb63-7" aria-hidden="true" tabindex="-1"></a><span class="co"># the mutate function lets you add custom arguments</span></span>
-<span id="cb63-8"><a href="e.html#cb63-8" aria-hidden="true" tabindex="-1"></a><span class="co"># like lower and plus_10</span></span>
-<span id="cb63-9"><a href="e.html#cb63-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(</span>
-<span id="cb63-10"><a href="e.html#cb63-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">.data =</span> df,</span>
-<span id="cb63-11"><a href="e.html#cb63-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">lower =</span> <span class="fu">tolower</span>(letter),</span>
-<span id="cb63-12"><a href="e.html#cb63-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">plus_10 =</span> number <span class="sc">+</span> <span class="dv">10</span></span>
-<span id="cb63-13"><a href="e.html#cb63-13" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb63-14"><a href="e.html#cb63-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   number letter lower plus_10</span></span>
-<span id="cb63-15"><a href="e.html#cb63-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1      1      A     a      11</span></span>
-<span id="cb63-16"><a href="e.html#cb63-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2      2      B     b      12</span></span>
-<span id="cb63-17"><a href="e.html#cb63-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3      3      C     c      13</span></span>
-<span id="cb63-18"><a href="e.html#cb63-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4      4      D     d      14</span></span>
-<span id="cb63-19"><a href="e.html#cb63-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5      5      E     e      15</span></span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="e.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a data frame with letters and numbers </span></span>
+<span id="cb68-2"><a href="e.html#cb68-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb68-3"><a href="e.html#cb68-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">number =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb68-4"><a href="e.html#cb68-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">letter =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb68-5"><a href="e.html#cb68-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb68-6"><a href="e.html#cb68-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-7"><a href="e.html#cb68-7" aria-hidden="true" tabindex="-1"></a><span class="co"># the mutate function lets you add custom arguments</span></span>
+<span id="cb68-8"><a href="e.html#cb68-8" aria-hidden="true" tabindex="-1"></a><span class="co"># like lower and plus_10</span></span>
+<span id="cb68-9"><a href="e.html#cb68-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(</span>
+<span id="cb68-10"><a href="e.html#cb68-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">.data =</span> df,</span>
+<span id="cb68-11"><a href="e.html#cb68-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">lower =</span> <span class="fu">tolower</span>(letter),</span>
+<span id="cb68-12"><a href="e.html#cb68-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">plus_10 =</span> number <span class="sc">+</span> <span class="dv">10</span></span>
+<span id="cb68-13"><a href="e.html#cb68-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb68-14"><a href="e.html#cb68-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   number letter lower plus_10</span></span>
+<span id="cb68-15"><a href="e.html#cb68-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1      1      A     a      11</span></span>
+<span id="cb68-16"><a href="e.html#cb68-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2      2      B     b      12</span></span>
+<span id="cb68-17"><a href="e.html#cb68-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3      3      C     c      13</span></span>
+<span id="cb68-18"><a href="e.html#cb68-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4      4      D     d      14</span></span>
+<span id="cb68-19"><a href="e.html#cb68-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5      5      E     e      15</span></span></code></pre></div>
 
 </div>
 <div id="environment" class="section level2">
@@ -526,7 +528,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="escape" class="section level2">
 <h2>escape</h2>
 <p><dfn>Include special characters like " inside of a string by prefacing them with a backslash.</dfn></p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="e.html#cb64-1" aria-hidden="true" tabindex="-1"></a>str <span class="ot">&lt;-</span> <span class="st">&quot;This prints a </span><span class="sc">\&quot;</span><span class="st">quote</span><span class="sc">\&quot;</span><span class="st">&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="e.html#cb69-1" aria-hidden="true" tabindex="-1"></a>str <span class="ot">&lt;-</span> <span class="st">&quot;This prints a </span><span class="sc">\&quot;</span><span class="st">quote</span><span class="sc">\&quot;</span><span class="st">&quot;</span></span></code></pre></div>
 <p>This prints a “quote”</p>
 
 </div>
@@ -578,35 +580,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>extract operator</h2>
 <p><dfn>A symbol used to get values from a <a href="c.html#container">container</a> object, such as <code>[</code>, <code>[[</code>, or <code>$</code></dfn></p>
 <p>You can extract values from a <a href="v.html#vector">vector</a> by <a href="i.html#index">index</a> or name using <code>[</code> and <code>[[</code>.</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="e.html#cb65-1" aria-hidden="true" tabindex="-1"></a>my_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">A =</span> <span class="st">&quot;first&quot;</span>, <span class="at">B =</span> <span class="st">&quot;second&quot;</span>)</span>
-<span id="cb65-2"><a href="e.html#cb65-2" aria-hidden="true" tabindex="-1"></a>my_vector[<span class="dv">1</span>]   <span class="co"># by index, retains name</span></span>
-<span id="cb65-3"><a href="e.html#cb65-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       A </span></span>
-<span id="cb65-4"><a href="e.html#cb65-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &quot;first&quot;</span></span>
-<span id="cb65-5"><a href="e.html#cb65-5" aria-hidden="true" tabindex="-1"></a>my_vector[[<span class="dv">1</span>]] <span class="co"># by index, removes name</span></span>
-<span id="cb65-6"><a href="e.html#cb65-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;first&quot;</span></span>
-<span id="cb65-7"><a href="e.html#cb65-7" aria-hidden="true" tabindex="-1"></a>my_vector[<span class="st">&quot;B&quot;</span>] <span class="co"># by name, retains name</span></span>
-<span id="cb65-8"><a href="e.html#cb65-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        B </span></span>
-<span id="cb65-9"><a href="e.html#cb65-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &quot;second&quot;</span></span>
-<span id="cb65-10"><a href="e.html#cb65-10" aria-hidden="true" tabindex="-1"></a>my_vector[[<span class="st">&quot;B&quot;</span>]] <span class="co"># by name, removes name</span></span>
-<span id="cb65-11"><a href="e.html#cb65-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;second&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="e.html#cb70-1" aria-hidden="true" tabindex="-1"></a>my_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">A =</span> <span class="st">&quot;first&quot;</span>, <span class="at">B =</span> <span class="st">&quot;second&quot;</span>)</span>
+<span id="cb70-2"><a href="e.html#cb70-2" aria-hidden="true" tabindex="-1"></a>my_vector[<span class="dv">1</span>]   <span class="co"># by index, retains name</span></span>
+<span id="cb70-3"><a href="e.html#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;       A </span></span>
+<span id="cb70-4"><a href="e.html#cb70-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &quot;first&quot;</span></span>
+<span id="cb70-5"><a href="e.html#cb70-5" aria-hidden="true" tabindex="-1"></a>my_vector[[<span class="dv">1</span>]] <span class="co"># by index, removes name</span></span>
+<span id="cb70-6"><a href="e.html#cb70-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;first&quot;</span></span>
+<span id="cb70-7"><a href="e.html#cb70-7" aria-hidden="true" tabindex="-1"></a>my_vector[<span class="st">&quot;B&quot;</span>] <span class="co"># by name, retains name</span></span>
+<span id="cb70-8"><a href="e.html#cb70-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        B </span></span>
+<span id="cb70-9"><a href="e.html#cb70-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; &quot;second&quot;</span></span>
+<span id="cb70-10"><a href="e.html#cb70-10" aria-hidden="true" tabindex="-1"></a>my_vector[[<span class="st">&quot;B&quot;</span>]] <span class="co"># by name, removes name</span></span>
+<span id="cb70-11"><a href="e.html#cb70-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;second&quot;</span></span></code></pre></div>
 <p>You can extract values from a <a href="l.html#list">list</a> by <a href="i.html#index">index</a> or name using <code>[</code> and <code>[[</code> and by name using <code>$</code>.</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="e.html#cb66-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb66-2"><a href="e.html#cb66-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">A =</span> <span class="st">&quot;First item&quot;</span>,</span>
-<span id="cb66-3"><a href="e.html#cb66-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">B =</span> <span class="dv">2</span></span>
-<span id="cb66-4"><a href="e.html#cb66-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb66-5"><a href="e.html#cb66-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb66-6"><a href="e.html#cb66-6" aria-hidden="true" tabindex="-1"></a>my_list[<span class="dv">1</span>]     <span class="co"># by index, returns a (named) list </span></span>
-<span id="cb66-7"><a href="e.html#cb66-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $A</span></span>
-<span id="cb66-8"><a href="e.html#cb66-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;First item&quot;</span></span>
-<span id="cb66-9"><a href="e.html#cb66-9" aria-hidden="true" tabindex="-1"></a>my_list[[<span class="dv">1</span>]]   <span class="co"># by index, returns an (unnamed) vector</span></span>
-<span id="cb66-10"><a href="e.html#cb66-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;First item&quot;</span></span>
-<span id="cb66-11"><a href="e.html#cb66-11" aria-hidden="true" tabindex="-1"></a>my_list[<span class="st">&quot;B&quot;</span>]   <span class="co"># by name, returns a (named) list </span></span>
-<span id="cb66-12"><a href="e.html#cb66-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $B</span></span>
-<span id="cb66-13"><a href="e.html#cb66-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2</span></span>
-<span id="cb66-14"><a href="e.html#cb66-14" aria-hidden="true" tabindex="-1"></a>my_list[[<span class="st">&quot;B&quot;</span>]] <span class="co"># by name, returns an (unnamed) vector</span></span>
-<span id="cb66-15"><a href="e.html#cb66-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2</span></span>
-<span id="cb66-16"><a href="e.html#cb66-16" aria-hidden="true" tabindex="-1"></a>my_list<span class="sc">$</span>A      <span class="co"># by name, returns an (unnamed) vector</span></span>
-<span id="cb66-17"><a href="e.html#cb66-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;First item&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="e.html#cb71-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb71-2"><a href="e.html#cb71-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">A =</span> <span class="st">&quot;First item&quot;</span>,</span>
+<span id="cb71-3"><a href="e.html#cb71-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">B =</span> <span class="dv">2</span></span>
+<span id="cb71-4"><a href="e.html#cb71-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb71-5"><a href="e.html#cb71-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb71-6"><a href="e.html#cb71-6" aria-hidden="true" tabindex="-1"></a>my_list[<span class="dv">1</span>]     <span class="co"># by index, returns a (named) list </span></span>
+<span id="cb71-7"><a href="e.html#cb71-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $A</span></span>
+<span id="cb71-8"><a href="e.html#cb71-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;First item&quot;</span></span>
+<span id="cb71-9"><a href="e.html#cb71-9" aria-hidden="true" tabindex="-1"></a>my_list[[<span class="dv">1</span>]]   <span class="co"># by index, returns an (unnamed) vector</span></span>
+<span id="cb71-10"><a href="e.html#cb71-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;First item&quot;</span></span>
+<span id="cb71-11"><a href="e.html#cb71-11" aria-hidden="true" tabindex="-1"></a>my_list[<span class="st">&quot;B&quot;</span>]   <span class="co"># by name, returns a (named) list </span></span>
+<span id="cb71-12"><a href="e.html#cb71-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; $B</span></span>
+<span id="cb71-13"><a href="e.html#cb71-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2</span></span>
+<span id="cb71-14"><a href="e.html#cb71-14" aria-hidden="true" tabindex="-1"></a>my_list[[<span class="st">&quot;B&quot;</span>]] <span class="co"># by name, returns an (unnamed) vector</span></span>
+<span id="cb71-15"><a href="e.html#cb71-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2</span></span>
+<span id="cb71-16"><a href="e.html#cb71-16" aria-hidden="true" tabindex="-1"></a>my_list<span class="sc">$</span>A      <span class="co"># by name, returns an (unnamed) vector</span></span>
+<span id="cb71-17"><a href="e.html#cb71-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;First item&quot;</span></span></code></pre></div>
 
 </div>
 </div>

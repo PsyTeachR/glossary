@@ -1,6 +1,6 @@
 ## assignment operator
 
-<dfn>The symbol `<-`, which functions like `=` and assigns the value on the right to the object on the left</dfn>
+<dfn>The [symbol](symbols.html) `<-`, which functions like `=` and assigns the value on the right to the object on the left</dfn>
 
 ```{r assignment-operator}
 a <- 1
@@ -8,3 +8,10 @@ a <- 1
 a
 ```
 
+The assignment operator can also be reversed
+
+```{r reversed-assignment-operator}
+2 -> b
+
+b
+```

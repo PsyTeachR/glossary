@@ -1,6 +1,6 @@
 ## array
 
-<dfn>A [container](c.html) that stores [objects](o.html#object) in one or more dimensions.</dfn>
+<dfn>A [container](c.html#container) that stores [objects](o.html#object) in one or more dimensions.</dfn>
 
 You can create an array by specifying a list or vector of values and the number of dimensions. The first two dimensions are rows and columns; each dimension after that is printed separately as a facet.
 

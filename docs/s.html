@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha"><i class="fa fa-check"></i>alpha</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-stats"><i class="fa fa-check"></i>alpha (stats)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#ampersand"><i class="fa fa-check"></i>ampersand</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
@@ -335,6 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#parameter"><i class="fa fa-check"></i>parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#pipe"><i class="fa fa-check"></i>pipe</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#poisson-distribution"><i class="fa fa-check"></i>Poisson distribution</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population-parameter"><i class="fa fa-check"></i>population parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
@@ -477,29 +479,29 @@ If the population is small enough to feasibly test in full, e.g. all students i
 <h2>scope</h2>
 <p><dfn>The <a href="e.html#environment">environment</a> where an <a href="o.html#object">object</a> is available</dfn></p>
 <p>The main thing you need to know about scope involves writing your own <a href="f.html#function">functions</a>. Objects created inside a function are only available inside the function and not outside.</p>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="s.html#cb137-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">5</span> <span class="co"># this y is global</span></span>
-<span id="cb137-2"><a href="s.html#cb137-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb137-3"><a href="s.html#cb137-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
-<span id="cb137-4"><a href="s.html#cb137-4" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="dv">10</span> <span class="co"># this y is local</span></span>
-<span id="cb137-5"><a href="s.html#cb137-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(y)</span>
-<span id="cb137-6"><a href="s.html#cb137-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb137-7"><a href="s.html#cb137-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb137-8"><a href="s.html#cb137-8" aria-hidden="true" tabindex="-1"></a><span class="fu">x</span>() <span class="co"># returns the local value of y</span></span>
-<span id="cb137-9"><a href="s.html#cb137-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 10</span></span>
-<span id="cb137-10"><a href="s.html#cb137-10" aria-hidden="true" tabindex="-1"></a>y <span class="co"># returns the global value of y</span></span>
-<span id="cb137-11"><a href="s.html#cb137-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5</span></span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="s.html#cb147-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">5</span> <span class="co"># this y is global</span></span>
+<span id="cb147-2"><a href="s.html#cb147-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb147-3"><a href="s.html#cb147-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb147-4"><a href="s.html#cb147-4" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="dv">10</span> <span class="co"># this y is local</span></span>
+<span id="cb147-5"><a href="s.html#cb147-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(y)</span>
+<span id="cb147-6"><a href="s.html#cb147-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb147-7"><a href="s.html#cb147-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb147-8"><a href="s.html#cb147-8" aria-hidden="true" tabindex="-1"></a><span class="fu">x</span>() <span class="co"># returns the local value of y</span></span>
+<span id="cb147-9"><a href="s.html#cb147-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 10</span></span>
+<span id="cb147-10"><a href="s.html#cb147-10" aria-hidden="true" tabindex="-1"></a>y <span class="co"># returns the global value of y</span></span>
+<span id="cb147-11"><a href="s.html#cb147-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5</span></span></code></pre></div>
 <p>If you have arguments to a function, they are local variables inside the function and their values will overwrite any global variables with the same name.</p>
-<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="s.html#cb138-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">5</span> <span class="co"># this y is global</span></span>
-<span id="cb138-2"><a href="s.html#cb138-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb138-3"><a href="s.html#cb138-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="cf">function</span>(y) {</span>
-<span id="cb138-4"><a href="s.html#cb138-4" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> y <span class="sc">+</span> <span class="dv">1</span> <span class="co"># this uses the local value of y</span></span>
-<span id="cb138-5"><a href="s.html#cb138-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(y)</span>
-<span id="cb138-6"><a href="s.html#cb138-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb138-7"><a href="s.html#cb138-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb138-8"><a href="s.html#cb138-8" aria-hidden="true" tabindex="-1"></a><span class="fu">x</span>(<span class="dv">10</span>) <span class="co"># returns 10 + 1</span></span>
-<span id="cb138-9"><a href="s.html#cb138-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 11</span></span>
-<span id="cb138-10"><a href="s.html#cb138-10" aria-hidden="true" tabindex="-1"></a>y     <span class="co"># y is still 5</span></span>
-<span id="cb138-11"><a href="s.html#cb138-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5</span></span></code></pre></div>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="s.html#cb148-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">5</span> <span class="co"># this y is global</span></span>
+<span id="cb148-2"><a href="s.html#cb148-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb148-3"><a href="s.html#cb148-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="cf">function</span>(y) {</span>
+<span id="cb148-4"><a href="s.html#cb148-4" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> y <span class="sc">+</span> <span class="dv">1</span> <span class="co"># this uses the local value of y</span></span>
+<span id="cb148-5"><a href="s.html#cb148-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(y)</span>
+<span id="cb148-6"><a href="s.html#cb148-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb148-7"><a href="s.html#cb148-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb148-8"><a href="s.html#cb148-8" aria-hidden="true" tabindex="-1"></a><span class="fu">x</span>(<span class="dv">10</span>) <span class="co"># returns 10 + 1</span></span>
+<span id="cb148-9"><a href="s.html#cb148-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 11</span></span>
+<span id="cb148-10"><a href="s.html#cb148-10" aria-hidden="true" tabindex="-1"></a>y     <span class="co"># y is still 5</span></span>
+<span id="cb148-11"><a href="s.html#cb148-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5</span></span></code></pre></div>
 
 </div>
 <div id="script" class="section level2">
@@ -517,16 +519,16 @@ Figure 27: Semi Join
 </p>
 </div>
 <p>This is useful when you have a table of data that contains IDs of data that passes your exclusion criteria.</p>
-<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="s.html#cb139-1" aria-hidden="true" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb139-2"><a href="s.html#cb139-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
-<span id="cb139-3"><a href="s.html#cb139-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
-<span id="cb139-4"><a href="s.html#cb139-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb139-5"><a href="s.html#cb139-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb139-6"><a href="s.html#cb139-6" aria-hidden="true" tabindex="-1"></a>to_keep <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb139-7"><a href="s.html#cb139-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">4</span></span>
-<span id="cb139-8"><a href="s.html#cb139-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb139-9"><a href="s.html#cb139-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb139-10"><a href="s.html#cb139-10" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">semi_join</span>(all_data, to_keep, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="s.html#cb149-1" aria-hidden="true" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb149-2"><a href="s.html#cb149-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb149-3"><a href="s.html#cb149-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb149-4"><a href="s.html#cb149-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb149-5"><a href="s.html#cb149-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb149-6"><a href="s.html#cb149-6" aria-hidden="true" tabindex="-1"></a>to_keep <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb149-7"><a href="s.html#cb149-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">4</span></span>
+<span id="cb149-8"><a href="s.html#cb149-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb149-9"><a href="s.html#cb149-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb149-10"><a href="s.html#cb149-10" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">semi_join</span>(all_data, to_keep, <span class="at">by =</span> <span class="st">&quot;id&quot;</span>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -569,35 +571,35 @@ Figure 27: Semi Join
 <h2>set operations</h2>
 <p><dfn>Functions that compare two tables and return rows that match (intersect), are in either table (union), or are in one table but not the other (setdiff).</dfn></p>
 <p>The examples below use two small datasets. <code>a</code> has <code>id</code>s 1 to 5, and <code>b</code> has <code>id</code>s 3 to 7.</p>
-<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="s.html#cb140-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
-<span id="cb140-2"><a href="s.html#cb140-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">id =</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="s.html#cb150-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb150-2"><a href="s.html#cb150-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">id =</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>)</span></code></pre></div>
 <p><code>intersect()</code> returns all rows in two tables that match exactly. The columns don’t have to be in the same order.</p>
-<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="s.html#cb141-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">intersect</span>(a, b)</span>
-<span id="cb141-2"><a href="s.html#cb141-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 3 x 1</span></span>
-<span id="cb141-3"><a href="s.html#cb141-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      id</span></span>
-<span id="cb141-4"><a href="s.html#cb141-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;int&gt;</span></span>
-<span id="cb141-5"><a href="s.html#cb141-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1     3</span></span>
-<span id="cb141-6"><a href="s.html#cb141-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2     4</span></span>
-<span id="cb141-7"><a href="s.html#cb141-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3     5</span></span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="s.html#cb151-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">intersect</span>(a, b)</span>
+<span id="cb151-2"><a href="s.html#cb151-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 3 x 1</span></span>
+<span id="cb151-3"><a href="s.html#cb151-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      id</span></span>
+<span id="cb151-4"><a href="s.html#cb151-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;int&gt;</span></span>
+<span id="cb151-5"><a href="s.html#cb151-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1     3</span></span>
+<span id="cb151-6"><a href="s.html#cb151-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2     4</span></span>
+<span id="cb151-7"><a href="s.html#cb151-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3     5</span></span></code></pre></div>
 <p><code>union()</code> returns all the rows from both tables, removing duplicate rows.</p>
-<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="s.html#cb142-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">union</span>(a, b)</span>
-<span id="cb142-2"><a href="s.html#cb142-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 7 x 1</span></span>
-<span id="cb142-3"><a href="s.html#cb142-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      id</span></span>
-<span id="cb142-4"><a href="s.html#cb142-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;int&gt;</span></span>
-<span id="cb142-5"><a href="s.html#cb142-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1     1</span></span>
-<span id="cb142-6"><a href="s.html#cb142-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2     2</span></span>
-<span id="cb142-7"><a href="s.html#cb142-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3     3</span></span>
-<span id="cb142-8"><a href="s.html#cb142-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4     4</span></span>
-<span id="cb142-9"><a href="s.html#cb142-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5     5</span></span>
-<span id="cb142-10"><a href="s.html#cb142-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6     6</span></span>
-<span id="cb142-11"><a href="s.html#cb142-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7     7</span></span></code></pre></div>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="s.html#cb152-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">union</span>(a, b)</span>
+<span id="cb152-2"><a href="s.html#cb152-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 7 x 1</span></span>
+<span id="cb152-3"><a href="s.html#cb152-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      id</span></span>
+<span id="cb152-4"><a href="s.html#cb152-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;int&gt;</span></span>
+<span id="cb152-5"><a href="s.html#cb152-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1     1</span></span>
+<span id="cb152-6"><a href="s.html#cb152-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2     2</span></span>
+<span id="cb152-7"><a href="s.html#cb152-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3     3</span></span>
+<span id="cb152-8"><a href="s.html#cb152-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4     4</span></span>
+<span id="cb152-9"><a href="s.html#cb152-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5     5</span></span>
+<span id="cb152-10"><a href="s.html#cb152-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6     6</span></span>
+<span id="cb152-11"><a href="s.html#cb152-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7     7</span></span></code></pre></div>
 <p><code>setdiff</code> returns rows that are in the first table, but not in the second table.</p>
-<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="s.html#cb143-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">setdiff</span>(a, b)</span>
-<span id="cb143-2"><a href="s.html#cb143-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2 x 1</span></span>
-<span id="cb143-3"><a href="s.html#cb143-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      id</span></span>
-<span id="cb143-4"><a href="s.html#cb143-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;int&gt;</span></span>
-<span id="cb143-5"><a href="s.html#cb143-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1     1</span></span>
-<span id="cb143-6"><a href="s.html#cb143-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2     2</span></span></code></pre></div>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="s.html#cb153-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">setdiff</span>(a, b)</span>
+<span id="cb153-2"><a href="s.html#cb153-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2 x 1</span></span>
+<span id="cb153-3"><a href="s.html#cb153-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      id</span></span>
+<span id="cb153-4"><a href="s.html#cb153-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;int&gt;</span></span>
+<span id="cb153-5"><a href="s.html#cb153-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1     1</span></span>
+<span id="cb153-6"><a href="s.html#cb153-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2     2</span></span></code></pre></div>
 <div class="warning">
 <p>If you’ve forgotten to load dplyr or the tidyverse, <a href="b#base-r">base R</a> also has these functions. You will either get an error message or unexpected output if you try to use them with data tables.</p>
 </div>
@@ -631,10 +633,10 @@ Figure 27: Semi Join
 <div id="single-brackets" class="section level2">
 <h2>single brackets</h2>
 <p><dfn>A pair of square brackets used to select a subset from a <a href="c.html#container">container</a> like a <a href="l.html#list">list</a>, <a href="d.html#data-frame">data frame</a>, or <a href="m.html#matrix">matrix</a> (e.g., data[1, ]).</dfn></p>
-<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="s.html#cb144-1" aria-hidden="true" tabindex="-1"></a>secret_code <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">16</span>, <span class="dv">19</span>, <span class="dv">25</span>, <span class="dv">20</span>, <span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">8</span>, <span class="dv">18</span>)</span>
-<span id="cb144-2"><a href="s.html#cb144-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb144-3"><a href="s.html#cb144-3" aria-hidden="true" tabindex="-1"></a>LETTERS[secret_code]</span>
-<span id="cb144-4"><a href="s.html#cb144-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;P&quot; &quot;S&quot; &quot;Y&quot; &quot;T&quot; &quot;E&quot; &quot;A&quot; &quot;C&quot; &quot;H&quot; &quot;R&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="s.html#cb154-1" aria-hidden="true" tabindex="-1"></a>secret_code <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">16</span>, <span class="dv">19</span>, <span class="dv">25</span>, <span class="dv">20</span>, <span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">8</span>, <span class="dv">18</span>)</span>
+<span id="cb154-2"><a href="s.html#cb154-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb154-3"><a href="s.html#cb154-3" aria-hidden="true" tabindex="-1"></a>LETTERS[secret_code]</span>
+<span id="cb154-4"><a href="s.html#cb154-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;P&quot; &quot;S&quot; &quot;Y&quot; &quot;T&quot; &quot;E&quot; &quot;A&quot; &quot;C&quot; &quot;H&quot; &quot;R&quot;</span></span></code></pre></div>
 <p>See <a href="b.html#brackets">brackets</a> for an explanation of the difference between single and <a href="d.html#double-brackets">double</a> brackets.</p>
 
 </div>

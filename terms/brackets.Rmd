@@ -88,7 +88,7 @@ as_tibble(data)[, 1] # returns a tibble
 ```
 </div>
 
-Double brackets can be use with a single index or name to select a column as a vector.
+Double brackets can be used with a single index or name to select a column as a vector.
 
 ```{r}
 data[["vowel"]]

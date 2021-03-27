@@ -13,13 +13,25 @@ knitr::opts_chunk$set(
 
 Or in the [chunk](c.html#chunk) options:
 
-```{r aspect-ratio-1, eval = TRUE, fig.width = 7, fig.height = 4.32, fig.cap = "Plot with a 1.618:1 aspect ratio (golden ratio)", verbatim="r fig-golden-ratio, fig.width = 7, fig.height = 4.32"}
+```{r aspect-ratio-1, eval = FALSE, verbatim="r fig-golden-ratio, fig.width = 7, fig.height = 4.32"}
 ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
   geom_point() +
   geom_smooth(method = lm, formula = y~x)
 ```
 
-```{r aspect-ratio-2, eval = TRUE, fig.width = 7, fig.height = 7, fig.cap = "Plot with a 1:1 aspect ratio", verbatim="r fig-square, fig.width = 7, fig.height = 7"}
+```{r aspect-ratio-1-displ, echo = FALSE, fig.width = 7, fig.height = 4.32, fig.cap = "Plot with a 1.618:1 aspect ratio (golden ratio)"}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
+  geom_point() +
+  geom_smooth(method = lm, formula = y~x)
+```
+
+```{r aspect-ratio-2, eval = FALSE, verbatim="r fig-square, fig.width = 7, fig.height = 7"}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
+  geom_point() +
+  geom_smooth(method = lm, formula = y~x)
+```
+
+```{r aspect-ratio-2-disp, echo = FALSE, fig.width = 7, fig.height = 7, fig.cap = "Plot with a 1:1 aspect ratio"}
 ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
   geom_point() +
   geom_smooth(method = lm, formula = y~x)

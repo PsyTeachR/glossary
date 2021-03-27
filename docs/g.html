@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha"><i class="fa fa-check"></i>alpha</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-stats"><i class="fa fa-check"></i>alpha (stats)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#ampersand"><i class="fa fa-check"></i>ampersand</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
@@ -335,6 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#parameter"><i class="fa fa-check"></i>parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#pipe"><i class="fa fa-check"></i>pipe</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#poisson-distribution"><i class="fa fa-check"></i>Poisson distribution</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population-parameter"><i class="fa fa-check"></i>population parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
@@ -473,32 +475,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>geom</h2>
 <p><dfn>The geometric style in which data are displayed, such as boxplot, density, or histogram.</dfn></p>
 <p>In ggplot2, the geoms control how your data are visualised. You can start with the same base plot…</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="g.html#cb74-1" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">as.factor</span>(gear), hp)) <span class="sc">+</span></span>
-<span id="cb74-2"><a href="g.html#cb74-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Number of gears&quot;</span>, </span>
-<span id="cb74-3"><a href="g.html#cb74-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Horsepower&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="g.html#cb80-1" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">as.factor</span>(gear), hp)) <span class="sc">+</span></span>
+<span id="cb80-2"><a href="g.html#cb80-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Number of gears&quot;</span>, </span>
+<span id="cb80-3"><a href="g.html#cb80-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Horsepower&quot;</span>)</span></code></pre></div>
 <p>…and use different geoms to visualise it:</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="g.html#cb75-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="g.html#cb81-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geom-boxplot"></span>
 <img src="_main_files/figure-html/geom-boxplot-1.png" alt="Visualisation using geom_boxplot" width="100%" />
 <p class="caption">
 Figure 11: Visualisation using geom_boxplot
 </p>
 </div>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="g.html#cb76-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">geom_violin</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="g.html#cb82-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">geom_violin</span>()</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geom-violin"></span>
 <img src="_main_files/figure-html/geom-violin-1.png" alt="Visualisation using geom_violin" width="100%" />
 <p class="caption">
 Figure 12: Visualisation using geom_violin
 </p>
 </div>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="g.html#cb77-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">&quot;pointrange&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="g.html#cb83-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">&quot;pointrange&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geom-pointrange"></span>
 <img src="_main_files/figure-html/geom-pointrange-1.png" alt="Visualisation using pointrange" width="100%" />
 <p class="caption">
 Figure 13: Visualisation using pointrange
 </p>
 </div>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="g.html#cb78-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">&quot;crossbar&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="g.html#cb84-1" aria-hidden="true" tabindex="-1"></a>gg <span class="sc">+</span> <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">&quot;crossbar&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:geom-crossbar"></span>
 <img src="_main_files/figure-html/geom-crossbar-1.png" alt="Visualisation using crossbar" width="100%" />
 <p class="caption">

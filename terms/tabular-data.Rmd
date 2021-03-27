@@ -2,7 +2,7 @@
 
 <dfn>Data in a rectangular table format, where each row has an entry for each column.</dfn>
 
-Tabluar data in R are usually in a [data frame](d.html#data-frame).
+Tabluar data in R are usually in a [data frame](d.html#data-frame) or [tibble](t.html#tibble).
 
 ```{r, echo = FALSE}
 head(ukbabynames::ukbabynames)

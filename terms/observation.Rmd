@@ -2,7 +2,7 @@
 
 <dfn>All of the data about a single trial or question.</dfn>
 
-In a tidy dataset, each row contains only one observation.
+In a [tidy](t.html$tidy-data) dataset, each row contains only one observation.
 
 Each row contains 3 observations:
 

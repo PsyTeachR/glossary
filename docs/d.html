@@ -154,6 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha"><i class="fa fa-check"></i>alpha</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-stats"><i class="fa fa-check"></i>alpha (stats)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#ampersand"><i class="fa fa-check"></i>ampersand</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
@@ -335,6 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#panes"><i class="fa fa-check"></i>panes</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#parameter"><i class="fa fa-check"></i>parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#path"><i class="fa fa-check"></i>path</a></li>
+<li class="chapter" data-level="" data-path="p.html"><a href="p.html#pipe"><i class="fa fa-check"></i>pipe</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#poisson-distribution"><i class="fa fa-check"></i>Poisson distribution</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population-parameter"><i class="fa fa-check"></i>population parameter</a></li>
 <li class="chapter" data-level="" data-path="p.html"><a href="p.html#population"><i class="fa fa-check"></i>population</a></li>
@@ -460,16 +462,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="data-frame" class="section level2">
 <h2>data frame</h2>
 <p><dfn>A <a href="c.html#container">container</a> data type for storing <a href="t.html#tabular-data">tabular data</a>.</dfn></p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="d.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
-<span id="cb49-2"><a href="d.html#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
-<span id="cb49-3"><a href="d.html#cb49-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">&quot;Lisa&quot;</span>, <span class="st">&quot;Phil&quot;</span>, <span class="st">&quot;Helena&quot;</span>, <span class="st">&quot;Rachel&quot;</span>, <span class="st">&quot;Jack&quot;</span>)</span>
-<span id="cb49-4"><a href="d.html#cb49-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb49-5"><a href="d.html#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   id   name</span></span>
-<span id="cb49-6"><a href="d.html#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1  1   Lisa</span></span>
-<span id="cb49-7"><a href="d.html#cb49-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2  2   Phil</span></span>
-<span id="cb49-8"><a href="d.html#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3  3 Helena</span></span>
-<span id="cb49-9"><a href="d.html#cb49-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4  4 Rachel</span></span>
-<span id="cb49-10"><a href="d.html#cb49-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  5   Jack</span></span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="d.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb54-2"><a href="d.html#cb54-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,</span>
+<span id="cb54-3"><a href="d.html#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">&quot;Lisa&quot;</span>, <span class="st">&quot;Phil&quot;</span>, <span class="st">&quot;Helena&quot;</span>, <span class="st">&quot;Rachel&quot;</span>, <span class="st">&quot;Jack&quot;</span>)</span>
+<span id="cb54-4"><a href="d.html#cb54-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb54-5"><a href="d.html#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   id   name</span></span>
+<span id="cb54-6"><a href="d.html#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1  1   Lisa</span></span>
+<span id="cb54-7"><a href="d.html#cb54-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2  2   Phil</span></span>
+<span id="cb54-8"><a href="d.html#cb54-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3  3 Helena</span></span>
+<span id="cb54-9"><a href="d.html#cb54-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4  4 Rachel</span></span>
+<span id="cb54-10"><a href="d.html#cb54-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  5   Jack</span></span></code></pre></div>
 
 </div>
 <div id="data-type" class="section level2">
@@ -484,16 +486,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Integers and doubles are both <a href="n.html#numeric">numeric</a>.</p>
 <p>If you want to know what data type a variable is, use the function <code>typeof</code>.</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="d.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="dv">10</span>)</span>
-<span id="cb50-2"><a href="d.html#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;double&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="d.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="st">&quot;10&quot;</span>)</span>
-<span id="cb51-2"><a href="d.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;character&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="d.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(10L)</span>
-<span id="cb52-2"><a href="d.html#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;integer&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="d.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="dv">10</span> <span class="sc">==</span> <span class="dv">10</span>)</span>
-<span id="cb53-2"><a href="d.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;logical&quot;</span></span></code></pre></div>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="d.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(10i)</span>
-<span id="cb54-2"><a href="d.html#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;complex&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="d.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="dv">10</span>)</span>
+<span id="cb55-2"><a href="d.html#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;double&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="d.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="st">&quot;10&quot;</span>)</span>
+<span id="cb56-2"><a href="d.html#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;character&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="d.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(10L)</span>
+<span id="cb57-2"><a href="d.html#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;integer&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="d.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="dv">10</span> <span class="sc">==</span> <span class="dv">10</span>)</span>
+<span id="cb58-2"><a href="d.html#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;logical&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="d.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(10i)</span>
+<span id="cb59-2"><a href="d.html#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;complex&quot;</span></span></code></pre></div>
 
 </div>
 <div id="data-wrangling" class="section level2">
@@ -505,18 +507,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>default value</h2>
 <p><dfn>A value that a <a href="f.html#function">function</a> uses for an <a href="a.html#argument">argument</a> if it is skipped.</dfn></p>
 <p>For example, <code>mean()</code> has a default value of <code>FALSE</code> for the argument <code>na.rm</code> (don’t ignore NA values).</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="d.html#cb55-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="cn">NA</span>)</span>
-<span id="cb55-2"><a href="d.html#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span>
-<span id="cb55-3"><a href="d.html#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] NA</span></span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="d.html#cb60-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="cn">NA</span>)</span>
+<span id="cb60-2"><a href="d.html#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span>
+<span id="cb60-3"><a href="d.html#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] NA</span></span></code></pre></div>
 <p>So if you leave that argument out, it’s the same as setting it to <code>FALSE</code>.</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="d.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb56-2"><a href="d.html#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] NA</span></span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="d.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-2"><a href="d.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] NA</span></span></code></pre></div>
 <p>And you have to explicitly set it if you want it to be different.</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="d.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb57-2"><a href="d.html#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2</span></span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="d.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb62-2"><a href="d.html#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2</span></span></code></pre></div>
 <p>If an argument does not have a default value, you can’t omit it. In the example below, there is no default value for <code>n</code>.</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="d.html#cb58-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">rnorm</span>()</span>
-<span id="cb58-2"><a href="d.html#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in rnorm(): argument &quot;n&quot; is missing, with no default</span></span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="d.html#cb63-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">rnorm</span>()</span>
+<span id="cb63-2"><a href="d.html#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in rnorm(): argument &quot;n&quot; is missing, with no default</span></span></code></pre></div>
 
 </div>
 <div id="dependent-variable" class="section level2">
@@ -534,19 +536,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="deviation-score" class="section level2">
 <h2>deviation score</h2>
 <p><dfn>A score minus the mean</dfn></p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="d.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
-<span id="cb59-2"><a href="d.html#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">score =</span> <span class="dv">8</span><span class="sc">:</span><span class="dv">12</span></span>
-<span id="cb59-3"><a href="d.html#cb59-3" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
-<span id="cb59-4"><a href="d.html#cb59-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean =</span> <span class="fu">mean</span>(score),</span>
-<span id="cb59-5"><a href="d.html#cb59-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">deviation_score =</span> score <span class="sc">-</span> mean)</span>
-<span id="cb59-6"><a href="d.html#cb59-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 5 x 3</span></span>
-<span id="cb59-7"><a href="d.html#cb59-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   score  mean deviation_score</span></span>
-<span id="cb59-8"><a href="d.html#cb59-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;int&gt; &lt;dbl&gt;           &lt;dbl&gt;</span></span>
-<span id="cb59-9"><a href="d.html#cb59-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1     8    10              -2</span></span>
-<span id="cb59-10"><a href="d.html#cb59-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2     9    10              -1</span></span>
-<span id="cb59-11"><a href="d.html#cb59-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3    10    10               0</span></span>
-<span id="cb59-12"><a href="d.html#cb59-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4    11    10               1</span></span>
-<span id="cb59-13"><a href="d.html#cb59-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5    12    10               2</span></span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="d.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb64-2"><a href="d.html#cb64-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">score =</span> <span class="dv">8</span><span class="sc">:</span><span class="dv">12</span></span>
+<span id="cb64-3"><a href="d.html#cb64-3" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb64-4"><a href="d.html#cb64-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean =</span> <span class="fu">mean</span>(score),</span>
+<span id="cb64-5"><a href="d.html#cb64-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">deviation_score =</span> score <span class="sc">-</span> mean)</span>
+<span id="cb64-6"><a href="d.html#cb64-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 5 x 3</span></span>
+<span id="cb64-7"><a href="d.html#cb64-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   score  mean deviation_score</span></span>
+<span id="cb64-8"><a href="d.html#cb64-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;int&gt; &lt;dbl&gt;           &lt;dbl&gt;</span></span>
+<span id="cb64-9"><a href="d.html#cb64-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1     8    10              -2</span></span>
+<span id="cb64-10"><a href="d.html#cb64-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2     9    10              -1</span></span>
+<span id="cb64-11"><a href="d.html#cb64-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3    10    10               0</span></span>
+<span id="cb64-12"><a href="d.html#cb64-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4    11    10               1</span></span>
+<span id="cb64-13"><a href="d.html#cb64-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5    12    10               2</span></span></code></pre></div>
 
 </div>
 <div id="directory" class="section level2">
@@ -554,11 +556,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>A collection or “folder” of files on a computer.</dfn></p>
 <p>In a file <a href="p.html#path">path</a>, each directory is separated by forward slashes, e.g., “dir1/dir2/file.Rmd.”</p>
 <p>Sometimes you need to check if a directory exists and/or make a new directory. For example, a script may save images in a directory called “images” that is in the same directory as the script (so you can use the <a href="r.html#relative-path">relative path</a>). Below is code for checking whether that directory exists and making it if it doesn’t.</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="d.html#cb60-1" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">&quot;images&quot;</span></span>
-<span id="cb60-2"><a href="d.html#cb60-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-3"><a href="d.html#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(path)) {</span>
-<span id="cb60-4"><a href="d.html#cb60-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(path)</span>
-<span id="cb60-5"><a href="d.html#cb60-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="d.html#cb65-1" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">&quot;images&quot;</span></span>
+<span id="cb65-2"><a href="d.html#cb65-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-3"><a href="d.html#cb65-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(path)) {</span>
+<span id="cb65-4"><a href="d.html#cb65-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(path)</span>
+<span id="cb65-5"><a href="d.html#cb65-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 
 </div>
 <div id="discrete" class="section level2">
@@ -581,14 +583,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="double-brackets" class="section level2">
 <h2>double brackets</h2>
 <p><dfn>Two pairs of square brackets used to select a single item from a <a href="c.html#container">container</a> like a <a href="l.html#list">list</a>, <a href="d.html#data-frame">data frame</a>, or <a href="m.html#matrix">matrix</a> (e.g., data[[1]]).</dfn></p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="d.html#cb61-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb61-2"><a href="d.html#cb61-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,</span>
-<span id="cb61-3"><a href="d.html#cb61-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="fl">1.4</span>, <span class="fl">2.3</span>, <span class="fl">8.2</span>)</span>
-<span id="cb61-4"><a href="d.html#cb61-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb61-5"><a href="d.html#cb61-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-6"><a href="d.html#cb61-6" aria-hidden="true" tabindex="-1"></a><span class="co"># double brackets return the id column as a vector</span></span>
-<span id="cb61-7"><a href="d.html#cb61-7" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">&quot;id&quot;</span>]] </span>
-<span id="cb61-8"><a href="d.html#cb61-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1 2 3</span></span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="d.html#cb66-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb66-2"><a href="d.html#cb66-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,</span>
+<span id="cb66-3"><a href="d.html#cb66-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="fl">1.4</span>, <span class="fl">2.3</span>, <span class="fl">8.2</span>)</span>
+<span id="cb66-4"><a href="d.html#cb66-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb66-5"><a href="d.html#cb66-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-6"><a href="d.html#cb66-6" aria-hidden="true" tabindex="-1"></a><span class="co"># double brackets return the id column as a vector</span></span>
+<span id="cb66-7"><a href="d.html#cb66-7" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">&quot;id&quot;</span>]] </span>
+<span id="cb66-8"><a href="d.html#cb66-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1 2 3</span></span></code></pre></div>
 <p>See <a href="b.html#brackets">brackets</a> for an explanation of the difference between <a href="s.html#single-brackets">single</a> and double brackets.</p>
 
 </div>

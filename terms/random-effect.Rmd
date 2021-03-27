@@ -5,3 +5,15 @@
 **Example:** If the grand mean response time in a population is 600 milliseconds, that number represents the typical value. The mean response time for an individual subject $s$ can be represented as an offset ([deviation](d.html#deviation-score)) from that value. For example, if subject $s$ has a mean reaction time of 650 ms, that would imply a random effect for that subject of +50 ms.
 
 Unlike [fixed effects](f.html#fixed effect), we expect the underlying random effects to change from experiment to experiment as the sampling units (e.g., subjects) change.
+
+In a mixed effects model, you can get a table of just the random effects with the code below:
+
+```{r}
+model <- afex::lmer(
+  rating ~ rater_age * face_age + # fixed effects
+  (1 | rater_id) + (1 | face_id), # random effects
+  data = faux::fr4
+)
+
+broom.mixed::tidy(model, effects = "ran_pars")
+```
