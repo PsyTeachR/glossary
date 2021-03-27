@@ -1,0 +1,14 @@
+## single brackets
+
+<dfn>A pair of square brackets used to select a subset from a [container](c.html#container) like a [list](l.html#list), [data frame](d.html#data-frame), or [matrix](m.html#matrix) (e.g., data[1, ]).</dfn>
+
+```{r}
+secret_code <- c(16, 19, 25, 20, 5, 1, 3, 8, 18)
+
+LETTERS[secret_code]
+```
+
+
+See [brackets](b.html#brackets) for an explanation of the difference between single and [double](d.html#double-brackets) brackets.
+
+

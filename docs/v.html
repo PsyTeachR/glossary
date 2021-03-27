@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2021-03-06" />
+<meta name="date" content="2021-03-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,12 +51,20 @@
 
 
 
+<meta property="og:title" content="PsyTeachR Glossary">
+<meta property="og:description" content="A glossary of statistical and R coding terms used in the PsyTeachR books in a bookdown format that can also be downloaded as an R package and accessed offline.">
+<meta property="og:image" content="https://psyteachr.github.io/images/twitter/glossary.png">
+<meta property="og:url" content="https://psyteachr.github.io/glossary">
+<meta property="twitter:card" content="summary_large_image">
+
+<link rel="shortcut icon" href="https://psyteachr.github.io/images/glossary.png">
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -148,6 +156,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#aspect-ratio"><i class="fa fa-check"></i>aspect ratio</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#assignment-operator"><i class="fa fa-check"></i>assignment operator</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html"><i class="fa fa-check"></i>B</a>
@@ -162,6 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binomial-distribution"><i class="fa fa-check"></i>binomial distribution</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#bivariate-normal"><i class="fa fa-check"></i>bivariate normal</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#block"><i class="fa fa-check"></i>block</a></li>
+<li class="chapter" data-level="" data-path="b.html"><a href="b.html#brackets"><i class="fa fa-check"></i>brackets</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html"><i class="fa fa-check"></i>C</a>
 <ul>
@@ -198,8 +209,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#descriptive"><i class="fa fa-check"></i>descriptive</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#directory"><i class="fa fa-check"></i>directory</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#distribution"><i class="fa fa-check"></i>distribution</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#double-brackets"><i class="fa fa-check"></i>double brackets</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a>
@@ -368,6 +381,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#shinydashboard"><i class="fa fa-check"></i>shinydashboard</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#significant"><i class="fa fa-check"></i>significant</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#simulation"><i class="fa fa-check"></i>simulation</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#single-brackets"><i class="fa fa-check"></i>single brackets</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#slope"><i class="fa fa-check"></i>slope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#standard-deviation"><i class="fa fa-check"></i>standard deviation</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#string"><i class="fa fa-check"></i>string</a></li>
@@ -448,13 +462,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>A single number or piece of data.</dfn></p>
 <p>In a tidy dataset, each cell contains only one value.</p>
 <p>The <code>age</code> column contains 3 values: mean, minimum and maximum.</p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="v.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb124-2"><a href="v.html#cb124-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb124-3"><a href="v.html#cb124-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb124-4"><a href="v.html#cb124-4" aria-hidden="true" tabindex="-1"></a>untidy <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb124-5"><a href="v.html#cb124-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">group =</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>),</span>
-<span id="cb124-6"><a href="v.html#cb124-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="st">&quot;20.4 [18-25]&quot;</span>, <span class="st">&quot;19.9 [18-24]&quot;</span>)</span>
-<span id="cb124-7"><a href="v.html#cb124-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="v.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb149-2"><a href="v.html#cb149-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb149-3"><a href="v.html#cb149-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb149-4"><a href="v.html#cb149-4" aria-hidden="true" tabindex="-1"></a>untidy <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb149-5"><a href="v.html#cb149-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">group =</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>),</span>
+<span id="cb149-6"><a href="v.html#cb149-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="st">&quot;20.4 [18-25]&quot;</span>, <span class="st">&quot;19.9 [18-24]&quot;</span>)</span>
+<span id="cb149-7"><a href="v.html#cb149-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -473,10 +487,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="v.html#cb125-1" aria-hidden="true" tabindex="-1"></a>tidy <span class="ot">&lt;-</span> untidy <span class="sc">%&gt;%</span></span>
-<span id="cb125-2"><a href="v.html#cb125-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(age, <span class="fu">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;min&quot;</span>, <span class="st">&quot;max&quot;</span>), </span>
-<span id="cb125-3"><a href="v.html#cb125-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">sep =</span> <span class="st">&quot;( </span><span class="sc">\\</span><span class="st">[|-|</span><span class="sc">\\</span><span class="st">])&quot;</span>,</span>
-<span id="cb125-4"><a href="v.html#cb125-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">extra =</span> <span class="st">&quot;drop&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="v.html#cb150-1" aria-hidden="true" tabindex="-1"></a>tidy <span class="ot">&lt;-</span> untidy <span class="sc">%&gt;%</span></span>
+<span id="cb150-2"><a href="v.html#cb150-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(age, <span class="fu">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;min&quot;</span>, <span class="st">&quot;max&quot;</span>), </span>
+<span id="cb150-3"><a href="v.html#cb150-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">sep =</span> <span class="st">&quot;( </span><span class="sc">\\</span><span class="st">[|-|</span><span class="sc">\\</span><span class="st">])&quot;</span>,</span>
+<span id="cb150-4"><a href="v.html#cb150-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">extra =</span> <span class="st">&quot;drop&quot;</span>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -512,53 +526,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="variance" class="section level2">
 <h2>variance</h2>
 <p><dfn>A <a href="d.html#descriptive">descriptive</a> statistic for how much an average data point varies from the mean.</dfn></p>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="v.html#cb126-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>)</span>
-<span id="cb126-2"><a href="v.html#cb126-2" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(data)</span>
-<span id="cb126-3"><a href="v.html#cb126-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 7.5</span></span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="v.html#cb151-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>)</span>
+<span id="cb151-2"><a href="v.html#cb151-2" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(data)</span>
+<span id="cb151-3"><a href="v.html#cb151-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 7.5</span></span></code></pre></div>
 <p>Variance is equal to <a href="s.html#standard-deviation">standard deviation</a> squared.</p>
-<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="v.html#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(data)<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb127-2"><a href="v.html#cb127-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 7.5</span></span></code></pre></div>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="v.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(data)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb152-2"><a href="v.html#cb152-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 7.5</span></span></code></pre></div>
 <p>You calculate variance by summing the squared differences between each data point and their mean (<code>sum(diff^2)</code>) and dividing this by the number of data points minus 1 (<code>(n-1)</code>)</p>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="v.html#cb128-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">mean</span>(data)   <span class="co"># calculate the mean</span></span>
-<span id="cb128-2"><a href="v.html#cb128-2" aria-hidden="true" tabindex="-1"></a>diff <span class="ot">&lt;-</span> data <span class="sc">-</span> m  <span class="co"># difference between each data point and the mean</span></span>
-<span id="cb128-3"><a href="v.html#cb128-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(data) <span class="co"># number of data points</span></span>
-<span id="cb128-4"><a href="v.html#cb128-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(diff<span class="sc">^</span><span class="dv">2</span>)<span class="sc">/</span>(n<span class="dv">-1</span>) <span class="co"># variance</span></span>
-<span id="cb128-5"><a href="v.html#cb128-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 7.5</span></span></code></pre></div>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="v.html#cb153-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">mean</span>(data)   <span class="co"># calculate the mean</span></span>
+<span id="cb153-2"><a href="v.html#cb153-2" aria-hidden="true" tabindex="-1"></a>diff <span class="ot">&lt;-</span> data <span class="sc">-</span> m  <span class="co"># difference between each data point and the mean</span></span>
+<span id="cb153-3"><a href="v.html#cb153-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(data) <span class="co"># number of data points</span></span>
+<span id="cb153-4"><a href="v.html#cb153-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(diff<span class="sc">^</span><span class="dv">2</span>)<span class="sc">/</span>(n<span class="dv">-1</span>) <span class="co"># variance</span></span>
+<span id="cb153-5"><a href="v.html#cb153-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 7.5</span></span></code></pre></div>
 
 </div>
 <div id="vector" class="section level2">
 <h2>vector</h2>
 <p><dfn>A type of data structure that is basically a list of things like T/F values, numbers, or strings.</dfn></p>
 <p>It can get very complicated (see <a href="http://r4ds.had.co.nz/vectors.html" target="_blank">Ch 20 of R for Data Science</a> for a thorough explanation), but at first you just need to be able to understand that the following things are examples of vectors:</p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="v.html#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use the c() function to make a vector of strings or numbers</span></span>
-<span id="cb129-2"><a href="v.html#cb129-2" aria-hidden="true" tabindex="-1"></a>liit_ingredients <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;vodka&quot;</span>, <span class="st">&quot;gin&quot;</span>, <span class="st">&quot;rum&quot;</span>, <span class="st">&quot;tequila&quot;</span>, <span class="st">&quot;triple sec&quot;</span>, </span>
-<span id="cb129-3"><a href="v.html#cb129-3" aria-hidden="true" tabindex="-1"></a>                      <span class="st">&quot;orange juice&quot;</span>, <span class="st">&quot;coke&quot;</span>, <span class="st">&quot;sour mix&quot;</span>)</span>
-<span id="cb129-4"><a href="v.html#cb129-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb129-5"><a href="v.html#cb129-5" aria-hidden="true" tabindex="-1"></a>fun_to_play_at <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">13</span>, <span class="dv">3</span>, <span class="dv">1</span>)</span>
-<span id="cb129-6"><a href="v.html#cb129-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb129-7"><a href="v.html#cb129-7" aria-hidden="true" tabindex="-1"></a><span class="co"># the colon between two integers gives you all the numbers from the first to the last integer</span></span>
-<span id="cb129-8"><a href="v.html#cb129-8" aria-hidden="true" tabindex="-1"></a>likert <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span></span></code></pre></div>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="v.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use the c() function to make a vector of strings or numbers</span></span>
+<span id="cb154-2"><a href="v.html#cb154-2" aria-hidden="true" tabindex="-1"></a>liit_ingredients <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;vodka&quot;</span>, <span class="st">&quot;gin&quot;</span>, <span class="st">&quot;rum&quot;</span>, <span class="st">&quot;tequila&quot;</span>, <span class="st">&quot;triple sec&quot;</span>, </span>
+<span id="cb154-3"><a href="v.html#cb154-3" aria-hidden="true" tabindex="-1"></a>                      <span class="st">&quot;orange juice&quot;</span>, <span class="st">&quot;coke&quot;</span>, <span class="st">&quot;sour mix&quot;</span>)</span>
+<span id="cb154-4"><a href="v.html#cb154-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb154-5"><a href="v.html#cb154-5" aria-hidden="true" tabindex="-1"></a>fun_to_play_at <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">13</span>, <span class="dv">3</span>, <span class="dv">1</span>)</span>
+<span id="cb154-6"><a href="v.html#cb154-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb154-7"><a href="v.html#cb154-7" aria-hidden="true" tabindex="-1"></a><span class="co"># the colon between two integers gives you all the numbers from the first to the last integer</span></span>
+<span id="cb154-8"><a href="v.html#cb154-8" aria-hidden="true" tabindex="-1"></a>likert <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span></span></code></pre></div>
 <p>The variable <code>letters</code> is a built-in vector with the latin letters in order. You can select part of a vector by putting the numeric location (or <a href="i.html#index">index</a>) of what <a href="e.html#element">element</a> you want inside of square brackets after the vector. You can even put a vector of numbers inside the square brackets to select several elements.</p>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="v.html#cb130-1" aria-hidden="true" tabindex="-1"></a>letters[<span class="dv">26</span>]</span>
-<span id="cb130-2"><a href="v.html#cb130-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;z&quot;</span></span>
-<span id="cb130-3"><a href="v.html#cb130-3" aria-hidden="true" tabindex="-1"></a>letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
-<span id="cb130-4"><a href="v.html#cb130-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;</span></span>
-<span id="cb130-5"><a href="v.html#cb130-5" aria-hidden="true" tabindex="-1"></a>letters[fun_to_play_at]</span>
-<span id="cb130-6"><a href="v.html#cb130-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;y&quot; &quot;m&quot; &quot;c&quot; &quot;a&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="v.html#cb155-1" aria-hidden="true" tabindex="-1"></a>letters[<span class="dv">26</span>]</span>
+<span id="cb155-2"><a href="v.html#cb155-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;z&quot;</span></span>
+<span id="cb155-3"><a href="v.html#cb155-3" aria-hidden="true" tabindex="-1"></a>letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb155-4"><a href="v.html#cb155-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;</span></span>
+<span id="cb155-5"><a href="v.html#cb155-5" aria-hidden="true" tabindex="-1"></a>letters[fun_to_play_at]</span>
+<span id="cb155-6"><a href="v.html#cb155-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;y&quot; &quot;m&quot; &quot;c&quot; &quot;a&quot;</span></span></code></pre></div>
 
 </div>
 <div id="vectorized" class="section level2">
 <h2>vectorized</h2>
 <p><dfn>An <a href="o.html#operator">operator</a> or <a href="f.html#function">function</a> that acts on each <a href="e.html#element">element</a> in a <a href="v.html#vector">vector</a></dfn></p>
-<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="v.html#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add 10 to each element in the vector a</span></span>
-<span id="cb131-2"><a href="v.html#cb131-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb131-3"><a href="v.html#cb131-3" aria-hidden="true" tabindex="-1"></a>a <span class="sc">+</span> <span class="dv">10</span></span>
-<span id="cb131-4"><a href="v.html#cb131-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 11 12 13 14 15</span></span>
-<span id="cb131-5"><a href="v.html#cb131-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-6"><a href="v.html#cb131-6" aria-hidden="true" tabindex="-1"></a><span class="co"># paste &quot;!&quot; to the end of each element in the vector b</span></span>
-<span id="cb131-7"><a href="v.html#cb131-7" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Hey&quot;</span>, <span class="st">&quot;You&quot;</span>)</span>
-<span id="cb131-8"><a href="v.html#cb131-8" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(b, <span class="st">&quot;!&quot;</span>)</span>
-<span id="cb131-9"><a href="v.html#cb131-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;Hey!&quot; &quot;You!&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="v.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add 10 to each element in the vector a</span></span>
+<span id="cb156-2"><a href="v.html#cb156-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb156-3"><a href="v.html#cb156-3" aria-hidden="true" tabindex="-1"></a>a <span class="sc">+</span> <span class="dv">10</span></span>
+<span id="cb156-4"><a href="v.html#cb156-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 11 12 13 14 15</span></span>
+<span id="cb156-5"><a href="v.html#cb156-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb156-6"><a href="v.html#cb156-6" aria-hidden="true" tabindex="-1"></a><span class="co"># paste &quot;!&quot; to the end of each element in the vector b</span></span>
+<span id="cb156-7"><a href="v.html#cb156-7" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Hey&quot;</span>, <span class="st">&quot;You&quot;</span>)</span>
+<span id="cb156-8"><a href="v.html#cb156-8" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(b, <span class="st">&quot;!&quot;</span>)</span>
+<span id="cb156-9"><a href="v.html#cb156-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;Hey!&quot; &quot;You!&quot;</span></span></code></pre></div>
 
 </div>
 <div id="version-control" class="section level2">

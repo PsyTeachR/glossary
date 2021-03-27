@@ -1,0 +1,19 @@
+## directory
+
+<dfn>A collection or "folder" of files on a computer.</dfn>
+
+In a file [path](p.html#path), each directory is separated by forward slashes, e.g., "dir1/dir2/file.Rmd".
+
+Sometimes you need to check if a directory exists and/or make a new directory. For example, a script may save images in a directory called "images" that is in the same directory as the script (so you can use the [relative path](r.html#relative-path)). Below is code for checking whether that directory exists and making it if it doesn't.
+
+```{r, eval = FALSE}
+path <- "images"
+
+if (!dir.exists(path)) {
+  dir.create(path)
+}
+```
+
+
+
+

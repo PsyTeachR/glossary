@@ -7,13 +7,12 @@ lambda <- 3 # mean number of events
 x <- rpois(10000, lambda)
 ```
 
-```{r piosson-plot, echo = FALSE}
+```{r poisson-plot, echo = FALSE, fig.cap = "Poisson Distribution"}
 ggplot() + geom_histogram(
   aes(x), binwidth =1,
   colour = "black", fill = "white") +
   scale_x_continuous(breaks = 0:10) +
-  labs(x = "Values from the poisson distribution",
-       title = "Poisson Distribution")
+  labs(x = "Values from the poisson distribution")
 ```
 
 

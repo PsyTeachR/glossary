@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2021-03-06" />
+<meta name="date" content="2021-03-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,12 +51,20 @@
 
 
 
+<meta property="og:title" content="PsyTeachR Glossary">
+<meta property="og:description" content="A glossary of statistical and R coding terms used in the PsyTeachR books in a bookdown format that can also be downloaded as an R package and accessed offline.">
+<meta property="og:image" content="https://psyteachr.github.io/images/twitter/glossary.png">
+<meta property="og:url" content="https://psyteachr.github.io/glossary">
+<meta property="twitter:card" content="summary_large_image">
+
+<link rel="shortcut icon" href="https://psyteachr.github.io/images/glossary.png">
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -148,6 +156,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#aspect-ratio"><i class="fa fa-check"></i>aspect ratio</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#assignment-operator"><i class="fa fa-check"></i>assignment operator</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html"><i class="fa fa-check"></i>B</a>
@@ -162,6 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binomial-distribution"><i class="fa fa-check"></i>binomial distribution</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#bivariate-normal"><i class="fa fa-check"></i>bivariate normal</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#block"><i class="fa fa-check"></i>block</a></li>
+<li class="chapter" data-level="" data-path="b.html"><a href="b.html#brackets"><i class="fa fa-check"></i>brackets</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html"><i class="fa fa-check"></i>C</a>
 <ul>
@@ -198,8 +209,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#descriptive"><i class="fa fa-check"></i>descriptive</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#directory"><i class="fa fa-check"></i>directory</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#distribution"><i class="fa fa-check"></i>distribution</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#double-brackets"><i class="fa fa-check"></i>double brackets</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a>
@@ -368,6 +381,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#shinydashboard"><i class="fa fa-check"></i>shinydashboard</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#significant"><i class="fa fa-check"></i>significant</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#simulation"><i class="fa fa-check"></i>simulation</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#single-brackets"><i class="fa fa-check"></i>single brackets</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#slope"><i class="fa fa-check"></i>slope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#standard-deviation"><i class="fa fa-check"></i>standard deviation</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#string"><i class="fa fa-check"></i>string</a></li>
@@ -451,7 +465,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 title: &quot;My Document&quot;
 subtitle: &quot;It&#39;s Just a Demo&quot;
 author: &quot;Me&quot;
-date: &quot;2021-03-06&quot;
+date: &quot;2021-03-27&quot;
 output:
   html_document:
     theme: spacelab

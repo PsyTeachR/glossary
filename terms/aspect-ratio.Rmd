@@ -1,0 +1,36 @@
+## aspect ratio
+
+<dfn>The ratio between the width and height of an image.</dfn>
+
+You can specify the aspect ratio of your plots by setting the width and height in the first chunk of an R Markdown file like this:
+
+```{r, eval = FALSE}
+knitr::opts_chunk$set(
+  fig.width = 7, # default value is 7
+  fig.height = 7/1.618 # rolden ratio; default value is 7
+)
+```
+
+Or in the [chunk](c.html#chunk) options:
+
+```{r aspect-ratio-1, eval = TRUE, fig.width = 7, fig.height = 4.32, fig.cap = "Plot with a 1.618:1 aspect ratio (golden ratio)", verbatim="r fig-golden-ratio, fig.width = 7, fig.height = 4.32"}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
+  geom_point() +
+  geom_smooth(method = lm, formula = y~x)
+```
+
+```{r aspect-ratio-2, eval = TRUE, fig.width = 7, fig.height = 7, fig.cap = "Plot with a 1:1 aspect ratio", verbatim="r fig-square, fig.width = 7, fig.height = 7"}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
+  geom_point() +
+  geom_smooth(method = lm, formula = y~x)
+```
+
+
+Or when you save the image:
+
+```{r, eval = FALSE}
+ggsave("golden-ratio.jpg", width = 7, height = 7/1.618)
+```
+
+
+

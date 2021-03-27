@@ -1,6 +1,8 @@
 Package: glossary
 Title: Glossary of Statistical and Coding Terms
+Description: A glossary of statistical and R coding terms used in the PsyTeachR books in a bookdown format that can also be downloaded as an R package and accessed offline. 
 Version: 0.0.0.9000
+Date: 2021-03-27
 Authors@R: 
   c(
     person(
@@ -29,14 +31,19 @@ Authors@R:
            role = c("ctb"),
            email = "Helena.Paterson@glasgow.ac.uk",
            comment = c(ORCID = "0000-0001-7715-5973")))
-Description: Provides a glossary of statistical and R coding terms used in the PsyTeachR books in a bookdown format that can be accessed offline. 
 License: CC-BY-SA 4.0
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Depends: 
-    tidyverse
-Imports: 
+    dplyr,
+    tidyr,
+    ggplot2,
+    purrr,
+    readr,
+    webex,
+    knitr,
+    faux,
     rvest,
     xml2

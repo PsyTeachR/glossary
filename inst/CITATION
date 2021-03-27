@@ -1,0 +1,16 @@
+citHeader("To cite glossary in publications use:")
+
+citEntry(entry = "Manual",
+  title        = "{glossary}: Glossary of Statistical and Coding Terms {markr}",
+  author       = personList(person("Lisa", "DeBruine"),
+                            person("Dale", "Barr"),
+                            person("Philip", "McAleer"),
+                            person("Helena", "Paterson")),
+  year         = "2021",
+  url          = "https://psyteachr.github.io/markr/",
+
+  textVersion  =
+  paste("Lisa DeBruine, Dale Barr, Philip McAleer, Helena Paterson (2021).",
+        "glossary: Glossary of Statistical and Coding Terms.",
+        "URL https://psyteachr.github.io/glossary/.")
+)

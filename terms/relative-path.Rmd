@@ -8,10 +8,10 @@ For example, if your [working directory](w.html#working-directory) is `/Users/me
 # the working directory: /Users/me/study/
 
 # read a file inside the wd: /Users/me/study/data/faces.csv
-qdat <- read_csv("data/faces.csv")
+qdat <- readr::read_csv("data/faces.csv")
 
 # read a file outside the wd: /Users/me/other_study/data/exp.csv
-xdat <- read_csv("../other_study/data/exp.csv")
+xdat <- readr::read_csv("../other_study/data/exp.csv")
 ```
 
 Make sure you always use relative paths in an [R Markdown](r.html#r-markdown) document, which automatically sets the working directory to the directory that contains the .Rmd file.

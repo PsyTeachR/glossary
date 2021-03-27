@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2021-03-06" />
+<meta name="date" content="2021-03-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,12 +51,20 @@
 
 
 
+<meta property="og:title" content="PsyTeachR Glossary">
+<meta property="og:description" content="A glossary of statistical and R coding terms used in the PsyTeachR books in a bookdown format that can also be downloaded as an R package and accessed offline.">
+<meta property="og:image" content="https://psyteachr.github.io/images/twitter/glossary.png">
+<meta property="og:url" content="https://psyteachr.github.io/glossary">
+<meta property="twitter:card" content="summary_large_image">
+
+<link rel="shortcut icon" href="https://psyteachr.github.io/images/glossary.png">
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -148,6 +156,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#aspect-ratio"><i class="fa fa-check"></i>aspect ratio</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#assignment-operator"><i class="fa fa-check"></i>assignment operator</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html"><i class="fa fa-check"></i>B</a>
@@ -162,6 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binomial-distribution"><i class="fa fa-check"></i>binomial distribution</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#bivariate-normal"><i class="fa fa-check"></i>bivariate normal</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#block"><i class="fa fa-check"></i>block</a></li>
+<li class="chapter" data-level="" data-path="b.html"><a href="b.html#brackets"><i class="fa fa-check"></i>brackets</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html"><i class="fa fa-check"></i>C</a>
 <ul>
@@ -198,8 +209,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#descriptive"><i class="fa fa-check"></i>descriptive</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#directory"><i class="fa fa-check"></i>directory</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#distribution"><i class="fa fa-check"></i>distribution</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#double-brackets"><i class="fa fa-check"></i>double brackets</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a>
@@ -368,6 +381,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#shinydashboard"><i class="fa fa-check"></i>shinydashboard</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#significant"><i class="fa fa-check"></i>significant</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#simulation"><i class="fa fa-check"></i>simulation</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#single-brackets"><i class="fa fa-check"></i>single brackets</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#slope"><i class="fa fa-check"></i>slope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#standard-deviation"><i class="fa fa-check"></i>standard deviation</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#string"><i class="fa fa-check"></i>string</a></li>
@@ -535,13 +549,112 @@ Figure 3: Anti Join
 <span id="cb5-3"><a href="a.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; NULL</span></span></code></pre></div>
 
 </div>
+<div id="array" class="section level2">
+<h2>array</h2>
+<p><dfn>A <a href="c.html">container</a> that stores <a href="o.html#object">objects</a> in one or more dimensions.</dfn></p>
+<p>You can create an array by specifying a list or vector of values and the number of dimensions. The first two dimensions are rows and columns; each dimension after that is printed separately as a facet.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="a.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3-dimensional array with 4 rows, 3 columns, and 2 facets</span></span>
+<span id="cb6-2"><a href="a.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">array</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>, <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>))</span>
+<span id="cb6-3"><a href="a.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; , , 1</span></span>
+<span id="cb6-4"><a href="a.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb6-5"><a href="a.html#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      [,1] [,2] [,3]</span></span>
+<span id="cb6-6"><a href="a.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,]    1    5    9</span></span>
+<span id="cb6-7"><a href="a.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,]    2    6   10</span></span>
+<span id="cb6-8"><a href="a.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,]    3    7   11</span></span>
+<span id="cb6-9"><a href="a.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,]    4    8   12</span></span>
+<span id="cb6-10"><a href="a.html#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb6-11"><a href="a.html#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; , , 2</span></span>
+<span id="cb6-12"><a href="a.html#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb6-13"><a href="a.html#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      [,1] [,2] [,3]</span></span>
+<span id="cb6-14"><a href="a.html#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,]   13   17   21</span></span>
+<span id="cb6-15"><a href="a.html#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,]   14   18   22</span></span>
+<span id="cb6-16"><a href="a.html#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,]   15   19   23</span></span>
+<span id="cb6-17"><a href="a.html#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,]   16   20   24</span></span></code></pre></div>
+<p>You can give your array dimensions names.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="a.html#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="a.html#cb7-2" aria-hidden="true" tabindex="-1"></a>dimnames <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb7-3"><a href="a.html#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">subj_id =</span> <span class="fu">c</span>(<span class="st">&quot;S1&quot;</span>, <span class="st">&quot;S2&quot;</span>, <span class="st">&quot;S3&quot;</span>, <span class="st">&quot;S4&quot;</span>),</span>
+<span id="cb7-4"><a href="a.html#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">face_id =</span> <span class="fu">c</span>(<span class="st">&quot;F1&quot;</span>, <span class="st">&quot;F2&quot;</span>, <span class="st">&quot;F3&quot;</span>),</span>
+<span id="cb7-5"><a href="a.html#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">condition =</span> <span class="fu">c</span>(<span class="st">&quot;Control&quot;</span>, <span class="st">&quot;experimental&quot;</span>)</span>
+<span id="cb7-6"><a href="a.html#cb7-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-7"><a href="a.html#cb7-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-8"><a href="a.html#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">array</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>, <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>), <span class="at">dimnames =</span> dimnames)</span>
+<span id="cb7-9"><a href="a.html#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; , , condition = Control</span></span>
+<span id="cb7-10"><a href="a.html#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb7-11"><a href="a.html#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        face_id</span></span>
+<span id="cb7-12"><a href="a.html#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; subj_id F1 F2 F3</span></span>
+<span id="cb7-13"><a href="a.html#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S1  1  5  9</span></span>
+<span id="cb7-14"><a href="a.html#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S2  2  6 10</span></span>
+<span id="cb7-15"><a href="a.html#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S3  3  7 11</span></span>
+<span id="cb7-16"><a href="a.html#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S4  4  8 12</span></span>
+<span id="cb7-17"><a href="a.html#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb7-18"><a href="a.html#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; , , condition = experimental</span></span>
+<span id="cb7-19"><a href="a.html#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb7-20"><a href="a.html#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        face_id</span></span>
+<span id="cb7-21"><a href="a.html#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; subj_id F1 F2 F3</span></span>
+<span id="cb7-22"><a href="a.html#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S1 13 17 21</span></span>
+<span id="cb7-23"><a href="a.html#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S2 14 18 22</span></span>
+<span id="cb7-24"><a href="a.html#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S3 15 19 23</span></span>
+<span id="cb7-25"><a href="a.html#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      S4 16 20 24</span></span></code></pre></div>
+<p>Objects not need to be the same <a href="d.html#data-type">data type</a>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="a.html#cb8-1" aria-hidden="true" tabindex="-1"></a>mylist <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;A&quot;</span>, <span class="cn">TRUE</span>, 2L, <span class="fl">3.1</span>)</span>
+<span id="cb8-2"><a href="a.html#cb8-2" aria-hidden="true" tabindex="-1"></a>myarray <span class="ot">&lt;-</span> <span class="fu">array</span>(mylist, <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb8-3"><a href="a.html#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="a.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb8-5"><a href="a.html#cb8-5" aria-hidden="true" tabindex="-1"></a>  myarray[[<span class="dv">1</span>,<span class="dv">1</span>]] <span class="sc">%&gt;%</span> <span class="fu">class</span>(),</span>
+<span id="cb8-6"><a href="a.html#cb8-6" aria-hidden="true" tabindex="-1"></a>  myarray[[<span class="dv">1</span>,<span class="dv">2</span>]] <span class="sc">%&gt;%</span> <span class="fu">class</span>(),</span>
+<span id="cb8-7"><a href="a.html#cb8-7" aria-hidden="true" tabindex="-1"></a>  myarray[[<span class="dv">2</span>,<span class="dv">1</span>]] <span class="sc">%&gt;%</span> <span class="fu">class</span>(),</span>
+<span id="cb8-8"><a href="a.html#cb8-8" aria-hidden="true" tabindex="-1"></a>  myarray[[<span class="dv">2</span>,<span class="dv">2</span>]] <span class="sc">%&gt;%</span> <span class="fu">class</span>()</span>
+<span id="cb8-9"><a href="a.html#cb8-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-10"><a href="a.html#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] &quot;character&quot; &quot;integer&quot;   &quot;logical&quot;   &quot;numeric&quot;</span></span></code></pre></div>
+
+</div>
+<div id="aspect-ratio" class="section level2">
+<h2>aspect ratio</h2>
+<p><dfn>The ratio between the width and height of an image.</dfn></p>
+<p>You can specify the aspect ratio of your plots by setting the width and height in the first chunk of an R Markdown file like this:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="a.html#cb9-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
+<span id="cb9-2"><a href="a.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">fig.width =</span> <span class="dv">7</span>, <span class="co"># default value is 7</span></span>
+<span id="cb9-3"><a href="a.html#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">fig.height =</span> <span class="dv">7</span><span class="sc">/</span><span class="fl">1.618</span> <span class="co"># rolden ratio; default value is 7</span></span>
+<span id="cb9-4"><a href="a.html#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p>Or in the <a href="c.html#chunk">chunk</a> options:</p>
+<div class="verbatim">
+<p><code>```{r fig-golden-ratio, fig.width = 7, fig.height = 4.32}</code></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="a.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(Sepal.Width, Sepal.Length, <span class="at">color =</span> Species)) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="a.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb10-3"><a href="a.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">formula =</span> y<span class="sc">~</span>x)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:aspect-ratio-1"></span>
+<img src="_main_files/figure-html/aspect-ratio-1-1.png" alt="Plot with a 1.618:1 aspect ratio (golden ratio)" width="100%" />
+<p class="caption">
+Figure 4: Plot with a 1.618:1 aspect ratio (golden ratio)
+</p>
+</div>
+<code>```</code>
+</div>
+<div class="verbatim">
+<p><code>```{r fig-square, fig.width = 7, fig.height = 7}</code></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="a.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(Sepal.Width, Sepal.Length, <span class="at">color =</span> Species)) <span class="sc">+</span></span>
+<span id="cb11-2"><a href="a.html#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb11-3"><a href="a.html#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">formula =</span> y<span class="sc">~</span>x)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:aspect-ratio-2"></span>
+<img src="_main_files/figure-html/aspect-ratio-2-1.png" alt="Plot with a 1:1 aspect ratio" width="100%" />
+<p class="caption">
+Figure 5: Plot with a 1:1 aspect ratio
+</p>
+</div>
+<code>```</code>
+</div>
+<p>Or when you save the image:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="a.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;golden-ratio.jpg&quot;</span>, <span class="at">width =</span> <span class="dv">7</span>, <span class="at">height =</span> <span class="dv">7</span><span class="sc">/</span><span class="fl">1.618</span>)</span></code></pre></div>
+
+</div>
 <div id="assignment-operator" class="section level2">
 <h2>assignment operator</h2>
 <p><dfn>The symbol <code>&lt;-</code>, which functions like <code>=</code> and assigns the value on the right to the object on the left</dfn></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="a.html#cb6-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb6-2"><a href="a.html#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="a.html#cb6-3" aria-hidden="true" tabindex="-1"></a>a</span>
-<span id="cb6-4"><a href="a.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="a.html#cb13-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb13-2"><a href="a.html#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="a.html#cb13-3" aria-hidden="true" tabindex="-1"></a>a</span>
+<span id="cb13-4"><a href="a.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1</span></span></code></pre></div>
 
 </div>
 </div>

@@ -6,7 +6,7 @@ If you sample two sets of numbers independently, they will have a correlation cl
 
 ```{r cor, fig.cap="Different Correlations (n = 100)", echo = FALSE}
 r <- c(-.99, seq(-.75, .75, .25), .99)
-data <- map_df(r, 
+data <- purrr::map_df(r, 
   ~faux::rnorm_multi(n = 100, vars = 2, r = .x, varnames = c("x", "y"), empirical = TRUE)
 ) %>%
   mutate(r = rep(seq(-1, 1, .25), each = 100),

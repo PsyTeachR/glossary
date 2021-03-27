@@ -1,6 +1,6 @@
 ## path
 
-<dfn>A string representing the location of a file or directory.</dfn>
+<dfn>A string representing the location of a file or [directory](d.html#directory).</dfn>
 
 A file path can be [relative](r.html#relative-path) to the [working directory](w.html#working-directory) or [absolute](a.html#absolute-path).
 

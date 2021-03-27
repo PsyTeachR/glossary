@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2021-03-06" />
+<meta name="date" content="2021-03-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,12 +51,20 @@
 
 
 
+<meta property="og:title" content="PsyTeachR Glossary">
+<meta property="og:description" content="A glossary of statistical and R coding terms used in the PsyTeachR books in a bookdown format that can also be downloaded as an R package and accessed offline.">
+<meta property="og:image" content="https://psyteachr.github.io/images/twitter/glossary.png">
+<meta property="og:url" content="https://psyteachr.github.io/glossary">
+<meta property="twitter:card" content="summary_large_image">
+
+<link rel="shortcut icon" href="https://psyteachr.github.io/images/glossary.png">
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -148,6 +156,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#aspect-ratio"><i class="fa fa-check"></i>aspect ratio</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#assignment-operator"><i class="fa fa-check"></i>assignment operator</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html"><i class="fa fa-check"></i>B</a>
@@ -162,6 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binomial-distribution"><i class="fa fa-check"></i>binomial distribution</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#bivariate-normal"><i class="fa fa-check"></i>bivariate normal</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#block"><i class="fa fa-check"></i>block</a></li>
+<li class="chapter" data-level="" data-path="b.html"><a href="b.html#brackets"><i class="fa fa-check"></i>brackets</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html"><i class="fa fa-check"></i>C</a>
 <ul>
@@ -198,8 +209,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#descriptive"><i class="fa fa-check"></i>descriptive</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#directory"><i class="fa fa-check"></i>directory</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#distribution"><i class="fa fa-check"></i>distribution</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#double-brackets"><i class="fa fa-check"></i>double brackets</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a>
@@ -368,6 +381,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#shinydashboard"><i class="fa fa-check"></i>shinydashboard</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#significant"><i class="fa fa-check"></i>significant</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#simulation"><i class="fa fa-check"></i>simulation</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#single-brackets"><i class="fa fa-check"></i>single brackets</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#slope"><i class="fa fa-check"></i>slope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#standard-deviation"><i class="fa fa-check"></i>standard deviation</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#string"><i class="fa fa-check"></i>string</a></li>
@@ -447,51 +461,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>p-value</h2>
 <p><dfn>The probability of seeing an effect at least as extreme as what you have, if the real effect was the value you are testing against (e.g., a null effect)</dfn></p>
 <p>For example, if you used a binomial test to test against a chance probability of 1/2 (e.g., the probability of heads when flipping a fair coin), then a p-value of 0.37 means that you could expect to see effects at least as extreme as your data (i.e., 55 or more heads <strong>or</strong> tails) 37% of the time just by chance alone.</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="p.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test how likely 55 heads (or a more extreme value)</span></span>
-<span id="cb93-2"><a href="p.html#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
-<span id="cb93-3"><a href="p.html#cb93-3" aria-hidden="true" tabindex="-1"></a><span class="fu">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>)</span>
-<span id="cb93-4"><a href="p.html#cb93-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb93-5"><a href="p.html#cb93-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Exact binomial test</span></span>
-<span id="cb93-6"><a href="p.html#cb93-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb93-7"><a href="p.html#cb93-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; data:  55 and 100</span></span>
-<span id="cb93-8"><a href="p.html#cb93-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; number of successes = 55, number of trials = 100, p-value = 0.3682</span></span>
-<span id="cb93-9"><a href="p.html#cb93-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; alternative hypothesis: true probability of success is not equal to 0.5</span></span>
-<span id="cb93-10"><a href="p.html#cb93-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 95 percent confidence interval:</span></span>
-<span id="cb93-11"><a href="p.html#cb93-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  0.4472802 0.6496798</span></span>
-<span id="cb93-12"><a href="p.html#cb93-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; sample estimates:</span></span>
-<span id="cb93-13"><a href="p.html#cb93-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; probability of success </span></span>
-<span id="cb93-14"><a href="p.html#cb93-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                   0.55</span></span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="p.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test how likely 55 heads (or a more extreme value)</span></span>
+<span id="cb117-2"><a href="p.html#cb117-2" aria-hidden="true" tabindex="-1"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
+<span id="cb117-3"><a href="p.html#cb117-3" aria-hidden="true" tabindex="-1"></a><span class="fu">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>)</span>
+<span id="cb117-4"><a href="p.html#cb117-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb117-5"><a href="p.html#cb117-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Exact binomial test</span></span>
+<span id="cb117-6"><a href="p.html#cb117-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb117-7"><a href="p.html#cb117-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; data:  55 and 100</span></span>
+<span id="cb117-8"><a href="p.html#cb117-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; number of successes = 55, number of trials = 100, p-value = 0.3682</span></span>
+<span id="cb117-9"><a href="p.html#cb117-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; alternative hypothesis: true probability of success is not equal to 0.5</span></span>
+<span id="cb117-10"><a href="p.html#cb117-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 95 percent confidence interval:</span></span>
+<span id="cb117-11"><a href="p.html#cb117-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  0.4472802 0.6496798</span></span>
+<span id="cb117-12"><a href="p.html#cb117-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; sample estimates:</span></span>
+<span id="cb117-13"><a href="p.html#cb117-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; probability of success </span></span>
+<span id="cb117-14"><a href="p.html#cb117-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                   0.55</span></span></code></pre></div>
 <p>P-values can be one-tailed or two-tailed. The example above if two-tailed because we didn’t specify a direction and are testing whether there were more <strong>or</strong> fewer heads than expected by chance with a fair coin. The example below is one-tailed, and indicates that you have an 18% chance of getting 55 <strong>or more</strong> heads when flipping a fair coin 100 times.</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="p.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test how likely 55 (or more) heads</span></span>
-<span id="cb94-2"><a href="p.html#cb94-2" aria-hidden="true" tabindex="-1"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
-<span id="cb94-3"><a href="p.html#cb94-3" aria-hidden="true" tabindex="-1"></a><span class="fu">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>, <span class="at">alternative =</span> <span class="st">&quot;greater&quot;</span>)</span>
-<span id="cb94-4"><a href="p.html#cb94-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb94-5"><a href="p.html#cb94-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Exact binomial test</span></span>
-<span id="cb94-6"><a href="p.html#cb94-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb94-7"><a href="p.html#cb94-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; data:  55 and 100</span></span>
-<span id="cb94-8"><a href="p.html#cb94-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; number of successes = 55, number of trials = 100, p-value = 0.1841</span></span>
-<span id="cb94-9"><a href="p.html#cb94-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; alternative hypothesis: true probability of success is greater than 0.5</span></span>
-<span id="cb94-10"><a href="p.html#cb94-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 95 percent confidence interval:</span></span>
-<span id="cb94-11"><a href="p.html#cb94-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  0.4628896 1.0000000</span></span>
-<span id="cb94-12"><a href="p.html#cb94-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; sample estimates:</span></span>
-<span id="cb94-13"><a href="p.html#cb94-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; probability of success </span></span>
-<span id="cb94-14"><a href="p.html#cb94-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                   0.55</span></span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="p.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test how likely 55 (or more) heads</span></span>
+<span id="cb118-2"><a href="p.html#cb118-2" aria-hidden="true" tabindex="-1"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
+<span id="cb118-3"><a href="p.html#cb118-3" aria-hidden="true" tabindex="-1"></a><span class="fu">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>, <span class="at">alternative =</span> <span class="st">&quot;greater&quot;</span>)</span>
+<span id="cb118-4"><a href="p.html#cb118-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb118-5"><a href="p.html#cb118-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Exact binomial test</span></span>
+<span id="cb118-6"><a href="p.html#cb118-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb118-7"><a href="p.html#cb118-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; data:  55 and 100</span></span>
+<span id="cb118-8"><a href="p.html#cb118-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; number of successes = 55, number of trials = 100, p-value = 0.1841</span></span>
+<span id="cb118-9"><a href="p.html#cb118-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; alternative hypothesis: true probability of success is greater than 0.5</span></span>
+<span id="cb118-10"><a href="p.html#cb118-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 95 percent confidence interval:</span></span>
+<span id="cb118-11"><a href="p.html#cb118-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  0.4628896 1.0000000</span></span>
+<span id="cb118-12"><a href="p.html#cb118-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; sample estimates:</span></span>
+<span id="cb118-13"><a href="p.html#cb118-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; probability of success </span></span>
+<span id="cb118-14"><a href="p.html#cb118-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                   0.55</span></span></code></pre></div>
 <p>You can see that the p-value is half of the two-tailed value; this is true for symmetric distributions like the <a href="b.html#binomial-distribution">binomial distribution</a>, but not for all distributions.</p>
 <p>If you do a one-tailed test using “less,” the p-value is much higher, indicating that you have an 86% chance of getting 55 <strong>or fewer</strong> heads when flipping a fair coin 100 times.</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="p.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test how likely 55 (or fewer) heads</span></span>
-<span id="cb95-2"><a href="p.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
-<span id="cb95-3"><a href="p.html#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="fu">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>, <span class="at">alternative =</span> <span class="st">&quot;less&quot;</span>)</span>
-<span id="cb95-4"><a href="p.html#cb95-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb95-5"><a href="p.html#cb95-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Exact binomial test</span></span>
-<span id="cb95-6"><a href="p.html#cb95-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb95-7"><a href="p.html#cb95-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; data:  55 and 100</span></span>
-<span id="cb95-8"><a href="p.html#cb95-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; number of successes = 55, number of trials = 100, p-value = 0.8644</span></span>
-<span id="cb95-9"><a href="p.html#cb95-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; alternative hypothesis: true probability of success is less than 0.5</span></span>
-<span id="cb95-10"><a href="p.html#cb95-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 95 percent confidence interval:</span></span>
-<span id="cb95-11"><a href="p.html#cb95-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  0.0000000 0.6348377</span></span>
-<span id="cb95-12"><a href="p.html#cb95-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; sample estimates:</span></span>
-<span id="cb95-13"><a href="p.html#cb95-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; probability of success </span></span>
-<span id="cb95-14"><a href="p.html#cb95-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                   0.55</span></span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="p.html#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test how likely 55 (or fewer) heads</span></span>
+<span id="cb119-2"><a href="p.html#cb119-2" aria-hidden="true" tabindex="-1"></a><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
+<span id="cb119-3"><a href="p.html#cb119-3" aria-hidden="true" tabindex="-1"></a><span class="fu">binom.test</span>(<span class="dv">55</span>, <span class="dv">100</span>, <span class="fl">0.5</span>, <span class="at">alternative =</span> <span class="st">&quot;less&quot;</span>)</span>
+<span id="cb119-4"><a href="p.html#cb119-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb119-5"><a href="p.html#cb119-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Exact binomial test</span></span>
+<span id="cb119-6"><a href="p.html#cb119-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb119-7"><a href="p.html#cb119-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; data:  55 and 100</span></span>
+<span id="cb119-8"><a href="p.html#cb119-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; number of successes = 55, number of trials = 100, p-value = 0.8644</span></span>
+<span id="cb119-9"><a href="p.html#cb119-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; alternative hypothesis: true probability of success is less than 0.5</span></span>
+<span id="cb119-10"><a href="p.html#cb119-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 95 percent confidence interval:</span></span>
+<span id="cb119-11"><a href="p.html#cb119-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  0.0000000 0.6348377</span></span>
+<span id="cb119-12"><a href="p.html#cb119-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; sample estimates:</span></span>
+<span id="cb119-13"><a href="p.html#cb119-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; probability of success </span></span>
+<span id="cb119-14"><a href="p.html#cb119-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                   0.55</span></span></code></pre></div>
 
 </div>
 <div id="package" class="section level2">
@@ -512,7 +526,7 @@ You can alternatively type the package name and two colons before any function f
 <div class="figure" style="text-align: center"><span id="fig:img-panes"></span>
 <img src="images/defs/panes.png" alt="Pane layout" width="100%" />
 <p class="caption">
-Figure 18: Pane layout
+Figure 20: Pane layout
 </p>
 </div>
 
@@ -524,25 +538,25 @@ Figure 18: Pane layout
 </div>
 <div id="path" class="section level2">
 <h2>path</h2>
-<p><dfn>A string representing the location of a file or directory.</dfn></p>
+<p><dfn>A string representing the location of a file or <a href="d.html#directory">directory</a>.</dfn></p>
 <p>A file path can be <a href="r.html#relative-path">relative</a> to the <a href="w.html#working-directory">working directory</a> or <a href="a.html#absolute-path">absolute</a>.</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="p.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="co"># list all files in the images directory, </span></span>
-<span id="cb96-2"><a href="p.html#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="co"># use relative path</span></span>
-<span id="cb96-3"><a href="p.html#cb96-3" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="at">path =</span> <span class="st">&quot;images/&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="p.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="co"># list all files on the Desktop, </span></span>
-<span id="cb97-2"><a href="p.html#cb97-2" aria-hidden="true" tabindex="-1"></a><span class="co"># use absolute path</span></span>
-<span id="cb97-3"><a href="p.html#cb97-3" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="at">path =</span> <span class="st">&quot;/Users/myaccount/Desktop/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="p.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="co"># list all files in the images directory, </span></span>
+<span id="cb120-2"><a href="p.html#cb120-2" aria-hidden="true" tabindex="-1"></a><span class="co"># use relative path</span></span>
+<span id="cb120-3"><a href="p.html#cb120-3" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="at">path =</span> <span class="st">&quot;images/&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="p.html#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="co"># list all files on the Desktop, </span></span>
+<span id="cb121-2"><a href="p.html#cb121-2" aria-hidden="true" tabindex="-1"></a><span class="co"># use absolute path</span></span>
+<span id="cb121-3"><a href="p.html#cb121-3" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="at">path =</span> <span class="st">&quot;/Users/myaccount/Desktop/&quot;</span>)</span></code></pre></div>
 
 </div>
 <div id="poisson-distribution" class="section level2">
 <h2>Poisson distribution</h2>
 <p><dfn>A <a href="d.html#distribution">distribution</a> that models independent events happening over a unit of time</dfn></p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="p.html#cb98-1" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="co"># mean number of events</span></span>
-<span id="cb98-2"><a href="p.html#cb98-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="dv">10000</span>, lambda)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:piosson-plot"></span>
-<img src="_main_files/figure-html/piosson-plot-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%" />
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="p.html#cb122-1" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="co"># mean number of events</span></span>
+<span id="cb122-2"><a href="p.html#cb122-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="dv">10000</span>, lambda)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:poisson-plot"></span>
+<img src="_main_files/figure-html/poisson-plot-1.png" alt="Poisson Distribution" width="100%" />
 <p class="caption">
-Figure 19: <strong>CAPTION THIS FIGURE!!</strong>
+Figure 21: Poisson Distribution
 </p>
 </div>
 
@@ -597,7 +611,7 @@ Figure 19: <strong>CAPTION THIS FIGURE!!</strong>
 <div class="figure" style="text-align: center"><span id="fig:new-project"></span>
 <img src="images/new_project.png" alt="Start a new project" width="100%" />
 <p class="caption">
-Figure 20: Start a new project
+Figure 22: Start a new project
 </p>
 </div>
 

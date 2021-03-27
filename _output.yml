@@ -4,6 +4,7 @@ bookdown::gitbook:
   number_sections: false
   split_by: chapter
   includes:
+    in_header: include/header.html
     after_body: [include/footer.html, include/webex.js]
   css: [include/psyteachr.css, include/style.css]
   config:

@@ -1,0 +1,37 @@
+## array
+
+<dfn>A [container](c.html) that stores [objects](o.html#object) in one or more dimensions.</dfn>
+
+You can create an array by specifying a list or vector of values and the number of dimensions. The first two dimensions are rows and columns; each dimension after that is printed separately as a facet.
+
+```{r}
+# 3-dimensional array with 4 rows, 3 columns, and 2 facets
+array(1:24, dim = c(4, 3, 2))
+```
+You can give your array dimensions names.
+
+```{r}
+
+dimnames <- list(
+  subj_id = c("S1", "S2", "S3", "S4"),
+  face_id = c("F1", "F2", "F3"),
+  condition = c("Control", "experimental")
+)
+  
+array(1:24, dim = c(4, 3, 2), dimnames = dimnames)
+```
+
+Objects not need to be the same [data type](d.html#data-type).
+
+```{r}
+mylist <- list("A", TRUE, 2L, 3.1)
+myarray <- array(mylist, dim = c(2,2))
+
+c(
+  myarray[[1,1]] %>% class(),
+  myarray[[1,2]] %>% class(),
+  myarray[[2,1]] %>% class(),
+  myarray[[2,2]] %>% class()
+)
+```
+

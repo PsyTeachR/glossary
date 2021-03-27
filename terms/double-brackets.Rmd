@@ -1,0 +1,17 @@
+## double brackets
+
+<dfn>Two pairs of square brackets used to select a single item from a [container](c.html#container) like a [list](l.html#list), [data frame](d.html#data-frame), or [matrix](m.html#matrix) (e.g., data[[1]]).</dfn>
+
+```{r}
+data <- data.frame(
+  id = 1:3,
+  x = c(1.4, 2.3, 8.2)
+)
+
+# double brackets return the id column as a vector
+data[["id"]] 
+```
+
+See [brackets](b.html#brackets) for an explanation of the difference between [single](s.html#single-brackets) and double brackets.
+
+

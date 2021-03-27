@@ -24,7 +24,7 @@
 <meta name="author" content="psyTeachR Team" />
 
 
-<meta name="date" content="2021-03-06" />
+<meta name="date" content="2021-03-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,12 +51,20 @@
 
 
 
+<meta property="og:title" content="PsyTeachR Glossary">
+<meta property="og:description" content="A glossary of statistical and R coding terms used in the PsyTeachR books in a bookdown format that can also be downloaded as an R package and accessed offline.">
+<meta property="og:image" content="https://psyteachr.github.io/images/twitter/glossary.png">
+<meta property="og:url" content="https://psyteachr.github.io/glossary">
+<meta property="twitter:card" content="summary_large_image">
+
+<link rel="shortcut icon" href="https://psyteachr.github.io/images/glossary.png">
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -148,6 +156,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#alpha-graphics"><i class="fa fa-check"></i>alpha (graphics)</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#anti_join"><i class="fa fa-check"></i>anti_join</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#argument"><i class="fa fa-check"></i>argument</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#array"><i class="fa fa-check"></i>array</a></li>
+<li class="chapter" data-level="" data-path="a.html"><a href="a.html#aspect-ratio"><i class="fa fa-check"></i>aspect ratio</a></li>
 <li class="chapter" data-level="" data-path="a.html"><a href="a.html#assignment-operator"><i class="fa fa-check"></i>assignment operator</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html"><i class="fa fa-check"></i>B</a>
@@ -162,6 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#binomial-distribution"><i class="fa fa-check"></i>binomial distribution</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#bivariate-normal"><i class="fa fa-check"></i>bivariate normal</a></li>
 <li class="chapter" data-level="" data-path="b.html"><a href="b.html#block"><i class="fa fa-check"></i>block</a></li>
+<li class="chapter" data-level="" data-path="b.html"><a href="b.html#brackets"><i class="fa fa-check"></i>brackets</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="c.html"><a href="c.html"><i class="fa fa-check"></i>C</a>
 <ul>
@@ -198,8 +209,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#dependent-variable"><i class="fa fa-check"></i>dependent variable</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#descriptive"><i class="fa fa-check"></i>descriptive</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#deviation-score"><i class="fa fa-check"></i>deviation score</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#directory"><i class="fa fa-check"></i>directory</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#discrete"><i class="fa fa-check"></i>discrete</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#distribution"><i class="fa fa-check"></i>distribution</a></li>
+<li class="chapter" data-level="" data-path="d.html"><a href="d.html#double-brackets"><i class="fa fa-check"></i>double brackets</a></li>
 <li class="chapter" data-level="" data-path="d.html"><a href="d.html#double"><i class="fa fa-check"></i>double</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i>E</a>
@@ -368,6 +381,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#shinydashboard"><i class="fa fa-check"></i>shinydashboard</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#significant"><i class="fa fa-check"></i>significant</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#simulation"><i class="fa fa-check"></i>simulation</a></li>
+<li class="chapter" data-level="" data-path="s.html"><a href="s.html#single-brackets"><i class="fa fa-check"></i>single brackets</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#slope"><i class="fa fa-check"></i>slope</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#standard-deviation"><i class="fa fa-check"></i>standard deviation</a></li>
 <li class="chapter" data-level="" data-path="s.html"><a href="s.html#string"><i class="fa fa-check"></i>string</a></li>
@@ -448,34 +462,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><dfn>A scatterplot created by plotting two sets of <a href="q.html#quantile">quantiles</a> against each other, used to check if data come from a specified <a href="d.html#distribution">distribution</a></dfn></p>
 <p>It is pretty difficult to tell from looking at a density plot if data are distributed in a specific way. We often want to determine if, for example, the residuals of a model are normally distributed. Q-Q plots can help with this.</p>
 <p>Let’s simulate 25 data points from a normal distribution with a mean of 100 and SD of 10. Since there are not many data points, the resulting plot will be pretty lumpy. The red line is a perfect normal distribution.</p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="q.html#cb99-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">25</span>, <span class="dv">100</span>, <span class="dv">10</span>)</span>
-<span id="cb99-2"><a href="q.html#cb99-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb99-3"><a href="q.html#cb99-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb99-4"><a href="q.html#cb99-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="fu">aes</span>(A)) <span class="sc">+</span></span>
-<span id="cb99-5"><a href="q.html#cb99-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> dnorm, </span>
-<span id="cb99-6"><a href="q.html#cb99-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">args =</span> <span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">100</span>, <span class="at">sd =</span> <span class="dv">10</span>),</span>
-<span id="cb99-7"><a href="q.html#cb99-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="q.html#cb123-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">25</span>, <span class="dv">100</span>, <span class="dv">10</span>)</span>
+<span id="cb123-2"><a href="q.html#cb123-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb123-3"><a href="q.html#cb123-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb123-4"><a href="q.html#cb123-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="fu">aes</span>(A)) <span class="sc">+</span></span>
+<span id="cb123-5"><a href="q.html#cb123-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> dnorm, </span>
+<span id="cb123-6"><a href="q.html#cb123-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">args =</span> <span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">100</span>, <span class="at">sd =</span> <span class="dv">10</span>),</span>
+<span id="cb123-7"><a href="q.html#cb123-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:qq-density"></span>
 <img src="_main_files/figure-html/qq-density-1.png" alt="Density plot of sample data and the normal distribution it was drawn from" width="100%" />
 <p class="caption">
-Figure 21: Density plot of sample data and the normal distribution it was drawn from
+Figure 23: Density plot of sample data and the normal distribution it was drawn from
 </p>
 </div>
 <p>A Q-Q plot calculates what <a href="q.html#quantile">quantile</a> each data point is in, and plots that against the theoretical quantiles from the normal distribution. The red line is the theoretically perfect noraml distribution, so you just need to assess if most of the points fall on this line.</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="q.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">sample =</span> A) <span class="sc">+</span> <span class="fu">geom_qq_line</span>(<span class="at">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="q.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">sample =</span> A) <span class="sc">+</span> <span class="fu">geom_qq_line</span>(<span class="at">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:qq-A"></span>
 <img src="_main_files/figure-html/qq-A-1.png" alt="Q-Q plot of a small sample from a normal distribution" width="100%" />
 <p class="caption">
-Figure 22: Q-Q plot of a small sample from a normal distribution
+Figure 24: Q-Q plot of a small sample from a normal distribution
 </p>
 </div>
 <p>Here’s what it might look like if your data are actually from a uniform distribution.</p>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="q.html#cb101-1" aria-hidden="true" tabindex="-1"></a>U <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">25</span>, <span class="dv">0</span>, <span class="dv">10</span>)</span>
-<span id="cb101-2"><a href="q.html#cb101-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">sample =</span> U) <span class="sc">+</span> <span class="fu">geom_qq_line</span>(<span class="at">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="q.html#cb125-1" aria-hidden="true" tabindex="-1"></a>U <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">25</span>, <span class="dv">0</span>, <span class="dv">10</span>)</span>
+<span id="cb125-2"><a href="q.html#cb125-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">sample =</span> U) <span class="sc">+</span> <span class="fu">geom_qq_line</span>(<span class="at">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:qq-unif"></span>
 <img src="_main_files/figure-html/qq-unif-1.png" alt="Q-Q plot of a uniform distribution" width="100%" />
 <p class="caption">
-Figure 23: Q-Q plot of a uniform distribution
+Figure 25: Q-Q plot of a uniform distribution
 </p>
 </div>
 
@@ -484,29 +498,29 @@ Figure 23: Q-Q plot of a uniform distribution
 <h2>quantile</h2>
 <p><dfn>Cutoffs dividing the range of a <a href="#d.htmldistribution">distribution</a> into continuous intervals with equal probabilities.</dfn></p>
 <p>You can take a sample of numbers on divide them into N equally-sized groups. Let’s use these 12 numbers as an example:</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="q.html#cb102-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">7</span>, <span class="dv">7</span>, <span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="q.html#cb126-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">7</span>, <span class="dv">7</span>, <span class="dv">10</span>)</span></code></pre></div>
 <p>The <code>quantile()</code> function gives you the cutoffs for each quantile from the data. Set the argument <code>probs</code> to <code>seq(0, 1, 1/N)</code> for any N-tile.</p>
-<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="q.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="co"># median</span></span>
-<span id="cb103-2"><a href="q.html#cb103-2" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(x, <span class="at">probs =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>))</span>
-<span id="cb103-3"><a href="q.html#cb103-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   0%  50% 100% </span></span>
-<span id="cb103-4"><a href="q.html#cb103-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    1    4   10</span></span></code></pre></div>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="q.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tertile</span></span>
-<span id="cb104-2"><a href="q.html#cb104-2" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(x, <span class="at">probs =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>))</span>
-<span id="cb104-3"><a href="q.html#cb104-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        0% 33.33333% 66.66667%      100% </span></span>
-<span id="cb104-4"><a href="q.html#cb104-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1.000000  2.666667  5.666667 10.000000</span></span></code></pre></div>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="q.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="co"># quartile</span></span>
-<span id="cb105-2"><a href="q.html#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(x, <span class="at">probs =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>))</span>
-<span id="cb105-3"><a href="q.html#cb105-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   0%  25%  50%  75% 100% </span></span>
-<span id="cb105-4"><a href="q.html#cb105-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    1    2    4    7   10</span></span></code></pre></div>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="q.html#cb106-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb106-2"><a href="q.html#cb106-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> x</span>
-<span id="cb106-3"><a href="q.html#cb106-3" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
-<span id="cb106-4"><a href="q.html#cb106-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb106-5"><a href="q.html#cb106-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">2-tile</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ntile</span>(x, <span class="dv">2</span>),</span>
-<span id="cb106-6"><a href="q.html#cb106-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">3-tile</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ntile</span>(x, <span class="dv">3</span>),</span>
-<span id="cb106-7"><a href="q.html#cb106-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">4-tile</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ntile</span>(x, <span class="dv">4</span>),</span>
-<span id="cb106-8"><a href="q.html#cb106-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">6-tile</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ntile</span>(x, <span class="dv">6</span>)</span>
-<span id="cb106-9"><a href="q.html#cb106-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="q.html#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="co"># median</span></span>
+<span id="cb127-2"><a href="q.html#cb127-2" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(x, <span class="at">probs =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>))</span>
+<span id="cb127-3"><a href="q.html#cb127-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   0%  50% 100% </span></span>
+<span id="cb127-4"><a href="q.html#cb127-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    1    4   10</span></span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="q.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tertile</span></span>
+<span id="cb128-2"><a href="q.html#cb128-2" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(x, <span class="at">probs =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>))</span>
+<span id="cb128-3"><a href="q.html#cb128-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        0% 33.33333% 66.66667%      100% </span></span>
+<span id="cb128-4"><a href="q.html#cb128-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1.000000  2.666667  5.666667 10.000000</span></span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="q.html#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="co"># quartile</span></span>
+<span id="cb129-2"><a href="q.html#cb129-2" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(x, <span class="at">probs =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>))</span>
+<span id="cb129-3"><a href="q.html#cb129-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   0%  25%  50%  75% 100% </span></span>
+<span id="cb129-4"><a href="q.html#cb129-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    1    2    4    7   10</span></span></code></pre></div>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="q.html#cb130-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb130-2"><a href="q.html#cb130-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> x</span>
+<span id="cb130-3"><a href="q.html#cb130-3" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb130-4"><a href="q.html#cb130-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb130-5"><a href="q.html#cb130-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">2-tile</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ntile</span>(x, <span class="dv">2</span>),</span>
+<span id="cb130-6"><a href="q.html#cb130-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">3-tile</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ntile</span>(x, <span class="dv">3</span>),</span>
+<span id="cb130-7"><a href="q.html#cb130-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">4-tile</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ntile</span>(x, <span class="dv">4</span>),</span>
+<span id="cb130-8"><a href="q.html#cb130-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">6-tile</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ntile</span>(x, <span class="dv">6</span>)</span>
+<span id="cb130-9"><a href="q.html#cb130-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
