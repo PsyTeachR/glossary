@@ -1,8 +1,8 @@
 fig:img-soundimals-hash
 fig:alpha-plot
 fig:ani-join
-fig:aspect-ratio-1
-fig:aspect-ratio-2
+fig:aspect-ratio-1-displ
+fig:aspect-ratio-2-disp
 fig:binom-plot
 fig:bvn-plot
 fig:cor
@@ -17,7 +17,7 @@ fig:left-join
 fig:levels-without
 fig:levels-with
 tab:long-data
-tab:unnamed-chunk-174
+tab:unnamed-chunk-190
 fig:normal-plot
 fig:img-panes
 fig:poisson-plot
@@ -29,5 +29,5 @@ fig:right-join
 fig:semi-join
 fig:sd-plot
 fig:unif-plot
-tab:unnamed-chunk-284
+tab:unnamed-chunk-312
 tab:wide-data
