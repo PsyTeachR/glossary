@@ -9,3 +9,12 @@ For example, the built-in vector `LETTERS` contains 26 elements: the uppercase l
 LETTERS[10]
 ```
 
+## element (html) {#element-html}
+
+<dfn>A unit of HTML, such as a header, paragraph, or image.</dfn> 
+
+In [HTML](h.html#html), an element is defined by start and end [tags](t.html#tag). Labelling parts of HTML content as elements defines how they should be visually displayed (controlled by [CSS](c.html#css)) and handled by screen readers.
+
+
+
+

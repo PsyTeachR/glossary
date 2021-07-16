@@ -1,0 +1,30 @@
+## tag
+
+<dfn>A way to mark the start and end of HTML elements.</dfn>
+
+In [HTML](h.html#html), each [element](e.html#element-html) is delineated by tags that describe it. Tags usually start with the element name and optional attribute-value pairs surrounded by angled brackets, and ending with a forward slash and the name surrounded by angled brackets.
+
+```
+<name attribute="value">Element contents</name>
+```
+
+For example, a paragraph in HTML is marked by "p" tags like this:
+
+```
+<p>Paragraph text...</p>
+```
+
+In [shiny](s.html#shiny), tags can be created with the `tags()` functions.
+
+```{r, eval = FALSE}
+paragraph <- tags$p("Paragraph text")
+
+unordered_list <- tags$ul(
+  tags$li("First list item"),
+  tags$li("Second list item")
+)
+```
+
+
+
+

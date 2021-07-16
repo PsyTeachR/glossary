@@ -1,0 +1,5 @@
+## push
+
+<dfn>Updating the remote git project from the local project.</dfn>
+
+After you [commit](c.html#commit) changes to a [git](g.html#git) project, you may want to push those changes to a remote project, such as one on [GitHub](g.html#github).

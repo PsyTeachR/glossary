@@ -71,7 +71,7 @@ data[1, ] # row 1, all columns
 data[, 1:2] # all rows, columns 1:2
 ```
 
-<div class="warning">
+::: {.warning}
 If you only select one column of a data frame with single brackets, you will get a vector back instead of a data frame. You can change this behaviour by using `drop = FALSE`.
 
 ```{r}
@@ -86,7 +86,7 @@ data[, 1, drop = FALSE] # returns a data frame
 ```{r}
 as_tibble(data)[, 1] # returns a tibble
 ```
-</div>
+:::
 
 Double brackets can be used with a single index or name to select a column as a vector.
 

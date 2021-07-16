@@ -1,0 +1,18 @@
+## jQuery
+
+<dfn>A library that makes it easier to write JavaScript.</dfn>
+
+jQuery allows you to reference [HTML elements](e.html#element-html) is the same way that [CSS](c.html#css) works.
+
+For example, the following code hides any level-2 headers with the class "extra".
+
+``` js
+$("h2.extra").hide();
+```
+
+[R Markdown](r.html#r-markdown) and [Shiny](s.html#shiny) apps use jQuery. 
+
+[W3Schools jQuery Tutorial](https://www.w3schools.com/jquery/){target="_blank"}
+
+
+

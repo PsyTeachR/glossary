@@ -1,0 +1,13 @@
+## static
+
+<dfn>Something that does not change in response to user actions</dfn>
+
+For example, in a [shiny](s.html#shiny) app, the following code creates static and [dynamic](d.html#dynamic) elements. 
+
+```{r, eval = FALSE}
+static <- shiny::p("This text cannot change")
+dynamic <- shiny::textOutput("This text can change")
+```
+
+
+

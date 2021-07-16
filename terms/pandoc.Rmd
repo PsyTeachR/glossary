@@ -1,0 +1,5 @@
+## pandoc
+
+<dfn>A universal document convertor, used by R to make PDF or Word documents from [R Markdown](r.html#r-markdown)</dfn>
+
+[Pandoc.org](https://pandoc.org/){target="_blank"}

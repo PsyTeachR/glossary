@@ -9,7 +9,7 @@ getwd() .html# get the current working directory
 setwd("~/r/myfiles") .html# change the working directory
 ```
 
-```{block, type="warning"}
+::: {.warning}
 Never set or change your working directory in a script. 
-```
+:::
 

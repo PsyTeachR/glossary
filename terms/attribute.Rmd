@@ -1,0 +1,30 @@
+## attribute
+
+<dfn>Extra information about an R object</dfn>
+
+You can access an [object](o.html#object)'s attributes with `attr()`. For example, datasets simulated with [faux](https://debruine.github.io/faux/){target="_blank"} have an attribute called "design" that details their design.
+
+```{r}
+data <- faux::sim_design(
+  between = list(pet = c(cat = "Cat Owners", 
+                         dog = "Dog Owners")),
+  within = list(time = c(am = "Morning", 
+                         pm = "Night")),
+  mu = 1:4,
+  r = list(cat = 0.3, dog = 0.6),
+  dv = c(score = "Happiness Scale Score"),
+  plot = FALSE)
+
+attr(data, "design")
+```
+
+
+## attribute (html) {#attribute-html}
+
+<dfn>Extra information about an HTML element</dfn>
+
+For example, the paragraph [element](e.html#element-html) has an attribute of "id" with a value of "feature". This can be used to refer to the element to change its style with [CSS](c.html#css) or affect its behaviour with [JavaScript](j.html#javascript).
+
+``` html
+<p id="feature">This is the main paragraoh of my text...</p>
+```

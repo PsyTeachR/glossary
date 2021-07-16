@@ -1,0 +1,15 @@
+## cache
+
+<dfn>Storing information for later retrieval, usually to save time.</dfn>
+
+In [R Markdown](r.html#r-markdown) documents, you can cache time-consuming code chunks, such as running a complex [mixed effects model](l.html#linear-mixed-effects-model), by adding a [chunk](c.html#chunk) option `cache = TRUE`.
+
+[R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/cache.html){target="_blank"}
+
+## cache (web) {#cache-web}
+
+In a web browser, external files like [CSS](c.html#css), [JavaScript](j.html#javascript), and images are usually cached so that they don't have to be repeatedly downloaded. 
+
+When you are developing [Shiny](s.html#shiny) apps, you may find that your styles, scripts, or images don't update, even though you've changed the source files. This is usually because of the cache, and you can fix it by reloading the web browser, or restarting R and rerunning the Shiny app.
+
+

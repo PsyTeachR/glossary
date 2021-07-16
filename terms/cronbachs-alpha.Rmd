@@ -4,9 +4,9 @@
 
 If a scale is a reliable measure of a concept, then the items of the scale should consistently measure that concept. A scale where all the items perfectly measure the same concept will have a Cronbach's alpha close to 1.0, basically meaning that all the items are nearly perfectly correlated. A scale where each item measures a totally different concept will have a Cronbach's alpha close to 0.0, meaning that each item is uncorrelated with the others.
 
-```{block type="warning"}
+::: {.warning}
 Remember that internal reliability is not the same as external reliability. A scale can have a very high Cronbach's alpha, meaning it measures *something* well, but that thing may not be what you meant to measure.
-```
+:::
 
 We can use the function `psych::alpha()` to calculate Cronbach's alpha.
 

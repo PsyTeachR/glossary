@@ -1,0 +1,9 @@
+## JavaScript
+
+<dfn>An object-oriented computer programming language commonly used to create interactive effects in web browsers.</dfn>
+
+JavaScript can be used to create [dynamic](d.html#dynamic) effects in [Shiny](s.html#shiny) apps or [R Markdown](r.html#r-markdown) [HTML](h.html#html) documents.
+
+[W3Schools JavaScript Tutorial](https://www.w3schools.com/js/){target="_blank"}
+
+

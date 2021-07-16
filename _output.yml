@@ -1,12 +1,13 @@
 bookdown::gitbook: 
   default: true
   smart: false
+  df_print: kable
   number_sections: false
   split_by: chapter
   includes:
     in_header: include/header.html
     after_body: [include/footer.html, include/webex.js]
-  css: [include/psyteachr.css, include/style.css]
+  css: [include/psyteachr.css, include/webex.css, include/style.css]
   config:
     toc:
       collapse: section
