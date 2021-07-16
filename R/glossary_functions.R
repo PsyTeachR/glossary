@@ -100,10 +100,12 @@ glossary_table <- function(link = TRUE, as_kable = TRUE) {
   
   term <- names(glossary)
   if (link) {
-    link_term <- paste0("<a class='glossary' target='_blank' ",
-                         "href='https://psyteachr.github.io/glossary/",
-                         substr(term, 1, 1), "#", term, "'>",
-                         gsub(".", " ", term, fixed = 1), "</a>")
+    link_term <- sapply(term, function(t) {
+      paste0("<a class='glossary' target='_blank' ",
+             "href='https://psyteachr.github.io/glossary/",
+             substr(t, 1, 1), "#", t, "'>",
+             gsub(".", " ", t, fixed = 1), "</a>")
+    })
   } else {
     link_term <- term
   }
@@ -113,7 +115,9 @@ glossary_table <- function(link = TRUE, as_kable = TRUE) {
     definition = unlist(glossary)
   )
   
-  if (as_kable) {
+  if (is.null(term)) {
+    data.frame()
+  } else if (as_kable) {
     knitr::kable(the_list[order(term),], escape = FALSE, row.names = FALSE)
   } else {
     the_list[order(term),]
