@@ -99,12 +99,17 @@ glossary_table <- function(link = TRUE, as_kable = TRUE) {
   if (is.null(glossary)) glossary <- list()
   
   term <- names(glossary)
-  if (link) {
+  if (link && knitr::opts_knit$get("rmarkdown.pandoc.to") !="latex") {
     link_term <- sapply(term, function(t) {
-      paste0("<a class='glossary' target='_blank' ",
-             "href='https://psyteachr.github.io/glossary/",
-             substr(t, 1, 1), "#", t, "'>",
-             gsub(".", " ", t, fixed = 1), "</a>")
+      # paste0("<a class='glossary' target='_blank' ",
+      #        "href='https://psyteachr.github.io/glossary/",
+      #        substr(t, 1, 1), "#", t, "'>",
+      #        gsub(".", " ", t, fixed = 1), "</a>")
+      
+      sprintf("[%s](https://psyteachr.github.io/glossary/%s.html#%s){class=\"glossary\" target=\"_blank\"}",
+              gsub("(\\.|\\-)", " ", t),
+              substr(t, 1, 1), 
+              t)
     })
   } else {
     link_term <- term
@@ -118,7 +123,8 @@ glossary_table <- function(link = TRUE, as_kable = TRUE) {
   if (is.null(term)) {
     data.frame()
   } else if (as_kable) {
-    knitr::kable(the_list[order(term),], escape = FALSE, row.names = FALSE)
+    esc <- knitr::opts_knit$get("rmarkdown.pandoc.to") == "latex"
+    knitr::kable(the_list[order(term),], escape = esc, row.names = FALSE)
   } else {
     the_list[order(term),]
   }
