@@ -112,12 +112,12 @@ Figure 13.1: Left Join
 </p>
 </div>
 <div class="sourceCode" id="cb94"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
 <span class="op">)</span>
 
-<span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
+<span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">6</span>,
   y <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">22</span><span class="op">:</span><span class="fl">26</span><span class="op">]</span>
 <span class="op">)</span></code></pre></div>
@@ -197,7 +197,7 @@ Table Y
 <p>If there is no matching data in the right table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
 <div class="sourceCode" id="cb95"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># X is the left table</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">Y</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">left_join</span><span class="op">(</span><span class="va">X</span>, <span class="va">Y</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
 <th align="right">id</th>
@@ -235,7 +235,7 @@ Table Y
 <p>Order is important for left joins.</p>
 <div class="sourceCode" id="cb96"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Y is the left table</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">Y</span>, <span class="va">X</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">left_join</span><span class="op">(</span><span class="va">Y</span>, <span class="va">X</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
 <th align="right">id</th>
@@ -380,8 +380,8 @@ Figure 13.3: With setting levels, categories display in the level order
 <span class="co">#&gt;  [1]  1  2  3  4  5  6  7  8  9 10</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $strings</span>
-<span class="co">#&gt;  [1] "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q"</span>
-<span class="co">#&gt; [18] "R" "S" "T" "U" "V" "W" "X" "Y" "Z"</span>
+<span class="co">#&gt;  [1] "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S"</span>
+<span class="co">#&gt; [20] "T" "U" "V" "W" "X" "Y" "Z"</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $another_list</span>
 <span class="co">#&gt; $another_list[[1]]</span>
@@ -397,7 +397,7 @@ Figure 13.3: With setting levels, categories display in the level order
 <span class="co">#&gt; $object</span>
 <span class="co">#&gt; function (n, mean = 0, sd = 1) </span>
 <span class="co">#&gt; .Call(C_rnorm, n, mean, sd)</span>
-<span class="co">#&gt; &lt;bytecode: 0x7ffe1e6ed0e8&gt;</span>
+<span class="co">#&gt; &lt;bytecode: 0x7ff80bf7e628&gt;</span>
 <span class="co">#&gt; &lt;environment: namespace:stats&gt;</span></code></pre></div>
 
 </div>
