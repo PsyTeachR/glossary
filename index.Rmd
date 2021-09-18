@@ -1,4 +1,25 @@
 --- 
+title: "Glossary" # edit
+author: "psyTeachR Team" # edit
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+classoption: oneside # for PDFs
+geometry: margin=1in # for PDFs
+bibliography: [book.bib, packages.bib]
+csl: include/apa.csl
+link-citations: yes
+description: | # edit
+  Definitions of technical terms
+url: https://psyteachr.github.io/glossary # edit
+github-repo: psyteachr/glossary # edit
+cover-image: images/logos/logo.png # replace with your logo
+apple-touch-icon: images/logos/apple-touch-icon.png # replace with your logo
+apple-touch-icon-size: 180
+favicon: images/logos/favicon.ico # replace with your logo
+---
+
+--- 
 title: "Glossary"
 author: "psyTeachR Team"
 date: "`r Sys.Date()`"

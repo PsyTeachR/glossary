@@ -1,10 +1,12 @@
 book_filename: "_main"
 new_session: no
-rmd_subdir: ["terms/"]
+rmd_subdir: ["terms"]
 output_dir: "docs"
-before_chapter_script: ["include/psyteachr_setup.R", "include/my_setup.R"]
+before_chapter_script: 
+- include/psyteachr_setup.R
+- include/my_setup.R
 delete_merged_file: true
-clean: 
+clean: ["packages.bib"]
 language:
   ui:
     chapter_name: ""
