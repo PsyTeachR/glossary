@@ -90,3 +90,16 @@ h2 {
 #content div:nth-child(17) h2 { border-top-color: var(--green); }
 #content div:nth-child(18) h2 { border-top-color: var(--blue); }
 #content div:nth-child(19) h2 { border-top-color: var(--purple); }
+
+.logo {
+  height: 150px;
+  width: 150px;
+  float: right;
+}
+
+.join {
+  height: 150px;
+  width: 200px;
+  float: right;
+  clear: right;
+}
