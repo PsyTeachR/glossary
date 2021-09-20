@@ -42,7 +42,7 @@ Depends:
     ggplot2,
     purrr,
     readr,
-    webex,
+    webexercises,
     knitr,
     faux,
     rvest,
