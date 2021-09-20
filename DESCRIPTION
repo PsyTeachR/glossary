@@ -47,3 +47,11 @@ Depends:
     faux,
     rvest,
     xml2
+Imports: 
+    broom.mixed,
+    afex,
+    psych,
+    ggExtra,
+    R.utils,
+    ukbabynames,
+    cowplot

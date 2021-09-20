@@ -1,0 +1,5 @@
+## error
+
+<dfn>The statistical error in a linear model is how much an observation's value differs from the (typically unobserved) true value of a population parameter.</dfn>
+
+It is closely related to the notion of a [residual](r.html#residual), except that it reflects deflection from the (usually unknown) **true** value as opposed to an **estimate** of the true value. It is usually only possible to know an observation's error if one is dealing with simulated data.
