@@ -111,13 +111,13 @@
 Figure 13.1: Left Join
 </p>
 </div>
-<div class="sourceCode" id="cb94"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
+<div class="sourceCode" id="cb95"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
 <span class="op">)</span>
 
-<span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
+<span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">6</span>,
   y <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">22</span><span class="op">:</span><span class="fl">26</span><span class="op">]</span>
 <span class="op">)</span></code></pre></div>
@@ -195,9 +195,9 @@ Table Y
 </tr>
 </table></div>
 <p>If there is no matching data in the right table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb95"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb96"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># X is the left table</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">left_join</span><span class="op">(</span><span class="va">X</span>, <span class="va">Y</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">Y</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
 <th align="right">id</th>
@@ -233,9 +233,9 @@ Table Y
 </tbody>
 </table></div>
 <p>Order is important for left joins.</p>
-<div class="sourceCode" id="cb96"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb97"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Y is the left table</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">left_join</span><span class="op">(</span><span class="va">Y</span>, <span class="va">X</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">Y</span>, <span class="va">X</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
 <th align="right">id</th>
@@ -279,7 +279,7 @@ Table Y
 </h2>
 <p><dfn>The set of valid values for a <a href="f.html#factor">factor</a></dfn></p>
 <p>Setting the levels for a <a href="f.html#factor">factor</a> can be helpful to make sure they display and plot in the intended order.</p>
-<div class="sourceCode" id="cb97"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb98"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># levels in the right order</span>
 <span class="va">day_levels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Mon"</span>, <span class="st">"Tue"</span>, <span class="st">"Wed"</span>, <span class="st">"Thu"</span>, <span class="st">"Fri"</span>, <span class="st">"Sat"</span>, <span class="st">"Sun"</span><span class="op">)</span>
 
@@ -289,7 +289,7 @@ Table Y
 <span class="co"># make into factors with and without levels</span>
 <span class="va">without_levels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">days</span><span class="op">)</span>
 <span class="va">with_levels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">days</span>, levels <span class="op">=</span> <span class="va">day_levels</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb98"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb99"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu">geom_bar</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">without_levels</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:levels-without"></span>
@@ -297,7 +297,7 @@ Table Y
 Figure 13.2: Without setting levels, categories display in alphabetical order.
 </p>
 </div>
-<div class="sourceCode" id="cb99"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb100"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu">geom_bar</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">with_levels</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:levels-with"></span>
@@ -369,7 +369,7 @@ Figure 13.3: With setting levels, categories display in the level order
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> data type that allows items with different data types to be grouped together.</dfn></p>
 <p>Each item in a list can be any type of R <a href="o.html#object">object</a>, but is usually a <a href="v.html#vector">vector</a> or another list.</p>
-<div class="sourceCode" id="cb100"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb101"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
   integers <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>,
   strings <span class="op">=</span> <span class="va">LETTERS</span>,
@@ -397,7 +397,7 @@ Figure 13.3: With setting levels, categories display in the level order
 <span class="co">#&gt; $object</span>
 <span class="co">#&gt; function (n, mean = 0, sd = 1) </span>
 <span class="co">#&gt; .Call(C_rnorm, n, mean, sd)</span>
-<span class="co">#&gt; &lt;bytecode: 0x7ff80bf7e628&gt;</span>
+<span class="co">#&gt; &lt;bytecode: 0x7fb503459e38&gt;</span>
 <span class="co">#&gt; &lt;environment: namespace:stats&gt;</span></code></pre></div>
 
 </div>
@@ -406,7 +406,7 @@ Figure 13.3: With setting levels, categories display in the level order
 <span class="header-section-number">13.7</span> logical<a class="anchor" aria-label="anchor" href="#logical"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing <code>TRUE</code> or <code>FALSE</code> values.</dfn></p>
-<div class="sourceCode" id="cb101"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb102"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">true_logical_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
   full <span class="op">=</span> <span class="cn">TRUE</span>,
   abbreviated <span class="op">=</span> <span class="cn">T</span>,
@@ -419,7 +419,7 @@ Figure 13.3: With setting levels, categories display in the level order
 <span class="co">#&gt;  $ abbreviated: logi TRUE</span>
 <span class="co">#&gt;  $ integer    : logi TRUE</span>
 <span class="co">#&gt;  $ equation   : logi TRUE</span></code></pre></div>
-<div class="sourceCode" id="cb102"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb103"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">false_logical_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
   full <span class="op">=</span> <span class="cn">FALSE</span>,
   abbreviated <span class="op">=</span> <span class="cn">F</span>,
@@ -699,7 +699,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-09-18.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-09-21.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

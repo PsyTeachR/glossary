@@ -129,7 +129,7 @@ library(tidyverse)
 <p><strong>Example:</strong> If the grand mean response time in a population is 600 milliseconds, that number represents the typical value. The mean response time for an individual subject <span class="math inline">\(s\)</span> can be represented as an offset (<a href="d.html#deviation-score">deviation</a>) from that value. For example, if subject <span class="math inline">\(s\)</span> has a mean reaction time of 650 ms, that would imply a random effect for that subject of +50 ms.</p>
 <p>Unlike <a href="f.html#fixed%20effect">fixed effects</a>, we expect the underlying random effects to change from experiment to experiment as the sampling units (e.g., subjects) change.</p>
 <p>In a mixed effects model, you can get a table of just the random effects with the code below:</p>
-<div class="sourceCode" id="cb147"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb148"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lmerTest/man/lmer.html">lmer</a></span><span class="op">(</span>
   <span class="va">rating</span> <span class="op">~</span> <span class="va">rater_age</span> <span class="op">*</span> <span class="va">face_age</span> <span class="op">+</span> <span class="co"># fixed effects</span>
   <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">rater_id</span><span class="op">)</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">face_id</span><span class="op">)</span>, <span class="co"># random effects</span>
@@ -201,7 +201,7 @@ library(tidyverse)
 </h2>
 <p><dfn>The location of a file in relation to the working directory.</dfn></p>
 <p>For example, if your <a href="w.html#working-directory">working directory</a> is <code>/Users/me/study/</code> and you want to refer to a file at <code>/Users/me/study/data/faces.csv</code>, the relative path is <code>data/faces.csv</code>. Use <code>../</code> to move up one directory.</p>
-<div class="sourceCode" id="cb148"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb149"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># the working directory: /Users/me/study/</span>
 
 <span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span>
@@ -280,7 +280,7 @@ library(tidyverse)
 Figure 19.1: Right Join
 </p>
 </div>
-<div class="sourceCode" id="cb149"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb150"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
@@ -364,7 +364,7 @@ Table Y
 </tr>
 </table></div>
 <p>If there is no matching data in the left table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb150"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># a is the right table</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
@@ -396,7 +396,7 @@ Table Y
 </tbody>
 </table></div>
 <p>Order is important for right joins.</p>
-<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># b is the right table</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">b</span>, <span class="va">a</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
@@ -660,7 +660,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-09-18.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-09-21.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -17,7 +17,7 @@ fig:left-join
 fig:levels-without
 fig:levels-with
 tab:long-data
-tab:unnamed-chunk-190
+tab:unnamed-chunk-191
 fig:normal-plot
 fig:img-panes
 fig:poisson-plot
@@ -29,7 +29,7 @@ fig:right-join
 fig:semi-join
 fig:sd-plot
 fig:unif-plot
-tab:unnamed-chunk-312
+tab:unnamed-chunk-313
 tab:wide-data
 offline-access
 cite
@@ -67,6 +67,7 @@ character
 chunk
 ci
 coding-scheme
+coercion
 comment
 commit
 compile

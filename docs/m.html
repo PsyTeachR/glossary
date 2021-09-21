@@ -103,15 +103,15 @@
 <span class="header-section-number">14.2</span> match operator<a class="anchor" aria-label="anchor" href="#match-operator"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A binary operator (%in%) that returns a logical vector indicating if there is a match or not for its left operand.</dfn></p>
-<div class="sourceCode" id="cb103"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb104"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># check if a single value is in a vector</span>
 <span class="st">"West Dakota"</span> <span class="op">%in%</span> <span class="va">state.name</span>
 <span class="co">#&gt; [1] FALSE</span></code></pre></div>
-<div class="sourceCode" id="cb104"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb105"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># check if each item in the lefthand vector is in the righthand vector</span>
 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"1"</span><span class="op">)</span> <span class="op">%in%</span> <span class="va">LETTERS</span>
 <span class="co">#&gt; [1]  TRUE  TRUE FALSE</span></code></pre></div>
-<div class="sourceCode" id="cb105"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb106"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">pangram</span> <span class="op">&lt;-</span> <span class="st">"the quick brown fox jumps over the lazy dog"</span>
 <span class="va">pangram_chars</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/strsplit.html">strsplit</a></span><span class="op">(</span><span class="va">pangram</span>, <span class="st">""</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>
 <span class="va">letters</span> <span class="op">%in%</span> <span class="va">pangram_chars</span>
@@ -125,7 +125,7 @@
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> data type consisting of numbers arranged into a fixed number of rows and columns</dfn></p>
 <p>You can use the <code><a href="https://rdrr.io/r/base/matrix.html">matrix()</a></code> function to set up a <a href="v.htm#vector">vector</a> of numbers as a matrix with a specified number of rows of columns.</p>
-<div class="sourceCode" id="cb106"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb107"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># a 4x4 matrix</span>
 <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">16</span>, nrow <span class="op">=</span> <span class="fl">4</span><span class="op">)</span>
 <span class="co">#&gt;      [,1] [,2] [,3] [,4]</span>
@@ -134,7 +134,7 @@
 <span class="co">#&gt; [3,]    3    7   11   15</span>
 <span class="co">#&gt; [4,]    4    8   12   16</span></code></pre></div>
 <p>Set <code>byrow = TRUE</code> to assign the vector across rows rather than down columns.</p>
-<div class="sourceCode" id="cb107"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">16</span>, nrow <span class="op">=</span> <span class="fl">4</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="co">#&gt;      [,1] [,2] [,3] [,4]</span>
 <span class="co">#&gt; [1,]    1    2    3    4</span>
@@ -148,7 +148,7 @@
 <span class="header-section-number">14.4</span> mean<a class="anchor" aria-label="anchor" href="#mean"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="d.html#descriptive">descriptive</a> statistic that measures the average value of a set of numbers.</dfn></p>
-<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb109"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span>,<span class="fl">5</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 <span class="co">#&gt; [1] 3</span></code></pre></div>
@@ -187,7 +187,7 @@
 <p><dfn>Having multiple measurements on the same subjects but on <em>different</em> variables, with no more than one measurement per subject per variable.</dfn></p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:unnamed-chunk-190">Table 14.1: </span>Multivariate data with 3 scores on different tasks per person</caption>
+<span id="tab:unnamed-chunk-191">Table 14.1: </span>Multivariate data with 3 scores on different tasks per person</caption>
 <thead><tr class="header">
 <th align="left">id</th>
 <th align="right">stroop</th>
@@ -458,7 +458,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-09-18.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-09-21.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
