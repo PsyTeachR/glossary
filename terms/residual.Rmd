@@ -1,0 +1,9 @@
+## residual
+
+<dfn>Defined as the deviation of an observation from a model's expected value.</dfn>
+
+Mathematically, the residual is defined as the observed value minus the model's [fitted value](f.html#fitted-value) for that observation.
+
+For example, the linear model $\hat{Y_i} = 3 + 2 X_i$ predicts a value of $\hat{Y}_i = 7$ for $X_i = 2$. If you happen to have observed $Y_i = 8$ for observation $i$, then the residual for that observation would be $Y_i - \hat{Y}_i = 8 - 7 = 1$.
+
+A related but slightly different notion is [error](e.html#error).

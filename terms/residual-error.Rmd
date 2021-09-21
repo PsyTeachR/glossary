@@ -1,5 +1,0 @@
-## residual error
-
-<dfn>That part of an observation that cannot be captured by the statistical model, and thus is assumed to reflect unknown factors.</dfn>
-
-Mathematically, residual error is defined as the observed value of a variable minus the [fitted value](f.html#fitted-value) for that observation from the model.

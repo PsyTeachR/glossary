@@ -253,12 +253,14 @@ library(tidyverse)
 <p><dfn>Research that documents all of the steps between raw data and results in a way that can be verified.</dfn></p>
 
 </div>
-<div id="residual-error" class="section level2" number="19.12">
+<div id="residual" class="section level2" number="19.12">
 <h2>
-<span class="header-section-number">19.12</span> residual error<a class="anchor" aria-label="anchor" href="#residual-error"><i class="fas fa-link"></i></a>
+<span class="header-section-number">19.12</span> residual<a class="anchor" aria-label="anchor" href="#residual"><i class="fas fa-link"></i></a>
 </h2>
-<p><dfn>That part of an observation that cannot be captured by the statistical model, and thus is assumed to reflect unknown factors.</dfn></p>
-<p>Mathematically, residual error is defined as the observed value of a variable minus the <a href="f.html#fitted-value">fitted value</a> for that observation from the model.</p>
+<p><dfn>Defined as the deviation of an observation from a model's expected value.</dfn></p>
+<p>Mathematically, the residual is defined as the observed value minus the model's <a href="f.html#fitted-value">fitted value</a> for that observation.</p>
+<p>For example, the linear model <span class="math inline">\(\hat{Y_i} = 3 + 2 X_i\)</span> predicts a value of <span class="math inline">\(\hat{Y}_i = 7\)</span> for <span class="math inline">\(X_i = 2\)</span>. If you happen to have observed <span class="math inline">\(Y_i = 8\)</span> for observation <span class="math inline">\(i\)</span>, then the residual for that observation would be <span class="math inline">\(Y_i - \hat{Y}_i = 8 - 7 = 1\)</span>.</p>
+<p>A related but slightly different notion is <a href="e.html#error">error</a>.</p>
 
 </div>
 <div id="response-variable" class="section level2" number="19.13">
@@ -639,7 +641,7 @@ $( document ).ready(function() {
 <li><a class="nav-link" href="#replicability"><span class="header-section-number">19.9</span> replicability</a></li>
 <li><a class="nav-link" href="#reproducibility"><span class="header-section-number">19.10</span> reproducibility</a></li>
 <li><a class="nav-link" href="#reproducible-research"><span class="header-section-number">19.11</span> reproducible research</a></li>
-<li><a class="nav-link" href="#residual-error"><span class="header-section-number">19.12</span> residual error</a></li>
+<li><a class="nav-link" href="#residual"><span class="header-section-number">19.12</span> residual</a></li>
 <li><a class="nav-link" href="#response-variable"><span class="header-section-number">19.13</span> response variable</a></li>
 <li><a class="nav-link" href="#right_join"><span class="header-section-number">19.14</span> right_join</a></li>
 <li><a class="nav-link" href="#rstudio"><span class="header-section-number">19.15</span> RStudio</a></li>

@@ -42,8 +42,16 @@ Depends:
     ggplot2,
     purrr,
     readr,
-    webex,
+    webexercises,
     knitr,
     faux,
     rvest,
     xml2
+Imports: 
+    broom.mixed,
+    afex,
+    psych,
+    ggExtra,
+    R.utils,
+    ukbabynames,
+    cowplot

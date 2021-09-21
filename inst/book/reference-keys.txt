@@ -17,7 +17,7 @@ fig:left-join
 fig:levels-without
 fig:levels-with
 tab:long-data
-tab:unnamed-chunk-191
+tab:unnamed-chunk-192
 fig:normal-plot
 fig:img-panes
 fig:poisson-plot
@@ -29,7 +29,7 @@ fig:right-join
 fig:semi-join
 fig:sd-plot
 fig:unif-plot
-tab:unnamed-chunk-313
+tab:unnamed-chunk-314
 tab:wide-data
 offline-access
 cite
@@ -108,6 +108,7 @@ element-html
 ellipsis
 environment
 error-term
+error
 escape
 extension
 extract-operator
@@ -221,7 +222,7 @@ repeated-measures
 replicability
 reproducibility
 reproducible-research
-residual-error
+residual
 response-variable
 right_join
 rstudio

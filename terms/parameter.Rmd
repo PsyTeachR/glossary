@@ -1,5 +1,5 @@
 ## parameter
 
-<dfn>A value that describes a [distribution](d.html#distribution), such as the [mean](m.html#mean) or [SD](s.html#standard-deviation)</dfn>
+<dfn>A quantity characterizing a population.</dfn>
 
-
+Often parameters describe a population [distribution](d.html#distribution), such as its [mean](m.html#mean) or [SD](s.html#standard-deviation). They are typically unknown, and therefore must be estimated from the data.
