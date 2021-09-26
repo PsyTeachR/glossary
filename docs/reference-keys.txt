@@ -17,7 +17,7 @@ fig:left-join
 fig:levels-without
 fig:levels-with
 tab:long-data
-tab:unnamed-chunk-192
+tab:unnamed-chunk-193
 fig:normal-plot
 fig:img-panes
 fig:poisson-plot
@@ -29,7 +29,7 @@ fig:right-join
 fig:semi-join
 fig:sd-plot
 fig:unif-plot
-tab:unnamed-chunk-314
+tab:unnamed-chunk-315
 tab:wide-data
 offline-access
 cite
@@ -169,6 +169,7 @@ markdown
 match-operator
 matrix
 mean
+median
 mixed-design
 multilevel-model
 multilevel

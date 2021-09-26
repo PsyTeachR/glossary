@@ -1,0 +1,12 @@
+## median
+
+<dfn>The middle number in a distribution where half of the values are larger and half are smaller.</dfn>
+
+```{r median}
+values <- c(1, 1, 1, 2, 3, 5, 6, 9, 9)
+
+# calculate the median of the values
+median(values)
+```
+
+
