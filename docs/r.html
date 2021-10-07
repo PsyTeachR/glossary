@@ -136,7 +136,7 @@ library(tidyverse)
   data <span class="op">=</span> <span class="fu">faux</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/faux/man/fr4.html">fr4</a></span>
 <span class="op">)</span>
 
-<span class="fu">broom.mixed</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">model</span>, effects <span class="op">=</span> <span class="st">"ran_pars"</span><span class="op">)</span></code></pre></div>
+<span class="fu">broom.mixed</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/generics/man/tidy.html">tidy</a></span><span class="op">(</span><span class="va">model</span>, effects <span class="op">=</span> <span class="st">"ran_pars"</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -205,10 +205,10 @@ library(tidyverse)
 <code class="sourceCode R"><span class="co"># the working directory: /Users/me/study/</span>
 
 <span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span>
-<span class="va">qdat</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/faces.csv"</span><span class="op">)</span>
+<span class="va">qdat</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/readr/man/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/faces.csv"</span><span class="op">)</span>
 
 <span class="co"># read a file outside the wd: /Users/me/other_study/data/exp.csv</span>
-<span class="va">xdat</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"../other_study/data/exp.csv"</span><span class="op">)</span></code></pre></div>
+<span class="va">xdat</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/readr/man/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"../other_study/data/exp.csv"</span><span class="op">)</span></code></pre></div>
 <p>Make sure you always use relative paths in an <a href="r.html#r-markdown">R Markdown</a> document, which automatically sets the working directory to the directory that contains the .Rmd file.</p>
 <p>Contrast with <a href="a.html#absolute-path">absolute path</a>.</p>
 
@@ -283,12 +283,12 @@ Figure 19.1: Right Join
 </p>
 </div>
 <div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
 <span class="op">)</span>
 
-<span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
+<span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">6</span>,
   y <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">22</span><span class="op">:</span><span class="fl">26</span><span class="op">]</span>
 <span class="op">)</span></code></pre></div>
@@ -368,7 +368,7 @@ Table Y
 <p>If there is no matching data in the left table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
 <div class="sourceCode" id="cb152"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># a is the right table</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
 <th align="right">id</th>
@@ -400,7 +400,7 @@ Table Y
 <p>Order is important for right joins.</p>
 <div class="sourceCode" id="cb153"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># b is the right table</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">b</span>, <span class="va">a</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">b</span>, <span class="va">a</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
 <th align="left">x.x</th>
@@ -662,7 +662,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-09-26.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-10-07.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

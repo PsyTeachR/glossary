@@ -198,32 +198,47 @@
 <span class="co">#&gt; Error in rnorm(): argument "n" is missing, with no default</span></code></pre></div>
 
 </div>
-<div id="dependent-variable" class="section level2" number="5.5">
+<div id="degrees-of-freedom" class="section level2" number="5.5">
 <h2>
-<span class="header-section-number">5.5</span> dependent variable<a class="anchor" aria-label="anchor" href="#dependent-variable"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.5</span> degrees of freedom<a class="anchor" aria-label="anchor" href="#degrees-of-freedom"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>The number of observations that are free to vary to produce a known outcome.</dfn></p>
+<p>If you run 5 people and ask them their age, and you know the mean age of those 5 people is 20.1, then four of those people can have any age, but the 5th person must have a specific age to maintain the mean of 20.1. The mean age here is the known outcome and four people's age can vary freely, so the <em>degrees of freedom</em> is 4.</p>
+<p>You need to know the degrees of freedom (usually abbreviated <em>df</em>) to interpret test statistics like t-values and F-values.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-95"></span>
+<img src="_main_files/figure-html/unnamed-chunk-95-1.png" alt="How p-values vary depending on the degrees of freedom for specific t-values in a t-test." width="75%"><p class="caption">
+Figure 5.1: How p-values vary depending on the degrees of freedom for specific t-values in a t-test.
+</p>
+</div>
+
+</div>
+<div id="dependent-variable" class="section level2" number="5.6">
+<h2>
+<span class="header-section-number">5.6</span> dependent variable<a class="anchor" aria-label="anchor" href="#dependent-variable"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The target variable that is being analyzed, whose value is assumed to depend on other variables.</dfn></p>
 <p>You are generally interested in how other variables you have measured impact the dependent variable. For example, if you are testing the effect of stress on anxiety, stress would be your <a href="i.html#independent-variable">independent variable</a> and anxiety would be the dependent variable. The terms independent/dependent variable are typically used in an experimental context. In the context of regression, the dependent variable is often referred to as the <a href="r.html#response-variable">response variable</a>.</p>
 
 </div>
-<div id="descriptive" class="section level2" number="5.6">
+<div id="descriptive" class="section level2" number="5.7">
 <h2>
-<span class="header-section-number">5.6</span> descriptive<a class="anchor" aria-label="anchor" href="#descriptive"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.7</span> descriptive<a class="anchor" aria-label="anchor" href="#descriptive"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Statistics that describe an aspect of data (e.g., mean, median, mode, variance, range)</dfn></p>
 <p>Contrast with <a href="i.html#inferential">inferential</a> statistics.</p>
 
 </div>
-<div id="deviation-score" class="section level2" number="5.7">
+<div id="deviation-score" class="section level2" number="5.8">
 <h2>
-<span class="header-section-number">5.7</span> deviation score<a class="anchor" aria-label="anchor" href="#deviation-score"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.8</span> deviation score<a class="anchor" aria-label="anchor" href="#deviation-score"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A score minus the mean</dfn></p>
 <div class="sourceCode" id="cb67"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">tibble</span><span class="op">(</span>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>
   score <span class="op">=</span> <span class="fl">8</span><span class="op">:</span><span class="fl">12</span>
 <span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">mutate</span><span class="op">(</span>mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">score</span><span class="op">)</span>,
+  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate.html">mutate</a></span><span class="op">(</span>mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">score</span><span class="op">)</span>,
          deviation_score <span class="op">=</span> <span class="va">score</span> <span class="op">-</span> <span class="va">mean</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
@@ -263,9 +278,9 @@
 </div>
 
 </div>
-<div id="directory" class="section level2" number="5.8">
+<div id="directory" class="section level2" number="5.9">
 <h2>
-<span class="header-section-number">5.8</span> directory<a class="anchor" aria-label="anchor" href="#directory"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.9</span> directory<a class="anchor" aria-label="anchor" href="#directory"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A collection or "folder" of files on a computer.</dfn></p>
 <p>In a file <a href="p.html#path">path</a>, each directory is separated by forward slashes, e.g., "dir1/dir2/file.Rmd".</p>
@@ -278,17 +293,17 @@
 <span class="op">}</span></code></pre></div>
 
 </div>
-<div id="discrete" class="section level2" number="5.9">
+<div id="discrete" class="section level2" number="5.10">
 <h2>
-<span class="header-section-number">5.9</span> discrete<a class="anchor" aria-label="anchor" href="#discrete"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.10</span> discrete<a class="anchor" aria-label="anchor" href="#discrete"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Data that can only take certain values, such as integers.</dfn></p>
 <p>Discrete data are not <a href="c.html#continuous">continuous</a>, so it doesn't make sense to have a value that is partway between two values. For example, the number of texts you send per day is discrete; you can't send 12.5 texts. Discrete data can be <a href="o.html#ordinal">ordinal</a> or <a href="n.html#nominal">nominal</a>.</p>
 
 </div>
-<div id="distribution" class="section level2" number="5.10">
+<div id="distribution" class="section level2" number="5.11">
 <h2>
-<span class="header-section-number">5.10</span> distribution<a class="anchor" aria-label="anchor" href="#distribution"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.11</span> distribution<a class="anchor" aria-label="anchor" href="#distribution"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A way to describe the shape of data</dfn></p>
 <ul>
@@ -298,9 +313,9 @@
 <li><a href="u.html#uniform-distribution">uniform distribution</a></li>
 </ul>
 </div>
-<div id="double-brackets" class="section level2" number="5.11">
+<div id="double-brackets" class="section level2" number="5.12">
 <h2>
-<span class="header-section-number">5.11</span> double brackets<a class="anchor" aria-label="anchor" href="#double-brackets"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.12</span> double brackets<a class="anchor" aria-label="anchor" href="#double-brackets"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Two pairs of square brackets used to select a single item from a <a href="c.html#container">container</a> like a <a href="l.html#list">list</a>, <a href="d.html#data-frame">data frame</a>, or <a href="m.html#matrix">matrix</a> (e.g., data[[1]]).</dfn></p>
 <div class="sourceCode" id="cb69"><pre class="downlit sourceCode r">
@@ -315,17 +330,17 @@
 <p>See <a href="b.html#brackets">brackets</a> for an explanation of the difference between <a href="s.html#single-brackets">single</a> and double brackets.</p>
 
 </div>
-<div id="double" class="section level2" number="5.12">
+<div id="double" class="section level2" number="5.13">
 <h2>
-<span class="header-section-number">5.12</span> double<a class="anchor" aria-label="anchor" href="#double"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.13</span> double<a class="anchor" aria-label="anchor" href="#double"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing a real decimal number</dfn>.</p>
 <p>Examples of doubles are <code>1</code>, <code>1.0</code>, <code>-0.01</code>, or <code>1e4</code>.</p>
 
 </div>
-<div id="dynamic" class="section level2" number="5.13">
+<div id="dynamic" class="section level2" number="5.14">
 <h2>
-<span class="header-section-number">5.13</span> dynamic<a class="anchor" aria-label="anchor" href="#dynamic"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.14</span> dynamic<a class="anchor" aria-label="anchor" href="#dynamic"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Something that can change in response to user actions</dfn></p>
 <p>For example, in a <a href="s.html#shiny">shiny</a> app, the following code creates dynamic and <a href="s.html#static">static</a> elements.</p>
@@ -528,15 +543,16 @@ $( document ).ready(function() {
 <li><a class="nav-link" href="#data-type"><span class="header-section-number">5.2</span> data type</a></li>
 <li><a class="nav-link" href="#data-wrangling"><span class="header-section-number">5.3</span> data wrangling</a></li>
 <li><a class="nav-link" href="#default-value"><span class="header-section-number">5.4</span> default value</a></li>
-<li><a class="nav-link" href="#dependent-variable"><span class="header-section-number">5.5</span> dependent variable</a></li>
-<li><a class="nav-link" href="#descriptive"><span class="header-section-number">5.6</span> descriptive</a></li>
-<li><a class="nav-link" href="#deviation-score"><span class="header-section-number">5.7</span> deviation score</a></li>
-<li><a class="nav-link" href="#directory"><span class="header-section-number">5.8</span> directory</a></li>
-<li><a class="nav-link" href="#discrete"><span class="header-section-number">5.9</span> discrete</a></li>
-<li><a class="nav-link" href="#distribution"><span class="header-section-number">5.10</span> distribution</a></li>
-<li><a class="nav-link" href="#double-brackets"><span class="header-section-number">5.11</span> double brackets</a></li>
-<li><a class="nav-link" href="#double"><span class="header-section-number">5.12</span> double</a></li>
-<li><a class="nav-link" href="#dynamic"><span class="header-section-number">5.13</span> dynamic</a></li>
+<li><a class="nav-link" href="#degrees-of-freedom"><span class="header-section-number">5.5</span> degrees of freedom</a></li>
+<li><a class="nav-link" href="#dependent-variable"><span class="header-section-number">5.6</span> dependent variable</a></li>
+<li><a class="nav-link" href="#descriptive"><span class="header-section-number">5.7</span> descriptive</a></li>
+<li><a class="nav-link" href="#deviation-score"><span class="header-section-number">5.8</span> deviation score</a></li>
+<li><a class="nav-link" href="#directory"><span class="header-section-number">5.9</span> directory</a></li>
+<li><a class="nav-link" href="#discrete"><span class="header-section-number">5.10</span> discrete</a></li>
+<li><a class="nav-link" href="#distribution"><span class="header-section-number">5.11</span> distribution</a></li>
+<li><a class="nav-link" href="#double-brackets"><span class="header-section-number">5.12</span> double brackets</a></li>
+<li><a class="nav-link" href="#double"><span class="header-section-number">5.13</span> double</a></li>
+<li><a class="nav-link" href="#dynamic"><span class="header-section-number">5.14</span> dynamic</a></li>
 </ul>
 
       <div class="book-extra">
@@ -554,7 +570,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-09-26.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-10-07.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

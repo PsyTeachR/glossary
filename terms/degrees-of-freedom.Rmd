@@ -1,0 +1,24 @@
+## degrees of freedom
+
+<dfn>The number of observations that are free to vary to produce a known outcome.</dfn>
+
+If you run 5 people and ask them their age, and you know the mean age of those 5 people is 20.1, then four of those people can have any age, but the 5th person must have a specific age to maintain the mean of 20.1. The mean age here is the known outcome and four people's age can vary freely, so the *degrees of freedom* is 4.
+
+You need to know the degrees of freedom (usually abbreviated *df*) to interpret test statistics like t-values and F-values.
+
+```{r, echo = FALSE, out.width = "75%", fig.cap = "How p-values vary depending on the degrees of freedom for specific t-values in a t-test."}
+dat <- crossing(
+  t = seq(1.8, 2.6, .2),
+  df = 1:100
+) %>%
+mutate(p = map2_dbl(t, df, pt, lower.tail = FALSE) * 2)
+
+ggplot(dat, aes(x = df, y = p, color = as.factor(t))) +
+  geom_line(size = 1) +
+  scale_color_brewer(name = "t-value", palette = "Dark2") +
+  scale_x_continuous(name = "degrees of freedom (df)") +
+  scale_y_continuous(name = "p-value (two-tailed)")
+
+```
+
+

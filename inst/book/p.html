@@ -153,7 +153,7 @@
 <p><dfn>A group of R functions.</dfn></p>
 <p>Many useful functions are built into R and available by default whenever you start it up. But some of the most powerful things you can do with R require packages of functions that are written by the community. The functions in these packages aren't available until you install the package (using <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("package_name")</a></code> or clicking Install on the Packages pane; this only needs to be done if the package isn't already installed). Once that package is installed (kind of like downloading an app to your phone), you can use it in any script by loading that package as a library at the top of your script (e.g., (<code><a href="https://ggplot2.tidyverse.org">library(ggplot2)</a></code>).</p>
 <div class="info">
-<p>You can alternatively type the package name and two colons before any function from that package to use it without loading all of its functions into the library (e.g., <code><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">ggplot2::geom_histogram()</a></code>). This sort of notation is also used to disambiguate function names if two packages have functions with the same names.</p>
+<p>You can alternatively type the package name and two colons before any function from that package to use it without loading all of its functions into the library (e.g., <code><a href="https://rdrr.io/pkg/ggplot2/man/geom_histogram.html">ggplot2::geom_histogram()</a></code>). This sort of notation is also used to disambiguate function names if two packages have functions with the same names.</p>
 </div>
 
 </div>
@@ -209,7 +209,7 @@ Figure 17.1: Pane layout
 </h2>
 <p><dfn></dfn></p>
 <p>Pipes are a way to order your code in a more readable format.</p>
-<p>The symbol <code><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></code> takes the <a href="o.html#object">object</a> created by a function and sends it to the next function. By default, it will be used as the first <a href="a.html#argument">argument</a>, and most <a href="t.html#tidyverse">tidyverse</a> functions are optimised for this, but you can also include the result as another argument using <code>.</code> (see the example below).</p>
+<p>The symbol <code><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></code> takes the <a href="o.html#object">object</a> created by a function and sends it to the next function. By default, it will be used as the first <a href="a.html#argument">argument</a>, and most <a href="t.html#tidyverse">tidyverse</a> functions are optimised for this, but you can also include the result as another argument using <code>.</code> (see the example below).</p>
 <p>Instead of making a new object for each step:</p>
 <div class="sourceCode" id="cb135"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># this makes 4 unnecessary objects</span>
@@ -234,7 +234,7 @@ Figure 17.1: Pane layout
 <span class="co">#&gt; [1] "p =  0.363"</span>
                       <span class="co"># use . to represent the previous data if it's not the first argument</span></code></pre></div>
 <p>See a more <a href="https://debruine.github.io/posts/pipes/" target="_blank">detailed example</a>.</p>
-<p>The <a href="symbols.html">symbol</a> <code><a href="https://rdrr.io/r/base/Logic.html">|</a></code> is also called a "pipe" and means "OR" in R, although it has other meanings that are more similar to the <code><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></code> pipe in some other programming languages.</p>
+<p>The <a href="symbols.html">symbol</a> <code><a href="https://rdrr.io/r/base/Logic.html">|</a></code> is also called a "pipe" and means "OR" in R, although it has other meanings that are more similar to the <code><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></code> pipe in some other programming languages.</p>
 
 </div>
 <div id="poisson-distribution" class="section level2" number="17.8">
@@ -563,7 +563,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-09-26.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-10-07.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

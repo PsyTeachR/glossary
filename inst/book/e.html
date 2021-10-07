@@ -137,7 +137,7 @@
 </h2>
 <p><dfn>Three dots (...) representing further unspecified <a href="a.html#argument">arguments</a> to a <a href="f.html#function">function</a>.</dfn></p>
 <p>When you look up the help for a function, you often see one of the arguments is <code>...</code>. This means that you can supply your own argument names and values here.</p>
-<p>For example, the help page for <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">dplyr::mutate()</a></code> shows a usage of <code>mutate(.data, ...)</code>, which means that the first argument is called <code>.data</code> and is the data table you want to mutate, and the second argument is <code>...</code>, which means that you can add as many new arguments as you want and each one will create a new column with the argument name and value.</p>
+<p>For example, the help page for <code><a href="https://rdrr.io/pkg/dplyr/man/mutate.html">dplyr::mutate()</a></code> shows a usage of <code><a href="https://rdrr.io/pkg/dplyr/man/mutate.html">mutate(.data, ...)</a></code>, which means that the first argument is called <code>.data</code> and is the data table you want to mutate, and the second argument is <code>...</code>, which means that you can add as many new arguments as you want and each one will create a new column with the argument name and value.</p>
 <div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># create a data frame with letters and numbers </span>
 <span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
@@ -147,7 +147,7 @@
 
 <span class="co"># the mutate function lets you add custom arguments</span>
 <span class="co"># like lower and plus_10</span>
-<span class="fu">mutate</span><span class="op">(</span>
+<span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate.html">mutate</a></span><span class="op">(</span>
   .data <span class="op">=</span> <span class="va">df</span>,
   lower <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/chartr.html">tolower</a></span><span class="op">(</span><span class="va">letter</span><span class="op">)</span>,
   plus_10 <span class="op">=</span> <span class="va">number</span> <span class="op">+</span> <span class="fl">10</span>
@@ -534,7 +534,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-09-26.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-10-07.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

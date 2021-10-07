@@ -351,7 +351,7 @@
 <p><dfn><a href="p.html#parameter">Parameters</a> showing how a set of <a href="v.html#vector">vectors</a> are <a href="c.html#correlation">correlated</a>.</dfn></p>
 <p>This is set up as a <a href="m.html#matrix">matrix</a> with 1.0 along the diagonal, meaning that every variable is perfectly correlated with itself.</p>
 <div class="sourceCode" id="cb49"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
+<code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>
   A <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>,
   B <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, <span class="co"># uncorrelated with A</span>
   C <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span> <span class="op">+</span> <span class="va">A</span>, <span class="co"># positively correlated with A</span>
@@ -439,11 +439,11 @@ Figure 4.1: Different Correlations (n = 100)
 <p>We can use the function <code><a href="https://rdrr.io/pkg/psych/man/alpha.html">psych::alpha()</a></code> to calculate Cronbach's alpha.</p>
 <div class="sourceCode" id="cb52"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># read in data from the 3 domains of disgust scale</span>
-<span class="va">disgust</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"https://psyteachr.github.io/msc-data-skills/data/disgust.csv"</span><span class="op">)</span>
+<span class="va">disgust</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/readr/man/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"https://psyteachr.github.io/msc-data-skills/data/disgust.csv"</span><span class="op">)</span>
   
 <span class="co"># select just the items that measure pathogen disgust</span>
 <span class="va">pathogen_alpha</span> <span class="op">&lt;-</span> <span class="va">disgust</span> <span class="op">%&gt;%</span>
-  <span class="fu">select</span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/select.html">select</a></span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu">psych</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/psych/man/alpha.html">alpha</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>You often just want to report the raw or standard alpha.</p>
 <div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
@@ -543,10 +543,10 @@ Figure 4.1: Different Correlations (n = 100)
 <p>You can look at the <code>alpha.drop</code> section to see what the alpha would be if you dropped an item. If we add an item from the moral disgust scale, you can see that the alpha increases if you drop it.</p>
 <div class="sourceCode" id="cb55"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mixed_alpha</span> <span class="op">&lt;-</span> <span class="va">disgust</span> <span class="op">%&gt;%</span>
-  <span class="fu">select</span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span>, <span class="va">moral1</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/select.html">select</a></span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span>, <span class="va">moral1</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu">psych</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/psych/man/alpha.html">alpha</a></span><span class="op">(</span><span class="op">)</span>
 
-<span class="fu">select</span><span class="op">(</span><span class="va">mixed_alpha</span><span class="op">$</span><span class="va">alpha.drop</span>, <span class="va">raw_alpha</span>, <span class="va">std.alpha</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/select.html">select</a></span><span class="op">(</span><span class="va">mixed_alpha</span><span class="op">$</span><span class="va">alpha.drop</span>, <span class="va">raw_alpha</span>, <span class="va">std.alpha</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -867,7 +867,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-09-26.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2021-10-07.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
