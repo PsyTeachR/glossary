@@ -1,12 +1,13 @@
-default : glossary _README.md
+default : glossary README.md
 
 glossary :
 	Rscript _makefile.R
 	rm -rf _bookdown_files
 
-_README.md : _README.Rmd
+README.md : _README.Rmd
 	Rscript -e "devtools::install(upgrade = 'never')"
-	Rscript -e 'rmarkdown::render("_README.Rmd", rmarkdown::github_document())'
+	Rscript -e 'rmarkdown::render("_README.Rmd", rmarkdown::github_document(), output_file = "README.md")'
+
 
 clean :
 	rm -rf docs/

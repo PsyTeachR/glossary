@@ -9,5 +9,6 @@
 ^images$
 ^\.Rproj\.user$
 ^_README\.*$
+^README\.*$
 ^Makefile$
 ^_bookdown_files$
