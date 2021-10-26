@@ -46,3 +46,24 @@ You can include a glossary table at the end of a document that includes all of t
 glossary_table()
 ```
 
+## Compilation
+
+If you add or change any terms in the glossary, you will need to recompile it. Here are two ways to do this, either through a running R session or from a terminal prompt.
+
+### Recompile using R
+
+From the R console, with the working directory set to the root directory of the glossary repository, type
+
+```{r, eval=FALSE}
+source("_makefile.R")
+```
+
+### Recompile from the terminal
+
+In a terminal window, navigate to the directory containing the glossary files and type 
+
+```
+make
+```
+
+This will invoke the commands in `Makefile`.
