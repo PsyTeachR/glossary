@@ -12,6 +12,6 @@ README.md : _README.Rmd
 clean :
 	rm -rf docs/
 	rm -rf inst/book/
-	rm -f _README.md
-	rm -f _README.html
+	rm -f README.md
+	rm -f README.html
 	rm -rf _bookdown_files
