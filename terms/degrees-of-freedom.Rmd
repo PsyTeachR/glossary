@@ -11,7 +11,7 @@ dat <- crossing(
   t = seq(1.8, 2.6, .2),
   df = 1:100
 ) %>%
-mutate(p = map2_dbl(t, df, pt, lower.tail = FALSE) * 2)
+mutate(p = purrr::map2_dbl(t, df, pt, lower.tail = FALSE) * 2)
 
 ggplot(dat, aes(x = df, y = p, color = as.factor(t))) +
   geom_line(size = 1) +
