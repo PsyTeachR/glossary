@@ -6,7 +6,7 @@ fig:aspect-ratio-2-disp
 fig:binom-plot
 fig:bvn-plot
 fig:cor
-fig:unnamed-chunk-99
+fig:unnamed-chunk-95
 fig:full-join
 fig:img-function-help
 fig:geom-boxplot
@@ -18,7 +18,7 @@ fig:left-join
 fig:levels-without
 fig:levels-with
 tab:long-data
-tab:unnamed-chunk-199
+tab:unnamed-chunk-195
 fig:normal-plot
 fig:img-panes
 fig:poisson-plot
@@ -30,17 +30,11 @@ fig:right-join
 fig:semi-join
 fig:sd-plot
 fig:unif-plot
-tab:unnamed-chunk-321
+tab:unnamed-chunk-317
 tab:wide-data
 offline-access
 cite
 symbols
-glossary
-installation
-access-the-book-offline
-compilation
-recompile-using-r
-recompile-from-the-terminal
 a
 absolute-path
 alpha

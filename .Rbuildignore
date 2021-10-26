@@ -8,6 +8,6 @@
 ^terms$
 ^images$
 ^\.Rproj\.user$
-^README\.Rmd$
+^_README\.*$
 ^Makefile$
 ^_bookdown_files$
