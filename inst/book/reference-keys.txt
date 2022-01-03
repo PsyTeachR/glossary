@@ -84,7 +84,6 @@ covariance-matrix
 cran
 cronbachs-alpha
 css
-resources
 csv
 d
 data-frame
@@ -117,7 +116,6 @@ extract-operator
 f
 factor
 factor-data-type
-resources-1
 factor-experimental
 false-negative
 false-positive
@@ -138,7 +136,7 @@ global-environment
 h
 hierarchical-model
 html
-resources-2
+resources
 hypothesis
 i
 ide
@@ -153,7 +151,6 @@ iteration
 j
 javascript
 joins
-further-resources
 jquery
 k
 knit

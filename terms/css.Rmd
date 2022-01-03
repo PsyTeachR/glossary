@@ -18,7 +18,7 @@ Here is an example of some simple CSS (in the style tag) and HTML.
      class="ferret">
 ```
 
-### Resources
+**Resources**
 
 * [W3Schools Learn CSS](https://www.w3schools.com/css/){target="_blank"}
 * [Academic Webpages](https://debruine.github.io/tutorials/webpages.html#webpage-styles){target="_blank"}

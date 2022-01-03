@@ -23,7 +23,7 @@ data$chr
 data$fctr
 ```
 
-In a [tibble](t.html#tibble), these types will have "<chr>" or "<fctr>" under the column header. 
+In a [tibble](t.html#tibble), these types will have "\<chr>" or "\<fctr>" under the column header. 
 
 ```{r factor-tibble}
 data
@@ -39,7 +39,7 @@ factor(data$chr, levels = c("C", "B", "A"))
 ```
 
 
-### Resources
+**Resources**
 
 * [Factors](https://r4ds.had.co.nz/factors.html) in R for Data Science
 

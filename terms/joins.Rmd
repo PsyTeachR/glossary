@@ -14,7 +14,7 @@
     * [inner_join](i.html#inner_join)
     * [full_join](f.html#full_join)
 
-### Further Resources
+**Resources**
 
 * [Data Relations](https://psyteachr.github.io/msc-data-skills/joins.html){target="_blank"} in Data Skills for Reproducible Science
 * [Relational Data](http://r4ds.had.co.nz/relational-data.html){target="_blank"} in R for Data Science
