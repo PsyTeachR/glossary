@@ -1,8 +1,6 @@
 ## pipe
 
-<dfn></dfn>
-
-Pipes are a way to order your code in a more readable format.
+<dfn>A way to order your code in a more readable format using the symbol %>%</dfn>
 
 The symbol `%>%` takes the [object](o.html#object) created by a function and sends it to the next function. By default, it will be used as the first [argument](a.html#argument), and most [tidyverse](t.html#tidyverse) functions are optimised for this, but you can also include the result as another argument using `.` (see the example below).
 
