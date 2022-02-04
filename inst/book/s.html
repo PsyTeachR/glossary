@@ -105,13 +105,104 @@
 <li>Simons, D. J., Shoda, Y., &amp; Lindsay, D. S. (2017). Constraints on Generality (COG): A Proposed Addition to All Empirical Papers. Perspectives on Psychological Science, 12(6), 1123–1128. {doi: 10.1177/1745691617708630}(<a href="https://doi.org/10.1177/1745691617708630" class="uri">https://doi.org/10.1177/1745691617708630</a>){target="_blank"}}</li>
 </ul>
 </div>
-<div id="scope" class="section level2" number="20.2">
+<div id="scientific-notation" class="section level2" number="20.2">
 <h2>
-<span class="header-section-number">20.2</span> scope<a class="anchor" aria-label="anchor" href="#scope"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.2</span> scientific notation<a class="anchor" aria-label="anchor" href="#scientific-notation"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>A number format for working with very large or small numbers.</dfn></p>
+<p>Numbers are most commonly written in decimal notation, like <code>3.145</code> or <code>365</code>. However, when numbers are very large or small, it's difficult to read or write them correctly.</p>
+<p>For example, Avogadro's constant, the number of particles contained in one mole of any substance,is equal to 602,252,000,000,000,000,000,000. The commas make it a little easier to parse when reading, but you can't use those in coding. The scientific notation is <span class="math inline">\(6.02x10^{23}\)</span>, which means the you multiply 6.02 times the number that is 1 with 23 zeros after it (or move the decimal place in 6.02 23 places to the right). In R, this notation looks like <code>6.02e23</code>.</p>
+<p>Negative numbers move the decimal place to the left. For example, Wyler's constant in physics is <code>1.05e-109</code>, or a decimal place followed by 108 zeros before you get to the first non-zero digit.</p>
+<div class="sourceCode" id="cb156"><pre class="downlit sourceCode r">
+<code class="sourceCode R">    <span class="fl">0.0001</span> <span class="op">==</span> <span class="fl">1e-4</span>
+    <span class="fl">0.001</span>  <span class="op">==</span> <span class="fl">1e-3</span>
+    <span class="fl">0.01</span>   <span class="op">==</span> <span class="fl">1e-2</span>
+    <span class="fl">0.1</span>    <span class="op">==</span> <span class="fl">1e-1</span>
+    <span class="fl">1</span>      <span class="op">==</span> <span class="fl">1e0</span>
+   <span class="fl">10</span>      <span class="op">==</span> <span class="fl">1e1</span>
+  <span class="fl">100</span>      <span class="op">==</span> <span class="fl">1e2</span>
+ <span class="fl">1000</span>      <span class="op">==</span> <span class="fl">1e3</span>
+<span class="fl">10000</span>      <span class="op">==</span> <span class="fl">1e4</span></code></pre></div>
+<p>You can format numbers with scientific notation in R using the function <code><a href="https://rdrr.io/r/base/formatc.html">formatC()</a></code>. This turns them into text that you can use n inline code, but you can't use as a number anymore.</p>
+<div class="sourceCode" id="cb157"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">123456789</span>, <span class="fl">0.06789</span>, <span class="fl">0.000000012</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/formatc.html">formatC</a></span><span class="op">(</span><span class="va">x</span>, format <span class="op">=</span> <span class="st">"e"</span>, digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>
+<span class="co">#&gt; [1] "1.23e+08" "6.79e-02" "1.20e-08"</span></code></pre></div>
+<p>Model output can often contain numbers in scientific notation. To change the threshold at which large or small numbers display with scientific notation, set the <code>scipen</code> option at the top of a script. A value of 0 means that R will use scientific notation whenever that representation takes less space than the decimal representation. Larger values make decimal notation more likely and smaller values make scientific notation more likely.</p>
+<div class="sourceCode" id="cb158"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">test</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">1000000</span>,
+              <span class="fl">100000</span>, 
+               <span class="fl">10000</span>, 
+                <span class="fl">1000</span>, 
+                 <span class="fl">100</span>, 
+                  <span class="fl">10</span>, 
+                   <span class="fl">1</span>, 
+                   <span class="fl">0.1</span>, 
+                   <span class="fl">0.01</span>, 
+                   <span class="fl">0.001</span>, 
+                   <span class="fl">0.0001</span>,
+                   <span class="fl">0.00001</span>,
+                   <span class="fl">0.000001</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb159"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>scipen <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">test</span><span class="op">)</span>
+<span class="co">#&gt; List of 13</span>
+<span class="co">#&gt;  $ : num 1e+06</span>
+<span class="co">#&gt;  $ : num 100000</span>
+<span class="co">#&gt;  $ : num 10000</span>
+<span class="co">#&gt;  $ : num 1000</span>
+<span class="co">#&gt;  $ : num 100</span>
+<span class="co">#&gt;  $ : num 10</span>
+<span class="co">#&gt;  $ : num 1</span>
+<span class="co">#&gt;  $ : num 0.1</span>
+<span class="co">#&gt;  $ : num 0.01</span>
+<span class="co">#&gt;  $ : num 0.001</span>
+<span class="co">#&gt;  $ : num 0.0001</span>
+<span class="co">#&gt;  $ : num 1e-05</span>
+<span class="co">#&gt;  $ : num 1e-06</span></code></pre></div>
+<div class="sourceCode" id="cb160"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>scipen <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">test</span><span class="op">)</span>
+<span class="co">#&gt; List of 13</span>
+<span class="co">#&gt;  $ : num 1e+06</span>
+<span class="co">#&gt;  $ : num 1e+05</span>
+<span class="co">#&gt;  $ : num 10000</span>
+<span class="co">#&gt;  $ : num 1000</span>
+<span class="co">#&gt;  $ : num 100</span>
+<span class="co">#&gt;  $ : num 10</span>
+<span class="co">#&gt;  $ : num 1</span>
+<span class="co">#&gt;  $ : num 0.1</span>
+<span class="co">#&gt;  $ : num 0.01</span>
+<span class="co">#&gt;  $ : num 0.001</span>
+<span class="co">#&gt;  $ : num 1e-04</span>
+<span class="co">#&gt;  $ : num 1e-05</span>
+<span class="co">#&gt;  $ : num 1e-06</span></code></pre></div>
+<div class="sourceCode" id="cb161"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>scipen <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">test</span><span class="op">)</span>
+<span class="co">#&gt; List of 13</span>
+<span class="co">#&gt;  $ : num 1e+06</span>
+<span class="co">#&gt;  $ : num 1e+05</span>
+<span class="co">#&gt;  $ : num 1e+04</span>
+<span class="co">#&gt;  $ : num 1000</span>
+<span class="co">#&gt;  $ : num 100</span>
+<span class="co">#&gt;  $ : num 10</span>
+<span class="co">#&gt;  $ : num 1</span>
+<span class="co">#&gt;  $ : num 0.1</span>
+<span class="co">#&gt;  $ : num 0.01</span>
+<span class="co">#&gt;  $ : num 1e-03</span>
+<span class="co">#&gt;  $ : num 1e-04</span>
+<span class="co">#&gt;  $ : num 1e-05</span>
+<span class="co">#&gt;  $ : num 1e-06</span></code></pre></div>
+
+</div>
+<div id="scope" class="section level2" number="20.3">
+<h2>
+<span class="header-section-number">20.3</span> scope<a class="anchor" aria-label="anchor" href="#scope"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The <a href="e.html#environment">environment</a> where an <a href="o.html#object">object</a> is available</dfn></p>
 <p>The main thing you need to know about scope involves writing your own <a href="f.html#function">functions</a>. Objects created inside a function are only available inside the function and not outside.</p>
-<div class="sourceCode" id="cb154"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb162"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">5</span> <span class="co"># this y is global</span>
 
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span>
@@ -124,7 +215,7 @@
 <span class="va">y</span> <span class="co"># returns the global value of y</span>
 <span class="co">#&gt; [1] 5</span></code></pre></div>
 <p>If you have arguments to a function, they are local variables inside the function and their values will overwrite any global variables with the same name.</p>
-<div class="sourceCode" id="cb155"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb163"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">5</span> <span class="co"># this y is global</span>
 
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">{</span>
@@ -138,16 +229,16 @@
 <span class="co">#&gt; [1] 5</span></code></pre></div>
 
 </div>
-<div id="script" class="section level2" number="20.3">
+<div id="script" class="section level2" number="20.4">
 <h2>
-<span class="header-section-number">20.3</span> script<a class="anchor" aria-label="anchor" href="#script"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.4</span> script<a class="anchor" aria-label="anchor" href="#script"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A plain-text file that contains commands in a coding language, such as R.</dfn></p>
 
 </div>
-<div id="semi_join" class="section level2" number="20.4">
+<div id="semi_join" class="section level2" number="20.5">
 <h2>
-<span class="header-section-number">20.4</span> semi_join<a class="anchor" aria-label="anchor" href="#semi_join"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.5</span> semi_join<a class="anchor" aria-label="anchor" href="#semi_join"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="f.html#filtering-joins">filtering join</a> that returns all rows from the left table where there are matching values in the right table, keeping just columns from the left table.</dfn></p>
 <div class="figure" style="text-align: center">
@@ -157,7 +248,7 @@ Figure 20.1: Semi Join
 </p>
 </div>
 <p>This is useful when you have a table of data that contains IDs of data that passes your exclusion criteria.</p>
-<div class="sourceCode" id="cb156"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb164"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">all_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
@@ -191,34 +282,34 @@ Figure 20.1: Semi Join
 <p>See <a href="j.html#joins">joins</a> for other types of joins and further resources.</p>
 
 </div>
-<div id="server" class="section level2" number="20.5">
+<div id="server" class="section level2" number="20.6">
 <h2>
-<span class="header-section-number">20.5</span> server<a class="anchor" aria-label="anchor" href="#server"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.6</span> server<a class="anchor" aria-label="anchor" href="#server"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>This is the part of a Shiny app that works with logic.</dfn></p>
 <p>The server is a function that processes the user's input in the <a href="u.html#ui">UI</a>, and allows the app to render appropriate output. See <a href="https://shiny.rstudio.com/articles/basics.html" target="_blank">this shiny basics article</a> for more.</p>
 
 </div>
-<div id="sesoi" class="section level2" number="20.6">
+<div id="sesoi" class="section level2" number="20.7">
 <h2>
-<span class="header-section-number">20.6</span> SESOI<a class="anchor" aria-label="anchor" href="#sesoi"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.7</span> SESOI<a class="anchor" aria-label="anchor" href="#sesoi"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Smallest Effect Size of Interest: the smallest effect that is theoretically or practically meaningful</dfn></p>
 <p>See <a href="https://doi.org/10.1177/2515245918770963">Equivalence Testing for Psychological Research: A Tutorial</a> for a tutorial on methods for choosing an SESOI.</p>
 <p>Lakens, D. (2017a). Equivalence tests: A practical primer for t tests, correlations, and meta-analyses. Social Psychological &amp; Personality Science, 8, 355–362. <a href="https://doi.org/10.1177/1948550617697177">doi:10.1177/1948550617697177</a></p>
 
 </div>
-<div id="set-operations" class="section level2" number="20.7">
+<div id="set-operations" class="section level2" number="20.8">
 <h2>
-<span class="header-section-number">20.7</span> set operations<a class="anchor" aria-label="anchor" href="#set-operations"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.8</span> set operations<a class="anchor" aria-label="anchor" href="#set-operations"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Functions that compare two tables and return rows that match (intersect), are in either table (union), or are in one table but not the other (setdiff).</dfn></p>
 <p>The examples below use two small datasets. <code>a</code> has <code>id</code>s 1 to 5, and <code>b</code> has <code>id</code>s 3 to 7.</p>
-<div class="sourceCode" id="cb157"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb165"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span>
 <span class="va">b</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fl">3</span><span class="op">:</span><span class="fl">7</span><span class="op">)</span></code></pre></div>
 <p><code><a href="https://rdrr.io/pkg/generics/man/setops.html">intersect()</a></code> returns all rows in two tables that match exactly. The columns don't have to be in the same order.</p>
-<div class="sourceCode" id="cb158"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb166"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/generics/man/setops.html">intersect</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
@@ -239,7 +330,7 @@ Figure 20.1: Semi Join
 </table></div>
 </div>
 <p><code><a href="https://rdrr.io/pkg/generics/man/setops.html">union()</a></code> returns all the rows from both tables, removing duplicate rows.</p>
-<div class="sourceCode" id="cb159"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb167"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/generics/man/setops.html">union</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
@@ -272,7 +363,7 @@ Figure 20.1: Semi Join
 </table></div>
 </div>
 <p><code>setdiff</code> returns rows that are in the first table, but not in the second table.</p>
-<div class="sourceCode" id="cb160"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb168"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/generics/man/setops.html">setdiff</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
@@ -294,9 +385,9 @@ Figure 20.1: Semi Join
 </div>
 
 </div>
-<div id="shiny" class="section level2" number="20.8">
+<div id="shiny" class="section level2" number="20.9">
 <h2>
-<span class="header-section-number">20.8</span> Shiny<a class="anchor" aria-label="anchor" href="#shiny"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.9</span> Shiny<a class="anchor" aria-label="anchor" href="#shiny"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>An R package that builds interactive web apps</dfn></p>
 <ul>
@@ -305,34 +396,34 @@ Figure 20.1: Semi Join
 <li><a href="https://psyteachr.github.io/shiny-tutorials/" target="_blank">psyTeachR Shiny Tutorials</a></li>
 </ul>
 </div>
-<div id="shinydashboard" class="section level2" number="20.9">
+<div id="shinydashboard" class="section level2" number="20.10">
 <h2>
-<span class="header-section-number">20.9</span> shinydashboard<a class="anchor" aria-label="anchor" href="#shinydashboard"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.10</span> shinydashboard<a class="anchor" aria-label="anchor" href="#shinydashboard"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A package for R that builds on <a href="s.html#shiny">Shiny</a> for more flexible and visually appealing <a href="u.html#ui">UI</a>s.</dfn></p>
-<p><a href="https://rstudio.github.io/shinydashboard/" target="_blank">Shiny Dashboard or shinydashboard</a> can be installed with <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("shinydashboard")</a></code>, and can be loaded with <code><a href="http://rstudio.github.io/shinydashboard/">library(shinydashboard)</a></code>. The <a href="https://rstudio.github.io/shinydashboard/get_started.html" target="_blank">shinydashboard documentation</a> is a great introduction to this package.</p>
+<p><a href="https://rstudio.github.io/shinydashboard/" target="_blank">Shiny Dashboard or shinydashboard</a> can be installed with <code>install.packages("shinydashboard")</code>, and can be loaded with <code><a href="http://rstudio.github.io/shinydashboard/">library(shinydashboard)</a></code>. The <a href="https://rstudio.github.io/shinydashboard/get_started.html" target="_blank">shinydashboard documentation</a> is a great introduction to this package.</p>
 
 </div>
-<div id="significant" class="section level2" number="20.10">
+<div id="significant" class="section level2" number="20.11">
 <h2>
-<span class="header-section-number">20.10</span> significant<a class="anchor" aria-label="anchor" href="#significant"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.11</span> significant<a class="anchor" aria-label="anchor" href="#significant"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The conclusion when the p-value is less than the critical alpha. </dfn></p>
 
 </div>
-<div id="simulation" class="section level2" number="20.11">
+<div id="simulation" class="section level2" number="20.12">
 <h2>
-<span class="header-section-number">20.11</span> simulation<a class="anchor" aria-label="anchor" href="#simulation"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.12</span> simulation<a class="anchor" aria-label="anchor" href="#simulation"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Generating data from summary parameters</dfn></p>
 
 </div>
-<div id="single-brackets" class="section level2" number="20.12">
+<div id="single-brackets" class="section level2" number="20.13">
 <h2>
-<span class="header-section-number">20.12</span> single brackets<a class="anchor" aria-label="anchor" href="#single-brackets"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.13</span> single brackets<a class="anchor" aria-label="anchor" href="#single-brackets"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A pair of square brackets used to select a subset from a <a href="c.html#container">container</a> like a <a href="l.html#list">list</a>, <a href="d.html#data-frame">data frame</a>, or <a href="m.html#matrix">matrix</a> (e.g., data[1, ]).</dfn></p>
-<div class="sourceCode" id="cb161"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb169"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">secret_code</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">16</span>, <span class="fl">19</span>, <span class="fl">25</span>, <span class="fl">20</span>, <span class="fl">5</span>, <span class="fl">1</span>, <span class="fl">3</span>, <span class="fl">8</span>, <span class="fl">18</span><span class="op">)</span>
 
 <span class="va">LETTERS</span><span class="op">[</span><span class="va">secret_code</span><span class="op">]</span>
@@ -340,17 +431,17 @@ Figure 20.1: Semi Join
 <p>See <a href="b.html#brackets">brackets</a> for an explanation of the difference between single and <a href="d.html#double-brackets">double</a> brackets.</p>
 
 </div>
-<div id="slope" class="section level2" number="20.13">
+<div id="slope" class="section level2" number="20.14">
 <h2>
-<span class="header-section-number">20.13</span> slope<a class="anchor" aria-label="anchor" href="#slope"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.14</span> slope<a class="anchor" aria-label="anchor" href="#slope"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A quantity that captures how much change in one variable is associated with a unit increase in another variable.</dfn></p>
 <p>If you have a slope of 3, that means that a unit increase in the <span class="math inline">\(X\)</span> variable is associated with a 3 unit change in the <span class="math inline">\(Y\)</span> variable. If you have a slope of -1/2, then a unit increase in the <span class="math inline">\(X\)</span> variable is associated with a decrease of 1/2 in the <span class="math inline">\(Y\)</span> variable.</p>
 
 </div>
-<div id="standard-deviation" class="section level2" number="20.14">
+<div id="standard-deviation" class="section level2" number="20.15">
 <h2>
-<span class="header-section-number">20.14</span> standard deviation<a class="anchor" aria-label="anchor" href="#standard-deviation"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.15</span> standard deviation<a class="anchor" aria-label="anchor" href="#standard-deviation"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="d.html#descriptive">descriptive</a> statistic that measures how spread out data are relative to the mean.</dfn></p>
 <p>If the data points are further from the mean, there is a higher standard deviation. Standard deviation is calculated as the square root of the <a href="v.html#variance">variance</a>.</p>
@@ -362,29 +453,29 @@ Figure 20.2: Normal distributions with means of 0 and SDs of 1 (red), 2 (blue) a
 </div>
 
 </div>
-<div id="static" class="section level2" number="20.15">
+<div id="static" class="section level2" number="20.16">
 <h2>
-<span class="header-section-number">20.15</span> static<a class="anchor" aria-label="anchor" href="#static"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.16</span> static<a class="anchor" aria-label="anchor" href="#static"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Something that does not change in response to user actions</dfn></p>
 <p>For example, in a <a href="s.html#shiny">shiny</a> app, the following code creates static and <a href="d.html#dynamic">dynamic</a> elements.</p>
-<div class="sourceCode" id="cb162"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb170"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">static</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">p</a></span><span class="op">(</span><span class="st">"This text cannot change"</span><span class="op">)</span>
 <span class="va">dynamic</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/textOutput.html">textOutput</a></span><span class="op">(</span><span class="st">"This text can change"</span><span class="op">)</span></code></pre></div>
 
 </div>
-<div id="string" class="section level2" number="20.16">
+<div id="string" class="section level2" number="20.17">
 <h2>
-<span class="header-section-number">20.16</span> string<a class="anchor" aria-label="anchor" href="#string"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.17</span> string<a class="anchor" aria-label="anchor" href="#string"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A piece of text inside of quotes.</dfn></p>
 <p>For example, <code>"I sense the rains down in Africa"</code> is a string. Numbers inside of quotes can be a string; <code>"19"</code> is a string, while <code>19</code> is not.</p>
 <p>Strings are a <a href="c.html#character">character</a> <a href="d.html#data-type">data type</a>.</p>
 
 </div>
-<div id="sum-code" class="section level2" number="20.17">
+<div id="sum-code" class="section level2" number="20.18">
 <h2>
-<span class="header-section-number">20.17</span> sum code<a class="anchor" aria-label="anchor" href="#sum-code"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.18</span> sum code<a class="anchor" aria-label="anchor" href="#sum-code"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="c.html#coding-scheme">coding scheme</a> for categorical variables that compares the mean for each level to the overall mean.</dfn></p>
 
@@ -580,22 +671,23 @@ $( document ).ready(function() {
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#s"><span class="header-section-number">20</span> S</a></li>
 <li><a class="nav-link" href="#sample"><span class="header-section-number">20.1</span> sample</a></li>
-<li><a class="nav-link" href="#scope"><span class="header-section-number">20.2</span> scope</a></li>
-<li><a class="nav-link" href="#script"><span class="header-section-number">20.3</span> script</a></li>
-<li><a class="nav-link" href="#semi_join"><span class="header-section-number">20.4</span> semi_join</a></li>
-<li><a class="nav-link" href="#server"><span class="header-section-number">20.5</span> server</a></li>
-<li><a class="nav-link" href="#sesoi"><span class="header-section-number">20.6</span> SESOI</a></li>
-<li><a class="nav-link" href="#set-operations"><span class="header-section-number">20.7</span> set operations</a></li>
-<li><a class="nav-link" href="#shiny"><span class="header-section-number">20.8</span> Shiny</a></li>
-<li><a class="nav-link" href="#shinydashboard"><span class="header-section-number">20.9</span> shinydashboard</a></li>
-<li><a class="nav-link" href="#significant"><span class="header-section-number">20.10</span> significant</a></li>
-<li><a class="nav-link" href="#simulation"><span class="header-section-number">20.11</span> simulation</a></li>
-<li><a class="nav-link" href="#single-brackets"><span class="header-section-number">20.12</span> single brackets</a></li>
-<li><a class="nav-link" href="#slope"><span class="header-section-number">20.13</span> slope</a></li>
-<li><a class="nav-link" href="#standard-deviation"><span class="header-section-number">20.14</span> standard deviation</a></li>
-<li><a class="nav-link" href="#static"><span class="header-section-number">20.15</span> static</a></li>
-<li><a class="nav-link" href="#string"><span class="header-section-number">20.16</span> string</a></li>
-<li><a class="nav-link" href="#sum-code"><span class="header-section-number">20.17</span> sum code</a></li>
+<li><a class="nav-link" href="#scientific-notation"><span class="header-section-number">20.2</span> scientific notation</a></li>
+<li><a class="nav-link" href="#scope"><span class="header-section-number">20.3</span> scope</a></li>
+<li><a class="nav-link" href="#script"><span class="header-section-number">20.4</span> script</a></li>
+<li><a class="nav-link" href="#semi_join"><span class="header-section-number">20.5</span> semi_join</a></li>
+<li><a class="nav-link" href="#server"><span class="header-section-number">20.6</span> server</a></li>
+<li><a class="nav-link" href="#sesoi"><span class="header-section-number">20.7</span> SESOI</a></li>
+<li><a class="nav-link" href="#set-operations"><span class="header-section-number">20.8</span> set operations</a></li>
+<li><a class="nav-link" href="#shiny"><span class="header-section-number">20.9</span> Shiny</a></li>
+<li><a class="nav-link" href="#shinydashboard"><span class="header-section-number">20.10</span> shinydashboard</a></li>
+<li><a class="nav-link" href="#significant"><span class="header-section-number">20.11</span> significant</a></li>
+<li><a class="nav-link" href="#simulation"><span class="header-section-number">20.12</span> simulation</a></li>
+<li><a class="nav-link" href="#single-brackets"><span class="header-section-number">20.13</span> single brackets</a></li>
+<li><a class="nav-link" href="#slope"><span class="header-section-number">20.14</span> slope</a></li>
+<li><a class="nav-link" href="#standard-deviation"><span class="header-section-number">20.15</span> standard deviation</a></li>
+<li><a class="nav-link" href="#static"><span class="header-section-number">20.16</span> static</a></li>
+<li><a class="nav-link" href="#string"><span class="header-section-number">20.17</span> string</a></li>
+<li><a class="nav-link" href="#sum-code"><span class="header-section-number">20.18</span> sum code</a></li>
 </ul>
 
       <div class="book-extra">
@@ -613,7 +705,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-01-19.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-04.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -380,8 +380,7 @@ Figure 13.3: With setting levels, categories display in the level order
 <span class="co">#&gt;  [1]  1  2  3  4  5  6  7  8  9 10</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $strings</span>
-<span class="co">#&gt;  [1] "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X"</span>
-<span class="co">#&gt; [25] "Y" "Z"</span>
+<span class="co">#&gt;  [1] "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z"</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $another_list</span>
 <span class="co">#&gt; $another_list[[1]]</span>
@@ -397,13 +396,21 @@ Figure 13.3: With setting levels, categories display in the level order
 <span class="co">#&gt; $object</span>
 <span class="co">#&gt; function (n, mean = 0, sd = 1) </span>
 <span class="co">#&gt; .Call(C_rnorm, n, mean, sd)</span>
-<span class="co">#&gt; &lt;bytecode: 0x7ff7ce3a86c0&gt;</span>
+<span class="co">#&gt; &lt;bytecode: 0x7fee9c23f600&gt;</span>
 <span class="co">#&gt; &lt;environment: namespace:stats&gt;</span></code></pre></div>
 
 </div>
-<div id="logical" class="section level2" number="13.7">
+<div id="literal" class="section level2" number="13.7">
 <h2>
-<span class="header-section-number">13.7</span> logical<a class="anchor" aria-label="anchor" href="#logical"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.7</span> literal<a class="anchor" aria-label="anchor" href="#literal"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>The actual character being typed, not the special meaning it has to code.</dfn></p>
+<p>R and markdown have some characters that are used for code or formatting, making them difficult to use <em>literally</em> in the text. You can <a href="e.html#escape">escape</a> characters to use the literal version.</p>
+
+</div>
+<div id="logical" class="section level2" number="13.8">
+<h2>
+<span class="header-section-number">13.8</span> logical<a class="anchor" aria-label="anchor" href="#logical"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing <code>TRUE</code> or <code>FALSE</code> values.</dfn></p>
 <div class="sourceCode" id="cb102"><pre class="downlit sourceCode r">
@@ -435,9 +442,9 @@ Figure 13.3: With setting levels, categories display in the level order
 <span class="co">#&gt;  $ equation   : logi FALSE</span></code></pre></div>
 
 </div>
-<div id="long" class="section level2" number="13.8">
+<div id="long" class="section level2" number="13.9">
 <h2>
-<span class="header-section-number">13.8</span> long<a class="anchor" aria-label="anchor" href="#long"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.9</span> long<a class="anchor" aria-label="anchor" href="#long"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Data where each observation is on a separate row</dfn></p>
 <div class="inline-table"><table class="table table-sm">
@@ -680,8 +687,9 @@ $( document ).ready(function() {
 <li><a class="nav-link" href="#likert"><span class="header-section-number">13.4</span> Likert</a></li>
 <li><a class="nav-link" href="#linear-mixed-effects-model"><span class="header-section-number">13.5</span> Linear mixed-effects model</a></li>
 <li><a class="nav-link" href="#list"><span class="header-section-number">13.6</span> list</a></li>
-<li><a class="nav-link" href="#logical"><span class="header-section-number">13.7</span> logical</a></li>
-<li><a class="nav-link" href="#long"><span class="header-section-number">13.8</span> long</a></li>
+<li><a class="nav-link" href="#literal"><span class="header-section-number">13.7</span> literal</a></li>
+<li><a class="nav-link" href="#logical"><span class="header-section-number">13.8</span> logical</a></li>
+<li><a class="nav-link" href="#long"><span class="header-section-number">13.9</span> long</a></li>
 </ul>
 
       <div class="book-extra">
@@ -699,7 +707,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-01-19.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-04.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -203,7 +203,7 @@
 <p><dfn>A data structure that contains R objects such as variables and functions</dfn></p>
 <p>The Environment <a href="p.html#panes">pane</a> defaults to showing the contents of the Global Environment. This is where <a href="o.html#object">objects</a> defined in the <a href="c.html#console">console</a> or interactively running <a href="s.html#script">scripts</a> are stored. You can also use the code <code><a href="https://rdrr.io/r/base/ls.html">ls()</a></code> to list all objects.</p>
 <p>When you restart R, the global environment should clear. If it doesn't, go to <strong><code>Global Options...</code></strong> under the Tools menu (⌘,), and uncheck the box that says Restore .RData into workspace at startup. If you keep things around in your workspace, things will get messy, and unexpected things will happen. You should always start with a clear workspace. This also means that you never want to save your workspace when you exit, so set this to Never. The only thing you want to save are your scripts.</p>
-<p>You can also use the code <code><a href="https://rdrr.io/r/base/rm.html">rm(list = ls())</a></code> or click on the broom icon in the Environment pane to clear the global environment without restarting R.</p>
+<p>You can also use the code <code>rm(list = ls())</code> or click on the broom icon in the Environment pane to clear the global environment without restarting R.</p>
 <p>When you <a href="k.html#knit">knit</a> an <a href="r.html#r-markdown">R markdown</a> file, this happens in a new environment, so if any of your code relies on objects you created outside your script, that code will run interactively in R Studio, but will fail when you knit because the objects in the gloabl environment are not available in the knitting environment.</p>
 <p>If you start writing your own functions, you need to understand a little about <a href="s.html#scope">scope</a> and how the environment inside a function is not the same as the global environment. The <a href="http://adv-r.had.co.nz/Environments.html" target="_blank">Environments chapter</a> in Advanced R is a good resource for advanced understanding.</p>
 
@@ -228,9 +228,10 @@
 <span class="header-section-number">6.10</span> escape<a class="anchor" aria-label="anchor" href="#escape"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Include special characters like " inside of a string by prefacing them with a backslash.</dfn></p>
+<p>When you need to use a character that has a special meaning in R or markdown, you can create the <a href="l.html#literal">literal</a> version by escaping it with a backslash.</p>
 <div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">str</span> <span class="op">&lt;-</span> <span class="st">"This prints a \"quote\""</span></code></pre></div>
-<p>This prints a "quote"</p>
+<code class="sourceCode R"><span class="va">str</span> <span class="op">&lt;-</span> <span class="st">"This prints a \"quote\" and prevents twitter handles like \\@psyteachr from turning into references."</span></code></pre></div>
+<p>This prints a "quote" and prevents twitter handles like @psyteachr from turning into references.</p>
 
 </div>
 <div id="extension" class="section level2" number="6.11">
@@ -280,8 +281,8 @@
 <h2>
 <span class="header-section-number">6.12</span> extract operator<a class="anchor" aria-label="anchor" href="#extract-operator"><i class="fas fa-link"></i></a>
 </h2>
-<p><dfn>A symbol used to get values from a <a href="c.html#container">container</a> object, such as <code><a href="https://rdrr.io/r/base/Extract.html">[</a></code>, <code><a href="https://rdrr.io/r/base/Extract.html">[[</a></code>, or <code><a href="https://rdrr.io/r/base/Extract.html">$</a></code></dfn></p>
-<p>You can extract values from a <a href="v.html#vector">vector</a> by <a href="i.html#index">index</a> or name using <code><a href="https://rdrr.io/r/base/Extract.html">[</a></code> and <code><a href="https://rdrr.io/r/base/Extract.html">[[</a></code>.</p>
+<p><dfn>A symbol used to get values from a <a href="c.html#container">container</a> object, such as <code>[</code>, <code>[[</code>, or <code>$</code></dfn></p>
+<p>You can extract values from a <a href="v.html#vector">vector</a> by <a href="i.html#index">index</a> or name using <code>[</code> and <code>[[</code>.</p>
 <div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">my_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>A <span class="op">=</span> <span class="st">"first"</span>, B <span class="op">=</span> <span class="st">"second"</span><span class="op">)</span>
 <span class="va">my_vector</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>   <span class="co"># by index, retains name</span>
@@ -294,7 +295,7 @@
 <span class="co">#&gt; "second"</span>
 <span class="va">my_vector</span><span class="op">[[</span><span class="st">"B"</span><span class="op">]</span><span class="op">]</span> <span class="co"># by name, removes name</span>
 <span class="co">#&gt; [1] "second"</span></code></pre></div>
-<p>You can extract values from a <a href="l.html#list">list</a> by <a href="i.html#index">index</a> or name using <code><a href="https://rdrr.io/r/base/Extract.html">[</a></code> and <code><a href="https://rdrr.io/r/base/Extract.html">[[</a></code> and by name using <code><a href="https://rdrr.io/r/base/Extract.html">$</a></code>.</p>
+<p>You can extract values from a <a href="l.html#list">list</a> by <a href="i.html#index">index</a> or name using <code>[</code> and <code>[[</code> and by name using <code>$</code>.</p>
 <div class="sourceCode" id="cb75"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">my_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
   A <span class="op">=</span> <span class="st">"First item"</span>,
@@ -534,7 +535,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-01-19.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-04.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

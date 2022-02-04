@@ -238,24 +238,52 @@ library(tidyverse)
 <p>See also <a href="r.html#reproducibility">reproducibility</a>.</p>
 
 </div>
-<div id="reproducibility" class="section level2" number="19.10">
+<div id="reprex" class="section level2" number="19.10">
 <h2>
-<span class="header-section-number">19.10</span> reproducibility<a class="anchor" aria-label="anchor" href="#reproducibility"><i class="fas fa-link"></i></a>
+<span class="header-section-number">19.10</span> reprex<a class="anchor" aria-label="anchor" href="#reprex"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>A reproducible example that is the smallest, completely self-contained example of your problem or question.</dfn></p>
+<p>For example, you may have a question about how to figure out how to select rows that contain the value "test" in a certain column, but it isn't working. It's clearer if you can provide a concrete example, but you don't want to have to type out the whole table you're using or all the code that got you to this point in your script.</p>
+<p>You can include a very small table with just the basics or a smaller version of your problem. Make comments at each step about what you expect and what you actually got.</p>
+<p>Which version is easier for you to figure out the solution?</p>
+<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># this doesn't work</span>
+<span class="va">no_test_data</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu">str_detect</span><span class="op">(</span><span class="va">type</span>, <span class="st">"test"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># with a minimal example table</span>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tribble.html">tribble</a></span><span class="op">(</span>
+  <span class="op">~</span><span class="va">id</span>, <span class="op">~</span><span class="va">type</span>, <span class="op">~</span><span class="va">x</span>,
+  <span class="fl">1</span>, <span class="st">"test"</span>, <span class="fl">12</span>,
+  <span class="fl">2</span>, <span class="st">"testosterone"</span>, <span class="fl">15</span>,
+  <span class="fl">3</span>, <span class="st">"estrogen"</span>, <span class="fl">10</span>
+<span class="op">)</span>
+
+<span class="co"># this should keep IDs 2 and 3, but removes ID 2</span>
+<span class="va">no_test_data</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu">str_detect</span><span class="op">(</span><span class="va">type</span>, <span class="st">"test"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<p>One of the big benefits to creating a reprex is that you often solve your own problem while you're trying to break it down to explain to someone else.</p>
+<p>If you really want to go down the rabbit hole, you can create a reproducible example using the <a href="https://www.tidyverse.org/help/#reprex">reprex</a> package from tidyverse.</p>
+
+</div>
+<div id="reproducibility" class="section level2" number="19.11">
+<h2>
+<span class="header-section-number">19.11</span> reproducibility<a class="anchor" aria-label="anchor" href="#reproducibility"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The extent to which the findings of a study can be repeated in some other context</dfn></p>
 <p>Reproducibility can be either with new samples from the same population (<a href="r.html#replicability">replicability</a>) or with the same raw data but analyzed by different researchers or by the same researchers on a different occasion (<a href="c.html#computational-reproducibility">computational</a> or analytical reproducibility).</p>
 
 </div>
-<div id="reproducible-research" class="section level2" number="19.11">
+<div id="reproducible-research" class="section level2" number="19.12">
 <h2>
-<span class="header-section-number">19.11</span> reproducible research<a class="anchor" aria-label="anchor" href="#reproducible-research"><i class="fas fa-link"></i></a>
+<span class="header-section-number">19.12</span> reproducible research<a class="anchor" aria-label="anchor" href="#reproducible-research"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Research that documents all of the steps between raw data and results in a way that can be verified.</dfn></p>
 
 </div>
-<div id="residual" class="section level2" number="19.12">
+<div id="residual" class="section level2" number="19.13">
 <h2>
-<span class="header-section-number">19.12</span> residual<a class="anchor" aria-label="anchor" href="#residual"><i class="fas fa-link"></i></a>
+<span class="header-section-number">19.13</span> residual<a class="anchor" aria-label="anchor" href="#residual"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Defined as the deviation of an observation from a model's expected value.</dfn></p>
 <p>Mathematically, the residual is defined as the observed value minus the model's <a href="f.html#fitted-value">fitted value</a> for that observation.</p>
@@ -263,17 +291,17 @@ library(tidyverse)
 <p>A related but slightly different notion is <a href="e.html#error">error</a>.</p>
 
 </div>
-<div id="response-variable" class="section level2" number="19.13">
+<div id="response-variable" class="section level2" number="19.14">
 <h2>
-<span class="header-section-number">19.13</span> response variable<a class="anchor" aria-label="anchor" href="#response-variable"><i class="fas fa-link"></i></a>
+<span class="header-section-number">19.14</span> response variable<a class="anchor" aria-label="anchor" href="#response-variable"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A variable (in a regression) whose value is assumed to be influenced by one or more predictor variables.</dfn></p>
 <p>In an experimental context, the response variable is often referred to as the <a href="d.html#dependent-variable">dependent variable</a>.</p>
 
 </div>
-<div id="right_join" class="section level2" number="19.14">
+<div id="right_join" class="section level2" number="19.15">
 <h2>
-<span class="header-section-number">19.14</span> right_join<a class="anchor" aria-label="anchor" href="#right_join"><i class="fas fa-link"></i></a>
+<span class="header-section-number">19.15</span> right_join<a class="anchor" aria-label="anchor" href="#right_join"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="m.html#mutating-joins">mutating join</a> that keeps all the data from the second (right) table and joins anything that matches from the first (left) table.</dfn></p>
 <div class="figure" style="text-align: center">
@@ -282,7 +310,7 @@ library(tidyverse)
 Figure 19.1: Right Join
 </p>
 </div>
-<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb153"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
@@ -366,7 +394,7 @@ Table Y
 </tr>
 </table></div>
 <p>If there is no matching data in the left table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb154"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># a is the right table</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
@@ -398,7 +426,7 @@ Table Y
 </tbody>
 </table></div>
 <p>Order is important for right joins.</p>
-<div class="sourceCode" id="cb153"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb155"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># b is the right table</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">b</span>, <span class="va">a</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
@@ -432,9 +460,9 @@ Table Y
 <p>See <a href="j.html#joins">joins</a> for other types of joins and further resources.</p>
 
 </div>
-<div id="rstudio" class="section level2" number="19.15">
+<div id="rstudio" class="section level2" number="19.16">
 <h2>
-<span class="header-section-number">19.15</span> RStudio<a class="anchor" aria-label="anchor" href="#rstudio"><i class="fas fa-link"></i></a>
+<span class="header-section-number">19.16</span> RStudio<a class="anchor" aria-label="anchor" href="#rstudio"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>An integrated development environment (<a href="i.html#ide">IDE</a>) that helps you process R code.</dfn></p>
 <p>Download RStudio at <a href="https://rstudio.com/" class="uri">https://rstudio.com/</a></p>
@@ -639,12 +667,13 @@ $( document ).ready(function() {
 <li><a class="nav-link" href="#render"><span class="header-section-number">19.7</span> render</a></li>
 <li><a class="nav-link" href="#repeated-measures"><span class="header-section-number">19.8</span> repeated measures</a></li>
 <li><a class="nav-link" href="#replicability"><span class="header-section-number">19.9</span> replicability</a></li>
-<li><a class="nav-link" href="#reproducibility"><span class="header-section-number">19.10</span> reproducibility</a></li>
-<li><a class="nav-link" href="#reproducible-research"><span class="header-section-number">19.11</span> reproducible research</a></li>
-<li><a class="nav-link" href="#residual"><span class="header-section-number">19.12</span> residual</a></li>
-<li><a class="nav-link" href="#response-variable"><span class="header-section-number">19.13</span> response variable</a></li>
-<li><a class="nav-link" href="#right_join"><span class="header-section-number">19.14</span> right_join</a></li>
-<li><a class="nav-link" href="#rstudio"><span class="header-section-number">19.15</span> RStudio</a></li>
+<li><a class="nav-link" href="#reprex"><span class="header-section-number">19.10</span> reprex</a></li>
+<li><a class="nav-link" href="#reproducibility"><span class="header-section-number">19.11</span> reproducibility</a></li>
+<li><a class="nav-link" href="#reproducible-research"><span class="header-section-number">19.12</span> reproducible research</a></li>
+<li><a class="nav-link" href="#residual"><span class="header-section-number">19.13</span> residual</a></li>
+<li><a class="nav-link" href="#response-variable"><span class="header-section-number">19.14</span> response variable</a></li>
+<li><a class="nav-link" href="#right_join"><span class="header-section-number">19.15</span> right_join</a></li>
+<li><a class="nav-link" href="#rstudio"><span class="header-section-number">19.16</span> RStudio</a></li>
 </ul>
 
       <div class="book-extra">
@@ -662,7 +691,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-01-19.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-04.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

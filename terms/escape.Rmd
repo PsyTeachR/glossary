@@ -2,8 +2,12 @@
 
 <dfn>Include special characters like " inside of a string by prefacing them with a backslash.</dfn>
 
+When you need to use a character that has a special meaning in R or markdown, you can create the [literal](l.html#literal) version by escaping it with a backslash.
+
 ```{r}
-str <- "This prints a \"quote\""
+str <- "This prints a \"quote\" and prevents twitter handles like \\@psyteachr from turning into references."
 ```
 
 `r str`
+
+

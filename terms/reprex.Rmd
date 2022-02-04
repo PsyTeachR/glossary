@@ -1,0 +1,35 @@
+## reprex
+
+<dfn>A reproducible example that is the smallest, completely self-contained example of your problem or question.</dfn>
+
+For example, you may have a question about how to figure out how to select rows that contain the value "test" in a certain column, but it isn't working. It's clearer if you can provide a concrete example, but you don't want to have to type out the whole table you're using or all the code that got you to this point in your script. 
+
+You can include a very small table with just the basics or a smaller version of your problem. Make comments at each step about what you expect and what you actually got. 
+
+Which version is easier for you to figure out the solution?
+
+```{r, eval = FALSE}
+# this doesn't work
+no_test_data <- data %>%
+  filter(!str_detect(type, "test"))
+```
+
+
+```{r, eval = FALSE}
+# with a minimal example table
+data <- tribble(
+  ~id, ~type, ~x,
+  1, "test", 12,
+  2, "testosterone", 15,
+  3, "estrogen", 10
+)
+
+# this should keep IDs 2 and 3, but removes ID 2
+no_test_data <- data %>%
+  filter(!str_detect(type, "test"))
+```
+
+One of the big benefits to creating a reprex is that you often solve your own problem while you're trying to break it down to explain to someone else.
+
+If you really want to go down the rabbit hole, you can create a reproducible example using the [reprex](https://www.tidyverse.org/help/#reprex) package from tidyverse.
+

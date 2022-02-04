@@ -1,0 +1,6 @@
+## literal
+
+<dfn>The actual character being typed, not the special meaning it has to code.</dfn>
+
+R and markdown have some characters that are used for code or formatting, making them difficult to use *literally* in the text. You can [escape](e.html#escape) characters to use the literal version.
+

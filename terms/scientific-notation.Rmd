@@ -1,0 +1,62 @@
+## scientific notation
+
+<dfn>A number format for working with very large or small numbers.</dfn>
+
+Numbers are most commonly written in decimal notation, like `3.145` or `365`. However, when numbers are very large or small, it's difficult to read or write them correctly. 
+
+For example, Avogadro's constant, the number of particles contained in one mole of any substance,is equal to 602,252,000,000,000,000,000,000. The commas make it a little easier to parse when reading, but you can't use those in coding. The scientific notation is $6.02x10^{23}$, which means the you multiply 6.02 times the number that is 1 with 23 zeros after it (or move the decimal place in 6.02 23 places to the right). In R, this notation looks like `6.02e23`.
+
+Negative numbers move the decimal place to the left. For example, Wyler's constant in physics is `1.05e-109`, or a decimal place followed by 108 zeros before you get to the first non-zero digit.
+
+```{r, eval = FALSE}
+    0.0001 == 1e-4
+    0.001  == 1e-3
+    0.01   == 1e-2
+    0.1    == 1e-1
+    1      == 1e0
+   10      == 1e1
+  100      == 1e2
+ 1000      == 1e3
+10000      == 1e4
+```
+
+You can format numbers with scientific notation in R using the function `formatC()`. This turns them into text that you can use n inline code, but you can't use as a number anymore.
+
+```{r}
+x <- c(123456789, 0.06789, 0.000000012)
+formatC(x, format = "e", digits = 2)
+```
+
+Model output can often contain numbers in scientific notation. To change the threshold at which large or small numbers display with scientific notation, set the `scipen` option at the top of a script. A value of 0 means that R will use scientific notation whenever that representation takes less space than the decimal representation. Larger values make decimal notation more likely and smaller values make scientific notation more likely.
+
+```{r}
+test <- list(1000000,
+              100000, 
+               10000, 
+                1000, 
+                 100, 
+                  10, 
+                   1, 
+                   0.1, 
+                   0.01, 
+                   0.001, 
+                   0.0001,
+                   0.00001,
+                   0.000001)
+```
+
+
+```{r}
+options(scipen = 1)
+str(test)
+```
+
+```{r}
+options(scipen = 0)
+str(test)
+```
+
+```{r}
+options(scipen = -1)
+str(test)
+```
