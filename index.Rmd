@@ -1,6 +1,6 @@
 --- 
-title: "Glossary" # edit
-author: "psyTeachR Team" # edit
+title: "Glossary" 
+author: "psyTeachR Team" 
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -9,14 +9,14 @@ geometry: margin=1in # for PDFs
 bibliography: [book.bib, packages.bib]
 csl: include/apa.csl
 link-citations: yes
-description: | # edit
+description: | 
   Definitions of technical terms
-url: https://psyteachr.github.io/glossary # edit
-github-repo: psyteachr/glossary # edit
-cover-image: images/logos/logo.png # replace with your logo
-apple-touch-icon: images/logos/apple-touch-icon.png # replace with your logo
+url: https://psyteachr.github.io/glossary
+github-repo: psyteachr/glossary
+cover-image: images/logos/logo.png
+apple-touch-icon: images/logos/apple-touch-icon.png
 apple-touch-icon-size: 180
-favicon: images/logos/favicon.ico # replace with your logo
+favicon: images/logos/favicon.ico
 ---
 
 ```{r cite-packages, include = FALSE}
