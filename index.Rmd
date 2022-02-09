@@ -49,7 +49,7 @@ glossary::open_glossary() # open a local copy
 
 Contents are made available under a CC-BY-SA license. To cite:
 
-DeBruine, L., Barr, D. J., McAleer, P., Paterson, H., and the #psyTeachR team (2021). PsyTeachR Glossary  (version `r format(Sys.Date(), format = "%Y-%m-%d")`). Retrieved from https://psyteachr.github.io/glossary.
+PsyTeachR Team (2021). PsyTeachR Glossary  (version `r format(Sys.Date(), format = "%Y-%m-%d")`). Retrieved from https://psyteachr.github.io/glossary.
 
 
 Thanks to the [glossary hackathon](https://docs.google.com/document/d/1FOohcEbWTAXB7OWSvMZzwMI3F--pNNRT3_3DSB6KeB8/edit) contributors: 
