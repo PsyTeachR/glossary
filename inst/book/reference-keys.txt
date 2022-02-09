@@ -6,7 +6,7 @@ fig:aspect-ratio-2-disp
 fig:binom-plot
 fig:bvn-plot
 fig:cor
-fig:unnamed-chunk-113
+fig:unnamed-chunk-104
 fig:full-join
 fig:img-function-help
 fig:geom-boxplot
@@ -18,7 +18,7 @@ fig:left-join
 fig:levels-without
 fig:levels-with
 tab:long-data
-tab:unnamed-chunk-214
+tab:unnamed-chunk-205
 fig:normal-plot
 fig:img-panes
 fig:poisson-plot
@@ -30,7 +30,7 @@ fig:right-join
 fig:semi-join
 fig:sd-plot
 fig:unif-plot
-tab:unnamed-chunk-350
+tab:unnamed-chunk-341
 tab:wide-data
 offline-access
 cite
@@ -253,6 +253,7 @@ t
 tabular-data
 tag
 theme
+tibble
 tidy-data
 tidyverse
 tied-ranks

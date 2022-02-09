@@ -12,6 +12,7 @@ theme_set(theme_bw())
 
 You can set the theme for a html document in the [YAML](y.html#yaml) header. View and download different [themes](https://bootswatch.com/4/){target="_blank"}.
 
+```
 ---
 title: "My Document"
 subtitle: "It's Just a Demo"
