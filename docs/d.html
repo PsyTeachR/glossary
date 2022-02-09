@@ -235,10 +235,10 @@ Figure 5.1: How p-values vary depending on the degrees of freedom for specific t
 </h2>
 <p><dfn>A score minus the mean</dfn></p>
 <div class="sourceCode" id="cb75"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="fu">tibble</span><span class="op">(</span>
   score <span class="op">=</span> <span class="fl">8</span><span class="op">:</span><span class="fl">12</span>
-<span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span>
-  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate.html">mutate</a></span><span class="op">(</span>mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">score</span><span class="op">)</span>,
+<span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu">mutate</span><span class="op">(</span>mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">score</span><span class="op">)</span>,
          deviation_score <span class="op">=</span> <span class="va">score</span> <span class="op">-</span> <span class="va">mean</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">

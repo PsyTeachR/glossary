@@ -2,4 +2,17 @@
 
 <dfn>The extent to which the findings of a study can be repeated with new samples from the same population.</dfn>
 
+Alternatively, a scientific claim is replicable if it is supported by new data ([Errington et al., 2021](https://doi.org/10.7554/eLife.71601)).
+
 See also [reproducibility](r.html#reproducibility).
+
+The aim of replicating a study is test the underlying theoretical process, estimate the average effect size, and test whether you can observe the effect independent of the original researchers by recreating a study's methods as closely as possible ([Brandt et al., 2014](https://www.sciencedirect.com/science/article/pii/S0022103113001819)).
+
+There is not a clear definition for a successful replication, but there are some common markers ([Errington et al., 2021](https://doi.org/10.7554/eLife.71601)):
+
+* Is the replication effect in the same direction as the original study?
+* Is the replication effect and statistical significance in the same direction as the original study?
+* Is the effect size from the original study in the confidence interval of the replication?
+* Is the effect size from the replication study in the confidence interval of the original?
+* Is the effect size from the replication smaller or equal to the effect size from the original study?
+

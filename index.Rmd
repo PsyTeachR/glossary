@@ -55,7 +55,7 @@ DeBruine, L., Barr, D. J., McAleer, P., Paterson, H., and the #psyTeachR team (2
 Thanks to the [glossary hackathon](https://docs.google.com/document/d/1FOohcEbWTAXB7OWSvMZzwMI3F--pNNRT3_3DSB6KeB8/edit) contributors: 
 [Jack Taylor](https://github.com/PsyTeachR/glossary/issues?q=is%3Aissue+author%3AJackEdTaylor), 
 [Juliane Kloidt](https://github.com/PsyTeachR/glossary/issues?q=is%3Aissue+author%3AJulianeKloidt), 
-[J Hrudey](https://github.com/PsyTeachR/glossary/issues/created_by/jhrudey), 
+[Jessica Hrudey](https://github.com/PsyTeachR/glossary/issues/created_by/jhrudey), 
 [James Bartlett](https://github.com/PsyTeachR/glossary/issues/created_by/BartlettJE).
 
 # Symbols
