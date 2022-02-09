@@ -49,14 +49,15 @@ glossary::open_glossary() # open a local copy
 
 Contents are made available under a CC-BY-SA license. To cite:
 
-PsyTeachR Team (2021). PsyTeachR Glossary  (version `r format(Sys.Date(), format = "%Y-%m-%d")`). Retrieved from https://psyteachr.github.io/glossary.
+PsyTeachR Team (2022). PsyTeachR Glossary  (version `r format(Sys.Date(), format = "%Y-%m-%d")`). Retrieved from https://psyteachr.github.io/glossary.
 
 
 Thanks to the [glossary hackathon](https://docs.google.com/document/d/1FOohcEbWTAXB7OWSvMZzwMI3F--pNNRT3_3DSB6KeB8/edit) contributors: 
 [Jack Taylor](https://github.com/PsyTeachR/glossary/issues?q=is%3Aissue+author%3AJackEdTaylor), 
 [Juliane Kloidt](https://github.com/PsyTeachR/glossary/issues?q=is%3Aissue+author%3AJulianeKloidt), 
 [Jessica Hrudey](https://github.com/PsyTeachR/glossary/issues/created_by/jhrudey), 
-[James Bartlett](https://github.com/PsyTeachR/glossary/issues/created_by/BartlettJE).
+[James Bartlett](https://github.com/PsyTeachR/glossary/issues/created_by/BartlettJE), and 
+[Phil McAleer](https://github.com/PsyTeachR/glossary/issues/created_by/philmcaleer).
 
 # Symbols
 
