@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>6 E | Glossary</title>
-<meta name="author" content="psyTeachR Team">
+<title>6 E | My Document</title>
+<meta name="author" content="Me">
 <meta name="description" content="6.1 effect code A coding scheme for categorical variables that contrasts each group mean with the mean of all the group means. Also referred to as contrast coding.   6.2 effect size The difference...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="6 E | Glossary">
+<meta property="og:title" content="6 E | My Document">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/e.html">
 <meta property="og:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <meta property="og:description" content="6.1 effect code A coding scheme for categorical variables that contrasts each group mean with the mean of all the group means. Also referred to as contrast coding.   6.2 effect size The difference...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="6 E | Glossary">
+<meta name="twitter:title" content="6 E | My Document">
 <meta name="twitter:description" content="6.1 effect code A coding scheme for categorical variables that contrasts each group mean with the mean of all the group means. Also referred to as contrast coding.   6.2 effect size The difference...">
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,7 +38,8 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">Glossary</a>
+        <a href="index.html" title="It's Just a Demo">My Document</a>:
+        <small class="text-muted">It's Just a Demo</small>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -118,7 +119,7 @@
 </h2>
 <p><dfn>One item in a <a href="v.html#vector">vector</a>.</dfn></p>
 <p>For example, the built-in vector <code>LETTERS</code> contains 26 elements: the uppercase latin letters A through Z. You can select an element from a vector by putting its <a href="i.html#index">index</a> in square brackets.</p>
-<div class="sourceCode" id="cb71"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># get the tenth upppercase letter</span>
 <span class="va">LETTERS</span><span class="op">[</span><span class="fl">10</span><span class="op">]</span>
 <span class="co">#&gt; [1] "J"</span></code></pre></div>
@@ -138,7 +139,7 @@
 <p><dfn>Three dots (...) representing further unspecified <a href="a.html#argument">arguments</a> to a <a href="f.html#function">function</a>.</dfn></p>
 <p>When you look up the help for a function, you often see one of the arguments is <code>...</code>. This means that you can supply your own argument names and values here.</p>
 <p>For example, the help page for <code><a href="https://rdrr.io/pkg/dplyr/man/mutate.html">dplyr::mutate()</a></code> shows a usage of <code>mutate(.data, ...)</code>, which means that the first argument is called <code>.data</code> and is the data table you want to mutate, and the second argument is <code>...</code>, which means that you can add as many new arguments as you want and each one will create a new column with the argument name and value.</p>
-<div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># create a data frame with letters and numbers </span>
 <span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
   number <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
@@ -229,7 +230,7 @@
 </h2>
 <p><dfn>Include special characters like " inside of a string by prefacing them with a backslash.</dfn></p>
 <p>When you need to use a character that has a special meaning in R or markdown, you can create the <a href="l.html#literal">literal</a> version by escaping it with a backslash.</p>
-<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb81"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">str</span> <span class="op">&lt;-</span> <span class="st">"This prints a \"quote\" and prevents twitter handles like \\@psyteachr from turning into references."</span></code></pre></div>
 <p>This prints a "quote" and prevents twitter handles like @psyteachr from turning into references.</p>
 
@@ -283,7 +284,7 @@
 </h2>
 <p><dfn>A symbol used to get values from a <a href="c.html#container">container</a> object, such as <code>[</code>, <code>[[</code>, or <code>$</code></dfn></p>
 <p>You can extract values from a <a href="v.html#vector">vector</a> by <a href="i.html#index">index</a> or name using <code>[</code> and <code>[[</code>.</p>
-<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb82"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">my_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>A <span class="op">=</span> <span class="st">"first"</span>, B <span class="op">=</span> <span class="st">"second"</span><span class="op">)</span>
 <span class="va">my_vector</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>   <span class="co"># by index, retains name</span>
 <span class="co">#&gt;       A </span>
@@ -296,7 +297,7 @@
 <span class="va">my_vector</span><span class="op">[[</span><span class="st">"B"</span><span class="op">]</span><span class="op">]</span> <span class="co"># by name, removes name</span>
 <span class="co">#&gt; [1] "second"</span></code></pre></div>
 <p>You can extract values from a <a href="l.html#list">list</a> by <a href="i.html#index">index</a> or name using <code>[</code> and <code>[[</code> and by name using <code>$</code>.</p>
-<div class="sourceCode" id="cb75"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb83"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">my_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
   A <span class="op">=</span> <span class="st">"First item"</span>,
   B <span class="op">=</span> <span class="fl">2</span>
@@ -535,7 +536,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-05.</p>
+    <p>"<strong>My Document</strong>: It's Just a Demo" was written by Me. It was last built on 2022-02-09.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

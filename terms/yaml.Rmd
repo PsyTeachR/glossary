@@ -31,4 +31,4 @@ output:
   theme: spacelab
 ```
 
-[YAML](https://yaml.org/){target="_blank"} stands for YAML Ain't Markup Language.
+[YAML](https://yaml.org/){target="_blank"} stands for YAML Ain't Markup Language. 

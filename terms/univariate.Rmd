@@ -12,7 +12,7 @@ data.frame(
   stroop_2 = rbinom(5, 20, .5),
   stroop_3 = rbinom(5, 20, .4)
 ) %>%
-  knitr::kable(caption = "Uniivariate data with 3 scores on the same task per person")
+  knitr::kable(caption = "Univariate data with 3 scores on the same task per person")
 ```
 
 Contrast with [multivariate](m.html#multivariate).

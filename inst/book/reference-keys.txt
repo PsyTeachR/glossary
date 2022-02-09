@@ -6,7 +6,7 @@ fig:aspect-ratio-2-disp
 fig:binom-plot
 fig:bvn-plot
 fig:cor
-fig:unnamed-chunk-95
+fig:unnamed-chunk-113
 fig:full-join
 fig:img-function-help
 fig:geom-boxplot
@@ -18,7 +18,7 @@ fig:left-join
 fig:levels-without
 fig:levels-with
 tab:long-data
-tab:unnamed-chunk-196
+tab:unnamed-chunk-214
 fig:normal-plot
 fig:img-panes
 fig:poisson-plot
@@ -30,7 +30,7 @@ fig:right-join
 fig:semi-join
 fig:sd-plot
 fig:unif-plot
-tab:unnamed-chunk-328
+tab:unnamed-chunk-350
 tab:wide-data
 offline-access
 cite
@@ -59,6 +59,8 @@ binding-joins
 binomial-distribution
 bivariate-normal
 block
+boolean-expression
+boolean
 brackets
 c
 cache
@@ -250,9 +252,10 @@ sum-code
 t
 tabular-data
 tag
-tibble
+theme
 tidy-data
 tidyverse
+tied-ranks
 transparency
 treatment-code
 true-negative

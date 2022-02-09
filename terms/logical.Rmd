@@ -2,6 +2,8 @@
 
 <dfn>A [data type](d.html#data-type) representing `TRUE` or `FALSE` values.</dfn>
 
+Sometimes also called [boolean](b.html#boolean)
+
 ```{r}
 true_logical_values <- list(
   full = TRUE,

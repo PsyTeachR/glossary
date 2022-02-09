@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>21 T | Glossary</title>
-<meta name="author" content="psyTeachR Team">
+<title>21 T | My Document</title>
+<meta name="author" content="Me">
 <meta name="description" content="21.1 tabular data Data in a rectangular table format, where each row has an entry for each column. Tabluar data in R are usually in a data frame or tibble. year sex name n rank nation 1996 F...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="21 T | Glossary">
+<meta property="og:title" content="21 T | My Document">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/t.html">
 <meta property="og:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <meta property="og:description" content="21.1 tabular data Data in a rectangular table format, where each row has an entry for each column. Tabluar data in R are usually in a data frame or tibble. year sex name n rank nation 1996 F...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="21 T | Glossary">
+<meta name="twitter:title" content="21 T | My Document">
 <meta name="twitter:description" content="21.1 tabular data Data in a rectangular table format, where each row has an entry for each column. Tabluar data in R are usually in a data frame or tibble. year sex name n rank nation 1996 F...">
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,7 +38,8 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">Glossary</a>
+        <a href="index.html" title="It's Just a Demo">My Document</a>:
+        <small class="text-muted">It's Just a Demo</small>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -170,7 +171,7 @@
 <p>For example, a paragraph in HTML is marked by "p" tags like this:</p>
 <pre><code>&lt;p&gt;Paragraph text...&lt;/p&gt;</code></pre>
 <p>In <a href="s.html#shiny">shiny</a>, tags can be created with the <code>tags()</code> functions.</p>
-<div class="sourceCode" id="cb173"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb181"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">paragraph</span> <span class="op">&lt;-</span> <span class="va">tags</span><span class="op">$</span><span class="fu">p</span><span class="op">(</span><span class="st">"Paragraph text"</span><span class="op">)</span>
 
 <span class="va">unordered_list</span> <span class="op">&lt;-</span> <span class="va">tags</span><span class="op">$</span><span class="fu">ul</span><span class="op">(</span>
@@ -179,15 +180,30 @@
 <span class="op">)</span></code></pre></div>
 
 </div>
-<div id="tibble" class="section level2" number="21.3">
+<div id="theme" class="section level2" number="21.3">
 <h2>
-<span class="header-section-number">21.3</span> tibble<a class="anchor" aria-label="anchor" href="#tibble"><i class="fas fa-link"></i></a>
+<span class="header-section-number">21.3</span> theme<a class="anchor" aria-label="anchor" href="#theme"><i class="fas fa-link"></i></a>
 </h2>
-<p><dfn>A <a href="c.html#container">container</a> for <a href="t.html#tabular-data">tabular data</a> with some different properties to a <a href="d.html#data-frame">data frame</a></dfn></p>
-<p>Tibbles are almost exactly like the <a href="b.html#base-r">base R</a> <code>data.frame</code> container type, but has some special printing functions, does not coerce <a href="c.html#character">character</a> columns to <a href="f.html#factor">factors</a>, and does not typically use row names.</p>
-<div class="sourceCode" id="cb174"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># display the mtcars data frame</span>
-<span class="va">mtcars</span></code></pre></div>
+<p><dfn>A consistent style for a report or plots.</dfn></p>
+<p>Plots in ggplot can set the theme globally with code like this:</p>
+<div class="sourceCode" id="cb182"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># set the default theme to black-and-white</span>
+<span class="fu">theme_set</span><span class="op">(</span><span class="fu">theme_bw</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<p>You can set the theme for a html document in the <a href="y.html#yaml">YAML</a> header. View and download different <a href="https://bootswatch.com/4/" target="_blank">themes</a>.</p>
+<pre><code>
+&lt;!--chapter:end:terms/theme.Rmd--&gt;
+
+
+## tibble
+
+&lt;dfn&gt;A [container](c.html#container) for [tabular data](t.html#tabular-data) with some different properties to a [data frame](d.html#data-frame)&lt;/dfn&gt;
+
+Tibbles are almost exactly like the [base R](b.html#base-r) `data.frame` container type, but has some special printing functions, does not coerce [character](c.html#character) columns to [factors](f.html#factor), and does not typically use row names.
+
+
+```r
+# display the mtcars data frame
+mtcars</code></pre>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -656,7 +672,7 @@
 </tbody>
 </table></div>
 </div>
-<div class="sourceCode" id="cb175"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb184"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># convert the mtcars data frame to a tibble</span>
 <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tibble/man/as_tibble.html">as_tibble</a></span><span class="op">(</span><span class="va">mtcars</span>, rownames <span class="op">=</span> <span class="st">"name"</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
@@ -1163,53 +1179,73 @@
 <p>Compare with <a href="b.html#base-r">base R</a></p>
 
 </div>
-<div id="transparency" class="section level2" number="21.6">
+<div id="tied-ranks" class="section level2" number="21.6">
 <h2>
-<span class="header-section-number">21.6</span> transparency<a class="anchor" aria-label="anchor" href="#transparency"><i class="fas fa-link"></i></a>
+<span class="header-section-number">21.6</span> tied ranks<a class="anchor" aria-label="anchor" href="#tied-ranks"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>When two or more values/observations within a variable are identical and assume the same rank order value.</dfn></p>
+<p>This is the default for the <code><a href="https://rdrr.io/r/base/rank.html">rank()</a></code> function (<code>ties.method = "average"</code>). You can also set ties to go in the order they are in the dataset (first), in the opposite order (last), a random order (random), all ties have the maximum value (max) or the minimum value (min).</p>
+<div class="sourceCode" id="cb185"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">scores</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>
+  score <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">15</span>, <span class="fl">15</span><span class="op">)</span>
+<span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate.html">mutate</a></span><span class="op">(</span>
+    rank <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rank.html">rank</a></span><span class="op">(</span><span class="va">score</span><span class="op">)</span>,
+    first <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rank.html">rank</a></span><span class="op">(</span><span class="va">score</span>, ties.method <span class="op">=</span> <span class="st">"first"</span><span class="op">)</span>,
+    last <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rank.html">rank</a></span><span class="op">(</span><span class="va">score</span>, ties.method <span class="op">=</span> <span class="st">"last"</span><span class="op">)</span>,
+    random <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rank.html">rank</a></span><span class="op">(</span><span class="va">score</span>, ties.method <span class="op">=</span> <span class="st">"random"</span><span class="op">)</span>,
+    max <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rank.html">rank</a></span><span class="op">(</span><span class="va">score</span>, ties.method <span class="op">=</span> <span class="st">"max"</span><span class="op">)</span>,
+    min <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rank.html">rank</a></span><span class="op">(</span><span class="va">score</span>, ties.method <span class="op">=</span> <span class="st">"min"</span><span class="op">)</span>
+  <span class="op">)</span></code></pre></div>
+
+</div>
+<div id="transparency" class="section level2" number="21.7">
+<h2>
+<span class="header-section-number">21.7</span> transparency<a class="anchor" aria-label="anchor" href="#transparency"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The degree to which all the steps and decisions in a study have been documented and made available for verification.</dfn></p>
 
 </div>
-<div id="treatment-code" class="section level2" number="21.7">
+<div id="treatment-code" class="section level2" number="21.8">
 <h2>
-<span class="header-section-number">21.7</span> treatment code<a class="anchor" aria-label="anchor" href="#treatment-code"><i class="fas fa-link"></i></a>
+<span class="header-section-number">21.8</span> treatment code<a class="anchor" aria-label="anchor" href="#treatment-code"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="c.html#coding-scheme">coding scheme</a> for categorical variables that creates (n_levels -1) dichotomous variables where each level of the categorical variable is contrasted to a reference level.</dfn></p>
 <p>Also referred to as <strong>dummy-coding</strong>.</p>
 
 </div>
-<div id="true-negative" class="section level2" number="21.8">
+<div id="true-negative" class="section level2" number="21.9">
 <h2>
-<span class="header-section-number">21.8</span> true negative<a class="anchor" aria-label="anchor" href="#true-negative"><i class="fas fa-link"></i></a>
+<span class="header-section-number">21.9</span> true negative<a class="anchor" aria-label="anchor" href="#true-negative"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>When a test concludes there is no effect when there is really is no effect</dfn></p>
 
 </div>
-<div id="true-positive" class="section level2" number="21.9">
+<div id="true-positive" class="section level2" number="21.10">
 <h2>
-<span class="header-section-number">21.9</span> true positive<a class="anchor" aria-label="anchor" href="#true-positive"><i class="fas fa-link"></i></a>
+<span class="header-section-number">21.10</span> true positive<a class="anchor" aria-label="anchor" href="#true-positive"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>When a test concludes there is an effect when there is really is an effect</dfn></p>
 
 </div>
-<div id="two-tailed" class="section level2" number="21.10">
+<div id="two-tailed" class="section level2" number="21.11">
 <h2>
-<span class="header-section-number">21.10</span> two-tailed<a class="anchor" aria-label="anchor" href="#two-tailed"><i class="fas fa-link"></i></a>
+<span class="header-section-number">21.11</span> two-tailed<a class="anchor" aria-label="anchor" href="#two-tailed"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A statistical test for which the critical region consists of all values of the test statistic greater than a given value plus all values less than another given value.</dfn></p>
 <p>See <a href="p.html#p-value">p-value</a> for a comparison of <a href="o.html#one-tailed">one-tailed</a> and two-tailed tests.</p>
 
 </div>
-<div id="type-i-error" class="section level2" number="21.11">
+<div id="type-i-error" class="section level2" number="21.12">
 <h2>
-<span class="header-section-number">21.11</span> Type I Error<a class="anchor" aria-label="anchor" href="#type-i-error"><i class="fas fa-link"></i></a>
+<span class="header-section-number">21.12</span> Type I Error<a class="anchor" aria-label="anchor" href="#type-i-error"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="f.html#false-positive">false positive</a>; When a test concludes there is an effect when there is really is no effect</dfn></p>
 
 </div>
-<div id="type-ii-error" class="section level2" number="21.12">
+<div id="type-ii-error" class="section level2" number="21.13">
 <h2>
-<span class="header-section-number">21.12</span> Type II Error<a class="anchor" aria-label="anchor" href="#type-ii-error"><i class="fas fa-link"></i></a>
+<span class="header-section-number">21.13</span> Type II Error<a class="anchor" aria-label="anchor" href="#type-ii-error"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="f.html#false-negative">false negative</a>; When a test concludes there is no effect when there is really is an effect</dfn></p>
 
@@ -1406,16 +1442,17 @@ $( document ).ready(function() {
 <li><a class="nav-link" href="#t"><span class="header-section-number">21</span> T</a></li>
 <li><a class="nav-link" href="#tabular-data"><span class="header-section-number">21.1</span> tabular data</a></li>
 <li><a class="nav-link" href="#tag"><span class="header-section-number">21.2</span> tag</a></li>
-<li><a class="nav-link" href="#tibble"><span class="header-section-number">21.3</span> tibble</a></li>
+<li><a class="nav-link" href="#theme"><span class="header-section-number">21.3</span> theme</a></li>
 <li><a class="nav-link" href="#tidy-data"><span class="header-section-number">21.4</span> tidy data</a></li>
 <li><a class="nav-link" href="#tidyverse"><span class="header-section-number">21.5</span> tidyverse</a></li>
-<li><a class="nav-link" href="#transparency"><span class="header-section-number">21.6</span> transparency</a></li>
-<li><a class="nav-link" href="#treatment-code"><span class="header-section-number">21.7</span> treatment code</a></li>
-<li><a class="nav-link" href="#true-negative"><span class="header-section-number">21.8</span> true negative</a></li>
-<li><a class="nav-link" href="#true-positive"><span class="header-section-number">21.9</span> true positive</a></li>
-<li><a class="nav-link" href="#two-tailed"><span class="header-section-number">21.10</span> two-tailed</a></li>
-<li><a class="nav-link" href="#type-i-error"><span class="header-section-number">21.11</span> Type I Error</a></li>
-<li><a class="nav-link" href="#type-ii-error"><span class="header-section-number">21.12</span> Type II Error</a></li>
+<li><a class="nav-link" href="#tied-ranks"><span class="header-section-number">21.6</span> tied ranks</a></li>
+<li><a class="nav-link" href="#transparency"><span class="header-section-number">21.7</span> transparency</a></li>
+<li><a class="nav-link" href="#treatment-code"><span class="header-section-number">21.8</span> treatment code</a></li>
+<li><a class="nav-link" href="#true-negative"><span class="header-section-number">21.9</span> true negative</a></li>
+<li><a class="nav-link" href="#true-positive"><span class="header-section-number">21.10</span> true positive</a></li>
+<li><a class="nav-link" href="#two-tailed"><span class="header-section-number">21.11</span> two-tailed</a></li>
+<li><a class="nav-link" href="#type-i-error"><span class="header-section-number">21.12</span> Type I Error</a></li>
+<li><a class="nav-link" href="#type-ii-error"><span class="header-section-number">21.13</span> Type II Error</a></li>
 </ul>
 
       <div class="book-extra">
@@ -1433,7 +1470,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-05.</p>
+    <p>"<strong>My Document</strong>: It's Just a Demo" was written by Me. It was last built on 2022-02-09.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

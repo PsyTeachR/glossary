@@ -1,0 +1,6 @@
+## boolean
+
+<dfn>A [data type](d.html#data-type) representing `TRUE` or `FALSE` values.</dfn>
+
+Typically called [logical](l.html#logical) in R.
+

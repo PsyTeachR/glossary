@@ -15,3 +15,12 @@ The assignment operator can also be reversed
 
 b
 ```
+
+And even go in both direction at the same time!
+
+```{r dual-assignment}
+x <- 2 -> y
+
+x
+y
+```

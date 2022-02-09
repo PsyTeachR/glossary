@@ -6,6 +6,8 @@
 * [sum code](e.html#sum-code)
 * [treatment code](e.html#treatment-code) (dummy code)
 
-[Example of different coding schemes for the same data](https://debruine.github.io/posts/coding-schemes/){target="_blank"}
+[Example of different coding schemes for the same data](https://debruine.github.io/post/coding-schemes/){target="_blank"}
+
+[Contrast coding in detail](https://debruine.github.io/faux/articles/contrasts.html){target="_blank"}
 
 [Contrast coding in R](https://marissabarlaz.github.io/portfolio/contrastcoding/){target="_blank"} by Marissa Barlaz

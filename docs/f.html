@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>7 F | Glossary</title>
-<meta name="author" content="psyTeachR Team">
+<title>7 F | My Document</title>
+<meta name="author" content="Me">
 <meta name="description" content="7.1 factor A data type where a specific set of values are stored with labels; An explanatory variable manipulated by the experimenter  7.2 factor (data type) A data type where a specific set of...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="7 F | Glossary">
+<meta property="og:title" content="7 F | My Document">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/f.html">
 <meta property="og:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <meta property="og:description" content="7.1 factor A data type where a specific set of values are stored with labels; An explanatory variable manipulated by the experimenter  7.2 factor (data type) A data type where a specific set of...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="7 F | Glossary">
+<meta name="twitter:title" content="7 F | My Document">
 <meta name="twitter:description" content="7.1 factor A data type where a specific set of values are stored with labels; An explanatory variable manipulated by the experimenter  7.2 factor (data type) A data type where a specific set of...">
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,7 +38,8 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">Glossary</a>
+        <a href="index.html" title="It's Just a Demo">My Document</a>:
+        <small class="text-muted">It's Just a Demo</small>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -102,13 +103,13 @@
 </h2>
 <p><dfn>A data type where a specific set of values are stored with labels</dfn></p>
 <p>In tables, you can store strings as <a href="c.html#character">characters</a> or factors.</p>
-<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb84"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
   chr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span>,
   fctr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 <p>If you print a character <a href="v.html#vector">vector</a>, it will have quotes around each values, while a factor vector will show the <a href="l.html#level">Levels</a> after.</p>
-<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb85"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span><span class="op">$</span><span class="va">chr</span>
 <span class="co">#&gt; [1] "A" "B" "C"</span>
 
@@ -116,7 +117,7 @@
 <span class="co">#&gt; [1] A B C</span>
 <span class="co">#&gt; Levels: A B C</span></code></pre></div>
 <p>In a <a href="t.html#tibble">tibble</a>, these types will have "&lt;chr&gt;" or "&lt;fctr&gt;" under the column header.</p>
-<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb86"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
@@ -141,7 +142,7 @@
 </table></div>
 </div>
 <p>You can convert between characters and factors like this:</p>
-<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb87"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">fctr</span><span class="op">)</span>
 <span class="co">#&gt; [1] "A" "B" "C"</span>
 
@@ -212,7 +213,7 @@
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 X_i + e_i\]</span></p>
 <p>the parameters <span class="math inline">\(\beta_0\)</span> (the intercept) and <span class="math inline">\(\beta_1\)</span> (the slope) are assumed to be constant across all sampling units (e.g. subjects). These are contrasted with <a href="r.html#random%20effect">random effects</a>, which are effects that differ across the units.</p>
 <p>In a mixed effects model, you can get a table of just the fixed effects with the code below:</p>
-<div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb88"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lmerTest/man/lmer.html">lmer</a></span><span class="op">(</span>
   <span class="va">rating</span> <span class="op">~</span> <span class="va">rater_age</span> <span class="op">*</span> <span class="va">face_age</span> <span class="op">+</span> <span class="co"># fixed effects</span>
   <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">rater_id</span><span class="op">)</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">face_id</span><span class="op">)</span>, <span class="co"># random effects</span>
@@ -293,7 +294,7 @@
 Figure 7.1: Full Join
 </p>
 </div>
-<div class="sourceCode" id="cb81"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb89"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
@@ -377,7 +378,7 @@ Table Y
 </tr>
 </table></div>
 <p>If there is no matching data in the other table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb82"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb90"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># a columns come first</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">full_join</span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
@@ -427,7 +428,7 @@ Table Y
 </tbody>
 </table></div>
 <p>Order is not important for full joins, but does change the order of columns in the resulting table.</p>
-<div class="sourceCode" id="cb83"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb91"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># b columns come first</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">full_join</span><span class="op">(</span><span class="va">b</span>, <span class="va">a</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
@@ -711,7 +712,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-05.</p>
+    <p>"<strong>My Document</strong>: It's Just a Demo" was written by Me. It was last built on 2022-02-09.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

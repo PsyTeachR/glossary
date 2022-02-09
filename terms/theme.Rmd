@@ -1,0 +1,31 @@
+## theme
+
+<dfn>A consistent style for a report or plots.</dfn>
+
+Plots in ggplot can set the theme globally with code like this:
+
+```{r, eval = FALSE}
+# set the default theme to black-and-white
+theme_set(theme_bw())
+```
+
+
+You can set the theme for a html document in the [YAML](y.html#yaml) header. View and download different [themes](https://bootswatch.com/4/){target="_blank"}.
+
+---
+title: "My Document"
+subtitle: "It's Just a Demo"
+author: "Me"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  html_document:
+    theme: spacelab
+    highlight: tango
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 3
+    number_sections: false
+---
+```

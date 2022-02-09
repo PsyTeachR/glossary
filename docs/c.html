@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>4 C | Glossary</title>
-<meta name="author" content="psyTeachR Team">
+<title>4 C | My Document</title>
+<meta name="author" content="Me">
 <meta name="description" content="4.1 cache Storing information for later retrieval, usually to save time. In R Markdown documents, you can cache time-consuming code chunks, such as running a complex mixed effects model, by adding...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="4 C | Glossary">
+<meta property="og:title" content="4 C | My Document">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/c.html">
 <meta property="og:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <meta property="og:description" content="4.1 cache Storing information for later retrieval, usually to save time. In R Markdown documents, you can cache time-consuming code chunks, such as running a complex mixed effects model, by adding...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="4 C | Glossary">
+<meta name="twitter:title" content="4 C | My Document">
 <meta name="twitter:description" content="4.1 cache Storing information for later retrieval, usually to save time. In R Markdown documents, you can cache time-consuming code chunks, such as running a complex mixed effects model, by adding...">
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,7 +38,8 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">Glossary</a>
+        <a href="index.html" title="It's Just a Demo">My Document</a>:
+        <small class="text-muted">It's Just a Demo</small>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -120,7 +121,7 @@
 </h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing <a href="s.html#string">strings</a> of text.</dfn></p>
 <p>Examples of character data are:</p>
-<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="st">"I am a string of characters"</span>
 <span class="co">#&gt; [1] "I am a string of characters"</span>
 <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"The answer is "</span>, <span class="fl">6</span><span class="op">+</span><span class="fl">6</span><span class="op">)</span>
@@ -137,7 +138,7 @@
 <p>In an <code>Rmd</code> file, you can include a chunk by surrounding the code as in the example below:</p>
 <div class="verbatim">
 <p><code>```{r chunk-name}</code></p>
-<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mean_age</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">ages</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span></code></pre></div>
 <code>```</code>
 </div>
@@ -163,7 +164,8 @@
 <li>
 <a href="e.html#treatment-code">treatment code</a> (dummy code)</li>
 </ul>
-<p><a href="https://debruine.github.io/posts/coding-schemes/" target="_blank">Example of different coding schemes for the same data</a></p>
+<p><a href="https://debruine.github.io/post/coding-schemes/" target="_blank">Example of different coding schemes for the same data</a></p>
+<p><a href="https://debruine.github.io/faux/articles/contrasts.html" target="_blank">Contrast coding in detail</a></p>
 <p><a href="https://marissabarlaz.github.io/portfolio/contrastcoding/" target="_blank">Contrast coding in R</a> by Marissa Barlaz</p>
 
 </div>
@@ -173,7 +175,7 @@
 </h2>
 <p><dfn>Changing the data type of values in a vector to a single compatible type.</dfn></p>
 <p>If you try to combine values with different <a href="d.html#data-type">data types</a> in a <a href="v.html#vector">vector</a>, they get coerced to a common type. <a href="s.html#string">Strings</a> are most dominant and will coerce any other data type into a string. <a href="d.html#double">Doubles</a> are dominant over <a href="i.html#integer">integers</a> and <a href="n.html#numeric">numeric</a> values are dominant over <a href="l.html#logical">logical</a> values.</p>
-<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2L</span>, <span class="cn">T</span>, <span class="cn">F</span><span class="op">)</span>  <span class="co"># integers and logicals become integers</span>
 <span class="co">#&gt; [1] 2 1 0</span>
 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1.5</span>, <span class="cn">T</span>, <span class="cn">F</span><span class="op">)</span> <span class="co"># doubles and logicals become doubles</span>
@@ -189,7 +191,7 @@
 <span class="header-section-number">4.9</span> comment<a class="anchor" aria-label="anchor" href="#comment"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>You can annotate <code>.R</code> files or <a href="c.html#chunk">chunks</a> in <a href="r.html#r-markdown">R Markdown</a> files with comments by prefacing each line of the comment with one or more hash symbols (<code>#</code>).</dfn></p>
-<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb52"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># I'm demonstrating comments in this chunk</span>
 <span class="co"># This comment will be added to the document outline ----</span></code></pre></div>
 <p>Comments get added to the document outline if you put four or more dashes, equal signs, or hashes at the end. This is a great way to keep track of more complicated scripts.</p>
@@ -225,12 +227,12 @@
 </h2>
 <p><dfn>To combine strings or vectors.</dfn></p>
 <p>When referring to strings, concatenate means to add strings together using the function <code>paste</code> (adds a space between strings) or <code>paste0</code> (doesn't add anything between strings).</p>
-<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">subject_name</span> <span class="op">&lt;-</span> <span class="st">"Lisa"</span>
 <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"Hello,"</span>, <span class="va">subject_name</span><span class="op">)</span>
 <span class="co">#&gt; [1] "Hello, Lisa"</span></code></pre></div>
 <p>When referring to other types of variables, concatenate can mean to create a vector with those variables, usually using the <code>c</code> function. For example, you could concatenate the numbers 1, 3, 6, and 10 like this: <code>c(1, 3, 6, 10)</code>. You can concatenate two <a href="v.html#vector">vectors</a> as well:</p>
-<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">v1</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>
 <span class="va">v2</span> <span class="op">&lt;-</span> <span class="fl">11</span><span class="op">:</span><span class="fl">15</span>
 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">v1</span>, <span class="va">v2</span><span class="op">)</span>
@@ -238,7 +240,7 @@
 <div class="warning">
 <p>Remember, a <a href="v.html#vector">vector</a> can only have one <a href="d.html#data_type">data type</a>. So if you concatenate a <a href="s.html#string">string</a> vector and a <a href="n.html#numeric">numeric</a> vector, the numbers will get turned into their string versions. If you concatenate an <a href="i.html#integer">integer</a> and a <a href="d.html#double">double</a> vector, the integers will be converted to doubles.</p>
 </div>
-<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb55"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">strings</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"c"</span>, <span class="st">"e"</span><span class="op">)</span>
 <span class="va">integers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1L</span>, <span class="fl">3L</span>, <span class="fl">5L</span><span class="op">)</span>
 <span class="va">doubles</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1.1</span>, <span class="fl">3.3</span>, <span class="fl">5.5</span><span class="op">)</span>
@@ -279,7 +281,7 @@
 <span class="header-section-number">4.16</span> container<a class="anchor" aria-label="anchor" href="#container"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A data structure that aggregates data, such as a <a href="v.html#vector">vector</a>, <a href="l.html#list">list</a>, <a href="m.html#matrix">matrix</a>, or <a href="d.html#data-frame">data frame</a></dfn></p>
-<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb56"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># vector</span>
 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span><span class="op">)</span> 
 <span class="co">#&gt; [1] 1 2 3 4</span>
@@ -350,7 +352,7 @@
 </h2>
 <p><dfn><a href="p.html#parameter">Parameters</a> showing how a set of <a href="v.html#vector">vectors</a> are <a href="c.html#correlation">correlated</a>.</dfn></p>
 <p>This is set up as a <a href="m.html#matrix">matrix</a> with 1.0 along the diagonal, meaning that every variable is perfectly correlated with itself.</p>
-<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
   A <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>,
   B <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, <span class="co"># uncorrelated with A</span>
@@ -386,7 +388,7 @@ Figure 4.1: Different Correlations (n = 100)
 </h2>
 <p><dfn><a href="p.html#parameter">Parameters</a> showing how a set of <a href="v.html#vector">vectors</a> vary and are <a href="c.html#correlation">correlated</a>.</dfn></p>
 <p>The covariance <a href="m.html#matrix">matrix</a> is related to the <a href="c.html#correlation-matrix">correlation matrix</a>, but also incorporates information about the <a href="s.html#standard-deviation">standard deviations</a> of all the variables.</p>
-<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb58"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/rnorm_multi.html">rnorm_multi</a></span><span class="op">(</span>
   n <span class="op">=</span> <span class="fl">100</span>,
   mu <span class="op">=</span> <span class="fl">0</span>,
@@ -406,7 +408,7 @@ Figure 4.1: Different Correlations (n = 100)
 <span class="co">#&gt; B 1.0 4 3.0</span>
 <span class="co">#&gt; C 1.5 3 9.0</span></code></pre></div>
 <p>The matrix of the products of the standard deviations is called "sigma". If you multiply this by the correlation matrix, you get the covariance matrix.</p>
-<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb59"><pre class="downlit sourceCode r">
 <code class="sourceCode R">  <span class="co"># multiply SDs    A    B    C</span>
 <span class="va">sigma</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">*</span><span class="fl">1</span>, <span class="fl">1</span><span class="op">*</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">*</span><span class="fl">3</span>,  <span class="co"># A</span>
                   <span class="fl">2</span><span class="op">*</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">*</span><span class="fl">2</span>, <span class="fl">2</span><span class="op">*</span><span class="fl">3</span>,  <span class="co"># B</span>
@@ -437,7 +439,7 @@ Figure 4.1: Different Correlations (n = 100)
 <p>Remember that internal reliability is not the same as external reliability. A scale can have a very high Cronbach's alpha, meaning it measures <em>something</em> well, but that thing may not be what you meant to measure.</p>
 </div>
 <p>We can use the function <code><a href="https://rdrr.io/pkg/psych/man/alpha.html">psych::alpha()</a></code> to calculate Cronbach's alpha.</p>
-<div class="sourceCode" id="cb52"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb60"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># read in data from the 3 domains of disgust scale</span>
 <span class="va">disgust</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/readr/man/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"https://psyteachr.github.io/msc-data-skills/data/disgust.csv"</span><span class="op">)</span>
   
@@ -446,13 +448,13 @@ Figure 4.1: Different Correlations (n = 100)
   <span class="fu">select</span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu">psych</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/psych/man/alpha.html">alpha</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>You often just want to report the raw or standard alpha.</p>
-<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb61"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">pathogen_alpha</span><span class="op">$</span><span class="va">total</span><span class="op">$</span><span class="va">raw_alpha</span>
 <span class="co">#&gt; [1] 0.7379495</span>
 <span class="va">pathogen_alpha</span><span class="op">$</span><span class="va">total</span><span class="op">$</span><span class="va">std.alpha</span>
 <span class="co">#&gt; [1] 0.7441191</span></code></pre></div>
 <p>The <code>item.stats</code> section gives you some <a href="d.html#descriptive">descriptive</a> statistics about each item (see <code><a href="https://rdrr.io/pkg/psych/man/alpha.html">?psych::alpha</a></code> for more info).</p>
-<div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb62"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">pathogen_alpha</span><span class="op">$</span><span class="va">item.stats</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
@@ -541,7 +543,7 @@ Figure 4.1: Different Correlations (n = 100)
 </table></div>
 </div>
 <p>You can look at the <code>alpha.drop</code> section to see what the alpha would be if you dropped an item. If we add an item from the moral disgust scale, you can see that the alpha increases if you drop it.</p>
-<div class="sourceCode" id="cb55"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb63"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mixed_alpha</span> <span class="op">&lt;-</span> <span class="va">disgust</span> <span class="op">%&gt;%</span>
   <span class="fu">select</span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span>, <span class="va">moral1</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu">psych</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/psych/man/alpha.html">alpha</a></span><span class="op">(</span><span class="op">)</span>
@@ -861,7 +863,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-05.</p>
+    <p>"<strong>My Document</strong>: It's Just a Demo" was written by Me. It was last built on 2022-02-09.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

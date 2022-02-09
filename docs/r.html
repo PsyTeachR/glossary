@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>19 R | Glossary</title>
-<meta name="author" content="psyTeachR Team">
+<title>19 R | My Document</title>
+<meta name="author" content="Me">
 <meta name="description" content="19.1 R markdown The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code. An R markdown file...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="19 R | Glossary">
+<meta property="og:title" content="19 R | My Document">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/r.html">
 <meta property="og:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <meta property="og:description" content="19.1 R markdown The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code. An R markdown file...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="19 R | Glossary">
+<meta name="twitter:title" content="19 R | My Document">
 <meta name="twitter:description" content="19.1 R markdown The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code. An R markdown file...">
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,7 +38,8 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">Glossary</a>
+        <a href="index.html" title="It's Just a Demo">My Document</a>:
+        <small class="text-muted">It's Just a Demo</small>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -129,7 +130,7 @@ library(tidyverse)
 <p><strong>Example:</strong> If the grand mean response time in a population is 600 milliseconds, that number represents the typical value. The mean response time for an individual subject <span class="math inline">\(s\)</span> can be represented as an offset (<a href="d.html#deviation-score">deviation</a>) from that value. For example, if subject <span class="math inline">\(s\)</span> has a mean reaction time of 650 ms, that would imply a random effect for that subject of +50 ms.</p>
 <p>Unlike <a href="f.html#fixed%20effect">fixed effects</a>, we expect the underlying random effects to change from experiment to experiment as the sampling units (e.g., subjects) change.</p>
 <p>In a mixed effects model, you can get a table of just the random effects with the code below:</p>
-<div class="sourceCode" id="cb149"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb157"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lmerTest/man/lmer.html">lmer</a></span><span class="op">(</span>
   <span class="va">rating</span> <span class="op">~</span> <span class="va">rater_age</span> <span class="op">*</span> <span class="va">face_age</span> <span class="op">+</span> <span class="co"># fixed effects</span>
   <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">rater_id</span><span class="op">)</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">face_id</span><span class="op">)</span>, <span class="co"># random effects</span>
@@ -201,7 +202,7 @@ library(tidyverse)
 </h2>
 <p><dfn>The location of a file in relation to the working directory.</dfn></p>
 <p>For example, if your <a href="w.html#working-directory">working directory</a> is <code>/Users/me/study/</code> and you want to refer to a file at <code>/Users/me/study/data/faces.csv</code>, the relative path is <code>data/faces.csv</code>. Use <code>../</code> to move up one directory.</p>
-<div class="sourceCode" id="cb150"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb158"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># the working directory: /Users/me/study/</span>
 
 <span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span>
@@ -246,11 +247,11 @@ library(tidyverse)
 <p>For example, you may have a question about how to figure out how to select rows that contain the value "test" in a certain column, but it isn't working. It's clearer if you can provide a concrete example, but you don't want to have to type out the whole table you're using or all the code that got you to this point in your script.</p>
 <p>You can include a very small table with just the basics or a smaller version of your problem. Make comments at each step about what you expect and what you actually got.</p>
 <p>Which version is easier for you to figure out the solution?</p>
-<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb159"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># this doesn't work</span>
 <span class="va">no_test_data</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu">str_detect</span><span class="op">(</span><span class="va">type</span>, <span class="st">"test"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb160"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># with a minimal example table</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tribble.html">tribble</a></span><span class="op">(</span>
   <span class="op">~</span><span class="va">id</span>, <span class="op">~</span><span class="va">type</span>, <span class="op">~</span><span class="va">x</span>,
@@ -310,7 +311,7 @@ library(tidyverse)
 Figure 19.1: Right Join
 </p>
 </div>
-<div class="sourceCode" id="cb153"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb161"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
@@ -394,7 +395,7 @@ Table Y
 </tr>
 </table></div>
 <p>If there is no matching data in the left table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb154"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb162"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># a is the right table</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
@@ -426,7 +427,7 @@ Table Y
 </tbody>
 </table></div>
 <p>Order is important for right joins.</p>
-<div class="sourceCode" id="cb155"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb163"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># b is the right table</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">b</span>, <span class="va">a</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
@@ -691,7 +692,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-05.</p>
+    <p>"<strong>My Document</strong>: It's Just a Demo" was written by Me. It was last built on 2022-02-09.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

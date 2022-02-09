@@ -2,7 +2,7 @@
 
 <dfn>A library that makes it easier to write JavaScript.</dfn>
 
-jQuery allows you to reference [HTML elements](e.html#element-html) is the same way that [CSS](c.html#css) works.
+jQuery allows you to reference [HTML elements](e.html#element-html) in the same way that [CSS](c.html#css) works.
 
 For example, the following code hides any level-2 headers with the class "extra".
 

@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>5 D | Glossary</title>
-<meta name="author" content="psyTeachR Team">
+<title>5 D | My Document</title>
+<meta name="author" content="Me">
 <meta name="description" content='5.1 data frame A container data type for storing tabular data. data.frame(  id = 1:5,  name = c("Lisa", "Phil", "Helena", "Rachel", "Jack") ) id name 1 Lisa 2 Phil 3 Helena 4 Rachel 5 Jack    5.2...'>
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="5 D | Glossary">
+<meta property="og:title" content="5 D | My Document">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/d.html">
 <meta property="og:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <meta property="og:description" content='5.1 data frame A container data type for storing tabular data. data.frame(  id = 1:5,  name = c("Lisa", "Phil", "Helena", "Rachel", "Jack") ) id name 1 Lisa 2 Phil 3 Helena 4 Rachel 5 Jack    5.2...'>
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="5 D | Glossary">
+<meta name="twitter:title" content="5 D | My Document">
 <meta name="twitter:description" content='5.1 data frame A container data type for storing tabular data. data.frame(  id = 1:5,  name = c("Lisa", "Phil", "Helena", "Rachel", "Jack") ) id name 1 Lisa 2 Phil 3 Helena 4 Rachel 5 Jack    5.2...'>
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,7 +38,8 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">Glossary</a>
+        <a href="index.html" title="It's Just a Demo">My Document</a>:
+        <small class="text-muted">It's Just a Demo</small>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -95,7 +96,7 @@
 <span class="header-section-number">5.1</span> data frame<a class="anchor" aria-label="anchor" href="#data-frame"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> data type for storing <a href="t.html#tabular-data">tabular data</a>.</dfn></p>
-<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb65"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Lisa"</span>, <span class="st">"Phil"</span>, <span class="st">"Helena"</span>, <span class="st">"Rachel"</span>, <span class="st">"Jack"</span><span class="op">)</span>
@@ -150,19 +151,19 @@
 </ul>
 <p>Integers and doubles are both <a href="n.html#numeric">numeric</a>.</p>
 <p>If you want to know what data type a variable is, use the function <code>typeof</code>.</p>
-<div class="sourceCode" id="cb58"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span>
 <span class="co">#&gt; [1] "double"</span></code></pre></div>
-<div class="sourceCode" id="cb59"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb67"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="st">"10"</span><span class="op">)</span>
 <span class="co">#&gt; [1] "character"</span></code></pre></div>
-<div class="sourceCode" id="cb60"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10L</span><span class="op">)</span>
 <span class="co">#&gt; [1] "integer"</span></code></pre></div>
-<div class="sourceCode" id="cb61"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10</span> <span class="op">==</span> <span class="fl">10</span><span class="op">)</span>
 <span class="co">#&gt; [1] "logical"</span></code></pre></div>
-<div class="sourceCode" id="cb62"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10i</span><span class="op">)</span>
 <span class="co">#&gt; [1] "complex"</span></code></pre></div>
 
@@ -180,20 +181,20 @@
 </h2>
 <p><dfn>A value that a <a href="f.html#function">function</a> uses for an <a href="a.html#argument">argument</a> if it is skipped.</dfn></p>
 <p>For example, <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> has a default value of <code>FALSE</code> for the argument <code>na.rm</code> (don't ignore NA values).</p>
-<div class="sourceCode" id="cb63"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb71"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="cn">NA</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 <span class="co">#&gt; [1] NA</span></code></pre></div>
 <p>So if you leave that argument out, it's the same as setting it to <code>FALSE</code>.</p>
-<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 <span class="co">#&gt; [1] NA</span></code></pre></div>
 <p>And you have to explicitly set it if you want it to be different.</p>
-<div class="sourceCode" id="cb65"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="co">#&gt; [1] 2</span></code></pre></div>
 <p>If an argument does not have a default value, you can't omit it. In the example below, there is no default value for <code>n</code>.</p>
-<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; Error in rnorm(): argument "n" is missing, with no default</span></code></pre></div>
 
@@ -206,8 +207,8 @@
 <p>If you run 5 people and ask them their age, and you know the mean age of those 5 people is 20.1, then four of those people can have any age, but the 5th person must have a specific age to maintain the mean of 20.1. The mean age here is the known outcome and four people's age can vary freely, so the <em>degrees of freedom</em> is 4.</p>
 <p>You need to know the degrees of freedom (usually abbreviated <em>df</em>) to interpret test statistics like t-values and F-values.</p>
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-95"></span>
-<img src="_main_files/figure-html/unnamed-chunk-95-1.png" alt="How p-values vary depending on the degrees of freedom for specific t-values in a t-test." width="75%"><p class="caption">
+<span style="display:block;" id="fig:unnamed-chunk-113"></span>
+<img src="_main_files/figure-html/unnamed-chunk-113-1.png" alt="How p-values vary depending on the degrees of freedom for specific t-values in a t-test." width="75%"><p class="caption">
 Figure 5.1: How p-values vary depending on the degrees of freedom for specific t-values in a t-test.
 </p>
 </div>
@@ -234,7 +235,7 @@ Figure 5.1: How p-values vary depending on the degrees of freedom for specific t
 <span class="header-section-number">5.8</span> deviation score<a class="anchor" aria-label="anchor" href="#deviation-score"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A score minus the mean</dfn></p>
-<div class="sourceCode" id="cb67"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb75"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">tibble</span><span class="op">(</span>
   score <span class="op">=</span> <span class="fl">8</span><span class="op">:</span><span class="fl">12</span>
 <span class="op">)</span> <span class="op">%&gt;%</span>
@@ -285,7 +286,7 @@ Figure 5.1: How p-values vary depending on the degrees of freedom for specific t
 <p><dfn>A collection or "folder" of files on a computer.</dfn></p>
 <p>In a file <a href="p.html#path">path</a>, each directory is separated by forward slashes, e.g., "dir1/dir2/file.Rmd".</p>
 <p>Sometimes you need to check if a directory exists and/or make a new directory. For example, a script may save images in a directory called "images" that is in the same directory as the script (so you can use the <a href="r.html#relative-path">relative path</a>). Below is code for checking whether that directory exists and making it if it doesn't.</p>
-<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">path</span> <span class="op">&lt;-</span> <span class="st">"images"</span>
 
 <span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.exists</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
@@ -318,7 +319,7 @@ Figure 5.1: How p-values vary depending on the degrees of freedom for specific t
 <span class="header-section-number">5.12</span> double brackets<a class="anchor" aria-label="anchor" href="#double-brackets"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Two pairs of square brackets used to select a single item from a <a href="c.html#container">container</a> like a <a href="l.html#list">list</a>, <a href="d.html#data-frame">data frame</a>, or <a href="m.html#matrix">matrix</a> (e.g., data[[1]]).</dfn></p>
-<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,
   x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1.4</span>, <span class="fl">2.3</span>, <span class="fl">8.2</span><span class="op">)</span>
@@ -344,7 +345,7 @@ Figure 5.1: How p-values vary depending on the degrees of freedom for specific t
 </h2>
 <p><dfn>Something that can change in response to user actions</dfn></p>
 <p>For example, in a <a href="s.html#shiny">shiny</a> app, the following code creates dynamic and <a href="s.html#static">static</a> elements.</p>
-<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">dynamic</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/textOutput.html">textOutput</a></span><span class="op">(</span><span class="st">"This text can change"</span><span class="op">)</span>
 <span class="va">static</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">p</a></span><span class="op">(</span><span class="st">"This text cannot change"</span><span class="op">)</span></code></pre></div>
 
@@ -570,7 +571,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-05.</p>
+    <p>"<strong>My Document</strong>: It's Just a Demo" was written by Me. It was last built on 2022-02-09.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

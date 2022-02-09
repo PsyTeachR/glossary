@@ -1,0 +1,54 @@
+## boolean expression
+
+<dfn>An expression that evaluates to TRUE or FALSE.</dfn>
+
+Boolean expressions usually use a relational [operator](o.html#operator), such as `==` or `>` to compare two values.
+
+```{r}
+# == 	Equal to 	
+1 == 1
+1 == 2
+```
+
+
+```{r}
+# != 	Not equal to 	
+1 != 2
+1 != 1
+```
+
+
+```{r}
+# > 	Greater than
+2 > 1
+1 > 2
+```
+
+
+```{r}
+# >= 	Greater than or equal to
+2 >= 1
+1 >= 2
+```
+
+
+```{r}
+# < 	Less than
+1 < 2
+2 < 1
+```
+
+
+```{r}
+# <= 	Less than or equal to
+1 <= 2
+2 <= 1
+```
+
+
+```{r}
+# %in% 	Match operator 	
+"A" %in% LETTERS
+"1" %in% LETTERS
+```
+

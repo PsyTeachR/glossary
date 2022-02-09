@@ -2,8 +2,8 @@
 
 <dfn>[Joins](j.html#joins) that act like the `dplyr::mutate()` function in that they add new columns to one table based on values in another table.</dfn>
 
-* [left_join](l.html#left_join)
-* [right_join](r.html#right_join)
-* [inner_join](i.html#inner_join)
-* [full_join](f.html#full_join)
+* [left_join](l.html#left-join)
+* [right_join](r.html#right-join)
+* [inner_join](i.html#inner-join)
+* [full_join](f.html#full-join)
 

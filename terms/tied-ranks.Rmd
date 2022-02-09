@@ -1,0 +1,22 @@
+## tied ranks
+
+<dfn>When two or more values/observations within a variable are identical and assume the same rank order value.</dfn>
+
+This is the default for the `rank()` function (`ties.method = "average"`). You can also set ties to go in the order they are in the dataset (first), in the opposite order (last), a random order (random), all ties have the maximum value (max) or the minimum value (min).
+
+```{r}
+scores <- tibble(
+  score = c(5, 5, 5, 15, 15)
+) %>%
+  mutate(
+    rank = rank(score),
+    first = rank(score, ties.method = "first"),
+    last = rank(score, ties.method = "last"),
+    random = rank(score, ties.method = "random"),
+    max = rank(score, ties.method = "max"),
+    min = rank(score, ties.method = "min")
+  )
+```
+
+
+

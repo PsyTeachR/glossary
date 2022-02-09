@@ -6,7 +6,7 @@ Can also be a parameter in the [beta distribution](b.html#beta-distribution) or 
 
 ## alpha (stats) {#alpha-stats}
 
-If you are using null hypothesis significance testing ([NHST](n.html#NHST)), then you need to decide on a cutoff value called **alpha** for making a decision to reject the null hypothesis. We call p-values below the alpha cutoff [significant](s.html#significant). 
+If you are using null hypothesis significance testing ([NHST](n.html#nhst)), then you need to decide on a cutoff value called **alpha** for making a decision to reject the null hypothesis. We call p-values below the alpha cutoff [significant](s.html#significant). 
 
 In psychology, alpha is traditionally set at $\alpha$ = .05, but there are good arguments for [setting a different criterion in some circumstances](http://daniellakens.blogspot.com/2019/05/justifying-your-alpha-by-minimizing-or.html){target="_blank"}. 
 
