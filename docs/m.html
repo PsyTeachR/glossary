@@ -20,7 +20,8 @@
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -111,20 +112,20 @@
 <span class="header-section-number">14.3</span> match operator<a class="anchor" aria-label="anchor" href="#match-operator"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A binary operator (%in%) that returns a logical vector indicating if there is a match or not for its left operand.</dfn></p>
-<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb136"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># check if a single value is in a vector</span>
 <span class="st">"West Dakota"</span> <span class="op">%in%</span> <span class="va">state.name</span>
 <span class="co">#&gt; [1] FALSE</span></code></pre></div>
-<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb137"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># check if each item in the lefthand vector is in the righthand vector</span>
 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"1"</span><span class="op">)</span> <span class="op">%in%</span> <span class="va">LETTERS</span>
 <span class="co">#&gt; [1]  TRUE  TRUE FALSE</span></code></pre></div>
-<div class="sourceCode" id="cb125"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb138"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">pangram</span> <span class="op">&lt;-</span> <span class="st">"the quick brown fox jumps over the lazy dog"</span>
 <span class="va">pangram_chars</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/strsplit.html">strsplit</a></span><span class="op">(</span><span class="va">pangram</span>, <span class="st">""</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>
 <span class="va">letters</span> <span class="op">%in%</span> <span class="va">pangram_chars</span>
-<span class="co">#&gt;  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span>
-<span class="co">#&gt; [20] TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span></code></pre></div>
+<span class="co">#&gt;  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span>
+<span class="co">#&gt; [25] TRUE TRUE</span></code></pre></div>
 
 </div>
 <div id="matrix" class="section level2" number="14.4">
@@ -133,7 +134,7 @@
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> data type consisting of numbers arranged into a fixed number of rows and columns</dfn></p>
 <p>You can use the <code><a href="https://rdrr.io/r/base/matrix.html">matrix()</a></code> function to set up a <a href="v.htm#vector">vector</a> of numbers as a matrix with a specified number of rows of columns.</p>
-<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb139"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># a 4x4 matrix</span>
 <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">16</span>, nrow <span class="op">=</span> <span class="fl">4</span><span class="op">)</span>
 <span class="co">#&gt;      [,1] [,2] [,3] [,4]</span>
@@ -142,7 +143,7 @@
 <span class="co">#&gt; [3,]    3    7   11   15</span>
 <span class="co">#&gt; [4,]    4    8   12   16</span></code></pre></div>
 <p>Set <code>byrow = TRUE</code> to assign the vector across rows rather than down columns.</p>
-<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb140"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">16</span>, nrow <span class="op">=</span> <span class="fl">4</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="co">#&gt;      [,1] [,2] [,3] [,4]</span>
 <span class="co">#&gt; [1,]    1    2    3    4</span>
@@ -156,7 +157,7 @@
 <span class="header-section-number">14.5</span> mean<a class="anchor" aria-label="anchor" href="#mean"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="d.html#descriptive">descriptive</a> statistic that measures the average value of a set of numbers.</dfn></p>
-<div class="sourceCode" id="cb128"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb141"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">3</span>,<span class="fl">5</span>,<span class="fl">8</span>,<span class="fl">9</span>,<span class="fl">11</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 <span class="co">#&gt; [1] 7.2</span></code></pre></div>
@@ -167,7 +168,7 @@
 <span class="header-section-number">14.6</span> median<a class="anchor" aria-label="anchor" href="#median"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The middle number in a distribution where half of the values are larger and half are smaller.</dfn></p>
-<div class="sourceCode" id="cb129"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb142"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">6</span>, <span class="fl">9</span>, <span class="fl">9</span><span class="op">)</span>
 
 <span class="co"># calculate the median of the values</span>
@@ -208,43 +209,92 @@
 <p><dfn>Having multiple measurements on the same subjects but on <em>different</em> variables, with no more than one measurement per subject per variable.</dfn></p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:unnamed-chunk-230">Table 14.1: </span>Multivariate data with 3 scores on different tasks per person</caption>
-<thead><tr class="header">
-<th align="left">id</th>
-<th align="right">stroop</th>
-<th align="right">memory</th>
-<th align="right">iat</th>
+<span id="tab:unnamed-chunk-237">Table 14.1: </span>Multivariate data with 3 scores on different tasks per person
+</caption>
+<thead><tr>
+<th style="text-align:left;">
+id
+</th>
+<th style="text-align:right;">
+stroop
+</th>
+<th style="text-align:right;">
+memory
+</th>
+<th style="text-align:right;">
+iat
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">S1</td>
-<td align="right">14</td>
-<td align="right">78</td>
-<td align="right">7</td>
+<tr>
+<td style="text-align:left;">
+S1
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+78
+</td>
+<td style="text-align:right;">
+7
+</td>
 </tr>
-<tr class="even">
-<td align="left">S2</td>
-<td align="right">12</td>
-<td align="right">72</td>
-<td align="right">5</td>
+<tr>
+<td style="text-align:left;">
+S2
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:right;">
+5
+</td>
 </tr>
-<tr class="odd">
-<td align="left">S3</td>
-<td align="right">10</td>
-<td align="right">76</td>
-<td align="right">5</td>
+<tr>
+<td style="text-align:left;">
+S3
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+76
+</td>
+<td style="text-align:right;">
+5
+</td>
 </tr>
-<tr class="even">
-<td align="left">S4</td>
-<td align="right">10</td>
-<td align="right">76</td>
-<td align="right">4</td>
+<tr>
+<td style="text-align:left;">
+S4
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+76
+</td>
+<td style="text-align:right;">
+4
+</td>
 </tr>
-<tr class="odd">
-<td align="left">S5</td>
-<td align="right">13</td>
-<td align="right">81</td>
-<td align="right">6</td>
+<tr>
+<td style="text-align:left;">
+S5
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+81
+</td>
+<td style="text-align:right;">
+6
+</td>
 </tr>
 </tbody>
 </table></div>

@@ -6,21 +6,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>5 D | Glossary</title>
 <meta name="author" content="psyTeachR Team">
-<meta name="description" content='5.1 data frame A container data type for storing tabular data. data.frame(  id = 1:5,  name = c("Lisa", "Phil", "Helena", "Rachel", "Jack") ) id name 1 Lisa 2 Phil 3 Helena 4 Rachel 5 Jack    5.2...'>
+<meta name="description" content='5.1 data frame A container data type for storing tabular data. data.frame(  id = 1:5,  name = c("Lisa", "Phil", "Helena", "Rachel", "Jack") )  id  name  1  Lisa  2  Phil  3  Helena  4  Rachel  5 ...'>
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="5 D | Glossary">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/d.html">
 <meta property="og:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
-<meta property="og:description" content='5.1 data frame A container data type for storing tabular data. data.frame(  id = 1:5,  name = c("Lisa", "Phil", "Helena", "Rachel", "Jack") ) id name 1 Lisa 2 Phil 3 Helena 4 Rachel 5 Jack    5.2...'>
+<meta property="og:description" content='5.1 data frame A container data type for storing tabular data. data.frame(  id = 1:5,  name = c("Lisa", "Phil", "Helena", "Rachel", "Jack") )  id  name  1  Lisa  2  Phil  3  Helena  4  Rachel  5 ...'>
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5 D | Glossary">
-<meta name="twitter:description" content='5.1 data frame A container data type for storing tabular data. data.frame(  id = 1:5,  name = c("Lisa", "Phil", "Helena", "Rachel", "Jack") ) id name 1 Lisa 2 Phil 3 Helena 4 Rachel 5 Jack    5.2...'>
+<meta name="twitter:description" content='5.1 data frame A container data type for storing tabular data. data.frame(  id = 1:5,  name = c("Lisa", "Phil", "Helena", "Rachel", "Jack") )  id  name  1  Lisa  2  Phil  3  Helena  4  Rachel  5 ...'>
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -95,37 +96,61 @@
 <span class="header-section-number">5.1</span> data frame<a class="anchor" aria-label="anchor" href="#data-frame"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> data type for storing <a href="t.html#tabular-data">tabular data</a>.</dfn></p>
-<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb84"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Lisa"</span>, <span class="st">"Phil"</span>, <span class="st">"Helena"</span>, <span class="st">"Rachel"</span>, <span class="st">"Jack"</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">name</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+name
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">Lisa</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Lisa
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">Phil</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Phil
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">Helena</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Helena
+</td>
 </tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left">Rachel</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Rachel
+</td>
 </tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="left">Jack</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Jack
+</td>
 </tr>
 </tbody>
 </table></div>
@@ -150,19 +175,19 @@
 </ul>
 <p>Integers and doubles are both <a href="n.html#numeric">numeric</a>.</p>
 <p>If you want to know what data type a variable is, use the function <code>typeof</code>.</p>
-<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb85"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span>
 <span class="co">#&gt; [1] "double"</span></code></pre></div>
-<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb86"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="st">"10"</span><span class="op">)</span>
 <span class="co">#&gt; [1] "character"</span></code></pre></div>
-<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb87"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10L</span><span class="op">)</span>
 <span class="co">#&gt; [1] "integer"</span></code></pre></div>
-<div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb88"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10</span> <span class="op">==</span> <span class="fl">10</span><span class="op">)</span>
 <span class="co">#&gt; [1] "logical"</span></code></pre></div>
-<div class="sourceCode" id="cb81"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb89"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10i</span><span class="op">)</span>
 <span class="co">#&gt; [1] "complex"</span></code></pre></div>
 
@@ -180,20 +205,20 @@
 </h2>
 <p><dfn>A value that a <a href="f.html#function">function</a> uses for an <a href="a.html#argument">argument</a> if it is skipped.</dfn></p>
 <p>For example, <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> has a default value of <code>FALSE</code> for the argument <code>na.rm</code> (don't ignore NA values).</p>
-<div class="sourceCode" id="cb82"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb90"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="cn">NA</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 <span class="co">#&gt; [1] NA</span></code></pre></div>
 <p>So if you leave that argument out, it's the same as setting it to <code>FALSE</code>.</p>
-<div class="sourceCode" id="cb83"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb91"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 <span class="co">#&gt; [1] NA</span></code></pre></div>
 <p>And you have to explicitly set it if you want it to be different.</p>
-<div class="sourceCode" id="cb84"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb92"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="co">#&gt; [1] 2</span></code></pre></div>
 <p>If an argument does not have a default value, you can't omit it. In the example below, there is no default value for <code>n</code>.</p>
-<div class="sourceCode" id="cb85"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb93"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; Error in rnorm(): argument "n" is missing, with no default</span></code></pre></div>
 
@@ -234,7 +259,7 @@ Figure 5.1: How p-values vary depending on the degrees of freedom for specific t
 <span class="header-section-number">5.8</span> deviation score<a class="anchor" aria-label="anchor" href="#deviation-score"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A score minus the mean</dfn></p>
-<div class="sourceCode" id="cb86"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb94"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   score <span class="op">=</span> <span class="fl">8</span><span class="op">:</span><span class="fl">12</span>
 <span class="op">)</span> <span class="op">%&gt;%</span>
@@ -242,36 +267,72 @@ Figure 5.1: How p-values vary depending on the degrees of freedom for specific t
          deviation_score <span class="op">=</span> <span class="va">score</span> <span class="op">-</span> <span class="va">mean</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">score</th>
-<th align="right">mean</th>
-<th align="right">deviation_score</th>
+<thead><tr>
+<th style="text-align:right;">
+score
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+deviation_score
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">8</td>
-<td align="right">10</td>
-<td align="right">-2</td>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+-2
+</td>
 </tr>
-<tr class="even">
-<td align="right">9</td>
-<td align="right">10</td>
-<td align="right">-1</td>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+-1
+</td>
 </tr>
-<tr class="odd">
-<td align="right">10</td>
-<td align="right">10</td>
-<td align="right">0</td>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+0
+</td>
 </tr>
-<tr class="even">
-<td align="right">11</td>
-<td align="right">10</td>
-<td align="right">1</td>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
-<tr class="odd">
-<td align="right">12</td>
-<td align="right">10</td>
-<td align="right">2</td>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+2
+</td>
 </tr>
 </tbody>
 </table></div>
@@ -285,7 +346,7 @@ Figure 5.1: How p-values vary depending on the degrees of freedom for specific t
 <p><dfn>A collection or "folder" of files on a computer.</dfn></p>
 <p>In a file <a href="p.html#path">path</a>, each directory is separated by forward slashes, e.g., "dir1/dir2/file.Rmd".</p>
 <p>Sometimes you need to check if a directory exists and/or make a new directory. For example, a script may save images in a directory called "images" that is in the same directory as the script (so you can use the <a href="r.html#relative-path">relative path</a>). Below is code for checking whether that directory exists and making it if it doesn't.</p>
-<div class="sourceCode" id="cb87"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb95"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">path</span> <span class="op">&lt;-</span> <span class="st">"images"</span>
 
 <span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.exists</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
@@ -318,7 +379,7 @@ Figure 5.1: How p-values vary depending on the degrees of freedom for specific t
 <span class="header-section-number">5.12</span> double brackets<a class="anchor" aria-label="anchor" href="#double-brackets"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Two pairs of square brackets used to select a single item from a <a href="c.html#container">container</a> like a <a href="l.html#list">list</a>, <a href="d.html#data-frame">data frame</a>, or <a href="m.html#matrix">matrix</a> (e.g., data[[1]]).</dfn></p>
-<div class="sourceCode" id="cb88"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb96"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,
   x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1.4</span>, <span class="fl">2.3</span>, <span class="fl">8.2</span><span class="op">)</span>
@@ -344,7 +405,7 @@ Figure 5.1: How p-values vary depending on the degrees of freedom for specific t
 </h2>
 <p><dfn>Something that can change in response to user actions</dfn></p>
 <p>For example, in a <a href="s.html#shiny">shiny</a> app, the following code creates dynamic and <a href="s.html#static">static</a> elements.</p>
-<div class="sourceCode" id="cb89"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb97"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">dynamic</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/textOutput.html">textOutput</a></span><span class="op">(</span><span class="st">"This text can change"</span><span class="op">)</span>
 <span class="va">static</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">p</a></span><span class="op">(</span><span class="st">"This text cannot change"</span><span class="op">)</span></code></pre></div>
 

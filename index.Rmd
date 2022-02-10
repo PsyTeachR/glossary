@@ -34,17 +34,6 @@ The glossary defines common jargon you might encounter while learning R. This sp
 
 The glossary was developed to link to the [PsyTeachR books](https://psyteachr.github.io/){target="_blank"}, but you can link to it from any resource. Suggest additions or changes at the [github issues page](https://github.com/PsyTeachR/glossary/issues){target="_blank"}.
 
-
-## Offline Access
-
-You can download the glossary for offline access (although we update it frequently).
-
-``` r
-# install.packages("devtools")
-devtools::install_github("psyteachr/glossary")
-glossary::open_glossary() # open a local copy
-```
-
 ## Cite
 
 Contents are made available under a CC-BY-SA license. To cite:
@@ -58,6 +47,95 @@ Thanks to the [glossary hackathon](https://docs.google.com/document/d/1FOohcEbWT
 [Jessica Hrudey](https://github.com/PsyTeachR/glossary/issues/created_by/jhrudey), 
 [James Bartlett](https://github.com/PsyTeachR/glossary/issues/created_by/BartlettJE), and 
 [Phil McAleer](https://github.com/PsyTeachR/glossary/issues/created_by/philmcaleer).
+
+
+## Offline Access
+
+You can download the glossary for offline access (although we update it frequently).
+
+``` r
+# install.packages("devtools")
+devtools::install_github("psyteachr/glossary")
+glossary::open_glossary() # open a local copy
+```
+
+
+
+## Using the glossary
+
+```{r, include = FALSE}
+reset_glossary()
+```
+
+You can use the glossary in your own R Markdown resources. The main function is `glossary()`. It has several arguments for controlling the display.
+
+
+* term: The glossary term to link to, can contain spaces
+
+    ```{verbatim, lang="md"}
+    The first `r glossary("argument")` is `term`.
+    ```
+    
+    The first `r glossary("argument")` is `term`.
+
+* display: The display (if different than the term)
+
+    ```{verbatim, lang="md"}
+    The `r glossary("dependent variable", "DV")` here is score.
+    ```
+    
+    The `r glossary("dependent variable", "DV")` here is score.
+
+* def: The short definition to display on hover and in the glossary table; if NULL, this will be looked up from https://psyteachr.github.io/glossary/; if "", there will be no tooltip on hover
+
+    ```{verbatim, lang="md"}
+    Here, we see a `r glossary("thingamabob", def = "Nobody knows what this is")`.
+    ```
+    
+    Here, we see a `r glossary("thingamabob", def = "Nobody knows what this is")`.
+
+* link: whether to include a link to the glossary when clicked
+
+    ```{verbatim, lang="md"}
+    Numbers are `r glossary("numeric", link = FALSE)`.
+    ```
+    
+    Numbers are `r glossary("numeric", link = FALSE)`.
+
+* show_def: whether to show the definition in text (instead of on hover)
+
+    ```{verbatim, lang="md"}
+    The `show_def` argument is `r glossary("logical", show_def = TRUE)`. 
+    
+    YAML: `r glossary("YAML", show_def = TRUE, link = FALSE)`
+    ```
+    
+    The `show_def` argument is `r glossary("logical", show_def = TRUE)`
+    
+    YAML: `r glossary("YAML", show_def = TRUE, link = FALSE)`
+
+* add_to_table: whether to add to the table created by glossary_table()
+
+    ```{verbatim, lang="md"}
+    PsyTeachR books use the `r glossary("tidyverse", add_to_table = FALSE)`.
+    ```
+    
+    PsyTeachR books use the `r glossary("tidyverse", add_to_table = FALSE)`.
+
+You can display a table of all previously defined words (except those exempted with `add_to_table = FALSE`) with the function `glossary_table()`.
+
+```{r}
+glossary_table()
+```
+
+Reset the glossary table between sections with `reset_glossary()`.
+
+```{r}
+reset_glossary()
+```
+
+
+
 
 # Symbols
 

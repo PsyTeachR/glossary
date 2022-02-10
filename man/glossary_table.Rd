@@ -9,10 +9,10 @@ glossary_table(link = TRUE, as_kable = TRUE)
 \arguments{
 \item{link}{whether to include a link to https://psyteachr.github.io/glossary/}
 
-\item{as_kable}{if the output should be a kable table or a data table}
+\item{as_kable}{if the output should be a kableExtra table or a data frame}
 }
 \value{
-kable table or data table
+kable table or data frame
 }
 \description{
 Display glossary table

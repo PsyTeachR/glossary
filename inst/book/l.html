@@ -20,7 +20,8 @@
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -111,7 +112,7 @@
 Figure 13.1: Left Join
 </p>
 </div>
-<div class="sourceCode" id="cb114"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
@@ -134,60 +135,108 @@ Table Y
 <tr>
 <td>
 <table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">x</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+x
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">A</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+A
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">B</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+B
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">C</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+C
+</td>
 </tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left">D</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+D
+</td>
 </tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="left">E</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+E
+</td>
 </tr>
 </tbody>
 </table>
 </td>
 <td>
 <table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">y</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+y
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">2</td>
-<td align="left">V</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+V
+</td>
 </tr>
-<tr class="even">
-<td align="right">3</td>
-<td align="left">W</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+W
+</td>
 </tr>
-<tr class="odd">
-<td align="right">4</td>
-<td align="left">X</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+X
+</td>
 </tr>
-<tr class="even">
-<td align="right">5</td>
-<td align="left">Y</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Y
+</td>
 </tr>
-<tr class="odd">
-<td align="right">6</td>
-<td align="left">Z</td>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Z
+</td>
 </tr>
 </tbody>
 </table>
@@ -195,78 +244,150 @@ Table Y
 </tr>
 </table></div>
 <p>If there is no matching data in the right table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb115"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># X is the left table</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">Y</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">x</th>
-<th align="left">y</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+x
+</th>
+<th style="text-align:left;">
+y
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">A</td>
-<td align="left">NA</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+NA
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">B</td>
-<td align="left">V</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+V
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">C</td>
-<td align="left">W</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+W
+</td>
 </tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left">D</td>
-<td align="left">X</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+D
+</td>
+<td style="text-align:left;">
+X
+</td>
 </tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="left">E</td>
-<td align="left">Y</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+E
+</td>
+<td style="text-align:left;">
+Y
+</td>
 </tr>
 </tbody>
 </table></div>
 <p>Order is important for left joins.</p>
-<div class="sourceCode" id="cb116"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Y is the left table</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">Y</span>, <span class="va">X</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">y</th>
-<th align="left">x</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+y
+</th>
+<th style="text-align:left;">
+x
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">2</td>
-<td align="left">V</td>
-<td align="left">B</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+V
+</td>
+<td style="text-align:left;">
+B
+</td>
 </tr>
-<tr class="even">
-<td align="right">3</td>
-<td align="left">W</td>
-<td align="left">C</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+W
+</td>
+<td style="text-align:left;">
+C
+</td>
 </tr>
-<tr class="odd">
-<td align="right">4</td>
-<td align="left">X</td>
-<td align="left">D</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+X
+</td>
+<td style="text-align:left;">
+D
+</td>
 </tr>
-<tr class="even">
-<td align="right">5</td>
-<td align="left">Y</td>
-<td align="left">E</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+E
+</td>
 </tr>
-<tr class="odd">
-<td align="right">6</td>
-<td align="left">Z</td>
-<td align="left">NA</td>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Z
+</td>
+<td style="text-align:left;">
+NA
+</td>
 </tr>
 </tbody>
 </table></div>
@@ -279,7 +400,7 @@ Table Y
 </h2>
 <p><dfn>The set of valid values for a <a href="f.html#factor">factor</a></dfn></p>
 <p>Setting the levels for a <a href="f.html#factor">factor</a> can be helpful to make sure they display and plot in the intended order.</p>
-<div class="sourceCode" id="cb117"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb125"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># levels in the right order</span>
 <span class="va">day_levels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Mon"</span>, <span class="st">"Tue"</span>, <span class="st">"Wed"</span>, <span class="st">"Thu"</span>, <span class="st">"Fri"</span>, <span class="st">"Sat"</span>, <span class="st">"Sun"</span><span class="op">)</span>
 
@@ -289,7 +410,7 @@ Table Y
 <span class="co"># make into factors with and without levels</span>
 <span class="va">without_levels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">days</span><span class="op">)</span>
 <span class="va">with_levels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">days</span>, levels <span class="op">=</span> <span class="va">day_levels</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb118"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu">geom_bar</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">without_levels</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:levels-without"></span>
@@ -297,7 +418,7 @@ Table Y
 Figure 13.2: Without setting levels, categories display in alphabetical order.
 </p>
 </div>
-<div class="sourceCode" id="cb119"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu">geom_bar</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">with_levels</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:levels-with"></span>
@@ -307,9 +428,51 @@ Figure 13.3: With setting levels, categories display in the level order
 </div>
 
 </div>
-<div id="likert" class="section level2" number="13.4">
+<div id="library" class="section level2" number="13.4">
 <h2>
-<span class="header-section-number">13.4</span> Likert<a class="anchor" aria-label="anchor" href="#likert"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.4</span> library<a class="anchor" aria-label="anchor" href="#library"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>The <a href="l.html#library-function">function used to load packages</a> or the <a href="l.html#library-directory">directory where packages are stored</a>.</dfn></p>
+</div>
+<div id="library-function" class="section level2" number="13.5">
+<h2>
+<span class="header-section-number">13.5</span> library (function)<a class="anchor" aria-label="anchor" href="#library-function"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>The function used to load packages.</dfn></p>
+<p>You can use the <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> function to load <a href="p.html#package">packages</a>. This makes the functions in the package available to use without prefixing them with the package name.</p>
+<p>If you try to use a non-prefixed function without loading its package, you will get an error like this:</p>
+<div class="sourceCode" id="cb128"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"My name is {name}"</span>, name <span class="op">=</span> <span class="st">"Lisa"</span><span class="op">)</span>
+<span class="co">#&gt; Error in glue("My name is {name}", name = "Lisa"): could not find function "glue"</span></code></pre></div>
+<p>You can use this function with its package prefix (helpfully, the <code><a href="https://glue.tidyverse.org/reference/glue.html">glue()</a></code> function comes from the glue package).</p>
+<div class="sourceCode" id="cb129"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"My name is {name}"</span>, name <span class="op">=</span> <span class="st">"Lisa"</span><span class="op">)</span>
+<span class="co">#&gt; My name is Lisa</span></code></pre></div>
+<p>Or you can load the package with <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> and use it without the prefix.</p>
+<div class="sourceCode" id="cb130"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/tidyverse/glue">glue</a></span><span class="op">)</span>
+
+<span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"My name is {name}"</span>, name <span class="op">=</span> <span class="st">"Lisa"</span><span class="op">)</span>
+<span class="co">#&gt; My name is Lisa</span></code></pre></div>
+</div>
+<div id="library-directory" class="section level2" number="13.6">
+<h2>
+<span class="header-section-number">13.6</span> library (directory)<a class="anchor" aria-label="anchor" href="#library-directory"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>The <a href="d.html#directory">directory</a> where <a href="p.html#package">packages</a> are stored.</dfn></p>
+<p>Find out the location(s) where your packages are stored with the following code:</p>
+<div class="sourceCode" id="cb131"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/libPaths.html">.libPaths</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt; [1] "/Library/Frameworks/R.framework/Versions/4.1/Resources/library"</span></code></pre></div>
+<p>If you have problems installing packages, you may need to change your library location to a directory that you have permission to write to. You can do this by setting the library path.</p>
+<div class="sourceCode" id="cb132"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># use a path relevant to your computer</span>
+<span class="fu"><a href="https://rdrr.io/r/base/libPaths.html">.libPaths</a></span><span class="op">(</span><span class="st">"/Users/myaccount/R/Library"</span><span class="op">)</span></code></pre></div>
+
+</div>
+<div id="likert" class="section level2" number="13.7">
+<h2>
+<span class="header-section-number">13.7</span> Likert<a class="anchor" aria-label="anchor" href="#likert"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A rating scale with a small number of discrete points in order</dfn></p>
 <p>An example of a Likert scale is the following:</p>
@@ -352,9 +515,9 @@ Figure 13.3: With setting levels, categories display in the level order
 <p>The points on Likert scales are <a href="o.html#ordinal">ordinal</a>, but not necessarily <a href="c.html#continuous">continuous</a>. That is, you can assume 3 is higher than 2, but the difference between 2 and 3 isn't always the same as the difference between 1 and 2. Therefore, think carefully before averaging Likert values, since the average of 2 and 4 is not necessarily equal to 3.</p>
 
 </div>
-<div id="linear-mixed-effects-model" class="section level2" number="13.5">
+<div id="linear-mixed-effects-model" class="section level2" number="13.8">
 <h2>
-<span class="header-section-number">13.5</span> Linear mixed-effects model<a class="anchor" aria-label="anchor" href="#linear-mixed-effects-model"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.8</span> Linear mixed-effects model<a class="anchor" aria-label="anchor" href="#linear-mixed-effects-model"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A type of regression model that involves estimating both <a href="f.html#fixed-effect">fixed effects</a> and <a href="r.html#random-effect">random effects</a>.</dfn></p>
 <p>Most conventional regression models only estimate parameters associated with fixed effects and residual error. Mixed-effects models additionally estimate random effects parameters that capture variability associated with sampling units. In psychology, these sampling units are usually human participants or stimulus items.</p>
@@ -363,13 +526,13 @@ Figure 13.3: With setting levels, categories display in the level order
 <p>The function <code>lmer()</code> from the R package <strong><code>lme4</code></strong> is often used to estimate mixed-effects models. The <strong><code>brms</code></strong> package in R allows Bayesian estimation of mixed-effects models.</p>
 
 </div>
-<div id="list" class="section level2" number="13.6">
+<div id="list" class="section level2" number="13.9">
 <h2>
-<span class="header-section-number">13.6</span> list<a class="anchor" aria-label="anchor" href="#list"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.9</span> list<a class="anchor" aria-label="anchor" href="#list"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> data type that allows items with different data types to be grouped together.</dfn></p>
 <p>Each item in a list can be any type of R <a href="o.html#object">object</a>, but is usually a <a href="v.html#vector">vector</a> or another list.</p>
-<div class="sourceCode" id="cb120"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb133"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
   integers <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>,
   strings <span class="op">=</span> <span class="va">LETTERS</span>,
@@ -380,8 +543,7 @@ Figure 13.3: With setting levels, categories display in the level order
 <span class="co">#&gt;  [1]  1  2  3  4  5  6  7  8  9 10</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $strings</span>
-<span class="co">#&gt;  [1] "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W"</span>
-<span class="co">#&gt; [24] "X" "Y" "Z"</span>
+<span class="co">#&gt;  [1] "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z"</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $another_list</span>
 <span class="co">#&gt; $another_list[[1]]</span>
@@ -397,25 +559,25 @@ Figure 13.3: With setting levels, categories display in the level order
 <span class="co">#&gt; $object</span>
 <span class="co">#&gt; function (n, mean = 0, sd = 1) </span>
 <span class="co">#&gt; .Call(C_rnorm, n, mean, sd)</span>
-<span class="co">#&gt; &lt;bytecode: 0x7f80d00f3628&gt;</span>
+<span class="co">#&gt; &lt;bytecode: 0x7f825d574d98&gt;</span>
 <span class="co">#&gt; &lt;environment: namespace:stats&gt;</span></code></pre></div>
 
 </div>
-<div id="literal" class="section level2" number="13.7">
+<div id="literal" class="section level2" number="13.10">
 <h2>
-<span class="header-section-number">13.7</span> literal<a class="anchor" aria-label="anchor" href="#literal"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.10</span> literal<a class="anchor" aria-label="anchor" href="#literal"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The actual character being typed, not the special meaning it has to code.</dfn></p>
 <p>R and markdown have some characters that are used for code or formatting, making them difficult to use <em>literally</em> in the text. You can <a href="e.html#escape">escape</a> characters to use the literal version.</p>
 
 </div>
-<div id="logical" class="section level2" number="13.8">
+<div id="logical" class="section level2" number="13.11">
 <h2>
-<span class="header-section-number">13.8</span> logical<a class="anchor" aria-label="anchor" href="#logical"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.11</span> logical<a class="anchor" aria-label="anchor" href="#logical"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing <code>TRUE</code> or <code>FALSE</code> values.</dfn></p>
 <p>Sometimes also called <a href="b.html#boolean">boolean</a></p>
-<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb134"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">true_logical_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
   full <span class="op">=</span> <span class="cn">TRUE</span>,
   abbreviated <span class="op">=</span> <span class="cn">T</span>,
@@ -428,7 +590,7 @@ Figure 13.3: With setting levels, categories display in the level order
 <span class="co">#&gt;  $ abbreviated: logi TRUE</span>
 <span class="co">#&gt;  $ integer    : logi TRUE</span>
 <span class="co">#&gt;  $ equation   : logi TRUE</span></code></pre></div>
-<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb135"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">false_logical_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
   full <span class="op">=</span> <span class="cn">FALSE</span>,
   abbreviated <span class="op">=</span> <span class="cn">F</span>,
@@ -444,49 +606,92 @@ Figure 13.3: With setting levels, categories display in the level order
 <span class="co">#&gt;  $ equation   : logi FALSE</span></code></pre></div>
 
 </div>
-<div id="long" class="section level2" number="13.9">
+<div id="long" class="section level2" number="13.12">
 <h2>
-<span class="header-section-number">13.9</span> long<a class="anchor" aria-label="anchor" href="#long"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.12</span> long<a class="anchor" aria-label="anchor" href="#long"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Data where each observation is on a separate row</dfn></p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:long-data">Table 13.1: </span>Long data</caption>
-<thead><tr class="header">
-<th align="left">id</th>
-<th align="left">item</th>
-<th align="right">value</th>
+<span id="tab:long-data">Table 13.1: </span>Long data
+</caption>
+<thead><tr>
+<th style="text-align:left;">
+id
+</th>
+<th style="text-align:left;">
+item
+</th>
+<th style="text-align:right;">
+value
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">A</td>
-<td align="left">Q1</td>
-<td align="right">1</td>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+Q1
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
-<tr class="even">
-<td align="left">B</td>
-<td align="left">Q1</td>
-<td align="right">4</td>
+<tr>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+Q1
+</td>
+<td style="text-align:right;">
+4
+</td>
 </tr>
-<tr class="odd">
-<td align="left">A</td>
-<td align="left">Q2</td>
-<td align="right">2</td>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+Q2
+</td>
+<td style="text-align:right;">
+2
+</td>
 </tr>
-<tr class="even">
-<td align="left">B</td>
-<td align="left">Q2</td>
-<td align="right">5</td>
+<tr>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+Q2
+</td>
+<td style="text-align:right;">
+5
+</td>
 </tr>
-<tr class="odd">
-<td align="left">A</td>
-<td align="left">Q3</td>
-<td align="right">3</td>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+Q3
+</td>
+<td style="text-align:right;">
+3
+</td>
 </tr>
-<tr class="even">
-<td align="left">B</td>
-<td align="left">Q3</td>
-<td align="right">6</td>
+<tr>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+Q3
+</td>
+<td style="text-align:right;">
+6
+</td>
 </tr>
 </tbody>
 </table></div>
@@ -686,12 +891,15 @@ $( document ).ready(function() {
 <li><a class="nav-link" href="#latex"><span class="header-section-number">13.1</span> LaTeX</a></li>
 <li><a class="nav-link" href="#left_join"><span class="header-section-number">13.2</span> left_join</a></li>
 <li><a class="nav-link" href="#level"><span class="header-section-number">13.3</span> level</a></li>
-<li><a class="nav-link" href="#likert"><span class="header-section-number">13.4</span> Likert</a></li>
-<li><a class="nav-link" href="#linear-mixed-effects-model"><span class="header-section-number">13.5</span> Linear mixed-effects model</a></li>
-<li><a class="nav-link" href="#list"><span class="header-section-number">13.6</span> list</a></li>
-<li><a class="nav-link" href="#literal"><span class="header-section-number">13.7</span> literal</a></li>
-<li><a class="nav-link" href="#logical"><span class="header-section-number">13.8</span> logical</a></li>
-<li><a class="nav-link" href="#long"><span class="header-section-number">13.9</span> long</a></li>
+<li><a class="nav-link" href="#library"><span class="header-section-number">13.4</span> library</a></li>
+<li><a class="nav-link" href="#library-function"><span class="header-section-number">13.5</span> library (function)</a></li>
+<li><a class="nav-link" href="#library-directory"><span class="header-section-number">13.6</span> library (directory)</a></li>
+<li><a class="nav-link" href="#likert"><span class="header-section-number">13.7</span> Likert</a></li>
+<li><a class="nav-link" href="#linear-mixed-effects-model"><span class="header-section-number">13.8</span> Linear mixed-effects model</a></li>
+<li><a class="nav-link" href="#list"><span class="header-section-number">13.9</span> list</a></li>
+<li><a class="nav-link" href="#literal"><span class="header-section-number">13.10</span> literal</a></li>
+<li><a class="nav-link" href="#logical"><span class="header-section-number">13.11</span> logical</a></li>
+<li><a class="nav-link" href="#long"><span class="header-section-number">13.12</span> long</a></li>
 </ul>
 
       <div class="book-extra">

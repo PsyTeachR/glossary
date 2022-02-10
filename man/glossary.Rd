@@ -4,7 +4,14 @@
 \alias{glossary}
 \title{Display glossary entry}
 \usage{
-glossary(term, display = NULL, def = NULL, link = TRUE, add_to_table = TRUE)
+glossary(
+  term,
+  display = term,
+  def = NULL,
+  link = TRUE,
+  add_to_table = TRUE,
+  show_def = FALSE
+)
 }
 \arguments{
 \item{term}{The glossary term to link to, can contain spaces}
@@ -16,6 +23,8 @@ glossary(term, display = NULL, def = NULL, link = TRUE, add_to_table = TRUE)
 \item{link}{whether to include a link to https://psyteachr.github.io/glossary/}
 
 \item{add_to_table}{whether to add to the table created by glossary_table()}
+
+\item{show_def}{whether to show the definition or just the term}
 }
 \value{
 string with the link and hover text
@@ -27,5 +36,6 @@ Display glossary entry
 glossary("alpha")
 glossary("argument", "Arguments")
 glossary("PSYCH1001", shortdef = "Your class", link = FALSE)
-
+glossary("character", show_def = TRUE)
+glossary("numeric", show_def = TRUE, link = FALSE)
 }

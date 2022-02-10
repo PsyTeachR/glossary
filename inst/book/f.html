@@ -20,7 +20,8 @@
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -102,13 +103,13 @@
 </h2>
 <p><dfn>A data type where a specific set of values are stored with labels</dfn></p>
 <p>In tables, you can store strings as <a href="c.html#character">characters</a> or factors.</p>
-<div class="sourceCode" id="cb95"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb103"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   chr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span>,
   fctr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 <p>If you print a character <a href="v.html#vector">vector</a>, it will have quotes around each values, while a factor vector will show the <a href="l.html#level">Levels</a> after.</p>
-<div class="sourceCode" id="cb96"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb104"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span><span class="op">$</span><span class="va">chr</span>
 <span class="co">#&gt; [1] "A" "B" "C"</span>
 
@@ -116,32 +117,48 @@
 <span class="co">#&gt; [1] A B C</span>
 <span class="co">#&gt; Levels: A B C</span></code></pre></div>
 <p>In a <a href="t.html#tibble">tibble</a>, these types will have "&lt;chr&gt;" or "&lt;fctr&gt;" under the column header.</p>
-<div class="sourceCode" id="cb97"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb105"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="left">chr</th>
-<th align="left">fctr</th>
+<thead><tr>
+<th style="text-align:left;">
+chr
+</th>
+<th style="text-align:left;">
+fctr
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">A</td>
-<td align="left">A</td>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+A
+</td>
 </tr>
-<tr class="even">
-<td align="left">B</td>
-<td align="left">B</td>
+<tr>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+B
+</td>
 </tr>
-<tr class="odd">
-<td align="left">C</td>
-<td align="left">C</td>
+<tr>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+C
+</td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <p>You can convert between characters and factors like this:</p>
-<div class="sourceCode" id="cb98"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb106"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">fctr</span><span class="op">)</span>
 <span class="co">#&gt; [1] "A" "B" "C"</span>
 
@@ -212,7 +229,7 @@
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 X_i + e_i\]</span></p>
 <p>the parameters <span class="math inline">\(\beta_0\)</span> (the intercept) and <span class="math inline">\(\beta_1\)</span> (the slope) are assumed to be constant across all sampling units (e.g. subjects). These are contrasted with <a href="r.html#random%20effect">random effects</a>, which are effects that differ across the units.</p>
 <p>In a mixed effects model, you can get a table of just the fixed effects with the code below:</p>
-<div class="sourceCode" id="cb99"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb107"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lmerTest/man/lmer.html">lmer</a></span><span class="op">(</span>
   <span class="va">rating</span> <span class="op">~</span> <span class="va">rater_age</span> <span class="op">*</span> <span class="va">face_age</span> <span class="op">+</span> <span class="co"># fixed effects</span>
   <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">rater_id</span><span class="op">)</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">face_id</span><span class="op">)</span>, <span class="co"># random effects</span>
@@ -222,51 +239,121 @@
 <span class="fu">broom.mixed</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">model</span>, effects <span class="op">=</span> <span class="st">"fixed"</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="left">effect</th>
-<th align="left">term</th>
-<th align="right">estimate</th>
-<th align="right">std.error</th>
-<th align="right">statistic</th>
-<th align="right">df</th>
-<th align="right">p.value</th>
+<thead><tr>
+<th style="text-align:left;">
+effect
+</th>
+<th style="text-align:left;">
+term
+</th>
+<th style="text-align:right;">
+estimate
+</th>
+<th style="text-align:right;">
+std.error
+</th>
+<th style="text-align:right;">
+statistic
+</th>
+<th style="text-align:right;">
+df
+</th>
+<th style="text-align:right;">
+p.value
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">fixed</td>
-<td align="left">(Intercept)</td>
-<td align="right">3.8109924</td>
-<td align="right">0.8815183</td>
-<td align="right">4.3232142</td>
-<td align="right">92.64738</td>
-<td align="right">0.0000387</td>
+<tr>
+<td style="text-align:left;">
+fixed
+</td>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+3.8109924
+</td>
+<td style="text-align:right;">
+0.8815183
+</td>
+<td style="text-align:right;">
+4.3232142
+</td>
+<td style="text-align:right;">
+92.64738
+</td>
+<td style="text-align:right;">
+0.0000387
+</td>
 </tr>
-<tr class="even">
-<td align="left">fixed</td>
-<td align="left">rater_age</td>
-<td align="right">0.0041496</td>
-<td align="right">0.0251227</td>
-<td align="right">0.1651744</td>
-<td align="right">71.11697</td>
-<td align="right">0.8692753</td>
+<tr>
+<td style="text-align:left;">
+fixed
+</td>
+<td style="text-align:left;">
+rater_age
+</td>
+<td style="text-align:right;">
+0.0041496
+</td>
+<td style="text-align:right;">
+0.0251227
+</td>
+<td style="text-align:right;">
+0.1651744
+</td>
+<td style="text-align:right;">
+71.11697
+</td>
+<td style="text-align:right;">
+0.8692753
+</td>
 </tr>
-<tr class="odd">
-<td align="left">fixed</td>
-<td align="left">face_age</td>
-<td align="right">-0.0353353</td>
-<td align="right">0.0252691</td>
-<td align="right">-1.3983587</td>
-<td align="right">92.18523</td>
-<td align="right">0.1653604</td>
+<tr>
+<td style="text-align:left;">
+fixed
+</td>
+<td style="text-align:left;">
+face_age
+</td>
+<td style="text-align:right;">
+-0.0353353
+</td>
+<td style="text-align:right;">
+0.0252691
+</td>
+<td style="text-align:right;">
+-1.3983587
+</td>
+<td style="text-align:right;">
+92.18523
+</td>
+<td style="text-align:right;">
+0.1653604
+</td>
 </tr>
-<tr class="even">
-<td align="left">fixed</td>
-<td align="left">rater_age:face_age</td>
-<td align="right">-0.0003824</td>
-<td align="right">0.0006174</td>
-<td align="right">-0.6194014</td>
-<td align="right">712.00001</td>
-<td align="right">0.5358501</td>
+<tr>
+<td style="text-align:left;">
+fixed
+</td>
+<td style="text-align:left;">
+rater_age:face_age
+</td>
+<td style="text-align:right;">
+-0.0003824
+</td>
+<td style="text-align:right;">
+0.0006174
+</td>
+<td style="text-align:right;">
+-0.6194014
+</td>
+<td style="text-align:right;">
+712.00001
+</td>
+<td style="text-align:right;">
+0.5358501
+</td>
 </tr>
 </tbody>
 </table></div>
@@ -293,7 +380,7 @@
 Figure 7.1: Full Join
 </p>
 </div>
-<div class="sourceCode" id="cb100"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
@@ -316,60 +403,108 @@ Table Y
 <tr>
 <td>
 <table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">x</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+x
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">A</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+A
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">B</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+B
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">C</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+C
+</td>
 </tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left">D</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+D
+</td>
 </tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="left">E</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+E
+</td>
 </tr>
 </tbody>
 </table>
 </td>
 <td>
 <table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">y</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+y
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">2</td>
-<td align="left">V</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+V
+</td>
 </tr>
-<tr class="even">
-<td align="right">3</td>
-<td align="left">W</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+W
+</td>
 </tr>
-<tr class="odd">
-<td align="right">4</td>
-<td align="left">X</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+X
+</td>
 </tr>
-<tr class="even">
-<td align="right">5</td>
-<td align="left">Y</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Y
+</td>
 </tr>
-<tr class="odd">
-<td align="right">6</td>
-<td align="left">Z</td>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Z
+</td>
 </tr>
 </tbody>
 </table>
@@ -377,102 +512,214 @@ Table Y
 </tr>
 </table></div>
 <p>If there is no matching data in the other table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb101"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb109"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># a columns come first</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">x.x</th>
-<th align="left">y</th>
-<th align="left">x.y</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+x.x
+</th>
+<th style="text-align:left;">
+y
+</th>
+<th style="text-align:left;">
+x.y
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">A</td>
-<td align="left">TRUE</td>
-<td align="left">NA</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
+<td style="text-align:left;">
+NA
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">B</td>
-<td align="left">TRUE</td>
-<td align="left">NA</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
+<td style="text-align:left;">
+NA
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">C</td>
-<td align="left">FALSE</td>
-<td align="left">NA</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+NA
+</td>
 </tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">D</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+D
+</td>
 </tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">E</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+E
+</td>
 </tr>
-<tr class="even">
-<td align="right">6</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">F</td>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+F
+</td>
 </tr>
 </tbody>
 </table></div>
 <p>Order is not important for full joins, but does change the order of columns in the resulting table.</p>
-<div class="sourceCode" id="cb102"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb110"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># b columns come first</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">b</span>, <span class="va">a</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="left">x.x</th>
-<th align="right">id</th>
-<th align="left">x.y</th>
-<th align="left">y</th>
+<thead><tr>
+<th style="text-align:left;">
+x.x
+</th>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+x.y
+</th>
+<th style="text-align:left;">
+y
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">D</td>
-<td align="right">4</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<tr>
+<td style="text-align:left;">
+D
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
 </tr>
-<tr class="even">
-<td align="left">E</td>
-<td align="right">5</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<tr>
+<td style="text-align:left;">
+E
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
 </tr>
-<tr class="odd">
-<td align="left">F</td>
-<td align="right">6</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<tr>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
 </tr>
-<tr class="even">
-<td align="left">NA</td>
-<td align="right">1</td>
-<td align="left">A</td>
-<td align="left">TRUE</td>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
 </tr>
-<tr class="odd">
-<td align="left">NA</td>
-<td align="right">2</td>
-<td align="left">B</td>
-<td align="left">TRUE</td>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
 </tr>
-<tr class="even">
-<td align="left">NA</td>
-<td align="right">3</td>
-<td align="left">C</td>
-<td align="left">FALSE</td>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
 </tr>
 </tbody>
 </table></div>

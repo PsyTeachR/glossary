@@ -20,7 +20,8 @@
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -127,7 +128,7 @@ library(tidyverse)
 </h2>
 <p><dfn>A statistic that represents the proportion of the <a href="v.html#variance">variance</a> for a <a href="d.html#dependent-variable">dependent variable</a> explained by the <a href="p.html#predictor-variable">predictor variable(s)</a> in a <a href="g.html#general-linear-model">linear model</a>.</dfn></p>
 <p>Let's simulate some data</p>
-<div class="sourceCode" id="cb168"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb181"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># simulate some data</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span>
 
@@ -142,7 +143,7 @@ library(tidyverse)
   dv <span class="op">=</span> <span class="va">intercept</span> <span class="op">+</span> <span class="op">(</span><span class="va">effect</span> <span class="op">*</span> <span class="va">predictor</span><span class="op">)</span> <span class="op">+</span> <span class="va">error</span>
 <span class="op">)</span></code></pre></div>
 <p>Analyse the data with a linear model and use the <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> function to view the R-squared values.</p>
-<div class="sourceCode" id="cb169"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb182"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">dv</span> <span class="op">~</span> <span class="va">predictor</span>, <span class="va">dat</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span>
 <span class="co">#&gt; </span>
@@ -164,7 +165,7 @@ library(tidyverse)
 <span class="co">#&gt; Multiple R-squared:  0.08198,    Adjusted R-squared:  0.07261 </span>
 <span class="co">#&gt; F-statistic: 8.752 on 1 and 98 DF,  p-value: 0.003877</span></code></pre></div>
 <p><a href="a.html#adjusted-r-squared">Adjusted R-squared</a> is a modified version of R-squared adjusted for the number of predictors in the model. You can extract the R-squared and adjusted R-squared values from the model summary.</p>
-<div class="sourceCode" id="cb170"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb183"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span><span class="op">$</span><span class="va">r.squared</span>
 <span class="co">#&gt; [1] 0.08198174</span>
 <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span><span class="op">$</span><span class="va">adj.r.squared</span>
@@ -179,7 +180,7 @@ library(tidyverse)
 <p><strong>Example:</strong> If the grand mean response time in a population is 600 milliseconds, that number represents the typical value. The mean response time for an individual subject <span class="math inline">\(s\)</span> can be represented as an offset (<a href="d.html#deviation-score">deviation</a>) from that value. For example, if subject <span class="math inline">\(s\)</span> has a mean reaction time of 650 ms, that would imply a random effect for that subject of +50 ms.</p>
 <p>Unlike <a href="f.html#fixed%20effect">fixed effects</a>, we expect the underlying random effects to change from experiment to experiment as the sampling units (e.g., subjects) change.</p>
 <p>In a mixed effects model, you can get a table of just the random effects with the code below:</p>
-<div class="sourceCode" id="cb171"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb184"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lmerTest/man/lmer.html">lmer</a></span><span class="op">(</span>
   <span class="va">rating</span> <span class="op">~</span> <span class="va">rater_age</span> <span class="op">*</span> <span class="va">face_age</span> <span class="op">+</span> <span class="co"># fixed effects</span>
   <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">rater_id</span><span class="op">)</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">face_id</span><span class="op">)</span>, <span class="co"># random effects</span>
@@ -189,30 +190,62 @@ library(tidyverse)
 <span class="fu">broom.mixed</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">model</span>, effects <span class="op">=</span> <span class="st">"ran_pars"</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="left">effect</th>
-<th align="left">group</th>
-<th align="left">term</th>
-<th align="right">estimate</th>
+<thead><tr>
+<th style="text-align:left;">
+effect
+</th>
+<th style="text-align:left;">
+group
+</th>
+<th style="text-align:left;">
+term
+</th>
+<th style="text-align:right;">
+estimate
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">ran_pars</td>
-<td align="left">face_id</td>
-<td align="left">sd__(Intercept)</td>
-<td align="right">0.6040734</td>
+<tr>
+<td style="text-align:left;">
+ran_pars
+</td>
+<td style="text-align:left;">
+face_id
+</td>
+<td style="text-align:left;">
+sd__(Intercept)
+</td>
+<td style="text-align:right;">
+0.6040734
+</td>
 </tr>
-<tr class="even">
-<td align="left">ran_pars</td>
-<td align="left">rater_id</td>
-<td align="left">sd__(Intercept)</td>
-<td align="right">0.9144817</td>
+<tr>
+<td style="text-align:left;">
+ran_pars
+</td>
+<td style="text-align:left;">
+rater_id
+</td>
+<td style="text-align:left;">
+sd__(Intercept)
+</td>
+<td style="text-align:right;">
+0.9144817
+</td>
 </tr>
-<tr class="odd">
-<td align="left">ran_pars</td>
-<td align="left">Residual</td>
-<td align="left">sd__Observation</td>
-<td align="right">1.0434014</td>
+<tr>
+<td style="text-align:left;">
+ran_pars
+</td>
+<td style="text-align:left;">
+Residual
+</td>
+<td style="text-align:left;">
+sd__Observation
+</td>
+<td style="text-align:right;">
+1.0434014
+</td>
 </tr>
 </tbody>
 </table></div>
@@ -258,7 +291,7 @@ library(tidyverse)
 </h2>
 <p><dfn>The location of a file in relation to the working directory.</dfn></p>
 <p>For example, if your <a href="w.html#working-directory">working directory</a> is <code>/Users/me/study/</code> and you want to refer to a file at <code>/Users/me/study/data/faces.csv</code>, the relative path is <code>data/faces.csv</code>. Use <code>../</code> to move up one directory.</p>
-<div class="sourceCode" id="cb172"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb185"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># the working directory: /Users/me/study/</span>
 
 <span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span>
@@ -312,11 +345,11 @@ library(tidyverse)
 <p>For example, you may have a question about how to figure out how to select rows that contain the value "test" in a certain column, but it isn't working. It's clearer if you can provide a concrete example, but you don't want to have to type out the whole table you're using or all the code that got you to this point in your script.</p>
 <p>You can include a very small table with just the basics or a smaller version of your problem. Make comments at each step about what you expect and what you actually got.</p>
 <p>Which version is easier for you to figure out the solution?</p>
-<div class="sourceCode" id="cb173"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb186"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># this doesn't work</span>
 <span class="va">no_test_data</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu">str_detect</span><span class="op">(</span><span class="va">type</span>, <span class="st">"test"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb174"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb187"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># with a minimal example table</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span>
   <span class="op">~</span><span class="va">id</span>, <span class="op">~</span><span class="va">type</span>, <span class="op">~</span><span class="va">x</span>,
@@ -376,7 +409,7 @@ library(tidyverse)
 Figure 19.1: Right Join
 </p>
 </div>
-<div class="sourceCode" id="cb175"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb188"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
@@ -399,60 +432,108 @@ Table Y
 <tr>
 <td>
 <table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">x</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+x
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">A</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+A
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">B</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+B
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">C</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+C
+</td>
 </tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left">D</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+D
+</td>
 </tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="left">E</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+E
+</td>
 </tr>
 </tbody>
 </table>
 </td>
 <td>
 <table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">y</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+y
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">2</td>
-<td align="left">V</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+V
+</td>
 </tr>
-<tr class="even">
-<td align="right">3</td>
-<td align="left">W</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+W
+</td>
 </tr>
-<tr class="odd">
-<td align="right">4</td>
-<td align="left">X</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+X
+</td>
 </tr>
-<tr class="even">
-<td align="right">5</td>
-<td align="left">Y</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Y
+</td>
 </tr>
-<tr class="odd">
-<td align="right">6</td>
-<td align="left">Z</td>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Z
+</td>
 </tr>
 </tbody>
 </table>
@@ -460,66 +541,130 @@ Table Y
 </tr>
 </table></div>
 <p>If there is no matching data in the left table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb176"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb189"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># a is the right table</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">x.x</th>
-<th align="left">y</th>
-<th align="left">x.y</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+x.x
+</th>
+<th style="text-align:left;">
+y
+</th>
+<th style="text-align:left;">
+x.y
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">4</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">D</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+D
+</td>
 </tr>
-<tr class="even">
-<td align="right">5</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">E</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+E
+</td>
 </tr>
-<tr class="odd">
-<td align="right">6</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">F</td>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+F
+</td>
 </tr>
 </tbody>
 </table></div>
 <p>Order is important for right joins.</p>
-<div class="sourceCode" id="cb177"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb190"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># b is the right table</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">b</span>, <span class="va">a</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="left">x.x</th>
-<th align="right">id</th>
-<th align="left">x.y</th>
-<th align="left">y</th>
+<thead><tr>
+<th style="text-align:left;">
+x.x
+</th>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+x.y
+</th>
+<th style="text-align:left;">
+y
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">NA</td>
-<td align="right">1</td>
-<td align="left">A</td>
-<td align="left">TRUE</td>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
 </tr>
-<tr class="even">
-<td align="left">NA</td>
-<td align="right">2</td>
-<td align="left">B</td>
-<td align="left">TRUE</td>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
 </tr>
-<tr class="odd">
-<td align="left">NA</td>
-<td align="right">3</td>
-<td align="left">C</td>
-<td align="left">FALSE</td>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
 </tr>
 </tbody>
 </table></div>

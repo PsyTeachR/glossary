@@ -1,0 +1,8 @@
+## bootstrap
+
+<dfn>Resampling with replacement.</dfn>
+
+In statistics, bootstrapping is used to resample with replacement from an original small sample. This allows us to calculate confidence intervals for any estimate.
+
+* [A Practical Guide to the Bootstrap in R](https://towardsdatascience.com/a-practical-guide-to-bootstrap-with-r-examples-bd975ec6dcea)
+* [Bootstrapping by Quick-R](https://www.statmethods.net/advstats/bootstrapping.html)

@@ -20,7 +20,8 @@
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -98,7 +99,7 @@
 <p>For example, if your <a href="w.html#working-directory">working directory</a> is <code>/Users/me/study/</code> and you want to refer to a file in the directory <code>data</code> called <code>faces.csv</code>, the absolute path is <code>/Users/me/study/data/faces.csv</code>.</p>
 <p>However, you should normally use <a href="r.html#relative-path">relative paths</a> in scripts, not absolute paths, which can change when you move a project directory to a new computer or even a new place on your computer.</p>
 <p>The package R.utils has a function <code>getAbsolutePath()</code> that returns the absolute path of a file <a href="p.html#path">path</a> or a file <a href="o.html#object">object</a>.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">R.utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/R.utils/man/getAbsolutePath.html">getAbsolutePath</a></span><span class="op">(</span><span class="st">"../index.Rmd"</span><span class="op">)</span>
 <span class="co">#&gt; [1] "/Users/lisad/rproj/psyteachr/index.Rmd"</span></code></pre></div>
 
@@ -129,7 +130,7 @@
 <span class="header-section-number">2.5</span> alpha (graphics)<a class="anchor" aria-label="anchor" href="#alpha-graphics"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A value between 0 and 1 used to control the levels of transparency in a plot</dfn></p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># if you omit alpha, it defaults to 1</span>
 <span class="va">alpha1.00</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_density</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.window.html">xlim</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span>
@@ -153,21 +154,21 @@ Figure 2.1: Setting alpha to a number lower than 1 lets you see parts of the plo
 </h2>
 <p><dfn>The <a href="symbols.html">symbol</a> &amp;, an <a href="o.html#operator">operator</a> meaning "AND".</dfn></p>
 <p>A single ampersand is <a href="v.html#vectorized">vectorized</a>, so compares each item in the first <a href="v.html#vector">vector</a> with the corresponding item in the second vector.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span> <span class="op">&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span>
 <span class="co">#&gt; [1]  TRUE  TRUE FALSE FALSE</span></code></pre></div>
 <p>A double ampersand is not vectorised, so will ignore all but the first item in vectors, unless your environment has set <code>_R_CHECK_LENGTH_1_LOGIC2_=true</code>, in which case you will get an error.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span>
 <span class="co">#&gt; [1] TRUE</span></code></pre></div>
 <div class="info">
 <p>The advantage of a double ampersand is that it will stop as soon as the conclusion is obvious. So if the first item is FALSE, the second item won't even be run. This is useful for testing whether an object exists before checking something that requires the object to exist.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">is.character</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span> 
   <span class="co"># do something</span>
 <span class="op">}</span>
 <span class="co">#&gt; Error in eval(expr, envir, enclos): object 'x' not found</span></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/exists.html">exists</a></span><span class="op">(</span><span class="st">"x"</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">is.character</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span> 
   <span class="co"># do something</span>
 <span class="op">}</span></code></pre></div>
@@ -186,7 +187,7 @@ Figure 2.2: Anti Join
 </p>
 </div>
 <p>This is useful when you have a table of data that contains IDs you want to exclude from your main dataset.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">all_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
@@ -198,18 +199,30 @@ Figure 2.2: Anti Join
 
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter-joins.html">anti_join</a></span><span class="op">(</span><span class="va">all_data</span>, <span class="va">to_exclude</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">x</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+x
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">A</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+A
+</td>
 </tr>
-<tr class="even">
-<td align="right">5</td>
-<td align="left">E</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+E
+</td>
 </tr>
 </tbody>
 </table></div>
@@ -224,7 +237,7 @@ Figure 2.2: Anti Join
 <p>For example, the first <strong>argument</strong> to the function <code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code> is <code>n</code> (the number of <a href="o.html#observation">observations</a>).</p>
 <p>When you look up the help for a function (e.g., <code><a href="https://rdrr.io/r/stats/sd.html">?sd</a></code>), you will see a section called <strong><code>Arguments</code></strong>, which lists the argument names and their definitions.</p>
 <p>The function <code><a href="https://rdrr.io/r/base/args.html">args()</a></code> will show you the argument names and their <a href="d.html#default-value">default values</a> (if any) for any function.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/args.html">args</a></span><span class="op">(</span><span class="va">rnorm</span><span class="op">)</span>
 <span class="co">#&gt; function (n, mean = 0, sd = 1) </span>
 <span class="co">#&gt; NULL</span></code></pre></div>
@@ -236,7 +249,7 @@ Figure 2.2: Anti Join
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> that stores <a href="o.html#object">objects</a> in one or more dimensions.</dfn></p>
 <p>You can create an array by specifying a list or vector of values and the number of dimensions. The first two dimensions are rows and columns; each dimension after that is printed separately as a facet.</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># 3-dimensional array with 4 rows, 3 columns, and 2 facets</span>
 <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">24</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">3</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; , , 1</span>
@@ -255,7 +268,7 @@ Figure 2.2: Anti Join
 <span class="co">#&gt; [3,]   15   19   23</span>
 <span class="co">#&gt; [4,]   16   20   24</span></code></pre></div>
 <p>You can give your array dimensions names.</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
 <span class="va">dimnames</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
   subj_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"S1"</span>, <span class="st">"S2"</span>, <span class="st">"S3"</span>, <span class="st">"S4"</span><span class="op">)</span>,
@@ -282,7 +295,7 @@ Figure 2.2: Anti Join
 <span class="co">#&gt;      S3 15 19 23</span>
 <span class="co">#&gt;      S4 16 20 24</span></code></pre></div>
 <p>Objects not need to be the same <a href="d.html#data-type">data type</a>.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mylist</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="cn">TRUE</span>, <span class="fl">2L</span>, <span class="fl">3.1</span><span class="op">)</span>
 <span class="va">myarray</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="va">mylist</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span>
 
@@ -301,7 +314,7 @@ Figure 2.2: Anti Join
 </h2>
 <p><dfn>The ratio between the width and height of an image.</dfn></p>
 <p>You can specify the aspect ratio of your plots by setting the width and height in the first chunk of an R Markdown file like this:</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/knitr/man/opts_chunk.html">opts_chunk</a></span><span class="op">$</span><span class="fu">set</span><span class="op">(</span>
   fig.width <span class="op">=</span> <span class="fl">7</span>, <span class="co"># default value is 7</span>
   fig.height <span class="op">=</span> <span class="fl">7</span><span class="op">/</span><span class="fl">1.618</span> <span class="co"># rolden ratio; default value is 7</span>
@@ -309,7 +322,7 @@ Figure 2.2: Anti Join
 <p>Or in the <a href="c.html#chunk">chunk</a> options:</p>
 <div class="verbatim">
 <p><code>```{r fig-golden-ratio, fig.width = 7, fig.height = 4.32}</code></p>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">iris</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></code></pre></div>
@@ -323,7 +336,7 @@ Figure 2.3: Plot with a 1.618:1 aspect ratio (golden ratio)
 </div>
 <div class="verbatim">
 <p><code>```{r fig-square, fig.width = 7, fig.height = 7}</code></p>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">iris</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></code></pre></div>
@@ -336,7 +349,7 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 </p>
 </div>
 <p>Or when you save the image:</p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">ggsave</span><span class="op">(</span><span class="st">"golden-ratio.jpg"</span>, width <span class="op">=</span> <span class="fl">7</span>, height <span class="op">=</span> <span class="fl">7</span><span class="op">/</span><span class="fl">1.618</span><span class="op">)</span></code></pre></div>
 
 </div>
@@ -345,19 +358,19 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 <span class="header-section-number">2.11</span> assignment operator<a class="anchor" aria-label="anchor" href="#assignment-operator"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The <a href="symbols.html">symbol</a> <code><a href="https://rdrr.io/r/base/assignOps.html">&lt;-</a></code>, which functions like <code><a href="https://rdrr.io/r/base/assignOps.html">=</a></code> and assigns the value on the right to the object on the left</dfn></p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">a</span> <span class="op">&lt;-</span> <span class="fl">1</span>
 
 <span class="va">a</span>
 <span class="co">#&gt; [1] 1</span></code></pre></div>
 <p>The assignment operator can also be reversed</p>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fl">2</span> <span class="op">-&gt;</span> <span class="va">b</span>
 
 <span class="va">b</span>
 <span class="co">#&gt; [1] 2</span></code></pre></div>
 <p>And even go in both direction at the same time!</p>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">2</span> <span class="op">-&gt;</span> <span class="va">y</span>
 
 <span class="va">x</span>
@@ -372,7 +385,7 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 </h2>
 <p><dfn>Only containing <a href="o.html#object">objects</a> with the same <a href="d.html#data-type">data type</a> (e.g., all <a href="n.html#numeric">numeric</a> or <a href="c.html#character">character</a>).</dfn></p>
 <p><a href="v.html#vector">Vectors</a> are atomic data structures in R.</p>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>
 <span class="va">b</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"somebody"</span>, <span class="st">"once"</span>, <span class="st">"told me"</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">a</span><span class="op">)</span>
@@ -380,15 +393,15 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">b</span><span class="op">)</span>
 <span class="co">#&gt; [1] "character"</span></code></pre></div>
 <p>If you try to mix data types in an atomic vector, they will be <a href="c.html#coerce">coerced</a> to be the same type. (Note that 32 becomes "32" so it can be in the same vector as a character object).</p>
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">32</span>, <span class="cn">TRUE</span>, <span class="st">"eighteen"</span><span class="op">)</span>
 <span class="co">#&gt; [1] "32"       "TRUE"     "eighteen"</span></code></pre></div>
 <p>Another feature of vectors that makes them atomic is that they are always flat. If you embed vectors within vectors, they will be flattened.</p>
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">6</span><span class="op">)</span>
 <span class="co">#&gt; [1]  7  1  4 32  2  6</span></code></pre></div>
 <p><a href="l.html#list">Lists</a>, on the other hand, can be nested.</p>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">6</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; List of 4</span>
 <span class="co">#&gt;  $ : num 7</span>
@@ -396,7 +409,7 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 <span class="co">#&gt;  $ : num 2</span>
 <span class="co">#&gt;  $ : num 6</span></code></pre></div>
 <p>If you try to extract objects inside an atomic vector, you need to use <a href="b.html#brackets">brackets</a> <code>[]</code>. This can be with an index or a name. Single brackets can return one or more elements, and include names, while double brackets can only return one element and don't have names.</p>
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">my_vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">3</span>, y <span class="op">=</span> <span class="fl">1</span>, z <span class="op">=</span> <span class="fl">4</span><span class="op">)</span>
 <span class="va">my_vec</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span>
 <span class="co">#&gt; y </span>
@@ -407,7 +420,7 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 <span class="va">my_vec</span><span class="op">[[</span><span class="st">"y"</span><span class="op">]</span><span class="op">]</span>
 <span class="co">#&gt; [1] 1</span></code></pre></div>
 <p>You cannot use the $ operator on an atomic vector, or you will get this very common error.</p>
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">my_vec</span><span class="op">$</span><span class="va">y</span>
 <span class="co">#&gt; Error in my_vec$y: $ operator is invalid for atomic vectors</span></code></pre></div>
 <p>See the <a href="https://adv-r.hadley.nz/vectors-chap.html#atomic-vectors">Vectors chapter</a> of Advanced R for more advanced discussion of atomic vectors.</p>
@@ -419,7 +432,7 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 </h2>
 <p><dfn>Extra information about an R object</dfn></p>
 <p>You can access an <a href="o.html#object">object</a>'s attributes with <code><a href="https://rdrr.io/r/base/attr.html">attr()</a></code>. For example, datasets simulated with <a href="https://debruine.github.io/faux/" target="_blank">faux</a> have an attribute called "design" that details their design.</p>
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/sim_design.html">sim_design</a></span><span class="op">(</span>
   between <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>pet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>cat <span class="op">=</span> <span class="st">"Cat Owners"</span>, 
                          dog <span class="op">=</span> <span class="st">"Dog Owners"</span><span class="op">)</span><span class="op">)</span>,
@@ -442,12 +455,57 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 <span class="co">#&gt;         * cat: Cat Owners</span>
 <span class="co">#&gt;         * dog: Dog Owners</span>
 <span class="co">#&gt; * Parameters:</span>
-<span class="co">#&gt;     |pet |time |  am|  pm|   n| mu| sd|</span>
-<span class="co">#&gt;     |:---|:----|---:|---:|---:|--:|--:|</span>
-<span class="co">#&gt;     |cat |am   | 1.0| 0.3| 100|  1|  1|</span>
-<span class="co">#&gt;     |cat |pm   | 0.3| 1.0| 100|  2|  1|</span>
-<span class="co">#&gt;     |dog |am   | 1.0| 0.6| 100|  3|  1|</span>
-<span class="co">#&gt;     |dog |pm   | 0.6| 1.0| 100|  4|  1|</span></code></pre></div>
+<span class="co">#&gt;     &lt;table&gt;</span>
+<span class="co">#&gt;  &lt;thead&gt;</span>
+<span class="co">#&gt;   &lt;tr&gt;</span>
+<span class="co">#&gt;    &lt;th style="text-align:left;"&gt; pet &lt;/th&gt;</span>
+<span class="co">#&gt;    &lt;th style="text-align:left;"&gt; time &lt;/th&gt;</span>
+<span class="co">#&gt;    &lt;th style="text-align:right;"&gt; am &lt;/th&gt;</span>
+<span class="co">#&gt;    &lt;th style="text-align:right;"&gt; pm &lt;/th&gt;</span>
+<span class="co">#&gt;    &lt;th style="text-align:right;"&gt; n &lt;/th&gt;</span>
+<span class="co">#&gt;    &lt;th style="text-align:right;"&gt; mu &lt;/th&gt;</span>
+<span class="co">#&gt;    &lt;th style="text-align:right;"&gt; sd &lt;/th&gt;</span>
+<span class="co">#&gt;   &lt;/tr&gt;</span>
+<span class="co">#&gt;  &lt;/thead&gt;</span>
+<span class="co">#&gt; &lt;tbody&gt;</span>
+<span class="co">#&gt;   &lt;tr&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:left;"&gt; cat &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:left;"&gt; am &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 1.0 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 0.3 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;</span>
+<span class="co">#&gt;   &lt;/tr&gt;</span>
+<span class="co">#&gt;   &lt;tr&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:left;"&gt; cat &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:left;"&gt; pm &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 0.3 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 1.0 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;</span>
+<span class="co">#&gt;   &lt;/tr&gt;</span>
+<span class="co">#&gt;   &lt;tr&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:left;"&gt; dog &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:left;"&gt; am &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 1.0 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 0.6 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;</span>
+<span class="co">#&gt;   &lt;/tr&gt;</span>
+<span class="co">#&gt;   &lt;tr&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:left;"&gt; dog &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:left;"&gt; pm &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 0.6 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 1.0 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;</span>
+<span class="co">#&gt;    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;</span>
+<span class="co">#&gt;   &lt;/tr&gt;</span>
+<span class="co">#&gt; &lt;/tbody&gt;</span>
+<span class="co">#&gt; &lt;/table&gt;</span></code></pre></div>
 </div>
 <div id="attribute-html" class="section level2" number="2.14">
 <h2>
@@ -455,7 +513,7 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 </h2>
 <p><dfn>Extra information about an HTML element</dfn></p>
 <p>For example, the paragraph <a href="e.html#element-html">element</a> has an attribute of "id" with a value of "feature". This can be used to refer to the element to change its style with <a href="c.html#css">CSS</a> or affect its behaviour with <a href="j.html#javascript">JavaScript</a>.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb27-1"><a href="a.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">id</span><span class="ot">=</span><span class="st">"feature"</span><span class="kw">&gt;</span>This is the main paragraoh of my text...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb35-1"><a href="a.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">id</span><span class="ot">=</span><span class="st">"feature"</span><span class="kw">&gt;</span>This is the main paragraoh of my text...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 
 </div>
 </div>

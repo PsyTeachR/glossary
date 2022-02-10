@@ -20,7 +20,8 @@
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -130,7 +131,7 @@
 </h2>
 <p><dfn>A <a href="b.html#binding-joins">binding join</a> that joins one table to another by adding their columns together</dfn></p>
 <p><code>bind_cols</code> takes two tables with the same number of rows and adds the columns from the second table to the first.</p>
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span>
@@ -142,31 +143,55 @@
 
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html">bind_cols</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">x</th>
-<th align="left">y</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+x
+</th>
+<th style="text-align:left;">
+y
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">A</td>
-<td align="left">TRUE</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">B</td>
-<td align="left">TRUE</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">C</td>
-<td align="left">FALSE</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
 </tr>
 </tbody>
 </table></div>
 <p>If any column has the same name in both tables, you will see a warning that the columns have been given new names.</p>
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span>
@@ -181,26 +206,50 @@
 <span class="co">#&gt; * x -&gt; x...2</span>
 <span class="co">#&gt; * x -&gt; x...3</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">x...2</th>
-<th align="left">x...3</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+x...2
+</th>
+<th style="text-align:left;">
+x...3
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">A</td>
-<td align="left">TRUE</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">B</td>
-<td align="left">TRUE</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">C</td>
-<td align="left">FALSE</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
 </tr>
 </tbody>
 </table></div>
@@ -213,7 +262,7 @@
 </h2>
 <p><dfn>A <a href="b.html#binding-joins">binding join</a> that joins one table to another by adding their rows together</dfn></p>
 <p><code>bind_rows</code> takes two tables, finds all columns with the same name, and appends the second one to the first. If a column doesn't have a match in the other table, that columns' values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span>,
@@ -227,41 +276,83 @@
 
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html">bind_rows</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">x</th>
-<th align="left">y</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+x
+</th>
+<th style="text-align:left;">
+y
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">A</td>
-<td align="left">TRUE</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">B</td>
-<td align="left">TRUE</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">C</td>
-<td align="left">FALSE</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
 </tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left">D</td>
-<td align="left">NA</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+D
+</td>
+<td style="text-align:left;">
+NA
+</td>
 </tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="left">E</td>
-<td align="left">NA</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+E
+</td>
+<td style="text-align:left;">
+NA
+</td>
 </tr>
-<tr class="even">
-<td align="right">6</td>
-<td align="left">F</td>
-<td align="left">NA</td>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+NA
+</td>
 </tr>
 </tbody>
 </table></div>
@@ -283,7 +374,7 @@
 <span class="header-section-number">3.8</span> binomial distribution<a class="anchor" aria-label="anchor" href="#binomial-distribution"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The <a href="d.html#distribution">distribution</a> of data where each observation can have one of two outcomes, like success/failure, yes/no or head/tails. </dfn></p>
-<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># flip 10 coins 10000 times</span>
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">rbinom</a></span><span class="op">(</span><span class="fl">10000</span>, <span class="fl">10</span>, prob <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></code></pre></div>
 <div class="figure" style="text-align: center">
@@ -300,7 +391,7 @@ Figure 3.1: Binomial Distribution
 </h2>
 <p><dfn>Two <a href="n.html#normal-distribution">normally distributed</a> <a href="v.html#vector">vectors</a> that have a specified <a href="c.html#correlation">correlation</a> with each other.</dfn></p>
 <p>You can use the {<a href="https://debruine.github.io/faux" target="_blank">faux</a>} package to quickly create variables from a bivariate normal distribution with a specified correlation.</p>
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/rnorm_multi.html">rnorm_multi</a></span><span class="op">(</span>
   n <span class="op">=</span> <span class="fl">10000</span>, vars <span class="op">=</span> <span class="fl">2</span>, 
   mu <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">1</span>, r <span class="op">=</span> <span class="fl">0.5</span>,
@@ -328,43 +419,43 @@ Figure 3.2: A bivariate normal distribution where both variables have mu = 0 and
 </h2>
 <p><dfn>An expression that evaluates to TRUE or FALSE.</dfn></p>
 <p>Boolean expressions usually use a relational <a href="o.html#operator">operator</a>, such as <code><a href="https://rdrr.io/r/base/Comparison.html">==</a></code> or <code><a href="https://rdrr.io/r/base/Comparison.html">&gt;</a></code> to compare two values.</p>
-<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># ==    Equal to    </span>
 <span class="fl">1</span> <span class="op">==</span> <span class="fl">1</span>
 <span class="co">#&gt; [1] TRUE</span>
 <span class="fl">1</span> <span class="op">==</span> <span class="fl">2</span>
 <span class="co">#&gt; [1] FALSE</span></code></pre></div>
-<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># !=    Not equal to    </span>
 <span class="fl">1</span> <span class="op">!=</span> <span class="fl">2</span>
 <span class="co">#&gt; [1] TRUE</span>
 <span class="fl">1</span> <span class="op">!=</span> <span class="fl">1</span>
 <span class="co">#&gt; [1] FALSE</span></code></pre></div>
-<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># &gt;     Greater than</span>
 <span class="fl">2</span> <span class="op">&gt;</span> <span class="fl">1</span>
 <span class="co">#&gt; [1] TRUE</span>
 <span class="fl">1</span> <span class="op">&gt;</span> <span class="fl">2</span>
 <span class="co">#&gt; [1] FALSE</span></code></pre></div>
-<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># &gt;=    Greater than or equal to</span>
 <span class="fl">2</span> <span class="op">&gt;=</span> <span class="fl">1</span>
 <span class="co">#&gt; [1] TRUE</span>
 <span class="fl">1</span> <span class="op">&gt;=</span> <span class="fl">2</span>
 <span class="co">#&gt; [1] FALSE</span></code></pre></div>
-<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># &lt;     Less than</span>
 <span class="fl">1</span> <span class="op">&lt;</span> <span class="fl">2</span>
 <span class="co">#&gt; [1] TRUE</span>
 <span class="fl">2</span> <span class="op">&lt;</span> <span class="fl">1</span>
 <span class="co">#&gt; [1] FALSE</span></code></pre></div>
-<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># &lt;=    Less than or equal to</span>
 <span class="fl">1</span> <span class="op">&lt;=</span> <span class="fl">2</span>
 <span class="co">#&gt; [1] TRUE</span>
 <span class="fl">2</span> <span class="op">&lt;=</span> <span class="fl">1</span>
 <span class="co">#&gt; [1] FALSE</span></code></pre></div>
-<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># %in%  Match operator  </span>
 <span class="st">"A"</span> <span class="op">%in%</span> <span class="va">LETTERS</span>
 <span class="co">#&gt; [1] TRUE</span>
@@ -380,24 +471,35 @@ Figure 3.2: A bivariate normal distribution where both variables have mu = 0 and
 <p>Typically called <a href="l.html#logical">logical</a> in R.</p>
 
 </div>
-<div id="brackets" class="section level2" number="3.13">
+<div id="bootstrap" class="section level2" number="3.13">
 <h2>
-<span class="header-section-number">3.13</span> brackets<a class="anchor" aria-label="anchor" href="#brackets"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.13</span> bootstrap<a class="anchor" aria-label="anchor" href="#bootstrap"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>Resampling with replacement.</dfn></p>
+<p>In statistics, bootstrapping is used to resample with replacement from an original small sample. This allows us to calculate confidence intervals for any estimate.</p>
+<ul>
+<li><a href="https://towardsdatascience.com/a-practical-guide-to-bootstrap-with-r-examples-bd975ec6dcea">A Practical Guide to the Bootstrap in R</a></li>
+<li><a href="https://www.statmethods.net/advstats/bootstrapping.html">Bootstrapping by Quick-R</a></li>
+</ul>
+</div>
+<div id="brackets" class="section level2" number="3.14">
+<h2>
+<span class="header-section-number">3.14</span> brackets<a class="anchor" aria-label="anchor" href="#brackets"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Square brackets used to subset a <a href="c.html#container">container</a> like a <a href="v.html#vector">vector</a>, <a href="l.html#list">list</a>, <a href="d.html#data-frame">data frame</a>, or <a href="m.html#matrix">matrix</a> (e.g., mtcars[[1]] or mtcars[1:2]).</dfn></p>
 <p>When you use <a href="s.html#single-brackets">single brackets</a> to subset a container, you get back a container with the items you selected. This contrasts with <a href="d.html#double-brackets">double brackets</a>, which only return a single item in the container.</p>
 <p>You can use single brackets to select one or more items from a vector.</p>
-<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">secret_code</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">16</span>, <span class="fl">19</span>, <span class="fl">25</span>, <span class="fl">20</span>, <span class="fl">5</span>, <span class="fl">1</span>, <span class="fl">3</span>, <span class="fl">8</span>, <span class="fl">18</span><span class="op">)</span>
 
 <span class="va">LETTERS</span><span class="op">[</span><span class="va">secret_code</span><span class="op">]</span>
 <span class="co">#&gt; [1] "P" "S" "Y" "T" "E" "A" "C" "H" "R"</span></code></pre></div>
 <p>If you use double brackets, you can only select a single item from the vector. If you try to select more than one, you will get the following error messge.</p>
-<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">LETTERS</span><span class="op">[[</span><span class="va">secret_code</span><span class="op">]</span><span class="op">]</span>
 <span class="co">#&gt; Error in LETTERS[[secret_code]]: attempt to select more than one element in vectorIndex</span></code></pre></div>
 <p>You can select items by <a href="i.html#index">index</a> or name. <code>mylist[c("a", "c")]</code> returns a list containing the first and third items.</p>
-<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mylist</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
   a <span class="op">=</span> <span class="fl">10</span>,
   b <span class="op">=</span> <span class="fl">20</span>,
@@ -411,16 +513,16 @@ Figure 3.2: A bivariate normal distribution where both variables have mu = 0 and
 <span class="co">#&gt; $c</span>
 <span class="co">#&gt; [1] 30</span></code></pre></div>
 <p>Single brackets return the same type of container as the <a href="o.html#object">object</a> being subset, so <code>mylist[1]</code> returns a <a href="l.html#list">list</a> containing just the first item.</p>
-<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mylist</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>
 <span class="co">#&gt; $a</span>
 <span class="co">#&gt; [1] 10</span></code></pre></div>
 <p>Double brackets return the same type of object as the single item being selected, so <code>mylist[[1]]</code> returns a <a href="v.html#vector">vector</a> that is the same as the first item in <code>mylist</code>.</p>
-<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb52"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mylist</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>
 <span class="co">#&gt; [1] 10</span></code></pre></div>
 <p>Single brackets let you select rows and columns of a <a href="d.html#data-frame">data frame</a> or <a href="t.html#tibble">tibble</a>, if you separate them by a comma.</p>
-<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,
   letter <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span><span class="op">)</span>,
@@ -431,124 +533,180 @@ Figure 3.2: A bivariate normal distribution where both variables have mu = 0 and
 <span class="va">data</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span>, <span class="fl">2</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="left">letter</th>
-<th align="left">vowel</th>
+<thead><tr>
+<th style="text-align:left;">
+letter
+</th>
+<th style="text-align:left;">
+vowel
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">a</td>
-<td align="left">TRUE</td>
+<tr>
+<td style="text-align:left;">
+a
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
 </tr>
-<tr class="even">
-<td align="left">b</td>
-<td align="left">FALSE</td>
+<tr>
+<td style="text-align:left;">
+b
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <p>If you omit the rows or columns, you select them all.</p>
-<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span><span class="op">[</span><span class="fl">1</span>, <span class="op">]</span> <span class="co"># row 1, all columns</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">letter</th>
-<th align="left">vowel</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+letter
+</th>
+<th style="text-align:left;">
+vowel
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="right">1</td>
-<td align="left">a</td>
-<td align="left">TRUE</td>
+<tbody><tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+a
+</td>
+<td style="text-align:left;">
+TRUE
+</td>
 </tr></tbody>
 </table></div>
 </div>
-<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb55"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span> <span class="co"># all rows, columns 1:2</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">letter</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+letter
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">a</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+a
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">b</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+b
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">c</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+c
+</td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="warning">
 <p>If you only select one column of a data frame with single brackets, you will get a vector back instead of a data frame. You can change this behaviour by using <code>drop = FALSE</code>.</p>
-<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb56"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span> <span class="co"># returns a vector</span>
 <span class="co">#&gt; [1] 1 2 3</span></code></pre></div>
-<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span><span class="op">[</span>, <span class="fl">1</span>, drop <span class="op">=</span> <span class="cn">FALSE</span><span class="op">]</span> <span class="co"># returns a data frame</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <p><a href="t.html#tibble">Tibbles</a> always returns a tibble.</p>
-<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb58"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span> <span class="co"># returns a tibble</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
 </tr>
 </tbody>
 </table></div>
 </div>
 </div>
 <p>Double brackets can be used with a single index or name to select a column as a vector.</p>
-<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb59"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span><span class="op">[[</span><span class="st">"vowel"</span><span class="op">]</span><span class="op">]</span>
 <span class="co">#&gt; [1]  TRUE FALSE FALSE</span></code></pre></div>
 <p>Or with row and column values to select a single cell.</p>
-<div class="sourceCode" id="cb52"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb60"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span><span class="op">[[</span><span class="fl">1</span>, <span class="st">"vowel"</span><span class="op">]</span><span class="op">]</span>
 <span class="co">#&gt; [1] TRUE</span></code></pre></div>
 <p>You can't use double brackets to select a single row of a data table.</p>
-<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb61"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span><span class="op">[[</span><span class="fl">1</span>, <span class="op">]</span><span class="op">]</span>
 <span class="co">#&gt; Error in `[[.data.frame`(data, 1, ): argument "..2" is missing, with no default</span></code></pre></div>
 <p>More complex containers like 3-dimensional <a href="a.html#array">arrays</a> can have more than 2 values in the brackets, but work on the same principles.</p>
-<div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb62"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">myarray</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span>
 <span class="va">myarray</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">2</span><span class="op">]</span>
 <span class="co">#&gt; [1] 8</span></code></pre></div>
@@ -756,7 +914,8 @@ $( document ).ready(function() {
 <li><a class="nav-link" href="#block"><span class="header-section-number">3.10</span> block</a></li>
 <li><a class="nav-link" href="#boolean-expression"><span class="header-section-number">3.11</span> boolean expression</a></li>
 <li><a class="nav-link" href="#boolean"><span class="header-section-number">3.12</span> boolean</a></li>
-<li><a class="nav-link" href="#brackets"><span class="header-section-number">3.13</span> brackets</a></li>
+<li><a class="nav-link" href="#bootstrap"><span class="header-section-number">3.13</span> bootstrap</a></li>
+<li><a class="nav-link" href="#brackets"><span class="header-section-number">3.14</span> brackets</a></li>
 </ul>
 
       <div class="book-extra">

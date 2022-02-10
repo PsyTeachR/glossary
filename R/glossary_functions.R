@@ -6,6 +6,7 @@
 #' @param def The short definition to display on hover and in the glossary table; if NULL, this will be looked up from https://psyteachr.github.io/glossary/
 #' @param link whether to include a link to https://psyteachr.github.io/glossary/
 #' @param add_to_table whether to add to the table created by glossary_table()
+#' @param show_def whether to show the definition or just the term
 #'
 #' @return string with the link and hover text
 #' @export
@@ -14,10 +15,15 @@
 #' glossary("alpha")
 #' glossary("argument", "Arguments")
 #' glossary("PSYCH1001", shortdef = "Your class", link = FALSE)
-#' 
-glossary <- function(term, display = NULL, def = NULL, link = TRUE, add_to_table = TRUE) {
+#' glossary("character", show_def = TRUE)
+#' glossary("numeric", show_def = TRUE, link = FALSE)
+glossary <- function(term, 
+                     display = term, 
+                     def = NULL, 
+                     link = TRUE, 
+                     add_to_table = TRUE,
+                     show_def = FALSE) {
   lcterm <- gsub(" ", "-", tolower(term), fixed = TRUE)
-  if (is.null(display)) display <- term
   first_letter <- substr(lcterm, 1, 1)
   url <- paste0("https://psyteachr.github.io/glossary/", first_letter)
   if (is.null(def) || def == "") {
@@ -52,7 +58,13 @@ glossary <- function(term, display = NULL, def = NULL, link = TRUE, add_to_table
     .myglossary[lcterm] <<- tabledef
   }
   
-  if (link) {
+  if (show_def && link) {
+    paste0("<a class='glossary' target='_blank' href='", url, "#", 
+           lcterm, "'>", display, "</a> (", def, ")")
+  } else if (show_def) {
+    # just show the definition
+    def
+  } else if (link) {
     # make a link that opens the definition webpage in a new window
     paste0("<a class='glossary' target='_blank' title='", def, 
            "' href='", url, "#", lcterm, "'>", display, "</a>")
@@ -81,9 +93,9 @@ reset_glossary <- function() {
 #' Display glossary table
 #'
 #' @param link whether to include a link to https://psyteachr.github.io/glossary/
-#' @param as_kable if the output should be a kable table or a data table
+#' @param as_kable if the output should be a kableExtra table or a data frame
 #'
-#' @return kable table or data table
+#' @return kable table or data frame
 #' @export
 #'
 #' @examples
@@ -99,13 +111,11 @@ glossary_table <- function(link = TRUE, as_kable = TRUE) {
   if (is.null(glossary)) glossary <- list()
   
   term <- names(glossary)
-  if (link && knitr::opts_knit$get("rmarkdown.pandoc.to") !="latex") {
+  pandocto <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+  is_latex <- !is.null(pandocto) && pandocto == "latex"
+  
+  if (link && !is_latex) {
     link_term <- sapply(term, function(t) {
-      # paste0("<a class='glossary' target='_blank' ",
-      #        "href='https://psyteachr.github.io/glossary/",
-      #        substr(t, 1, 1), "#", t, "'>",
-      #        gsub(".", " ", t, fixed = 1), "</a>")
-      
       sprintf("[%s](https://psyteachr.github.io/glossary/%s.html#%s){class=\"glossary\" target=\"_blank\"}",
               gsub("(\\.|\\-)", " ", t),
               substr(t, 1, 1), 
@@ -123,8 +133,8 @@ glossary_table <- function(link = TRUE, as_kable = TRUE) {
   if (is.null(term)) {
     data.frame()
   } else if (as_kable) {
-    esc <- knitr::opts_knit$get("rmarkdown.pandoc.to") == "latex"
-    knitr::kable(the_list[order(term),], escape = esc, row.names = FALSE)
+    kableExtra::kable(the_list[order(term),], escape = is_latex, row.names = FALSE, ) %>%
+      kableExtra::kable_styling()
   } else {
     the_list[order(term),]
   }

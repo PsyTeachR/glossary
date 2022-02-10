@@ -20,7 +20,8 @@
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -90,19 +91,9 @@
 </h1>
 <p>The glossary defines common jargon you might encounter while learning R. This specialised vocabulary can help you to communicate more efficiently about coding and statistics and to search for solutions to problems.</p>
 <p>The glossary was developed to link to the <a href="https://psyteachr.github.io/" target="_blank">PsyTeachR books</a>, but you can link to it from any resource. Suggest additions or changes at the <a href="https://github.com/PsyTeachR/glossary/issues" target="_blank">github issues page</a>.</p>
-<div id="offline-access" class="section level2" number="0.1">
+<div id="cite" class="section level2" number="0.1">
 <h2>
-<span class="header-section-number">0.1</span> Offline Access<a class="anchor" aria-label="anchor" href="#offline-access"><i class="fas fa-link"></i></a>
-</h2>
-<p>You can download the glossary for offline access (although we update it frequently).</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"psyteachr/glossary"</span><span class="op">)</span>
-<span class="fu">glossary</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/glossary/man/open_glossary.html">open_glossary</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># open a local copy</span></code></pre></div>
-</div>
-<div id="cite" class="section level2" number="0.2">
-<h2>
-<span class="header-section-number">0.2</span> Cite<a class="anchor" aria-label="anchor" href="#cite"><i class="fas fa-link"></i></a>
+<span class="header-section-number">0.1</span> Cite<a class="anchor" aria-label="anchor" href="#cite"><i class="fas fa-link"></i></a>
 </h2>
 <p>Contents are made available under a CC-BY-SA license. To cite:</p>
 <p>PsyTeachR Team (2022). PsyTeachR Glossary (version 2022-02-10). Retrieved from <a href="https://psyteachr.github.io/glossary" class="uri">https://psyteachr.github.io/glossary</a>.</p>
@@ -112,6 +103,123 @@
 <a href="https://github.com/PsyTeachR/glossary/issues/created_by/jhrudey">Jessica Hrudey</a>,
 <a href="https://github.com/PsyTeachR/glossary/issues/created_by/BartlettJE">James Bartlett</a>, and
 <a href="https://github.com/PsyTeachR/glossary/issues/created_by/philmcaleer">Phil McAleer</a>.</p>
+</div>
+<div id="offline-access" class="section level2" number="0.2">
+<h2>
+<span class="header-section-number">0.2</span> Offline Access<a class="anchor" aria-label="anchor" href="#offline-access"><i class="fas fa-link"></i></a>
+</h2>
+<p>You can download the glossary for offline access (although we update it frequently).</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"psyteachr/glossary"</span><span class="op">)</span>
+<span class="fu">glossary</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/glossary/man/open_glossary.html">open_glossary</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># open a local copy</span></code></pre></div>
+</div>
+<div id="using-the-glossary" class="section level2" number="0.3">
+<h2>
+<span class="header-section-number">0.3</span> Using the glossary<a class="anchor" aria-label="anchor" href="#using-the-glossary"><i class="fas fa-link"></i></a>
+</h2>
+<p>You can use the glossary in your own R Markdown resources. The main function is <code>glossary()</code>. It has several arguments for controlling the display.</p>
+<ul>
+<li>
+<p>term: The glossary term to link to, can contain spaces</p>
+<pre class="verbatim"><code>The first `r glossary("argument")` is `term`.</code></pre>
+<p>The first <a class="glossary" target="_blank" title="A variable that provides input to a function." href="https://psyteachr.github.io/glossary/a#argument">argument</a> is <code>term</code>.</p>
+</li>
+<li>
+<p>display: The display (if different than the term)</p>
+<pre class="verbatim"><code>The `r glossary("dependent variable", "DV")` here is score.</code></pre>
+<p>The <a class="glossary" target="_blank" title="The target variable that is being analyzed, whose value is assumed to depend on other variables." href="https://psyteachr.github.io/glossary/d#dependent-variable">DV</a> here is score.</p>
+</li>
+<li>
+<p>def: The short definition to display on hover and in the glossary table; if NULL, this will be looked up from <a href="https://psyteachr.github.io/glossary/" class="uri">https://psyteachr.github.io/glossary/</a>; if "", there will be no tooltip on hover</p>
+<pre class="verbatim"><code>Here, we see a `r glossary("thingamabob", def = "Nobody knows what this is")`.</code></pre>
+<p>Here, we see a <a class="glossary" target="_blank" title="Nobody knows what this is" href="https://psyteachr.github.io/glossary/t#thingamabob">thingamabob</a>.</p>
+</li>
+<li>
+<p>link: whether to include a link to the glossary when clicked</p>
+<pre class="verbatim"><code>Numbers are `r glossary("numeric", link = FALSE)`.</code></pre>
+<p>Numbers are <a class="glossary" title="A data type representing a real decimal number or integer.">numeric</a>.</p>
+</li>
+<li>
+<p>show_def: whether to show the definition in text (instead of on hover)</p>
+<pre class="verbatim"><code>The `show_def` argument is `r glossary("logical", show_def = TRUE)`. 
+
+YAML: `r glossary("YAML", show_def = TRUE, link = FALSE)`</code></pre>
+<p>The <code>show_def</code> argument is <a class="glossary" target="_blank" href="https://psyteachr.github.io/glossary/l#logical">logical</a> (A data type representing TRUE or FALSE values.)</p>
+<p>YAML: A structured format for information</p>
+</li>
+<li>
+<p>add_to_table: whether to add to the table created by glossary_table()</p>
+<pre class="verbatim"><code>PsyTeachR books use the `r glossary("tidyverse", add_to_table = FALSE)`.</code></pre>
+<p>PsyTeachR books use the <a class="glossary" target="_blank" title="A set of R packages that help you create and work with tidy data" href="https://psyteachr.github.io/glossary/t#tidyverse">tidyverse</a>.</p>
+</li>
+</ul>
+<p>You can display a table of all previously defined words (except those exempted with <code>add_to_table = FALSE</code>) with the function <code>glossary_table()</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">glossary_table</span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<div class="inline-table"><table class="table" style="margin-left: auto; margin-right: auto;">
+<thead><tr>
+<th style="text-align:left;">
+term
+</th>
+<th style="text-align:left;">
+definition
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://psyteachr.github.io/glossary/a.html#argument" class="glossary" target="_blank">argument</a>
+</td>
+<td style="text-align:left;">
+A variable that provides input to a function.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://psyteachr.github.io/glossary/d.html#dependent-variable" class="glossary" target="_blank">dependent variable</a>
+</td>
+<td style="text-align:left;">
+The target variable that is being analyzed, whose value is assumed to depend on other variables.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://psyteachr.github.io/glossary/l.html#logical" class="glossary" target="_blank">logical</a>
+</td>
+<td style="text-align:left;">
+A data type representing TRUE or FALSE values.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://psyteachr.github.io/glossary/n.html#numeric" class="glossary" target="_blank">numeric</a>
+</td>
+<td style="text-align:left;">
+A data type representing a real decimal number or integer.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://psyteachr.github.io/glossary/t.html#thingamabob" class="glossary" target="_blank">thingamabob</a>
+</td>
+<td style="text-align:left;">
+Nobody knows what this is
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://psyteachr.github.io/glossary/y.html#yaml" class="glossary" target="_blank">yaml</a>
+</td>
+<td style="text-align:left;">
+A structured format for information
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>Reset the glossary table between sections with <code>reset_glossary()</code>.</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">reset_glossary</span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
 <script>
@@ -303,8 +411,9 @@ $( document ).ready(function() {
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#overview">Overview</a></li>
-<li><a class="nav-link" href="#offline-access"><span class="header-section-number">0.1</span> Offline Access</a></li>
-<li><a class="nav-link" href="#cite"><span class="header-section-number">0.2</span> Cite</a></li>
+<li><a class="nav-link" href="#cite"><span class="header-section-number">0.1</span> Cite</a></li>
+<li><a class="nav-link" href="#offline-access"><span class="header-section-number">0.2</span> Offline Access</a></li>
+<li><a class="nav-link" href="#using-the-glossary"><span class="header-section-number">0.3</span> Using the glossary</a></li>
 </ul>
 
       <div class="book-extra">

@@ -18,7 +18,7 @@ fig:left-join
 fig:levels-without
 fig:levels-with
 tab:long-data
-tab:unnamed-chunk-230
+tab:unnamed-chunk-237
 fig:normal-plot
 fig:img-panes
 fig:poisson-plot
@@ -30,10 +30,11 @@ fig:right-join
 fig:semi-join
 fig:sd-plot
 fig:unif-plot
-tab:unnamed-chunk-371
+tab:unnamed-chunk-378
 tab:wide-data
-offline-access
 cite
+offline-access
+using-the-glossary
 symbols
 a
 absolute-path
@@ -63,6 +64,7 @@ bivariate-normal
 block
 boolean-expression
 boolean
+bootstrap
 brackets
 c
 cache
@@ -163,6 +165,9 @@ l
 latex
 left_join
 level
+library
+library-function
+library-directory
 likert
 linear-mixed-effects-model
 list

@@ -20,7 +20,8 @@
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -120,7 +121,7 @@
 </h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing <a href="s.html#string">strings</a> of text.</dfn></p>
 <p>Examples of character data are:</p>
-<div class="sourceCode" id="cb55"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb63"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="st">"I am a string of characters"</span>
 <span class="co">#&gt; [1] "I am a string of characters"</span>
 <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"The answer is "</span>, <span class="fl">6</span><span class="op">+</span><span class="fl">6</span><span class="op">)</span>
@@ -137,7 +138,7 @@
 <p>In an <code>Rmd</code> file, you can include a chunk by surrounding the code as in the example below:</p>
 <div class="verbatim">
 <p><code>```{r chunk-name}</code></p>
-<div class="sourceCode" id="cb56"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mean_age</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">ages</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span></code></pre></div>
 <code>```</code>
 </div>
@@ -174,7 +175,7 @@
 </h2>
 <p><dfn>Changing the data type of values in a vector to a single compatible type.</dfn></p>
 <p>If you try to combine values with different <a href="d.html#data-type">data types</a> in a <a href="v.html#vector">vector</a>, they get coerced to a common type. <a href="s.html#string">Strings</a> are most dominant and will coerce any other data type into a string. <a href="d.html#double">Doubles</a> are dominant over <a href="i.html#integer">integers</a> and <a href="n.html#numeric">numeric</a> values are dominant over <a href="l.html#logical">logical</a> values.</p>
-<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb65"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2L</span>, <span class="cn">T</span>, <span class="cn">F</span><span class="op">)</span>  <span class="co"># integers and logicals become integers</span>
 <span class="co">#&gt; [1] 2 1 0</span>
 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1.5</span>, <span class="cn">T</span>, <span class="cn">F</span><span class="op">)</span> <span class="co"># doubles and logicals become doubles</span>
@@ -190,7 +191,7 @@
 <span class="header-section-number">4.9</span> comment<a class="anchor" aria-label="anchor" href="#comment"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>You can annotate <code>.R</code> files or <a href="c.html#chunk">chunks</a> in <a href="r.html#r-markdown">R Markdown</a> files with comments by prefacing each line of the comment with one or more hash symbols (<code>#</code>).</dfn></p>
-<div class="sourceCode" id="cb58"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># I'm demonstrating comments in this chunk</span>
 <span class="co"># This comment will be added to the document outline ----</span></code></pre></div>
 <p>Comments get added to the document outline if you put four or more dashes, equal signs, or hashes at the end. This is a great way to keep track of more complicated scripts.</p>
@@ -226,12 +227,12 @@
 </h2>
 <p><dfn>To combine strings or vectors.</dfn></p>
 <p>When referring to strings, concatenate means to add strings together using the function <code>paste</code> (adds a space between strings) or <code>paste0</code> (doesn't add anything between strings).</p>
-<div class="sourceCode" id="cb59"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb67"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">subject_name</span> <span class="op">&lt;-</span> <span class="st">"Lisa"</span>
 <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"Hello,"</span>, <span class="va">subject_name</span><span class="op">)</span>
 <span class="co">#&gt; [1] "Hello, Lisa"</span></code></pre></div>
 <p>When referring to other types of variables, concatenate can mean to create a vector with those variables, usually using the <code>c</code> function. For example, you could concatenate the numbers 1, 3, 6, and 10 like this: <code><a href="https://rdrr.io/r/base/c.html">c(1, 3, 6, 10)</a></code>. You can concatenate two <a href="v.html#vector">vectors</a> as well:</p>
-<div class="sourceCode" id="cb60"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">v1</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>
 <span class="va">v2</span> <span class="op">&lt;-</span> <span class="fl">11</span><span class="op">:</span><span class="fl">15</span>
 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">v1</span>, <span class="va">v2</span><span class="op">)</span>
@@ -239,7 +240,7 @@
 <div class="warning">
 <p>Remember, a <a href="v.html#vector">vector</a> can only have one <a href="d.html#data_type">data type</a>. So if you concatenate a <a href="s.html#string">string</a> vector and a <a href="n.html#numeric">numeric</a> vector, the numbers will get turned into their string versions. If you concatenate an <a href="i.html#integer">integer</a> and a <a href="d.html#double">double</a> vector, the integers will be converted to doubles.</p>
 </div>
-<div class="sourceCode" id="cb61"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">strings</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"c"</span>, <span class="st">"e"</span><span class="op">)</span>
 <span class="va">integers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1L</span>, <span class="fl">3L</span>, <span class="fl">5L</span><span class="op">)</span>
 <span class="va">doubles</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1.1</span>, <span class="fl">3.3</span>, <span class="fl">5.5</span><span class="op">)</span>
@@ -273,51 +274,73 @@
 </h2>
 <p><dfn>Having two <a href="p.html#package">packages</a> loaded that have a <a href="f.html#function">function</a> with the same name.</dfn></p>
 <p>For example, when you load the <a href="t.html#tidyverse">tidyverse</a>, you will see several warnings under the Conflicts heading.</p>
-<div class="sourceCode" id="cb62"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></code></pre></div>
 <p><code>
-── Conflicts ───── tidyverse_conflicts() ──
-<span style="color:red;">x</span> <span style="color:blue;">dplyr</span>::<span style="color:green;">filter()</span> masks <span style="color:rgb(52,101,164);">stats&lt;/span::filter()
-<span style="color:red;">x</span> <span style="color:rgb(52,101,164);">lag()</span>::<span style="color:green;">filter()</span> masks <span style="color:blue;">stats&lt;/span::lag()
-</span></span></code></p>
-<p>This means that the stats package (which is loaded by default when you start R) has functions called <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> and <code><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lag()</a></code>, but the dplyr package (part of the tidyverse), has functions with the same name.</p>
-<p>Because you loaded dplyr after stats, the functions from dplyr <a href="m.html#mask">mask</a> the functions from stats, but you can still use the functions from stats, you just need to preface them with <code>stats::</code>.</p>
-<p>Sometime, the two functions do totally different things. For example, <code><a href="https://rdrr.io/r/stats/filter.html">stats::filter()</a></code> applies linear filtering to a time series, while <code><a href="https://dplyr.tidyverse.org/reference/filter.html">dplyr::filter()</a></code> subsets a data frame.</p>
-<div class="sourceCode" id="cb63"><pre class="downlit sourceCode r">
+── Conflicts ───── tidyverse_conflicts() ──<br><span style="color:red;">x</span> <span style="color:rgb(52,101,164);">dplyr</span>::<span style="color:green;">filter()</span> masks <span style="color:rgb(52,101,164);">stats</span>::filter()<br><span style="color:red;">x</span> <span style="color:rgb(52,101,164);">lag()</span>::<span style="color:green;">filter()</span> masks <span style="color:rgb(52,101,164);">stats</span>::lag()
+</code></p>
+<p>This means that the stats package has functions called <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> and <code><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lag()</a></code>, but the dplyr package (part of the tidyverse), also has functions with the same name.</p>
+<p>Because you loaded dplyr <em>after</em> stats (which is loaded by default when you start R), the functions from dplyr <a href="m.html#mask">mask</a> the functions from stats, but you can still use the functions from stats, you just need to preface them with <code>stats::</code>.</p>
+<p>Sometime, the two functions do totally different things. There just aren't enough names to go around; this is why all packages aren't loaded by default. For example, <code><a href="https://rdrr.io/r/stats/filter.html">stats::filter()</a></code> applies linear filtering to a time series, while <code><a href="https://dplyr.tidyverse.org/reference/filter.html">dplyr::filter()</a></code> subsets a data frame.</p>
+<div class="sourceCode" id="cb71"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; Time Series:</span>
 <span class="co">#&gt; Start = 1 </span>
 <span class="co">#&gt; End = 10 </span>
 <span class="co">#&gt; Frequency = 1 </span>
 <span class="co">#&gt;  [1] NA  6  9 12 15 18 21 24 27 NA</span></code></pre></div>
-<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu">tidyr</span><span class="fu">::</span><span class="va"><a href="https://tidyr.tidyverse.org/reference/table1.html">table1</a></span>, <span class="va">country</span> <span class="op">==</span> <span class="st">"Afghanistan"</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="left">country</th>
-<th align="right">year</th>
-<th align="right">cases</th>
-<th align="right">population</th>
+<thead><tr>
+<th style="text-align:left;">
+country
+</th>
+<th style="text-align:right;">
+year
+</th>
+<th style="text-align:right;">
+cases
+</th>
+<th style="text-align:right;">
+population
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">Afghanistan</td>
-<td align="right">1999</td>
-<td align="right">745</td>
-<td align="right">19987071</td>
+<tr>
+<td style="text-align:left;">
+Afghanistan
+</td>
+<td style="text-align:right;">
+1999
+</td>
+<td style="text-align:right;">
+745
+</td>
+<td style="text-align:right;">
+19987071
+</td>
 </tr>
-<tr class="even">
-<td align="left">Afghanistan</td>
-<td align="right">2000</td>
-<td align="right">2666</td>
-<td align="right">20595360</td>
+<tr>
+<td style="text-align:left;">
+Afghanistan
+</td>
+<td style="text-align:right;">
+2000
+</td>
+<td style="text-align:right;">
+2666
+</td>
+<td style="text-align:right;">
+20595360
+</td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <p>In other cases, a package will name a function the same as a base R function on purpose, in order to do the same thing with more features. For example, <code><a href="https://rdrr.io/r/base/sets.html">base::setdiff()</a></code> and <code><a href="https://generics.r-lib.org/reference/setops.html">dplyr::setdiff()</a></code> both return rows from the first table that are not in the second table, but the base R version requires columns to be in the same order, while the dplyr version does not.</p>
-<div class="sourceCode" id="cb65"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># define overlapping tables</span>
 <span class="va">t1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>a <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, b <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span>
 <span class="va">t2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>b <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">4</span>, a <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span>
@@ -326,38 +349,62 @@
 <span class="fu">base</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/base/sets.html">setdiff</a></span><span class="op">(</span><span class="va">t1</span>, <span class="va">t2</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">a</th>
-<th align="right">b</th>
+<thead><tr>
+<th style="text-align:right;">
+a
+</th>
+<th style="text-align:right;">
+b
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="right">1</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="right">2</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="right">3</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
 </tr>
 </tbody>
 </table></div>
 </div>
-<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># concludes only 1 t1 row is not in t2</span>
 <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/setops.html">setdiff</a></span><span class="op">(</span><span class="va">t1</span>, <span class="va">t2</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">a</th>
-<th align="right">b</th>
+<thead><tr>
+<th style="text-align:right;">
+a
+</th>
+<th style="text-align:right;">
+b
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="right">1</td>
-<td align="right">1</td>
+<tbody><tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr></tbody>
 </table></div>
 </div>
@@ -376,7 +423,7 @@
 <span class="header-section-number">4.17</span> container<a class="anchor" aria-label="anchor" href="#container"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A data structure that aggregates data, such as a <a href="v.html#vector">vector</a>, <a href="l.html#list">list</a>, <a href="m.html#matrix">matrix</a>, or <a href="d.html#data-frame">data frame</a></dfn></p>
-<div class="sourceCode" id="cb67"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb75"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># vector</span>
 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span><span class="op">)</span> 
 <span class="co">#&gt; [1] 1 2 3 4</span>
@@ -402,30 +449,54 @@
 <span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">id</th>
-<th align="left">name</th>
+<thead><tr>
+<th style="text-align:right;">
+id
+</th>
+<th style="text-align:left;">
+name
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">Lisa</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Lisa
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">Phil</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Phil
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">Helena</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Helena
+</td>
 </tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left">Rachel</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Rachel
+</td>
 </tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="left">Jack</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Jack
+</td>
 </tr>
 </tbody>
 </table></div>
@@ -447,7 +518,7 @@
 </h2>
 <p><dfn><a href="p.html#parameter">Parameters</a> showing how a set of <a href="v.html#vector">vectors</a> are <a href="c.html#correlation">correlated</a>.</dfn></p>
 <p>This is set up as a <a href="m.html#matrix">matrix</a> with 1.0 along the diagonal, meaning that every variable is perfectly correlated with itself.</p>
-<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   A <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>,
   B <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, <span class="co"># uncorrelated with A</span>
@@ -483,7 +554,7 @@ Figure 4.1: Different Correlations (n = 100)
 </h2>
 <p><dfn><a href="p.html#parameter">Parameters</a> showing how a set of <a href="v.html#vector">vectors</a> vary and are <a href="c.html#correlation">correlated</a>.</dfn></p>
 <p>The covariance <a href="m.html#matrix">matrix</a> is related to the <a href="c.html#correlation-matrix">correlation matrix</a>, but also incorporates information about the <a href="s.html#standard-deviation">standard deviations</a> of all the variables.</p>
-<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/rnorm_multi.html">rnorm_multi</a></span><span class="op">(</span>
   n <span class="op">=</span> <span class="fl">100</span>,
   mu <span class="op">=</span> <span class="fl">0</span>,
@@ -503,7 +574,7 @@ Figure 4.1: Different Correlations (n = 100)
 <span class="co">#&gt; B 1.0 4 3.0</span>
 <span class="co">#&gt; C 1.5 3 9.0</span></code></pre></div>
 <p>The matrix of the products of the standard deviations is called "sigma". If you multiply this by the correlation matrix, you get the covariance matrix.</p>
-<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
 <code class="sourceCode R">  <span class="co"># multiply SDs    A    B    C</span>
 <span class="va">sigma</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">*</span><span class="fl">1</span>, <span class="fl">1</span><span class="op">*</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">*</span><span class="fl">3</span>,  <span class="co"># A</span>
                   <span class="fl">2</span><span class="op">*</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">*</span><span class="fl">2</span>, <span class="fl">2</span><span class="op">*</span><span class="fl">3</span>,  <span class="co"># B</span>
@@ -534,7 +605,7 @@ Figure 4.1: Different Correlations (n = 100)
 <p>Remember that internal reliability is not the same as external reliability. A scale can have a very high Cronbach's alpha, meaning it measures <em>something</em> well, but that thing may not be what you meant to measure.</p>
 </div>
 <p>We can use the function <code><a href="https://rdrr.io/pkg/psych/man/alpha.html">psych::alpha()</a></code> to calculate Cronbach's alpha.</p>
-<div class="sourceCode" id="cb71"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># read in data from the 3 domains of disgust scale</span>
 <span class="va">disgust</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"https://psyteachr.github.io/msc-data-skills/data/disgust.csv"</span><span class="op">)</span>
   
@@ -543,102 +614,229 @@ Figure 4.1: Different Correlations (n = 100)
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu">psych</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/psych/man/alpha.html">alpha</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>You often just want to report the raw or standard alpha.</p>
-<div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">pathogen_alpha</span><span class="op">$</span><span class="va">total</span><span class="op">$</span><span class="va">raw_alpha</span>
 <span class="co">#&gt; [1] 0.7379495</span>
 <span class="va">pathogen_alpha</span><span class="op">$</span><span class="va">total</span><span class="op">$</span><span class="va">std.alpha</span>
 <span class="co">#&gt; [1] 0.7441191</span></code></pre></div>
 <p>The <code>item.stats</code> section gives you some <a href="d.html#descriptive">descriptive</a> statistics about each item (see <code><a href="https://rdrr.io/pkg/psych/man/alpha.html">?psych::alpha</a></code> for more info).</p>
-<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb81"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">pathogen_alpha</span><span class="op">$</span><span class="va">item.stats</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="left"></th>
-<th align="right">n</th>
-<th align="right">raw.r</th>
-<th align="right">std.r</th>
-<th align="right">r.cor</th>
-<th align="right">r.drop</th>
-<th align="right">mean</th>
-<th align="right">sd</th>
+<thead><tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+n
+</th>
+<th style="text-align:right;">
+raw.r
+</th>
+<th style="text-align:right;">
+std.r
+</th>
+<th style="text-align:right;">
+r.cor
+</th>
+<th style="text-align:right;">
+r.drop
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+sd
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">pathogen1</td>
-<td align="right">19668</td>
-<td align="right">0.6035673</td>
-<td align="right">0.6264342</td>
-<td align="right">0.5293053</td>
-<td align="right">0.4530070</td>
-<td align="right">4.443156</td>
-<td align="right">1.457303</td>
+<tr>
+<td style="text-align:left;">
+pathogen1
+</td>
+<td style="text-align:right;">
+19668
+</td>
+<td style="text-align:right;">
+0.6035673
+</td>
+<td style="text-align:right;">
+0.6264342
+</td>
+<td style="text-align:right;">
+0.5293053
+</td>
+<td style="text-align:right;">
+0.4530070
+</td>
+<td style="text-align:right;">
+4.443156
+</td>
+<td style="text-align:right;">
+1.457303
+</td>
 </tr>
-<tr class="even">
-<td align="left">pathogen2</td>
-<td align="right">19683</td>
-<td align="right">0.6371098</td>
-<td align="right">0.6287978</td>
-<td align="right">0.5371302</td>
-<td align="right">0.4610671</td>
-<td align="right">3.254026</td>
-<td align="right">1.745723</td>
+<tr>
+<td style="text-align:left;">
+pathogen2
+</td>
+<td style="text-align:right;">
+19683
+</td>
+<td style="text-align:right;">
+0.6371098
+</td>
+<td style="text-align:right;">
+0.6287978
+</td>
+<td style="text-align:right;">
+0.5371302
+</td>
+<td style="text-align:right;">
+0.4610671
+</td>
+<td style="text-align:right;">
+3.254026
+</td>
+<td style="text-align:right;">
+1.745723
+</td>
 </tr>
-<tr class="odd">
-<td align="left">pathogen3</td>
-<td align="right">19687</td>
-<td align="right">0.6489288</td>
-<td align="right">0.6599706</td>
-<td align="right">0.5842526</td>
-<td align="right">0.4917248</td>
-<td align="right">3.171941</td>
-<td align="right">1.616815</td>
+<tr>
+<td style="text-align:left;">
+pathogen3
+</td>
+<td style="text-align:right;">
+19687
+</td>
+<td style="text-align:right;">
+0.6489288
+</td>
+<td style="text-align:right;">
+0.6599706
+</td>
+<td style="text-align:right;">
+0.5842526
+</td>
+<td style="text-align:right;">
+0.4917248
+</td>
+<td style="text-align:right;">
+3.171941
+</td>
+<td style="text-align:right;">
+1.616815
+</td>
 </tr>
-<tr class="even">
-<td align="left">pathogen4</td>
-<td align="right">19683</td>
-<td align="right">0.6217909</td>
-<td align="right">0.6168016</td>
-<td align="right">0.5156972</td>
-<td align="right">0.4397615</td>
-<td align="right">3.657573</td>
-<td align="right">1.755883</td>
+<tr>
+<td style="text-align:left;">
+pathogen4
+</td>
+<td style="text-align:right;">
+19683
+</td>
+<td style="text-align:right;">
+0.6217909
+</td>
+<td style="text-align:right;">
+0.6168016
+</td>
+<td style="text-align:right;">
+0.5156972
+</td>
+<td style="text-align:right;">
+0.4397615
+</td>
+<td style="text-align:right;">
+3.657573
+</td>
+<td style="text-align:right;">
+1.755883
+</td>
 </tr>
-<tr class="odd">
-<td align="left">pathogen5</td>
-<td align="right">19678</td>
-<td align="right">0.6384423</td>
-<td align="right">0.6657726</td>
-<td align="right">0.5920388</td>
-<td align="right">0.4997309</td>
-<td align="right">4.282397</td>
-<td align="right">1.435962</td>
+<tr>
+<td style="text-align:left;">
+pathogen5
+</td>
+<td style="text-align:right;">
+19678
+</td>
+<td style="text-align:right;">
+0.6384423
+</td>
+<td style="text-align:right;">
+0.6657726
+</td>
+<td style="text-align:right;">
+0.5920388
+</td>
+<td style="text-align:right;">
+0.4997309
+</td>
+<td style="text-align:right;">
+4.282397
+</td>
+<td style="text-align:right;">
+1.435962
+</td>
 </tr>
-<tr class="even">
-<td align="left">pathogen6</td>
-<td align="right">19655</td>
-<td align="right">0.6120328</td>
-<td align="right">0.5923052</td>
-<td align="right">0.4785793</td>
-<td align="right">0.4119616</td>
-<td align="right">3.808751</td>
-<td align="right">1.878335</td>
+<tr>
+<td style="text-align:left;">
+pathogen6
+</td>
+<td style="text-align:right;">
+19655
+</td>
+<td style="text-align:right;">
+0.6120328
+</td>
+<td style="text-align:right;">
+0.5923052
+</td>
+<td style="text-align:right;">
+0.4785793
+</td>
+<td style="text-align:right;">
+0.4119616
+</td>
+<td style="text-align:right;">
+3.808751
+</td>
+<td style="text-align:right;">
+1.878335
+</td>
 </tr>
-<tr class="odd">
-<td align="left">pathogen7</td>
-<td align="right">19692</td>
-<td align="right">0.6331624</td>
-<td align="right">0.6061906</td>
-<td align="right">0.5020210</td>
-<td align="right">0.4326954</td>
-<td align="right">3.493500</td>
-<td align="right">1.930726</td>
+<tr>
+<td style="text-align:left;">
+pathogen7
+</td>
+<td style="text-align:right;">
+19692
+</td>
+<td style="text-align:right;">
+0.6331624
+</td>
+<td style="text-align:right;">
+0.6061906
+</td>
+<td style="text-align:right;">
+0.5020210
+</td>
+<td style="text-align:right;">
+0.4326954
+</td>
+<td style="text-align:right;">
+3.493500
+</td>
+<td style="text-align:right;">
+1.930726
+</td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <p>You can look at the <code>alpha.drop</code> section to see what the alpha would be if you dropped an item. If we add an item from the moral disgust scale, you can see that the alpha increases if you drop it.</p>
-<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb82"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mixed_alpha</span> <span class="op">&lt;-</span> <span class="va">disgust</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span>, <span class="va">moral1</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu">psych</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/psych/man/alpha.html">alpha</a></span><span class="op">(</span><span class="op">)</span>
@@ -646,51 +844,104 @@ Figure 4.1: Different Correlations (n = 100)
 <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">mixed_alpha</span><span class="op">$</span><span class="va">alpha.drop</span>, <span class="va">raw_alpha</span>, <span class="va">std.alpha</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="left"></th>
-<th align="right">raw_alpha</th>
-<th align="right">std.alpha</th>
+<thead><tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+raw_alpha
+</th>
+<th style="text-align:right;">
+std.alpha
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">pathogen1</td>
-<td align="right">0.6776276</td>
-<td align="right">0.6873220</td>
+<tr>
+<td style="text-align:left;">
+pathogen1
+</td>
+<td style="text-align:right;">
+0.6776276
+</td>
+<td style="text-align:right;">
+0.6873220
+</td>
 </tr>
-<tr class="even">
-<td align="left">pathogen2</td>
-<td align="right">0.6770689</td>
-<td align="right">0.6903431</td>
+<tr>
+<td style="text-align:left;">
+pathogen2
+</td>
+<td style="text-align:right;">
+0.6770689
+</td>
+<td style="text-align:right;">
+0.6903431
+</td>
 </tr>
-<tr class="odd">
-<td align="left">pathogen3</td>
-<td align="right">0.6693926</td>
-<td align="right">0.6799724</td>
+<tr>
+<td style="text-align:left;">
+pathogen3
+</td>
+<td style="text-align:right;">
+0.6693926
+</td>
+<td style="text-align:right;">
+0.6799724
+</td>
 </tr>
-<tr class="even">
-<td align="left">pathogen4</td>
-<td align="right">0.6787991</td>
-<td align="right">0.6911267</td>
+<tr>
+<td style="text-align:left;">
+pathogen4
+</td>
+<td style="text-align:right;">
+0.6787991
+</td>
+<td style="text-align:right;">
+0.6911267
+</td>
 </tr>
-<tr class="odd">
-<td align="left">pathogen5</td>
-<td align="right">0.6704759</td>
-<td align="right">0.6776676</td>
+<tr>
+<td style="text-align:left;">
+pathogen5
+</td>
+<td style="text-align:right;">
+0.6704759
+</td>
+<td style="text-align:right;">
+0.6776676
+</td>
 </tr>
-<tr class="even">
-<td align="left">pathogen6</td>
-<td align="right">0.6860804</td>
-<td align="right">0.6980331</td>
+<tr>
+<td style="text-align:left;">
+pathogen6
+</td>
+<td style="text-align:right;">
+0.6860804
+</td>
+<td style="text-align:right;">
+0.6980331
+</td>
 </tr>
-<tr class="odd">
-<td align="left">pathogen7</td>
-<td align="right">0.6823258</td>
-<td align="right">0.6950028</td>
+<tr>
+<td style="text-align:left;">
+pathogen7
+</td>
+<td style="text-align:right;">
+0.6823258
+</td>
+<td style="text-align:right;">
+0.6950028
+</td>
 </tr>
-<tr class="even">
-<td align="left">moral1</td>
-<td align="right">0.7379495</td>
-<td align="right">0.7441191</td>
+<tr>
+<td style="text-align:left;">
+moral1
+</td>
+<td style="text-align:right;">
+0.7379495
+</td>
+<td style="text-align:right;">
+0.7441191
+</td>
 </tr>
 </tbody>
 </table></div>

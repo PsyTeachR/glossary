@@ -1,0 +1,56 @@
+## library
+
+<dfn>The [function used to load packages](l.html#library-function) or the [directory where packages are stored](l.html#library-directory).</dfn>
+
+
+## library (function) {#library-function}
+
+<dfn>The function used to load packages.</dfn>
+
+You can use the `library()` function to load [packages](p.html#package). This makes the functions in the package available to use without prefixing them with the package name.
+
+If you try to use a non-prefixed function without loading its package, you will get an error like this:
+
+```{r, include = FALSE}
+# make sure glue isn't loaded
+library(glue)
+detach("package:glue")
+```
+
+
+```{r, error = TRUE}
+glue("My name is {name}", name = "Lisa")
+```
+
+
+You can use this function with its package prefix (helpfully, the `glue()` function comes from the glue package).
+
+```{r}
+glue::glue("My name is {name}", name = "Lisa")
+```
+
+Or you can load the package with `library()` and use it without the prefix.
+
+```{r, message=FALSE}
+library(glue)
+
+glue("My name is {name}", name = "Lisa")
+```
+
+## library (directory) {#library-directory}
+
+<dfn>The [directory](d.html#directory) where [packages](p.html#package) are stored.</dfn>
+
+Find out the location(s) where your packages are stored with the following code:
+
+```{r}
+.libPaths()
+```
+
+If you have problems installing packages, you may need to change your library location to a directory that you have permission to write to. You can do this by setting the library path.
+
+```{r, eval = FALSE}
+# use a path relevant to your computer
+.libPaths("/Users/myaccount/R/Library")
+```
+
