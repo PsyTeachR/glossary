@@ -1,0 +1,50 @@
+## atomic
+
+<dfn>Only containing [objects](o.html#object) with the same [data type](d.html#data-type) (e.g., all [numeric](n.html#numeric) or [character](c.html#character)).</dfn>
+
+[Vectors](v.html#vector) are atomic data structures in R.
+
+```{r}
+a <- c(1, 4, 32)
+b <- c("somebody", "once", "told me")
+class(a)
+class(b)
+```
+
+If you try to mix data types in an atomic vector, they will be [coerced](c.html#coerce) to be the same type. (Note that 32 becomes "32" so it can be in the same vector as a character object).
+
+```{r}
+c(32, TRUE, "eighteen")
+```
+
+Another feature of vectors that makes them atomic is that they are always flat. If you embed vectors within vectors, they will be flattened.
+
+```{r}
+c(7, c(1, 4, 32), 2, 6)
+```
+
+[Lists](l.html#list), on the other hand, can be nested.
+
+```{r}
+list(7, c(1, 4, 32), 2, 6) %>% str()
+```
+
+
+If you try to extract objects inside an atomic vector, you need to use [brackets](b.html#brackets) `[]`. This can be with an index or a name. Single brackets can return one or more elements, and include names, while double brackets can only return one element and don't have names.
+
+```{r}
+my_vec <- c(x = 3, y = 1, z = 4)
+my_vec[2]
+my_vec["y"]
+my_vec[["y"]]
+```
+
+
+You cannot use the $ operator on an atomic vector, or you will get this very common error.
+
+```{r, error = TRUE}
+my_vec$y
+```
+
+See the [Vectors chapter](https://adv-r.hadley.nz/vectors-chap.html#atomic-vectors) of Advanced R for more advanced discussion of atomic vectors.
+

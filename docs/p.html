@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1.9000/transition.js"></script><script src="libs/bs3compat-0.3.1.9000/tabs.js"></script><script src="libs/bs3compat-0.3.1.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -96,7 +96,7 @@
 </h2>
 <p><dfn>The probability of seeing an effect at least as extreme as what you have, if the real effect was the value you are testing against (e.g., a null effect)</dfn></p>
 <p>For example, if you used a binomial test to test against a chance probability of 1/2 (e.g., the probability of heads when flipping a fair coin), then a p-value of 0.37 means that you could expect to see effects at least as extreme as your data (i.e., 55 or more heads <strong>or</strong> tails) 37% of the time just by chance alone.</p>
-<div class="sourceCode" id="cb138"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb149"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># test how likely 55 heads (or a more extreme value)</span>
 <span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span>
 <span class="fu"><a href="https://rdrr.io/r/stats/binom.test.html">binom.test</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">100</span>, <span class="fl">0.5</span><span class="op">)</span>
@@ -104,8 +104,7 @@
 <span class="co">#&gt;  Exact binomial test</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; data:  55 and 100</span>
-<span class="co">#&gt; number of successes = 55, number of trials = 100, p-value =</span>
-<span class="co">#&gt; 0.3682</span>
+<span class="co">#&gt; number of successes = 55, number of trials = 100, p-value = 0.3682</span>
 <span class="co">#&gt; alternative hypothesis: true probability of success is not equal to 0.5</span>
 <span class="co">#&gt; 95 percent confidence interval:</span>
 <span class="co">#&gt;  0.4472802 0.6496798</span>
@@ -113,7 +112,7 @@
 <span class="co">#&gt; probability of success </span>
 <span class="co">#&gt;                   0.55</span></code></pre></div>
 <p>P-values can be one-tailed or two-tailed. The example above if two-tailed because we didn't specify a direction and are testing whether there were more <strong>or</strong> fewer heads than expected by chance with a fair coin. The example below is one-tailed, and indicates that you have an 18% chance of getting 55 <strong>or more</strong> heads when flipping a fair coin 100 times.</p>
-<div class="sourceCode" id="cb139"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb150"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># test how likely 55 (or more) heads</span>
 <span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span>
 <span class="fu"><a href="https://rdrr.io/r/stats/binom.test.html">binom.test</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">100</span>, <span class="fl">0.5</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span>
@@ -121,8 +120,7 @@
 <span class="co">#&gt;  Exact binomial test</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; data:  55 and 100</span>
-<span class="co">#&gt; number of successes = 55, number of trials = 100, p-value =</span>
-<span class="co">#&gt; 0.1841</span>
+<span class="co">#&gt; number of successes = 55, number of trials = 100, p-value = 0.1841</span>
 <span class="co">#&gt; alternative hypothesis: true probability of success is greater than 0.5</span>
 <span class="co">#&gt; 95 percent confidence interval:</span>
 <span class="co">#&gt;  0.4628896 1.0000000</span>
@@ -131,7 +129,7 @@
 <span class="co">#&gt;                   0.55</span></code></pre></div>
 <p>You can see that the p-value is half of the two-tailed value; this is true for symmetric distributions like the <a href="b.html#binomial-distribution">binomial distribution</a>, but not for all distributions.</p>
 <p>If you do a one-tailed test using "less", the p-value is much higher, indicating that you have an 86% chance of getting 55 <strong>or fewer</strong> heads when flipping a fair coin 100 times.</p>
-<div class="sourceCode" id="cb140"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># test how likely 55 (or fewer) heads</span>
 <span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span>
 <span class="fu"><a href="https://rdrr.io/r/stats/binom.test.html">binom.test</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">100</span>, <span class="fl">0.5</span>, alternative <span class="op">=</span> <span class="st">"less"</span><span class="op">)</span>
@@ -139,8 +137,7 @@
 <span class="co">#&gt;  Exact binomial test</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; data:  55 and 100</span>
-<span class="co">#&gt; number of successes = 55, number of trials = 100, p-value =</span>
-<span class="co">#&gt; 0.8644</span>
+<span class="co">#&gt; number of successes = 55, number of trials = 100, p-value = 0.8644</span>
 <span class="co">#&gt; alternative hypothesis: true probability of success is less than 0.5</span>
 <span class="co">#&gt; 95 percent confidence interval:</span>
 <span class="co">#&gt;  0.0000000 0.6348377</span>
@@ -154,9 +151,9 @@
 <span class="header-section-number">17.2</span> package<a class="anchor" aria-label="anchor" href="#package"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A group of R functions.</dfn></p>
-<p>Many useful functions are built into R and available by default whenever you start it up. But some of the most powerful things you can do with R require packages of functions that are written by the community. The functions in these packages aren't available until you install the package (using <code>install.packages("package_name")</code> or clicking Install on the Packages pane; this only needs to be done if the package isn't already installed). Once that package is installed (kind of like downloading an app to your phone), you can use it in any script by loading that package as a library at the top of your script (e.g., (<code><a href="https://ggplot2.tidyverse.org">library(ggplot2)</a></code>).</p>
+<p>Many useful functions are built into R and available by default whenever you start it up. But some of the most powerful things you can do with R require packages of functions that are written by the community. The functions in these packages aren't available until you install the package (using <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("package_name")</a></code> or clicking Install on the Packages pane; this only needs to be done if the package isn't already installed). Once that package is installed (kind of like downloading an app to your phone), you can use it in any script by loading that package as a library at the top of your script (e.g., (<code><a href="https://ggplot2.tidyverse.org">library(ggplot2)</a></code>).</p>
 <div class="info">
-<p>You can alternatively type the package name and two colons before any function from that package to use it without loading all of its functions into the library (e.g., <code><a href="https://rdrr.io/pkg/ggplot2/man/geom_histogram.html">ggplot2::geom_histogram()</a></code>). This sort of notation is also used to disambiguate function names if two packages have functions with the same names.</p>
+<p>You can alternatively type the package name and two colons before any function from that package to use it without loading all of its functions into the library (e.g., <code><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">ggplot2::geom_histogram()</a></code>). This sort of notation is also used to disambiguate function names if two packages have functions with the same names.</p>
 </div>
 
 </div>
@@ -196,11 +193,11 @@ Figure 17.1: Pane layout
 </h2>
 <p><dfn>A string representing the location of a file or <a href="d.html#directory">directory</a>.</dfn></p>
 <p>A file path can be <a href="r.html#relative-path">relative</a> to the <a href="w.html#working-directory">working directory</a> or <a href="a.html#absolute-path">absolute</a>.</p>
-<div class="sourceCode" id="cb141"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># list all files in the images directory, </span>
 <span class="co"># use relative path</span>
 <span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"images/"</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb142"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb153"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># list all files on the Desktop, </span>
 <span class="co"># use absolute path</span>
 <span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"/Users/myaccount/Desktop/"</span><span class="op">)</span></code></pre></div>
@@ -211,9 +208,9 @@ Figure 17.1: Pane layout
 <span class="header-section-number">17.7</span> pipe<a class="anchor" aria-label="anchor" href="#pipe"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A way to order your code in a more readable format using the symbol %&gt;%</dfn></p>
-<p>The symbol <code>%&gt;%</code> takes the <a href="o.html#object">object</a> created by a function and sends it to the next function. By default, it will be used as the first <a href="a.html#argument">argument</a>, and most <a href="t.html#tidyverse">tidyverse</a> functions are optimised for this, but you can also include the result as another argument using <code>.</code> (see the example below).</p>
+<p>The symbol <code><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></code> takes the <a href="o.html#object">object</a> created by a function and sends it to the next function. By default, it will be used as the first <a href="a.html#argument">argument</a>, and most <a href="t.html#tidyverse">tidyverse</a> functions are optimised for this, but you can also include the result as another argument using <code>.</code> (see the example below).</p>
 <p>Instead of making a new object for each step:</p>
-<div class="sourceCode" id="cb143"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb154"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># this makes 4 unnecessary objects</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span>         <span class="co"># simulate 20 values</span>
 <span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>         <span class="co"># 1-sample t-test</span>
@@ -222,21 +219,21 @@ Figure 17.1: Pane layout
 <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"p = "</span>, <span class="va">rounded_p</span><span class="op">)</span>  <span class="co"># format</span>
 <span class="co">#&gt; [1] "p =  0.363"</span></code></pre></div>
 <p>Or nesting functions:</p>
-<div class="sourceCode" id="cb144"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb155"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># this is unreadable; never do this</span>
 <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"p = "</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span><span class="op">)</span><span class="op">$</span><span class="va">p.value</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; [1] "p =  0.363"</span></code></pre></div>
 <p>You can pipe the results of each function to the next function:</p>
-<div class="sourceCode" id="cb145"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span>         <span class="co"># simulate 20 values</span>
-  <span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span>        <span class="co"># 1-sample t-test</span>
-  <span class="fu">`[[`</span><span class="op">(</span><span class="st">"p.value"</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span> <span class="co"># extract p-value, `[[`(data, "x") is the same as data[["x"]]</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span>        <span class="co"># round to 3 digits</span>
+<div class="sourceCode" id="cb156"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span> <span class="op">%&gt;%</span>         <span class="co"># simulate 20 values</span>
+  <span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>        <span class="co"># 1-sample t-test</span>
+  <span class="fu">`[[`</span><span class="op">(</span><span class="st">"p.value"</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="co"># extract p-value, `[[`(data, "x") is the same as data[["x"]]</span>
+  <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span> <span class="op">%&gt;%</span>        <span class="co"># round to 3 digits</span>
   <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"p = "</span>, <span class="va">.</span><span class="op">)</span>    <span class="co"># format </span>
 <span class="co">#&gt; [1] "p =  0.363"</span>
                       <span class="co"># use . to represent the previous data if it's not the first argument</span></code></pre></div>
 <p>See a more <a href="https://debruine.github.io/posts/pipes/" target="_blank">detailed example</a>.</p>
-<p>The <a href="symbols.html">symbol</a> <code>|</code> is also called a "pipe" and means "OR" in R, although it has other meanings that are more similar to the <code>%&gt;%</code> pipe in some other programming languages.</p>
+<p>The <a href="symbols.html">symbol</a> <code><a href="https://rdrr.io/r/base/Logic.html">|</a></code> is also called a "pipe" and means "OR" in R, although it has other meanings that are more similar to the <code><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></code> pipe in some other programming languages.</p>
 
 </div>
 <div id="poisson-distribution" class="section level2" number="17.8">
@@ -244,7 +241,7 @@ Figure 17.1: Pane layout
 <span class="header-section-number">17.8</span> Poisson distribution<a class="anchor" aria-label="anchor" href="#poisson-distribution"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="d.html#distribution">distribution</a> that models independent events happening over a unit of time</dfn></p>
-<div class="sourceCode" id="cb146"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb157"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">lambda</span> <span class="op">&lt;-</span> <span class="fl">3</span> <span class="co"># mean number of events</span>
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">rpois</a></span><span class="op">(</span><span class="fl">10000</span>, <span class="va">lambda</span><span class="op">)</span></code></pre></div>
 <div class="figure" style="text-align: center">
@@ -566,7 +563,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-09.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

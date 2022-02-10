@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1.9000/transition.js"></script><script src="libs/bs3compat-0.3.1.9000/tabs.js"></script><script src="libs/bs3compat-0.3.1.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -97,7 +97,7 @@
 <p><dfn>A single number or piece of data.</dfn></p>
 <p>In a tidy dataset, each cell contains only one value.</p>
 <p>The <code>age</code> column contains 3 values: mean, minimum and maximum.</p>
-<div class="sourceCode" id="cb188"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb202"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyr.tidyverse.org">tidyr</a></span><span class="op">)</span>
 
@@ -121,9 +121,9 @@
 </tr>
 </tbody>
 </table></div>
-<div class="sourceCode" id="cb189"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">tidy</span> <span class="op">&lt;-</span> <span class="va">untidy</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span>
-  <span class="fu"><a href="https://rdrr.io/pkg/tidyr/man/separate.html">separate</a></span><span class="op">(</span><span class="va">age</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"mean"</span>, <span class="st">"min"</span>, <span class="st">"max"</span><span class="op">)</span>, 
+<div class="sourceCode" id="cb203"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">tidy</span> <span class="op">&lt;-</span> <span class="va">untidy</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/separate.html">separate</a></span><span class="op">(</span><span class="va">age</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"mean"</span>, <span class="st">"min"</span>, <span class="st">"max"</span><span class="op">)</span>, 
            sep <span class="op">=</span> <span class="st">"( \\[|-|\\])"</span>,
            extra <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
@@ -162,16 +162,16 @@
 <span class="header-section-number">23.3</span> variance<a class="anchor" aria-label="anchor" href="#variance"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="d.html#descriptive">descriptive</a> statistic for how much an average data point varies from the mean.</dfn></p>
-<div class="sourceCode" id="cb190"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb204"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span>,<span class="fl">5</span>,<span class="fl">6</span>,<span class="fl">7</span>,<span class="fl">8</span>,<span class="fl">9</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">var</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>
 <span class="co">#&gt; [1] 7.5</span></code></pre></div>
 <p>Variance is equal to <a href="s.html#standard-deviation">standard deviation</a> squared.</p>
-<div class="sourceCode" id="cb191"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb205"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span>
 <span class="co">#&gt; [1] 7.5</span></code></pre></div>
-<p>You calculate variance by summing the squared differences between each data point and their mean (<code>sum(diff^2)</code>) and dividing this by the number of data points minus 1 (<code>(n-1)</code>)</p>
-<div class="sourceCode" id="cb192"><pre class="downlit sourceCode r">
+<p>You calculate variance by summing the squared differences between each data point and their mean (<code><a href="https://rdrr.io/r/base/sum.html">sum(diff^2)</a></code>) and dividing this by the number of data points minus 1 (<code>(n-1)</code>)</p>
+<div class="sourceCode" id="cb206"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">m</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>   <span class="co"># calculate the mean</span>
 <span class="va">diff</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op">-</span> <span class="va">m</span>  <span class="co"># difference between each data point and the mean</span>
 <span class="va">n</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span> <span class="co"># number of data points</span>
@@ -185,7 +185,7 @@
 </h2>
 <p><dfn>A type of data structure that collects values with the same <a href="d.html#data-type">data type</a>, like T/F values, numbers, or strings.</dfn></p>
 <p>The following things are examples of vectors:</p>
-<div class="sourceCode" id="cb193"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb207"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># use the c() function to make a vector of strings or numbers</span>
 <span class="va">ingredients</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"vodka"</span>, <span class="st">"gin"</span>, <span class="st">"rum"</span>, <span class="st">"tequila"</span>, <span class="st">"triple sec"</span>, 
                       <span class="st">"orange juice"</span>, <span class="st">"coke"</span>, <span class="st">"sour mix"</span><span class="op">)</span>
@@ -196,7 +196,7 @@
 <span class="va">likert</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">7</span></code></pre></div>
 <p><a href="e.html#element">Elements</a> are always the same data type. If you try to combine values with different data types, they are <a href="c.html#coercion">coerced</a> into a common data type. Use a <a href="l.html#list">list</a> to combine values with different types without coercion.</p>
 <p>The variable <code>letters</code> is a built-in vector with the Latin letters in order. You can select part of a vector by putting the numeric location (or <a href="i.html#index">index</a>) of what <a href="e.html#element">element</a> you want inside of square brackets after the vector. You can even put a vector of numbers inside the square <a href="b.html#brackets">brackets</a> to select several elements.</p>
-<div class="sourceCode" id="cb194"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb208"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">letters</span><span class="op">[</span><span class="fl">26</span><span class="op">]</span>
 <span class="co">#&gt; [1] "z"</span>
 <span class="va">letters</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
@@ -211,7 +211,7 @@
 <span class="header-section-number">23.5</span> vectorized<a class="anchor" aria-label="anchor" href="#vectorized"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>An <a href="o.html#operator">operator</a> or <a href="f.html#function">function</a> that acts on each <a href="e.html#element">element</a> in a <a href="v.html#vector">vector</a></dfn></p>
-<div class="sourceCode" id="cb195"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb209"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Add 10 to each element in the vector a</span>
 <span class="va">a</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>
 <span class="va">a</span> <span class="op">+</span> <span class="fl">10</span>
@@ -445,7 +445,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-09.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1.9000/transition.js"></script><script src="libs/bs3compat-0.3.1.9000/tabs.js"></script><script src="libs/bs3compat-0.3.1.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -103,23 +103,30 @@
 <span class="co">#&gt; [1] "/Users/lisad/rproj/psyteachr/index.Rmd"</span></code></pre></div>
 
 </div>
-<div id="alpha" class="section level2" number="2.2">
+<div id="adjusted-r-squared" class="section level2" number="2.2">
 <h2>
-<span class="header-section-number">2.2</span> alpha<a class="anchor" aria-label="anchor" href="#alpha"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.2</span> adjusted R-squared<a class="anchor" aria-label="anchor" href="#adjusted-r-squared"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>A modified version of <a href="r.html#r-squared">R-squared</a> adjusted for the number of predictors in the model.</dfn></p>
+
+</div>
+<div id="alpha" class="section level2" number="2.3">
+<h2>
+<span class="header-section-number">2.3</span> alpha<a class="anchor" aria-label="anchor" href="#alpha"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>(<a href="a.html#alpha-stats">stats</a>) The cutoff value for making a decision to reject the null hypothesis; (<a href="a.html#alpha-graphics">graphics</a>) A value between 0 and 1 used to control the levels of transparency in a plot</dfn></p>
 <p>Can also be a parameter in the <a href="b.html#beta-distribution">beta distribution</a> or refer to <a href="c.html#cronbachs-alpha">Cronbach's alpha</a>.</p>
 </div>
-<div id="alpha-stats" class="section level2" number="2.3">
+<div id="alpha-stats" class="section level2" number="2.4">
 <h2>
-<span class="header-section-number">2.3</span> alpha (stats)<a class="anchor" aria-label="anchor" href="#alpha-stats"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.4</span> alpha (stats)<a class="anchor" aria-label="anchor" href="#alpha-stats"><i class="fas fa-link"></i></a>
 </h2>
 <p>If you are using null hypothesis significance testing (<a href="n.html#nhst">NHST</a>), then you need to decide on a cutoff value called <strong>alpha</strong> for making a decision to reject the null hypothesis. We call p-values below the alpha cutoff <a href="s.html#significant">significant</a>.</p>
 <p>In psychology, alpha is traditionally set at <span class="math inline">\(\alpha\)</span> = .05, but there are good arguments for <a href="http://daniellakens.blogspot.com/2019/05/justifying-your-alpha-by-minimizing-or.html" target="_blank">setting a different criterion in some circumstances</a>.</p>
 </div>
-<div id="alpha-graphics" class="section level2" number="2.4">
+<div id="alpha-graphics" class="section level2" number="2.5">
 <h2>
-<span class="header-section-number">2.4</span> alpha (graphics)<a class="anchor" aria-label="anchor" href="#alpha-graphics"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.5</span> alpha (graphics)<a class="anchor" aria-label="anchor" href="#alpha-graphics"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A value between 0 and 1 used to control the levels of transparency in a plot</dfn></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -130,7 +137,7 @@
 <span class="va">alpha0.25</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">geom_density</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.window.html">xlim</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span>
 
-<span class="fu">cowplot</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/cowplot/man/plot_grid.html">plot_grid</a></span><span class="op">(</span><span class="va">alpha1.00</span>, <span class="va">alpha0.25</span>, nrow <span class="op">=</span> <span class="fl">2</span>,
+<span class="fu">cowplot</span><span class="fu">::</span><span class="fu"><a href="https://wilkelab.org/cowplot/reference/plot_grid.html">plot_grid</a></span><span class="op">(</span><span class="va">alpha1.00</span>, <span class="va">alpha0.25</span>, nrow <span class="op">=</span> <span class="fl">2</span>,
                    labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"alpha = 1.0"</span>, <span class="st">"alpha = 0.25"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:alpha-plot"></span>
@@ -140,9 +147,9 @@ Figure 2.1: Setting alpha to a number lower than 1 lets you see parts of the plo
 </div>
 
 </div>
-<div id="ampersand" class="section level2" number="2.5">
+<div id="ampersand" class="section level2" number="2.6">
 <h2>
-<span class="header-section-number">2.5</span> ampersand<a class="anchor" aria-label="anchor" href="#ampersand"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.6</span> ampersand<a class="anchor" aria-label="anchor" href="#ampersand"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The <a href="symbols.html">symbol</a> &amp;, an <a href="o.html#operator">operator</a> meaning "AND".</dfn></p>
 <p>A single ampersand is <a href="v.html#vectorized">vectorized</a>, so compares each item in the first <a href="v.html#vector">vector</a> with the corresponding item in the second vector.</p>
@@ -167,9 +174,9 @@ Figure 2.1: Setting alpha to a number lower than 1 lets you see parts of the plo
 </div>
 
 </div>
-<div id="anti_join" class="section level2" number="2.6">
+<div id="anti_join" class="section level2" number="2.7">
 <h2>
-<span class="header-section-number">2.6</span> anti_join<a class="anchor" aria-label="anchor" href="#anti_join"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.7</span> anti_join<a class="anchor" aria-label="anchor" href="#anti_join"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="f.html#filtering-joins">filtering join</a> that returns all rows from the left table where there are <em>not</em> matching values in the right table, keeping just columns from the left table.</dfn></p>
 <div class="figure" style="text-align: center">
@@ -180,16 +187,16 @@ Figure 2.2: Anti Join
 </div>
 <p>This is useful when you have a table of data that contains IDs you want to exclude from your main dataset.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">all_data</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
+<code class="sourceCode R"><span class="va">all_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
 <span class="op">)</span>
 
-<span class="va">to_exclude</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
+<span class="va">to_exclude</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">4</span>
 <span class="op">)</span>
 
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">anti_join</span><span class="op">(</span><span class="va">all_data</span>, <span class="va">to_exclude</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter-joins.html">anti_join</a></span><span class="op">(</span><span class="va">all_data</span>, <span class="va">to_exclude</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
 <th align="right">id</th>
@@ -209,9 +216,9 @@ Figure 2.2: Anti Join
 <p>See <a href="j.html#joins">joins</a> for other types of joins and further resources.</p>
 
 </div>
-<div id="argument" class="section level2" number="2.7">
+<div id="argument" class="section level2" number="2.8">
 <h2>
-<span class="header-section-number">2.7</span> argument<a class="anchor" aria-label="anchor" href="#argument"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.8</span> argument<a class="anchor" aria-label="anchor" href="#argument"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A variable that provides input to a <a href="f.html#function">function</a>.</dfn></p>
 <p>For example, the first <strong>argument</strong> to the function <code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code> is <code>n</code> (the number of <a href="o.html#observation">observations</a>).</p>
@@ -223,9 +230,9 @@ Figure 2.2: Anti Join
 <span class="co">#&gt; NULL</span></code></pre></div>
 
 </div>
-<div id="array" class="section level2" number="2.8">
+<div id="array" class="section level2" number="2.9">
 <h2>
-<span class="header-section-number">2.8</span> array<a class="anchor" aria-label="anchor" href="#array"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.9</span> array<a class="anchor" aria-label="anchor" href="#array"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> that stores <a href="o.html#object">objects</a> in one or more dimensions.</dfn></p>
 <p>You can create an array by specifying a list or vector of values and the number of dimensions. The first two dimensions are rows and columns; each dimension after that is printed separately as a facet.</p>
@@ -288,9 +295,9 @@ Figure 2.2: Anti Join
 <span class="co">#&gt; [1] "character" "integer"   "logical"   "numeric"</span></code></pre></div>
 
 </div>
-<div id="aspect-ratio" class="section level2" number="2.9">
+<div id="aspect-ratio" class="section level2" number="2.10">
 <h2>
-<span class="header-section-number">2.9</span> aspect ratio<a class="anchor" aria-label="anchor" href="#aspect-ratio"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.10</span> aspect ratio<a class="anchor" aria-label="anchor" href="#aspect-ratio"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The ratio between the width and height of an image.</dfn></p>
 <p>You can specify the aspect ratio of your plots by setting the width and height in the first chunk of an R Markdown file like this:</p>
@@ -333,11 +340,11 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 <code class="sourceCode R"><span class="fu">ggsave</span><span class="op">(</span><span class="st">"golden-ratio.jpg"</span>, width <span class="op">=</span> <span class="fl">7</span>, height <span class="op">=</span> <span class="fl">7</span><span class="op">/</span><span class="fl">1.618</span><span class="op">)</span></code></pre></div>
 
 </div>
-<div id="assignment-operator" class="section level2" number="2.10">
+<div id="assignment-operator" class="section level2" number="2.11">
 <h2>
-<span class="header-section-number">2.10</span> assignment operator<a class="anchor" aria-label="anchor" href="#assignment-operator"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.11</span> assignment operator<a class="anchor" aria-label="anchor" href="#assignment-operator"><i class="fas fa-link"></i></a>
 </h2>
-<p><dfn>The <a href="symbols.html">symbol</a> <code>&lt;-</code>, which functions like <code>=</code> and assigns the value on the right to the object on the left</dfn></p>
+<p><dfn>The <a href="symbols.html">symbol</a> <code><a href="https://rdrr.io/r/base/assignOps.html">&lt;-</a></code>, which functions like <code><a href="https://rdrr.io/r/base/assignOps.html">=</a></code> and assigns the value on the right to the object on the left</dfn></p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">a</span> <span class="op">&lt;-</span> <span class="fl">1</span>
 
@@ -359,13 +366,60 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 <span class="co">#&gt; [1] 2</span></code></pre></div>
 
 </div>
-<div id="attribute" class="section level2" number="2.11">
+<div id="atomic" class="section level2" number="2.12">
 <h2>
-<span class="header-section-number">2.11</span> attribute<a class="anchor" aria-label="anchor" href="#attribute"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.12</span> atomic<a class="anchor" aria-label="anchor" href="#atomic"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>Only containing <a href="o.html#object">objects</a> with the same <a href="d.html#data-type">data type</a> (e.g., all <a href="n.html#numeric">numeric</a> or <a href="c.html#character">character</a>).</dfn></p>
+<p><a href="v.html#vector">Vectors</a> are atomic data structures in R.</p>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>
+<span class="va">b</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"somebody"</span>, <span class="st">"once"</span>, <span class="st">"told me"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">a</span><span class="op">)</span>
+<span class="co">#&gt; [1] "numeric"</span>
+<span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">b</span><span class="op">)</span>
+<span class="co">#&gt; [1] "character"</span></code></pre></div>
+<p>If you try to mix data types in an atomic vector, they will be <a href="c.html#coerce">coerced</a> to be the same type. (Note that 32 becomes "32" so it can be in the same vector as a character object).</p>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">32</span>, <span class="cn">TRUE</span>, <span class="st">"eighteen"</span><span class="op">)</span>
+<span class="co">#&gt; [1] "32"       "TRUE"     "eighteen"</span></code></pre></div>
+<p>Another feature of vectors that makes them atomic is that they are always flat. If you embed vectors within vectors, they will be flattened.</p>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">6</span><span class="op">)</span>
+<span class="co">#&gt; [1]  7  1  4 32  2  6</span></code></pre></div>
+<p><a href="l.html#list">Lists</a>, on the other hand, can be nested.</p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">6</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt; List of 4</span>
+<span class="co">#&gt;  $ : num 7</span>
+<span class="co">#&gt;  $ : num [1:3] 1 4 32</span>
+<span class="co">#&gt;  $ : num 2</span>
+<span class="co">#&gt;  $ : num 6</span></code></pre></div>
+<p>If you try to extract objects inside an atomic vector, you need to use <a href="b.html#brackets">brackets</a> <code>[]</code>. This can be with an index or a name. Single brackets can return one or more elements, and include names, while double brackets can only return one element and don't have names.</p>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">my_vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">3</span>, y <span class="op">=</span> <span class="fl">1</span>, z <span class="op">=</span> <span class="fl">4</span><span class="op">)</span>
+<span class="va">my_vec</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span>
+<span class="co">#&gt; y </span>
+<span class="co">#&gt; 1</span>
+<span class="va">my_vec</span><span class="op">[</span><span class="st">"y"</span><span class="op">]</span>
+<span class="co">#&gt; y </span>
+<span class="co">#&gt; 1</span>
+<span class="va">my_vec</span><span class="op">[[</span><span class="st">"y"</span><span class="op">]</span><span class="op">]</span>
+<span class="co">#&gt; [1] 1</span></code></pre></div>
+<p>You cannot use the $ operator on an atomic vector, or you will get this very common error.</p>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">my_vec</span><span class="op">$</span><span class="va">y</span>
+<span class="co">#&gt; Error in my_vec$y: $ operator is invalid for atomic vectors</span></code></pre></div>
+<p>See the <a href="https://adv-r.hadley.nz/vectors-chap.html#atomic-vectors">Vectors chapter</a> of Advanced R for more advanced discussion of atomic vectors.</p>
+
+</div>
+<div id="attribute" class="section level2" number="2.13">
+<h2>
+<span class="header-section-number">2.13</span> attribute<a class="anchor" aria-label="anchor" href="#attribute"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Extra information about an R object</dfn></p>
 <p>You can access an <a href="o.html#object">object</a>'s attributes with <code><a href="https://rdrr.io/r/base/attr.html">attr()</a></code>. For example, datasets simulated with <a href="https://debruine.github.io/faux/" target="_blank">faux</a> have an attribute called "design" that details their design.</p>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/sim_design.html">sim_design</a></span><span class="op">(</span>
   between <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>pet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>cat <span class="op">=</span> <span class="st">"Cat Owners"</span>, 
                          dog <span class="op">=</span> <span class="st">"Dog Owners"</span><span class="op">)</span><span class="op">)</span>,
@@ -395,13 +449,13 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 <span class="co">#&gt;     |dog |am   | 1.0| 0.6| 100|  3|  1|</span>
 <span class="co">#&gt;     |dog |pm   | 0.6| 1.0| 100|  4|  1|</span></code></pre></div>
 </div>
-<div id="attribute-html" class="section level2" number="2.12">
+<div id="attribute-html" class="section level2" number="2.14">
 <h2>
-<span class="header-section-number">2.12</span> attribute (html)<a class="anchor" aria-label="anchor" href="#attribute-html"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.14</span> attribute (html)<a class="anchor" aria-label="anchor" href="#attribute-html"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Extra information about an HTML element</dfn></p>
 <p>For example, the paragraph <a href="e.html#element-html">element</a> has an attribute of "id" with a value of "feature". This can be used to refer to the element to change its style with <a href="c.html#css">CSS</a> or affect its behaviour with <a href="j.html#javascript">JavaScript</a>.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb21-1"><a href="a.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">id</span><span class="ot">=</span><span class="st">"feature"</span><span class="kw">&gt;</span>This is the main paragraoh of my text...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb27-1"><a href="a.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">id</span><span class="ot">=</span><span class="st">"feature"</span><span class="kw">&gt;</span>This is the main paragraoh of my text...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 
 </div>
 </div>
@@ -595,17 +649,19 @@ $( document ).ready(function() {
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#a"><span class="header-section-number">2</span> A</a></li>
 <li><a class="nav-link" href="#absolute-path"><span class="header-section-number">2.1</span> absolute path</a></li>
-<li><a class="nav-link" href="#alpha"><span class="header-section-number">2.2</span> alpha</a></li>
-<li><a class="nav-link" href="#alpha-stats"><span class="header-section-number">2.3</span> alpha (stats)</a></li>
-<li><a class="nav-link" href="#alpha-graphics"><span class="header-section-number">2.4</span> alpha (graphics)</a></li>
-<li><a class="nav-link" href="#ampersand"><span class="header-section-number">2.5</span> ampersand</a></li>
-<li><a class="nav-link" href="#anti_join"><span class="header-section-number">2.6</span> anti_join</a></li>
-<li><a class="nav-link" href="#argument"><span class="header-section-number">2.7</span> argument</a></li>
-<li><a class="nav-link" href="#array"><span class="header-section-number">2.8</span> array</a></li>
-<li><a class="nav-link" href="#aspect-ratio"><span class="header-section-number">2.9</span> aspect ratio</a></li>
-<li><a class="nav-link" href="#assignment-operator"><span class="header-section-number">2.10</span> assignment operator</a></li>
-<li><a class="nav-link" href="#attribute"><span class="header-section-number">2.11</span> attribute</a></li>
-<li><a class="nav-link" href="#attribute-html"><span class="header-section-number">2.12</span> attribute (html)</a></li>
+<li><a class="nav-link" href="#adjusted-r-squared"><span class="header-section-number">2.2</span> adjusted R-squared</a></li>
+<li><a class="nav-link" href="#alpha"><span class="header-section-number">2.3</span> alpha</a></li>
+<li><a class="nav-link" href="#alpha-stats"><span class="header-section-number">2.4</span> alpha (stats)</a></li>
+<li><a class="nav-link" href="#alpha-graphics"><span class="header-section-number">2.5</span> alpha (graphics)</a></li>
+<li><a class="nav-link" href="#ampersand"><span class="header-section-number">2.6</span> ampersand</a></li>
+<li><a class="nav-link" href="#anti_join"><span class="header-section-number">2.7</span> anti_join</a></li>
+<li><a class="nav-link" href="#argument"><span class="header-section-number">2.8</span> argument</a></li>
+<li><a class="nav-link" href="#array"><span class="header-section-number">2.9</span> array</a></li>
+<li><a class="nav-link" href="#aspect-ratio"><span class="header-section-number">2.10</span> aspect ratio</a></li>
+<li><a class="nav-link" href="#assignment-operator"><span class="header-section-number">2.11</span> assignment operator</a></li>
+<li><a class="nav-link" href="#atomic"><span class="header-section-number">2.12</span> atomic</a></li>
+<li><a class="nav-link" href="#attribute"><span class="header-section-number">2.13</span> attribute</a></li>
+<li><a class="nav-link" href="#attribute-html"><span class="header-section-number">2.14</span> attribute (html)</a></li>
 </ul>
 
       <div class="book-extra">
@@ -623,7 +679,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-09.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

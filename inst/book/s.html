@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1.9000/transition.js"></script><script src="libs/bs3compat-0.3.1.9000/tabs.js"></script><script src="libs/bs3compat-0.3.1.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -113,7 +113,7 @@
 <p>Numbers are most commonly written in decimal notation, like <code>3.145</code> or <code>365</code>. However, when numbers are very large or small, it's difficult to read or write them correctly.</p>
 <p>For example, Avogadro's constant, the number of particles contained in one mole of any substance,is equal to 602,252,000,000,000,000,000,000. The commas make it a little easier to parse when reading, but you can't use those in coding. The scientific notation is <span class="math inline">\(6.02x10^{23}\)</span>, which means the you multiply 6.02 times the number that is 1 with 23 zeros after it (or move the decimal place in 6.02 23 places to the right). In R, this notation looks like <code>6.02e23</code>.</p>
 <p>Negative numbers move the decimal place to the left. For example, Wyler's constant in physics is <code>1.05e-109</code>, or a decimal place followed by 108 zeros before you get to the first non-zero digit.</p>
-<div class="sourceCode" id="cb164"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb178"><pre class="downlit sourceCode r">
 <code class="sourceCode R">    <span class="fl">0.0001</span> <span class="op">==</span> <span class="fl">1e-4</span>
     <span class="fl">0.001</span>  <span class="op">==</span> <span class="fl">1e-3</span>
     <span class="fl">0.01</span>   <span class="op">==</span> <span class="fl">1e-2</span>
@@ -124,12 +124,12 @@
  <span class="fl">1000</span>      <span class="op">==</span> <span class="fl">1e3</span>
 <span class="fl">10000</span>      <span class="op">==</span> <span class="fl">1e4</span></code></pre></div>
 <p>You can format numbers with scientific notation in R using the function <code><a href="https://rdrr.io/r/base/formatc.html">formatC()</a></code>. This turns them into text that you can use n inline code, but you can't use as a number anymore.</p>
-<div class="sourceCode" id="cb165"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb179"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">123456789</span>, <span class="fl">0.06789</span>, <span class="fl">0.000000012</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/formatc.html">formatC</a></span><span class="op">(</span><span class="va">x</span>, format <span class="op">=</span> <span class="st">"e"</span>, digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>
 <span class="co">#&gt; [1] "1.23e+08" "6.79e-02" "1.20e-08"</span></code></pre></div>
 <p>Model output can often contain numbers in scientific notation. To change the threshold at which large or small numbers display with scientific notation, set the <code>scipen</code> option at the top of a script. A value of 0 means that R will use scientific notation whenever that representation takes less space than the decimal representation. Larger values make decimal notation more likely and smaller values make scientific notation more likely.</p>
-<div class="sourceCode" id="cb166"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb180"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">test</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">1000000</span>,
               <span class="fl">100000</span>, 
                <span class="fl">10000</span>, 
@@ -143,7 +143,7 @@
                    <span class="fl">0.0001</span>,
                    <span class="fl">0.00001</span>,
                    <span class="fl">0.000001</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb167"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb181"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>scipen <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">test</span><span class="op">)</span>
 <span class="co">#&gt; List of 13</span>
@@ -160,7 +160,7 @@
 <span class="co">#&gt;  $ : num 0.0001</span>
 <span class="co">#&gt;  $ : num 1e-05</span>
 <span class="co">#&gt;  $ : num 1e-06</span></code></pre></div>
-<div class="sourceCode" id="cb168"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb182"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>scipen <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">test</span><span class="op">)</span>
 <span class="co">#&gt; List of 13</span>
@@ -177,7 +177,7 @@
 <span class="co">#&gt;  $ : num 1e-04</span>
 <span class="co">#&gt;  $ : num 1e-05</span>
 <span class="co">#&gt;  $ : num 1e-06</span></code></pre></div>
-<div class="sourceCode" id="cb169"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb183"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>scipen <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">test</span><span class="op">)</span>
 <span class="co">#&gt; List of 13</span>
@@ -202,7 +202,7 @@
 </h2>
 <p><dfn>The <a href="e.html#environment">environment</a> where an <a href="o.html#object">object</a> is available</dfn></p>
 <p>The main thing you need to know about scope involves writing your own <a href="f.html#function">functions</a>. Objects created inside a function are only available inside the function and not outside.</p>
-<div class="sourceCode" id="cb170"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb184"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">5</span> <span class="co"># this y is global</span>
 
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span>
@@ -215,7 +215,7 @@
 <span class="va">y</span> <span class="co"># returns the global value of y</span>
 <span class="co">#&gt; [1] 5</span></code></pre></div>
 <p>If you have arguments to a function, they are local variables inside the function and their values will overwrite any global variables with the same name.</p>
-<div class="sourceCode" id="cb171"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb185"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">5</span> <span class="co"># this y is global</span>
 
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">{</span>
@@ -248,17 +248,17 @@ Figure 20.1: Semi Join
 </p>
 </div>
 <p>This is useful when you have a table of data that contains IDs of data that passes your exclusion criteria.</p>
-<div class="sourceCode" id="cb172"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">all_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>
+<div class="sourceCode" id="cb186"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">all_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
 <span class="op">)</span>
 
-<span class="va">to_keep</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>
+<span class="va">to_keep</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">4</span>
 <span class="op">)</span>
 
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/filter-joins.html">semi_join</a></span><span class="op">(</span><span class="va">all_data</span>, <span class="va">to_keep</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter-joins.html">semi_join</a></span><span class="op">(</span><span class="va">all_data</span>, <span class="va">to_keep</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
 <th align="right">id</th>
@@ -305,12 +305,12 @@ Figure 20.1: Semi Join
 </h2>
 <p><dfn>Functions that compare two tables and return rows that match (intersect), are in either table (union), or are in one table but not the other (setdiff).</dfn></p>
 <p>The examples below use two small datasets. <code>a</code> has <code>id</code>s 1 to 5, and <code>b</code> has <code>id</code>s 3 to 7.</p>
-<div class="sourceCode" id="cb173"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span>
-<span class="va">b</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fl">3</span><span class="op">:</span><span class="fl">7</span><span class="op">)</span></code></pre></div>
-<p><code><a href="https://rdrr.io/pkg/generics/man/setops.html">intersect()</a></code> returns all rows in two tables that match exactly. The columns don't have to be in the same order.</p>
-<div class="sourceCode" id="cb174"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/generics/man/setops.html">intersect</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb187"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span>
+<span class="va">b</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fl">3</span><span class="op">:</span><span class="fl">7</span><span class="op">)</span></code></pre></div>
+<p><code><a href="https://generics.r-lib.org/reference/setops.html">intersect()</a></code> returns all rows in two tables that match exactly. The columns don't have to be in the same order.</p>
+<div class="sourceCode" id="cb188"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/setops.html">intersect</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -329,9 +329,9 @@ Figure 20.1: Semi Join
 </tbody>
 </table></div>
 </div>
-<p><code><a href="https://rdrr.io/pkg/generics/man/setops.html">union()</a></code> returns all the rows from both tables, removing duplicate rows.</p>
-<div class="sourceCode" id="cb175"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/generics/man/setops.html">union</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
+<p><code><a href="https://generics.r-lib.org/reference/setops.html">union()</a></code> returns all the rows from both tables, removing duplicate rows.</p>
+<div class="sourceCode" id="cb189"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/setops.html">union</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -363,8 +363,8 @@ Figure 20.1: Semi Join
 </table></div>
 </div>
 <p><code>setdiff</code> returns rows that are in the first table, but not in the second table.</p>
-<div class="sourceCode" id="cb176"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/generics/man/setops.html">setdiff</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb190"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/setops.html">setdiff</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -401,7 +401,7 @@ Figure 20.1: Semi Join
 <span class="header-section-number">20.10</span> shinydashboard<a class="anchor" aria-label="anchor" href="#shinydashboard"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A package for R that builds on <a href="s.html#shiny">Shiny</a> for more flexible and visually appealing <a href="u.html#ui">UI</a>s.</dfn></p>
-<p><a href="https://rstudio.github.io/shinydashboard/" target="_blank">Shiny Dashboard or shinydashboard</a> can be installed with <code>install.packages("shinydashboard")</code>, and can be loaded with <code><a href="http://rstudio.github.io/shinydashboard/">library(shinydashboard)</a></code>. The <a href="https://rstudio.github.io/shinydashboard/get_started.html" target="_blank">shinydashboard documentation</a> is a great introduction to this package.</p>
+<p><a href="https://rstudio.github.io/shinydashboard/" target="_blank">Shiny Dashboard or shinydashboard</a> can be installed with <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("shinydashboard")</a></code>, and can be loaded with <code><a href="http://rstudio.github.io/shinydashboard/">library(shinydashboard)</a></code>. The <a href="https://rstudio.github.io/shinydashboard/get_started.html" target="_blank">shinydashboard documentation</a> is a great introduction to this package.</p>
 
 </div>
 <div id="significant" class="section level2" number="20.11">
@@ -423,7 +423,7 @@ Figure 20.1: Semi Join
 <span class="header-section-number">20.13</span> single brackets<a class="anchor" aria-label="anchor" href="#single-brackets"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A pair of square brackets used to select a subset from a <a href="c.html#container">container</a> like a <a href="l.html#list">list</a>, <a href="d.html#data-frame">data frame</a>, or <a href="m.html#matrix">matrix</a> (e.g., data[1, ]).</dfn></p>
-<div class="sourceCode" id="cb177"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb191"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">secret_code</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">16</span>, <span class="fl">19</span>, <span class="fl">25</span>, <span class="fl">20</span>, <span class="fl">5</span>, <span class="fl">1</span>, <span class="fl">3</span>, <span class="fl">8</span>, <span class="fl">18</span><span class="op">)</span>
 
 <span class="va">LETTERS</span><span class="op">[</span><span class="va">secret_code</span><span class="op">]</span>
@@ -459,7 +459,7 @@ Figure 20.2: Normal distributions with means of 0 and SDs of 1 (red), 2 (blue) a
 </h2>
 <p><dfn>Something that does not change in response to user actions</dfn></p>
 <p>For example, in a <a href="s.html#shiny">shiny</a> app, the following code creates static and <a href="d.html#dynamic">dynamic</a> elements.</p>
-<div class="sourceCode" id="cb178"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb192"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">static</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">p</a></span><span class="op">(</span><span class="st">"This text cannot change"</span><span class="op">)</span>
 <span class="va">dynamic</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/textOutput.html">textOutput</a></span><span class="op">(</span><span class="st">"This text can change"</span><span class="op">)</span></code></pre></div>
 
@@ -705,7 +705,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-09.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

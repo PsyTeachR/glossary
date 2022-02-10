@@ -1,0 +1,38 @@
+## R-squared
+
+<dfn>A statistic that represents the proportion of the [variance](v.html#variance) for a [dependent variable](d.html#dependent-variable) explained by the [predictor variable(s)](p.html#predictor-variable) in a [linear model](g.html#general-linear-model).</dfn>
+
+
+Let's simulate some data 
+
+```{r}
+# simulate some data
+set.seed(8675309)
+
+n <- 100
+intercept <- 10
+effect <- 0.5
+error_sd <- 2
+
+dat <- tibble::tibble(
+  predictor = rnorm(n, 0, 1),
+  error = rnorm(n, 0, error_sd),
+  dv = intercept + (effect * predictor) + error
+)
+```
+
+Analyse the data with a linear model and use the `summary()` function to view the R-squared values. 
+
+```{r}
+model <- lm(dv ~ predictor, dat)
+summary(model)
+```
+
+[Adjusted R-squared](a.html#adjusted-r-squared) is a modified version of R-squared adjusted for the number of predictors in the model. You can extract the R-squared and adjusted R-squared values from the model summary.
+
+```{r}
+summary(model)$r.squared
+summary(model)$adj.r.squared
+```
+
+

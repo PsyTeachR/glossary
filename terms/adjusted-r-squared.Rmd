@@ -1,0 +1,5 @@
+## adjusted R-squared
+
+<dfn>A modified version of [R-squared](r.html#r-squared) adjusted for the number of predictors in the model.</dfn>
+
+

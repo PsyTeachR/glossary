@@ -6,7 +6,7 @@ fig:aspect-ratio-2-disp
 fig:binom-plot
 fig:bvn-plot
 fig:cor
-fig:unnamed-chunk-104
+fig:unnamed-chunk-128
 fig:full-join
 fig:img-function-help
 fig:geom-boxplot
@@ -18,7 +18,7 @@ fig:left-join
 fig:levels-without
 fig:levels-with
 tab:long-data
-tab:unnamed-chunk-205
+tab:unnamed-chunk-230
 fig:normal-plot
 fig:img-panes
 fig:poisson-plot
@@ -30,13 +30,14 @@ fig:right-join
 fig:semi-join
 fig:sd-plot
 fig:unif-plot
-tab:unnamed-chunk-341
+tab:unnamed-chunk-371
 tab:wide-data
 offline-access
 cite
 symbols
 a
 absolute-path
+adjusted-r-squared
 alpha
 alpha-stats
 alpha-graphics
@@ -46,6 +47,7 @@ argument
 array
 aspect-ratio
 assignment-operator
+atomic
 attribute
 attribute-html
 b
@@ -77,6 +79,7 @@ compile
 computational-reproducibility
 concatenate
 confidence-interval
+conflict
 console
 container
 continuous
@@ -168,6 +171,7 @@ logical
 long
 m
 markdown
+mask
 match-operator
 matrix
 mean
@@ -215,10 +219,12 @@ q-q-plot
 quantile
 r
 r-markdown
+r-squared
 random-effect
 random-factor
 random-seed
 reactivity
+readme
 relative-path
 render
 repeated-measures

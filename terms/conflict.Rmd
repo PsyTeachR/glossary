@@ -1,0 +1,47 @@
+## conflict
+
+<dfn>Having two [packages](p.html#package) loaded that have a [function](f.html#function) with the same name.</dfn>
+
+For example, when you load the [tidyverse](t.html#tidyverse), you will see several warnings under the Conflicts heading.
+
+```{r, eval = FALSE}
+library(tidyverse)
+```
+
+<code>
+── Conflicts ───── tidyverse_conflicts() ──
+<span style="color:red;">x</span> <span style="color:blue;">dplyr</span>::<span style="color:green;">filter()</span> masks <span style="color:rgb(52,101,164);">stats</span::filter()
+<span style="color:red;">x</span> <span style="color:rgb(52,101,164);">lag()</span>::<span style="color:green;">filter()</span> masks <span style="color:blue;">stats</span::lag()
+</code>
+
+This means that the stats package (which is loaded by default when you start R) has functions called `filter()` and `lag()`, but the dplyr package (part of the tidyverse), has functions with the same name.
+
+Because you loaded dplyr after stats, the functions from dplyr [mask](#mask) the functions from stats, but you can still use the functions from stats, you just need to preface them with `stats::`.
+
+Sometime, the two functions do totally different  things. For example, `stats::filter()` applies linear filtering to a time series, while `dplyr::filter()` subsets a data frame.
+
+```{r}
+stats::filter(1:10, rep(1, 3))
+```
+
+
+```{r}
+dplyr::filter(tidyr::table1, country == "Afghanistan")
+```
+
+In other cases, a package will name a function the same as a base R function on purpose, in order to do the same thing with more features. For example, `base::setdiff()` and `dplyr::setdiff()` both return rows from the first table that are not in the second table, but the base R version requires columns to be in the same order, while the dplyr version does not. 
+
+```{r}
+# define overlapping tables
+t1 <- data.frame(a = 1:3, b = 1:3)
+t2 <- data.frame(b = 2:4, a = 2:4)
+
+# concludes all t1 rows are not in t2
+base::setdiff(t1, t2)
+```
+
+```{r}
+# concludes only 1 t1 row is not in t2
+dplyr::setdiff(t1, t2)
+```
+
