@@ -26,6 +26,7 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'tidyverse'
 ), 'packages.bib')
 
+library(glossary)
 ```
 
 # Overview {-}

@@ -1,0 +1,18 @@
+## URL
+
+<dfn>The address of a web page (uniform resource locator)</dfn>
+
+A URL consists of five components: 
+
+```
+scheme ":" ["//" authority] path ["?" query] ["#" fragment]
+```
+
+For example, the URL of this page is `https://psyteachr.github.io/glossary/u.html#url`
+
+* scheme: "https" (the secure hypertext transfer protocol)
+* authority: "psyteachr.github.io" (host)
+* path: "/glossary/u.html"
+* fragment: "url"
+
+

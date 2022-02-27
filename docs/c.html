@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1.9000/transition.js"></script><script src="libs/bs3compat-0.3.1.9000/tabs.js"></script><script src="libs/bs3compat-0.3.1.9000/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
@@ -231,7 +231,7 @@
 <code class="sourceCode R"><span class="va">subject_name</span> <span class="op">&lt;-</span> <span class="st">"Lisa"</span>
 <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"Hello,"</span>, <span class="va">subject_name</span><span class="op">)</span>
 <span class="co">#&gt; [1] "Hello, Lisa"</span></code></pre></div>
-<p>When referring to other types of variables, concatenate can mean to create a vector with those variables, usually using the <code>c</code> function. For example, you could concatenate the numbers 1, 3, 6, and 10 like this: <code><a href="https://rdrr.io/r/base/c.html">c(1, 3, 6, 10)</a></code>. You can concatenate two <a href="v.html#vector">vectors</a> as well:</p>
+<p>When referring to other types of variables, concatenate can mean to create a vector with those variables, usually using the <code>c</code> function. For example, you could concatenate the numbers 1, 3, 6, and 10 like this: <code>c(1, 3, 6, 10)</code>. You can concatenate two <a href="v.html#vector">vectors</a> as well:</p>
 <div class="sourceCode" id="cb68"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">v1</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>
 <span class="va">v2</span> <span class="op">&lt;-</span> <span class="fl">11</span><span class="op">:</span><span class="fl">15</span>
@@ -279,9 +279,9 @@
 <p><code>
 ── Conflicts ───── tidyverse_conflicts() ──<br><span style="color:red;">x</span> <span style="color:rgb(52,101,164);">dplyr</span>::<span style="color:green;">filter()</span> masks <span style="color:rgb(52,101,164);">stats</span>::filter()<br><span style="color:red;">x</span> <span style="color:rgb(52,101,164);">lag()</span>::<span style="color:green;">filter()</span> masks <span style="color:rgb(52,101,164);">stats</span>::lag()
 </code></p>
-<p>This means that the stats package has functions called <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> and <code><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lag()</a></code>, but the dplyr package (part of the tidyverse), also has functions with the same name.</p>
+<p>This means that the stats package has functions called <code><a href="https://rdrr.io/pkg/dplyr/man/filter.html">filter()</a></code> and <code><a href="https://rdrr.io/pkg/dplyr/man/lead-lag.html">lag()</a></code>, but the dplyr package (part of the tidyverse), also has functions with the same name.</p>
 <p>Because you loaded dplyr <em>after</em> stats (which is loaded by default when you start R), the functions from dplyr <a href="m.html#mask">mask</a> the functions from stats, but you can still use the functions from stats, you just need to preface them with <code>stats::</code>.</p>
-<p>Sometime, the two functions do totally different things. There just aren't enough names to go around; this is why all packages aren't loaded by default. For example, <code><a href="https://rdrr.io/r/stats/filter.html">stats::filter()</a></code> applies linear filtering to a time series, while <code><a href="https://dplyr.tidyverse.org/reference/filter.html">dplyr::filter()</a></code> subsets a data frame.</p>
+<p>Sometime, the two functions do totally different things. There just aren't enough names to go around; this is why all packages aren't loaded by default. For example, <code><a href="https://rdrr.io/r/stats/filter.html">stats::filter()</a></code> applies linear filtering to a time series, while <code><a href="https://rdrr.io/pkg/dplyr/man/filter.html">dplyr::filter()</a></code> subsets a data frame.</p>
 <div class="sourceCode" id="cb71"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; Time Series:</span>
@@ -290,7 +290,7 @@
 <span class="co">#&gt; Frequency = 1 </span>
 <span class="co">#&gt;  [1] NA  6  9 12 15 18 21 24 27 NA</span></code></pre></div>
 <div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu">tidyr</span><span class="fu">::</span><span class="va"><a href="https://tidyr.tidyverse.org/reference/table1.html">table1</a></span>, <span class="va">country</span> <span class="op">==</span> <span class="st">"Afghanistan"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/filter.html">filter</a></span><span class="op">(</span><span class="fu">tidyr</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/tidyr/man/table1.html">table1</a></span>, <span class="va">country</span> <span class="op">==</span> <span class="st">"Afghanistan"</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr>
@@ -339,7 +339,7 @@ Afghanistan
 </tbody>
 </table></div>
 </div>
-<p>In other cases, a package will name a function the same as a base R function on purpose, in order to do the same thing with more features. For example, <code><a href="https://rdrr.io/r/base/sets.html">base::setdiff()</a></code> and <code><a href="https://generics.r-lib.org/reference/setops.html">dplyr::setdiff()</a></code> both return rows from the first table that are not in the second table, but the base R version requires columns to be in the same order, while the dplyr version does not.</p>
+<p>In other cases, a package will name a function the same as a base R function on purpose, in order to do the same thing with more features. For example, <code><a href="https://rdrr.io/r/base/sets.html">base::setdiff()</a></code> and <code><a href="https://rdrr.io/pkg/generics/man/setops.html">dplyr::setdiff()</a></code> both return rows from the first table that are not in the second table, but the base R version requires columns to be in the same order, while the dplyr version does not.</p>
 <div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># define overlapping tables</span>
 <span class="va">t1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>a <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, b <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span>
@@ -387,7 +387,7 @@ b
 </div>
 <div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># concludes only 1 t1 row is not in t2</span>
-<span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/setops.html">setdiff</a></span><span class="op">(</span><span class="va">t1</span>, <span class="va">t2</span><span class="op">)</span></code></pre></div>
+<span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/generics/man/setops.html">setdiff</a></span><span class="op">(</span><span class="va">t1</span>, <span class="va">t2</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr>
@@ -519,7 +519,7 @@ Jack
 <p><dfn><a href="p.html#parameter">Parameters</a> showing how a set of <a href="v.html#vector">vectors</a> are <a href="c.html#correlation">correlated</a>.</dfn></p>
 <p>This is set up as a <a href="m.html#matrix">matrix</a> with 1.0 along the diagonal, meaning that every variable is perfectly correlated with itself.</p>
 <div class="sourceCode" id="cb76"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tibble/man/tibble.html">tibble</a></span><span class="op">(</span>
   A <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>,
   B <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, <span class="co"># uncorrelated with A</span>
   C <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span> <span class="op">+</span> <span class="va">A</span>, <span class="co"># positively correlated with A</span>
@@ -528,10 +528,10 @@ Jack
 
 <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span> <span class="co"># correlation matrix</span>
 <span class="co">#&gt;               A             B           C           D</span>
-<span class="co">#&gt; A  1.000000e+00 -9.943199e-04  0.66356312 -0.69155202</span>
-<span class="co">#&gt; B -9.943199e-04  1.000000e+00 -0.03771143 -0.04160253</span>
-<span class="co">#&gt; C  6.635631e-01 -3.771143e-02  1.00000000 -0.39843597</span>
-<span class="co">#&gt; D -6.915520e-01 -4.160253e-02 -0.39843597  1.00000000</span></code></pre></div>
+<span class="co">#&gt; A  1.0000000000 -0.0009943199  0.66356312 -0.69155202</span>
+<span class="co">#&gt; B -0.0009943199  1.0000000000 -0.03771143 -0.04160253</span>
+<span class="co">#&gt; C  0.6635631226 -0.0377114274  1.00000000 -0.39843597</span>
+<span class="co">#&gt; D -0.6915520161 -0.0416025327 -0.39843597  1.00000000</span></code></pre></div>
 
 </div>
 <div id="correlation" class="section level2" number="4.20">
@@ -607,11 +607,11 @@ Figure 4.1: Different Correlations (n = 100)
 <p>We can use the function <code><a href="https://rdrr.io/pkg/psych/man/alpha.html">psych::alpha()</a></code> to calculate Cronbach's alpha.</p>
 <div class="sourceCode" id="cb79"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># read in data from the 3 domains of disgust scale</span>
-<span class="va">disgust</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"https://psyteachr.github.io/msc-data-skills/data/disgust.csv"</span><span class="op">)</span>
+<span class="va">disgust</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/readr/man/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"https://psyteachr.github.io/msc-data-skills/data/disgust.csv"</span><span class="op">)</span>
   
 <span class="co"># select just the items that measure pathogen disgust</span>
-<span class="va">pathogen_alpha</span> <span class="op">&lt;-</span> <span class="va">disgust</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span><span class="op">)</span> <span class="op">%&gt;%</span>
+<span class="va">pathogen_alpha</span> <span class="op">&lt;-</span> <span class="va">disgust</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/select.html">select</a></span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span>
   <span class="fu">psych</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/psych/man/alpha.html">alpha</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>You often just want to report the raw or standard alpha.</p>
 <div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
@@ -837,11 +837,11 @@ pathogen7
 </div>
 <p>You can look at the <code>alpha.drop</code> section to see what the alpha would be if you dropped an item. If we add an item from the moral disgust scale, you can see that the alpha increases if you drop it.</p>
 <div class="sourceCode" id="cb82"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mixed_alpha</span> <span class="op">&lt;-</span> <span class="va">disgust</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span>, <span class="va">moral1</span><span class="op">)</span> <span class="op">%&gt;%</span>
+<code class="sourceCode R"><span class="va">mixed_alpha</span> <span class="op">&lt;-</span> <span class="va">disgust</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/select.html">select</a></span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span>, <span class="va">moral1</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></span>
   <span class="fu">psych</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/psych/man/alpha.html">alpha</a></span><span class="op">(</span><span class="op">)</span>
 
-<span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">mixed_alpha</span><span class="op">$</span><span class="va">alpha.drop</span>, <span class="va">raw_alpha</span>, <span class="va">std.alpha</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://rdrr.io/pkg/dplyr/man/select.html">select</a></span><span class="op">(</span><span class="va">mixed_alpha</span><span class="op">$</span><span class="va">alpha.drop</span>, <span class="va">raw_alpha</span>, <span class="va">std.alpha</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr>
@@ -1210,7 +1210,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-10.</p>
+    <p>"<strong>Glossary</strong>" was written by psyTeachR Team. It was last built on 2022-02-27.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
