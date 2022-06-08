@@ -1,5 +1,5 @@
 --- 
-title: "Glossary" 
+title: "Glossary<br><a href='https://zenodo.org/badge/latestdoi/176944576'><img src='https://zenodo.org/badge/176944576.svg' alt='DOI:10.5281/zenodo.6619215'></a>"
 author: "psyTeachR Team" 
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -39,7 +39,11 @@ The glossary was developed to link to the [PsyTeachR books](https://psyteachr.gi
 
 Contents are made available under a CC-BY-SA license. To cite:
 
-PsyTeachR Team (2022). PsyTeachR Glossary  (version `r format(Sys.Date(), format = "%Y-%m-%d")`). Retrieved from https://psyteachr.github.io/glossary.
+```{r, results='asis', echo = FALSE}
+cite <- citation(package = "glossary")
+print(cite, style = "text")
+```
+
 
 
 Thanks to the [glossary hackathon](https://docs.google.com/document/d/1FOohcEbWTAXB7OWSvMZzwMI3F--pNNRT3_3DSB6KeB8/edit) contributors: 

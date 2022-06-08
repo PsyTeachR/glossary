@@ -1,0 +1,27 @@
+{
+    "description": "The glossary defines common jargon you might encounter while learning R. This specialised vocabulary can help you to communicate more efficiently about coding and statistics and to search for solutions to problems.",
+    "license": "cc-by-sa",
+    "title": "PsyTeachR glossary: Glossary of Statistical and Coding Terms",
+    "version": "0.0.0.9002",
+    "upload_type": "software",
+    "publication_date": "2022-06-06",
+    "creators": [
+        {
+            "name": "Lisa DeBruine",
+            "affiliation": "University of Glasgow",
+            "orcid": "0000-0002-7523-5539"
+        },
+        {
+            "name": "PsyTeachR Team",
+            "affiliation": "University of Glasgow"
+        }
+    ],
+    "access_right": "open",
+    "related_identifiers": [
+        {
+            "scheme": "url",
+            "identifier": "https://PsyTeachR.github.io/glossary/",
+            "relation": "isSupplementTo"
+        }
+    ]
+}

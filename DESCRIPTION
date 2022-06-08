@@ -1,8 +1,8 @@
 Package: glossary
-Title: Glossary of Statistical and Coding Terms
+Title: PsyTeachR Glossary of Statistical and Coding Terms
 Description: A glossary of statistical and R coding terms used in the PsyTeachR books in a bookdown format that can also be downloaded as an R package and accessed offline. 
 Version: 0.0.0.9002
-Date: 2022-02-10
+Date: 2022-06-06
 Authors@R: 
   c(
     person(
@@ -30,7 +30,31 @@ Authors@R:
            family = "Paterson",
            role = c("ctb"),
            email = "Helena.Paterson@glasgow.ac.uk",
-           comment = c(ORCID = "0000-0001-7715-5973")))
+           comment = c(ORCID = "0000-0001-7715-5973")
+    ),
+    person(given = "Jack",
+           family = "Taylor",
+           role = c("ctb"),
+           email = "j.taylor.3@research.glasgow.ac.uk",
+           comment = c(ORCID = "0000-0003-4765-0118")
+    ),
+    person(given = "James",
+           family = "Bartlett",
+           role = c("ctb"),
+           email = "james.bartlett@glasgow.ac.uk",
+           comment = c(ORCID = "0000-0002-4191-5245")
+    ),
+    person(given = "Julianne",
+           family = "Kloidt",
+           role = c("ctb"),
+           comment = c(github = "https://github.com/JulianeKloidt")
+    ),
+    person(given = "Jessica",
+           family = "Hrudy",
+           role = c("ctb"),
+           comment = c(github = "https://github.com/jhrudey")
+    )
+  )
 License: CC-BY-SA 4.0
 Encoding: UTF-8
 LazyData: true

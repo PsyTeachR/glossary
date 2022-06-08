@@ -1,16 +1,20 @@
-citHeader("To cite glossary in publications use:")
+citHeader("To cite the glossary in publications use:")
 
 citEntry(entry = "Manual",
-  title        = "{glossary}: Glossary of Statistical and Coding Terms {markr}",
-  author       = personList(person("Lisa", "DeBruine"),
-                            person("Dale", "Barr"),
-                            person("Philip", "McAleer"),
-                            person("Helena", "Paterson")),
-  year         = "2021",
-  url          = "https://psyteachr.github.io/markr/",
+  title        = "PsyTeachR Glossary of Statistical and Coding Terms",
+  author       = personList(
+                   person("PsyTeachR Team")
+                 ),
+  year         = "2022",
+  url          = "https://psyteachr.github.io/glossary/",
+  doi          = "10.5281/zenodo.6619215",
+  version      = "0.0.0.9002",
+  publisher    = "Zenodo",
+  note         = sprintf("v%s", meta$Version),
 
   textVersion  =
-  paste("Lisa DeBruine, Dale Barr, Philip McAleer, Helena Paterson (2021).",
-        "glossary: Glossary of Statistical and Coding Terms.",
-        "URL https://psyteachr.github.io/glossary/.")
+  paste("PsyTeachR Team (2022).",
+        "PsyTeachR Glossary of Statistical and Coding Terms.",
+        sprintf("(v%s)", meta$Version),
+        "Zenodo. doi:10.5281/zenodo.6619215")
 )
