@@ -2,7 +2,7 @@
 
 <dfn>A [filtering join](f.html#filtering-joins) that returns all rows from the left table where there are *not* matching values in the right table, keeping just columns from the left table.</dfn>
 
-```{r ani-join, echo=FALSE, fig.cap="Anti Join"}
+```{r anti-join, echo=FALSE, fig.cap="Anti Join", class.output="join_img"}
 knitr::include_graphics("images/joins/anti_join.png")
 ```
 

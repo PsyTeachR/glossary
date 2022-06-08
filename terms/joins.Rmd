@@ -2,7 +2,7 @@
 
 <dfn>Ways to combine data from two tables</dfn>
 
-* [binding joins](b.html#binding-joins)
+* [binding joins](b.html#binding-joins): 
     * [bind_rows](b.html#bind_rows)
     * [bind_cols](b.html#bind_cols)
 * [filtering joins](f.html#filtering-joins): 

@@ -2,7 +2,7 @@
 
 <dfn>A typesetting program needed to create PDF files from [R Markdown](r.html#r-markdown) documents.</dfn>
 
-${\LaTeX}$ is pronounced <<lah-tech>> or <<lay-tech>> (the X is a chi) and you can make the fancy version in [R Markdown](r.html#r-markdown) using this code:
+${\LaTeX}$ is pronounced "lah-tech" or "lay-tech" (the X is a chi) and you can make the fancy version in [R Markdown](r.html#r-markdown) using this code:
 
 ```
 ${\LaTeX}$

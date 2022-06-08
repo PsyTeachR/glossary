@@ -2,7 +2,7 @@
 
 <dfn>A [mutating join](m.html#mutating-joins) that lets you join up rows in two tables while keeping all of the information from both tables</dfn>
 
-```{r full-join, echo=FALSE, fig.cap="Full Join"}
+```{r full-join, echo=FALSE, fig.cap="Full Join", class.output="join_img"}
 knitr::include_graphics("images/joins/full_join.png")
 ```
 

@@ -126,7 +126,7 @@ Figure 22.1: Uniform Distribution
 <p>Usually used in the context of the analysis of a single <a href="d.html#dependent-variable">dependent variable</a>.</p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:unnamed-chunk-392">Table 22.1: </span>Univariate data with 3 scores on the same task per person
+<span id="tab:unnamed-chunk-379">Table 22.1: </span>Univariate data with 3 scores on the same task per person
 </caption>
 <thead><tr>
 <th style="text-align:left;">
@@ -415,6 +415,21 @@ $( document ).ready(function() {
   );
   
   $("#toc").appendTo($("#main-nav"));
+  
+  var $lang = $("<select id='lang' />")
+    .append($('<option>', {value:'en', text:'English'}))  
+    .append($('<option>', {value:'nl', text:'Nederlands'}))  
+    .append($('<option>', {value:'zh-Hans', text:'简体中文'}))  
+    .change(function() {
+      var lang = $(this).val();
+      $('.translation').hide();
+      $('.translation[lang=' + lang + ']').show();
+    });
+    
+  $('#main-nav').prepend("<br><span class='note'>Translations are not available yet for most terms.</span>").prepend($lang);
+  
+  $lang.change();
+  
 });
 </script><div class="chapter-nav">
 <div class="prev"><a href="t.html"><span class="header-section-number">21</span> T</a></div>

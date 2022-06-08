@@ -6,16 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>3 B | Glossary </title>
 <meta name="author" content="psyTeachR Team">
-<meta name="description" content="3.1 base R The set of R functions that come with a basic installation of R, before you add external packages Contrast with tidyverse.   3.2 beta distribution A family of distributions of data that...">
+<meta name="description" content="3.1 base R  The set of R functions that come with a basic installation of R, before you add external packages. Contrast with tidyverse.  De set R functions die bij een basisinstallatie van R...">
 <meta name="generator" content="bookdown 0.26 with bs4_book()">
 <meta property="og:title" content="3 B | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/b.html">
 <meta property="og:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
-<meta property="og:description" content="3.1 base R The set of R functions that come with a basic installation of R, before you add external packages Contrast with tidyverse.   3.2 beta distribution A family of distributions of data that...">
+<meta property="og:description" content="3.1 base R  The set of R functions that come with a basic installation of R, before you add external packages. Contrast with tidyverse.  De set R functions die bij een basisinstallatie van R...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="3 B | Glossary ">
-<meta name="twitter:description" content="3.1 base R The set of R functions that come with a basic installation of R, before you add external packages Contrast with tidyverse.   3.2 beta distribution A family of distributions of data that...">
+<meta name="twitter:description" content="3.1 base R  The set of R functions that come with a basic installation of R, before you add external packages. Contrast with tidyverse.  De set R functions die bij een basisinstallatie van R...">
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -99,8 +99,18 @@
 <h2>
 <span class="header-section-number">3.1</span> base R<a class="anchor" aria-label="anchor" href="#base-r"><i class="fas fa-link"></i></a>
 </h2>
-<p><dfn>The set of R <a href="f.html#function">functions</a> that come with a basic installation of R, before you add external <a href="p.html#package">packages</a></dfn></p>
+<div class="translation" lang="en">
+<p><dfn>The set of R <a href="f.html#function">functions</a> that come with a basic installation of R, before you add external <a href="p.html#package">packages</a>.</dfn></p>
 <p>Contrast with <a href="t.html#tidyverse">tidyverse</a>.</p>
+</div>
+<div class="translation" lang="nl">
+<p><dfn>De set R <a href="f.html#function">functions</a> die bij een basisinstallatie van R hoort, voordat je externe <a href="p.html#package">packages</a> toevoegt.</dfn></p>
+<p>Vergelijk met <a href="t.html#tidyverse">tidyverse</a>.</p>
+</div>
+<div class="translation" lang="zh-Hans">
+<p><dfn>在添加外部 <a href="p.html#package">packages</a> 之前 R 的基本安装附带的一组 R <a href="f.html#function">functions</a>。</dfn></p>
+<p>与 <a href="t.html#tidyverse">tidyverse</a> 对比。</p>
+</div>
 
 </div>
 <div id="beta-distribution" class="section level2" number="3.2">
@@ -898,6 +908,21 @@ $( document ).ready(function() {
   );
   
   $("#toc").appendTo($("#main-nav"));
+  
+  var $lang = $("<select id='lang' />")
+    .append($('<option>', {value:'en', text:'English'}))  
+    .append($('<option>', {value:'nl', text:'Nederlands'}))  
+    .append($('<option>', {value:'zh-Hans', text:'简体中文'}))  
+    .change(function() {
+      var lang = $(this).val();
+      $('.translation').hide();
+      $('.translation[lang=' + lang + ']').show();
+    });
+    
+  $('#main-nav').prepend("<br><span class='note'>Translations are not available yet for most terms.</span>").prepend($lang);
+  
+  $lang.change();
+  
 });
 </script><div class="chapter-nav">
 <div class="prev"><a href="a.html"><span class="header-section-number">2</span> A</a></div>

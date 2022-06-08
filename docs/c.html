@@ -559,8 +559,18 @@ Figure 4.1: Different Correlations (n = 100)
 <h2>
 <span class="header-section-number">4.22</span> CRAN<a class="anchor" aria-label="anchor" href="#cran"><i class="fas fa-link"></i></a>
 </h2>
+<div class="translation" lang="en">
 <p><dfn>The Comprehensive R Archive Network: a network of ftp and web servers around the world that store identical, up-to-date, versions of code and documentation for R.</dfn></p>
 <p><a href="p.html#package">Packages</a> that you download from CRAN have been checked to make sure they won't harm your computer. You can learn more about CRAN at <a href="https://cran.r-project.org/" target="_blank">https://cran.r-project.org/</a>.</p>
+</div>
+<div class="translation" lang="nl">
+<p><dfn>Het uitgebreide R Archive Network: een netwerk van ftp- en webservers over de hele wereld die identieke, up-to-date versies van code en documentatie voor R opslaan.</dfn></p>
+<p><a href="p.html#package">Pakketten</a> die u downloadt van CRAN zijn gecontroleerd om er zeker van te zijn dat ze uw computer niet beschadigen. U kunt meer informatie over CRAN vinden op <a href="https://cran.r-project.org/" target="_blank">https://cran.r-project.org/</a>.</p>
+</div>
+<div class="translation" lang="zh-Hans">
+<p><dfn>综合 R 存档网络：一个由世界各地的 ftp 和 Web 服务器组成的网络，用于存储相同的最新版本的 R 代码和文档。</dfn></p>
+<p>您从 CRAN 下载的 <a href="p.html#package">Packages</a> 已经过检查，以确保它们不会损害您的计算机。您可以在 <a href="https://cran.r-project.org/" target="_blank">https://cran.r-project.org/</a> 了解有关 CRAN 的更多信息。</p>
+</div>
 
 </div>
 <div id="cronbachs-alpha" class="section level2" number="4.23">
@@ -1128,6 +1138,21 @@ $( document ).ready(function() {
   );
   
   $("#toc").appendTo($("#main-nav"));
+  
+  var $lang = $("<select id='lang' />")
+    .append($('<option>', {value:'en', text:'English'}))  
+    .append($('<option>', {value:'nl', text:'Nederlands'}))  
+    .append($('<option>', {value:'zh-Hans', text:'简体中文'}))  
+    .change(function() {
+      var lang = $(this).val();
+      $('.translation').hide();
+      $('.translation[lang=' + lang + ']').show();
+    });
+    
+  $('#main-nav').prepend("<br><span class='note'>Translations are not available yet for most terms.</span>").prepend($lang);
+  
+  $lang.change();
+  
 });
 </script><div class="chapter-nav">
 <div class="prev"><a href="b.html"><span class="header-section-number">3</span> B</a></div>

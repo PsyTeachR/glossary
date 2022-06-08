@@ -1,7 +1,27 @@
 ## base R
 
-<dfn>The set of R [functions](f.html#function) that come with a basic installation of R, before you add external [packages](p.html#package)</dfn>
+<div class="translation" lang="en">
+
+<dfn>The set of R [functions](f.html#function) that come with a basic installation of R, before you add external [packages](p.html#package).</dfn>
 
 Contrast with [tidyverse](t.html#tidyverse).
 
+</div>
 
+
+<div class="translation" lang="nl">
+
+<dfn>De set R [functions](f.html#function) die bij een basisinstallatie van R hoort, voordat je externe [packages](p.html#package) toevoegt.</dfn>
+
+Vergelijk met [tidyverse](t.html#tidyverse).
+
+</div>
+
+
+<div class="translation" lang="zh-Hans">
+
+<dfn>在添加外部 [packages](p.html#package) 之前 R 的基本安装附带的一组 R [functions](f.html#function)。</dfn>
+
+与 [tidyverse](t.html#tidyverse) 对比。
+
+</div>

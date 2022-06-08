@@ -100,9 +100,9 @@
 <span class="header-section-number">0.1</span> Cite<a class="anchor" aria-label="anchor" href="#cite"><i class="fas fa-link"></i></a>
 </h2>
 <p>Contents are made available under a CC-BY-SA license. To cite:</p>
-<p>PsyTeachR Team (2021). <em>PsyTeachR Glossary of Statistical and Coding
+<p>PsyTeachR Team (2022). <em>PsyTeachR Glossary of Statistical and Coding
 Terms</em>. <a href="doi:10.5281/zenodo.6619215" class="uri">doi:10.5281/zenodo.6619215</a>
-<a href="https://doi.org/10.5281/zenodo.6619215" class="uri">https://doi.org/10.5281/zenodo.6619215</a>, R package version 0.0.0.9002,
+<a href="https://doi.org/10.5281/zenodo.6619215" class="uri">https://doi.org/10.5281/zenodo.6619215</a>, v0.0.0.9002,
 <a href="https://psyteachr.github.io/glossary/" class="uri">https://psyteachr.github.io/glossary/</a>.</p>
 <p>Thanks to the <a href="https://docs.google.com/document/d/1FOohcEbWTAXB7OWSvMZzwMI3F--pNNRT3_3DSB6KeB8/edit">glossary hackathon</a> contributors:
 <a href="https://github.com/PsyTeachR/glossary/issues?q=is%3Aissue+author%3AJackEdTaylor">Jack Taylor</a>,
@@ -410,6 +410,21 @@ $( document ).ready(function() {
   );
   
   $("#toc").appendTo($("#main-nav"));
+  
+  var $lang = $("<select id='lang' />")
+    .append($('<option>', {value:'en', text:'English'}))  
+    .append($('<option>', {value:'nl', text:'Nederlands'}))  
+    .append($('<option>', {value:'zh-Hans', text:'简体中文'}))  
+    .change(function() {
+      var lang = $(this).val();
+      $('.translation').hide();
+      $('.translation[lang=' + lang + ']').show();
+    });
+    
+  $('#main-nav').prepend("<br><span class='note'>Translations are not available yet for most terms.</span>").prepend($lang);
+  
+  $lang.change();
+  
 });
 </script><div class="chapter-nav">
 <div class="empty"></div>

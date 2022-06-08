@@ -1,5 +1,14 @@
 /* (edit style.css for your own book styles) */
 
+.translation {
+  display: none;
+}
+
+.note {
+  font-size: 70%;
+  line-height: 1.05;
+}
+
 .header-section-number {
   display: none;
 }
@@ -97,7 +106,7 @@ h2 {
   float: right;
 }
 
-.join {
+.join_img {
   height: 150px;
   width: 200px;
   float: right;

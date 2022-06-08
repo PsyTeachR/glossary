@@ -524,6 +524,21 @@ $( document ).ready(function() {
   );
   
   $("#toc").appendTo($("#main-nav"));
+  
+  var $lang = $("<select id='lang' />")
+    .append($('<option>', {value:'en', text:'English'}))  
+    .append($('<option>', {value:'nl', text:'Nederlands'}))  
+    .append($('<option>', {value:'zh-Hans', text:'简体中文'}))  
+    .change(function() {
+      var lang = $(this).val();
+      $('.translation').hide();
+      $('.translation[lang=' + lang + ']').show();
+    });
+    
+  $('#main-nav').prepend("<br><span class='note'>Translations are not available yet for most terms.</span>").prepend($lang);
+  
+  $lang.change();
+  
 });
 </script><div class="chapter-nav">
 <div class="prev"><a href="h.html"><span class="header-section-number">9</span> H</a></div>

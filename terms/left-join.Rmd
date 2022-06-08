@@ -2,7 +2,7 @@
 
 <dfn>A [mutating join](m.html#mutating-joins) that keeps all the data from the first (left) table and joins anything that matches from the second (right) table.</dfn>
 
-```{r left-join, echo=FALSE, fig.cap="Left Join"}
+```{r left-join, echo=FALSE, fig.cap="Left Join", class.output="join_img"}
 knitr::include_graphics("images/joins/left_join.png")
 ```
 

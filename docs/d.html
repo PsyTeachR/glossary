@@ -235,8 +235,8 @@ Jack
 <p>If you run 5 people and ask them their age, and you know the mean age of those 5 people is 20.1, then four of those people can have any age, but the 5th person must have a specific age to maintain the mean of 20.1. The mean age here is the known outcome and four people's age can vary freely, so the <em>degrees of freedom</em> is 4.</p>
 <p>You need to know the degrees of freedom (usually abbreviated <em>df</em>) to interpret test statistics like t-values and F-values.</p>
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-142"></span>
-<img src="_main_files/figure-html/unnamed-chunk-142-1.png" alt="How p-values vary depending on the degrees of freedom for specific t-values in a t-test." width="75%"><p class="caption">
+<span style="display:block;" id="fig:unnamed-chunk-129"></span>
+<img src="_main_files/figure-html/unnamed-chunk-129-1.png" alt="How p-values vary depending on the degrees of freedom for specific t-values in a t-test." width="75%"><p class="caption">
 Figure 5.1: How p-values vary depending on the degrees of freedom for specific t-values in a t-test.
 </p>
 </div>
@@ -596,6 +596,21 @@ $( document ).ready(function() {
   );
   
   $("#toc").appendTo($("#main-nav"));
+  
+  var $lang = $("<select id='lang' />")
+    .append($('<option>', {value:'en', text:'English'}))  
+    .append($('<option>', {value:'nl', text:'Nederlands'}))  
+    .append($('<option>', {value:'zh-Hans', text:'简体中文'}))  
+    .change(function() {
+      var lang = $(this).val();
+      $('.translation').hide();
+      $('.translation[lang=' + lang + ']').show();
+    });
+    
+  $('#main-nav').prepend("<br><span class='note'>Translations are not available yet for most terms.</span>").prepend($lang);
+  
+  $lang.change();
+  
 });
 </script><div class="chapter-nav">
 <div class="prev"><a href="c.html"><span class="header-section-number">4</span> C</a></div>
