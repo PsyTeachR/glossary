@@ -1,6 +1,6 @@
 ## covariance matrix
 
-<dfn>[Parameters](p.html#parameter) showing how a set of [vectors](v.html#vector) vary and are [correlated](c.html#correlation).</dfn>
+<dfn>[Parameters](p.html#parameter) showing how a set of [vectors](v.html#vector) vary and covary.</dfn>
 
 The covariance [matrix](m.html#matrix) is related to the [correlation matrix](c.html#correlation-matrix), but also incorporates information about the [standard deviations](s.html#standard-deviation) of all the variables.
 
