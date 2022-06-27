@@ -1,5 +1,5 @@
 ## Type I Error
 
-<dfn>A [false positive](f.html#false-positive); When a test concludes there is an effect when there is really is no effect</dfn>
+<dfn>A [false positive](f.html#false-positive); When a test concludes there is an effect when there really is no effect</dfn>
 
 
