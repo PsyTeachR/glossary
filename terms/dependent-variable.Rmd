@@ -1,6 +1,17 @@
 ## dependent variable
 
+<div class="translation" lang="en">
+
 <dfn>The target variable that is being analyzed, whose value is assumed to depend on other variables.</dfn>
 
 You are generally interested in how other variables you have measured impact the dependent variable. For example, if you are testing the effect of stress on anxiety, stress would be your [independent variable](i.html#independent-variable) and anxiety would be the dependent variable. The terms independent/dependent variable are typically used in an experimental context. In the context of regression, the dependent variable is often referred to as the [response variable](r.html#response-variable).
 
+</div>
+ 
+<div class="translation" lang="zh-Hant">
+  
+<dfn>TRANSLATED TERM:依變項  分析程序作用的目標變項之一，數值範圍依賴其他變項的設定。</dfn>
+
+依變項是測量數值的集合，進行資料分析通常想知道其他變項如何影響測量結果。例如你測量個人感受的壓力如何影響焦慮感，壓力就是你要分析的[獨變項](i.html#independent-variable)，焦慮感就是依變項。實驗研究都稱呼這些變項為獨變項與依變項，迴歸分析則稱呼為[反應變項](r.html#response-variable)。
+ 
+</div>
