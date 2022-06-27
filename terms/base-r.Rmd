@@ -25,3 +25,9 @@ Vergelijk met [tidyverse](t.html#tidyverse).
 与 [tidyverse](t.html#tidyverse) 对比。
 
 </div>
+
+<div class="translation" lang="zh-Hant">
+
+<dfn>完成基本安裝，啟動R就自動載入的[函式庫](f.html#function)。自行安裝的外部[套件](p.html#package)，例如[tidyverse](t.html#tidyverse)，需要手動載入。</dfn>
+
+</div>
