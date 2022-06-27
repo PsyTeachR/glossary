@@ -2,7 +2,7 @@
 
 <dfn>The [environment](e.html#environment) where an [object](o.html#object) is available</dfn>
 
-The main thing you need to know about scope involves writing your own [functions](f.html#function). Objects created inside a function are only available inside the function and not outside. 
+The main thing you need to know about scope involves writing your own [functions](f.html#function). Objects created outside of a function (e.g., in the [console](c.html#console) or in a [script](s.html#script) are _global_ variables that are accessible throughout your R session. Objects created inside a function are _local_ variables that are only available inside the function and not outside. 
 
 ```{r}
 y <- 5 # this y is global
