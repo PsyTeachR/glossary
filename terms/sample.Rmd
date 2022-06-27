@@ -12,4 +12,5 @@ If the population is small enough to feasibly test in full, e.g. all students in
 
 For an interesting paper on populations, samples and generalisability, see:
 
-* Simons, D. J., Shoda, Y., & Lindsay, D. S. (2017). Constraints on Generality (COG): A Proposed Addition to All Empirical Papers. Perspectives on Psychological Science, 12(6), 1123–1128. {doi: 10.1177/1745691617708630}(https://doi.org/10.1177/1745691617708630){target="_blank"}}
+* Simons, D. J., Shoda, Y., & Lindsay, D. S. (2017). Constraints on Generality (COG): A Proposed Addition to All Empirical Papers. Perspectives on Psychological Science, 12(6), 1123–1128. [doi: 10.1177/1745691617708630](https://doi.org/10.1177/1745691617708630)
+
