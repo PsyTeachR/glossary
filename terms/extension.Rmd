@@ -21,12 +21,10 @@ Often extensions are forgotten when importing files (e.g., reading data files in
 # Always include the correct extension when specifying file names 
 
 # 1) when reading in data files
-read.table("MyTable.txt", header = TRUE)
+readr::read_csv("MyTable.csv")
 
 # 2) when saving plots and graphs
-png("MyPlot.png")
-plot(cars$speed, cars$dist)
-dev.off()
+ggsave("MyPlot.png")
 
 # 3) when sourcing R code
 source("MyCode.R")
