@@ -1,8 +1,8 @@
 ## ordinal
 
-<dfn>[Discrete](d.html#discrete) variables that have an inherent order, such as number of legs</dfn>
+<dfn>[Discrete](d.html#discrete) variables that have an inherent order, such as level of education or dislike/like.</dfn>
 
-Ordinal variables are not necessarily [continuous](c.html#continuous). That is, you can assume 3 is higher than 2 on a [likert scale](l.html#likert), but the difference between 2 and 3 isn't always the same as the difference between 1 and 2. Therefore, think carefully before averaging ordinal values, since the average of 2 and 4 is not necessarily equal to 3.
+Ordinal variables are not necessarily evenly spaced. That is, there may be a bigger (or smaller) difference between any two consecutive items. E.g., the first and second element on an ordinal variable may be further apart than the second and third; in other words, you can assume 3 is higher than 2 on a [likert scale](l.html#likert), but not by how much, and you cannot assume that 2 is just as far away from 1 as it is from 3. Therefore, think carefully before averaging ordinal values, since the average of 2 and 4 is not necessarily equal to 3.
 
 
 
