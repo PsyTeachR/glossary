@@ -1,0 +1,7 @@
+## covariance
+
+<dfn>The relationship two [vectors](v.html#vector) have to each other.</dfn>
+
+A positive covariance means that as one vector increases the other does as well. A negative covariance means that as one vector increases the other decreases. A covariance of 0 means that the two vectors have to relation to each other. 
+
+Covariances can take on any numerical value which can make them difficult to interpret. Because of this covariances are often converted into [correlations](c.html#correlation) by incorporating information about each vectors' [standard deviations](s.html#standard-deviation).
