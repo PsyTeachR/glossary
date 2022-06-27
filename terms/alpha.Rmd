@@ -1,14 +1,28 @@
 ## alpha
 
+<div class="translation" lang="en"> 
+
 <dfn>([stats](a.html#alpha-stats)) The cutoff value for making a decision to reject the null hypothesis; ([graphics](a.html#alpha-graphics)) A value between 0 and 1 used to control the levels of transparency in a plot</dfn>
 
 Can also be a parameter in the [beta distribution](b.html#beta-distribution) or refer to [Cronbach's alpha](c.html#cronbachs-alpha).
+
+</div>
+
+
+<div class="translation" lang="pt-br"> 
+
+<dfn>([stats](a.html#alpha-stats)) alfa: o valor limite para tomar uma decisão ao rejeitar uma hipótese nula; [graphics](a.html#alpha-graphics)) um valor entre 0 e 1 usado para controlar os níveis de transparência em um gráfico</dfn>
+
+Pode ser também um parâmetro na distribuição beta [beta distribution](b.html#beta-distribution) ou se referir ao alfa de Cronbach [Cronbach's alpha](c.html#cronbachs-alpha).
+
+</div>
 
 ## alpha (stats) {#alpha-stats}
 
 If you are using null hypothesis significance testing ([NHST](n.html#nhst)), then you need to decide on a cutoff value called **alpha** for making a decision to reject the null hypothesis. We call p-values below the alpha cutoff [significant](s.html#significant). 
 
-In psychology, alpha is traditionally set at $\alpha$ = .05, but there are good arguments for [setting a different criterion in some circumstances](http://daniellakens.blogspot.com/2019/05/justifying-your-alpha-by-minimizing-or.html){target="_blank"}. 
+In psychology, alpha is traditionally set at $\alpha$ = .05, but there are good arguments for [setting a different criterion in some circumstances](http://daniellakens.blogspot.com/2019/05/justifying-your-alpha-by-minimizing-or.html){target="_blank"}.
+
 
 ## alpha (graphics) {#alpha-graphics}
 

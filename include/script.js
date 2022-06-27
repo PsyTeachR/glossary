@@ -12,8 +12,8 @@ $( document ).ready(function() {
   
   var $lang = $("<select id='lang' />")
     .append($('<option>', {value:'en', text:'English'}))  
-    .append($('<option>', {value:'nl', text:'Nederlands'}))  
-    .append($('<option>', {value:'zh-Hans', text:'简体中文'}))  
+    .append($('<option>', {value:'pt-br', text:'Português Brasileiro'})) 
+    .append($('<option>', {value:'zh-Hant', text:'繁體中文'}))  
     .change(function() {
       var lang = $(this).val();
       $('.translation').hide();

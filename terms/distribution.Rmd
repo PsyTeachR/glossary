@@ -1,6 +1,6 @@
 ## distribution
 
-<dfn>A way to describe the shape of data</dfn>
+<dfn>A probability distribution is way to describe the shape of data.</dfn>
 
 * [normal distribution](n.html#normal-distribution)
 * [binomial distribution](b.html#binomial-distribution)

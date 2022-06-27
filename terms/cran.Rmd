@@ -7,23 +7,3 @@
 [Packages](p.html#package) that you download from CRAN have been checked to make sure they won't harm your computer. You can learn more about CRAN at <https://cran.r-project.org/>{target="_blank"}.
 
 </div>
-
-
-
-<div class="translation" lang="nl">
-
-<dfn>Het uitgebreide R Archive Network: een netwerk van ftp- en webservers over de hele wereld die identieke, up-to-date versies van code en documentatie voor R opslaan.</dfn>
-
-[Pakketten](p.html#package) die u downloadt van CRAN zijn gecontroleerd om er zeker van te zijn dat ze uw computer niet beschadigen. U kunt meer informatie over CRAN vinden op <https://cran.r-project.org/>{target="_blank"}.
-
-</div>
-
-
-
-<div class="translation" lang="zh-Hans">
-
-<dfn>综合 R 存档网络：一个由世界各地的 ftp 和 Web 服务器组成的网络，用于存储相同的最新版本的 R 代码和文档。</dfn>
-
-您从 CRAN 下载的 [Packages](p.html#package) 已经过检查，以确保它们不会损害您的计算机。您可以在 <https://cran.r-project.org/>{target="_blank"} 了解有关 CRAN 的更多信息。
-
-</div>
