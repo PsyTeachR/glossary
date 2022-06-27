@@ -2,7 +2,7 @@
 
 <dfn>Changing the data type of values in a vector to a single compatible type.</dfn>
 
-If you try to combine values with different [data types](d.html#data-type) in a [vector](v.html#vector), they get coerced to a common type. [Strings](s.html#string) are most dominant and will coerce any other data type into a string. [Doubles](d.html#double) are dominant over [integers](i.html#integer) and [numeric](n.html#numeric) values are dominant over [logical](l.html#logical) values.
+If you try to combine values with different [data types](d.html#data-type) in a [vector](v.html#vector) or [matrix](m.html#matrix), they get coerced to a common type. [Strings](s.html#string) are most dominant which means, if you try to combine a string with another data type, the other data type will be coerced into a string. [Doubles](d.html#double) are dominant over [integers](i.html#integer) and [numeric](n.html#numeric) values are dominant over [logical](l.html#logical) values.
 
 ```{r vector-coersion}
 c(2L, T, F)  # integers and logicals become integers
