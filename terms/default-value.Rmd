@@ -1,5 +1,7 @@
 ## default value
 
+<div class="translation" lang="en">
+
 <dfn>A value that a [function](f.html#function) uses for an [argument](a.html#argument) if it is skipped.</dfn>
 
 For example, `mean()` has a default value of `FALSE` for the argument `na.rm` (don't ignore NA values). 
@@ -26,4 +28,36 @@ If an argument does not have a default value, you can't omit it. In the example 
 x = rnorm()
 ```
 
+</div>
 
+<div class="translation" lang="zh-Hant">
+
+<dfn>TRANSLATED TERM:預設值 任何R[函式](f.html#function)事先設定的[參數](a.html#argument)數值，編寫程式碼未設定即取用的數值。</dfn>
+
+請測試以下程式碼：<br/>
+`mean()` 的其中一項參數`na.rm`，預設值是 `FALSE`(表示計算不忽略NA)。 
+
+```{r}
+x <- c(1,2,3,NA)
+mean(x)
+```
+
+即使寫出參數及預設值，計算結果也是一樣。
+
+```{r}
+mean(x, na.rm = FALSE)
+```
+
+更改參數數值，才會得到不同的結果。
+
+```{r}
+mean(x, na.rm = TRUE)
+```
+
+如果參數未指定預設值，通常必須手動指定數值。以下例子直接執行會有錯誤，因為參數`n`沒有預設值。
+ 
+```{r, error = TRUE}
+x = rnorm()
+```
+  
+</div>
