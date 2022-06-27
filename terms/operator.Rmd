@@ -1,6 +1,6 @@
 ## operator
 
-<dfn>A symbol that performs a mathematical operation, such as `+`, `-`, `*`, `/`</dfn>
+<dfn>A symbol that performs some mathematical or comparative process. </dfn>
 
 Arithmetic operators in R
 
