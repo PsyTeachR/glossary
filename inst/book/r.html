@@ -163,7 +163,7 @@ library(tidyverse)
 <span class="co">#&gt; (Intercept)   9.8913     0.1991  49.677  &lt; 2e-16 ***</span>
 <span class="co">#&gt; predictor     0.6361     0.2150   2.958  0.00388 ** </span>
 <span class="co">#&gt; ---</span>
-<span class="co">#&gt; Signif. codes:  0 '***' 1e-03 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
+<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Residual standard error: 1.988 on 98 degrees of freedom</span>
 <span class="co">#&gt; Multiple R-squared:  0.08198,    Adjusted R-squared:  0.07261 </span>
@@ -868,8 +868,8 @@ $( document ).ready(function() {
   
   var $lang = $("<select id='lang' />")
     .append($('<option>', {value:'en', text:'English'}))  
-    .append($('<option>', {value:'nl', text:'Nederlands'}))  
-    .append($('<option>', {value:'zh-Hans', text:'简体中文'}))  
+    .append($('<option>', {value:'pt-br', text:'Português Brasileiro'})) 
+    .append($('<option>', {value:'zh-Hant', text:'繁體中文'}))  
     .change(function() {
       var lang = $(this).val();
       $('.translation').hide();
@@ -923,7 +923,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-08.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-27.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

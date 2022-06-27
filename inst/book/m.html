@@ -115,7 +115,7 @@
 <h2>
 <span class="header-section-number">14.3</span> match operator<a class="anchor" aria-label="anchor" href="#match-operator"><i class="fas fa-link"></i></a>
 </h2>
-<p><dfn>A binary operator (%in%) that returns a logical vector indicating if there is a match or not for its left operand.</dfn></p>
+<p><dfn>A binary operator (%in%) that returns a <a href="l.html#logical">logical</a> <a href="v.html#vector">vector</a> indicating if there is a match or not for its left operand.</dfn></p>
 <div class="sourceCode" id="cb136"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># check if a single value is in a vector</span>
 <span class="st">"West Dakota"</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">state.name</span>
@@ -128,8 +128,8 @@
 <code class="sourceCode R"><span class="va">pangram</span> <span class="op">&lt;-</span> <span class="st">"the quick brown fox jumps over the lazy dog"</span>
 <span class="va">pangram_chars</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/strsplit.html">strsplit</a></span><span class="op">(</span><span class="va">pangram</span>, <span class="st">""</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>
 <span class="va">letters</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">pangram_chars</span>
-<span class="co">#&gt;  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span>
-<span class="co">#&gt; [16] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span></code></pre></div>
+<span class="co">#&gt;  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span>
+<span class="co">#&gt; [14] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</span></code></pre></div>
 
 </div>
 <div id="matrix" class="section level2" number="14.4">
@@ -137,7 +137,7 @@
 <span class="header-section-number">14.4</span> matrix<a class="anchor" aria-label="anchor" href="#matrix"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> data type consisting of numbers arranged into a fixed number of rows and columns</dfn></p>
-<p>You can use the <code><a href="https://rdrr.io/r/base/matrix.html">matrix()</a></code> function to set up a <a href="v.htm#vector">vector</a> of numbers as a matrix with a specified number of rows of columns.</p>
+<p>You can use the <code><a href="https://rdrr.io/r/base/matrix.html">matrix()</a></code> function to set up a <a href="v.html#vector">vector</a> of numbers as a matrix with a specified number of rows of columns.</p>
 <div class="sourceCode" id="cb139"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># a 4x4 matrix</span>
 <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">16</span>, nrow <span class="op">=</span> <span class="fl">4</span><span class="op">)</span>
@@ -502,8 +502,8 @@ $( document ).ready(function() {
   
   var $lang = $("<select id='lang' />")
     .append($('<option>', {value:'en', text:'English'}))  
-    .append($('<option>', {value:'nl', text:'Nederlands'}))  
-    .append($('<option>', {value:'zh-Hans', text:'简体中文'}))  
+    .append($('<option>', {value:'pt-br', text:'Português Brasileiro'})) 
+    .append($('<option>', {value:'zh-Hant', text:'繁體中文'}))  
     .change(function() {
       var lang = $(this).val();
       $('.translation').hide();
@@ -550,7 +550,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-08.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-27.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -259,7 +259,7 @@ England &amp; Wales
 <p>For example, a paragraph in HTML is marked by "p" tags like this:</p>
 <pre><code>&lt;p&gt;Paragraph text...&lt;/p&gt;</code></pre>
 <p>In <a href="s.html#shiny">shiny</a>, tags can be created with the <code>tags()</code> functions.</p>
-<div class="sourceCode" id="cb208"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb209"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">paragraph</span> <span class="op">&lt;-</span> <span class="va">tags</span><span class="op">$</span><span class="fu">p</span><span class="op">(</span><span class="st">"Paragraph text"</span><span class="op">)</span>
 
 <span class="va">unordered_list</span> <span class="op">&lt;-</span> <span class="va">tags</span><span class="op">$</span><span class="fu">ul</span><span class="op">(</span>
@@ -274,7 +274,7 @@ England &amp; Wales
 </h2>
 <p><dfn>A consistent style for a report or plots.</dfn></p>
 <p>Plots in ggplot can set the theme globally with code like this:</p>
-<div class="sourceCode" id="cb209"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb210"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># set the default theme to black-and-white</span>
 <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html">theme_set</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>You can set the theme for a html document in the <a href="y.html#yaml">YAML</a> header. View and download different <a href="https://bootswatch.com/4/" target="_blank">themes</a>.</p>
@@ -282,7 +282,7 @@ England &amp; Wales
 title: "My Document"
 subtitle: "It's Just a Demo"
 author: "Me"
-date: "2022-06-08"
+date: "2022-06-27"
 output:
   html_document:
     theme: spacelab
@@ -302,7 +302,7 @@ output:
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> for <a href="t.html#tabular-data">tabular data</a> with some different properties to a <a href="d.html#data-frame">data frame</a></dfn></p>
 <p>Tibbles are almost exactly like the <a href="b.html#base-r">base R</a> <code>data.frame</code> container type, but has some special printing functions, does not coerce <a href="c.html#character">character</a> columns to <a href="f.html#factor">factors</a>, and does not typically use row names.</p>
-<div class="sourceCode" id="cb211"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb212"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># display the mtcars data frame</span>
 <span class="va">mtcars</span></code></pre></div>
 <div class="kable-table">
@@ -1564,7 +1564,7 @@ Volvo 142E
 </tbody>
 </table></div>
 </div>
-<div class="sourceCode" id="cb212"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb213"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># convert the mtcars data frame to a tibble</span>
 <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op">(</span><span class="va">mtcars</span>, rownames <span class="op">=</span> <span class="st">"name"</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
@@ -2869,7 +2869,7 @@ Volvo 142E
 </h2>
 <p><dfn>When two or more values/observations within a variable are identical and assume the same rank order value.</dfn></p>
 <p>This is the default for the <code><a href="https://rdrr.io/r/base/rank.html">rank()</a></code> function (<code>ties.method = "average"</code>). You can also set ties to go in the order they are in the dataset (first), in the opposite order (last), a random order (random), all ties have the maximum value (max) or the minimum value (min).</p>
-<div class="sourceCode" id="cb213"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb214"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">scores</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   score <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">15</span>, <span class="fl">15</span><span class="op">)</span>
 <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
@@ -3119,8 +3119,8 @@ $( document ).ready(function() {
   
   var $lang = $("<select id='lang' />")
     .append($('<option>', {value:'en', text:'English'}))  
-    .append($('<option>', {value:'nl', text:'Nederlands'}))  
-    .append($('<option>', {value:'zh-Hans', text:'简体中文'}))  
+    .append($('<option>', {value:'pt-br', text:'Português Brasileiro'})) 
+    .append($('<option>', {value:'zh-Hant', text:'繁體中文'}))  
     .change(function() {
       var lang = $(this).val();
       $('.translation').hide();
@@ -3170,7 +3170,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-08.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-27.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

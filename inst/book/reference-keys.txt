@@ -30,7 +30,7 @@ fig:right-join
 fig:semi-join
 fig:sd-plot
 fig:unif-plot
-tab:unnamed-chunk-379
+tab:unnamed-chunk-380
 tab:wide-data
 cite
 offline-access

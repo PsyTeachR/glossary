@@ -119,8 +119,14 @@
 <h2>
 <span class="header-section-number">2.3</span> alpha<a class="anchor" aria-label="anchor" href="#alpha"><i class="fas fa-link"></i></a>
 </h2>
+<div class="translation" lang="en">
 <p><dfn>(<a href="a.html#alpha-stats">stats</a>) The cutoff value for making a decision to reject the null hypothesis; (<a href="a.html#alpha-graphics">graphics</a>) A value between 0 and 1 used to control the levels of transparency in a plot</dfn></p>
 <p>Can also be a parameter in the <a href="b.html#beta-distribution">beta distribution</a> or refer to <a href="c.html#cronbachs-alpha">Cronbach's alpha</a>.</p>
+</div>
+<div class="translation" lang="pt-br">
+<p><dfn>(<a href="a.html#alpha-stats">stats</a>) alfa: o valor limite para tomar uma decisão ao rejeitar uma hipótese nula; <a href="a.html#alpha-graphics">graphics</a>) um valor entre 0 e 1 usado para controlar os níveis de transparência em um gráfico</dfn></p>
+<p>Pode ser também um parâmetro na distribuição beta <a href="b.html#beta-distribution">beta distribution</a> ou se referir ao alfa de Cronbach <a href="c.html#cronbachs-alpha">Cronbach's alpha</a>.</p>
+</div>
 </div>
 <div id="alpha-stats" class="section level2" number="2.4">
 <h2>
@@ -136,11 +142,11 @@
 <p><dfn>A value between 0 and 1 used to control the levels of transparency in a plot</dfn></p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># if you omit alpha, it defaults to 1</span>
-<span class="va">alpha1.00</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/lims.html">xlim</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span>
+<span class="va">alpha1.00</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_density</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.window.html">xlim</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span>
 
-<span class="va">alpha0.25</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/lims.html">xlim</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span>
+<span class="va">alpha0.25</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_density</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.window.html">xlim</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span>
 
 <span class="fu">cowplot</span><span class="fu">::</span><span class="fu"><a href="https://wilkelab.org/cowplot/reference/plot_grid.html">plot_grid</a></span><span class="op">(</span><span class="va">alpha1.00</span>, <span class="va">alpha0.25</span>, nrow <span class="op">=</span> <span class="fl">2</span>,
                    labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"alpha = 1.0"</span>, <span class="st">"alpha = 0.25"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
@@ -164,11 +170,11 @@ Figure 2.1: Setting alpha to a number lower than 1 lets you see parts of the plo
 <p>A double ampersand is not vectorised, so will ignore all but the first item in vectors, unless your environment has set <code>_R_CHECK_LENGTH_1_LOGIC2_=true</code>, in which case you will get an error.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span>
-<span class="co">#&gt; Warning in c(T, T, F, F) &amp;&amp; c(T, T, F, F): 'length(x) = 4 &gt; 1' in coercion to</span>
-<span class="co">#&gt; 'logical(1)'</span>
+<span class="co">#&gt; Warning in c(T, T, F, F) &amp;&amp; c(T, T, F, F): 'length(x) = 4 &gt; 1' in</span>
+<span class="co">#&gt; coercion to 'logical(1)'</span>
 
-<span class="co">#&gt; Warning in c(T, T, F, F) &amp;&amp; c(T, T, F, F): 'length(x) = 4 &gt; 1' in coercion to</span>
-<span class="co">#&gt; 'logical(1)'</span>
+<span class="co">#&gt; Warning in c(T, T, F, F) &amp;&amp; c(T, T, F, F): 'length(x) = 4 &gt; 1' in</span>
+<span class="co">#&gt; coercion to 'logical(1)'</span>
 <span class="co">#&gt; [1] TRUE</span></code></pre></div>
 <div class="info">
 <p>The advantage of a double ampersand is that it will stop as soon as the conclusion is obvious. So if the first item is FALSE, the second item won't even be run. This is useful for testing whether an object exists before checking something that requires the object to exist.</p>
@@ -197,16 +203,16 @@ Figure 2.2: Anti Join
 </div>
 <p>This is useful when you have a table of data that contains IDs you want to exclude from your main dataset.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">all_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="va">all_data</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
 <span class="op">)</span>
 
-<span class="va">to_exclude</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
+<span class="va">to_exclude</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">4</span>
 <span class="op">)</span>
 
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter-joins.html">anti_join</a></span><span class="op">(</span><span class="va">all_data</span>, <span class="va">to_exclude</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">anti_join</span><span class="op">(</span><span class="va">all_data</span>, <span class="va">to_exclude</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr>
 <th style="text-align:right;">
@@ -309,10 +315,10 @@ E
 <span class="va">myarray</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="va">mylist</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
-  <span class="va">myarray</span><span class="op">[[</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="va">myarray</span><span class="op">[[</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="va">myarray</span><span class="op">[[</span><span class="fl">2</span>,<span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="va">myarray</span><span class="op">[[</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>
+  <span class="va">myarray</span><span class="op">[[</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
+  <span class="va">myarray</span><span class="op">[[</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
+  <span class="va">myarray</span><span class="op">[[</span><span class="fl">2</span>,<span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
+  <span class="va">myarray</span><span class="op">[[</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>
 <span class="op">)</span>
 <span class="co">#&gt; [1] "character" "integer"   "logical"   "numeric"</span></code></pre></div>
 
@@ -332,9 +338,9 @@ E
 <div class="verbatim">
 <p><code>```{r fig-golden-ratio, fig.width = 7, fig.height = 4.32}</code></p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">iris</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">iris</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></code></pre></div>
 <code>```</code>
 </div>
 <div class="figure" style="text-align: center">
@@ -346,9 +352,9 @@ Figure 2.3: Plot with a 1.618:1 aspect ratio (golden ratio)
 <div class="verbatim">
 <p><code>```{r fig-square, fig.width = 7, fig.height = 7}</code></p>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">iris</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">iris</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></code></pre></div>
 <code>```</code>
 </div>
 <div class="figure" style="text-align: center">
@@ -359,7 +365,7 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 </div>
 <p>Or when you save the image:</p>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span><span class="st">"golden-ratio.jpg"</span>, width <span class="op">=</span> <span class="fl">7</span>, height <span class="op">=</span> <span class="fl">7</span><span class="op">/</span><span class="fl">1.618</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">ggsave</span><span class="op">(</span><span class="st">"golden-ratio.jpg"</span>, width <span class="op">=</span> <span class="fl">7</span>, height <span class="op">=</span> <span class="fl">7</span><span class="op">/</span><span class="fl">1.618</span><span class="op">)</span></code></pre></div>
 
 </div>
 <div id="assignment-operator" class="section level2" number="2.11">
@@ -411,7 +417,7 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 <span class="co">#&gt; [1]  7  1  4 32  2  6</span></code></pre></div>
 <p><a href="l.html#list">Lists</a>, on the other hand, can be nested.</p>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">6</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">6</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; List of 4</span>
 <span class="co">#&gt;  $ : num 7</span>
 <span class="co">#&gt;  $ : num [1:3] 1 4 32</span>
@@ -710,8 +716,8 @@ $( document ).ready(function() {
   
   var $lang = $("<select id='lang' />")
     .append($('<option>', {value:'en', text:'English'}))  
-    .append($('<option>', {value:'nl', text:'Nederlands'}))  
-    .append($('<option>', {value:'zh-Hans', text:'简体中文'}))  
+    .append($('<option>', {value:'pt-br', text:'Português Brasileiro'})) 
+    .append($('<option>', {value:'zh-Hant', text:'繁體中文'}))  
     .change(function() {
       var lang = $(this).val();
       $('.translation').hide();
@@ -761,7 +767,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-08.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-27.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
