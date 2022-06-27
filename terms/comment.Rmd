@@ -1,11 +1,12 @@
 ## comment
 
-<dfn>You can annotate `.R` files or [chunks](c.html#chunk) in [R Markdown](r.html#r-markdown) files with comments by prefacing each line of the comment with one or more hash symbols (`#`).</dfn>
+<dfn> Comments are text that R will not run as code. You can annotate `.R` files or [chunks](c.html#chunk) in [R Markdown](r.html#r-markdown) files with comments by prefacing each line of the comment with one or more hash symbols (`#`).</dfn>
 
 ```{r comment-demo}
 # I'm demonstrating comments in this chunk
 # This comment will be added to the document outline ----
 ```
-
+You can comment multiple lines at once by highlighting the code you would like to change into a comment and using the keyboard shortcut Ctrl + Shift + C (Windows) or Command + Shift + C (Mac). You can also change from comment to code (un-commenting) by using the same keyboard shortcut.
 
 Comments get added to the document outline if you put four or more dashes, equal signs, or hashes at the end. This is a great way to keep track of more complicated scripts.
+
