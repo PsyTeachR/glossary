@@ -27,4 +27,3 @@ sample(v, 5)
 # sample 5 numbers from v with replacement
 sample(v, 5, replace = TRUE)
 ```
-
