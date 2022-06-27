@@ -1,0 +1,3 @@
+## standardize
+
+<dfn> The process of putting [vectors](v.html#vector) on the same scale. In statistics, this often means that a vector has a [mean](m.html#mean) of 0 and a [standard deviation](s.html#standard-deviation) of 1. </dfn>
