@@ -14,10 +14,10 @@ The elements of the formula are:
 - `:` : referes to an interaction, without the main effects of the predictors.
 - `-` : removes a predictor. For e.g. `z*w - z:w` translates into: `z + w`
 
-In [linear mixed effects model](l.html#linear-mixed-effects-model) also contains [random effects](r.html#random-effect). For example the following model:
+In [linear mixed effects model](l.html#linear-mixed-effects-model) the formula also contains [random effects](r.html#random-effect). For example consider the following models:
 
-`y ~ x + (1|group)`
-`y ~ x + (x|group)`
+`y ~ x + (1|group)`  
+`y ~ x + (x|group)`  
 `y ~ x + (1|group/cluster)`
 
 - `()` : defines the random effects. Can be more than one random effect.
