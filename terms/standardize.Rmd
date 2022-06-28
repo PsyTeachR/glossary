@@ -1,3 +1,25 @@
 ## standardize
 
 <dfn> The process of putting [vectors](v.html#vector) on the same scale. In statistics, this often means that a vector has a [mean](m.html#mean) of 0 and a [standard deviation](s.html#standard-deviation) of 1. </dfn>
+
+```{r}
+# create a vector containing the numbers 1 to 10
+v <- 1:10
+
+# You can standardize a vector by subtracting the vector mean from each value 
+# and then dividing each each difference by the vector standard deviation
+v_mean <- mean(v)
+v_sd <- sd(v)
+
+standardized_v <- (v - v_mean) / v_sd
+
+# Now the mean and standard deviation of the new vector will be 0 and 1
+mean(standardized_v)
+sd(standardized_v)
+
+# You can also use the scale() function in R to automate the standardization process
+another_standardized_v <- scale(v)
+
+mean(another_standardized_v)
+sd(another_standardized_v)
+```
