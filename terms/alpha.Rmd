@@ -19,14 +19,39 @@ Pode ser também um parâmetro na distribuição beta [beta distribution](b.html
 
 ## alpha (stats) {#alpha-stats}
 
+<div class="translation" lang="en">
+
+<dfn>The cutoff value for making a decision to reject the null hypothesis</dfn>
+
 If you are using null hypothesis significance testing ([NHST](n.html#nhst)), then you need to decide on a cutoff value called **alpha** for making a decision to reject the null hypothesis. We call p-values below the alpha cutoff [significant](s.html#significant). 
 
 In psychology, alpha is traditionally set at $\alpha$ = .05, but there are good arguments for [setting a different criterion in some circumstances](http://daniellakens.blogspot.com/2019/05/justifying-your-alpha-by-minimizing-or.html){target="_blank"}.
 
+</div>
+
+<div class="translation" lang="pt-br">
+
+<dfn>alfa: o valor limite para tomar uma decisão ao rejeitar uma hipótese nula</dfn>
+
+alfa (estatística): se você estiver usando o [teste de significância da hipótese nula](n.html#nhst), você deve decidir um limiar de valor chamado **alfa** para tomar uma decisão sobre rejeitar a hipótese nula. P-valores abaixo do limiar do alfa são chamados de [significativos](s.html#significant).
+
+Na psicologia, o alfa é tipicamente estabelecido como $\alpha$ = .05, mas há bons argumentos para [estabelecer um critério diferente em algumas circunstâncias](http://daniellakens.blogspot.com/2019/05/justifying-your-alpha-by-minimizing-or.html){target="_blank"}.
+
+</div>
 
 ## alpha (graphics) {#alpha-graphics}
 
+<div class="translation" lang="en">
+
 <dfn>A value between 0 and 1 used to control the levels of transparency in a plot</dfn>
+
+</div>
+
+<div class="translation" lang="pt-br">
+
+<dfn>Um valor entre 0 e 1 usado para controlar os níveis de transparência em um gráfico</dfn>
+
+</div>
 
 ```{r alpha-plot, fig.cap="Setting alpha to a number lower than 1 lets you see parts of the plot hidden behind an object.", warning=FALSE}
 # if you omit alpha, it defaults to 1
@@ -39,4 +64,5 @@ alpha0.25 <- ggplot(diamonds, aes(x = depth, fill = cut)) +
 cowplot::plot_grid(alpha1.00, alpha0.25, nrow = 2,
                    labels = c("alpha = 1.0", "alpha = 0.25"))
 ```
+
 

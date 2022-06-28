@@ -107,13 +107,13 @@
 </h2>
 <p><dfn>A data type where a specific set of values are stored with labels</dfn></p>
 <p>In tables, you can store strings as <a href="c.html#character">characters</a> or factors.</p>
-<div class="sourceCode" id="cb103"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb114"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   chr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span>,
   fctr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 <p>If you print a character <a href="v.html#vector">vector</a>, it will have quotes around each values, while a factor vector will show the <a href="l.html#level">Levels</a> after.</p>
-<div class="sourceCode" id="cb104"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb115"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span><span class="op">$</span><span class="va">chr</span>
 <span class="co">#&gt; [1] "A" "B" "C"</span>
 
@@ -121,7 +121,7 @@
 <span class="co">#&gt; [1] A B C</span>
 <span class="co">#&gt; Levels: A B C</span></code></pre></div>
 <p>In a <a href="t.html#tibble">tibble</a>, these types will have "&lt;chr&gt;" or "&lt;fctr&gt;" under the column header.</p>
-<div class="sourceCode" id="cb105"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb116"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
@@ -162,7 +162,7 @@ C
 </table></div>
 </div>
 <p>You can convert between characters and factors like this:</p>
-<div class="sourceCode" id="cb106"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb117"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">fctr</span><span class="op">)</span>
 <span class="co">#&gt; [1] "A" "B" "C"</span>
 
@@ -233,7 +233,7 @@ C
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 X_i + e_i\]</span></p>
 <p>the parameters <span class="math inline">\(\beta_0\)</span> (the intercept) and <span class="math inline">\(\beta_1\)</span> (the slope) are assumed to be constant across all sampling units (e.g. subjects). These are contrasted with <a href="r.html#random%20effect">random effects</a>, which are effects that differ across the units.</p>
 <p>In a mixed effects model, you can get a table of just the fixed effects with the code below:</p>
-<div class="sourceCode" id="cb107"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb118"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lmerTest/man/lmer.html">lmer</a></span><span class="op">(</span>
   <span class="va">rating</span> <span class="op">~</span> <span class="va">rater_age</span> <span class="op">*</span> <span class="va">face_age</span> <span class="op">+</span> <span class="co"># fixed effects</span>
   <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">rater_id</span><span class="op">)</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">face_id</span><span class="op">)</span>, <span class="co"># random effects</span>
@@ -373,9 +373,43 @@ rater_age:face_age
 <p>Fixed factors are usually contrasted with <a href="r.html#random-factor">random factors</a>, whose levels usually are assumed to be the result of (quasi-)random <a href="s.html#sample">sampling</a>.</p>
 
 </div>
-<div id="full_join" class="section level2" number="7.10">
+<div id="formula" class="section level2" number="7.10">
 <h2>
-<span class="header-section-number">7.10</span> full_join<a class="anchor" aria-label="anchor" href="#full_join"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.10</span> formula<a class="anchor" aria-label="anchor" href="#formula"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>A symbolic expression that defines a model.</dfn></p>
+<p>It takes a format like this:</p>
+<p><code>y ~ 1 + x + z*w - z:w</code></p>
+<dl>
+<dt>The elements of the formula are:</dt>
+<dd>
+: on the left hand side, there is the outcome (y), on the right hand, the predictors.
+- <code>1</code> : refers to the intercept that does not have to be written out as it is added by default. If you want to remove the intercept, you have to use 0 instead of 1.
+- <code>+</code> : you can add predictors using the + sign.
+- <code>*</code> : means to take two (or more) pradictors, and use their main effect AND also their interaction. <code>z*w</code> translates into <code>z + w + z:w</code>.
+- <code>:</code> : referes to an interaction, without the main effects of the predictors.
+- <code>-</code> : removes a predictor. For e.g. <code>z*w - z:w</code> translates into: <code>z + w</code>
+</dd>
+</dl>
+<p>In <a href="l.html#linear-mixed-effects-model">linear mixed effects model</a> the formula also contains <a href="r.html#random-effect">random effects</a>. For example consider the following models:</p>
+<p><code>y ~ x + (1|group)</code><br><code>y ~ x + (x|group)</code><br><code>y ~ x + (1|group/cluster)</code></p>
+<ul>
+<li>
+<code>()</code> : defines the random effects. Can be more than one random effect.</li>
+<li>
+<code>(1|group)</code> : adds a random intercept by group.</li>
+<li>
+<code>(x|group)</code> : adds a random intercept and slope by group.</li>
+<li>
+<code>(1|group/cluster)</code> : adds a random intercept by group nested in clusters. You can add more levels.</li>
+</ul>
+<p>More info about adding random terms.
+[<a href="https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html#model-specification" class="uri">https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html#model-specification</a></p>
+
+</div>
+<div id="full_join" class="section level2" number="7.11">
+<h2>
+<span class="header-section-number">7.11</span> full_join<a class="anchor" aria-label="anchor" href="#full_join"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="m.html#mutating-joins">mutating join</a> that lets you join up rows in two tables while keeping all of the information from both tables</dfn></p>
 <div class="figure" style="text-align: center">
@@ -384,7 +418,7 @@ rater_age:face_age
 Figure 7.1: Full Join
 </p>
 </div>
-<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb119"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
@@ -516,7 +550,7 @@ Z
 </tr>
 </table></div>
 <p>If there is no matching data in the other table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb109"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb120"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># a columns come first</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
@@ -622,7 +656,7 @@ F
 </tbody>
 </table></div>
 <p>Order is not important for full joins, but does change the order of columns in the resulting table.</p>
-<div class="sourceCode" id="cb110"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># b columns come first</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">b</span>, <span class="va">a</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
@@ -730,9 +764,9 @@ FALSE
 <p>See <a href="j.html#joins">joins</a> for other types of joins and further resources.</p>
 
 </div>
-<div id="function" class="section level2" number="7.11">
+<div id="function" class="section level2" number="7.12">
 <h2>
-<span class="header-section-number">7.11</span> function<a class="anchor" aria-label="anchor" href="#function"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.12</span> function<a class="anchor" aria-label="anchor" href="#function"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A named section of code that can be reused.</dfn></p>
 <p>For example, <code>sd</code> is a function that returns the standard deviation of the <a href="v.html#vector">vector</a> of numbers that you provide as the input <a href="a.html#argument">argument</a>. Functions are set up like this: <code>function_name(argument1 = a1, argument2 = a2)</code>. The <a href="a.html#argument">arguments</a> in parentheses can be named (like, <code>x = c(1,3,5,8)</code>) or you can skip the names if you put them in the exact same order that they're defined in the function. You can check this by typing <code><a href="https://rdrr.io/r/stats/sd.html">?sd</a></code> (or whatever function name you're looking up) into the console and the Help pane will show you the default order under <strong>Usage</strong>.</p>
@@ -958,8 +992,9 @@ $( document ).ready(function() {
 <li><a class="nav-link" href="#fitted-value"><span class="header-section-number">7.7</span> fitted value</a></li>
 <li><a class="nav-link" href="#fixed-effect"><span class="header-section-number">7.8</span> fixed effect</a></li>
 <li><a class="nav-link" href="#fixed-factor"><span class="header-section-number">7.9</span> fixed factor</a></li>
-<li><a class="nav-link" href="#full_join"><span class="header-section-number">7.10</span> full_join</a></li>
-<li><a class="nav-link" href="#function"><span class="header-section-number">7.11</span> function</a></li>
+<li><a class="nav-link" href="#formula"><span class="header-section-number">7.10</span> formula</a></li>
+<li><a class="nav-link" href="#full_join"><span class="header-section-number">7.11</span> full_join</a></li>
+<li><a class="nav-link" href="#function"><span class="header-section-number">7.12</span> function</a></li>
 </ul>
 
       <div class="book-extra">

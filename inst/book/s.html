@@ -111,7 +111,7 @@
 </li>
 </ul>
 <p>In R, <code><a href="https://rdrr.io/r/base/sample.html">sample()</a></code> is a function which can be used to pull an arbitrary number of elements from a vector. For instance, you can use <code>sample</code> to randomly draw five numbers (with or without replacement) from a vector containing the numbers 1 to 10:</p>
-<div class="sourceCode" id="cb191"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb202"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">4491</span><span class="op">)</span> <span class="co"># set seed for reprodicibilty</span>
 <span class="co"># create a vector containing the numbers 1 to 10</span>
 <span class="va">v</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>
@@ -134,7 +134,7 @@
 <p>Numbers are most commonly written in decimal notation, like <code>3.145</code> or <code>365</code>. However, when numbers are very large or small, it's difficult to read or write them correctly.</p>
 <p>For example, Avogadro's constant, the number of particles contained in one mole of any substance, is equal to 602,252,000,000,000,000,000,000. The commas make it a little easier to parse when reading, but you can't use those in coding. The scientific notation is <span class="math inline">\(6.02x10^{23}\)</span>, which means the you multiply 6.02 times the number that is 1 with 23 zeros after it (or move the decimal place in 6.02 23 places to the right). In R, this notation looks like <code>6.02e23</code>.</p>
 <p>Negative numbers move the decimal place to the left. For example, Wyler's constant in physics is <code>1.05e-109</code>, or a decimal place followed by 108 zeros before you get to the first non-zero digit.</p>
-<div class="sourceCode" id="cb192"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb203"><pre class="downlit sourceCode r">
 <code class="sourceCode R">    <span class="fl">0.0001</span> <span class="op">==</span> <span class="fl">1e-4</span>
     <span class="fl">0.001</span>  <span class="op">==</span> <span class="fl">1e-3</span>
     <span class="fl">0.01</span>   <span class="op">==</span> <span class="fl">1e-2</span>
@@ -145,12 +145,12 @@
  <span class="fl">1000</span>      <span class="op">==</span> <span class="fl">1e3</span>
 <span class="fl">10000</span>      <span class="op">==</span> <span class="fl">1e4</span></code></pre></div>
 <p>You can format numbers with scientific notation in R using the function <code><a href="https://rdrr.io/r/base/formatc.html">formatC()</a></code>. This turns them into text that you can use in inline code, but you can't use as a number anymore.</p>
-<div class="sourceCode" id="cb193"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb204"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">123456789</span>, <span class="fl">0.06789</span>, <span class="fl">0.000000012</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/formatc.html">formatC</a></span><span class="op">(</span><span class="va">x</span>, format <span class="op">=</span> <span class="st">"e"</span>, digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>
 <span class="co">#&gt; [1] "1.23e+08" "6.79e-02" "1.20e-08"</span></code></pre></div>
 <p>Model output can often contain numbers in scientific notation. To change the threshold at which large or small numbers display with scientific notation, set the <code>scipen</code> option at the top of a script. A value of 0 means that R will use scientific notation whenever that representation takes less space than the decimal representation. Larger values make decimal notation more likely and smaller values make scientific notation more likely.</p>
-<div class="sourceCode" id="cb194"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb205"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">test</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">1000000</span>,
               <span class="fl">100000</span>, 
                <span class="fl">10000</span>, 
@@ -164,7 +164,7 @@
                    <span class="fl">0.0001</span>,
                    <span class="fl">0.00001</span>,
                    <span class="fl">0.000001</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb195"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb206"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>scipen <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">test</span><span class="op">)</span>
 <span class="co">#&gt; List of 13</span>
@@ -181,7 +181,7 @@
 <span class="co">#&gt;  $ : num 0.0001</span>
 <span class="co">#&gt;  $ : num 1e-05</span>
 <span class="co">#&gt;  $ : num 1e-06</span></code></pre></div>
-<div class="sourceCode" id="cb196"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb207"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>scipen <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">test</span><span class="op">)</span>
 <span class="co">#&gt; List of 13</span>
@@ -198,7 +198,7 @@
 <span class="co">#&gt;  $ : num 1e-04</span>
 <span class="co">#&gt;  $ : num 1e-05</span>
 <span class="co">#&gt;  $ : num 1e-06</span></code></pre></div>
-<div class="sourceCode" id="cb197"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb208"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>scipen <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">test</span><span class="op">)</span>
 <span class="co">#&gt; List of 13</span>
@@ -223,7 +223,7 @@
 </h2>
 <p><dfn>The <a href="e.html#environment">environment</a> where an <a href="o.html#object">object</a> is available</dfn></p>
 <p>The main thing you need to know about scope involves writing your own <a href="f.html#function">functions</a>. Objects created outside of a function (e.g., in the <a href="c.html#console">console</a> or in a <a href="s.html#script">script</a> are <em>global</em> variables that are accessible throughout your R session. Objects created inside a function are <em>local</em> variables that are only available inside the function and not outside.</p>
-<div class="sourceCode" id="cb198"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb209"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">5</span> <span class="co"># this y is global</span>
 
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span>
@@ -236,7 +236,7 @@
 <span class="va">y</span> <span class="co"># returns the global value of y</span>
 <span class="co">#&gt; [1] 5</span></code></pre></div>
 <p>If you have arguments to a function, they are local variables inside the function and their values will overwrite any global variables with the same name.</p>
-<div class="sourceCode" id="cb199"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb210"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">5</span> <span class="co"># this y is global</span>
 
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">{</span>
@@ -269,7 +269,7 @@ Figure 20.1: Semi Join
 </p>
 </div>
 <p>This is useful when you have a table of data that contains IDs of data that passes your exclusion criteria.</p>
-<div class="sourceCode" id="cb200"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb211"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">all_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
@@ -342,11 +342,11 @@ D
 </h2>
 <p><dfn>Functions that compare two tables and return rows that match (intersect), are in either table (union), or are in one table but not the other (setdiff).</dfn></p>
 <p>The examples below use two small datasets. <code>a</code> has <code>id</code>s 1 to 5, and <code>b</code> has <code>id</code>s 3 to 7.</p>
-<div class="sourceCode" id="cb201"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb212"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span>
 <span class="va">b</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fl">3</span><span class="op">:</span><span class="fl">7</span><span class="op">)</span></code></pre></div>
 <p><code><a href="https://generics.r-lib.org/reference/setops.html">intersect()</a></code> returns all rows in two tables that match exactly. The columns don't have to be in the same order.</p>
-<div class="sourceCode" id="cb202"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb213"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/setops.html">intersect</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
@@ -375,7 +375,7 @@ id
 </table></div>
 </div>
 <p><code><a href="https://generics.r-lib.org/reference/setops.html">union()</a></code> returns all the rows from both tables, removing duplicate rows.</p>
-<div class="sourceCode" id="cb203"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb214"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/setops.html">union</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
@@ -424,7 +424,7 @@ id
 </table></div>
 </div>
 <p><code>setdiff</code> returns rows that are in the first table, but not in the second table.</p>
-<div class="sourceCode" id="cb204"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb215"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/setops.html">setdiff</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
@@ -490,7 +490,7 @@ id
 <span class="header-section-number">20.13</span> single brackets<a class="anchor" aria-label="anchor" href="#single-brackets"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A pair of square brackets used to select a subset from a <a href="c.html#container">container</a> like a <a href="l.html#list">list</a>, <a href="d.html#data-frame">data frame</a>, or <a href="m.html#matrix">matrix</a> (e.g., data[1, ]).</dfn></p>
-<div class="sourceCode" id="cb205"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb216"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">secret_code</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">16</span>, <span class="fl">19</span>, <span class="fl">25</span>, <span class="fl">20</span>, <span class="fl">5</span>, <span class="fl">1</span>, <span class="fl">3</span>, <span class="fl">8</span>, <span class="fl">18</span><span class="op">)</span>
 
 <span class="va">LETTERS</span><span class="op">[</span><span class="va">secret_code</span><span class="op">]</span>
@@ -520,29 +520,60 @@ Figure 20.2: Normal distributions with means of 0 and SDs of 1 (red), 2 (blue) a
 </div>
 
 </div>
-<div id="static" class="section level2" number="20.16">
+<div id="standardize" class="section level2" number="20.16">
 <h2>
-<span class="header-section-number">20.16</span> static<a class="anchor" aria-label="anchor" href="#static"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.16</span> standardize<a class="anchor" aria-label="anchor" href="#standardize"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn> The process of putting <a href="v.html#vector">vectors</a> on the same scale. In statistics, this often means that a vector has a <a href="m.html#mean">mean</a> of 0 and a <a href="s.html#standard-deviation">standard deviation</a> of 1. </dfn></p>
+<div class="sourceCode" id="cb217"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># create a vector containing the numbers 1 to 10</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>
+
+<span class="co"># You can standardize a vector by subtracting the vector mean from each value </span>
+<span class="co"># and then dividing each each difference by the vector standard deviation</span>
+<span class="va">v_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span>
+<span class="va">v_sd</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span>
+
+<span class="va">standardized_v</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">v</span> <span class="op">-</span> <span class="va">v_mean</span><span class="op">)</span> <span class="op">/</span> <span class="va">v_sd</span>
+
+<span class="co"># Now the mean and standard deviation of the new vector will be 0 and 1</span>
+<span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">standardized_v</span><span class="op">)</span>
+<span class="co">#&gt; [1] 0</span>
+<span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">standardized_v</span><span class="op">)</span>
+<span class="co">#&gt; [1] 1</span>
+
+<span class="co"># You can also use the scale() function in R to automate the standardization process</span>
+<span class="va">another_standardized_v</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/scale.html">scale</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span>
+
+<span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">another_standardized_v</span><span class="op">)</span>
+<span class="co">#&gt; [1] 0</span>
+<span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">another_standardized_v</span><span class="op">)</span>
+<span class="co">#&gt; [1] 1</span></code></pre></div>
+
+</div>
+<div id="static" class="section level2" number="20.17">
+<h2>
+<span class="header-section-number">20.17</span> static<a class="anchor" aria-label="anchor" href="#static"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Something that does not change in response to user actions</dfn></p>
 <p>For example, in a <a href="s.html#shiny">shiny</a> app, the following code creates static and <a href="d.html#dynamic">dynamic</a> elements.</p>
-<div class="sourceCode" id="cb206"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb218"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">static</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">p</a></span><span class="op">(</span><span class="st">"This text cannot change"</span><span class="op">)</span>
 <span class="va">dynamic</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/textOutput.html">textOutput</a></span><span class="op">(</span><span class="st">"This text can change"</span><span class="op">)</span></code></pre></div>
 
 </div>
-<div id="string" class="section level2" number="20.17">
+<div id="string" class="section level2" number="20.18">
 <h2>
-<span class="header-section-number">20.17</span> string<a class="anchor" aria-label="anchor" href="#string"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.18</span> string<a class="anchor" aria-label="anchor" href="#string"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A piece of text inside of quotes.</dfn></p>
 <p>For example, <code>"I sense the rains down in Africa"</code> is a string. Numbers inside of quotes can be a string; <code>"19"</code> is a string, while <code>19</code> is not.</p>
 <p>Strings are a <a href="c.html#character">character</a> <a href="d.html#data-type">data type</a>.</p>
 
 </div>
-<div id="sum-code" class="section level2" number="20.18">
+<div id="sum-code" class="section level2" number="20.19">
 <h2>
-<span class="header-section-number">20.18</span> sum code<a class="anchor" aria-label="anchor" href="#sum-code"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.19</span> sum code<a class="anchor" aria-label="anchor" href="#sum-code"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="c.html#coding-scheme">coding scheme</a> for categorical variables that compares the mean for each level to the overall mean.</dfn></p>
 
@@ -767,9 +798,10 @@ $( document ).ready(function() {
 <li><a class="nav-link" href="#single-brackets"><span class="header-section-number">20.13</span> single brackets</a></li>
 <li><a class="nav-link" href="#slope"><span class="header-section-number">20.14</span> slope</a></li>
 <li><a class="nav-link" href="#standard-deviation"><span class="header-section-number">20.15</span> standard deviation</a></li>
-<li><a class="nav-link" href="#static"><span class="header-section-number">20.16</span> static</a></li>
-<li><a class="nav-link" href="#string"><span class="header-section-number">20.17</span> string</a></li>
-<li><a class="nav-link" href="#sum-code"><span class="header-section-number">20.18</span> sum code</a></li>
+<li><a class="nav-link" href="#standardize"><span class="header-section-number">20.16</span> standardize</a></li>
+<li><a class="nav-link" href="#static"><span class="header-section-number">20.17</span> static</a></li>
+<li><a class="nav-link" href="#string"><span class="header-section-number">20.18</span> string</a></li>
+<li><a class="nav-link" href="#sum-code"><span class="header-section-number">20.19</span> sum code</a></li>
 </ul>
 
       <div class="book-extra">

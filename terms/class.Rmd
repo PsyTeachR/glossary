@@ -1,0 +1,50 @@
+## class
+
+<dfn>A way to categorise objects</dfn>
+
+A class is similar to a [data type](d.html#data-type), but object can have more than one class.
+
+```{r}
+# character class and type
+class("A")
+typeof("A")
+```
+
+
+```{r}
+# numeric class and double type
+class(1.1)
+typeof(1.1)
+```
+
+
+```{r}
+# numeric class and integer type
+class(1L)
+typeof(1L)
+```
+
+
+```{r}
+# function class and closure type
+class(mean)
+typeof(mean)
+```
+
+Classes often control how an object is printed. For example, the result of `t.test()` is a list with class "htest", which is why printing the result gives you formatted output.
+
+```{r}
+t <- t.test(rnorm(10), rnorm(10))
+typeof(t)
+class(t)
+t
+```
+
+If you `unclass()` an object, it no longer gets specical printing styles.
+
+```{r}
+unclass(t)
+```
+
+
+

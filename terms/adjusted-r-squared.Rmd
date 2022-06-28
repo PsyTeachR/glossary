@@ -1,5 +1,16 @@
 ## adjusted R-squared
 
+<div class="translation" lang="en">
+
 <dfn>A modified version of [R-squared](r.html#r-squared) adjusted for the number of predictors in the model.</dfn>
+
+</div>
+
+
+<div class="translation" lang="pt-br"> 
+
+<dfn>R-quadrado ajustado: uma versão modificada do R-quadrado ajustado para o número de preditores do modelo.</dfn>
+
+</div>
 
 

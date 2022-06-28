@@ -33,10 +33,12 @@ if (exists("x")) rm(x) # removes x from the environment
 
 
 ```{r, error = TRUE}
+# this produces an error if x doesn't exist
 if (is.character(x)) { 
   # do something
 }
 ```
+
 ```{r}
 if (exists("x") && is.character(x)) { 
   # do something

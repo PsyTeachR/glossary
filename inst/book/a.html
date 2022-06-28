@@ -6,16 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>2 A | Glossary </title>
 <meta name="author" content="psyTeachR Team">
-<meta name="description" content="2.1 absolute path A file path that starts with / and is not appended to the working directory For example, if your working directory is /Users/me/study/ and you want to refer to a file in the...">
+<meta name="description" content="2.1 absolute path  A file path that starts with / and is not appended to the working directory For example, if your working directory is /Users/me/study/ and you want to refer to a file in the...">
 <meta name="generator" content="bookdown 0.26 with bs4_book()">
 <meta property="og:title" content="2 A | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/a.html">
 <meta property="og:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
-<meta property="og:description" content="2.1 absolute path A file path that starts with / and is not appended to the working directory For example, if your working directory is /Users/me/study/ and you want to refer to a file in the...">
+<meta property="og:description" content="2.1 absolute path  A file path that starts with / and is not appended to the working directory For example, if your working directory is /Users/me/study/ and you want to refer to a file in the...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2 A | Glossary ">
-<meta name="twitter:description" content="2.1 absolute path A file path that starts with / and is not appended to the working directory For example, if your working directory is /Users/me/study/ and you want to refer to a file in the...">
+<meta name="twitter:description" content="2.1 absolute path  A file path that starts with / and is not appended to the working directory For example, if your working directory is /Users/me/study/ and you want to refer to a file in the...">
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -99,10 +99,18 @@
 <h2>
 <span class="header-section-number">2.1</span> absolute path<a class="anchor" aria-label="anchor" href="#absolute-path"><i class="fas fa-link"></i></a>
 </h2>
+<div class="translation" lang="en">
 <p><dfn>A file path that starts with / and is not appended to the working directory</dfn></p>
 <p>For example, if your <a href="w.html#working-directory">working directory</a> is <code>/Users/me/study/</code> and you want to refer to a file in the directory <code>data</code> called <code>faces.csv</code>, the absolute path is <code>/Users/me/study/data/faces.csv</code>.</p>
 <p>However, you should normally use <a href="r.html#relative-path">relative paths</a> in scripts, not absolute paths, which can change when you move a project directory to a new computer or even a new place on your computer.</p>
 <p>The package R.utils has a function <code>getAbsolutePath()</code> that returns the absolute path of a file <a href="p.html#path">path</a> or a file <a href="o.html#object">object</a>.</p>
+</div>
+<div class="translation" lang="pt-br">
+<p><dfn> caminho absoluto: um caminho para um arquivo que começa com / e não está fixado ao diretório de trabalho</dfn></p>
+<p>Por exemplo, se o seu <a href="w.html#working-directory">diretório de trabalho</a> é <code>/Users/me/study/</code> e você quer se referir a um arquivo no diretório <code>data</code> chamado <code>faces.csv</code>, o caminho absoluto é <code>/Users/me/study/data/faces.csv</code>.</p>
+<p>Entretanto, você deve normalmente usar <a href="r.html#relative-path">caminhos relativos</a> nos scripts, não caminhos absolutos, pois estes podem mudar quando você move o diretório de um projeto para um computador novo ou até mesmo para um destino novo no seu computador.</p>
+<p>O pacote R.utils possui uma função <code>getAbsolutePath()</code> que retorna o caminho absoluto de um arquivo <a href="p.html#path">caminho</a> ou um arquivo<a href="o.html#object">objeto</a></p>
+</div>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">R.utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/R.utils/man/getAbsolutePath.html">getAbsolutePath</a></span><span class="op">(</span><span class="st">"../index.Rmd"</span><span class="op">)</span>
 <span class="co">#&gt; [1] "/Users/lisad/rproj/psyteachr/index.Rmd"</span></code></pre></div>
@@ -112,7 +120,12 @@
 <h2>
 <span class="header-section-number">2.2</span> adjusted R-squared<a class="anchor" aria-label="anchor" href="#adjusted-r-squared"><i class="fas fa-link"></i></a>
 </h2>
+<div class="translation" lang="en">
 <p><dfn>A modified version of <a href="r.html#r-squared">R-squared</a> adjusted for the number of predictors in the model.</dfn></p>
+</div>
+<div class="translation" lang="pt-br">
+<p><dfn>R-quadrado ajustado: uma versão modificada do R-quadrado ajustado para o número de preditores do modelo.</dfn></p>
+</div>
 
 </div>
 <div id="alpha" class="section level2" number="2.3">
@@ -132,21 +145,34 @@
 <h2>
 <span class="header-section-number">2.4</span> alpha (stats)<a class="anchor" aria-label="anchor" href="#alpha-stats"><i class="fas fa-link"></i></a>
 </h2>
+<div class="translation" lang="en">
+<p><dfn>The cutoff value for making a decision to reject the null hypothesis</dfn></p>
 <p>If you are using null hypothesis significance testing (<a href="n.html#nhst">NHST</a>), then you need to decide on a cutoff value called <strong>alpha</strong> for making a decision to reject the null hypothesis. We call p-values below the alpha cutoff <a href="s.html#significant">significant</a>.</p>
 <p>In psychology, alpha is traditionally set at <span class="math inline">\(\alpha\)</span> = .05, but there are good arguments for <a href="http://daniellakens.blogspot.com/2019/05/justifying-your-alpha-by-minimizing-or.html" target="_blank">setting a different criterion in some circumstances</a>.</p>
+</div>
+<div class="translation" lang="pt-br">
+<p><dfn>alfa: o valor limite para tomar uma decisão ao rejeitar uma hipótese nula</dfn></p>
+<p>alfa (estatística): se você estiver usando o <a href="n.html#nhst">teste de significância da hipótese nula</a>, você deve decidir um limiar de valor chamado <strong>alfa</strong> para tomar uma decisão sobre rejeitar a hipótese nula. P-valores abaixo do limiar do alfa são chamados de <a href="s.html#significant">significativos</a>.</p>
+<p>Na psicologia, o alfa é tipicamente estabelecido como <span class="math inline">\(\alpha\)</span> = .05, mas há bons argumentos para <a href="http://daniellakens.blogspot.com/2019/05/justifying-your-alpha-by-minimizing-or.html" target="_blank">estabelecer um critério diferente em algumas circunstâncias</a>.</p>
+</div>
 </div>
 <div id="alpha-graphics" class="section level2" number="2.5">
 <h2>
 <span class="header-section-number">2.5</span> alpha (graphics)<a class="anchor" aria-label="anchor" href="#alpha-graphics"><i class="fas fa-link"></i></a>
 </h2>
+<div class="translation" lang="en">
 <p><dfn>A value between 0 and 1 used to control the levels of transparency in a plot</dfn></p>
+</div>
+<div class="translation" lang="pt-br">
+<p><dfn>Um valor entre 0 e 1 usado para controlar os níveis de transparência em um gráfico</dfn></p>
+</div>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># if you omit alpha, it defaults to 1</span>
-<span class="va">alpha1.00</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_density</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.window.html">xlim</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span>
+<span class="va">alpha1.00</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/lims.html">xlim</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span>
 
-<span class="va">alpha0.25</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_density</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.window.html">xlim</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span>
+<span class="va">alpha0.25</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/lims.html">xlim</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span>
 
 <span class="fu">cowplot</span><span class="fu">::</span><span class="fu"><a href="https://wilkelab.org/cowplot/reference/plot_grid.html">plot_grid</a></span><span class="op">(</span><span class="va">alpha1.00</span>, <span class="va">alpha0.25</span>, nrow <span class="op">=</span> <span class="fl">2</span>,
                    labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"alpha = 1.0"</span>, <span class="st">"alpha = 0.25"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
@@ -179,7 +205,8 @@ Figure 2.1: Setting alpha to a number lower than 1 lets you see parts of the plo
 <div class="info">
 <p>The advantage of a double ampersand is that it will stop as soon as the conclusion is obvious. So if the first item is FALSE, the second item won't even be run. This is useful for testing whether an object exists before checking something that requires the object to exist.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">is.character</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span> 
+<code class="sourceCode R"><span class="co"># this produces an error if x doesn't exist</span>
+<span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">is.character</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span> 
   <span class="co"># do something</span>
 <span class="op">}</span>
 <span class="co">#&gt; Error in eval(expr, envir, enclos): object 'x' not found</span></code></pre></div>
@@ -203,16 +230,16 @@ Figure 2.2: Anti Join
 </div>
 <p>This is useful when you have a table of data that contains IDs you want to exclude from your main dataset.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">all_data</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
+<code class="sourceCode R"><span class="va">all_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
 <span class="op">)</span>
 
-<span class="va">to_exclude</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
+<span class="va">to_exclude</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">4</span>
 <span class="op">)</span>
 
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">anti_join</span><span class="op">(</span><span class="va">all_data</span>, <span class="va">to_exclude</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter-joins.html">anti_join</a></span><span class="op">(</span><span class="va">all_data</span>, <span class="va">to_exclude</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr>
 <th style="text-align:right;">
@@ -315,10 +342,10 @@ E
 <span class="va">myarray</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="va">mylist</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
-  <span class="va">myarray</span><span class="op">[[</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="va">myarray</span><span class="op">[[</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="va">myarray</span><span class="op">[[</span><span class="fl">2</span>,<span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="va">myarray</span><span class="op">[[</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>
+  <span class="va">myarray</span><span class="op">[[</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
+  <span class="va">myarray</span><span class="op">[[</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
+  <span class="va">myarray</span><span class="op">[[</span><span class="fl">2</span>,<span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
+  <span class="va">myarray</span><span class="op">[[</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>
 <span class="op">)</span>
 <span class="co">#&gt; [1] "character" "integer"   "logical"   "numeric"</span></code></pre></div>
 
@@ -338,9 +365,9 @@ E
 <div class="verbatim">
 <p><code>```{r fig-golden-ratio, fig.width = 7, fig.height = 4.32}</code></p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">iris</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">iris</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></code></pre></div>
 <code>```</code>
 </div>
 <div class="figure" style="text-align: center">
@@ -352,9 +379,9 @@ Figure 2.3: Plot with a 1.618:1 aspect ratio (golden ratio)
 <div class="verbatim">
 <p><code>```{r fig-square, fig.width = 7, fig.height = 7}</code></p>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">iris</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">iris</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></code></pre></div>
 <code>```</code>
 </div>
 <div class="figure" style="text-align: center">
@@ -365,7 +392,7 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 </div>
 <p>Or when you save the image:</p>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">ggsave</span><span class="op">(</span><span class="st">"golden-ratio.jpg"</span>, width <span class="op">=</span> <span class="fl">7</span>, height <span class="op">=</span> <span class="fl">7</span><span class="op">/</span><span class="fl">1.618</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span><span class="st">"golden-ratio.jpg"</span>, width <span class="op">=</span> <span class="fl">7</span>, height <span class="op">=</span> <span class="fl">7</span><span class="op">/</span><span class="fl">1.618</span><span class="op">)</span></code></pre></div>
 
 </div>
 <div id="assignment-operator" class="section level2" number="2.11">
@@ -417,7 +444,7 @@ Figure 2.4: Plot with a 1:1 aspect ratio
 <span class="co">#&gt; [1]  7  1  4 32  2  6</span></code></pre></div>
 <p><a href="l.html#list">Lists</a>, on the other hand, can be nested.</p>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">6</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">6</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; List of 4</span>
 <span class="co">#&gt;  $ : num 7</span>
 <span class="co">#&gt;  $ : num [1:3] 1 4 32</span>

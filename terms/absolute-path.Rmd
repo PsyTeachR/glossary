@@ -1,5 +1,7 @@
 ## absolute path
 
+<div class="translation" lang="en">
+
 <dfn>A file path that starts with / and is not appended to the working directory</dfn>
 
 For example, if your [working directory](w.html#working-directory) is `/Users/me/study/` and you want to refer to a file in the directory `data` called `faces.csv`, the absolute path is `/Users/me/study/data/faces.csv`. 
@@ -8,8 +10,21 @@ However, you should normally use [relative paths](r.html#relative-path) in scrip
 
 The package R.utils has a function `getAbsolutePath()` that returns the absolute path of a file [path](p.html#path) or a file [object](o.html#object).
 
+</div>
+
+
+<div class="translation" lang="pt-br">
+
+<dfn> caminho absoluto: um caminho para um arquivo que começa com / e não está fixado ao diretório de trabalho</dfn>
+
+Por exemplo, se o seu [diretório de trabalho](w.html#working-directory) é `/Users/me/study/` e você quer se referir a um arquivo no diretório `data` chamado `faces.csv`, o caminho absoluto é `/Users/me/study/data/faces.csv`.
+
+Entretanto, você deve normalmente usar [caminhos relativos](r.html#relative-path) nos scripts, não caminhos absolutos, pois estes podem mudar quando você move o diretório de um projeto para um computador novo ou até mesmo para um destino novo no seu computador. 
+
+O pacote R.utils possui uma função `getAbsolutePath()` que retorna o caminho absoluto de um arquivo [caminho](p.html#path) ou um arquivo[objeto](o.html#object)
+
+</div>
+
 ```{r absolute-path}
 R.utils::getAbsolutePath("../index.Rmd")
 ```
-
-

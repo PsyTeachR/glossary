@@ -6,7 +6,8 @@ fig:aspect-ratio-2-disp
 fig:binom-plot
 fig:bvn-plot
 fig:cor
-fig:unnamed-chunk-129
+fig:unnamed-chunk-141
+fig:unnamed-chunk-142
 fig:full-join
 fig:img-function-help
 fig:geom-boxplot
@@ -18,7 +19,7 @@ fig:left-join
 fig:levels-without
 fig:levels-with
 tab:long-data
-tab:unnamed-chunk-238
+tab:unnamed-chunk-253
 fig:normal-plot
 fig:img-panes
 fig:poisson-plot
@@ -30,7 +31,7 @@ fig:right-join
 fig:semi-join
 fig:sd-plot
 fig:unif-plot
-tab:unnamed-chunk-380
+tab:unnamed-chunk-397
 tab:wide-data
 cite
 offline-access
@@ -73,6 +74,7 @@ categorical
 character
 chunk
 ci
+class
 coding-scheme
 coercion
 comment
@@ -88,6 +90,7 @@ continuous
 correlation-matrix
 correlation
 covariance-matrix
+covariance
 cran
 cronbachs-alpha
 css
@@ -130,6 +133,7 @@ filtering-joins
 fitted-value
 fixed-effect
 fixed-factor
+formula
 full_join
 function
 g
@@ -257,6 +261,7 @@ simulation
 single-brackets
 slope
 standard-deviation
+standardize
 static
 string
 sum-code

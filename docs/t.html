@@ -259,7 +259,7 @@ England &amp; Wales
 <p>For example, a paragraph in HTML is marked by "p" tags like this:</p>
 <pre><code>&lt;p&gt;Paragraph text...&lt;/p&gt;</code></pre>
 <p>In <a href="s.html#shiny">shiny</a>, tags can be created with the <code>tags()</code> functions.</p>
-<div class="sourceCode" id="cb209"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb221"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">paragraph</span> <span class="op">&lt;-</span> <span class="va">tags</span><span class="op">$</span><span class="fu">p</span><span class="op">(</span><span class="st">"Paragraph text"</span><span class="op">)</span>
 
 <span class="va">unordered_list</span> <span class="op">&lt;-</span> <span class="va">tags</span><span class="op">$</span><span class="fu">ul</span><span class="op">(</span>
@@ -274,7 +274,7 @@ England &amp; Wales
 </h2>
 <p><dfn>A consistent style for a report or plots.</dfn></p>
 <p>Plots in ggplot can set the theme globally with code like this:</p>
-<div class="sourceCode" id="cb210"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb222"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># set the default theme to black-and-white</span>
 <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html">theme_set</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>You can set the theme for a html document in the <a href="y.html#yaml">YAML</a> header. View and download different <a href="https://bootswatch.com/4/" target="_blank">themes</a>.</p>
@@ -302,7 +302,7 @@ output:
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> for <a href="t.html#tabular-data">tabular data</a> with some different properties to a <a href="d.html#data-frame">data frame</a></dfn></p>
 <p>Tibbles are almost exactly like the <a href="b.html#base-r">base R</a> <code>data.frame</code> container type, but has some special printing functions, does not coerce <a href="c.html#character">character</a> columns to <a href="f.html#factor">factors</a>, and does not typically use row names.</p>
-<div class="sourceCode" id="cb212"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb224"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># display the mtcars data frame</span>
 <span class="va">mtcars</span></code></pre></div>
 <div class="kable-table">
@@ -1564,7 +1564,7 @@ Volvo 142E
 </tbody>
 </table></div>
 </div>
-<div class="sourceCode" id="cb213"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb225"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># convert the mtcars data frame to a tibble</span>
 <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op">(</span><span class="va">mtcars</span>, rownames <span class="op">=</span> <span class="st">"name"</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
@@ -2869,7 +2869,7 @@ Volvo 142E
 </h2>
 <p><dfn>When two or more values/observations within a variable are identical and assume the same rank order value.</dfn></p>
 <p>This is the default for the <code><a href="https://rdrr.io/r/base/rank.html">rank()</a></code> function (<code>ties.method = "average"</code>). You can also set ties to go in the order they are in the dataset (first), in the opposite order (last), a random order (random), all ties have the maximum value (max) or the minimum value (min).</p>
-<div class="sourceCode" id="cb214"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb226"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">scores</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   score <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">15</span>, <span class="fl">15</span><span class="op">)</span>
 <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
@@ -2924,14 +2924,14 @@ Volvo 142E
 <h2>
 <span class="header-section-number">21.13</span> Type I Error<a class="anchor" aria-label="anchor" href="#type-i-error"><i class="fas fa-link"></i></a>
 </h2>
-<p><dfn>A <a href="f.html#false-positive">false positive</a>; When a test concludes there is an effect when there is really is no effect</dfn></p>
+<p><dfn>A <a href="f.html#false-positive">false positive</a>; When a test concludes there is an effect when there really is no effect</dfn></p>
 
 </div>
 <div id="type-ii-error" class="section level2" number="21.14">
 <h2>
 <span class="header-section-number">21.14</span> Type II Error<a class="anchor" aria-label="anchor" href="#type-ii-error"><i class="fas fa-link"></i></a>
 </h2>
-<p><dfn>A <a href="f.html#false-negative">false negative</a>; When a test concludes there is no effect when there is really is an effect</dfn></p>
+<p><dfn>A <a href="f.html#false-negative">false negative</a>; When a test concludes there is no effect when there really is an effect</dfn></p>
 
 </div>
 </div>
