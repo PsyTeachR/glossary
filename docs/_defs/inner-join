@@ -1,0 +1,1 @@
+A mutating join that returns all the rows that have a match in the other table.

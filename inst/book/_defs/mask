@@ -1,0 +1,1 @@
+When two packages have functions with the same name, the function from the package loaded last is used as the default unless the package name is also specified.

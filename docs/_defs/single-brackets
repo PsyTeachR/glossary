@@ -1,0 +1,1 @@
+A pair of square brackets used to select a subset from a container like a list, data frame, or matrix (e.g., data[1, ]).

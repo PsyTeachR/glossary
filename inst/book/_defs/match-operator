@@ -1,0 +1,1 @@
+A binary operator (%in%) that returns a logical vector indicating if there is a match or not for its left operand.
