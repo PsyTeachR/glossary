@@ -2,4 +2,29 @@
 
 <dfn>Repeating a process or function</dfn>
 
+Repeating a process or function is useful when we want to perform the same operation more than once on elements. 
+A simple example of this would be to add the number 2 to each element in a `r glossary("vector")`.
 
+In `R` this can be done, for instance, with the help of `for-loops()`:
+ 
+```{r}
+# create a vector containing the numbers 1 to 4
+v <- c(1, 2, 3, 4)
+
+for(i in 1:4){
+  
+ v[i] <- v[i] + 2
+ 
+}
+
+# 2 is added to each element in v
+v
+```
+
+A quicker way to iterate through elements in a `r glossary("vector")` or a list is to use the function `purrr::modify()` or `sapply()`:
+
+```{r}
+purrr::modify(v, function(x) x + 2)
+
+sapply(v, function(x) x + 2)
+```
