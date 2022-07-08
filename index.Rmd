@@ -44,14 +44,45 @@ cite <- citation(package = "glossary")
 print(cite, style = "text")
 ```
 
+```{r, echo = FALSE, eval = FALSE}
+
+contrib <- jsonlite::read_json("https://api.github.com/repos/psyTeachR/glossary/contributors") |>
+  sapply(`[[`, "login")
+
+issues <- jsonlite::read_json("https://api.github.com/repos/psyTeachR/glossary/issues?per_page=100") |>
+  lapply(`[[`, "user") |>
+  sapply(`[[`, "login")
+
+gh_contrib <- c(contrib, issues) |> unique() |> sort()
+
+dput(gh_contrib)
+```
+
+```{r, echo = FALSE, results='asis'}
+gh_contrib <- c("AnnaWysocki" = "Anna Wysocki", 
+                "ASarafoglou" = "Alexandra Sarafoglou", 
+                "BartlettJE" = "James Bartlett",
+                #"dalejbarr" = "Dale Barr", 
+                #"debruine" = "Lisa DeBruine", 
+                "EvaRubinova" = "Eva Rubinova", 
+                "franzenr" = "Rose Franzen", 
+                "JackEdTaylor" = "Jack Taylor", 
+                "JeffreyRStevens" = "Jeffrey R Stevens",
+                "jhrudey" = "Jessica Hrudey",
+                "JulianeKloidt" = "Juliane Kloidt", 
+                "nbdutra" = "Natalia Dutra", 
+                "nthun" = "Tamás Nagy", 
+                "philmcaleer" = "Phil McAleer", 
+                "RobbyTi" = "Robert Thibault", 
+                "SCgeeker" = "Su-Chin Chen")
+
+ct <- glue::glue("[{gh_contrib}](https://github.com/PsyTeachR/glossary/issues?q=author:{names(gh_contrib)})") |>
+  paste0(sep = ", ")
+
+cat("Thanks to the [glossary hackathon](https://docs.google.com/document/d/1FOohcEbWTAXB7OWSvMZzwMI3F--pNNRT3_3DSB6KeB8/edit) contributors: ", ct, ".")
+```
 
 
-Thanks to the [glossary hackathon](https://docs.google.com/document/d/1FOohcEbWTAXB7OWSvMZzwMI3F--pNNRT3_3DSB6KeB8/edit) contributors: 
-[Jack Taylor](https://github.com/PsyTeachR/glossary/issues?q=is%3Aissue+author%3AJackEdTaylor), 
-[Juliane Kloidt](https://github.com/PsyTeachR/glossary/issues?q=is%3Aissue+author%3AJulianeKloidt), 
-[Jessica Hrudey](https://github.com/PsyTeachR/glossary/issues/created_by/jhrudey), 
-[James Bartlett](https://github.com/PsyTeachR/glossary/issues/created_by/BartlettJE), and 
-[Phil McAleer](https://github.com/PsyTeachR/glossary/issues/created_by/philmcaleer).
 
 
 ## Offline Access

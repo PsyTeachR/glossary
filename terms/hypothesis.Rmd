@@ -3,8 +3,8 @@
 <dfn>A proposed explanation made on the basis of limited evidence as a starting point for further investigation.</dfn>
 
 
-In science, hypotheses are based on published literature and theories. In quantitative sciences hypotheses are then evalauted using statistical methods (e.g., glossary("NHST")). Hypotheses are usually not considered in isolation, but in relation to other hypotheses. For instance, if a researchers wants to investigate the relationship between depression and insomnia, they could contrast the following two hypotheses:
+In science, hypotheses are based on published literature and theories. In quantitative sciences, hypotheses can then be evaluated using statistical methods (e.g., "[NHST](n.html#nhst)")). Hypotheses are usually not considered in isolation, but in relation to other hypotheses. For instance, if a researcher wants to investigate the relationship between depression and insomnia, they could contrast the following two hypotheses:
 
-A hypothesis describing the researchers' assumption (alternative hypothesis): "People with depression report sleep problems more often than healthy controls."
+A hypothesis describing the researchers' assumption, usually that there is a non-chance difference between groups or a difference from a specified value ([alternate hypothesis](a.html#alternate-hypothesis)): "People with depression report sleep problems more often than healthy controls."
 
-A hypothesis that refutes the researchers' assumption (null hypothesis): "People with depression report sleep problems as often as healthy controls".
+A hypothesis that refutes the researchers' assumption, usually that any differences are due to chance ([null hypothesis](n.html#null-hypothesis)): "People with depression report sleep problems as often as healthy controls".

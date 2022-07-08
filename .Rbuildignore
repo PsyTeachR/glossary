@@ -12,3 +12,4 @@
 ^README\.*$
 ^Makefile$
 ^_bookdown_files$
+^\.httr-oauth$

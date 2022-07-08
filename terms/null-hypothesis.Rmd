@@ -1,0 +1,5 @@
+## null hypothesis
+
+<dfn>The hypothesis that an observed difference between groups or from a specific value is due to chance alone.</dfn>
+
+The null hypothesis is also commonly referred to as [H0](h.html#h0). This is contrasted with [H1](h.html#h1), the [alternate hypothesis](a.html#alternate-hypothesis) in a null hypothesis significance testing ([NHST](n.html#nhst)) framework.

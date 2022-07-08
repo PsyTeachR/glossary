@@ -1,0 +1,21 @@
+## Inf
+
+<dfn>A value representing infinity</dfn>
+
+In `R` infinity is represented with the symbol `Inf`. Use the function `is.infinite()` to check if values are infinite.
+
+```{r inf-pos}
+value <- 1/0
+value
+is.infinite(1/0)
+```
+
+
+```{r inf-neg}
+# negative infinity
+value <- -1/0
+value
+is.infinite(1/0)
+```
+
+

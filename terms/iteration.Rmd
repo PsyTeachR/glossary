@@ -2,29 +2,47 @@
 
 <dfn>Repeating a process or function</dfn>
 
-Repeating a process or function is useful when we want to perform the same operation more than once on elements. 
-A simple example of this would be to add the number 2 to each element in a `r glossary("vector")`.
+Repeating a process or function is useful when we want to perform the same operation on each element in a list or vector.
 
-In `R` this can be done, for instance, with the help of `for-loops()`:
- 
+For example, you may want to check the power of a two-sample t-test to detect an effect size of 0.2 for all of the possible sample sizes between 100 and 1000, incrementing by 100. You can "iterate" over the values of n to get the power for each n.
+
 ```{r}
-# create a vector containing the numbers 1 to 4
-v <- c(1, 2, 3, 4)
+n_range <- seq(100, 1000, 100)
+power <- c() # make an empty vector
 
-for(i in 1:4){
-  
- v[i] <- v[i] + 2
- 
+for (n in n_range) {
+  pcalc <- power.t.test(n = n, delta = 0.2, sd = 1, 
+                      type = "two.sample")
+  power <- c(power, pcalc$power)
 }
 
-# 2 is added to each element in v
-v
+power
 ```
 
-A quicker way to iterate through elements in a `r glossary("vector")` or a list is to use the function `purrr::modify()` or `sapply()`:
+Many functions are "vectorized" such that they return a vector of results if you use a vector for an argument. The function itself takes care of the iteration for you.
 
 ```{r}
-purrr::modify(v, function(x) x + 2)
-
-sapply(v, function(x) x + 2)
+pcalc <- power.t.test(n = n_range, 
+                      delta = 0.2, sd = 1, 
+                      type = "two.sample")
+power <-  pcalc$power
+power
 ```
+
+You can also use `apply()` or `map()` functions to apply a single function to each element of a vector or list. 
+
+```{r}
+# apply power.t.test to each n and return a list of lists
+pcalc <- map(.x = n_range, # vector to iterate over
+             .f = power.t.test, # function to apply
+             # other arguments to the function
+             delta = 0.2, sd = 1, 
+             type="two.sample")
+
+# extract the "power" element from each element in pcalc
+# and return a vector of doubles
+power <- map_dbl(pcalc, getElement, "power")
+power
+```
+
+

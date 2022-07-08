@@ -1,0 +1,7 @@
+## H0
+
+<dfn>The [null hypothesis](n.html#null-hypothesis): that an observed difference between groups or from a specific value is due to chance alone.</dfn>
+
+See also [null hypothesis](n.html#null-hypothesis), [H1](h.html#h1), [alternate hypothesis](a.html#alternate-hypothesis), and [NHST](n.html#nhst).
+
+

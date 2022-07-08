@@ -7,3 +7,37 @@ Mathematically, the residual is defined as the observed value minus the model's 
 For example, the linear model $\hat{Y_i} = 3 + 2 X_i$ predicts a value of $\hat{Y}_i = 7$ for $X_i = 2$. If you happen to have observed $Y_i = 8$ for observation $i$, then the residual for that observation would be $Y_i - \hat{Y}_i = 8 - 7 = 1$.
 
 A related but slightly different notion is [error](e.html#error).
+
+For example, below we simulate data for two groups of 50 with means of 100 and 105 (and SDs of 10). 
+
+```{r}
+set.seed(8675309) # for reproducibility
+
+group0 <- rnorm(n = 50, mean = 100, sd = 10)
+group1 <- rnorm(n = 50, mean = 105, sd = 10)
+
+df <- data.frame(
+  dv = c(group0, group1),
+  group = rep(0:1, each = 50)
+)
+
+model <- lm(dv ~ group, data = df)
+
+summary(model)
+
+model$coefficients
+```
+
+The model above has an intercept of `r round(model$coefficients[[1]], 1)` and an effect of group of `r round(model$coefficients[[2]], 1)`, meaning that the predicted value for group 0 is `r round(model$coefficients[[1]], 1)` and the predicted value for group 1 is `r round(model$coefficients[[1]] + model$coefficients[[2]], 1)`. The difference between these predictions and the observed values is the [residual](r.html#residual) error.
+
+
+```{r}
+intercept <- model$coefficients[[1]]
+effect <- model$coefficients[[2]]
+
+df |>
+  mutate(predicted = intercept + effect * group,
+         residual = dv - predicted) |>
+  group_by(group) |>
+  slice(1:5) # show 5 from each group
+```

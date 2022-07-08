@@ -1,0 +1,5 @@
+## H1
+
+<dfn>The [alternate hypothesis](a.html#alternate-hypothesis): that an observed difference between groups or from a specific value is NOT due to chance alone.</dfn>
+
+See also [alternate hypothesis](a.html#alternate-hypothesis), [H0](h.html#h0), [null hypothesis](n.html#null-hypothesis), and [NHST](n.html#nhst).

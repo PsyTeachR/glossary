@@ -1,0 +1,43 @@
+## dimension
+
+<dfn>An axis used to locate or specify a data point in a data structure (e.g., vectors have 1 dimension and data frames have 2: rows and columns)</dfn>
+
+For example, [vectors](v.html#vector) are 1-dimensional, so you only need one [index](i.html#index) to specify a value. [Data frames](d.html#data-frame) and [matrices](m.html#matrix) are 2-dimensional, so need two numbers to specify a value. [Arrays](a.html#array) can have any number of dimensions.
+
+The code below arranges the numbers 1 to 12 in data structures with 1, 2 or 3 dimensions and shows how to [extract](e.html#extract-operator) the value 3 from each.
+
+```{r}
+# 1-dimensional vector
+v <- 1:12
+v
+v[3] # index
+```
+
+
+```{r}
+# 2-dimensional data frame
+df <- data.frame(
+  a = 1:6,
+  b = 7:12
+)
+df
+df[3, 1] # row, column
+```
+
+
+```{r}
+# 2-dimensional matrix
+m <- matrix(1:12, nrow = 2)
+m
+m[1, 2] # row, column
+```
+
+
+```{r}
+# 3-dimensional array
+a <- array(1:12, dim = c(2, 3, 2))
+a
+a[1, 2, 1] # row, column, D3
+```
+
+

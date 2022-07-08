@@ -1,0 +1,5 @@
+## alternate hypothesis
+
+<dfn>The hypothesis that an observed difference between groups or from a specific value is NOT due to chance alone.</dfn>
+
+The alternate hypothesis is also commonly referred to as [H1](h.html#h1). This is contrasted with [H0](h.html#h0), the [null hypothesis](n.html#null-hypothesis) in a null hypothesis significance testing ([NHST](n.html#nhst)) framework.

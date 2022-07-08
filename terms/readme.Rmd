@@ -2,4 +2,4 @@
 
 <dfn>A text file in the base directory of a project that describes the project.</dfn>
 
-
+A README is a plain text file that contain information you want new users of the project to read first. This commonly contains one or more of the following: configuration or installation instructions, a list of files included with the project, a usage license, citation information, and author contact info.

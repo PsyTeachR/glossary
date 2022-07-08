@@ -1,0 +1,11 @@
+## NaN
+
+<dfn>An impossible number that is "Not a number"</dfn>
+
+In `R` impossible numbers are represented with the symbol `NaN`. Use the function `is.nan()` to check if values are impossible numbers.
+
+```{r nan-exp1}
+value <- 0/0
+value
+is.nan(value)
+```

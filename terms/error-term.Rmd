@@ -2,6 +2,14 @@
 
 <dfn>The term in a model that represents the difference between the actual and predicted values</dfn>
 
+Model [formulae](f.html#formula) typically do not include an explicit error term; it is implicit. For example, the linear model formula below only includes a main effect of `group`; the [intercept](i.html#intercept) and error term are implied.
+
+```{r, eval = FALSE}
+lm(dv ~ group, data = df)
+```
+
+
+See [residual](r.html#residual) for a concrete example.
 
 
 

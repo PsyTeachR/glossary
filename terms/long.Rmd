@@ -1,6 +1,6 @@
 ## long
 
-<dfn>Data where each observation is on a separate row</dfn>
+<dfn>A data format where each observation is on a separate row</dfn>
 
 ```{r long-data, echo = FALSE, render = "asis"}
 tibble::tibble(id = c("A", "B"),
@@ -8,7 +8,7 @@ tibble::tibble(id = c("A", "B"),
             Q2 = c(2,5),
             Q3 = c(3,6)) %>%
   tidyr::gather("item", "value", Q1:Q3) %>%
-  knitr::kable(caption = "Long data")
+  knitr::kable(caption = "Long data format")
 ```
 
-Contrast with [wide data](w.html#wide).
+Contrast with [wide](w.html#wide) data format.
