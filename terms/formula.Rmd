@@ -6,8 +6,8 @@ It takes a format like this:
 
 `y ~ 1 + x + z*w - z:w`
 
-The elements of the formula are:
-~ : on the left hand side, there is the outcome (y), on the right hand, the predictors.
+The elements of the formula are:  
+- ~ : on the left hand side, there is the outcome (y), on the right hand, the predictors.
 - `1` : refers to the intercept that does not have to be written out as it is added by default. If you want to remove the intercept, you have to use 0 instead of 1.
 - `+` : you can add predictors using the + sign.
 - `*` : means to take two (or more) pradictors, and use their main effect AND also their interaction. `z*w` translates into `z + w + z:w`.
