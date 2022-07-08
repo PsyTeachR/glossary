@@ -1,0 +1,1 @@
+Square brackets used to subset a container like a vector, list, data frame, or matrix (e.g., mtcars[[1]] or mtcars[1:2]).

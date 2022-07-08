@@ -1,0 +1,1 @@
+A mutating join that lets you join up rows in two tables while keeping all of the information from both tables (full_join)
