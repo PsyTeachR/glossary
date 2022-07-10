@@ -2,4 +2,5 @@
 
 <dfn>When a test concludes there is an effect when there is really is an effect</dfn>
 
+See also [true negative](t.html#true-negative), [false positive](f.html#false-positive)/[type I error](t.html#type-i-error), [false negative](f.html#false-negative)/[type II error](t.html#type-ii-error).
 

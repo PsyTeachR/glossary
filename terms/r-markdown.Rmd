@@ -2,6 +2,9 @@
 
 <dfn>The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code.</dfn>
 
+<details>
+  <summary>More...</summary>
+
 An R markdown file starts with a [YAML](y.html#yaml) header that usually contains the title, author, and output type. 
 
 ```
@@ -28,6 +31,8 @@ library(tidyverse)
 2. load in dataset
 3. Wrangle data into appropriate format for analysis and checks. You might want to reshape the data or combine different values to make a new variable. 
 ````
+
+</details>
 
 Resources:
 

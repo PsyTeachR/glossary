@@ -2,6 +2,6 @@
 
 <dfn>A [mutating join](m.html#mutating-joins) that lets you join up rows in two tables while keeping all of the information from both tables (full_join)</dfn>
 
-The term "outer join" is more commonly used in SQL. See [full_join](f.html#full_join) for the R version.
+The term "outer join" is more commonly used in SQL. See [full_join](f.html#full-join) for the R version.
 
 

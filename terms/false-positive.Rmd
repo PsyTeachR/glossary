@@ -4,4 +4,4 @@
 
 Also called a [type I error](t.html#type-i-error), but we prefer the more descriptive "false positive".
 
-See also [false negative](f.html#false-negative) and [alpha (stats)](a.html#alpha-stats).
+See also [true positive](t.html#true-positive), [true negative](t.html#true-negative), [false negative](f.html#false-negative)/[type II error](t.html#type-ii-error), and [alpha (stats)](a.html#alpha-stats).

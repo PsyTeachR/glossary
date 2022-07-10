@@ -7,11 +7,12 @@ It takes a format like this:
 `y ~ 1 + x + z*w - z:w`
 
 The elements of the formula are:  
+
 - `~` : on the left hand side, there is the outcome (y), on the right hand, the predictors.
 - `1` : refers to the intercept that does not have to be written out as it is added by default. If you want to remove the intercept, you have to use 0 instead of 1.
 - `+` : you can add predictors using the + sign.
-- `*` : means to take two (or more) pradictors, and use their main effect AND also their interaction. `z*w` translates into `z + w + z:w`.
-- `:` : referes to an interaction, without the main effects of the predictors.
+- `*` : means to take two (or more) predictors, and use their main effect AND also their interaction. `z*w` translates into `z + w + z:w`.
+- `:` : refers to an interaction, without the main effects of the predictors.
 - `-` : removes a predictor. For e.g. `z*w - z:w` translates into: `z + w`
 
 In [linear mixed effects model](l.html#linear-mixed-effects-model) the formula also contains [random effects](r.html#random-effect). For example consider the following models:
@@ -25,5 +26,4 @@ In [linear mixed effects model](l.html#linear-mixed-effects-model) the formula a
 - `(x|group)` : adds a random intercept and slope by group.
 - `(1|group/cluster)` : adds a random intercept by group nested in clusters. You can add more levels.
 
-More info about adding random terms.
-[https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html#model-specification 
+More info about [adding random terms](https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html#model-specification).

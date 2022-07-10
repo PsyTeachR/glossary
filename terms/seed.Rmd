@@ -1,0 +1,5 @@
+## seed
+
+<dfn>A value used to set the initial state of a random number generator.</dfn>
+
+See [random seed](r.html#random-seed).

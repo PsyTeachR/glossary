@@ -4,6 +4,9 @@
 
 The covariance [matrix](m.html#matrix) is related to the [correlation matrix](c.html#correlation-matrix), but also incorporates information about the [standard deviations](s.html#standard-deviation) of all the variables.
 
+<details>
+  <summary>More...</summary>
+
 ```{r}
 data <- faux::rnorm_multi(
   n = 100,
@@ -28,8 +31,5 @@ sigma <- matrix(c(1*1, 1*2, 1*3,  # A
 sigma * cor(data)
 ```
 
-
-
-
-
+</details>
 

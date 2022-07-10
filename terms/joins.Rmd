@@ -3,16 +3,16 @@
 <dfn>Ways to combine data from two tables</dfn>
 
 * [binding joins](b.html#binding-joins): 
-    * [bind_rows](b.html#bind_rows)
-    * [bind_cols](b.html#bind_cols)
+    * [bind_rows](b.html#bind-rows)
+    * [bind_cols](b.html#bind-cols)
 * [filtering joins](f.html#filtering-joins): 
-    * [anti_join](a.html#anti_join)
-    * [semi_join](s.html#semi_join)
+    * [anti_join](a.html#anti-join)
+    * [semi_join](s.html#semi-join)
 * [mutating joins](m.html#mutating-joins): 
-    * [left_join](l.html#left_join)
-    * [right_join](r.html#right_join)
-    * [inner_join](i.html#inner_join)
-    * [full_join](f.html#full_join)
+    * [left_join](l.html#left-join)
+    * [right_join](r.html#right-join)
+    * [inner_join](i.html#inner-join)
+    * [full_join](f.html#full-join)
 
 **Resources**
 

@@ -6,6 +6,9 @@ For example, you may have a question about how to figure out how to select rows 
 
 You can include a very small table with just the basics or a smaller version of your problem. Make comments at each step about what you expect and what you actually got. 
 
+<details>
+  <summary>More...</summary>
+
 Which version is easier for you to figure out the solution?
 
 ```{r, eval = FALSE}
@@ -31,5 +34,6 @@ no_test_data <- data %>%
 
 One of the big benefits to creating a reprex is that you often solve your own problem while you're trying to break it down to explain to someone else.
 
-If you really want to go down the rabbit hole, you can create a reproducible example using the [reprex](https://www.tidyverse.org/help/#reprex) package from tidyverse.
+If you really want to go down the rabbit hole, you can create a reproducible example using the [reprex](https://www.tidyverse.org/help/#reprex){target="_blank"} package from tidyverse.
 
+</details>

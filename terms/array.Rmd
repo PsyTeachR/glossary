@@ -2,12 +2,17 @@
 
 <dfn>A [container](c.html#container) that stores [objects](o.html#object) in one or more dimensions.</dfn>
 
-You can create an array by specifying a list or vector of values and the number of dimensions. The first two dimensions are rows and columns; each dimension after that is printed separately as a facet.
+You can create an array by specifying a list or vector of values and the number of [dimensions](d.html#dimension). The first two dimensions are rows and columns; each dimension after that is printed separately as a facet.
 
 ```{r}
 # 3-dimensional array with 4 rows, 3 columns, and 2 facets
 array(1:24, dim = c(4, 3, 2))
 ```
+
+
+<details>
+  <summary>More...</summary>
+  
 You can give your array dimensions names.
 
 ```{r}
@@ -35,3 +40,4 @@ c(
 )
 ```
 
+</details>

@@ -4,6 +4,9 @@
 
 When you look up the help for a function, you often see one of the arguments is `...`. This means that you can supply your own argument names and values here.
 
+<details>
+  <summary>More...</summary>
+
 For example, the help page for `dplyr::mutate()` shows a usage of `mutate(.data, ...)`, which means that the first argument is called `.data` and is the data table you want to mutate, and the second argument is `...`, which means that you can add as many new arguments as you want and each one will create a new column with the argument name and value.
 
 ```{r}
@@ -22,3 +25,5 @@ mutate(
 )
 
 ```
+
+</details>

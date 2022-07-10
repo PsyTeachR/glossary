@@ -10,6 +10,9 @@
 
 Integers and doubles are both [numeric](n.html#numeric).
 
+<details>
+  <summary>More...</summary>
+  
 If you want to know what data type a variable is, use the function `typeof`.
 
 ```{r data-type-demo-1}
@@ -31,3 +34,5 @@ typeof(10 == 10)
 ```{r data-type-demo-5}
 typeof(10i)
 ```
+
+</details>

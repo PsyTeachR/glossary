@@ -15,7 +15,9 @@ data <- faux::sim_design(
   dv = c(score = "Happiness Scale Score"),
   plot = FALSE)
 
-attr(data, "design")
+design <- attr(data, "design")
+
+design$dv
 ```
 
 
@@ -26,5 +28,5 @@ attr(data, "design")
 For example, the paragraph [element](e.html#element-html) has an attribute of "id" with a value of "feature". This can be used to refer to the element to change its style with [CSS](c.html#css) or affect its behaviour with [JavaScript](j.html#javascript).
 
 ``` html
-<p id="feature">This is the main paragraoh of my text...</p>
+<p id="feature">This is the main paragraph of my text...</p>
 ```

@@ -2,4 +2,43 @@
 
 <dfn>The probability of rejecting the null hypothesis when it is false.</dfn>
 
-Formally, the probability of rejecting the null hypothesis, when the null hypothesis is false. Informally, the likelihood of successfully detecting an effect that is actually there ([Baguley, 2004](https://doi.org/10.1016/j.apergo.2004.01.002)). In its simplest application, there is a relationship between alpha, power, effect size, and sample size. This means we can calculate power if we know alpha, the effect size, and the sample size. This would tell us - in the long run - how many times would I observe a significant effect for a given alpha, effect size, and sample size?
+Formally, the probability of rejecting the [null hypothesis](n.html#null-hypothesis), when the null hypothesis is false. Informally, the likelihood of successfully detecting an effect that is actually there ([Baguley, 2004](https://doi.org/10.1016/j.apergo.2004.01.002)). In its simplest application, there is a relationship between [alpha](a.html#alpha-stats), power, [effect size](e.html#effect-size), and sample size. This means we can calculate power if we know alpha, the effect size, and the sample size. This would tell us -- in the long run -- how many times would I observe a significant effect for a given alpha, effect size, and sample size?
+
+<details>
+  <summary>More...</summary>
+  
+For example, you can simulate a 2-sample study 100 times, where the true mean for group A is 100 and the true mean for group B is 105, and the SD for each group is 10.
+
+```{r}
+set.seed(8675309) # for reproducible simulations
+
+sim_data <- faux::sim_design(
+  between = list(group = c("A", "B")),
+  n = c(A = 50, B = 45), # number of subjects per group
+  mu = c(A = 100, B = 105),
+  sd = 10,
+  rep = 100, # repeat the simulation 100 times
+  long = TRUE, # structure data in long format
+  plot = FALSE
+)
+
+```
+
+Now you can use [iteration](i.html#iteration) to run your analysis on each sample, saving the p-value.
+
+```{r}
+p_values <- purrr::map_dbl(sim_data$data, function(data) {
+  t.test(y ~ group, data = data)$p.value
+})
+```
+
+Finally, check what proportion of the samples resulted in a significant p-value. This is your power.
+
+```{r}
+alpha <- 0.05 # justify your alpha
+power <- mean(p_values < alpha)
+power
+```
+
+
+</details>

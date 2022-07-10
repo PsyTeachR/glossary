@@ -8,19 +8,16 @@ A single ampersand is [vectorized](v.html#vectorized), so compares each item in 
 c(T, T, F, F) & c(T, T, F, F)
 ```
 
-A double ampersand is not vectorised, so will ignore all but the first item in vectors, unless your environment has set `_R_CHECK_LENGTH_1_LOGIC2_=true`, in which case you will get an error.
-
-```{r, include = FALSE}
-Sys.setenv("_R_CHECK_LENGTH_1_LOGIC2_" = "false")
-```
-
+A double ampersand is not vectorised, so will ignore all but the first item in vectors, unless you have set the environment variable `_R_CHECK_LENGTH_1_LOGIC2_` to true, in which case you will get an error.
 
 ```{r}
+Sys.setenv("_R_CHECK_LENGTH_1_LOGIC2_" = "false")
 c(T, T, F, F) && c(T, T, F, F)
 ```
 
-```{r, include = FALSE}
+```{r, error = TRUE}
 Sys.setenv("_R_CHECK_LENGTH_1_LOGIC2_" = "true")
+c(T, T, F, F) && c(T, T, F, F)
 ```
 
 ::: {.info}

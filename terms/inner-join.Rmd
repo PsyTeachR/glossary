@@ -7,6 +7,9 @@
 knitr::include_graphics("images/joins/inner_join.png")
 ```
 
+<details>
+  <summary>More...</summary>
+
 ```{r inner-join-example-setup}
 X <- tibble(
   id = 1:5,
@@ -27,21 +30,23 @@ Y <- tibble(
   </tr>
 </table>
 
-```{r inner-join-example-a-b}
-# a columns come first
-data <- inner_join(a, b, by = "id")
+```{r inner-join-example-X-Y}
+# X columns come first
+data <- inner_join(X, Y, by = "id")
 ```
 
 `r kable(data)`
 
 Order is not important for inner joins, but does change the order of columns in the resulting table.
 
-```{r inner-join-example-b-a}
-# b columns come first
-data <- inner_join(b, a, by = "id")
+```{r inner-join-example-y-x}
+# Y columns come first
+data <- inner_join(Y, X, by = "id")
 ```
 
 `r kable(data)`
+
+</details>
 
 See [joins](j.html#joins) for other types of joins and further resources.
 

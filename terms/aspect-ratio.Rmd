@@ -2,7 +2,12 @@
 
 <dfn>The ratio between the width and height of an image.</dfn>
 
-You can specify the aspect ratio of your plots by setting the width and height in the first chunk of an R Markdown file like this:
+You can specify the aspect ratio of your plots by setting the width and height in the first chunk of an R Markdown file, in the [chunk](c.html#chunk) options, or when you save the image.
+
+<details>
+  <summary>More...</summary>
+
+Knitr defaults:
 
 ```{r, eval = FALSE}
 knitr::opts_chunk$set(
@@ -11,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-Or in the [chunk](c.html#chunk) options:
+Chunk options:
 
 ```{r aspect-ratio-1, eval = FALSE, verbatim="r fig-golden-ratio, fig.width = 7, fig.height = 4.32"}
 ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
@@ -38,11 +43,11 @@ ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
 ```
 
 
-Or when you save the image:
+On save:
 
 ```{r, eval = FALSE}
 ggsave("golden-ratio.jpg", width = 7, height = 7/1.618)
 ```
 
-
+</details>
 

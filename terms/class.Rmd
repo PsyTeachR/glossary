@@ -4,6 +4,9 @@
 
 A class is similar to a [data type](d.html#data-type), but object can have more than one class.
 
+<details>
+  <summary>More...</summary>
+
 ```{r}
 # character class and type
 class("A")
@@ -46,5 +49,5 @@ If you `unclass()` an object, it no longer gets specical printing styles.
 unclass(t)
 ```
 
-
+</details>
 

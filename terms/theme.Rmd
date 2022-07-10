@@ -9,7 +9,9 @@ Plots in ggplot can set the theme globally with code like this:
 theme_set(theme_bw())
 ```
 
-
+<details>
+  <summary>More...</summary>
+  
 You can set the theme for a html document in the [YAML](y.html#yaml) header. View and download different [themes](https://bootswatch.com/4/){target="_blank"}.
 
 ```
@@ -30,3 +32,5 @@ output:
     number_sections: false
 ---
 ```
+
+</details>

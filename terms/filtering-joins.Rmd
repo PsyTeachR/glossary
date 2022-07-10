@@ -4,8 +4,8 @@
 
 The result of a filtering join will only contain rows from the left table and have the same number or fewer rows than the left table.
 
-* [anti_join](a.html#anti_join)
-* [semi_join](s.html#semi_join)
+* [anti_join](a.html#anti-join)
+* [semi_join](s.html#semi-join)
 
 
 

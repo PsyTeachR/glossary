@@ -8,6 +8,7 @@ Tibbles are almost exactly like the [base R](b.html#base-r) `data.frame` contain
 # display the mtcars data frame
 mtcars
 ```
+
 ```{r}
 # convert the mtcars data frame to a tibble
 tibble::as_tibble(mtcars, rownames = "name")

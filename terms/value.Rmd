@@ -4,7 +4,7 @@
 
 In a tidy dataset, each cell contains only one value.
 
-The `age` column contains 3 values: mean, minimum and maximum.
+In this example, the `age` column contains 3 values: mean, minimum and maximum.
 
 ```{r, message=FALSE}
 library(dplyr)

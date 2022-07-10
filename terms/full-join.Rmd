@@ -6,6 +6,9 @@
 knitr::include_graphics("images/joins/full_join.png")
 ```
 
+<details>
+  <summary>More...</summary>
+
 ```{r ful-join-example-setup}
 X <- tibble(
   id = 1:5,
@@ -28,20 +31,22 @@ Y <- tibble(
 
 If there is no matching data in the other table for a row, the values are set to [NA](n.html#na).
 
-```{r full-join-example-a-b}
-# a columns come first
-data <- full_join(a, b, by = "id")
+```{r full-join-example-x-y}
+# X columns come first
+data <- full_join(X, Y, by = "id")
 ```
 
 `r kable(data)`
 
 Order is not important for full joins, but does change the order of columns in the resulting table.
 
-```{r full-join-example-b-a}
-# b columns come first
-data <- full_join(b, a, by = "id")
+```{r full-join-example-Y-X}
+# Y columns come first
+data <- full_join(Y, X, by = "id")
 ```
 
 `r kable(data)`
+
+</details>
 
 See [joins](j.html#joins) for other types of joins and further resources.

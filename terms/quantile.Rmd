@@ -2,6 +2,9 @@
 
 <dfn>Cutoffs dividing the range of a [distribution](#d.htmldistribution) into continuous intervals with equal probabilities.</dfn>
 
+<details>
+  <summary>More...</summary>
+
 You can take a sample of numbers on divide them into N equally-sized groups. Let's use these 12 numbers as an example:
 
 ```{r}
@@ -38,6 +41,7 @@ dat <- data.frame(
 ```
 `r knitr::kable(dat)`
 
+</details>
 
 See [Q_Q plots](q.html#q-q-plots).
 

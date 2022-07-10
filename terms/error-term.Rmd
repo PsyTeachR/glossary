@@ -2,6 +2,12 @@
 
 <dfn>The term in a model that represents the difference between the actual and predicted values</dfn>
 
+In the standard regression model
+
+$$Y_i = \beta_0 + \beta_1 X_i + e_i$$
+
+the parameter $e_i$ represents the error term.
+
 Model [formulae](f.html#formula) typically do not include an explicit error term; it is implicit. For example, the linear model formula below only includes a main effect of `group`; the [intercept](i.html#intercept) and error term are implied.
 
 ```{r, eval = FALSE}

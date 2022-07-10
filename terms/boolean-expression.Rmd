@@ -4,6 +4,9 @@
 
 Boolean expressions usually use a relational [operator](o.html#operator), such as `==` or `>` to compare two values.
 
+<details>
+  <summary>More...</summary>
+
 ```{r}
 # == 	Equal to 	
 1 == 1
@@ -52,3 +55,4 @@ Boolean expressions usually use a relational [operator](o.html#operator), such a
 "1" %in% LETTERS
 ```
 
+</details>

@@ -4,6 +4,9 @@
 
 Numbers are most commonly written in decimal notation, like `3.145` or `365`. However, when numbers are very large or small, it's difficult to read or write them correctly. 
 
+<details>
+  <summary>More...</summary>
+
 For example, Avogadro's constant, the number of particles contained in one mole of any substance, is equal to 602,252,000,000,000,000,000,000. The commas make it a little easier to parse when reading, but you can't use those in coding. The scientific notation is $6.02x10^{23}$, which means the you multiply 6.02 times the number that is 1 with 23 zeros after it (or move the decimal place in 6.02 23 places to the right). In R, this notation looks like `6.02e23`.
 
 Negative numbers move the decimal place to the left. For example, Wyler's constant in physics is `1.05e-109`, or a decimal place followed by 108 zeros before you get to the first non-zero digit.
@@ -60,3 +63,5 @@ str(test)
 options(scipen = -1)
 str(test)
 ```
+
+</details>

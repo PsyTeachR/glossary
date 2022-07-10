@@ -107,13 +107,13 @@
 </h2>
 <p><dfn>A data type where a specific set of values are stored with labels</dfn></p>
 <p>In tables, you can store strings as <a href="c.html#character">characters</a> or factors.</p>
-<div class="sourceCode" id="cb114"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   chr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span>,
   fctr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 <p>If you print a character <a href="v.html#vector">vector</a>, it will have quotes around each values, while a factor vector will show the <a href="l.html#level">Levels</a> after.</p>
-<div class="sourceCode" id="cb115"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span><span class="op">$</span><span class="va">chr</span>
 <span class="co">#&gt; [1] "A" "B" "C"</span>
 
@@ -121,7 +121,7 @@
 <span class="co">#&gt; [1] A B C</span>
 <span class="co">#&gt; Levels: A B C</span></code></pre></div>
 <p>In a <a href="t.html#tibble">tibble</a>, these types will have "&lt;chr&gt;" or "&lt;fctr&gt;" under the column header.</p>
-<div class="sourceCode" id="cb116"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb125"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
@@ -162,7 +162,7 @@ C
 </table></div>
 </div>
 <p>You can convert between characters and factors like this:</p>
-<div class="sourceCode" id="cb117"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">fctr</span><span class="op">)</span>
 <span class="co">#&gt; [1] "A" "B" "C"</span>
 
@@ -191,7 +191,7 @@ C
 </h2>
 <p><dfn>When a test concludes there is no effect when there really is an effect</dfn></p>
 <p>Also called a <a href="t.html#type-ii-error">type II error</a>, but we prefer the more descriptive "false negative".</p>
-<p>See also <a href="f.html#false-positive">false positive</a> and <a href="b.html#beta">beta</a>.</p>
+<p>See also <a href="t.html#true-positive">true positive</a>, <a href="t.html#true-negative">true negative</a>, <a href="f.html#false-positive">false positive</a>/<a href="t.html#type-i-error">type I error</a>, and <a href="b.html#beta">beta</a>.</p>
 
 </div>
 <div id="false-positive" class="section level2" number="7.5">
@@ -200,7 +200,7 @@ C
 </h2>
 <p><dfn>When a test concludes there is an effect when there really is no effect</dfn></p>
 <p>Also called a <a href="t.html#type-i-error">type I error</a>, but we prefer the more descriptive "false positive".</p>
-<p>See also <a href="f.html#false-negative">false negative</a> and <a href="a.html#alpha-stats">alpha (stats)</a>.</p>
+<p>See also <a href="t.html#true-positive">true positive</a>, <a href="t.html#true-negative">true negative</a>, <a href="f.html#false-negative">false negative</a>/<a href="t.html#type-ii-error">type II error</a>, and <a href="a.html#alpha-stats">alpha (stats)</a>.</p>
 
 </div>
 <div id="filtering-joins" class="section level2" number="7.6">
@@ -210,8 +210,8 @@ C
 <p><dfn><a href="j.html#joins">Joins</a> that act like the <code><a href="https://dplyr.tidyverse.org/reference/filter.html">dplyr::filter()</a></code> function in that they remove rows from the data in one table based on the values in another table.</dfn></p>
 <p>The result of a filtering join will only contain rows from the left table and have the same number or fewer rows than the left table.</p>
 <ul>
-<li><a href="a.html#anti_join">anti_join</a></li>
-<li><a href="s.html#semi_join">semi_join</a></li>
+<li><a href="a.html#anti-join">anti_join</a></li>
+<li><a href="s.html#semi-join">semi_join</a></li>
 </ul>
 </div>
 <div id="fitted-value" class="section level2" number="7.7">
@@ -233,7 +233,7 @@ C
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 X_i + e_i\]</span></p>
 <p>the parameters <span class="math inline">\(\beta_0\)</span> (the intercept) and <span class="math inline">\(\beta_1\)</span> (the slope) are assumed to be constant across all sampling units (e.g. subjects). These are contrasted with <a href="r.html#random%20effect">random effects</a>, which are effects that differ across the units.</p>
 <p>In a mixed effects model, you can get a table of just the fixed effects with the code below:</p>
-<div class="sourceCode" id="cb118"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lmerTest/man/lmer.html">lmer</a></span><span class="op">(</span>
   <span class="va">rating</span> <span class="op">~</span> <span class="va">rater_age</span> <span class="op">*</span> <span class="va">face_age</span> <span class="op">+</span> <span class="co"># fixed effects</span>
   <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">rater_id</span><span class="op">)</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">face_id</span><span class="op">)</span>, <span class="co"># random effects</span>
@@ -380,17 +380,22 @@ rater_age:face_age
 <p><dfn>A symbolic expression that defines a model.</dfn></p>
 <p>It takes a format like this:</p>
 <p><code>y ~ 1 + x + z*w - z:w</code></p>
-<dl>
-<dt>The elements of the formula are:</dt>
-<dd>
-: on the left hand side, there is the outcome (y), on the right hand, the predictors.
-- <code>1</code> : refers to the intercept that does not have to be written out as it is added by default. If you want to remove the intercept, you have to use 0 instead of 1.
-- <code>+</code> : you can add predictors using the + sign.
-- <code>*</code> : means to take two (or more) pradictors, and use their main effect AND also their interaction. <code>z*w</code> translates into <code>z + w + z:w</code>.
-- <code>:</code> : referes to an interaction, without the main effects of the predictors.
-- <code>-</code> : removes a predictor. For e.g. <code>z*w - z:w</code> translates into: <code>z + w</code>
-</dd>
-</dl>
+<p>The elements of the formula are:</p>
+<ul>
+<li>
+<code>~</code> : on the left hand side, there is the outcome (y), on the right hand, the predictors.</li>
+<li>
+<code>1</code> : refers to the intercept that does not have to be written out as it is added by default. If you want to remove the intercept, you have to use 0 instead of 1.</li>
+<li>
+<code>+</code> : you can add predictors using the + sign.</li>
+<li>
+<code>*</code> : means to take two (or more) predictors, and use their main effect AND also their interaction. <code>z*w</code> translates into <code>z + w + z:w</code>.</li>
+<li>
+<code>:</code> : refers to an interaction, without the main effects of the predictors.</li>
+<li>
+<code>-</code> : removes a predictor. For e.g. <code>z*w - z:w</code> translates into: <code>z + w</code>
+</li>
+</ul>
 <p>In <a href="l.html#linear-mixed-effects-model">linear mixed effects model</a> the formula also contains <a href="r.html#random-effect">random effects</a>. For example consider the following models:</p>
 <p><code>y ~ x + (1|group)</code><br><code>y ~ x + (x|group)</code><br><code>y ~ x + (1|group/cluster)</code></p>
 <ul>
@@ -403,8 +408,7 @@ rater_age:face_age
 <li>
 <code>(1|group/cluster)</code> : adds a random intercept by group nested in clusters. You can add more levels.</li>
 </ul>
-<p>More info about adding random terms.
-[<a href="https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html#model-specification" class="uri">https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html#model-specification</a></p>
+<p>More info about <a href="https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html#model-specification">adding random terms</a>.</p>
 
 </div>
 <div id="full_join" class="section level2" number="7.11">
@@ -418,7 +422,9 @@ rater_age:face_age
 Figure 7.1: Full Join
 </p>
 </div>
-<div class="sourceCode" id="cb119"><pre class="downlit sourceCode r">
+<details><summary>
+More...
+</summary><div class="sourceCode" id="cb128"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
   x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
@@ -428,7 +434,7 @@ Figure 7.1: Full Join
   id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">6</span>,
   y <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">22</span><span class="op">:</span><span class="fl">26</span><span class="op">]</span>
 <span class="op">)</span></code></pre></div>
-<div class="inline-table"><table class="table table-sm">
+<table class="table table-sm">
 <tr>
 <th>
 Table X
@@ -548,24 +554,21 @@ Z
 </table>
 </td>
 </tr>
-</table></div>
+</table>
 <p>If there is no matching data in the other table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb120"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># a columns come first</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
-<div class="inline-table"><table class="table table-sm">
+<div class="sourceCode" id="cb129"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># X columns come first</span>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">Y</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<table class="table table-sm">
 <thead><tr>
 <th style="text-align:right;">
 id
 </th>
 <th style="text-align:left;">
-x.x
+x
 </th>
 <th style="text-align:left;">
 y
-</th>
-<th style="text-align:left;">
-x.y
 </th>
 </tr></thead>
 <tbody>
@@ -575,9 +578,6 @@ x.y
 </td>
 <td style="text-align:left;">
 A
-</td>
-<td style="text-align:left;">
-TRUE
 </td>
 <td style="text-align:left;">
 NA
@@ -591,10 +591,7 @@ NA
 B
 </td>
 <td style="text-align:left;">
-TRUE
-</td>
-<td style="text-align:left;">
-NA
+V
 </td>
 </tr>
 <tr>
@@ -605,10 +602,7 @@ NA
 C
 </td>
 <td style="text-align:left;">
-FALSE
-</td>
-<td style="text-align:left;">
-NA
+W
 </td>
 </tr>
 <tr>
@@ -616,13 +610,10 @@ NA
 4
 </td>
 <td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
 D
+</td>
+<td style="text-align:left;">
+X
 </td>
 </tr>
 <tr>
@@ -630,13 +621,10 @@ D
 5
 </td>
 <td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
 E
+</td>
+<td style="text-align:left;">
+Y
 </td>
 </tr>
 <tr>
@@ -647,121 +635,96 @@ E
 NA
 </td>
 <td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-F
+Z
 </td>
 </tr>
 </tbody>
-</table></div>
+</table>
 <p>Order is not important for full joins, but does change the order of columns in the resulting table.</p>
-<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># b columns come first</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">b</span>, <span class="va">a</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
-<div class="inline-table"><table class="table table-sm">
+<div class="sourceCode" id="cb130"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Y columns come first</span>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">Y</span>, <span class="va">X</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<table class="table table-sm">
 <thead><tr>
-<th style="text-align:left;">
-x.x
-</th>
 <th style="text-align:right;">
 id
 </th>
 <th style="text-align:left;">
-x.y
+y
 </th>
 <th style="text-align:left;">
-y
+x
 </th>
 </tr></thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
-D
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-E
-</td>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-F
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-A
-</td>
-<td style="text-align:left;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-NA
-</td>
 <td style="text-align:right;">
 2
 </td>
 <td style="text-align:left;">
-B
+V
 </td>
 <td style="text-align:left;">
-TRUE
+B
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-NA
-</td>
 <td style="text-align:right;">
 3
 </td>
 <td style="text-align:left;">
-C
+W
 </td>
 <td style="text-align:left;">
-FALSE
+C
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+X
+</td>
+<td style="text-align:left;">
+D
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+E
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Z
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+A
 </td>
 </tr>
 </tbody>
-</table></div>
-<p>See <a href="j.html#joins">joins</a> for other types of joins and further resources.</p>
+</table></details><p>See <a href="j.html#joins">joins</a> for other types of joins and further resources.</p>
 
 </div>
 <div id="function" class="section level2" number="7.12">
@@ -1012,7 +975,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-27.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-07-09.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

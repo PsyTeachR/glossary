@@ -15,6 +15,9 @@ fun_to_play_at <- c(25, 13, 3, 1)
 likert <- 1:7
 ```
 
+<details>
+  <summary>More...</summary>
+
 [Elements](e.html#element) are always the same data type. If you try to combine values with different data types, they are [coerced](c.html#coercion) into a common data type. Use a [list](l.html#list) to combine values with different types without coercion.
 
 The variable `letters` is a built-in vector with the Latin letters in order. You can select part of a vector by putting the numeric location (or [index](i.html#index)) of what [element](e.html#element) you want inside of square brackets after the vector. You can even put a vector of numbers inside the square [brackets](b.html#brackets) to select several elements.
@@ -27,3 +30,5 @@ letters[fun_to_play_at]
 
 
 See [Ch 20 of R for Data Science](http://r4ds.had.co.nz/vectors.html){target="_blank"} for a thorough explanation of vectors.
+
+</details>

@@ -11,6 +11,6 @@ The [tidyverse](https://www.tidyverse.org/){target="_blank"} can be loaded with 
 * {purrr} for [iteration](i.html#iteration)
 * {dplyr} for [data wrangling](d.html#data-wrangling)
 * {stringr} for string manipulation
-* {forcats} for factors
+* {forcats} for [factors](f.html#factor)
 
 Compare with [base R](b.html#base-r)

@@ -4,6 +4,9 @@
 
 Mathematically, the residual is defined as the observed value minus the model's [fitted value](f.html#fitted-value) for that observation.
 
+<details>
+  <summary>More...</summary>
+
 For example, the linear model $\hat{Y_i} = 3 + 2 X_i$ predicts a value of $\hat{Y}_i = 7$ for $X_i = 2$. If you happen to have observed $Y_i = 8$ for observation $i$, then the residual for that observation would be $Y_i - \hat{Y}_i = 8 - 7 = 1$.
 
 A related but slightly different notion is [error](e.html#error).
@@ -41,3 +44,5 @@ df |>
   group_by(group) |>
   slice(1:5) # show 5 from each group
 ```
+
+</details>

@@ -101,7 +101,7 @@
 </h2>
 <p><dfn>Spaces, tabs and line breaks</dfn></p>
 <p>R mostly ignores whitespace, so you can use it to help you organise your code.</p>
-<div class="sourceCode" id="cb237"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb266"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># a and b are identical</span>
 <span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>ctl <span class="op">=</span> <span class="st">"Control Condition"</span>, exp1 <span class="op">=</span> <span class="st">"Experimental Condition 1"</span>, exp2 <span class="op">=</span> <span class="st">"Experimental Condition 2"</span><span class="op">)</span>
 
@@ -119,10 +119,10 @@
 <h2>
 <span class="header-section-number">24.2</span> wide<a class="anchor" aria-label="anchor" href="#wide"><i class="fas fa-link"></i></a>
 </h2>
-<p><dfn>Data where all of the observations about one subject are in the same row</dfn></p>
+<p><dfn>A data format where all of the observations about one subject are in the same row</dfn></p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:wide-data">Table 24.1: </span>Wide data
+<span id="tab:wide-data">Table 24.1: </span>Wide data format
 </caption>
 <thead><tr>
 <th style="text-align:left;">
@@ -169,7 +169,7 @@ B
 </tr>
 </tbody>
 </table></div>
-<p>Contrast with <a href="l.html#long">long data</a>.</p>
+<p>Contrast with <a href="l.html#long">long</a> data format.</p>
 
 </div>
 <div id="widget" class="section level2" number="24.3">
@@ -195,8 +195,8 @@ B
 </h2>
 <p><dfn>The filepath where R is currently reading and writing files.</dfn></p>
 <p>If you are working in a <a href="p.html#project">project</a>, the working directory is usually the main project directory. So if you want to save a file into a folder called "data" in that project folder, you can use a <a href="r.html#relative-path">relative path</a>, which is automatically appended to the working directory, such as <code>readr::write_csv(my_data, "data/my_data.csv")</code>.</p>
-<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="w.html#cb238-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() .html<span class="co"># get the current working directory</span></span>
-<span id="cb238-2"><a href="w.html#cb238-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"~/r/myfiles"</span>) .html<span class="co"># change the working directory</span></span></code></pre></div>
+<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb267-1"><a href="w.html#cb267-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() .html<span class="co"># get the current working directory</span></span>
+<span id="cb267-2"><a href="w.html#cb267-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"~/r/myfiles"</span>) .html<span class="co"># change the working directory</span></span></code></pre></div>
 <div class="warning">
 <p>Never set or change your working directory in a script.</p>
 </div>
@@ -429,7 +429,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-27.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-07-09.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

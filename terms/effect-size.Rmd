@@ -7,12 +7,12 @@ Effect sizes can be raw (in the same units as the dependent variable) or [standa
 ```{r}
 set.seed(8675309) # for simulation reproducibility
 
-dv <- rnorm(n = 100, mean = 55, sd = 20)
+dv <- rnorm(n = 1000, mean = 55, sd = 20)
 null_value <- 50
 raw_effect <- mean(dv) - null_value
 std_effect <- raw_effect / sd(dv)
 ```
 
-For the example above, we sampled 100 values from a normal distribution with a mean of 55 and SD of 20. Let's say the DV units here are "percentage points" and the chance value for this example is 50. Therefore, the raw effect is the difference between the mean value and the null value: `r round(raw_effect, 1)` percentage points. The standardized effect is this value, divided by the SD, so the units disappear: `r round(std_effect, 1)`.
+For the example above, we sampled 1000 values from a normal distribution with a mean of 55 and SD of 20. Let's say the DV units here are "percentage points" and the chance value for this example is 50. Therefore, the raw effect is the difference between the mean value and the null value: `r round(raw_effect, 1)` percentage points. The standardized effect is this value, divided by the SD, so the units disappear: `r round(std_effect, 1)`.
 
-Raw effect sizes can be more meaningful in some circumstances (e.g., when [multilevel](m.html#multilevel) stuenture makes it hard to define a single SD), while standardized effect sizes can make it easier to compare effects across different experimental designs.
+Raw effect sizes can be more meaningful in some circumstances (e.g., when [multilevel](m.html#multilevel) structure makes it hard to define a single SD), while standardized effect sizes can make it easier to compare effects across different experimental designs.

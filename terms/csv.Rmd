@@ -2,4 +2,10 @@
 
 <dfn>Comma-separated variable: a file type for representing data where each variable is separated from the next by a comma.</dfn>
 
+Comma-separated data:
 
+```
+id, name, age
+1, Lisa, 45
+2, Robbie, 14
+```

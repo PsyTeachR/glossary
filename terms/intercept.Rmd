@@ -2,7 +2,12 @@
 
 <dfn>Also referred to as **y-intercept**, this is a constant corresponding to the value of the $y$ variable (in a regression context, the [response variable](r.html#response-variable)) when all [predictor variables](p.html#predictor-variable) are set to zero.</dfn>
 
-The value of the intercept is the predicted value when all other model terms are equal to zero. Therefore, it depends on how groups are coded and whether covariates are centered. For example, the code below shows data sampled from two distributions with means of 100 and 105. Two different [contrast coding schemes](c.html#coding-scheme) are used to code the `group` variable: treatment and sum.
+The value of the intercept is the predicted value when all other model terms are equal to zero. Therefore, it depends on how groups are coded and whether covariates are centered. 
+
+<details>
+  <summary>More...</summary>
+
+For example, the code below shows data sampled from two distributions with means of 100 and 105. Two different [contrast coding schemes](c.html#coding-scheme) are used to code the `group` variable: treatment and sum.
 
 ```{r}
 set.seed(8675309) # for reproducibility
@@ -34,3 +39,4 @@ model_s <- lm(dv ~ sum, data = df)
 summary(model_s)$coefficients
 ```
 
+</details>

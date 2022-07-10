@@ -53,6 +53,9 @@ Na psicologia, o alfa é tipicamente estabelecido como $\alpha$ = .05, mas há b
 
 </div>
 
+<details>
+  <summary>More...</summary>
+
 ```{r alpha-plot, fig.cap="Setting alpha to a number lower than 1 lets you see parts of the plot hidden behind an object.", warning=FALSE}
 # if you omit alpha, it defaults to 1
 alpha1.00 <- ggplot(diamonds, aes(x = depth, fill = cut)) +
@@ -65,4 +68,4 @@ cowplot::plot_grid(alpha1.00, alpha0.25, nrow = 2,
                    labels = c("alpha = 1.0", "alpha = 0.25"))
 ```
 
-
+</details>

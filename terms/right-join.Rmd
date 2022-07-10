@@ -6,6 +6,8 @@
 knitr::include_graphics("images/joins/right_join.png")
 ```
 
+<details>
+  <summary>More...</summary>
 
 ```{r right-join-example-setup}
 X <- tibble(
@@ -29,21 +31,22 @@ Y <- tibble(
 
 If there is no matching data in the left table for a row, the values are set to [NA](n.html#na).
 
-```{r right-join-example-a-b}
-# a is the right table
-data <- right_join(a, b, by = "id")
+```{r right-join-example-x-y}
+# X is the right table
+data <- right_join(X, Y, by = "id")
 ```
 
 `r kable(data)`
 
 Order is important for right joins.
 
-```{r right-join-example-b-a}
-# b is the right table
-data <- right_join(b, a, by = "id")
+```{r right-join-example-y-x}
+# Y is the right table
+data <- right_join(Y, X, by = "id")
 ```
 
 `r kable(data)`
 
+</details>
 
 See [joins](j.html#joins) for other types of joins and further resources.

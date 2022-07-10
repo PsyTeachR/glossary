@@ -125,7 +125,7 @@
 </h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing <a href="s.html#string">strings</a> of text.</dfn></p>
 <p>Examples of character data are:</p>
-<div class="sourceCode" id="cb63"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="st">"I am a string of characters"</span>
 <span class="co">#&gt; [1] "I am a string of characters"</span>
 <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"The answer is "</span>, <span class="fl">6</span><span class="op">+</span><span class="fl">6</span><span class="op">)</span>
@@ -142,8 +142,8 @@
 <p>In an <code>Rmd</code> file, you can include a chunk by surrounding the code as in the example below:</p>
 <div class="verbatim">
 <p><code>```{r chunk-name}</code></p>
-<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mean_age</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">ages</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">mean_age</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">ages</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span></code></pre></div>
 <code>```</code>
 </div>
 <p>Also sometimes called a <a href="b.html#block">block</a>.</p>
@@ -163,32 +163,34 @@
 </h2>
 <p><dfn>A way to categorise objects</dfn></p>
 <p>A class is similar to a <a href="d.html#data-type">data type</a>, but object can have more than one class.</p>
-<div class="sourceCode" id="cb65"><pre class="downlit sourceCode r">
+<details><summary>
+More...
+</summary><div class="sourceCode" id="cb66"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># character class and type</span>
 <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="st">"A"</span><span class="op">)</span>
 <span class="co">#&gt; [1] "character"</span>
 <span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="st">"A"</span><span class="op">)</span>
 <span class="co">#&gt; [1] "character"</span></code></pre></div>
-<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb67"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># numeric class and double type</span>
 <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="fl">1.1</span><span class="op">)</span>
 <span class="co">#&gt; [1] "numeric"</span>
 <span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">1.1</span><span class="op">)</span>
 <span class="co">#&gt; [1] "double"</span></code></pre></div>
-<div class="sourceCode" id="cb67"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># numeric class and integer type</span>
 <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="fl">1L</span><span class="op">)</span>
 <span class="co">#&gt; [1] "integer"</span>
 <span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">1L</span><span class="op">)</span>
 <span class="co">#&gt; [1] "integer"</span></code></pre></div>
-<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># function class and closure type</span>
 <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">mean</span><span class="op">)</span>
 <span class="co">#&gt; [1] "function"</span>
 <span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="va">mean</span><span class="op">)</span>
 <span class="co">#&gt; [1] "closure"</span></code></pre></div>
 <p>Classes often control how an object is printed. For example, the result of <code><a href="https://rdrr.io/r/stats/t.test.html">t.test()</a></code> is a list with class "htest", which is why printing the result gives you formatted output.</p>
-<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="va">t</span><span class="op">)</span>
 <span class="co">#&gt; [1] "list"</span>
@@ -199,42 +201,42 @@
 <span class="co">#&gt;  Welch Two Sample t-test</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; data:  rnorm(10) and rnorm(10)</span>
-<span class="co">#&gt; t = 0.060369, df = 17.219, p-value = 0.9526</span>
+<span class="co">#&gt; t = 1.5287, df = 15.216, p-value = 0.1469</span>
 <span class="co">#&gt; alternative hypothesis: true difference in means is not equal to 0</span>
 <span class="co">#&gt; 95 percent confidence interval:</span>
-<span class="co">#&gt;  -1.165752  1.234498</span>
+<span class="co">#&gt;  -0.2705196  1.6487015</span>
 <span class="co">#&gt; sample estimates:</span>
-<span class="co">#&gt;   mean of x   mean of y </span>
-<span class="co">#&gt; -0.07284948 -0.10722251</span></code></pre></div>
+<span class="co">#&gt;  mean of x  mean of y </span>
+<span class="co">#&gt;  0.4274775 -0.2616135</span></code></pre></div>
 <p>If you <code><a href="https://rdrr.io/r/base/class.html">unclass()</a></code> an object, it no longer gets specical printing styles.</p>
-<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb71"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/class.html">unclass</a></span><span class="op">(</span><span class="va">t</span><span class="op">)</span>
 <span class="co">#&gt; $statistic</span>
-<span class="co">#&gt;         t </span>
-<span class="co">#&gt; 0.0603693 </span>
+<span class="co">#&gt;       t </span>
+<span class="co">#&gt; 1.52869 </span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $parameter</span>
 <span class="co">#&gt;       df </span>
-<span class="co">#&gt; 17.21851 </span>
+<span class="co">#&gt; 15.21622 </span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $p.value</span>
-<span class="co">#&gt; [1] 0.9525567</span>
+<span class="co">#&gt; [1] 0.1468611</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $conf.int</span>
-<span class="co">#&gt; [1] -1.165752  1.234498</span>
+<span class="co">#&gt; [1] -0.2705196  1.6487015</span>
 <span class="co">#&gt; attr(,"conf.level")</span>
 <span class="co">#&gt; [1] 0.95</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $estimate</span>
-<span class="co">#&gt;   mean of x   mean of y </span>
-<span class="co">#&gt; -0.07284948 -0.10722251 </span>
+<span class="co">#&gt;  mean of x  mean of y </span>
+<span class="co">#&gt;  0.4274775 -0.2616135 </span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $null.value</span>
 <span class="co">#&gt; difference in means </span>
 <span class="co">#&gt;                   0 </span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $stderr</span>
-<span class="co">#&gt; [1] 0.5693793</span>
+<span class="co">#&gt; [1] 0.4507722</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $alternative</span>
 <span class="co">#&gt; [1] "two.sided"</span>
@@ -244,7 +246,7 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $data.name</span>
 <span class="co">#&gt; [1] "rnorm(10) and rnorm(10)"</span></code></pre></div>
-
+</details>
 </div>
 <div id="coding-scheme" class="section level2" number="4.8">
 <h2>
@@ -253,9 +255,9 @@
 <p><dfn>How to represent <a href="c.html#categorical">categorical</a> variables with numbers for use in models</dfn></p>
 <ul>
 <li><a href="e.html#effect-code">effect code</a></li>
-<li><a href="e.html#sum-code">sum code</a></li>
+<li><a href="s.html#sum-code">sum code</a></li>
 <li>
-<a href="e.html#treatment-code">treatment code</a> (dummy code)</li>
+<a href="t.html#treatment-code">treatment code</a> (dummy code)</li>
 </ul>
 <p><a href="https://debruine.github.io/post/coding-schemes/" target="_blank">Example of different coding schemes for the same data</a></p>
 <p><a href="https://debruine.github.io/faux/articles/contrasts.html" target="_blank">Contrast coding in detail</a></p>
@@ -268,7 +270,7 @@
 </h2>
 <p><dfn>Changing the data type of values in a vector to a single compatible type.</dfn></p>
 <p>If you try to combine values with different <a href="d.html#data-type">data types</a> in a <a href="v.html#vector">vector</a> or <a href="m.html#matrix">matrix</a>, they get coerced to a common type. <a href="s.html#string">Strings</a> are most dominant which means, if you try to combine a string with another data type, the other data type will be coerced into a string. <a href="d.html#double">Doubles</a> are dominant over <a href="i.html#integer">integers</a> and <a href="n.html#numeric">numeric</a> values are dominant over <a href="l.html#logical">logical</a> values.</p>
-<div class="sourceCode" id="cb71"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2L</span>, <span class="cn">T</span>, <span class="cn">F</span><span class="op">)</span>  <span class="co"># integers and logicals become integers</span>
 <span class="co">#&gt; [1] 2 1 0</span>
 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1.5</span>, <span class="cn">T</span>, <span class="cn">F</span><span class="op">)</span> <span class="co"># doubles and logicals become doubles</span>
@@ -284,7 +286,7 @@
 <span class="header-section-number">4.10</span> comment<a class="anchor" aria-label="anchor" href="#comment"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn> Comments are text that R will not run as code. You can annotate <code>.R</code> files or <a href="c.html#chunk">chunks</a> in <a href="r.html#r-markdown">R Markdown</a> files with comments by prefacing each line of the comment with one or more hash symbols (<code>#</code>).</dfn></p>
-<div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># I'm demonstrating comments in this chunk</span>
 <span class="co"># This comment will be added to the document outline ----</span></code></pre></div>
 <p>You can comment multiple lines at once by highlighting the code you would like to change into a comment and using the keyboard shortcut Ctrl + Shift + C (Windows) or Command + Shift + C (Mac). You can also change from comment to code (un-commenting) by using the same keyboard shortcut.</p>
@@ -321,12 +323,12 @@
 </h2>
 <p><dfn>To combine strings or vectors.</dfn></p>
 <p>When referring to strings, concatenate means to add strings together using the function <code>paste</code> (adds a space between strings) or <code>paste0</code> (doesn't add anything between strings).</p>
-<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">subject_name</span> <span class="op">&lt;-</span> <span class="st">"Lisa"</span>
 <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"Hello,"</span>, <span class="va">subject_name</span><span class="op">)</span>
 <span class="co">#&gt; [1] "Hello, Lisa"</span></code></pre></div>
 <p>When referring to other types of variables, concatenate can mean to create a vector with those variables, usually using the <code>c</code> function. For example, you could concatenate the numbers 1, 3, 6, and 10 like this: <code>c(1, 3, 6, 10)</code>. You can concatenate two <a href="v.html#vector">vectors</a> as well:</p>
-<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb75"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">v1</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>
 <span class="va">v2</span> <span class="op">&lt;-</span> <span class="fl">11</span><span class="op">:</span><span class="fl">15</span>
 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">v1</span>, <span class="va">v2</span><span class="op">)</span>
@@ -334,7 +336,7 @@
 <div class="warning">
 <p>Remember, a <a href="v.html#vector">vector</a> can only have one <a href="d.html#data_type">data type</a>. So if you concatenate a <a href="s.html#string">string</a> vector and a <a href="n.html#numeric">numeric</a> vector, the numbers will get turned into their string versions. If you concatenate an <a href="i.html#integer">integer</a> and a <a href="d.html#double">double</a> vector, the integers will be converted to doubles.</p>
 </div>
-<div class="sourceCode" id="cb75"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">strings</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"c"</span>, <span class="st">"e"</span><span class="op">)</span>
 <span class="va">integers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1L</span>, <span class="fl">3L</span>, <span class="fl">5L</span><span class="op">)</span>
 <span class="va">doubles</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1.1</span>, <span class="fl">3.3</span>, <span class="fl">5.5</span><span class="op">)</span>
@@ -368,22 +370,24 @@
 </h2>
 <p><dfn>Having two <a href="p.html#package">packages</a> loaded that have a <a href="f.html#function">function</a> with the same name.</dfn></p>
 <p>For example, when you load the <a href="t.html#tidyverse">tidyverse</a>, you will see several warnings under the Conflicts heading.</p>
-<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></code></pre></div>
 <p><code>
 ── Conflicts ───── tidyverse_conflicts() ──<br><span style="color:red;">x</span> <span style="color:rgb(52,101,164);">dplyr</span>::<span style="color:green;">filter()</span> masks <span style="color:rgb(52,101,164);">stats</span>::filter()<br><span style="color:red;">x</span> <span style="color:rgb(52,101,164);">lag()</span>::<span style="color:green;">filter()</span> masks <span style="color:rgb(52,101,164);">stats</span>::lag()
 </code></p>
 <p>This means that the stats package has functions called <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> and <code><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lag()</a></code>, but the dplyr package (part of the tidyverse), also has functions with the same name.</p>
 <p>Because you loaded dplyr <em>after</em> stats (which is loaded by default when you start R), the functions from dplyr <a href="m.html#mask">mask</a> the functions from stats, but you can still use the functions from stats, you just need to preface them with <code>stats::</code>.</p>
-<p>Sometime, the two functions do totally different things. There just aren't enough names to go around; this is why all packages aren't loaded by default. For example, <code><a href="https://rdrr.io/r/stats/filter.html">stats::filter()</a></code> applies linear filtering to a time series, while <code><a href="https://dplyr.tidyverse.org/reference/filter.html">dplyr::filter()</a></code> subsets a data frame.</p>
-<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r">
+<details><summary>
+More...
+</summary><p>Sometime, the two functions do totally different things. There just aren't enough names to go around; this is why all packages aren't loaded by default. For example, <code><a href="https://rdrr.io/r/stats/filter.html">stats::filter()</a></code> applies linear filtering to a time series, while <code><a href="https://dplyr.tidyverse.org/reference/filter.html">dplyr::filter()</a></code> subsets a data frame.</p>
+<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; Time Series:</span>
 <span class="co">#&gt; Start = 1 </span>
 <span class="co">#&gt; End = 10 </span>
 <span class="co">#&gt; Frequency = 1 </span>
 <span class="co">#&gt;  [1] NA  6  9 12 15 18 21 24 27 NA</span></code></pre></div>
-<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu">tidyr</span><span class="fu">::</span><span class="va"><a href="https://tidyr.tidyverse.org/reference/table1.html">table1</a></span>, <span class="va">country</span> <span class="op">==</span> <span class="st">"Afghanistan"</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
@@ -434,7 +438,7 @@ Afghanistan
 </table></div>
 </div>
 <p>In other cases, a package will name a function the same as a base R function on purpose, in order to do the same thing with more features. For example, <code><a href="https://rdrr.io/r/base/sets.html">base::setdiff()</a></code> and <code><a href="https://generics.r-lib.org/reference/setops.html">dplyr::setdiff()</a></code> both return rows from the first table that are not in the second table, but the base R version requires columns to be in the same order, while the dplyr version does not.</p>
-<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># define overlapping tables</span>
 <span class="va">t1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>a <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, b <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span>
 <span class="va">t2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>b <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">4</span>, a <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span>
@@ -443,7 +447,7 @@ Afghanistan
 <span class="fu">base</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/base/sets.html">setdiff</a></span><span class="op">(</span><span class="va">t1</span>, <span class="va">t2</span><span class="op">)</span>
 <span class="co">#&gt; $a</span>
 <span class="co">#&gt; [1] 1 2 3</span></code></pre></div>
-<div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb81"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># concludes only 1 t1 row is not in t2</span>
 <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/setops.html">setdiff</a></span><span class="op">(</span><span class="va">t1</span>, <span class="va">t2</span><span class="op">)</span></code></pre></div>
 <div class="kable-table">
@@ -466,7 +470,7 @@ b
 </tr></tbody>
 </table></div>
 </div>
-
+</details>
 </div>
 <div id="console" class="section level2" number="4.17">
 <h2>
@@ -481,7 +485,7 @@ b
 <span class="header-section-number">4.18</span> container<a class="anchor" aria-label="anchor" href="#container"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A data structure that aggregates data, such as a <a href="v.html#vector">vector</a>, <a href="l.html#list">list</a>, <a href="m.html#matrix">matrix</a>, or <a href="d.html#data-frame">data frame</a></dfn></p>
-<div class="sourceCode" id="cb81"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb82"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># vector</span>
 <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span><span class="op">)</span> 
 <span class="co">#&gt; [1] 1 2 3 4</span>
@@ -576,7 +580,7 @@ Jack
 </h2>
 <p><dfn><a href="p.html#parameter">Parameters</a> showing how a set of <a href="v.html#vector">vectors</a> are <a href="c.html#correlation">correlated</a>.</dfn></p>
 <p>This is set up as a <a href="m.html#matrix">matrix</a> with 1.0 along the diagonal, meaning that every variable is perfectly correlated with itself.</p>
-<div class="sourceCode" id="cb82"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb83"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
   A <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>,
   B <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, <span class="co"># uncorrelated with A</span>
@@ -586,10 +590,10 @@ Jack
 
 <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span> <span class="co"># correlation matrix</span>
 <span class="co">#&gt;               A             B           C           D</span>
-<span class="co">#&gt; A  1.000000e+00 -9.943199e-04  0.66356312 -0.69155202</span>
-<span class="co">#&gt; B -9.943199e-04  1.000000e+00 -0.03771143 -0.04160253</span>
-<span class="co">#&gt; C  6.635631e-01 -3.771143e-02  1.00000000 -0.39843597</span>
-<span class="co">#&gt; D -6.915520e-01 -4.160253e-02 -0.39843597  1.00000000</span></code></pre></div>
+<span class="co">#&gt; A  1.0000000000 -0.0009943199  0.66356312 -0.69155202</span>
+<span class="co">#&gt; B -0.0009943199  1.0000000000 -0.03771143 -0.04160253</span>
+<span class="co">#&gt; C  0.6635631226 -0.0377114274  1.00000000 -0.39843597</span>
+<span class="co">#&gt; D -0.6915520161 -0.0416025327 -0.39843597  1.00000000</span></code></pre></div>
 
 </div>
 <div id="correlation" class="section level2" number="4.21">
@@ -612,7 +616,9 @@ Figure 4.1: Different Correlations (n = 100)
 </h2>
 <p><dfn><a href="p.html#parameter">Parameters</a> showing how a set of <a href="v.html#vector">vectors</a> vary and covary.</dfn></p>
 <p>The covariance <a href="m.html#matrix">matrix</a> is related to the <a href="c.html#correlation-matrix">correlation matrix</a>, but also incorporates information about the <a href="s.html#standard-deviation">standard deviations</a> of all the variables.</p>
-<div class="sourceCode" id="cb83"><pre class="downlit sourceCode r">
+<details><summary>
+More...
+</summary><div class="sourceCode" id="cb84"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/rnorm_multi.html">rnorm_multi</a></span><span class="op">(</span>
   n <span class="op">=</span> <span class="fl">100</span>,
   mu <span class="op">=</span> <span class="fl">0</span>,
@@ -632,7 +638,7 @@ Figure 4.1: Different Correlations (n = 100)
 <span class="co">#&gt; B 1.0 4 3.0</span>
 <span class="co">#&gt; C 1.5 3 9.0</span></code></pre></div>
 <p>The matrix of the products of the standard deviations is called "sigma". If you multiply this by the correlation matrix, you get the covariance matrix.</p>
-<div class="sourceCode" id="cb84"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb85"><pre class="downlit sourceCode r">
 <code class="sourceCode R">  <span class="co"># multiply SDs    A    B    C</span>
 <span class="va">sigma</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">*</span><span class="fl">1</span>, <span class="fl">1</span><span class="op">*</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">*</span><span class="fl">3</span>,  <span class="co"># A</span>
                   <span class="fl">2</span><span class="op">*</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">*</span><span class="fl">2</span>, <span class="fl">2</span><span class="op">*</span><span class="fl">3</span>,  <span class="co"># B</span>
@@ -643,7 +649,7 @@ Figure 4.1: Different Correlations (n = 100)
 <span class="co">#&gt; A 1.0 1 1.5</span>
 <span class="co">#&gt; B 1.0 4 3.0</span>
 <span class="co">#&gt; C 1.5 3 9.0</span></code></pre></div>
-
+</details>
 </div>
 <div id="covariance" class="section level2" number="4.23">
 <h2>
@@ -673,8 +679,10 @@ Figure 4.1: Different Correlations (n = 100)
 <div class="warning">
 <p>Remember that internal reliability is not the same as external reliability. A scale can have a very high Cronbach's alpha, meaning it measures <em>something</em> well, but that thing may not be what you meant to measure.</p>
 </div>
-<p>We can use the function <code><a href="https://rdrr.io/pkg/psych/man/alpha.html">psych::alpha()</a></code> to calculate Cronbach's alpha.</p>
-<div class="sourceCode" id="cb85"><pre class="downlit sourceCode r">
+<details><summary>
+More...
+</summary><p>We can use the function <code><a href="https://rdrr.io/pkg/psych/man/alpha.html">psych::alpha()</a></code> to calculate Cronbach's alpha.</p>
+<div class="sourceCode" id="cb86"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># read in data from the 3 domains of disgust scale</span>
 <span class="va">disgust</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"https://psyteachr.github.io/msc-data-skills/data/disgust.csv"</span><span class="op">)</span>
   
@@ -683,13 +691,13 @@ Figure 4.1: Different Correlations (n = 100)
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu">psych</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/psych/man/alpha.html">alpha</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>You often just want to report the raw or standard alpha.</p>
-<div class="sourceCode" id="cb86"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb87"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">pathogen_alpha</span><span class="op">$</span><span class="va">total</span><span class="op">$</span><span class="va">raw_alpha</span>
 <span class="co">#&gt; [1] 0.7379495</span>
 <span class="va">pathogen_alpha</span><span class="op">$</span><span class="va">total</span><span class="op">$</span><span class="va">std.alpha</span>
 <span class="co">#&gt; [1] 0.7441191</span></code></pre></div>
 <p>The <code>item.stats</code> section gives you some <a href="d.html#descriptive">descriptive</a> statistics about each item (see <code><a href="https://rdrr.io/pkg/psych/man/alpha.html">?psych::alpha</a></code> for more info).</p>
-<div class="sourceCode" id="cb87"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb88"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">pathogen_alpha</span><span class="op">$</span><span class="va">item.stats</span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
@@ -905,7 +913,7 @@ pathogen7
 </table></div>
 </div>
 <p>You can look at the <code>alpha.drop</code> section to see what the alpha would be if you dropped an item. If we add an item from the moral disgust scale, you can see that the alpha increases if you drop it.</p>
-<div class="sourceCode" id="cb88"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb89"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mixed_alpha</span> <span class="op">&lt;-</span> <span class="va">disgust</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">pathogen1</span><span class="op">:</span><span class="va">pathogen7</span>, <span class="va">moral1</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu">psych</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/psych/man/alpha.html">alpha</a></span><span class="op">(</span><span class="op">)</span>
@@ -1015,7 +1023,7 @@ moral1
 </tbody>
 </table></div>
 </div>
-
+</details>
 </div>
 <div id="css" class="section level2" number="4.26">
 <h2>
@@ -1045,6 +1053,10 @@ moral1
 <span class="header-section-number">4.27</span> CSV<a class="anchor" aria-label="anchor" href="#csv"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Comma-separated variable: a file type for representing data where each variable is separated from the next by a comma.</dfn></p>
+<p>Comma-separated data:</p>
+<pre><code>id, name, age
+1, Lisa, 45
+2, Robbie, 14</code></pre>
 
 </div>
 </div>
@@ -1296,7 +1308,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-27.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-07-09.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -2,24 +2,55 @@
 
 <dfn> The process of putting [vectors](v.html#vector) on the same scale. In statistics, this often means that a vector has a [mean](m.html#mean) of 0 and a [standard deviation](s.html#standard-deviation) of 1. </dfn>
 
+You can standardize a vector by subtracting the vector mean from each value 
+and then dividing each each difference by the vector standard deviation, or by using the `scale()` function.
+
+<details>
+  <summary>More...</summary>
+
+Standardize a vector manually:
+
 ```{r}
 # create a vector containing the numbers 1 to 10
 v <- 1:10
 
-# You can standardize a vector by subtracting the vector mean from each value 
-# and then dividing each each difference by the vector standard deviation
+# calculate mean and SD
 v_mean <- mean(v)
 v_sd <- sd(v)
 
+# standardize
 standardized_v <- (v - v_mean) / v_sd
 
-# Now the mean and standard deviation of the new vector will be 0 and 1
+data.frame(
+  original = v,
+  standardized = standardized_v
+)
+```
+
+Now the mean and standard deviation of the new vector will be 0 and 1
+
+```{r}
 mean(standardized_v)
 sd(standardized_v)
-
-# You can also use the scale() function in R to automate the standardization process
-another_standardized_v <- scale(v)
-
-mean(another_standardized_v)
-sd(another_standardized_v)
 ```
+
+You can also use the scale() function in R to automate the standardization process.
+
+```{r}
+scaled_v <- scale(v)
+
+mean(scaled_v)
+sd(scaled_v)
+```
+
+::: {.warn}
+
+The result of the `scale()` function is a 2-[dimensional](d.html#dimension) [matrix](m.html#matrix), so you usually need to extract the vector of values like this:
+
+```{r}
+scaled_v[, 1]
+```
+
+:::
+
+</details>

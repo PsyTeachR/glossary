@@ -17,3 +17,4 @@ model <- afex::lmer(
 
 broom.mixed::tidy(model, effects = "ran_pars")
 ```
+

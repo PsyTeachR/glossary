@@ -1,5 +1,26 @@
 ## variable
 
+<dfn>([coding](v.html#variable-coding)): A word that identifies and stores the value of some data for later use; ([stats](v.html#variable-stats)): An attribute or characteristic of an [observation](o.html#observation) that you can measure, count, or describe</dfn> 
+
+Some also refer to columns in [data frames](d.html#data-frame) as variables.
+
+## variable (coding) {#variable-coding}
+
 <dfn>A word that identifies and stores the value of some data for later use.</dfn> 
 
 Variables in R are usually referred to as objects. See the definition for [object](o.html#object).
+
+
+
+## variable (stats) {#variable-stats}
+
+<dfn>An attribute or characteristic of an [observation](o.html#observation) that you can measure, count, or describe.</dfn> 
+
+For example, `age`, `name`, and `weight` are variables you could collect about a person. 
+
+See also:
+
+- [dependent variable](d.html#dependent-variable)
+- [independent variable](i.html#independent-variable)
+- [response variable](r.html#response-variable)
+- [predictor variable](p.html#predictor-variable)

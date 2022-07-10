@@ -11,6 +11,9 @@ class(a)
 class(b)
 ```
 
+<details>
+  <summary>More...</summary>
+  
 If you try to mix data types in an atomic vector, they will be [coerced](c.html#coerce) to be the same type. (Note that 32 becomes "32" so it can be in the same vector as a character object).
 
 ```{r}
@@ -48,3 +51,4 @@ my_vec$y
 
 See the [Vectors chapter](https://adv-r.hadley.nz/vectors-chap.html#atomic-vectors) of Advanced R for more advanced discussion of atomic vectors.
 
+</details>

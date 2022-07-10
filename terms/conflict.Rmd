@@ -18,6 +18,9 @@ This means that the stats package has functions called `filter()` and `lag()`, b
 
 Because you loaded dplyr *after* stats (which is loaded by default when you start R), the functions from dplyr [mask](#mask) the functions from stats, but you can still use the functions from stats, you just need to preface them with `stats::`.
 
+<details>
+  <summary>More...</summary>
+
 Sometime, the two functions do totally different things. There just aren't enough names to go around; this is why all packages aren't loaded by default. For example, `stats::filter()` applies linear filtering to a time series, while `dplyr::filter()` subsets a data frame.
 
 ```{r}
@@ -45,3 +48,4 @@ base::setdiff(t1, t2)
 dplyr::setdiff(t1, t2)
 ```
 
+</details>

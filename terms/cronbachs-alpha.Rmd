@@ -8,6 +8,9 @@ If a scale is a reliable measure of a concept, then the items of the scale shoul
 Remember that internal reliability is not the same as external reliability. A scale can have a very high Cronbach's alpha, meaning it measures *something* well, but that thing may not be what you meant to measure.
 :::
 
+<details>
+  <summary>More...</summary>
+
 We can use the function `psych::alpha()` to calculate Cronbach's alpha.
 
 ```{r cronbachs-alpha, message = FALSE}
@@ -43,8 +46,5 @@ mixed_alpha <- disgust %>%
 select(mixed_alpha$alpha.drop, raw_alpha, std.alpha)
 ```
 
-
-
-
-
+</details>
 

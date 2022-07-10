@@ -3,7 +3,10 @@
 <dfn>A statistic that represents the proportion of the [variance](v.html#variance) for a [dependent variable](d.html#dependent-variable) explained by the [predictor variable(s)](p.html#predictor-variable) in a [linear model](g.html#general-linear-model).</dfn>
 
 
-Let's simulate some data 
+<details>
+  <summary>More...</summary>
+  
+Let's simulate some data:
 
 ```{r}
 # simulate some data
@@ -35,4 +38,4 @@ summary(model)$r.squared
 summary(model)$adj.r.squared
 ```
 
-
+</details>

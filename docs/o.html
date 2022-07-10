@@ -131,7 +131,7 @@
 <p><dfn>All of the data about a single trial or question.</dfn></p>
 <p>In a <a href="t.html#tidy-data">tidy</a> dataset, each row contains only one observation.</p>
 <p>Each row contains 3 observations:</p>
-<div class="sourceCode" id="cb171"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb189"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyr.tidyverse.org">tidyr</a></span><span class="op">)</span>
 
@@ -287,7 +287,7 @@ rt_3
 </tbody>
 </table></div>
 <p>Now each row contains 1 observation:</p>
-<div class="sourceCode" id="cb172"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb190"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">tidy</span> <span class="op">&lt;-</span> <span class="va">untidy</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://tidyr.tidyverse.org/reference/gather.html">gather</a></span><span class="op">(</span><span class="va">var</span>, <span class="va">val</span>, <span class="va">score_1</span><span class="op">:</span><span class="va">rt_3</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://tidyr.tidyverse.org/reference/separate.html">separate</a></span><span class="op">(</span><span class="va">var</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"var"</span>, <span class="st">"trial"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
@@ -695,7 +695,7 @@ score
 <span class="header-section-number">16.6</span> outer join<a class="anchor" aria-label="anchor" href="#outer-join"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="m.html#mutating-joins">mutating join</a> that lets you join up rows in two tables while keeping all of the information from both tables (full_join)</dfn></p>
-<p>The term "outer join" is more commonly used in SQL. See <a href="f.html#full_join">full_join</a> for the R version.</p>
+<p>The term "outer join" is more commonly used in SQL. See <a href="f.html#full-join">full_join</a> for the R version.</p>
 
 </div>
 <div id="outlier" class="section level2" number="16.7">
@@ -937,7 +937,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-27.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-07-09.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

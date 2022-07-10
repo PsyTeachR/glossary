@@ -4,7 +4,8 @@
 
 When you use [single brackets](s.html#single-brackets) to subset a container, you get back a container with the items you selected. This contrasts with [double brackets](d.html#double-brackets), which only return a single item in the container.
 
-
+<details>
+  <summary>More...</summary>
 
 You can use single brackets to select one or more items from a vector.
 
@@ -111,5 +112,5 @@ myarray <- array(1:8, dim = c(2, 2, 2))
 myarray[2, 2, 2]
 ```
 
-
+</details>
 
