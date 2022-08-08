@@ -1,0 +1,5 @@
+## partial effects
+
+<dfn>The difference in the [response variable](r.html#response-variable) for a given change in one [predictor variable](p.html#predictor-variable), with all other [covariates](c.html#covariate) held constant.</dfn>
+
+Also called [marginal effects](m.html#marginal-effects) (see this entry for more details).

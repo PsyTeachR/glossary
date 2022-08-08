@@ -1,0 +1,46 @@
+## ANOVA
+
+<dfn>ANalysis Of VAriance: a type of linear model that is useful for [factorial](f.html#factorial-stats) designs</dfn>
+
+See also [ANCOVA](a.html#ancova).
+
+<details>
+  <summary>More...</summary>
+
+```{r}
+# simulate some factorial data
+set.seed(8675309)
+simdat <- faux::sim_design(
+  n = 100,
+  within = list(time = c("pre", "post")),
+  between = list(treatment = c("control", "experimental")),
+  mu = c(100, 100, 100, 105),
+  sd = 10,
+  r = 0.5,
+  id = "ID",
+  dv = "DV",
+  long = TRUE
+)
+```
+
+```{r}
+# analysis with ANOVA
+
+library(afex) # a useful package for anova
+
+anova <- afex::aov_ez(
+  id = "ID",
+  dv = "DV",
+  between = "treatment",
+  within = "time",
+  data = simdat
+)
+
+afex::nice(anova)
+```
+
+</details>
+
+
+
+

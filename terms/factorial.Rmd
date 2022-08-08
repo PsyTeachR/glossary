@@ -1,0 +1,39 @@
+## factorial
+
+<dfn>[factorial](f.html#factorial-stats)): Experimental designs where all possible combinations of [independent variables](i.html#independent-variable) are considered; [factorial](f.html#factorial-math)): The mathematical operation where an integer is multiplied by every integer between 1 and itself</dfn>
+
+## factorial (stats) {#factorial-stats}
+
+<dfn>Experimental designs where all possible combinations of [independent variables](i.html#independent-variable) are considered.</dfn>
+
+For example, the following design has two factors: time and treatment, and all 4 combinations are represented in the data.
+
+```{r, echo = FALSE}
+# simulate some factorial data
+set.seed(8675309)
+simdat <- faux::sim_design(
+  n = 100,
+  within = list(time = c("pre", "post")),
+  between = list(treatment = c("control", "experimental")),
+  mu = c(100, 100, 100, 105),
+  sd = 10,
+  r = 0.5,
+  id = "ID",
+  dv = "DV",
+  long = TRUE
+)
+```
+
+## factorial (math) {#factorial-math}
+
+<dfn>The mathematical operation where an integer is multiplied by every integer between 1 and itself.</dfn>
+
+This operation is represented by an exclamation point in mathematical notation (e.g., `5!`) and uses the `factorial()` function in R.
+
+```{r}
+# 5 factorial
+factorial(5)
+5 * 4 * 3 * 2 * 1
+```
+
+

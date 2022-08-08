@@ -1,0 +1,57 @@
+## partial eta squared
+
+<dfn>A measure of effect size commonly used in [ANOVAs](a.html#anova)</dfn>
+
+It measures the proportion of [variance](v.html#variance) explained by a specific [independent variable](i.html#independent-variable) after accounting for variance explained by other variables in the model. It can range from 0 (explains no variance) to 1 (explains 100% of the variance).
+
+The formula for partial eta squared is:
+
+$\eta_p^2 = SS_{effect} / (SS_{effect} + SS_{error})$
+
+
+* $SS_{effect}$: The sum of squares of for the target effect
+* $SS_{error}$: The sum of squares error in the ANOVA
+
+<details>
+  <summary>More...</summary>
+
+In the example below, we'll simulate data with significant main effects and an interaction.
+
+```{r}
+# simulate some factorial data
+set.seed(8675309)
+simdat <- faux::sim_design(
+  n = 100,
+  within = list(time = c("pre", "post")),
+  between = list(treatment = c("control", "experimental")),
+  mu = c(100, 105, 100, 110),
+  sd = 10,
+  r = 0.5,
+  id = "ID",
+  dv = "DV",
+  long = TRUE
+)
+```
+
+The afex package defaults to generalised eta squared, so you have to set the reported effect size to "pes" to get partial eta squared.
+
+```{r}
+# analysis with ANOVA
+
+library(afex) # a useful package for anova
+
+# set effect size measure to partial eta squared
+afex::afex_options(es_aov = "pes")
+
+anova <- afex::aov_ez(
+  id = "ID",
+  dv = "DV",
+  between = "treatment",
+  within = "time",
+  data = simdat
+)
+
+afex::nice(anova)
+```
+
+</details>

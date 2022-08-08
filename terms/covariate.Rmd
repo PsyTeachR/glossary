@@ -1,0 +1,7 @@
+## covariate
+
+<dfn>Characteristics of the observations in a study that may affect the [response variable](r.html#response-variable).</dfn>
+
+Covariates can be [independent variables](i.html#independent-variable) of interest in your analysis, or confounding variables.
+
+In the context of [ANCOVAs](a.html#ancova), covariate specifically refers to [continuous](c.html#continuous) predictor variables.

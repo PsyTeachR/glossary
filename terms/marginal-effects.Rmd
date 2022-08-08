@@ -1,0 +1,9 @@
+## marginal effects
+
+<dfn>The difference in the [response variable](r.html#response-variable) for a given change in one [predictor variable](p.html#predictor-variable), with all other [covariates](c.html#covariate) held constant.</dfn>
+
+Also called [partial effects](p.html#partial-effects).
+
+You can calculate marginal effects as an average (AME) over the values of other covariates, at the mean (MEM), where all other covariates are set to their mean values, or marginal effects at representative values (MER), where the other covariates are set to specific values you are interested in.
+
+

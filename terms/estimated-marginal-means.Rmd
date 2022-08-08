@@ -1,0 +1,49 @@
+## estimated marginal means
+
+<dfn>The means for cells in a design, as estimated from a statistical model, rather than from data</dfn>
+
+Also known as least-squares means.
+
+<details>
+  <summary>More...</summary>
+
+Here we simulate some data for a 2x2 [factorial](f.htmlfactorial-stats) design. The argument `mu` specifies the cell means for ctl-A, ctl-B, exp-A and exp-B.
+
+```{r}
+# simulate some factorial data
+set.seed(8675309)
+simdat <- faux::sim_design(
+  between = list(
+    treatment = c("ctl", "exp"),
+    group = c("A", "B")
+  ),
+  mu = c(100, 100, 105, 110),
+  sd = 10
+)
+```
+
+Then we model the data using a [linear model])g.html#general-linear-model).
+
+```{r}
+# model using lm
+model <- lm(y ~ treatment * group, data = simdat)
+summary(model)
+```
+
+Use the `emmeans` package to get the estimated marginal means from this model. You can get the estimated means for each combination of treatment and group:
+
+```{r}
+emmeans::emmeans(model, ~ treatment | group)
+```
+
+Or for the main effects separately (there will be a warning that the interaction may make this misleading).
+
+```{r}
+emmeans::emmeans(model, ~ treatment)
+```
+
+```{r}
+emmeans::emmeans(model, ~ group)
+```
+
+</details>

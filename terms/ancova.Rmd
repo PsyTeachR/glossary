@@ -1,0 +1,46 @@
+## ancova
+
+<dfn>ANalysis of CO-VAriance: a type of linear model that is useful for [factorial](f.html#factorial-stats) designs with continuous [covariates](c.html#covariate)</dfn>
+
+See also [ANOVA](a.html#anova).
+
+<details>
+  <summary>More...</summary>
+
+```{r}
+# simulate some factorial data
+set.seed(8675309)
+simdat <- faux::sim_design(
+  n = 100,
+  between = list(treatment = c("control", "experimental")),
+  mu = c(100, 105),
+  sd = 10,
+  id = "ID",
+  dv = "DV",
+  plot = FALSE
+)
+
+# add a covariate that is correlated r = 0.5 to the DV
+simdat$cov <- faux::rnorm_pre(simdat$DV, mu = 0, sd = 1, r = 0.5)
+
+head(simdat)
+```
+
+```{r}
+# analysis with ANCOVA
+
+library(afex) # a useful package for ancova
+
+ancova <- afex::aov_ez(
+  id = "ID",
+  dv = "DV",
+  between = "treatment",
+  covariate = "cov",
+  factorize = FALSE, # must be FALSE with covariates
+  data = simdat
+)
+
+afex::nice(ancova)
+```
+
+</details>
