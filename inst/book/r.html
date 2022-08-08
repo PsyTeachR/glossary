@@ -6,20 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>19 R | Glossary </title>
 <meta name="author" content="psyTeachR Team">
-<meta name="description" content="19.1 R markdown The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code. An R markdown file...">
-<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta name="description" content="19.1 R markdown The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code. More... An R...">
+<meta name="generator" content="bookdown 0.27 with bs4_book()">
 <meta property="og:title" content="19 R | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/r.html">
 <meta property="og:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
-<meta property="og:description" content="19.1 R markdown The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code. An R markdown file...">
+<meta property="og:description" content="19.1 R markdown The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code. More... An R...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="19 R | Glossary ">
-<meta name="twitter:description" content="19.1 R markdown The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code. An R markdown file...">
+<meta name="twitter:description" content="19.1 R markdown The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code. More... An R...">
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
@@ -100,7 +100,9 @@
 <span class="header-section-number">19.1</span> R markdown<a class="anchor" aria-label="anchor" href="#r-markdown"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code.</dfn></p>
-<p>An R markdown file starts with a <a href="y.html#yaml">YAML</a> header that usually contains the title, author, and output type.</p>
+<details><summary>
+More...
+</summary><p>An R markdown file starts with a <a href="y.html#yaml">YAML</a> header that usually contains the title, author, and output type.</p>
 <pre><code>---
 title: "Analysis Plan Template"
 author: "School of Psychology, University of Glasgow"
@@ -119,7 +121,7 @@ library(tidyverse)
 1. load in packages
 2. load in dataset
 3. Wrangle data into appropriate format for analysis and checks. You might want to reshape the data or combine different values to make a new variable. </code></pre>
-<p>Resources:</p>
+</details><p>Resources:</p>
 <ul>
 <li><a href="https://rmarkdown.rstudio.com/lesson-1.html">Introduction to R Markdown</a></li>
 <li><a href="https://github.com/rstudio/cheatsheets/raw/main/rmarkdown-2.0.pdf">R Markdown Cheatsheet</a></li>
@@ -131,50 +133,52 @@ library(tidyverse)
 <span class="header-section-number">19.2</span> R-squared<a class="anchor" aria-label="anchor" href="#r-squared"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A statistic that represents the proportion of the <a href="v.html#variance">variance</a> for a <a href="d.html#dependent-variable">dependent variable</a> explained by the <a href="p.html#predictor-variable">predictor variable(s)</a> in a <a href="g.html#general-linear-model">linear model</a>.</dfn></p>
-<p>Let's simulate some data</p>
-<div class="sourceCode" id="cb192"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># simulate some data</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span>
-
-<span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">100</span>
-<span class="va">intercept</span> <span class="op">&lt;-</span> <span class="fl">10</span>
-<span class="va">effect</span> <span class="op">&lt;-</span> <span class="fl">0.5</span>
-<span class="va">error_sd</span> <span class="op">&lt;-</span> <span class="fl">2</span>
-
-<span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
-  predictor <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">n</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>,
-  error <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">n</span>, <span class="fl">0</span>, <span class="va">error_sd</span><span class="op">)</span>,
-  dv <span class="op">=</span> <span class="va">intercept</span> <span class="op">+</span> <span class="op">(</span><span class="va">effect</span> <span class="op">*</span> <span class="va">predictor</span><span class="op">)</span> <span class="op">+</span> <span class="va">error</span>
-<span class="op">)</span></code></pre></div>
+<details><summary>
+More...
+</summary><p>Let's simulate some data:</p>
+<div class="sourceCode" id="cb225"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># simulate some data</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">100</span></span>
+<span><span class="va">intercept</span> <span class="op">&lt;-</span> <span class="fl">10</span></span>
+<span><span class="va">effect</span> <span class="op">&lt;-</span> <span class="fl">0.5</span></span>
+<span><span class="va">error_sd</span> <span class="op">&lt;-</span> <span class="fl">2</span></span>
+<span></span>
+<span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<span>  predictor <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">n</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>,</span>
+<span>  error <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">n</span>, <span class="fl">0</span>, <span class="va">error_sd</span><span class="op">)</span>,</span>
+<span>  dv <span class="op">=</span> <span class="va">intercept</span> <span class="op">+</span> <span class="op">(</span><span class="va">effect</span> <span class="op">*</span> <span class="va">predictor</span><span class="op">)</span> <span class="op">+</span> <span class="va">error</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p>Analyse the data with a linear model and use the <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> function to view the R-squared values.</p>
-<div class="sourceCode" id="cb193"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">dv</span> <span class="op">~</span> <span class="va">predictor</span>, <span class="va">dat</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Call:</span>
-<span class="co">#&gt; lm(formula = dv ~ predictor, data = dat)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Residuals:</span>
-<span class="co">#&gt;     Min      1Q  Median      3Q     Max </span>
-<span class="co">#&gt; -5.0692 -1.4106  0.2447  1.4562  3.9263 </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Coefficients:</span>
-<span class="co">#&gt;             Estimate Std. Error t value Pr(&gt;|t|)    </span>
-<span class="co">#&gt; (Intercept)   9.8913     0.1991  49.677  &lt; 2e-16 ***</span>
-<span class="co">#&gt; predictor     0.6361     0.2150   2.958  0.00388 ** </span>
-<span class="co">#&gt; ---</span>
-<span class="co">#&gt; Signif. codes:  0 '***' 1e-03 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Residual standard error: 1.988 on 98 degrees of freedom</span>
-<span class="co">#&gt; Multiple R-squared:  0.08198,    Adjusted R-squared:  0.07261 </span>
-<span class="co">#&gt; F-statistic: 8.752 on 1 and 98 DF,  p-value: 0.003877</span></code></pre></div>
+<div class="sourceCode" id="cb226"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">dv</span> <span class="op">~</span> <span class="va">predictor</span>, <span class="va">dat</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Call:</span></span>
+<span><span class="co">#&gt; lm(formula = dv ~ predictor, data = dat)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Residuals:</span></span>
+<span><span class="co">#&gt;     Min      1Q  Median      3Q     Max </span></span>
+<span><span class="co">#&gt; -5.0692 -1.4106  0.2447  1.4562  3.9263 </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Coefficients:</span></span>
+<span><span class="co">#&gt;             Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
+<span><span class="co">#&gt; (Intercept)   9.8913     0.1991  49.677  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; predictor     0.6361     0.2150   2.958  0.00388 ** </span></span>
+<span><span class="co">#&gt; ---</span></span>
+<span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Residual standard error: 1.988 on 98 degrees of freedom</span></span>
+<span><span class="co">#&gt; Multiple R-squared:  0.08198,    Adjusted R-squared:  0.07261 </span></span>
+<span><span class="co">#&gt; F-statistic: 8.752 on 1 and 98 DF,  p-value: 0.003877</span></span></code></pre></div>
 <p><a href="a.html#adjusted-r-squared">Adjusted R-squared</a> is a modified version of R-squared adjusted for the number of predictors in the model. You can extract the R-squared and adjusted R-squared values from the model summary.</p>
-<div class="sourceCode" id="cb194"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span><span class="op">$</span><span class="va">r.squared</span>
-<span class="co">#&gt; [1] 0.08198174</span>
-<span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span><span class="op">$</span><span class="va">adj.r.squared</span>
-<span class="co">#&gt; [1] 0.0726142</span></code></pre></div>
-
+<div class="sourceCode" id="cb227"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span><span class="op">$</span><span class="va">r.squared</span></span>
+<span><span class="co">#&gt; [1] 0.08198174</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span><span class="op">$</span><span class="va">adj.r.squared</span></span>
+<span><span class="co">#&gt; [1] 0.0726142</span></span></code></pre></div>
+</details>
 </div>
 <div id="random-effect" class="section level2" number="19.3">
 <h2>
@@ -184,14 +188,14 @@ library(tidyverse)
 <p><strong>Example:</strong> If the grand mean response time in a population is 600 milliseconds, that number represents the typical value. The mean response time for an individual subject <span class="math inline">\(s\)</span> can be represented as an offset (<a href="d.html#deviation-score">deviation</a>) from that value. For example, if subject <span class="math inline">\(s\)</span> has a mean reaction time of 650 ms, that would imply a random effect for that subject of +50 ms.</p>
 <p>Unlike <a href="f.html#fixed%20effect">fixed effects</a>, we expect the underlying random effects to change from experiment to experiment as the sampling units (e.g., subjects) change.</p>
 <p>In a mixed effects model, you can get a table of just the random effects with the code below:</p>
-<div class="sourceCode" id="cb195"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lmerTest/man/lmer.html">lmer</a></span><span class="op">(</span>
-  <span class="va">rating</span> <span class="op">~</span> <span class="va">rater_age</span> <span class="op">*</span> <span class="va">face_age</span> <span class="op">+</span> <span class="co"># fixed effects</span>
-  <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">rater_id</span><span class="op">)</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">face_id</span><span class="op">)</span>, <span class="co"># random effects</span>
-  data <span class="op">=</span> <span class="fu">faux</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/faux/man/fr4.html">fr4</a></span>
-<span class="op">)</span>
-
-<span class="fu">broom.mixed</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">model</span>, effects <span class="op">=</span> <span class="st">"ran_pars"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb228"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lmerTest/man/lmer.html">lmer</a></span><span class="op">(</span></span>
+<span>  <span class="va">rating</span> <span class="op">~</span> <span class="va">rater_age</span> <span class="op">*</span> <span class="va">face_age</span> <span class="op">+</span> <span class="co"># fixed effects</span></span>
+<span>  <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">rater_id</span><span class="op">)</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">face_id</span><span class="op">)</span>, <span class="co"># random effects</span></span>
+<span>  data <span class="op">=</span> <span class="fu">faux</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/faux/man/fr4.html">fr4</a></span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">broom.mixed</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">model</span>, effects <span class="op">=</span> <span class="st">"ran_pars"</span><span class="op">)</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr>
@@ -272,7 +276,21 @@ sd__Observation
 <p><dfn>A value used to set the initial state of a random number generator.</dfn></p>
 <p>Random seeds are used in random number generation. Each time you generate a random number, the number you get depends on the state of the underlying random number generator. If you set this state to a known value, you will get the same random numbers in the same order.</p>
 <p>Random seeds are used to make processes that involve random values reproducible. In R, you can set a random seed using the <code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> function. If you put <code><a href="https://rdrr.io/r/base/Random.html">set.seed()</a></code> at the start of your script, you will get the same output every time.</p>
-
+<details><summary>
+More...
+</summary><div class="sourceCode" id="cb229"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span> <span class="co"># Lisa's favourite seed</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] -0.9965824  0.7218241 -0.6172088</span></span></code></pre></div>
+<div class="sourceCode" id="cb230"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span> <span class="co"># a different seed</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] -0.6264538  0.1836433 -0.8356286</span></span></code></pre></div>
+<div class="sourceCode" id="cb231"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span> <span class="co"># the first seed again</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] -0.9965824  0.7218241 -0.6172088</span></span></code></pre></div>
+</details>
 </div>
 <div id="reactivity" class="section level2" number="19.6">
 <h2>
@@ -287,6 +305,7 @@ sd__Observation
 <span class="header-section-number">19.7</span> README<a class="anchor" aria-label="anchor" href="#readme"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A text file in the base directory of a project that describes the project.</dfn></p>
+<p>A README is a plain text file that contain information you want new users of the project to read first. This commonly contains one or more of the following: configuration or installation instructions, a list of files included with the project, a usage license, citation information, and author contact info.</p>
 
 </div>
 <div id="relative-path" class="section level2" number="19.8">
@@ -295,14 +314,14 @@ sd__Observation
 </h2>
 <p><dfn>The location of a file in relation to the working directory.</dfn></p>
 <p>For example, if your <a href="w.html#working-directory">working directory</a> is <code>/Users/me/study/</code> and you want to refer to a file at <code>/Users/me/study/data/faces.csv</code>, the relative path is <code>data/faces.csv</code>. Use <code>../</code> to move up one directory.</p>
-<div class="sourceCode" id="cb196"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># the working directory: /Users/me/study/</span>
-
-<span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span>
-<span class="va">qdat</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/faces.csv"</span><span class="op">)</span>
-
-<span class="co"># read a file outside the wd: /Users/me/other_study/data/exp.csv</span>
-<span class="va">xdat</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"../other_study/data/exp.csv"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb232"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># the working directory: /Users/me/study/</span></span>
+<span></span>
+<span><span class="co"># read a file inside the wd: /Users/me/study/data/faces.csv</span></span>
+<span><span class="va">qdat</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/faces.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># read a file outside the wd: /Users/me/other_study/data/exp.csv</span></span>
+<span><span class="va">xdat</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"../other_study/data/exp.csv"</span><span class="op">)</span></span></code></pre></div>
 <p>Make sure you always use relative paths in an <a href="r.html#r-markdown">R Markdown</a> document, which automatically sets the working directory to the directory that contains the .Rmd file.</p>
 <p>Contrast with <a href="a.html#absolute-path">absolute path</a>.</p>
 
@@ -348,26 +367,28 @@ sd__Observation
 <p><dfn>A reproducible example that is the smallest, completely self-contained example of your problem or question.</dfn></p>
 <p>For example, you may have a question about how to figure out how to select rows that contain the value "test" in a certain column, but it isn't working. It's clearer if you can provide a concrete example, but you don't want to have to type out the whole table you're using or all the code that got you to this point in your script.</p>
 <p>You can include a very small table with just the basics or a smaller version of your problem. Make comments at each step about what you expect and what you actually got.</p>
-<p>Which version is easier for you to figure out the solution?</p>
-<div class="sourceCode" id="cb197"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># this doesn't work</span>
-<span class="va">no_test_data</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect</a></span><span class="op">(</span><span class="va">type</span>, <span class="st">"test"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb198"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># with a minimal example table</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span>
-  <span class="op">~</span><span class="va">id</span>, <span class="op">~</span><span class="va">type</span>, <span class="op">~</span><span class="va">x</span>,
-  <span class="fl">1</span>, <span class="st">"test"</span>, <span class="fl">12</span>,
-  <span class="fl">2</span>, <span class="st">"testosterone"</span>, <span class="fl">15</span>,
-  <span class="fl">3</span>, <span class="st">"estrogen"</span>, <span class="fl">10</span>
-<span class="op">)</span>
-
-<span class="co"># this should keep IDs 2 and 3, but removes ID 2</span>
-<span class="va">no_test_data</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect</a></span><span class="op">(</span><span class="va">type</span>, <span class="st">"test"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<details><summary>
+More...
+</summary><p>Which version is easier for you to figure out the solution?</p>
+<div class="sourceCode" id="cb233"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># this doesn't work</span></span>
+<span><span class="va">no_test_data</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect</a></span><span class="op">(</span><span class="va">type</span>, <span class="st">"test"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb234"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># with a minimal example table</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span></span>
+<span>  <span class="op">~</span><span class="va">id</span>, <span class="op">~</span><span class="va">type</span>, <span class="op">~</span><span class="va">x</span>,</span>
+<span>  <span class="fl">1</span>, <span class="st">"test"</span>, <span class="fl">12</span>,</span>
+<span>  <span class="fl">2</span>, <span class="st">"testosterone"</span>, <span class="fl">15</span>,</span>
+<span>  <span class="fl">3</span>, <span class="st">"estrogen"</span>, <span class="fl">10</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># this should keep IDs 2 and 3, but removes ID 2</span></span>
+<span><span class="va">no_test_data</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect</a></span><span class="op">(</span><span class="va">type</span>, <span class="st">"test"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>One of the big benefits to creating a reprex is that you often solve your own problem while you're trying to break it down to explain to someone else.</p>
-<p>If you really want to go down the rabbit hole, you can create a reproducible example using the <a href="https://www.tidyverse.org/help/#reprex">reprex</a> package from tidyverse.</p>
-
+<p>If you really want to go down the rabbit hole, you can create a reproducible example using the <a href="https://www.tidyverse.org/help/#reprex" target="_blank">reprex</a> package from tidyverse.</p>
+</details>
 </div>
 <div id="reproducibility" class="section level2" number="19.13">
 <h2>
@@ -390,9 +411,218 @@ sd__Observation
 </h2>
 <p><dfn>Defined as the deviation of an observation from a model's expected value.</dfn></p>
 <p>Mathematically, the residual is defined as the observed value minus the model's <a href="f.html#fitted-value">fitted value</a> for that observation.</p>
-<p>For example, the linear model <span class="math inline">\(\hat{Y_i} = 3 + 2 X_i\)</span> predicts a value of <span class="math inline">\(\hat{Y}_i = 7\)</span> for <span class="math inline">\(X_i = 2\)</span>. If you happen to have observed <span class="math inline">\(Y_i = 8\)</span> for observation <span class="math inline">\(i\)</span>, then the residual for that observation would be <span class="math inline">\(Y_i - \hat{Y}_i = 8 - 7 = 1\)</span>.</p>
+<details><summary>
+More...
+</summary><p>For example, the linear model <span class="math inline">\(\hat{Y_i} = 3 + 2 X_i\)</span> predicts a value of <span class="math inline">\(\hat{Y}_i = 7\)</span> for <span class="math inline">\(X_i = 2\)</span>. If you happen to have observed <span class="math inline">\(Y_i = 8\)</span> for observation <span class="math inline">\(i\)</span>, then the residual for that observation would be <span class="math inline">\(Y_i - \hat{Y}_i = 8 - 7 = 1\)</span>.</p>
 <p>A related but slightly different notion is <a href="e.html#error">error</a>.</p>
-
+<p>For example, below we simulate data for two groups of 50 with means of 100 and 105 (and SDs of 10).</p>
+<div class="sourceCode" id="cb235"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span> <span class="co"># for reproducibility</span></span>
+<span></span>
+<span><span class="va">group0</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">50</span>, mean <span class="op">=</span> <span class="fl">100</span>, sd <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="va">group1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">50</span>, mean <span class="op">=</span> <span class="fl">105</span>, sd <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>  dv <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">group0</span>, <span class="va">group1</span><span class="op">)</span>,</span>
+<span>  group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">1</span>, each <span class="op">=</span> <span class="fl">50</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">dv</span> <span class="op">~</span> <span class="va">group</span>, data <span class="op">=</span> <span class="va">df</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Call:</span></span>
+<span><span class="co">#&gt; lm(formula = dv ~ group, data = df)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Residuals:</span></span>
+<span><span class="co">#&gt;      Min       1Q   Median       3Q      Max </span></span>
+<span><span class="co">#&gt; -25.9878  -7.1828  -0.1015   5.8804  20.1878 </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Coefficients:</span></span>
+<span><span class="co">#&gt;             Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
+<span><span class="co">#&gt; (Intercept)  101.027      1.319  76.609   &lt;2e-16 ***</span></span>
+<span><span class="co">#&gt; group          3.992      1.865   2.141   0.0348 *  </span></span>
+<span><span class="co">#&gt; ---</span></span>
+<span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Residual standard error: 9.325 on 98 degrees of freedom</span></span>
+<span><span class="co">#&gt; Multiple R-squared:  0.04467,    Adjusted R-squared:  0.03492 </span></span>
+<span><span class="co">#&gt; F-statistic: 4.582 on 1 and 98 DF,  p-value: 0.03478</span></span>
+<span></span>
+<span><span class="va">model</span><span class="op">$</span><span class="va">coefficients</span></span>
+<span><span class="co">#&gt; (Intercept)       group </span></span>
+<span><span class="co">#&gt;  101.026918    3.992219</span></span></code></pre></div>
+<p>The model above has an intercept of 101 and an effect of group of 4, meaning that the predicted value for group 0 is 101 and the predicted value for group 1 is 105. The difference between these predictions and the observed values is the <a href="r.html#residual">residual</a> error.</p>
+<div class="sourceCode" id="cb236"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">intercept</span> <span class="op">&lt;-</span> <span class="va">model</span><span class="op">$</span><span class="va">coefficients</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
+<span><span class="va">effect</span> <span class="op">&lt;-</span> <span class="va">model</span><span class="op">$</span><span class="va">coefficients</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span></span>
+<span></span>
+<span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>predicted <span class="op">=</span> <span class="va">intercept</span> <span class="op">+</span> <span class="va">effect</span> <span class="op">*</span> <span class="va">group</span>,</span>
+<span>         residual <span class="op">=</span> <span class="va">dv</span> <span class="op">-</span> <span class="va">predicted</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">group</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span> <span class="co"># show 5 from each group</span></span></code></pre></div>
+<div class="kable-table">
+<div class="inline-table"><table class="table table-sm">
+<thead><tr>
+<th style="text-align:right;">
+dv
+</th>
+<th style="text-align:right;">
+group
+</th>
+<th style="text-align:right;">
+predicted
+</th>
+<th style="text-align:right;">
+residual
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+90.03418
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+101.0269
+</td>
+<td style="text-align:right;">
+-10.992742
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+107.21824
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+101.0269
+</td>
+<td style="text-align:right;">
+6.191323
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+93.82791
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+101.0269
+</td>
+<td style="text-align:right;">
+-7.199007
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+120.29392
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+101.0269
+</td>
+<td style="text-align:right;">
+19.266997
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+110.65416
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+101.0269
+</td>
+<td style="text-align:right;">
+9.627242
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+106.34898
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+105.0191
+</td>
+<td style="text-align:right;">
+1.329843
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+106.17582
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+105.0191
+</td>
+<td style="text-align:right;">
+1.156684
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+96.74411
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+105.0191
+</td>
+<td style="text-align:right;">
+-8.275028
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+83.64764
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+105.0191
+</td>
+<td style="text-align:right;">
+-21.371500
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+107.14209
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+105.0191
+</td>
+<td style="text-align:right;">
+2.122948
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
 </div>
 <div id="response-variable" class="section level2" number="19.16">
 <h2>
@@ -413,17 +643,19 @@ sd__Observation
 Figure 19.1: Right Join
 </p>
 </div>
-<div class="sourceCode" id="cb199"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
-  id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
-  x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
-<span class="op">)</span>
-
-<span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
-  id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">6</span>,
-  y <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">22</span><span class="op">:</span><span class="fl">26</span><span class="op">]</span>
-<span class="op">)</span></code></pre></div>
-<div class="inline-table"><table class="table table-sm">
+<details><summary>
+More...
+</summary><div class="sourceCode" id="cb237"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,</span>
+<span>  x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">6</span>,</span>
+<span>  y <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">22</span><span class="op">:</span><span class="fl">26</span><span class="op">]</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<table class="table table-sm">
 <tr>
 <th>
 Table X
@@ -543,39 +775,55 @@ Z
 </table>
 </td>
 </tr>
-</table></div>
+</table>
 <p>If there is no matching data in the left table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb200"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># a is the right table</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
-<div class="inline-table"><table class="table table-sm">
+<div class="sourceCode" id="cb238"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># X is the right table</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">Y</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></span></code></pre></div>
+<table class="table table-sm">
 <thead><tr>
 <th style="text-align:right;">
 id
 </th>
 <th style="text-align:left;">
-x.x
+x
 </th>
 <th style="text-align:left;">
 y
-</th>
-<th style="text-align:left;">
-x.y
 </th>
 </tr></thead>
 <tbody>
 <tr>
 <td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+V
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+W
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
 4
 </td>
 <td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
 D
+</td>
+<td style="text-align:left;">
+X
 </td>
 </tr>
 <tr>
@@ -583,13 +831,10 @@ D
 5
 </td>
 <td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
 E
+</td>
+<td style="text-align:left;">
+Y
 </td>
 </tr>
 <tr>
@@ -600,79 +845,85 @@ E
 NA
 </td>
 <td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-F
+Z
 </td>
 </tr>
 </tbody>
-</table></div>
+</table>
 <p>Order is important for right joins.</p>
-<div class="sourceCode" id="cb201"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># b is the right table</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">b</span>, <span class="va">a</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
-<div class="inline-table"><table class="table table-sm">
+<div class="sourceCode" id="cb239"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Y is the right table</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">Y</span>, <span class="va">X</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></span></code></pre></div>
+<table class="table table-sm">
 <thead><tr>
-<th style="text-align:left;">
-x.x
-</th>
 <th style="text-align:right;">
 id
 </th>
 <th style="text-align:left;">
-x.y
+y
 </th>
 <th style="text-align:left;">
-y
+x
 </th>
 </tr></thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-A
-</td>
-<td style="text-align:left;">
-TRUE
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-NA
-</td>
 <td style="text-align:right;">
 2
 </td>
 <td style="text-align:left;">
-B
+V
 </td>
 <td style="text-align:left;">
-TRUE
+B
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-NA
-</td>
 <td style="text-align:right;">
 3
 </td>
 <td style="text-align:left;">
-C
+W
 </td>
 <td style="text-align:left;">
-FALSE
+C
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+X
+</td>
+<td style="text-align:left;">
+D
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+E
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+A
 </td>
 </tr>
 </tbody>
-</table></div>
-<p>See <a href="j.html#joins">joins</a> for other types of joins and further resources.</p>
+</table></details><p>See <a href="j.html#joins">joins</a> for other types of joins and further resources.</p>
 
 </div>
 <div id="rstudio" class="section level2" number="19.18">
@@ -923,7 +1174,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-27.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-08-08.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

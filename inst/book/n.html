@@ -7,7 +7,7 @@
 <title>15 N | Glossary </title>
 <meta name="author" content="psyTeachR Team">
 <meta name="description" content='15.1 NA A missing value that is "Not Available" You can use NA to represent missing values in a vector. Use the function is.na() to check if values are missing. values &lt;- c(1,4,NA,3,4)...'>
-<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta name="generator" content="bookdown 0.27 with bs4_book()">
 <meta property="og:title" content="15 N | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/n.html">
@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
@@ -101,44 +101,44 @@
 </h2>
 <p><dfn>A missing value that is "Not Available"</dfn></p>
 <p>You can use <code>NA</code> to represent missing values in a <a href="v.html#vector">vector</a>. Use the function <code><a href="https://rdrr.io/r/base/NA.html">is.na()</a></code> to check if values are missing.</p>
-<div class="sourceCode" id="cb154"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">4</span>,<span class="cn">NA</span>,<span class="fl">3</span>,<span class="fl">4</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">values</span><span class="op">)</span>
-<span class="co">#&gt; [1] FALSE FALSE  TRUE FALSE FALSE</span></code></pre></div>
+<div class="sourceCode" id="cb181"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">4</span>,<span class="cn">NA</span>,<span class="fl">3</span>,<span class="fl">4</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">values</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] FALSE FALSE  TRUE FALSE FALSE</span></span></code></pre></div>
 <p>If the results of a calculation like <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> or <code><a href="https://rdrr.io/r/stats/sd.html">sd()</a></code> is <code>NA</code>, this usually means that you have some missing values in your vector. You can remove <code>NA</code> values using <code>na.rm = TRUE</code> in many functions.</p>
-<div class="sourceCode" id="cb155"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">values</span><span class="op">)</span>
-<span class="co">#&gt; [1] NA</span>
-<span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">values</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="co">#&gt; [1] 3</span></code></pre></div>
+<div class="sourceCode" id="cb182"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">values</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] NA</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">values</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 3</span></span></code></pre></div>
 <p>Dealing with missing values when calculating correlations is a little trickier.</p>
-<div class="sourceCode" id="cb156"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span>
-  <span class="op">~</span><span class="va">x</span>, <span class="op">~</span><span class="va">y</span>, <span class="op">~</span><span class="va">z</span>,
-   <span class="fl">1</span>,  <span class="fl">3</span>, <span class="cn">NA</span>, <span class="co"># x-y included when p.c.o</span>
-   <span class="fl">2</span>,  <span class="fl">1</span>,  <span class="fl">4</span>, 
-   <span class="fl">3</span>,  <span class="fl">5</span>,  <span class="fl">3</span>,
-   <span class="fl">4</span>,  <span class="fl">1</span>,  <span class="fl">2</span>,
-  <span class="cn">NA</span>,  <span class="fl">5</span>,  <span class="fl">1</span>  <span class="co"># y-z included when p.c.o</span>
-<span class="op">)</span>
-
-
-<span class="co"># uses only rows 2:4 for all correlations</span>
-<span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">dat</span>, use <span class="op">=</span> <span class="st">"complete.obs"</span><span class="op">)</span>
-<span class="co">#&gt;    x y  z</span>
-<span class="co">#&gt; x  1 0 -1</span>
-<span class="co">#&gt; y  0 1  0</span>
-<span class="co">#&gt; z -1 0  1</span>
-
-<span class="co"># uses rows 1:4 for x-y, 2:5 for y-z, and 2:4 for x-z</span>
-<span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">dat</span>, use <span class="op">=</span> <span class="st">"pairwise.complete.obs"</span><span class="op">)</span>
-<span class="co">#&gt;          x          y          z</span>
-<span class="co">#&gt; x  1.00000 -0.1348400 -1.0000000</span>
-<span class="co">#&gt; y -0.13484  1.0000000 -0.4472136</span>
-<span class="co">#&gt; z -1.00000 -0.4472136  1.0000000</span></code></pre></div>
+<div class="sourceCode" id="cb183"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span></span>
+<span>  <span class="op">~</span><span class="va">x</span>, <span class="op">~</span><span class="va">y</span>, <span class="op">~</span><span class="va">z</span>,</span>
+<span>   <span class="fl">1</span>,  <span class="fl">3</span>, <span class="cn">NA</span>, <span class="co"># x-y included when p.c.o</span></span>
+<span>   <span class="fl">2</span>,  <span class="fl">1</span>,  <span class="fl">4</span>, </span>
+<span>   <span class="fl">3</span>,  <span class="fl">5</span>,  <span class="fl">3</span>,</span>
+<span>   <span class="fl">4</span>,  <span class="fl">1</span>,  <span class="fl">2</span>,</span>
+<span>  <span class="cn">NA</span>,  <span class="fl">5</span>,  <span class="fl">1</span>  <span class="co"># y-z included when p.c.o</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># uses only rows 2:4 for all correlations</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">dat</span>, use <span class="op">=</span> <span class="st">"complete.obs"</span><span class="op">)</span></span>
+<span><span class="co">#&gt;    x y  z</span></span>
+<span><span class="co">#&gt; x  1 0 -1</span></span>
+<span><span class="co">#&gt; y  0 1  0</span></span>
+<span><span class="co">#&gt; z -1 0  1</span></span>
+<span></span>
+<span><span class="co"># uses rows 1:4 for x-y, 2:5 for y-z, and 2:4 for x-z</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">dat</span>, use <span class="op">=</span> <span class="st">"pairwise.complete.obs"</span><span class="op">)</span></span>
+<span><span class="co">#&gt;          x          y          z</span></span>
+<span><span class="co">#&gt; x  1.00000 -0.1348400 -1.0000000</span></span>
+<span><span class="co">#&gt; y -0.13484  1.0000000 -0.4472136</span></span>
+<span><span class="co">#&gt; z -1.00000 -0.4472136  1.0000000</span></span></code></pre></div>
 <p>You can filter a table down to only rows with no NA values using <code><a href="https://rdrr.io/r/stats/na.fail.html">na.omit()</a></code>.</p>
-<div class="sourceCode" id="cb157"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">complete_dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html">na.omit</a></span><span class="op">(</span><span class="va">dat</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb184"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">complete_dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html">na.omit</a></span><span class="op">(</span><span class="va">dat</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr>
 <th style="text-align:right;">
@@ -188,30 +188,44 @@ z
 </tbody>
 </table></div>
 </div>
-<div id="nhst" class="section level2" number="15.2">
+<div id="nan" class="section level2" number="15.2">
 <h2>
-<span class="header-section-number">15.2</span> NHST<a class="anchor" aria-label="anchor" href="#nhst"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.2</span> NaN<a class="anchor" aria-label="anchor" href="#nan"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>An impossible number that is "Not a number"</dfn></p>
+<p>In <code>R</code> impossible numbers are represented with the symbol <code>NaN</code>. Use the function <code><a href="https://rdrr.io/r/base/is.finite.html">is.nan()</a></code> to check if values are impossible numbers.</p>
+<div class="sourceCode" id="cb185"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">value</span> <span class="op">&lt;-</span> <span class="fl">0</span><span class="op">/</span><span class="fl">0</span></span>
+<span><span class="va">value</span></span>
+<span><span class="co">#&gt; [1] NaN</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/is.finite.html">is.nan</a></span><span class="op">(</span><span class="va">value</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+
+</div>
+<div id="nhst" class="section level2" number="15.3">
+<h2>
+<span class="header-section-number">15.3</span> NHST<a class="anchor" aria-label="anchor" href="#nhst"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Null Hypothesis Signficance Testing</dfn></p>
 
 </div>
-<div id="nominal" class="section level2" number="15.3">
+<div id="nominal" class="section level2" number="15.4">
 <h2>
-<span class="header-section-number">15.3</span> nominal<a class="anchor" aria-label="anchor" href="#nominal"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.4</span> nominal<a class="anchor" aria-label="anchor" href="#nominal"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn><a href="c.html#categorical">Categorical</a> variables that don't have an inherent order, such as types of animal.</dfn></p>
 
 </div>
-<div id="normal-distribution" class="section level2" number="15.4">
+<div id="normal-distribution" class="section level2" number="15.5">
 <h2>
-<span class="header-section-number">15.4</span> normal distribution<a class="anchor" aria-label="anchor" href="#normal-distribution"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.5</span> normal distribution<a class="anchor" aria-label="anchor" href="#normal-distribution"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A symmetric distribution of data where values near the centre are most probable.</dfn></p>
 <p>A normal distribution is characterised by its <a href="m.html#mean">mean</a> and <a href="s.html#standard-deviation">standard deviation</a>. You can sample numbers from a simulated normal distribution with the function <code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code>.</p>
-<div class="sourceCode" id="cb158"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># sample 1 million numbers from a normal distribution with </span>
-<span class="co"># a mean of 0 and a standard deviation of 1</span>
-<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">1000000</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb186"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># sample 1 million numbers from a normal distribution with </span></span>
+<span><span class="co"># a mean of 0 and a standard deviation of 1</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">1000000</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:normal-plot"></span>
 <img src="_main_files/figure-html/normal-plot-1.png" alt="Normal Distribution" width="100%"><p class="caption">
@@ -219,69 +233,77 @@ Figure 15.1: Normal Distribution
 </p>
 </div>
 <p>About 68% of the values are within 1 SD of the mean.</p>
-<div class="sourceCode" id="cb159"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># proportion between -1 and 1</span>
-<span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span> <span class="op">&gt;</span> <span class="op">-</span><span class="fl">1</span> <span class="op">&amp;</span> <span class="va">x</span> <span class="op">&lt;</span> <span class="fl">1</span><span class="op">)</span>
-<span class="co">#&gt; [1] 0.682617</span></code></pre></div>
+<div class="sourceCode" id="cb187"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># proportion between -1 and 1</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span> <span class="op">&gt;</span> <span class="op">-</span><span class="fl">1</span> <span class="op">&amp;</span> <span class="va">x</span> <span class="op">&lt;</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 0.682617</span></span></code></pre></div>
 <p>About 95% of the values are within 2 SDs of the mean.</p>
-<div class="sourceCode" id="cb160"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># proportion between -2 and 2</span>
-<span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span> <span class="op">&gt;</span> <span class="op">-</span><span class="fl">2</span> <span class="op">&amp;</span> <span class="va">x</span> <span class="op">&lt;</span> <span class="fl">2</span><span class="op">)</span>
-<span class="co">#&gt; [1] 0.954465</span></code></pre></div>
+<div class="sourceCode" id="cb188"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># proportion between -2 and 2</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span> <span class="op">&gt;</span> <span class="op">-</span><span class="fl">2</span> <span class="op">&amp;</span> <span class="va">x</span> <span class="op">&lt;</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 0.954465</span></span></code></pre></div>
 
 </div>
-<div id="null-effect" class="section level2" number="15.5">
+<div id="null-effect" class="section level2" number="15.6">
 <h2>
-<span class="header-section-number">15.5</span> null effect<a class="anchor" aria-label="anchor" href="#null-effect"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.6</span> null effect<a class="anchor" aria-label="anchor" href="#null-effect"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>An outcome that does not show an otherwise expected effect.</dfn></p>
 <p>A null effect could be a difference of 0 between two groups, or a chance value, such as 50% in a two-alternative forced choice task.</p>
 
 </div>
-<div id="numeric" class="section level2" number="15.6">
+<div id="null-hypothesis" class="section level2" number="15.7">
 <h2>
-<span class="header-section-number">15.6</span> numeric<a class="anchor" aria-label="anchor" href="#numeric"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.7</span> null hypothesis<a class="anchor" aria-label="anchor" href="#null-hypothesis"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>The hypothesis that an observed difference between groups or from a specific value is due to chance alone.</dfn></p>
+<p>The null hypothesis is also commonly referred to as <a href="h.html#h0">H0</a>. This is contrasted with <a href="h.html#h1">H1</a>, the <a href="a.html#alternate-hypothesis">alternate hypothesis</a> in a null hypothesis significance testing (<a href="n.html#nhst">NHST</a>) framework.</p>
+
+</div>
+<div id="numeric" class="section level2" number="15.8">
+<h2>
+<span class="header-section-number">15.8</span> numeric<a class="anchor" aria-label="anchor" href="#numeric"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing a real decimal number or integer.</dfn></p>
 <p>The <a href="i.html#integer">integer</a> and <a href="d.html#double">double</a> data types are numeric.</p>
 <p>You can check if a variable is numeric using the function <code>is.numeric</code> and you can convert a variable to its numeric representation using the function <code>as.numeric</code>.</p>
-<div class="sourceCode" id="cb161"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">is.numeric</a></span><span class="op">(</span><span class="fl">2.4</span><span class="op">)</span>
-<span class="co">#&gt; [1] TRUE</span></code></pre></div>
-<div class="sourceCode" id="cb162"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">is.numeric</a></span><span class="op">(</span><span class="fl">2L</span><span class="op">)</span>
-<span class="co">#&gt; [1] TRUE</span></code></pre></div>
-<div class="sourceCode" id="cb163"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># complex numbers are not numeric </span>
-<span class="fu"><a href="https://rdrr.io/r/base/numeric.html">is.numeric</a></span><span class="op">(</span><span class="fl">2i</span><span class="op">)</span>
-<span class="co">#&gt; [1] FALSE</span></code></pre></div>
-<div class="sourceCode" id="cb164"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">is.numeric</a></span><span class="op">(</span><span class="st">"A"</span><span class="op">)</span>
-<span class="co">#&gt; [1] FALSE</span></code></pre></div>
-<div class="sourceCode" id="cb165"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># numbers represented as strings are not numeric</span>
-<span class="fu"><a href="https://rdrr.io/r/base/numeric.html">is.numeric</a></span><span class="op">(</span><span class="st">"3"</span><span class="op">)</span>
-<span class="co">#&gt; [1] FALSE</span></code></pre></div>
-<div class="sourceCode" id="cb166"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fl">2.4</span><span class="op">)</span>
-<span class="co">#&gt; [1] 2.4</span></code></pre></div>
-<div class="sourceCode" id="cb167"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fl">2L</span><span class="op">)</span>
-<span class="co">#&gt; [1] 2</span></code></pre></div>
-<div class="sourceCode" id="cb168"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># the imaginary part of complex numbers is discarded when converting to numeric</span>
-<span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fl">3</span><span class="op">+</span><span class="fl">2i</span><span class="op">)</span>
-<span class="co">#&gt; Warning: imaginary parts discarded in coercion</span>
-<span class="co">#&gt; [1] 3</span></code></pre></div>
-<div class="sourceCode" id="cb169"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># strings that do not represent numbers are converted to NA</span>
-<span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="st">"A"</span><span class="op">)</span>
-<span class="co">#&gt; Warning: NAs introduced by coercion</span>
-<span class="co">#&gt; [1] NA</span></code></pre></div>
-<div class="sourceCode" id="cb170"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># numbers represented as strings can be convertd to their numeric version</span>
-<span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="st">"3"</span><span class="op">)</span>
-<span class="co">#&gt; [1] 3</span></code></pre></div>
+<div class="sourceCode" id="cb189"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">is.numeric</a></span><span class="op">(</span><span class="fl">2.4</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<div class="sourceCode" id="cb190"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">is.numeric</a></span><span class="op">(</span><span class="fl">2L</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<div class="sourceCode" id="cb191"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># complex numbers are not numeric </span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">is.numeric</a></span><span class="op">(</span><span class="fl">2i</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb192"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">is.numeric</a></span><span class="op">(</span><span class="st">"A"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb193"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># numbers represented as strings are not numeric</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">is.numeric</a></span><span class="op">(</span><span class="st">"3"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb194"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fl">2.4</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 2.4</span></span></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fl">2L</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 2</span></span></code></pre></div>
+<div class="sourceCode" id="cb196"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># the imaginary part of complex numbers is discarded when converting to numeric</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fl">3</span><span class="op">+</span><span class="fl">2i</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: imaginary parts discarded in coercion</span></span>
+<span><span class="co">#&gt; [1] 3</span></span></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># strings that do not represent numbers are converted to NA</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="st">"A"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: NAs introduced by coercion</span></span>
+<span><span class="co">#&gt; [1] NA</span></span></code></pre></div>
+<div class="sourceCode" id="cb198"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># numbers represented as strings can be convertd to their numeric version</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="st">"3"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 3</span></span></code></pre></div>
 
 </div>
 </div>
@@ -490,11 +512,13 @@ $( document ).ready(function() {
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#n"><span class="header-section-number">15</span> N</a></li>
 <li><a class="nav-link" href="#na"><span class="header-section-number">15.1</span> NA</a></li>
-<li><a class="nav-link" href="#nhst"><span class="header-section-number">15.2</span> NHST</a></li>
-<li><a class="nav-link" href="#nominal"><span class="header-section-number">15.3</span> nominal</a></li>
-<li><a class="nav-link" href="#normal-distribution"><span class="header-section-number">15.4</span> normal distribution</a></li>
-<li><a class="nav-link" href="#null-effect"><span class="header-section-number">15.5</span> null effect</a></li>
-<li><a class="nav-link" href="#numeric"><span class="header-section-number">15.6</span> numeric</a></li>
+<li><a class="nav-link" href="#nan"><span class="header-section-number">15.2</span> NaN</a></li>
+<li><a class="nav-link" href="#nhst"><span class="header-section-number">15.3</span> NHST</a></li>
+<li><a class="nav-link" href="#nominal"><span class="header-section-number">15.4</span> nominal</a></li>
+<li><a class="nav-link" href="#normal-distribution"><span class="header-section-number">15.5</span> normal distribution</a></li>
+<li><a class="nav-link" href="#null-effect"><span class="header-section-number">15.6</span> null effect</a></li>
+<li><a class="nav-link" href="#null-hypothesis"><span class="header-section-number">15.7</span> null hypothesis</a></li>
+<li><a class="nav-link" href="#numeric"><span class="header-section-number">15.8</span> numeric</a></li>
 </ul>
 
       <div class="book-extra">
@@ -512,7 +536,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-27.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-08-08.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

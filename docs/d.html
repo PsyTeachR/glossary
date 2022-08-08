@@ -7,7 +7,7 @@
 <title>5 D | Glossary </title>
 <meta name="author" content="psyTeachR Team">
 <meta name="description" content='5.1 data frame A container data type for storing tabular data. data.frame(  id = 1:5,  name = c("Lisa", "Phil", "Helena", "Rachel", "Jack") )  id  name  1  Lisa  2  Phil  3  Helena  4  Rachel  5 ...'>
-<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta name="generator" content="bookdown 0.27 with bs4_book()">
 <meta property="og:title" content="5 D | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/d.html">
@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
@@ -100,11 +100,11 @@
 <span class="header-section-number">5.1</span> data frame<a class="anchor" aria-label="anchor" href="#data-frame"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> data type for storing <a href="t.html#tabular-data">tabular data</a>.</dfn></p>
-<div class="sourceCode" id="cb92"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
-  id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
-  name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Lisa"</span>, <span class="st">"Phil"</span>, <span class="st">"Helena"</span>, <span class="st">"Rachel"</span>, <span class="st">"Jack"</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,</span>
+<span>  name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Lisa"</span>, <span class="st">"Phil"</span>, <span class="st">"Helena"</span>, <span class="st">"Rachel"</span>, <span class="st">"Jack"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr>
@@ -181,21 +181,21 @@ Jack
 <details><summary>
 More...
 </summary><p>If you want to know what data type a variable is, use the function <code>typeof</code>.</p>
-<div class="sourceCode" id="cb93"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span>
-<span class="co">#&gt; [1] "double"</span></code></pre></div>
-<div class="sourceCode" id="cb94"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="st">"10"</span><span class="op">)</span>
-<span class="co">#&gt; [1] "character"</span></code></pre></div>
-<div class="sourceCode" id="cb95"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10L</span><span class="op">)</span>
-<span class="co">#&gt; [1] "integer"</span></code></pre></div>
-<div class="sourceCode" id="cb96"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10</span> <span class="op">==</span> <span class="fl">10</span><span class="op">)</span>
-<span class="co">#&gt; [1] "logical"</span></code></pre></div>
 <div class="sourceCode" id="cb97"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10i</span><span class="op">)</span>
-<span class="co">#&gt; [1] "complex"</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "double"</span></span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="st">"10"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "character"</span></span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10L</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "integer"</span></span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10</span> <span class="op">==</span> <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "logical"</span></span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="fl">10i</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "complex"</span></span></code></pre></div>
 </details>
 </div>
 <div id="data-wrangling" class="section level2" number="5.3">
@@ -212,42 +212,42 @@ More...
 <div class="translation" lang="en">
 <p><dfn>A value that a <a href="f.html#function">function</a> uses for an <a href="a.html#argument">argument</a> if it is skipped.</dfn></p>
 <p>For example, <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> has a default value of <code>FALSE</code> for the argument <code>na.rm</code> (don't ignore NA values).</p>
-<div class="sourceCode" id="cb98"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="cn">NA</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
-<span class="co">#&gt; [1] NA</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="cn">NA</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] NA</span></span></code></pre></div>
 <p>So if you leave that argument out, it's the same as setting it to <code>FALSE</code>.</p>
-<div class="sourceCode" id="cb99"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
-<span class="co">#&gt; [1] NA</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] NA</span></span></code></pre></div>
 <p>And you have to explicitly set it if you want it to be different.</p>
-<div class="sourceCode" id="cb100"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="co">#&gt; [1] 2</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 2</span></span></code></pre></div>
 <p>If an argument does not have a default value, you can't omit it. In the example below, there is no default value for <code>n</code>.</p>
-<div class="sourceCode" id="cb101"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; Error in rnorm(): argument "n" is missing, with no default</span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Error in rnorm(): argument "n" is missing, with no default</span></span></code></pre></div>
 </div>
 <div class="translation" lang="zh-Hant">
 <p><dfn>TRANSLATED TERM:預設值 任何R<a href="f.html#function">函式</a>事先設定的<a href="a.html#argument">參數</a>數值，編寫程式碼未設定即取用的數值。</dfn></p>
 <p>請測試以下程式碼：<br><code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> 的其中一項參數<code>na.rm</code>，預設值是 <code>FALSE</code>(表示計算不忽略NA)。</p>
-<div class="sourceCode" id="cb102"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="cn">NA</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
-<span class="co">#&gt; [1] NA</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="cn">NA</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] NA</span></span></code></pre></div>
 <p>即使寫出參數及預設值，計算結果也是一樣。</p>
-<div class="sourceCode" id="cb103"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
-<span class="co">#&gt; [1] NA</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] NA</span></span></code></pre></div>
 <p>更改參數數值，才會得到不同的結果。</p>
-<div class="sourceCode" id="cb104"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="co">#&gt; [1] 2</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 2</span></span></code></pre></div>
 <p>如果參數未指定預設值，通常必須手動指定數值。以下例子直接執行會有錯誤，因為參數<code>n</code>沒有預設值。</p>
-<div class="sourceCode" id="cb105"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; Error in rnorm(): argument "n" is missing, with no default</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Error in rnorm(): argument "n" is missing, with no default</span></span></code></pre></div>
 </div>
 
 </div>
@@ -260,8 +260,8 @@ More...
 <p>If you run 5 people and ask them their age, and you know the mean age of those 5 people is 20.1, then four of those people can have any age, but the 5th person must have a specific age to maintain the mean of 20.1. The mean age here is the known outcome and four people's age can vary freely, so the <em>degrees of freedom</em> is 4.</p>
 <p>You need to know the degrees of freedom (usually abbreviated <em>df</em>) to interpret test statistics like t-values and F-values.</p>
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-143"></span>
-<img src="_main_files/figure-html/unnamed-chunk-143-1.png" alt="How p-values vary depending on the degrees of freedom for specific t-values in a t-test." width="75%"><p class="caption">
+<span style="display:block;" id="fig:unnamed-chunk-200"></span>
+<img src="_main_files/figure-html/unnamed-chunk-200-1.png" alt="How p-values vary depending on the degrees of freedom for specific t-values in a t-test." width="75%"><p class="caption">
 Figure 5.1: How p-values vary depending on the degrees of freedom for specific t-values in a t-test.
 </p>
 </div>
@@ -271,8 +271,8 @@ Figure 5.1: How p-values vary depending on the degrees of freedom for specific t
 <p>假設你想知道五位同班同學今年幾歲，而你事先知道五人平均20.1歲。樣本平均值是已知的估計值，你只能推測其中一位的真實年齡是20.1歲，但是其他四位回答的年齡可以是任何數值。這個例子的樣本有4個觀察值可自由變異，所以<strong>自由度</strong>是4。</p>
 <p>當你進行統計檢定如t檢定和F檢定，必須要知道正確的自由度(簡寫 <em>df</em>)。</p>
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-144"></span>
-<img src="_main_files/figure-html/unnamed-chunk-144-1.png" alt="How p-values vary depending on the degrees of freedom for specific t-values in a t-test." width="75%"><p class="caption">
+<span style="display:block;" id="fig:unnamed-chunk-201"></span>
+<img src="_main_files/figure-html/unnamed-chunk-201-1.png" alt="How p-values vary depending on the degrees of freedom for specific t-values in a t-test." width="75%"><p class="caption">
 Figure 5.2: How p-values vary depending on the degrees of freedom for specific t-values in a t-test.
 </p>
 </div>
@@ -307,12 +307,12 @@ Figure 5.2: How p-values vary depending on the degrees of freedom for specific t
 <span class="header-section-number">5.8</span> deviation score<a class="anchor" aria-label="anchor" href="#deviation-score"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A score minus the mean</dfn></p>
-<div class="sourceCode" id="cb106"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
-  score <span class="op">=</span> <span class="fl">8</span><span class="op">:</span><span class="fl">12</span>
-<span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">score</span><span class="op">)</span>,
-         deviation_score <span class="op">=</span> <span class="va">score</span> <span class="op">-</span> <span class="va">mean</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<span>  score <span class="op">=</span> <span class="fl">8</span><span class="op">:</span><span class="fl">12</span></span>
+<span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">score</span><span class="op">)</span>,</span>
+<span>         deviation_score <span class="op">=</span> <span class="va">score</span> <span class="op">-</span> <span class="va">mean</span><span class="op">)</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr>
@@ -397,22 +397,22 @@ deviation_score
 <details><summary>
 More...
 </summary><p>The code below arranges the numbers 1 to 12 in data structures with 1, 2 or 3 dimensions and shows how to <a href="e.html#extract-operator">extract</a> the value 3 from each.</p>
-<div class="sourceCode" id="cb107"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># 1-dimensional vector</span>
-<span class="va">v</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">12</span>
-<span class="va">v</span>
-<span class="co">#&gt;  [1]  1  2  3  4  5  6  7  8  9 10 11 12</span>
-<span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span>
-<span class="co">#&gt; [1] 12</span>
-<span class="va">v</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span> <span class="co"># index</span>
-<span class="co">#&gt; [1] 3</span></code></pre></div>
-<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># 2-dimensional data frame</span>
-<span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
-  a <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">6</span>,
-  b <span class="op">=</span> <span class="fl">7</span><span class="op">:</span><span class="fl">12</span>
-<span class="op">)</span>
-<span class="va">df</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 1-dimensional vector</span></span>
+<span><span class="va">v</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">12</span></span>
+<span><span class="va">v</span></span>
+<span><span class="co">#&gt;  [1]  1  2  3  4  5  6  7  8  9 10 11 12</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 12</span></span>
+<span><span class="va">v</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span> <span class="co"># index</span></span>
+<span><span class="co">#&gt; [1] 3</span></span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 2-dimensional data frame</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>  a <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">6</span>,</span>
+<span>  b <span class="op">=</span> <span class="fl">7</span><span class="op">:</span><span class="fl">12</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">df</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr>
@@ -475,41 +475,41 @@ b
 </tbody>
 </table></div>
 </div>
-<div class="sourceCode" id="cb109"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span>
-<span class="co">#&gt; [1] 6 2</span>
-<span class="va">df</span><span class="op">[</span><span class="fl">3</span>, <span class="fl">1</span><span class="op">]</span> <span class="co"># row, column</span>
-<span class="co">#&gt; [1] 3</span></code></pre></div>
-<div class="sourceCode" id="cb110"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># 2-dimensional matrix</span>
-<span class="va">m</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span>, nrow <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>
-<span class="va">m</span>
-<span class="co">#&gt;      [,1] [,2] [,3] [,4] [,5] [,6]</span>
-<span class="co">#&gt; [1,]    1    3    5    7    9   11</span>
-<span class="co">#&gt; [2,]    2    4    6    8   10   12</span>
-<span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">m</span><span class="op">)</span>
-<span class="co">#&gt; [1] 2 6</span>
-<span class="va">m</span><span class="op">[</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">]</span> <span class="co"># row, column</span>
-<span class="co">#&gt; [1] 3</span></code></pre></div>
-<div class="sourceCode" id="cb111"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># 3-dimensional array</span>
-<span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span>
-<span class="va">a</span>
-<span class="co">#&gt; , , 1</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;      [,1] [,2] [,3]</span>
-<span class="co">#&gt; [1,]    1    3    5</span>
-<span class="co">#&gt; [2,]    2    4    6</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; , , 2</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;      [,1] [,2] [,3]</span>
-<span class="co">#&gt; [1,]    7    9   11</span>
-<span class="co">#&gt; [2,]    8   10   12</span>
-<span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">a</span><span class="op">)</span>
-<span class="co">#&gt; [1] 2 3 2</span>
-<span class="va">a</span><span class="op">[</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">]</span> <span class="co"># row, column, D3</span>
-<span class="co">#&gt; [1] 3</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 6 2</span></span>
+<span><span class="va">df</span><span class="op">[</span><span class="fl">3</span>, <span class="fl">1</span><span class="op">]</span> <span class="co"># row, column</span></span>
+<span><span class="co">#&gt; [1] 3</span></span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 2-dimensional matrix</span></span>
+<span><span class="va">m</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span>, nrow <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="va">m</span></span>
+<span><span class="co">#&gt;      [,1] [,2] [,3] [,4] [,5] [,6]</span></span>
+<span><span class="co">#&gt; [1,]    1    3    5    7    9   11</span></span>
+<span><span class="co">#&gt; [2,]    2    4    6    8   10   12</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">m</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 2 6</span></span>
+<span><span class="va">m</span><span class="op">[</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">]</span> <span class="co"># row, column</span></span>
+<span><span class="co">#&gt; [1] 3</span></span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 3-dimensional array</span></span>
+<span><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">a</span></span>
+<span><span class="co">#&gt; , , 1</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;      [,1] [,2] [,3]</span></span>
+<span><span class="co">#&gt; [1,]    1    3    5</span></span>
+<span><span class="co">#&gt; [2,]    2    4    6</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; , , 2</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;      [,1] [,2] [,3]</span></span>
+<span><span class="co">#&gt; [1,]    7    9   11</span></span>
+<span><span class="co">#&gt; [2,]    8   10   12</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">a</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 2 3 2</span></span>
+<span><span class="va">a</span><span class="op">[</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">]</span> <span class="co"># row, column, D3</span></span>
+<span><span class="co">#&gt; [1] 3</span></span></code></pre></div>
 </details>
 </div>
 <div id="directory" class="section level2" number="5.10">
@@ -519,12 +519,12 @@ b
 <p><dfn>A collection or "folder" of files on a computer.</dfn></p>
 <p>In a file <a href="p.html#path">path</a>, each directory is separated by forward slashes, e.g., "dir1/dir2/file.Rmd".</p>
 <p>Sometimes you need to check if a directory exists and/or make a new directory. For example, a script may save images in a directory called "images" that is in the same directory as the script (so you can use the <a href="r.html#relative-path">relative path</a>). Below is code for checking whether that directory exists and making it if it doesn't.</p>
-<div class="sourceCode" id="cb112"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">path</span> <span class="op">&lt;-</span> <span class="st">"images"</span>
-
-<span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.exists</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span>
-<span class="op">}</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">path</span> <span class="op">&lt;-</span> <span class="st">"images"</span></span>
+<span></span>
+<span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.exists</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
 
 </div>
 <div id="discrete" class="section level2" number="5.11">
@@ -552,15 +552,15 @@ b
 <span class="header-section-number">5.13</span> double brackets<a class="anchor" aria-label="anchor" href="#double-brackets"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Two pairs of square brackets used to select a single item from a <a href="c.html#container">container</a> like a <a href="l.html#list">list</a>, <a href="d.html#data-frame">data frame</a>, or <a href="m.html#matrix">matrix</a> (e.g., data[[1]]).</dfn></p>
-<div class="sourceCode" id="cb113"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
-  id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,
-  x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1.4</span>, <span class="fl">2.3</span>, <span class="fl">8.2</span><span class="op">)</span>
-<span class="op">)</span>
-
-<span class="co"># double brackets return the id column as a vector</span>
-<span class="va">data</span><span class="op">[[</span><span class="st">"id"</span><span class="op">]</span><span class="op">]</span> 
-<span class="co">#&gt; [1] 1 2 3</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,</span>
+<span>  x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1.4</span>, <span class="fl">2.3</span>, <span class="fl">8.2</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># double brackets return the id column as a vector</span></span>
+<span><span class="va">data</span><span class="op">[[</span><span class="st">"id"</span><span class="op">]</span><span class="op">]</span> </span>
+<span><span class="co">#&gt; [1] 1 2 3</span></span></code></pre></div>
 <p>See <a href="b.html#brackets">brackets</a> for an explanation of the difference between <a href="s.html#single-brackets">single</a> and double brackets.</p>
 
 </div>
@@ -578,9 +578,9 @@ b
 </h2>
 <p><dfn>Something that can change in response to user actions</dfn></p>
 <p>For example, in a <a href="s.html#shiny">shiny</a> app, the following code creates dynamic and <a href="s.html#static">static</a> elements.</p>
-<div class="sourceCode" id="cb114"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">dynamic</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/textOutput.html">textOutput</a></span><span class="op">(</span><span class="st">"This text can change"</span><span class="op">)</span>
-<span class="va">static</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">p</a></span><span class="op">(</span><span class="st">"This text cannot change"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">dynamic</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/textOutput.html">textOutput</a></span><span class="op">(</span><span class="st">"This text can change"</span><span class="op">)</span></span>
+<span><span class="va">static</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">p</a></span><span class="op">(</span><span class="st">"This text cannot change"</span><span class="op">)</span></span></code></pre></div>
 
 </div>
 </div>
@@ -820,7 +820,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-07-09.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-08-08.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

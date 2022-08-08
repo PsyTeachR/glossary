@@ -7,7 +7,7 @@
 <title>10 I | Glossary </title>
 <meta name="author" content="psyTeachR Team">
 <meta name="description" content="10.1 IDE Integrated Development Environment: a program that serves as a text editor, file manager, and provides functions to help you read and write code. RStudio is an IDE for R.   10.2 %in% The...">
-<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta name="generator" content="bookdown 0.27 with bs4_book()">
 <meta property="og:title" content="10 I | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/i.html">
@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
@@ -132,19 +132,19 @@
 </h2>
 <p><dfn>A value representing infinity</dfn></p>
 <p>In <code>R</code> infinity is represented with the symbol <code>Inf</code>. Use the function <code><a href="https://rdrr.io/r/base/is.finite.html">is.infinite()</a></code> to check if values are infinite.</p>
-<div class="sourceCode" id="cb137"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">value</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">/</span><span class="fl">0</span>
-<span class="va">value</span>
-<span class="co">#&gt; [1] Inf</span>
-<span class="fu"><a href="https://rdrr.io/r/base/is.finite.html">is.infinite</a></span><span class="op">(</span><span class="fl">1</span><span class="op">/</span><span class="fl">0</span><span class="op">)</span>
-<span class="co">#&gt; [1] TRUE</span></code></pre></div>
-<div class="sourceCode" id="cb138"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># negative infinity</span>
-<span class="va">value</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fl">1</span><span class="op">/</span><span class="fl">0</span>
-<span class="va">value</span>
-<span class="co">#&gt; [1] -Inf</span>
-<span class="fu"><a href="https://rdrr.io/r/base/is.finite.html">is.infinite</a></span><span class="op">(</span><span class="fl">1</span><span class="op">/</span><span class="fl">0</span><span class="op">)</span>
-<span class="co">#&gt; [1] TRUE</span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">value</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">/</span><span class="fl">0</span></span>
+<span><span class="va">value</span></span>
+<span><span class="co">#&gt; [1] Inf</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/is.finite.html">is.infinite</a></span><span class="op">(</span><span class="fl">1</span><span class="op">/</span><span class="fl">0</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<div class="sourceCode" id="cb148"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># negative infinity</span></span>
+<span><span class="va">value</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fl">1</span><span class="op">/</span><span class="fl">0</span></span>
+<span><span class="va">value</span></span>
+<span><span class="co">#&gt; [1] -Inf</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/is.finite.html">is.infinite</a></span><span class="op">(</span><span class="fl">1</span><span class="op">/</span><span class="fl">0</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 
 </div>
 <div id="inferential" class="section level2" number="10.6">
@@ -168,16 +168,16 @@ Figure 10.1: Inner Join
 </div>
 <details><summary>
 More...
-</summary><div class="sourceCode" id="cb139"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
-  id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
-  x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
-<span class="op">)</span>
-
-<span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
-  id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">6</span>,
-  y <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">22</span><span class="op">:</span><span class="fl">26</span><span class="op">]</span>
-<span class="op">)</span></code></pre></div>
+</summary><div class="sourceCode" id="cb149"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,</span>
+<span>  x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">6</span>,</span>
+<span>  y <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">22</span><span class="op">:</span><span class="fl">26</span><span class="op">]</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <table class="table table-sm">
 <tr>
 <th>
@@ -299,9 +299,9 @@ Z
 </td>
 </tr>
 </table>
-<div class="sourceCode" id="cb140"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># X columns come first</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">Y</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># X columns come first</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">Y</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></span></code></pre></div>
 <table class="table table-sm">
 <thead><tr>
 <th style="text-align:right;">
@@ -362,9 +362,9 @@ Y
 </tbody>
 </table>
 <p>Order is not important for inner joins, but does change the order of columns in the resulting table.</p>
-<div class="sourceCode" id="cb141"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Y columns come first</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op">(</span><span class="va">Y</span>, <span class="va">X</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Y columns come first</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op">(</span><span class="va">Y</span>, <span class="va">X</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></span></code></pre></div>
 <table class="table table-sm">
 <thead><tr>
 <th style="text-align:right;">
@@ -443,34 +443,34 @@ E
 <details><summary>
 More...
 </summary><p>For example, the code below shows data sampled from two distributions with means of 100 and 105. Two different <a href="c.html#coding-scheme">contrast coding schemes</a> are used to code the <code>group</code> variable: treatment and sum.</p>
-<div class="sourceCode" id="cb142"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span> <span class="co"># for reproducibility</span>
-
-<span class="va">control</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">50</span>, mean <span class="op">=</span> <span class="fl">100</span>, sd <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>
-<span class="va">experimental</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">50</span>, mean <span class="op">=</span> <span class="fl">105</span>, sd <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>
-
-<span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
-  dv <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">control</span>, <span class="va">experimental</span><span class="op">)</span>,
-  group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"control"</span>, <span class="st">"experimental"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">50</span><span class="op">)</span>,
-  treatment <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/recode.html">recode</a></span><span class="op">(</span><span class="va">group</span>, control <span class="op">=</span> <span class="fl">0</span>, experimental <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>,
-  sum <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/recode.html">recode</a></span><span class="op">(</span><span class="va">group</span>, control <span class="op">=</span> <span class="op">-</span><span class="fl">1</span>, experimental <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span> <span class="co"># for reproducibility</span></span>
+<span></span>
+<span><span class="va">control</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">50</span>, mean <span class="op">=</span> <span class="fl">100</span>, sd <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="va">experimental</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">50</span>, mean <span class="op">=</span> <span class="fl">105</span>, sd <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<span>  dv <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">control</span>, <span class="va">experimental</span><span class="op">)</span>,</span>
+<span>  group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"control"</span>, <span class="st">"experimental"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">50</span><span class="op">)</span>,</span>
+<span>  treatment <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/recode.html">recode</a></span><span class="op">(</span><span class="va">group</span>, control <span class="op">=</span> <span class="fl">0</span>, experimental <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>,</span>
+<span>  sum <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/recode.html">recode</a></span><span class="op">(</span><span class="va">group</span>, control <span class="op">=</span> <span class="op">-</span><span class="fl">1</span>, experimental <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p><a href="t.html#treatment-code">Treatment coding</a> codes the baseline group as 0, so the intercept is equal to the predicted mean value for this group.</p>
-<div class="sourceCode" id="cb143"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">model_t</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">dv</span> <span class="op">~</span> <span class="va">treatment</span>, data <span class="op">=</span> <span class="va">df</span><span class="op">)</span>
-
-<span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model_t</span><span class="op">)</span><span class="op">$</span><span class="va">coefficients</span>
-<span class="co">#&gt;               Estimate Std. Error   t value     Pr(&gt;|t|)</span>
-<span class="co">#&gt; (Intercept) 101.026918   1.318732 76.609163 2.930242e-89</span>
-<span class="co">#&gt; treatment     3.992219   1.864968  2.140637 3.478461e-02</span></code></pre></div>
+<div class="sourceCode" id="cb153"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">model_t</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">dv</span> <span class="op">~</span> <span class="va">treatment</span>, data <span class="op">=</span> <span class="va">df</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model_t</span><span class="op">)</span><span class="op">$</span><span class="va">coefficients</span></span>
+<span><span class="co">#&gt;               Estimate Std. Error   t value     Pr(&gt;|t|)</span></span>
+<span><span class="co">#&gt; (Intercept) 101.026918   1.318732 76.609163 2.930242e-89</span></span>
+<span><span class="co">#&gt; treatment     3.992219   1.864968  2.140637 3.478461e-02</span></span></code></pre></div>
 <p>For two groups, <a href="s.html#sum-code">sum coding</a> codes one group as -1 and the other as +1, so the intercept is equal to the mean of the predicted mean values for each group.</p>
-<div class="sourceCode" id="cb144"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">model_s</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">dv</span> <span class="op">~</span> <span class="va">sum</span>, data <span class="op">=</span> <span class="va">df</span><span class="op">)</span>
-
-<span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model_s</span><span class="op">)</span><span class="op">$</span><span class="va">coefficients</span>
-<span class="co">#&gt;               Estimate Std. Error    t value      Pr(&gt;|t|)</span>
-<span class="co">#&gt; (Intercept) 103.023028   0.932484 110.482354 1.159104e-104</span>
-<span class="co">#&gt; sum           1.996109   0.932484   2.140637  3.478461e-02</span></code></pre></div>
+<div class="sourceCode" id="cb154"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">model_s</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">dv</span> <span class="op">~</span> <span class="va">sum</span>, data <span class="op">=</span> <span class="va">df</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model_s</span><span class="op">)</span><span class="op">$</span><span class="va">coefficients</span></span>
+<span><span class="co">#&gt;               Estimate Std. Error    t value      Pr(&gt;|t|)</span></span>
+<span><span class="co">#&gt; (Intercept) 103.023028   0.932484 110.482354 1.159104e-104</span></span>
+<span><span class="co">#&gt; sum           1.996109   0.932484   2.140637  3.478461e-02</span></span></code></pre></div>
 </details>
 </div>
 <div id="iteration" class="section level2" number="10.10">
@@ -480,43 +480,43 @@ More...
 <p><dfn>Repeating a process or function</dfn></p>
 <p>Repeating a process or function is useful when we want to perform the same operation on each element in a list or vector.</p>
 <p>For example, you may want to check the power of a two-sample t-test to detect an effect size of 0.2 for all of the possible sample sizes between 100 and 1000, incrementing by 100. You can "iterate" over the values of n to get the power for each n.</p>
-<div class="sourceCode" id="cb145"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">n_range</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">1000</span>, <span class="fl">100</span><span class="op">)</span>
-<span class="va">power</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># make an empty vector</span>
-
-<span class="kw">for</span> <span class="op">(</span><span class="va">n</span> <span class="kw">in</span> <span class="va">n_range</span><span class="op">)</span> <span class="op">{</span>
-  <span class="va">pcalc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/power.t.test.html">power.t.test</a></span><span class="op">(</span>n <span class="op">=</span> <span class="va">n</span>, delta <span class="op">=</span> <span class="fl">0.2</span>, sd <span class="op">=</span> <span class="fl">1</span>, 
-                      type <span class="op">=</span> <span class="st">"two.sample"</span><span class="op">)</span>
-  <span class="va">power</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">power</span>, <span class="va">pcalc</span><span class="op">$</span><span class="va">power</span><span class="op">)</span>
-<span class="op">}</span>
-
-<span class="va">power</span>
-<span class="co">#&gt;  [1] 0.2902664 0.5140434 0.6863712 0.8064964 0.8847884 0.9333687</span>
-<span class="co">#&gt;  [7] 0.9623901 0.9792066 0.9887083 0.9939638</span></code></pre></div>
+<div class="sourceCode" id="cb155"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">n_range</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">1000</span>, <span class="fl">100</span><span class="op">)</span></span>
+<span><span class="va">power</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># make an empty vector</span></span>
+<span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">n</span> <span class="kw">in</span> <span class="va">n_range</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">pcalc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/power.t.test.html">power.t.test</a></span><span class="op">(</span>n <span class="op">=</span> <span class="va">n</span>, delta <span class="op">=</span> <span class="fl">0.2</span>, sd <span class="op">=</span> <span class="fl">1</span>, </span>
+<span>                      type <span class="op">=</span> <span class="st">"two.sample"</span><span class="op">)</span></span>
+<span>  <span class="va">power</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">power</span>, <span class="va">pcalc</span><span class="op">$</span><span class="va">power</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">power</span></span>
+<span><span class="co">#&gt;  [1] 0.2902664 0.5140434 0.6863712 0.8064964 0.8847884 0.9333687 0.9623901 0.9792066</span></span>
+<span><span class="co">#&gt;  [9] 0.9887083 0.9939638</span></span></code></pre></div>
 <p>Many functions are "vectorized" such that they return a vector of results if you use a vector for an argument. The function itself takes care of the iteration for you.</p>
-<div class="sourceCode" id="cb146"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">pcalc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/power.t.test.html">power.t.test</a></span><span class="op">(</span>n <span class="op">=</span> <span class="va">n_range</span>, 
-                      delta <span class="op">=</span> <span class="fl">0.2</span>, sd <span class="op">=</span> <span class="fl">1</span>, 
-                      type <span class="op">=</span> <span class="st">"two.sample"</span><span class="op">)</span>
-<span class="va">power</span> <span class="op">&lt;-</span>  <span class="va">pcalc</span><span class="op">$</span><span class="va">power</span>
-<span class="va">power</span>
-<span class="co">#&gt;  [1] 0.2902664 0.5140434 0.6863712 0.8064964 0.8847884 0.9333687</span>
-<span class="co">#&gt;  [7] 0.9623901 0.9792066 0.9887083 0.9939638</span></code></pre></div>
+<div class="sourceCode" id="cb156"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">pcalc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/power.t.test.html">power.t.test</a></span><span class="op">(</span>n <span class="op">=</span> <span class="va">n_range</span>, </span>
+<span>                      delta <span class="op">=</span> <span class="fl">0.2</span>, sd <span class="op">=</span> <span class="fl">1</span>, </span>
+<span>                      type <span class="op">=</span> <span class="st">"two.sample"</span><span class="op">)</span></span>
+<span><span class="va">power</span> <span class="op">&lt;-</span>  <span class="va">pcalc</span><span class="op">$</span><span class="va">power</span></span>
+<span><span class="va">power</span></span>
+<span><span class="co">#&gt;  [1] 0.2902664 0.5140434 0.6863712 0.8064964 0.8847884 0.9333687 0.9623901 0.9792066</span></span>
+<span><span class="co">#&gt;  [9] 0.9887083 0.9939638</span></span></code></pre></div>
 <p>You can also use <code><a href="https://rdrr.io/r/base/apply.html">apply()</a></code> or <code><a href="https://purrr.tidyverse.org/reference/map.html">map()</a></code> functions to apply a single function to each element of a vector or list.</p>
-<div class="sourceCode" id="cb147"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># apply power.t.test to each n and return a list of lists</span>
-<span class="va">pcalc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span>.x <span class="op">=</span> <span class="va">n_range</span>, <span class="co"># vector to iterate over</span>
-             .f <span class="op">=</span> <span class="va">power.t.test</span>, <span class="co"># function to apply</span>
-             <span class="co"># other arguments to the function</span>
-             delta <span class="op">=</span> <span class="fl">0.2</span>, sd <span class="op">=</span> <span class="fl">1</span>, 
-             type<span class="op">=</span><span class="st">"two.sample"</span><span class="op">)</span>
-
-<span class="co"># extract the "power" element from each element in pcalc</span>
-<span class="co"># and return a vector of doubles</span>
-<span class="va">power</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dbl</a></span><span class="op">(</span><span class="va">pcalc</span>, <span class="va">getElement</span>, <span class="st">"power"</span><span class="op">)</span>
-<span class="va">power</span>
-<span class="co">#&gt;  [1] 0.2902664 0.5140434 0.6863712 0.8064964 0.8847884 0.9333687</span>
-<span class="co">#&gt;  [7] 0.9623901 0.9792066 0.9887083 0.9939638</span></code></pre></div>
+<div class="sourceCode" id="cb157"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># apply power.t.test to each n and return a list of lists</span></span>
+<span><span class="va">pcalc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span>.x <span class="op">=</span> <span class="va">n_range</span>, <span class="co"># vector to iterate over</span></span>
+<span>             .f <span class="op">=</span> <span class="va">power.t.test</span>, <span class="co"># function to apply</span></span>
+<span>             <span class="co"># other arguments to the function</span></span>
+<span>             delta <span class="op">=</span> <span class="fl">0.2</span>, sd <span class="op">=</span> <span class="fl">1</span>, </span>
+<span>             type<span class="op">=</span><span class="st">"two.sample"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># extract the "power" element from each element in pcalc</span></span>
+<span><span class="co"># and return a vector of doubles</span></span>
+<span><span class="va">power</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dbl</a></span><span class="op">(</span><span class="va">pcalc</span>, <span class="va">getElement</span>, <span class="st">"power"</span><span class="op">)</span></span>
+<span><span class="va">power</span></span>
+<span><span class="co">#&gt;  [1] 0.2902664 0.5140434 0.6863712 0.8064964 0.8847884 0.9333687 0.9623901 0.9792066</span></span>
+<span><span class="co">#&gt;  [9] 0.9887083 0.9939638</span></span></code></pre></div>
 
 </div>
 </div>
@@ -751,7 +751,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-07-09.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-08-08.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

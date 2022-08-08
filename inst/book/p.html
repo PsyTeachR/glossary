@@ -7,7 +7,7 @@
 <title>17 P | Glossary </title>
 <meta name="author" content="psyTeachR Team">
 <meta name="description" content="17.1 p-value The probability of seeing an effect at least as extreme as what you have, if the real effect was the value you are testing against (e.g., a null effect) For example, if you used a...">
-<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta name="generator" content="bookdown 0.27 with bs4_book()">
 <meta property="og:title" content="17 P | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/p.html">
@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
@@ -101,57 +101,54 @@
 </h2>
 <p><dfn>The probability of seeing an effect at least as extreme as what you have, if the real effect was the value you are testing against (e.g., a null effect)</dfn></p>
 <p>For example, if you used a binomial test to test against a chance probability of 1/2 (e.g., the probability of heads when flipping a fair coin), then a p-value of 0.37 means that you could expect to see effects at least as extreme as your data (i.e., 55 or more heads <strong>or</strong> tails) 37% of the time just by chance alone.</p>
-<div class="sourceCode" id="cb173"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># test how likely 55 heads (or a more extreme value)</span>
-<span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span>
-<span class="fu"><a href="https://rdrr.io/r/stats/binom.test.html">binom.test</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">100</span>, <span class="fl">0.5</span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;  Exact binomial test</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; data:  55 and 100</span>
-<span class="co">#&gt; number of successes = 55, number of trials = 100, p-value =</span>
-<span class="co">#&gt; 0.3682</span>
-<span class="co">#&gt; alternative hypothesis: true probability of success is not equal to 0.5</span>
-<span class="co">#&gt; 95 percent confidence interval:</span>
-<span class="co">#&gt;  0.4472802 0.6496798</span>
-<span class="co">#&gt; sample estimates:</span>
-<span class="co">#&gt; probability of success </span>
-<span class="co">#&gt;                   0.55</span></code></pre></div>
+<div class="sourceCode" id="cb201"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># test how likely 55 heads (or a more extreme value)</span></span>
+<span><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/binom.test.html">binom.test</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">100</span>, <span class="fl">0.5</span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;  Exact binomial test</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; data:  55 and 100</span></span>
+<span><span class="co">#&gt; number of successes = 55, number of trials = 100, p-value = 0.3682</span></span>
+<span><span class="co">#&gt; alternative hypothesis: true probability of success is not equal to 0.5</span></span>
+<span><span class="co">#&gt; 95 percent confidence interval:</span></span>
+<span><span class="co">#&gt;  0.4472802 0.6496798</span></span>
+<span><span class="co">#&gt; sample estimates:</span></span>
+<span><span class="co">#&gt; probability of success </span></span>
+<span><span class="co">#&gt;                   0.55</span></span></code></pre></div>
 <p>P-values can be one-tailed or two-tailed. The example above if two-tailed because we didn't specify a direction and are testing whether there were more <strong>or</strong> fewer heads than expected by chance with a fair coin. The example below is one-tailed, and indicates that you have an 18% chance of getting 55 <strong>or more</strong> heads when flipping a fair coin 100 times.</p>
-<div class="sourceCode" id="cb174"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># test how likely 55 (or more) heads</span>
-<span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span>
-<span class="fu"><a href="https://rdrr.io/r/stats/binom.test.html">binom.test</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">100</span>, <span class="fl">0.5</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;  Exact binomial test</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; data:  55 and 100</span>
-<span class="co">#&gt; number of successes = 55, number of trials = 100, p-value =</span>
-<span class="co">#&gt; 0.1841</span>
-<span class="co">#&gt; alternative hypothesis: true probability of success is greater than 0.5</span>
-<span class="co">#&gt; 95 percent confidence interval:</span>
-<span class="co">#&gt;  0.4628896 1.0000000</span>
-<span class="co">#&gt; sample estimates:</span>
-<span class="co">#&gt; probability of success </span>
-<span class="co">#&gt;                   0.55</span></code></pre></div>
+<div class="sourceCode" id="cb202"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># test how likely 55 (or more) heads</span></span>
+<span><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/binom.test.html">binom.test</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">100</span>, <span class="fl">0.5</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;  Exact binomial test</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; data:  55 and 100</span></span>
+<span><span class="co">#&gt; number of successes = 55, number of trials = 100, p-value = 0.1841</span></span>
+<span><span class="co">#&gt; alternative hypothesis: true probability of success is greater than 0.5</span></span>
+<span><span class="co">#&gt; 95 percent confidence interval:</span></span>
+<span><span class="co">#&gt;  0.4628896 1.0000000</span></span>
+<span><span class="co">#&gt; sample estimates:</span></span>
+<span><span class="co">#&gt; probability of success </span></span>
+<span><span class="co">#&gt;                   0.55</span></span></code></pre></div>
 <p>You can see that the p-value is half of the two-tailed value; this is true for symmetric distributions like the <a href="b.html#binomial-distribution">binomial distribution</a>, but not for all distributions.</p>
 <p>If you do a one-tailed test using "less", the p-value is much higher, indicating that you have an 86% chance of getting 55 <strong>or fewer</strong> heads when flipping a fair coin 100 times.</p>
-<div class="sourceCode" id="cb175"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># test how likely 55 (or fewer) heads</span>
-<span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span>
-<span class="fu"><a href="https://rdrr.io/r/stats/binom.test.html">binom.test</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">100</span>, <span class="fl">0.5</span>, alternative <span class="op">=</span> <span class="st">"less"</span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;  Exact binomial test</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; data:  55 and 100</span>
-<span class="co">#&gt; number of successes = 55, number of trials = 100, p-value =</span>
-<span class="co">#&gt; 0.8644</span>
-<span class="co">#&gt; alternative hypothesis: true probability of success is less than 0.5</span>
-<span class="co">#&gt; 95 percent confidence interval:</span>
-<span class="co">#&gt;  0.0000000 0.6348377</span>
-<span class="co">#&gt; sample estimates:</span>
-<span class="co">#&gt; probability of success </span>
-<span class="co">#&gt;                   0.55</span></code></pre></div>
+<div class="sourceCode" id="cb203"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># test how likely 55 (or fewer) heads</span></span>
+<span><span class="co"># is to result from 100 flips of a fair (prob = 0.5) coin</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/binom.test.html">binom.test</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">100</span>, <span class="fl">0.5</span>, alternative <span class="op">=</span> <span class="st">"less"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;  Exact binomial test</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; data:  55 and 100</span></span>
+<span><span class="co">#&gt; number of successes = 55, number of trials = 100, p-value = 0.8644</span></span>
+<span><span class="co">#&gt; alternative hypothesis: true probability of success is less than 0.5</span></span>
+<span><span class="co">#&gt; 95 percent confidence interval:</span></span>
+<span><span class="co">#&gt;  0.0000000 0.6348377</span></span>
+<span><span class="co">#&gt; sample estimates:</span></span>
+<span><span class="co">#&gt; probability of success </span></span>
+<span><span class="co">#&gt;                   0.55</span></span></code></pre></div>
 
 </div>
 <div id="package" class="section level2" number="17.2">
@@ -195,82 +192,234 @@ Figure 17.1: Pane layout
 <p>Often parameters describe a population <a href="d.html#distribution">distribution</a>, such as its <a href="m.html#mean">mean</a> or <a href="s.html#standard-deviation">SD</a>. They are typically unknown, and therefore must be estimated from the data.</p>
 
 </div>
-<div id="path" class="section level2" number="17.6">
+<div id="partial-effects" class="section level2" number="17.6">
 <h2>
-<span class="header-section-number">17.6</span> path<a class="anchor" aria-label="anchor" href="#path"><i class="fas fa-link"></i></a>
+<span class="header-section-number">17.6</span> partial effects<a class="anchor" aria-label="anchor" href="#partial-effects"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>The difference in the <a href="r.html#response-variable">response variable</a> for a given change in one <a href="p.html#predictor-variable">predictor variable</a>, with all other <a href="c.html#covariate">covariates</a> held constant.</dfn></p>
+<p>Also called <a href="m.html#marginal-effects">marginal effects</a> (see this entry for more details).</p>
+
+</div>
+<div id="partial-eta-squared" class="section level2" number="17.7">
+<h2>
+<span class="header-section-number">17.7</span> partial eta squared<a class="anchor" aria-label="anchor" href="#partial-eta-squared"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>A measure of effect size commonly used in <a href="a.html#anova">ANOVAs</a></dfn></p>
+<p>It measures the proportion of <a href="v.html#variance">variance</a> explained by a specific <a href="i.html#independent-variable">independent variable</a> after accounting for variance explained by other variables in the model. It can range from 0 (explains no variance) to 1 (explains 100% of the variance).</p>
+<p>The formula for partial eta squared is:</p>
+<p><span class="math inline">\(\eta_p^2 = SS_{effect} / (SS_{effect} + SS_{error})\)</span></p>
+<ul>
+<li>
+<span class="math inline">\(SS_{effect}\)</span>: The sum of squares of for the target effect</li>
+<li>
+<span class="math inline">\(SS_{error}\)</span>: The sum of squares error in the ANOVA</li>
+</ul>
+<details><summary>
+More...
+</summary><p>In the example below, we'll simulate data with significant main effects and an interaction.</p>
+<div class="sourceCode" id="cb204"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># simulate some factorial data</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span></span>
+<span><span class="va">simdat</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/sim_design.html">sim_design</a></span><span class="op">(</span></span>
+<span>  n <span class="op">=</span> <span class="fl">100</span>,</span>
+<span>  within <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"pre"</span>, <span class="st">"post"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  between <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>treatment <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"control"</span>, <span class="st">"experimental"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  mu <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">105</span>, <span class="fl">100</span>, <span class="fl">110</span><span class="op">)</span>,</span>
+<span>  sd <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>  r <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>  id <span class="op">=</span> <span class="st">"ID"</span>,</span>
+<span>  dv <span class="op">=</span> <span class="st">"DV"</span>,</span>
+<span>  long <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-374"></span>
+<img src="_main_files/figure-html/unnamed-chunk-374-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%"><p class="caption">
+Figure 17.2: <strong>CAPTION THIS FIGURE!!</strong>
+</p>
+</div>
+<p>The afex package defaults to generalised eta squared, so you have to set the reported effect size to "pes" to get partial eta squared.</p>
+<div class="sourceCode" id="cb205"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># analysis with ANOVA</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://afex.singmann.science/">afex</a></span><span class="op">)</span> <span class="co"># a useful package for anova</span></span>
+<span></span>
+<span><span class="co"># set effect size measure to partial eta squared</span></span>
+<span><span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/afex/man/afex_options.html">afex_options</a></span><span class="op">(</span>es_aov <span class="op">=</span> <span class="st">"pes"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">anova</span> <span class="op">&lt;-</span> <span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/afex/man/aov_car.html">aov_ez</a></span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="st">"ID"</span>,</span>
+<span>  dv <span class="op">=</span> <span class="st">"DV"</span>,</span>
+<span>  between <span class="op">=</span> <span class="st">"treatment"</span>,</span>
+<span>  within <span class="op">=</span> <span class="st">"time"</span>,</span>
+<span>  data <span class="op">=</span> <span class="va">simdat</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; Contrasts set to contr.sum for the following variables: treatment</span></span>
+<span></span>
+<span><span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/afex/man/nice.html">nice</a></span><span class="op">(</span><span class="va">anova</span><span class="op">)</span></span></code></pre></div>
+<div class="kable-table">
+<div class="inline-table"><table class="table table-sm">
+<thead><tr>
+<th style="text-align:left;">
+Effect
+</th>
+<th style="text-align:left;">
+df
+</th>
+<th style="text-align:left;">
+MSE
+</th>
+<th style="text-align:left;">
+F
+</th>
+<th style="text-align:left;">
+pes
+</th>
+<th style="text-align:left;">
+p.value
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+treatment
+</td>
+<td style="text-align:left;">
+1, 198
+</td>
+<td style="text-align:left;">
+170.45
+</td>
+<td style="text-align:left;">
+4.63 *
+</td>
+<td style="text-align:left;">
+.023
+</td>
+<td style="text-align:left;">
+.033
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+time
+</td>
+<td style="text-align:left;">
+1, 198
+</td>
+<td style="text-align:left;">
+56.71
+</td>
+<td style="text-align:left;">
+109.59 ***
+</td>
+<td style="text-align:left;">
+.356
+</td>
+<td style="text-align:left;">
+&lt;.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+treatment:time
+</td>
+<td style="text-align:left;">
+1, 198
+</td>
+<td style="text-align:left;">
+56.71
+</td>
+<td style="text-align:left;">
+11.85 ***
+</td>
+<td style="text-align:left;">
+.056
+</td>
+<td style="text-align:left;">
+&lt;.001
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+</div>
+<div id="path" class="section level2" number="17.8">
+<h2>
+<span class="header-section-number">17.8</span> path<a class="anchor" aria-label="anchor" href="#path"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A string representing the location of a file or <a href="d.html#directory">directory</a>.</dfn></p>
 <p>A file path can be <a href="r.html#relative-path">relative</a> to the <a href="w.html#working-directory">working directory</a> or <a href="a.html#absolute-path">absolute</a>.</p>
-<div class="sourceCode" id="cb176"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># list all files in the images directory, </span>
-<span class="co"># use relative path</span>
-<span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"images/"</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb177"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># list all files on the Desktop, </span>
-<span class="co"># use absolute path</span>
-<span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"/Users/myaccount/Desktop/"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb206"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># list all files in the images directory, </span></span>
+<span><span class="co"># use relative path</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"images/"</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb207"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># list all files on the Desktop, </span></span>
+<span><span class="co"># use absolute path</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"/Users/myaccount/Desktop/"</span><span class="op">)</span></span></code></pre></div>
 
 </div>
-<div id="pipe" class="section level2" number="17.7">
+<div id="pipe" class="section level2" number="17.9">
 <h2>
-<span class="header-section-number">17.7</span> pipe<a class="anchor" aria-label="anchor" href="#pipe"><i class="fas fa-link"></i></a>
+<span class="header-section-number">17.9</span> pipe<a class="anchor" aria-label="anchor" href="#pipe"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A way to order your code in a more readable format using the symbol %&gt;%</dfn></p>
 <p>The symbol <code>%&gt;%</code> takes the <a href="o.html#object">object</a> created by a function and sends it to the next function. By default, it will be used as the first <a href="a.html#argument">argument</a>, and most <a href="t.html#tidyverse">tidyverse</a> functions are optimised for this, but you can also include the result as another argument using <code>.</code> (see the example below).</p>
 <p>Instead of making a new object for each step:</p>
-<div class="sourceCode" id="cb178"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># this makes 4 unnecessary objects</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span>         <span class="co"># simulate 20 values</span>
-<span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>         <span class="co"># 1-sample t-test</span>
-<span class="va">p</span> <span class="op">&lt;-</span> <span class="va">t</span><span class="op">$</span><span class="va">p.value</span>            <span class="co"># extract p-value</span>
-<span class="va">rounded_p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">p</span>, <span class="fl">3</span><span class="op">)</span>  <span class="co"># round to 3 digits</span>
-<span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"p = "</span>, <span class="va">rounded_p</span><span class="op">)</span>  <span class="co"># format</span>
-<span class="co">#&gt; [1] "p =  0.363"</span></code></pre></div>
+<div class="sourceCode" id="cb208"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># this makes 4 unnecessary objects</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span>         <span class="co"># simulate 20 values</span></span>
+<span><span class="va">t</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>         <span class="co"># 1-sample t-test</span></span>
+<span><span class="va">p</span> <span class="op">&lt;-</span> <span class="va">t</span><span class="op">$</span><span class="va">p.value</span>            <span class="co"># extract p-value</span></span>
+<span><span class="va">rounded_p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">p</span>, <span class="fl">3</span><span class="op">)</span>  <span class="co"># round to 3 digits</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"p = "</span>, <span class="va">rounded_p</span><span class="op">)</span>  <span class="co"># format</span></span>
+<span><span class="co">#&gt; [1] "p =  0.363"</span></span></code></pre></div>
 <p>Or nesting functions:</p>
-<div class="sourceCode" id="cb179"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># this is unreadable; never do this</span>
-<span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"p = "</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span><span class="op">)</span><span class="op">$</span><span class="va">p.value</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span>
-<span class="co">#&gt; [1] "p =  0.363"</span></code></pre></div>
+<div class="sourceCode" id="cb209"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># this is unreadable; never do this</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"p = "</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span><span class="op">)</span><span class="op">$</span><span class="va">p.value</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "p =  0.363"</span></span></code></pre></div>
 <p>You can pipe the results of each function to the next function:</p>
-<div class="sourceCode" id="cb180"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>         <span class="co"># simulate 20 values</span>
-  <span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>        <span class="co"># 1-sample t-test</span>
-  <span class="fu">`[[`</span><span class="op">(</span><span class="st">"p.value"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="co"># extract p-value, `[[`(data, "x") is the same as data[["x"]]</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>        <span class="co"># round to 3 digits</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"p = "</span>, <span class="va">.</span><span class="op">)</span>    <span class="co"># format </span>
-<span class="co">#&gt; [1] "p =  0.363"</span>
-                      <span class="co"># use . to represent the previous data if it's not the first argument</span></code></pre></div>
+<div class="sourceCode" id="cb210"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>         <span class="co"># simulate 20 values</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>        <span class="co"># 1-sample t-test</span></span>
+<span>  <span class="fu">`[[`</span><span class="op">(</span><span class="st">"p.value"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="co"># extract p-value, `[[`(data, "x") is the same as data[["x"]]</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>        <span class="co"># round to 3 digits</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"p = "</span>, <span class="va">.</span><span class="op">)</span>    <span class="co"># format </span></span>
+<span><span class="co">#&gt; [1] "p =  0.363"</span></span>
+<span>                      <span class="co"># use . to represent the previous data if it's not the first argument</span></span></code></pre></div>
 <p>See a more <a href="https://debruine.github.io/posts/pipes/" target="_blank">detailed example</a>.</p>
 <p>The <a href="symbols.html">symbol</a> <code>|</code> is also called a "pipe" and means "OR" in R, although it has other meanings that are more similar to the <code>%&gt;%</code> pipe in some other programming languages.</p>
 
 </div>
-<div id="poisson-distribution" class="section level2" number="17.8">
+<div id="poisson-distribution" class="section level2" number="17.10">
 <h2>
-<span class="header-section-number">17.8</span> Poisson distribution<a class="anchor" aria-label="anchor" href="#poisson-distribution"><i class="fas fa-link"></i></a>
+<span class="header-section-number">17.10</span> Poisson distribution<a class="anchor" aria-label="anchor" href="#poisson-distribution"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="d.html#distribution">distribution</a> that models independent events happening over a unit of time</dfn></p>
-<div class="sourceCode" id="cb181"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">lambda</span> <span class="op">&lt;-</span> <span class="fl">3</span> <span class="co"># mean number of events</span>
-<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">rpois</a></span><span class="op">(</span><span class="fl">10000</span>, <span class="va">lambda</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">lambda</span> <span class="op">&lt;-</span> <span class="fl">3</span> <span class="co"># mean number of events</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">rpois</a></span><span class="op">(</span><span class="fl">10000</span>, <span class="va">lambda</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:poisson-plot"></span>
 <img src="_main_files/figure-html/poisson-plot-1.png" alt="Poisson Distribution" width="100%"><p class="caption">
-Figure 17.2: Poisson Distribution
+Figure 17.3: Poisson Distribution
 </p>
 </div>
 
 </div>
-<div id="population-parameter" class="section level2" number="17.9">
+<div id="population-parameter" class="section level2" number="17.11">
 <h2>
-<span class="header-section-number">17.9</span> population parameter<a class="anchor" aria-label="anchor" href="#population-parameter"><i class="fas fa-link"></i></a>
+<span class="header-section-number">17.11</span> population parameter<a class="anchor" aria-label="anchor" href="#population-parameter"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A quantity representing a property of a population of interest.</dfn></p>
 <p>In a psychology context, parameters are constants that are assumed to reflect a typical values for some property appearing in some human group to which we want to generalized. For instance, it may reflect an overall reaction time or an overall priming effect, with individual subjects varying from this fixed value. Population parameters are typically unobserved and usually unobservable due to sampling error and measurement error, and are estimated from the values in the sample. The exception is in data simulation, where hypothetical population parameters can be fixed by the researcher.</p>
 
 </div>
-<div id="population" class="section level2" number="17.10">
+<div id="population" class="section level2" number="17.12">
 <h2>
-<span class="header-section-number">17.10</span> population<a class="anchor" aria-label="anchor" href="#population"><i class="fas fa-link"></i></a>
+<span class="header-section-number">17.12</span> population<a class="anchor" aria-label="anchor" href="#population"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>All members of a group that we wish to generalise our findings to. E.g. all students taking Psychology at the University of Glasgow. We draw our testing <a href="s.html#sample">sample</a> from the population.</dfn>.</p>
 <p>The population of interest can be any group and it is important that you define this in your study when considering the generalisability of your tests and how you will conduct your sampling. If you want to generalise to everyone in the world then that is the population you should sample from. If you want to generalise to everyone taking Psychology at the University of Glasgow then those are the people you should specifically sample from.</p>
@@ -280,59 +429,85 @@ Figure 17.2: Poisson Distribution
 <li><a href="https://journals.sagepub.com/doi/10.1177/1745691617708630" target="_blank">Simons, D. J., Shoda, Y., &amp; Lindsay, D. S. (2017). Constraints on Generality (COG): A Proposed Addition to All Empirical Papers. Perspectives on Psychological Science, 12(6), 1123–1128. https://doi.org/10.1177/1745691617708630</a></li>
 </ul>
 </div>
-<div id="power" class="section level2" number="17.11">
+<div id="power" class="section level2" number="17.13">
 <h2>
-<span class="header-section-number">17.11</span> power<a class="anchor" aria-label="anchor" href="#power"><i class="fas fa-link"></i></a>
+<span class="header-section-number">17.13</span> power<a class="anchor" aria-label="anchor" href="#power"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The probability of rejecting the null hypothesis when it is false.</dfn></p>
-<p>Formally, the probability of rejecting the null hypothesis, when the null hypothesis is false. Informally, the likelihood of successfully detecting an effect that is actually there (<a href="https://doi.org/10.1016/j.apergo.2004.01.002">Baguley, 2004</a>). In its simplest application, there is a relationship between alpha, power, effect size, and sample size. This means we can calculate power if we know alpha, the effect size, and the sample size. This would tell us - in the long run - how many times would I observe a significant effect for a given alpha, effect size, and sample size?</p>
-
+<p>Formally, the probability of rejecting the <a href="n.html#null-hypothesis">null hypothesis</a>, when the null hypothesis is false. Informally, the likelihood of successfully detecting an effect that is actually there (<a href="https://doi.org/10.1016/j.apergo.2004.01.002">Baguley, 2004</a>). In its simplest application, there is a relationship between <a href="a.html#alpha-stats">alpha</a>, power, <a href="e.html#effect-size">effect size</a>, and sample size. This means we can calculate power if we know alpha, the effect size, and the sample size. This would tell us -- in the long run -- how many times would I observe a significant effect for a given alpha, effect size, and sample size?</p>
+<details><summary>
+More...
+</summary><p>For example, you can simulate a 2-sample study 100 times, where the true mean for group A is 100 and the true mean for group B is 105, and the SD for each group is 10.</p>
+<div class="sourceCode" id="cb212"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span> <span class="co"># for reproducible simulations</span></span>
+<span></span>
+<span><span class="va">sim_data</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/sim_design.html">sim_design</a></span><span class="op">(</span></span>
+<span>  between <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  n <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>A <span class="op">=</span> <span class="fl">50</span>, B <span class="op">=</span> <span class="fl">45</span><span class="op">)</span>, <span class="co"># number of subjects per group</span></span>
+<span>  mu <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>A <span class="op">=</span> <span class="fl">100</span>, B <span class="op">=</span> <span class="fl">105</span><span class="op">)</span>,</span>
+<span>  sd <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>  rep <span class="op">=</span> <span class="fl">100</span>, <span class="co"># repeat the simulation 100 times</span></span>
+<span>  long <span class="op">=</span> <span class="cn">TRUE</span>, <span class="co"># structure data in long format</span></span>
+<span>  plot <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>Now you can use <a href="i.html#iteration">iteration</a> to run your analysis on each sample, saving the p-value.</p>
+<div class="sourceCode" id="cb213"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">p_values</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dbl</a></span><span class="op">(</span><span class="va">sim_data</span><span class="op">$</span><span class="va">data</span>, <span class="kw">function</span><span class="op">(</span><span class="va">data</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">group</span>, data <span class="op">=</span> <span class="va">data</span><span class="op">)</span><span class="op">$</span><span class="va">p.value</span></span>
+<span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
+<p>Finally, check what proportion of the samples resulted in a significant p-value. This is your power.</p>
+<div class="sourceCode" id="cb214"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">alpha</span> <span class="op">&lt;-</span> <span class="fl">0.05</span> <span class="co"># justify your alpha</span></span>
+<span><span class="va">power</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">p_values</span> <span class="op">&lt;</span> <span class="va">alpha</span><span class="op">)</span></span>
+<span><span class="va">power</span></span>
+<span><span class="co">#&gt; [1] 0.7</span></span></code></pre></div>
+</details>
 </div>
-<div id="predictor-variable" class="section level2" number="17.12">
+<div id="predictor-variable" class="section level2" number="17.14">
 <h2>
-<span class="header-section-number">17.12</span> predictor variable<a class="anchor" aria-label="anchor" href="#predictor-variable"><i class="fas fa-link"></i></a>
+<span class="header-section-number">17.14</span> predictor variable<a class="anchor" aria-label="anchor" href="#predictor-variable"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A variable whose value is used (in a model) to predict the value of a <a href="r.html#response-variable">response variable</a>.</dfn></p>
 <p>In an experimental context, predictor variables are often referred to as <a href="i.html#independent-variable">independent variables</a>.</p>
 
 </div>
-<div id="preregistration" class="section level2" number="17.13">
+<div id="preregistration" class="section level2" number="17.15">
 <h2>
-<span class="header-section-number">17.13</span> preregistration<a class="anchor" aria-label="anchor" href="#preregistration"><i class="fas fa-link"></i></a>
+<span class="header-section-number">17.15</span> preregistration<a class="anchor" aria-label="anchor" href="#preregistration"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Specifying the methods and analysis of a study before it is run.</dfn></p>
-<p>Resources</p>
+<p>Resources:</p>
 <ul>
 <li><a href="https://www.cos.io/our-services/prereg" target="_blank">Center for Open Science</a></li>
 <li>The Preregistration Revolution: <a href="https://doi.org/10.1073/pnas.1708274114" target="_blank">PNAS</a> / <a href="https://osf.io/2dxu5/" target="_blank">Preprint</a>
 </li>
 </ul>
 </div>
-<div id="probability" class="section level2" number="17.14">
+<div id="probability" class="section level2" number="17.16">
 <h2>
-<span class="header-section-number">17.14</span> probability<a class="anchor" aria-label="anchor" href="#probability"><i class="fas fa-link"></i></a>
+<span class="header-section-number">17.16</span> probability<a class="anchor" aria-label="anchor" href="#probability"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A number between 0 and 1 where 0 indicates impossibility of the event and 1 indicates certainty</dfn></p>
 <p>See also <a href="d.html#distribution">probability distribution</a>.</p>
 
 </div>
-<div id="project" class="section level2" number="17.15">
+<div id="project" class="section level2" number="17.17">
 <h2>
-<span class="header-section-number">17.15</span> project<a class="anchor" aria-label="anchor" href="#project"><i class="fas fa-link"></i></a>
+<span class="header-section-number">17.17</span> project<a class="anchor" aria-label="anchor" href="#project"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A way to organise related files in RStudio</dfn>.</p>
 <p>Choose <strong><code>New Project...</code></strong> under the <strong><code>File</code></strong> menu to create a new project in a new folder, organise an existing folder of files as a project, or download a version controlled repository as a project.</p>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:new-project"></span>
 <img src="images/new_project.png" alt="Start a new project" width="100%"><p class="caption">
-Figure 17.3: Start a new project
+Figure 17.4: Start a new project
 </p>
 </div>
 
 </div>
-<div id="pseudoreplication" class="section level2" number="17.16">
+<div id="pseudoreplication" class="section level2" number="17.18">
 <h2>
-<span class="header-section-number">17.16</span> pseudoreplication<a class="anchor" aria-label="anchor" href="#pseudoreplication"><i class="fas fa-link"></i></a>
+<span class="header-section-number">17.18</span> pseudoreplication<a class="anchor" aria-label="anchor" href="#pseudoreplication"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The process of artificially inflating the number of samples or replicates</dfn></p>
 <p>Pseudoreplications can occur when you take multiple measurements within the same condition.</p>
@@ -340,9 +515,9 @@ Figure 17.3: Start a new project
 <p>One common mistake novices make when analyzing such data is to try to run a t-test. You can’t directly use a conventional t-test when you have pseudoreplications (or multiple stimuli). You must first calculate means for each subject, and then run your analysis on the means, not on the raw data. There are versions of ANOVA that can deal with pseudoreplications, but you are probably better off using a <a href="l.html#linear-mixed-effects-model">linear-mixed effects model</a>, which can better handle the complex dependency structure.</p>
 
 </div>
-<div id="push" class="section level2" number="17.17">
+<div id="push" class="section level2" number="17.19">
 <h2>
-<span class="header-section-number">17.17</span> push<a class="anchor" aria-label="anchor" href="#push"><i class="fas fa-link"></i></a>
+<span class="header-section-number">17.19</span> push<a class="anchor" aria-label="anchor" href="#push"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Updating the remote git project from the local project.</dfn></p>
 <p>After you <a href="c.html#commit">commit</a> changes to a <a href="g.html#git">git</a> project, you may want to push those changes to a remote project, such as one on <a href="g.html#github">GitHub</a>.</p>
@@ -558,18 +733,20 @@ $( document ).ready(function() {
 <li><a class="nav-link" href="#pandoc"><span class="header-section-number">17.3</span> pandoc</a></li>
 <li><a class="nav-link" href="#panes"><span class="header-section-number">17.4</span> panes</a></li>
 <li><a class="nav-link" href="#parameter"><span class="header-section-number">17.5</span> parameter</a></li>
-<li><a class="nav-link" href="#path"><span class="header-section-number">17.6</span> path</a></li>
-<li><a class="nav-link" href="#pipe"><span class="header-section-number">17.7</span> pipe</a></li>
-<li><a class="nav-link" href="#poisson-distribution"><span class="header-section-number">17.8</span> Poisson distribution</a></li>
-<li><a class="nav-link" href="#population-parameter"><span class="header-section-number">17.9</span> population parameter</a></li>
-<li><a class="nav-link" href="#population"><span class="header-section-number">17.10</span> population</a></li>
-<li><a class="nav-link" href="#power"><span class="header-section-number">17.11</span> power</a></li>
-<li><a class="nav-link" href="#predictor-variable"><span class="header-section-number">17.12</span> predictor variable</a></li>
-<li><a class="nav-link" href="#preregistration"><span class="header-section-number">17.13</span> preregistration</a></li>
-<li><a class="nav-link" href="#probability"><span class="header-section-number">17.14</span> probability</a></li>
-<li><a class="nav-link" href="#project"><span class="header-section-number">17.15</span> project</a></li>
-<li><a class="nav-link" href="#pseudoreplication"><span class="header-section-number">17.16</span> pseudoreplication</a></li>
-<li><a class="nav-link" href="#push"><span class="header-section-number">17.17</span> push</a></li>
+<li><a class="nav-link" href="#partial-effects"><span class="header-section-number">17.6</span> partial effects</a></li>
+<li><a class="nav-link" href="#partial-eta-squared"><span class="header-section-number">17.7</span> partial eta squared</a></li>
+<li><a class="nav-link" href="#path"><span class="header-section-number">17.8</span> path</a></li>
+<li><a class="nav-link" href="#pipe"><span class="header-section-number">17.9</span> pipe</a></li>
+<li><a class="nav-link" href="#poisson-distribution"><span class="header-section-number">17.10</span> Poisson distribution</a></li>
+<li><a class="nav-link" href="#population-parameter"><span class="header-section-number">17.11</span> population parameter</a></li>
+<li><a class="nav-link" href="#population"><span class="header-section-number">17.12</span> population</a></li>
+<li><a class="nav-link" href="#power"><span class="header-section-number">17.13</span> power</a></li>
+<li><a class="nav-link" href="#predictor-variable"><span class="header-section-number">17.14</span> predictor variable</a></li>
+<li><a class="nav-link" href="#preregistration"><span class="header-section-number">17.15</span> preregistration</a></li>
+<li><a class="nav-link" href="#probability"><span class="header-section-number">17.16</span> probability</a></li>
+<li><a class="nav-link" href="#project"><span class="header-section-number">17.17</span> project</a></li>
+<li><a class="nav-link" href="#pseudoreplication"><span class="header-section-number">17.18</span> pseudoreplication</a></li>
+<li><a class="nav-link" href="#push"><span class="header-section-number">17.19</span> push</a></li>
 </ul>
 
       <div class="book-extra">
@@ -587,7 +764,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-27.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-08-08.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

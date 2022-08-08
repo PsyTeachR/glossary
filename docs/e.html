@@ -7,7 +7,7 @@
 <title>6 E | Glossary </title>
 <meta name="author" content="psyTeachR Team">
 <meta name="description" content="6.1 effect code A coding scheme for categorical variables that contrasts each group mean with the mean of all the group means. Also referred to as contrast coding.   6.2 effect size The difference...">
-<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta name="generator" content="bookdown 0.27 with bs4_book()">
 <meta property="og:title" content="6 E | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/e.html">
@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
@@ -109,13 +109,13 @@
 </h2>
 <p><dfn>The difference between the effect in your data and the <a href="n.html#null-effect">null effect</a> (usually a chance value)</dfn></p>
 <p>Effect sizes can be raw (in the same units as the dependent variable) or <a href="s.html#standardize">standardized</a> (in units of <a href="s.html#standard-deviation">standard deviation</a>).</p>
-<div class="sourceCode" id="cb115"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span> <span class="co"># for simulation reproducibility</span>
-
-<span class="va">dv</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">1000</span>, mean <span class="op">=</span> <span class="fl">55</span>, sd <span class="op">=</span> <span class="fl">20</span><span class="op">)</span>
-<span class="va">null_value</span> <span class="op">&lt;-</span> <span class="fl">50</span>
-<span class="va">raw_effect</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">dv</span><span class="op">)</span> <span class="op">-</span> <span class="va">null_value</span>
-<span class="va">std_effect</span> <span class="op">&lt;-</span> <span class="va">raw_effect</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">dv</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span> <span class="co"># for simulation reproducibility</span></span>
+<span></span>
+<span><span class="va">dv</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">1000</span>, mean <span class="op">=</span> <span class="fl">55</span>, sd <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
+<span><span class="va">null_value</span> <span class="op">&lt;-</span> <span class="fl">50</span></span>
+<span><span class="va">raw_effect</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">dv</span><span class="op">)</span> <span class="op">-</span> <span class="va">null_value</span></span>
+<span><span class="va">std_effect</span> <span class="op">&lt;-</span> <span class="va">raw_effect</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">dv</span><span class="op">)</span></span></code></pre></div>
 <p>For the example above, we sampled 1000 values from a normal distribution with a mean of 55 and SD of 20. Let's say the DV units here are "percentage points" and the chance value for this example is 50. Therefore, the raw effect is the difference between the mean value and the null value: 4.5 percentage points. The standardized effect is this value, divided by the SD, so the units disappear: 0.2.</p>
 <p>Raw effect sizes can be more meaningful in some circumstances (e.g., when <a href="m.html#multilevel">multilevel</a> structure makes it hard to define a single SD), while standardized effect sizes can make it easier to compare effects across different experimental designs.</p>
 
@@ -133,10 +133,10 @@
 </h2>
 <p><dfn>One item in a <a href="v.html#vector">vector</a>.</dfn></p>
 <p>For example, the built-in vector <code>LETTERS</code> contains 26 elements: the uppercase latin letters A through Z. You can select an element from a vector by putting its <a href="i.html#index">index</a> in square brackets.</p>
-<div class="sourceCode" id="cb116"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># get the tenth upppercase letter</span>
-<span class="va">LETTERS</span><span class="op">[</span><span class="fl">10</span><span class="op">]</span>
-<span class="co">#&gt; [1] "J"</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># get the tenth upppercase letter</span></span>
+<span><span class="va">LETTERS</span><span class="op">[</span><span class="fl">10</span><span class="op">]</span></span>
+<span><span class="co">#&gt; [1] "J"</span></span></code></pre></div>
 </div>
 <div id="element-html" class="section level2" number="6.5">
 <h2>
@@ -155,20 +155,20 @@
 <details><summary>
 More...
 </summary><p>For example, the help page for <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">dplyr::mutate()</a></code> shows a usage of <code>mutate(.data, ...)</code>, which means that the first argument is called <code>.data</code> and is the data table you want to mutate, and the second argument is <code>...</code>, which means that you can add as many new arguments as you want and each one will create a new column with the argument name and value.</p>
-<div class="sourceCode" id="cb117"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># create a data frame with letters and numbers </span>
-<span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
-  number <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
-  letter <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
-<span class="op">)</span>
-
-<span class="co"># the mutate function lets you add custom arguments</span>
-<span class="co"># like lower and plus_10</span>
-<span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>
-  .data <span class="op">=</span> <span class="va">df</span>,
-  lower <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/chartr.html">tolower</a></span><span class="op">(</span><span class="va">letter</span><span class="op">)</span>,
-  plus_10 <span class="op">=</span> <span class="va">number</span> <span class="op">+</span> <span class="fl">10</span>
-<span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># create a data frame with letters and numbers </span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>  number <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,</span>
+<span>  letter <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># the mutate function lets you add custom arguments</span></span>
+<span><span class="co"># like lower and plus_10</span></span>
+<span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>  .data <span class="op">=</span> <span class="va">df</span>,</span>
+<span>  lower <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/chartr.html">tolower</a></span><span class="op">(</span><span class="va">letter</span><span class="op">)</span>,</span>
+<span>  plus_10 <span class="op">=</span> <span class="va">number</span> <span class="op">+</span> <span class="fl">10</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
 <thead><tr>
@@ -282,8 +282,8 @@ e
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 X_i + e_i\]</span></p>
 <p>the parameter <span class="math inline">\(e_i\)</span> represents the error term.</p>
 <p>Model <a href="f.html#formula">formulae</a> typically do not include an explicit error term; it is implicit. For example, the linear model formula below only includes a main effect of <code>group</code>; the <a href="i.html#intercept">intercept</a> and error term are implied.</p>
-<div class="sourceCode" id="cb118"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">dv</span> <span class="op">~</span> <span class="va">group</span>, data <span class="op">=</span> <span class="va">df</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">dv</span> <span class="op">~</span> <span class="va">group</span>, data <span class="op">=</span> <span class="va">df</span><span class="op">)</span></span></code></pre></div>
 <p>See <a href="r.html#residual">residual</a> for a concrete example.</p>
 
 </div>
@@ -301,14 +301,100 @@ e
 </h2>
 <p><dfn>Include special characters like " inside of a string by prefacing them with a backslash.</dfn></p>
 <p>When you need to use a character that has a special meaning in R or markdown, you can create the <a href="l.html#literal">literal</a> version by escaping it with a backslash.</p>
-<div class="sourceCode" id="cb119"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">str</span> <span class="op">&lt;-</span> <span class="st">"This prints a \"quote\" and prevents twitter handles like \\@psyteachr from turning into references."</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">str</span> <span class="op">&lt;-</span> <span class="st">"This prints a \"quote\" and prevents twitter handles like \\@psyteachr from turning into references."</span></span></code></pre></div>
 <p>This prints a "quote" and prevents twitter handles like @psyteachr from turning into references.</p>
 
 </div>
-<div id="extension" class="section level2" number="6.11">
+<div id="estimated-marginal-means" class="section level2" number="6.11">
 <h2>
-<span class="header-section-number">6.11</span> extension<a class="anchor" aria-label="anchor" href="#extension"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.11</span> estimated marginal means<a class="anchor" aria-label="anchor" href="#estimated-marginal-means"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>The means for cells in a design, as estimated from a statistical model, rather than from data</dfn></p>
+<p>Also known as least-squares means.</p>
+<details><summary>
+More...
+</summary><p>Here we simulate some data for a 2x2 <a href="f.htmlfactorial-stats">factorial</a> design. The argument <code>mu</code> specifies the cell means for ctl-A, ctl-B, exp-A and exp-B.</p>
+<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># simulate some factorial data</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span></span>
+<span><span class="va">simdat</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/sim_design.html">sim_design</a></span><span class="op">(</span></span>
+<span>  between <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>    treatment <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"ctl"</span>, <span class="st">"exp"</span><span class="op">)</span>,</span>
+<span>    group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  mu <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">100</span>, <span class="fl">105</span>, <span class="fl">110</span><span class="op">)</span>,</span>
+<span>  sd <span class="op">=</span> <span class="fl">10</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-236"></span>
+<img src="_main_files/figure-html/unnamed-chunk-236-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%"><p class="caption">
+Figure 6.1: <strong>CAPTION THIS FIGURE!!</strong>
+</p>
+</div>
+<p>Then we model the data using a [linear model])g.html#general-linear-model).</p>
+<div class="sourceCode" id="cb125"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># model using lm</span></span>
+<span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">treatment</span> <span class="op">*</span> <span class="va">group</span>, data <span class="op">=</span> <span class="va">simdat</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Call:</span></span>
+<span><span class="co">#&gt; lm(formula = y ~ treatment * group, data = simdat)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Residuals:</span></span>
+<span><span class="co">#&gt;     Min      1Q  Median      3Q     Max </span></span>
+<span><span class="co">#&gt; -28.086  -7.198  -0.092   6.872  35.072 </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Coefficients:</span></span>
+<span><span class="co">#&gt;                     Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
+<span><span class="co">#&gt; (Intercept)           99.056      1.065  92.967  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; treatmentexp           5.357      1.507   3.555 0.000423 ***</span></span>
+<span><span class="co">#&gt; groupB                 1.236      1.507   0.820 0.412703    </span></span>
+<span><span class="co">#&gt; treatmentexp:groupB    4.827      2.131   2.265 0.024036 *  </span></span>
+<span><span class="co">#&gt; ---</span></span>
+<span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Residual standard error: 10.65 on 396 degrees of freedom</span></span>
+<span><span class="co">#&gt; Multiple R-squared:  0.1503, Adjusted R-squared:  0.1439 </span></span>
+<span><span class="co">#&gt; F-statistic: 23.35 on 3 and 396 DF,  p-value: 6.17e-14</span></span></code></pre></div>
+<p>Use the <code>emmeans</code> package to get the estimated marginal means from this model. You can get the estimated means for each combination of treatment and group:</p>
+<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">emmeans</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/emmeans/man/emmeans.html">emmeans</a></span><span class="op">(</span><span class="va">model</span>, <span class="op">~</span> <span class="va">treatment</span> <span class="op">|</span> <span class="va">group</span><span class="op">)</span></span>
+<span><span class="co">#&gt; group = A:</span></span>
+<span><span class="co">#&gt;  treatment emmean   SE  df lower.CL upper.CL</span></span>
+<span><span class="co">#&gt;  ctl         99.1 1.07 396     97.0      101</span></span>
+<span><span class="co">#&gt;  exp        104.4 1.07 396    102.3      107</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; group = B:</span></span>
+<span><span class="co">#&gt;  treatment emmean   SE  df lower.CL upper.CL</span></span>
+<span><span class="co">#&gt;  ctl        100.3 1.07 396     98.2      102</span></span>
+<span><span class="co">#&gt;  exp        110.5 1.07 396    108.4      113</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Confidence level used: 0.95</span></span></code></pre></div>
+<p>Or for the main effects separately (there will be a warning that the interaction may make this misleading).</p>
+<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">emmeans</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/emmeans/man/emmeans.html">emmeans</a></span><span class="op">(</span><span class="va">model</span>, <span class="op">~</span> <span class="va">treatment</span><span class="op">)</span></span>
+<span><span class="co">#&gt; NOTE: Results may be misleading due to involvement in interactions</span></span>
+<span><span class="co">#&gt;  treatment emmean    SE  df lower.CL upper.CL</span></span>
+<span><span class="co">#&gt;  ctl         99.7 0.753 396     98.2      101</span></span>
+<span><span class="co">#&gt;  exp        107.4 0.753 396    106.0      109</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Results are averaged over the levels of: group </span></span>
+<span><span class="co">#&gt; Confidence level used: 0.95</span></span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">emmeans</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/emmeans/man/emmeans.html">emmeans</a></span><span class="op">(</span><span class="va">model</span>, <span class="op">~</span> <span class="va">group</span><span class="op">)</span></span>
+<span><span class="co">#&gt; NOTE: Results may be misleading due to involvement in interactions</span></span>
+<span><span class="co">#&gt;  group emmean    SE  df lower.CL upper.CL</span></span>
+<span><span class="co">#&gt;  A        102 0.753 396      100      103</span></span>
+<span><span class="co">#&gt;  B        105 0.753 396      104      107</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Results are averaged over the levels of: treatment </span></span>
+<span><span class="co">#&gt; Confidence level used: 0.95</span></span></code></pre></div>
+</details>
+</div>
+<div id="extension" class="section level2" number="6.12">
+<h2>
+<span class="header-section-number">6.12</span> extension<a class="anchor" aria-label="anchor" href="#extension"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The end part of a file name that tells you what type of file it is (e.g., .R or .Rmd).</dfn></p>
 <p>Common file types and their extensions</p>
@@ -353,56 +439,56 @@ e
 </tbody>
 </table></div>
 <p>Often extensions are forgotten when importing files (e.g., reading data files into R) or when exporting files (e.g., saving plots as pictures).</p>
-<div class="sourceCode" id="cb120"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Always include the correct extension when specifying file names </span>
-
-<span class="co"># 1) when reading in data files</span>
-<span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"MyTable.csv"</span><span class="op">)</span>
-
-<span class="co"># 2) when saving plots and graphs</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span><span class="st">"MyPlot.png"</span><span class="op">)</span>
-
-<span class="co"># 3) when sourcing R code</span>
-<span class="kw"><a href="https://rdrr.io/r/base/source.html">source</a></span><span class="op">(</span><span class="st">"MyCode.R"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Always include the correct extension when specifying file names </span></span>
+<span></span>
+<span><span class="co"># 1) when reading in data files</span></span>
+<span><span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"MyTable.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 2) when saving plots and graphs</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span><span class="st">"MyPlot.png"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 3) when sourcing R code</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/source.html">source</a></span><span class="op">(</span><span class="st">"MyCode.R"</span><span class="op">)</span></span></code></pre></div>
 
 </div>
-<div id="extract-operator" class="section level2" number="6.12">
+<div id="extract-operator" class="section level2" number="6.13">
 <h2>
-<span class="header-section-number">6.12</span> extract operator<a class="anchor" aria-label="anchor" href="#extract-operator"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.13</span> extract operator<a class="anchor" aria-label="anchor" href="#extract-operator"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A symbol used to get values from a <a href="c.html#container">container</a> object, such as <code>[</code>, <code>[[</code>, or <code>$</code></dfn></p>
 <p>You can extract values from a <a href="v.html#vector">vector</a> by <a href="i.html#index">index</a> or name using <code>[</code> and <code>[[</code>.</p>
-<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">my_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>A <span class="op">=</span> <span class="st">"first"</span>, B <span class="op">=</span> <span class="st">"second"</span><span class="op">)</span>
-<span class="va">my_vector</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>   <span class="co"># by index, retains name</span>
-<span class="co">#&gt;       A </span>
-<span class="co">#&gt; "first"</span>
-<span class="va">my_vector</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="co"># by index, removes name</span>
-<span class="co">#&gt; [1] "first"</span>
-<span class="va">my_vector</span><span class="op">[</span><span class="st">"B"</span><span class="op">]</span> <span class="co"># by name, retains name</span>
-<span class="co">#&gt;        B </span>
-<span class="co">#&gt; "second"</span>
-<span class="va">my_vector</span><span class="op">[[</span><span class="st">"B"</span><span class="op">]</span><span class="op">]</span> <span class="co"># by name, removes name</span>
-<span class="co">#&gt; [1] "second"</span></code></pre></div>
+<div class="sourceCode" id="cb130"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">my_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>A <span class="op">=</span> <span class="st">"first"</span>, B <span class="op">=</span> <span class="st">"second"</span><span class="op">)</span></span>
+<span><span class="va">my_vector</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>   <span class="co"># by index, retains name</span></span>
+<span><span class="co">#&gt;       A </span></span>
+<span><span class="co">#&gt; "first"</span></span>
+<span><span class="va">my_vector</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="co"># by index, removes name</span></span>
+<span><span class="co">#&gt; [1] "first"</span></span>
+<span><span class="va">my_vector</span><span class="op">[</span><span class="st">"B"</span><span class="op">]</span> <span class="co"># by name, retains name</span></span>
+<span><span class="co">#&gt;        B </span></span>
+<span><span class="co">#&gt; "second"</span></span>
+<span><span class="va">my_vector</span><span class="op">[[</span><span class="st">"B"</span><span class="op">]</span><span class="op">]</span> <span class="co"># by name, removes name</span></span>
+<span><span class="co">#&gt; [1] "second"</span></span></code></pre></div>
 <p>You can extract values from a <a href="l.html#list">list</a> by <a href="i.html#index">index</a> or name using <code>[</code> and <code>[[</code> and by name using <code>$</code>.</p>
-<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">my_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
-  A <span class="op">=</span> <span class="st">"First item"</span>,
-  B <span class="op">=</span> <span class="fl">2</span>
-<span class="op">)</span>
-
-<span class="va">my_list</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>     <span class="co"># by index, returns a (named) list </span>
-<span class="co">#&gt; $A</span>
-<span class="co">#&gt; [1] "First item"</span>
-<span class="va">my_list</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>   <span class="co"># by index, returns an (unnamed) vector</span>
-<span class="co">#&gt; [1] "First item"</span>
-<span class="va">my_list</span><span class="op">[</span><span class="st">"B"</span><span class="op">]</span>   <span class="co"># by name, returns a (named) list </span>
-<span class="co">#&gt; $B</span>
-<span class="co">#&gt; [1] 2</span>
-<span class="va">my_list</span><span class="op">[[</span><span class="st">"B"</span><span class="op">]</span><span class="op">]</span> <span class="co"># by name, returns an (unnamed) vector</span>
-<span class="co">#&gt; [1] 2</span>
-<span class="va">my_list</span><span class="op">$</span><span class="va">A</span>      <span class="co"># by name, returns an (unnamed) vector</span>
-<span class="co">#&gt; [1] "First item"</span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">my_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>  A <span class="op">=</span> <span class="st">"First item"</span>,</span>
+<span>  B <span class="op">=</span> <span class="fl">2</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">my_list</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>     <span class="co"># by index, returns a (named) list </span></span>
+<span><span class="co">#&gt; $A</span></span>
+<span><span class="co">#&gt; [1] "First item"</span></span>
+<span><span class="va">my_list</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>   <span class="co"># by index, returns an (unnamed) vector</span></span>
+<span><span class="co">#&gt; [1] "First item"</span></span>
+<span><span class="va">my_list</span><span class="op">[</span><span class="st">"B"</span><span class="op">]</span>   <span class="co"># by name, returns a (named) list </span></span>
+<span><span class="co">#&gt; $B</span></span>
+<span><span class="co">#&gt; [1] 2</span></span>
+<span><span class="va">my_list</span><span class="op">[[</span><span class="st">"B"</span><span class="op">]</span><span class="op">]</span> <span class="co"># by name, returns an (unnamed) vector</span></span>
+<span><span class="co">#&gt; [1] 2</span></span>
+<span><span class="va">my_list</span><span class="op">$</span><span class="va">A</span>      <span class="co"># by name, returns an (unnamed) vector</span></span>
+<span><span class="co">#&gt; [1] "First item"</span></span></code></pre></div>
 
 </div>
 </div>
@@ -620,8 +706,9 @@ $( document ).ready(function() {
 <li><a class="nav-link" href="#error-term"><span class="header-section-number">6.8</span> error term</a></li>
 <li><a class="nav-link" href="#error"><span class="header-section-number">6.9</span> error</a></li>
 <li><a class="nav-link" href="#escape"><span class="header-section-number">6.10</span> escape</a></li>
-<li><a class="nav-link" href="#extension"><span class="header-section-number">6.11</span> extension</a></li>
-<li><a class="nav-link" href="#extract-operator"><span class="header-section-number">6.12</span> extract operator</a></li>
+<li><a class="nav-link" href="#estimated-marginal-means"><span class="header-section-number">6.11</span> estimated marginal means</a></li>
+<li><a class="nav-link" href="#extension"><span class="header-section-number">6.12</span> extension</a></li>
+<li><a class="nav-link" href="#extract-operator"><span class="header-section-number">6.13</span> extract operator</a></li>
 </ul>
 
       <div class="book-extra">
@@ -639,7 +726,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-07-09.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-08-08.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

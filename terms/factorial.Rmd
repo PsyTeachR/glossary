@@ -8,7 +8,7 @@
 
 For example, the following design has two factors: time and treatment, and all 4 combinations are represented in the data.
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, fig.cap="2xw factorial data."}
 # simulate some factorial data
 set.seed(8675309)
 simdat <- faux::sim_design(

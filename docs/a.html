@@ -7,7 +7,7 @@
 <title>2 A | Glossary </title>
 <meta name="author" content="psyTeachR Team">
 <meta name="description" content="2.1 absolute path  A file path that starts with / and is not appended to the working directory For example, if your working directory is /Users/me/study/ and you want to refer to a file in the...">
-<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta name="generator" content="bookdown 0.27 with bs4_book()">
 <meta property="og:title" content="2 A | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/a.html">
@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
@@ -112,8 +112,8 @@
 <p>O pacote R.utils possui uma função <code>getAbsolutePath()</code> que retorna o caminho absoluto de um arquivo <a href="p.html#path">caminho</a> ou um arquivo<a href="o.html#object">objeto</a></p>
 </div>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">R.utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/R.utils/man/getAbsolutePath.html">getAbsolutePath</a></span><span class="op">(</span><span class="st">"../index.Rmd"</span><span class="op">)</span>
-<span class="co">#&gt; [1] "/Users/lisad/rproj/psyteachr/index.Rmd"</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">R.utils</span><span class="fu">::</span><span class="fu"><a href="https://henrikbengtsson.github.io/R.utils/reference/getAbsolutePath.html">getAbsolutePath</a></span><span class="op">(</span><span class="st">"../index.Rmd"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "/Users/lisad/rproj/psyteachr/index.Rmd"</span></span></code></pre></div>
 
 </div>
 <div id="adjusted-r-squared" class="section level2" number="2.2">
@@ -169,15 +169,15 @@
 <details><summary>
 More...
 </summary><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># if you omit alpha, it defaults to 1</span>
-<span class="va">alpha1.00</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_density</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.window.html">xlim</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span>
-
-<span class="va">alpha0.25</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_density</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.window.html">xlim</a></span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span>
-
-<span class="fu">cowplot</span><span class="fu">::</span><span class="fu"><a href="https://wilkelab.org/cowplot/reference/plot_grid.html">plot_grid</a></span><span class="op">(</span><span class="va">alpha1.00</span>, <span class="va">alpha0.25</span>, nrow <span class="op">=</span> <span class="fl">2</span>,
-                   labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"alpha = 1.0"</span>, <span class="st">"alpha = 0.25"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># if you omit alpha, it defaults to 1</span></span>
+<span><span class="va">alpha1.00</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_density</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu">xlim</span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">alpha0.25</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_density</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span> <span class="op">+</span> <span class="fu">xlim</span><span class="op">(</span><span class="fl">55</span>, <span class="fl">70</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">cowplot</span><span class="fu">::</span><span class="fu"><a href="https://wilkelab.org/cowplot/reference/plot_grid.html">plot_grid</a></span><span class="op">(</span><span class="va">alpha1.00</span>, <span class="va">alpha0.25</span>, nrow <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>                   labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"alpha = 1.0"</span>, <span class="st">"alpha = 0.25"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:alpha-plot"></span>
 <img src="_main_files/figure-html/alpha-plot-1.png" alt="Setting alpha to a number lower than 1 lets you see parts of the plot hidden behind an object." width="100%"><p class="caption">
@@ -201,60 +201,403 @@ Figure 2.1: Setting alpha to a number lower than 1 lets you see parts of the plo
 <p><dfn>The <a href="symbols.html">symbol</a> &amp;, an <a href="o.html#operator">operator</a> meaning "AND".</dfn></p>
 <p>A single ampersand is <a href="v.html#vectorized">vectorized</a>, so compares each item in the first <a href="v.html#vector">vector</a> with the corresponding item in the second vector.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span> <span class="op">&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span>
-<span class="co">#&gt; [1]  TRUE  TRUE FALSE FALSE</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span> <span class="op">&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1]  TRUE  TRUE FALSE FALSE</span></span></code></pre></div>
 <p>A double ampersand is not vectorised, so will ignore all but the first item in vectors, unless you have set the environment variable <code>_R_CHECK_LENGTH_1_LOGIC2_</code> to true, in which case you will get an error.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html">Sys.setenv</a></span><span class="op">(</span><span class="st">"_R_CHECK_LENGTH_1_LOGIC2_"</span> <span class="op">=</span> <span class="st">"false"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span>
-<span class="co">#&gt; Warning in c(T, T, F, F) &amp;&amp; c(T, T, F, F): 'length(x) = 4 &gt; 1' in</span>
-<span class="co">#&gt; coercion to 'logical(1)'</span>
-
-<span class="co">#&gt; Warning in c(T, T, F, F) &amp;&amp; c(T, T, F, F): 'length(x) = 4 &gt; 1' in</span>
-<span class="co">#&gt; coercion to 'logical(1)'</span>
-<span class="co">#&gt; [1] TRUE</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html">Sys.setenv</a></span><span class="op">(</span><span class="st">"_R_CHECK_LENGTH_1_LOGIC2_"</span> <span class="op">=</span> <span class="st">"false"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning in c(T, T, F, F) &amp;&amp; c(T, T, F, F): 'length(x) = 4 &gt; 1' in coercion to 'logical(1)'</span></span>
+<span></span>
+<span><span class="co">#&gt; Warning in c(T, T, F, F) &amp;&amp; c(T, T, F, F): 'length(x) = 4 &gt; 1' in coercion to 'logical(1)'</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html">Sys.setenv</a></span><span class="op">(</span><span class="st">"_R_CHECK_LENGTH_1_LOGIC2_"</span> <span class="op">=</span> <span class="st">"true"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span>
-<span class="co">#&gt; Error in c(T, T, F, F) &amp;&amp; c(T, T, F, F): 'length(x) = 4 &gt; 1' in coercion to 'logical(1)'</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html">Sys.setenv</a></span><span class="op">(</span><span class="st">"_R_CHECK_LENGTH_1_LOGIC2_"</span> <span class="op">=</span> <span class="st">"true"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span>, <span class="cn">F</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Error in c(T, T, F, F) &amp;&amp; c(T, T, F, F): 'length(x) = 4 &gt; 1' in coercion to 'logical(1)'</span></span></code></pre></div>
 <div class="info">
 <p>The advantage of a double ampersand is that it will stop as soon as the conclusion is obvious. So if the first item is FALSE, the second item won't even be run. This is useful for testing whether an object exists before checking something that requires the object to exist.</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># this produces an error if x doesn't exist</span>
-<span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">is.character</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span> 
-  <span class="co"># do something</span>
-<span class="op">}</span>
-<span class="co">#&gt; Error in eval(expr, envir, enclos): object 'x' not found</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># this produces an error if x doesn't exist</span></span>
+<span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">is.character</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span> </span>
+<span>  <span class="co"># do something</span></span>
+<span><span class="op">}</span></span>
+<span><span class="co">#&gt; Error in eval(expr, envir, enclos): object 'x' not found</span></span></code></pre></div>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/exists.html">exists</a></span><span class="op">(</span><span class="st">"x"</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">is.character</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span> 
-  <span class="co"># do something</span>
-<span class="op">}</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/exists.html">exists</a></span><span class="op">(</span><span class="st">"x"</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">is.character</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span> </span>
+<span>  <span class="co"># do something</span></span>
+<span><span class="op">}</span></span></code></pre></div>
 </div>
 
 </div>
-<div id="anti_join" class="section level2" number="2.8">
+<div id="ancova" class="section level2" number="2.8">
 <h2>
-<span class="header-section-number">2.8</span> anti_join<a class="anchor" aria-label="anchor" href="#anti_join"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.8</span> ancova<a class="anchor" aria-label="anchor" href="#ancova"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>ANalysis of CO-VAriance: a type of linear model that is useful for <a href="f.html#factorial-stats">factorial</a> designs with continuous <a href="c.html#covariate">covariates</a></dfn></p>
+<p>See also <a href="a.html#anova">ANOVA</a>.</p>
+<details><summary>
+More...
+</summary><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># simulate some factorial data</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span></span>
+<span><span class="va">simdat</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/sim_design.html">sim_design</a></span><span class="op">(</span></span>
+<span>  n <span class="op">=</span> <span class="fl">100</span>,</span>
+<span>  between <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>treatment <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"control"</span>, <span class="st">"experimental"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  mu <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">105</span><span class="op">)</span>,</span>
+<span>  sd <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>  id <span class="op">=</span> <span class="st">"ID"</span>,</span>
+<span>  dv <span class="op">=</span> <span class="st">"DV"</span>,</span>
+<span>  plot <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># add a covariate that is correlated r = 0.5 to the DV</span></span>
+<span><span class="va">simdat</span><span class="op">$</span><span class="va">cov</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/rnorm_pre.html">rnorm_pre</a></span><span class="op">(</span><span class="va">simdat</span><span class="op">$</span><span class="va">DV</span>, mu <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">1</span>, r <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">simdat</span><span class="op">)</span></span></code></pre></div>
+<div class="kable-table">
+<div class="inline-table"><table class="table table-sm">
+<thead><tr>
+<th style="text-align:left;">
+ID
+</th>
+<th style="text-align:left;">
+treatment
+</th>
+<th style="text-align:right;">
+DV
+</th>
+<th style="text-align:right;">
+cov
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+S001
+</td>
+<td style="text-align:left;">
+control
+</td>
+<td style="text-align:right;">
+90.03418
+</td>
+<td style="text-align:right;">
+-0.5848813
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+S002
+</td>
+<td style="text-align:left;">
+control
+</td>
+<td style="text-align:right;">
+107.21824
+</td>
+<td style="text-align:right;">
+1.2256043
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+S003
+</td>
+<td style="text-align:left;">
+control
+</td>
+<td style="text-align:right;">
+93.82791
+</td>
+<td style="text-align:right;">
+-0.5048147
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+S004
+</td>
+<td style="text-align:left;">
+control
+</td>
+<td style="text-align:right;">
+120.29392
+</td>
+<td style="text-align:right;">
+0.4131685
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+S005
+</td>
+<td style="text-align:left;">
+control
+</td>
+<td style="text-align:right;">
+110.65416
+</td>
+<td style="text-align:right;">
+0.3075864
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+S006
+</td>
+<td style="text-align:left;">
+control
+</td>
+<td style="text-align:right;">
+109.87220
+</td>
+<td style="text-align:right;">
+1.2536715
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># analysis with ANCOVA</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://afex.singmann.science/">afex</a></span><span class="op">)</span> <span class="co"># a useful package for ancova</span></span>
+<span></span>
+<span><span class="va">ancova</span> <span class="op">&lt;-</span> <span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/afex/man/aov_car.html">aov_ez</a></span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="st">"ID"</span>,</span>
+<span>  dv <span class="op">=</span> <span class="st">"DV"</span>,</span>
+<span>  between <span class="op">=</span> <span class="st">"treatment"</span>,</span>
+<span>  covariate <span class="op">=</span> <span class="st">"cov"</span>,</span>
+<span>  factorize <span class="op">=</span> <span class="cn">FALSE</span>, <span class="co"># must be FALSE with covariates</span></span>
+<span>  data <span class="op">=</span> <span class="va">simdat</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: Numerical variables NOT centered on 0 (i.e., likely bogus results): cov</span></span>
+<span><span class="co">#&gt; Contrasts set to contr.sum for the following variables: treatment</span></span>
+<span></span>
+<span><span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/afex/man/nice.html">nice</a></span><span class="op">(</span><span class="va">ancova</span><span class="op">)</span></span></code></pre></div>
+<div class="kable-table">
+<div class="inline-table"><table class="table table-sm">
+<thead><tr>
+<th style="text-align:left;">
+Effect
+</th>
+<th style="text-align:left;">
+df
+</th>
+<th style="text-align:left;">
+MSE
+</th>
+<th style="text-align:left;">
+F
+</th>
+<th style="text-align:left;">
+pes
+</th>
+<th style="text-align:left;">
+p.value
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+treatment
+</td>
+<td style="text-align:left;">
+1, 197
+</td>
+<td style="text-align:left;">
+69.80
+</td>
+<td style="text-align:left;">
+9.03 **
+</td>
+<td style="text-align:left;">
+.044
+</td>
+<td style="text-align:left;">
+.003
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+cov
+</td>
+<td style="text-align:left;">
+1, 197
+</td>
+<td style="text-align:left;">
+69.80
+</td>
+<td style="text-align:left;">
+64.72 ***
+</td>
+<td style="text-align:left;">
+.247
+</td>
+<td style="text-align:left;">
+&lt;.001
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+</div>
+<div id="anova" class="section level2" number="2.9">
+<h2>
+<span class="header-section-number">2.9</span> ANOVA<a class="anchor" aria-label="anchor" href="#anova"><i class="fas fa-link"></i></a>
+</h2>
+<p><dfn>ANalysis Of VAriance: a type of linear model that is useful for <a href="f.html#factorial-stats">factorial</a> designs</dfn></p>
+<p>See also <a href="a.html#ancova">ANCOVA</a>.</p>
+<details><summary>
+More...
+</summary><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># simulate some factorial data</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span></span>
+<span><span class="va">simdat</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/sim_design.html">sim_design</a></span><span class="op">(</span></span>
+<span>  n <span class="op">=</span> <span class="fl">100</span>,</span>
+<span>  within <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"pre"</span>, <span class="st">"post"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  between <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>treatment <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"control"</span>, <span class="st">"experimental"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  mu <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">100</span>, <span class="fl">100</span>, <span class="fl">105</span><span class="op">)</span>,</span>
+<span>  sd <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>  r <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>  id <span class="op">=</span> <span class="st">"ID"</span>,</span>
+<span>  dv <span class="op">=</span> <span class="st">"DV"</span>,</span>
+<span>  long <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-80"></span>
+<img src="_main_files/figure-html/unnamed-chunk-80-1.png" alt="**CAPTION THIS FIGURE!!**" width="100%"><p class="caption">
+Figure 2.2: <strong>CAPTION THIS FIGURE!!</strong>
+</p>
+</div>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># analysis with ANOVA</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://afex.singmann.science/">afex</a></span><span class="op">)</span> <span class="co"># a useful package for anova</span></span>
+<span></span>
+<span><span class="va">anova</span> <span class="op">&lt;-</span> <span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/afex/man/aov_car.html">aov_ez</a></span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="st">"ID"</span>,</span>
+<span>  dv <span class="op">=</span> <span class="st">"DV"</span>,</span>
+<span>  between <span class="op">=</span> <span class="st">"treatment"</span>,</span>
+<span>  within <span class="op">=</span> <span class="st">"time"</span>,</span>
+<span>  data <span class="op">=</span> <span class="va">simdat</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; Contrasts set to contr.sum for the following variables: treatment</span></span>
+<span></span>
+<span><span class="fu">afex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/afex/man/nice.html">nice</a></span><span class="op">(</span><span class="va">anova</span><span class="op">)</span></span></code></pre></div>
+<div class="kable-table">
+<div class="inline-table"><table class="table table-sm">
+<thead><tr>
+<th style="text-align:left;">
+Effect
+</th>
+<th style="text-align:left;">
+df
+</th>
+<th style="text-align:left;">
+MSE
+</th>
+<th style="text-align:left;">
+F
+</th>
+<th style="text-align:left;">
+pes
+</th>
+<th style="text-align:left;">
+p.value
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+treatment
+</td>
+<td style="text-align:left;">
+1, 198
+</td>
+<td style="text-align:left;">
+170.45
+</td>
+<td style="text-align:left;">
+4.63 *
+</td>
+<td style="text-align:left;">
+.023
+</td>
+<td style="text-align:left;">
+.033
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+time
+</td>
+<td style="text-align:left;">
+1, 198
+</td>
+<td style="text-align:left;">
+56.71
+</td>
+<td style="text-align:left;">
+14.66 ***
+</td>
+<td style="text-align:left;">
+.069
+</td>
+<td style="text-align:left;">
+&lt;.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+treatment:time
+</td>
+<td style="text-align:left;">
+1, 198
+</td>
+<td style="text-align:left;">
+56.71
+</td>
+<td style="text-align:left;">
+11.85 ***
+</td>
+<td style="text-align:left;">
+.056
+</td>
+<td style="text-align:left;">
+&lt;.001
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+</div>
+<div id="anti_join" class="section level2" number="2.10">
+<h2>
+<span class="header-section-number">2.10</span> anti_join<a class="anchor" aria-label="anchor" href="#anti_join"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="f.html#filtering-joins">filtering join</a> that returns all rows from the left table where there are <em>not</em> matching values in the right table, keeping just columns from the left table.</dfn></p>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:anti-join"></span>
 <img src="images/joins/anti_join.png" alt="Anti Join" width="100%"><p class="caption">
-Figure 2.2: Anti Join
+Figure 2.3: Anti Join
 </p>
 </div>
 <p>This is useful when you have a table of data that contains IDs you want to exclude from your main dataset.</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">all_data</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
-  id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
-  x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
-<span class="op">)</span>
-
-<span class="va">to_exclude</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>
-  id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">4</span>
-<span class="op">)</span>
-
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">anti_join</span><span class="op">(</span><span class="va">all_data</span>, <span class="va">to_exclude</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">all_data</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,</span>
+<span>  x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">to_exclude</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">4</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">anti_join</span><span class="op">(</span><span class="va">all_data</span>, <span class="va">to_exclude</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr>
 <th style="text-align:right;">
@@ -286,240 +629,240 @@ E
 <p>See <a href="j.html#joins">joins</a> for other types of joins and further resources.</p>
 
 </div>
-<div id="argument" class="section level2" number="2.9">
+<div id="argument" class="section level2" number="2.11">
 <h2>
-<span class="header-section-number">2.9</span> argument<a class="anchor" aria-label="anchor" href="#argument"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.11</span> argument<a class="anchor" aria-label="anchor" href="#argument"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A variable that provides input to a <a href="f.html#function">function</a>.</dfn></p>
 <p>For example, the first <strong>argument</strong> to the function <code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code> is <code>n</code> (the number of <a href="o.html#observation">observations</a>).</p>
 <p>When you look up the help for a function (e.g., <code><a href="https://rdrr.io/r/stats/sd.html">?sd</a></code>), you will see a section called <strong><code>Arguments</code></strong>, which lists the argument names and their definitions.</p>
 <p>The function <code><a href="https://rdrr.io/r/base/args.html">args()</a></code> will show you the argument names and their <a href="d.html#default-value">default values</a> (if any) for any function.</p>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/args.html">args</a></span><span class="op">(</span><span class="va">rnorm</span><span class="op">)</span>
-<span class="co">#&gt; function (n, mean = 0, sd = 1) </span>
-<span class="co">#&gt; NULL</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/args.html">args</a></span><span class="op">(</span><span class="va">rnorm</span><span class="op">)</span></span>
+<span><span class="co">#&gt; function (n, mean = 0, sd = 1) </span></span>
+<span><span class="co">#&gt; NULL</span></span></code></pre></div>
 
 </div>
-<div id="array" class="section level2" number="2.10">
+<div id="array" class="section level2" number="2.12">
 <h2>
-<span class="header-section-number">2.10</span> array<a class="anchor" aria-label="anchor" href="#array"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.12</span> array<a class="anchor" aria-label="anchor" href="#array"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> that stores <a href="o.html#object">objects</a> in one or more dimensions.</dfn></p>
 <p>You can create an array by specifying a list or vector of values and the number of <a href="d.html#dimension">dimensions</a>. The first two dimensions are rows and columns; each dimension after that is printed separately as a facet.</p>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># 3-dimensional array with 4 rows, 3 columns, and 2 facets</span>
-<span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">24</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">3</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span>
-<span class="co">#&gt; , , 1</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;      [,1] [,2] [,3]</span>
-<span class="co">#&gt; [1,]    1    5    9</span>
-<span class="co">#&gt; [2,]    2    6   10</span>
-<span class="co">#&gt; [3,]    3    7   11</span>
-<span class="co">#&gt; [4,]    4    8   12</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; , , 2</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;      [,1] [,2] [,3]</span>
-<span class="co">#&gt; [1,]   13   17   21</span>
-<span class="co">#&gt; [2,]   14   18   22</span>
-<span class="co">#&gt; [3,]   15   19   23</span>
-<span class="co">#&gt; [4,]   16   20   24</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 3-dimensional array with 4 rows, 3 columns, and 2 facets</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">24</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">3</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; , , 1</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;      [,1] [,2] [,3]</span></span>
+<span><span class="co">#&gt; [1,]    1    5    9</span></span>
+<span><span class="co">#&gt; [2,]    2    6   10</span></span>
+<span><span class="co">#&gt; [3,]    3    7   11</span></span>
+<span><span class="co">#&gt; [4,]    4    8   12</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; , , 2</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;      [,1] [,2] [,3]</span></span>
+<span><span class="co">#&gt; [1,]   13   17   21</span></span>
+<span><span class="co">#&gt; [2,]   14   18   22</span></span>
+<span><span class="co">#&gt; [3,]   15   19   23</span></span>
+<span><span class="co">#&gt; [4,]   16   20   24</span></span></code></pre></div>
 <details><summary>
 More...
 </summary><p>You can give your array dimensions names.</p>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
-<code class="sourceCode R">
-<span class="va">dimnames</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
-  subj_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"S1"</span>, <span class="st">"S2"</span>, <span class="st">"S3"</span>, <span class="st">"S4"</span><span class="op">)</span>,
-  face_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"F1"</span>, <span class="st">"F2"</span>, <span class="st">"F3"</span><span class="op">)</span>,
-  condition <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Control"</span>, <span class="st">"experimental"</span><span class="op">)</span>
-<span class="op">)</span>
-  
-<span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">24</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">3</span>, <span class="fl">2</span><span class="op">)</span>, dimnames <span class="op">=</span> <span class="va">dimnames</span><span class="op">)</span>
-<span class="co">#&gt; , , condition = Control</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;        face_id</span>
-<span class="co">#&gt; subj_id F1 F2 F3</span>
-<span class="co">#&gt;      S1  1  5  9</span>
-<span class="co">#&gt;      S2  2  6 10</span>
-<span class="co">#&gt;      S3  3  7 11</span>
-<span class="co">#&gt;      S4  4  8 12</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; , , condition = experimental</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;        face_id</span>
-<span class="co">#&gt; subj_id F1 F2 F3</span>
-<span class="co">#&gt;      S1 13 17 21</span>
-<span class="co">#&gt;      S2 14 18 22</span>
-<span class="co">#&gt;      S3 15 19 23</span>
-<span class="co">#&gt;      S4 16 20 24</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="va">dimnames</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>  subj_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"S1"</span>, <span class="st">"S2"</span>, <span class="st">"S3"</span>, <span class="st">"S4"</span><span class="op">)</span>,</span>
+<span>  face_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"F1"</span>, <span class="st">"F2"</span>, <span class="st">"F3"</span><span class="op">)</span>,</span>
+<span>  condition <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Control"</span>, <span class="st">"experimental"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span>  </span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">24</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">3</span>, <span class="fl">2</span><span class="op">)</span>, dimnames <span class="op">=</span> <span class="va">dimnames</span><span class="op">)</span></span>
+<span><span class="co">#&gt; , , condition = Control</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;        face_id</span></span>
+<span><span class="co">#&gt; subj_id F1 F2 F3</span></span>
+<span><span class="co">#&gt;      S1  1  5  9</span></span>
+<span><span class="co">#&gt;      S2  2  6 10</span></span>
+<span><span class="co">#&gt;      S3  3  7 11</span></span>
+<span><span class="co">#&gt;      S4  4  8 12</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; , , condition = experimental</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;        face_id</span></span>
+<span><span class="co">#&gt; subj_id F1 F2 F3</span></span>
+<span><span class="co">#&gt;      S1 13 17 21</span></span>
+<span><span class="co">#&gt;      S2 14 18 22</span></span>
+<span><span class="co">#&gt;      S3 15 19 23</span></span>
+<span><span class="co">#&gt;      S4 16 20 24</span></span></code></pre></div>
 <p>Objects not need to be the same <a href="d.html#data-type">data type</a>.</p>
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mylist</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="cn">TRUE</span>, <span class="fl">2L</span>, <span class="fl">3.1</span><span class="op">)</span>
-<span class="va">myarray</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="va">mylist</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
-  <span class="va">myarray</span><span class="op">[[</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="va">myarray</span><span class="op">[[</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="va">myarray</span><span class="op">[[</span><span class="fl">2</span>,<span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="va">myarray</span><span class="op">[[</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>
-<span class="op">)</span>
-<span class="co">#&gt; [1] "character" "integer"   "logical"   "numeric"</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mylist</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="cn">TRUE</span>, <span class="fl">2L</span>, <span class="fl">3.1</span><span class="op">)</span></span>
+<span><span class="va">myarray</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="va">mylist</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>  <span class="va">myarray</span><span class="op">[[</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  <span class="va">myarray</span><span class="op">[[</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  <span class="va">myarray</span><span class="op">[[</span><span class="fl">2</span>,<span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  <span class="va">myarray</span><span class="op">[[</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">]</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "character" "integer"   "logical"   "numeric"</span></span></code></pre></div>
 </details>
 </div>
-<div id="aspect-ratio" class="section level2" number="2.11">
+<div id="aspect-ratio" class="section level2" number="2.13">
 <h2>
-<span class="header-section-number">2.11</span> aspect ratio<a class="anchor" aria-label="anchor" href="#aspect-ratio"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.13</span> aspect ratio<a class="anchor" aria-label="anchor" href="#aspect-ratio"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The ratio between the width and height of an image.</dfn></p>
 <p>You can specify the aspect ratio of your plots by setting the width and height in the first chunk of an R Markdown file, in the <a href="c.html#chunk">chunk</a> options, or when you save the image.</p>
 <details><summary>
 More...
 </summary><p>Knitr defaults:</p>
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/knitr/man/opts_chunk.html">opts_chunk</a></span><span class="op">$</span><span class="fu">set</span><span class="op">(</span>
-  fig.width <span class="op">=</span> <span class="fl">7</span>, <span class="co"># default value is 7</span>
-  fig.height <span class="op">=</span> <span class="fl">7</span><span class="op">/</span><span class="fl">1.618</span> <span class="co"># rolden ratio; default value is 7</span>
-<span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/knitr/man/opts_chunk.html">opts_chunk</a></span><span class="op">$</span><span class="fu">set</span><span class="op">(</span></span>
+<span>  fig.width <span class="op">=</span> <span class="fl">7</span>, <span class="co"># default value is 7</span></span>
+<span>  fig.height <span class="op">=</span> <span class="fl">7</span><span class="op">/</span><span class="fl">1.618</span> <span class="co"># rolden ratio; default value is 7</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p>Chunk options:</p>
 <div class="verbatim">
 <p><code>```{r fig-golden-ratio, fig.width = 7, fig.height = 4.32}</code></p>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">iris</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">iris</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
 <code>```</code>
 </div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:aspect-ratio-1-displ"></span>
 <img src="_main_files/figure-html/aspect-ratio-1-displ-1.png" alt="Plot with a 1.618:1 aspect ratio (golden ratio)" width="100%"><p class="caption">
-Figure 2.3: Plot with a 1.618:1 aspect ratio (golden ratio)
+Figure 2.4: Plot with a 1.618:1 aspect ratio (golden ratio)
 </p>
 </div>
 <div class="verbatim">
 <p><code>```{r fig-square, fig.width = 7, fig.height = 7}</code></p>
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">iris</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">iris</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">Sepal.Width</span>, <span class="va">Sepal.Length</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, formula <span class="op">=</span> <span class="va">y</span><span class="op">~</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
 <code>```</code>
 </div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:aspect-ratio-2-disp"></span>
 <img src="_main_files/figure-html/aspect-ratio-2-disp-1.png" alt="Plot with a 1:1 aspect ratio" width="100%"><p class="caption">
-Figure 2.4: Plot with a 1:1 aspect ratio
+Figure 2.5: Plot with a 1:1 aspect ratio
 </p>
 </div>
 <p>On save:</p>
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">ggsave</span><span class="op">(</span><span class="st">"golden-ratio.jpg"</span>, width <span class="op">=</span> <span class="fl">7</span>, height <span class="op">=</span> <span class="fl">7</span><span class="op">/</span><span class="fl">1.618</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">ggsave</span><span class="op">(</span><span class="st">"golden-ratio.jpg"</span>, width <span class="op">=</span> <span class="fl">7</span>, height <span class="op">=</span> <span class="fl">7</span><span class="op">/</span><span class="fl">1.618</span><span class="op">)</span></span></code></pre></div>
 </details>
 </div>
-<div id="assignment-operator" class="section level2" number="2.12">
+<div id="assignment-operator" class="section level2" number="2.14">
 <h2>
-<span class="header-section-number">2.12</span> assignment operator<a class="anchor" aria-label="anchor" href="#assignment-operator"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.14</span> assignment operator<a class="anchor" aria-label="anchor" href="#assignment-operator"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>The <a href="symbols.html">symbol</a> <code>&lt;-</code>, which functions like <code>=</code> and assigns the value on the right to the object on the left</dfn></p>
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">a</span> <span class="op">&lt;-</span> <span class="fl">1</span>
-
-<span class="va">a</span>
-<span class="co">#&gt; [1] 1</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">a</span> <span class="op">&lt;-</span> <span class="fl">1</span></span>
+<span></span>
+<span><span class="va">a</span></span>
+<span><span class="co">#&gt; [1] 1</span></span></code></pre></div>
 <p>The assignment operator can also be reversed</p>
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fl">2</span> <span class="op">-&gt;</span> <span class="va">b</span>
-
-<span class="va">b</span>
-<span class="co">#&gt; [1] 2</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">2</span> <span class="op">-&gt;</span> <span class="va">b</span></span>
+<span></span>
+<span><span class="va">b</span></span>
+<span><span class="co">#&gt; [1] 2</span></span></code></pre></div>
 <p>And even go in both direction at the same time!</p>
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">2</span> <span class="op">-&gt;</span> <span class="va">y</span>
-
-<span class="va">x</span>
-<span class="co">#&gt; [1] 2</span>
-<span class="va">y</span>
-<span class="co">#&gt; [1] 2</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">2</span> <span class="op">-&gt;</span> <span class="va">y</span></span>
+<span></span>
+<span><span class="va">x</span></span>
+<span><span class="co">#&gt; [1] 2</span></span>
+<span><span class="va">y</span></span>
+<span><span class="co">#&gt; [1] 2</span></span></code></pre></div>
 
 </div>
-<div id="atomic" class="section level2" number="2.13">
+<div id="atomic" class="section level2" number="2.15">
 <h2>
-<span class="header-section-number">2.13</span> atomic<a class="anchor" aria-label="anchor" href="#atomic"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.15</span> atomic<a class="anchor" aria-label="anchor" href="#atomic"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Only containing <a href="o.html#object">objects</a> with the same <a href="d.html#data-type">data type</a> (e.g., all <a href="n.html#numeric">numeric</a> or <a href="c.html#character">character</a>).</dfn></p>
 <p><a href="v.html#vector">Vectors</a> are atomic data structures in R.</p>
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>
-<span class="va">b</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"somebody"</span>, <span class="st">"once"</span>, <span class="st">"told me"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">a</span><span class="op">)</span>
-<span class="co">#&gt; [1] "numeric"</span>
-<span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">b</span><span class="op">)</span>
-<span class="co">#&gt; [1] "character"</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span></span>
+<span><span class="va">b</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"somebody"</span>, <span class="st">"once"</span>, <span class="st">"told me"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">a</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "numeric"</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">b</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "character"</span></span></code></pre></div>
 <details><summary>
 More...
 </summary><p>If you try to mix data types in an atomic vector, they will be <a href="c.html#coerce">coerced</a> to be the same type. (Note that 32 becomes "32" so it can be in the same vector as a character object).</p>
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">32</span>, <span class="cn">TRUE</span>, <span class="st">"eighteen"</span><span class="op">)</span>
-<span class="co">#&gt; [1] "32"       "TRUE"     "eighteen"</span></code></pre></div>
-<p>Another feature of vectors that makes them atomic is that they are always flat. If you embed vectors within vectors, they will be flattened.</p>
-<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">6</span><span class="op">)</span>
-<span class="co">#&gt; [1]  7  1  4 32  2  6</span></code></pre></div>
-<p><a href="l.html#list">Lists</a>, on the other hand, can be nested.</p>
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">6</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; List of 4</span>
-<span class="co">#&gt;  $ : num 7</span>
-<span class="co">#&gt;  $ : num [1:3] 1 4 32</span>
-<span class="co">#&gt;  $ : num 2</span>
-<span class="co">#&gt;  $ : num 6</span></code></pre></div>
-<p>If you try to extract objects inside an atomic vector, you need to use <a href="b.html#brackets">brackets</a> <code>[]</code>. This can be with an index or a name. Single brackets can return one or more elements, and include names, while double brackets can only return one element and don't have names.</p>
-<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">my_vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">3</span>, y <span class="op">=</span> <span class="fl">1</span>, z <span class="op">=</span> <span class="fl">4</span><span class="op">)</span>
-<span class="va">my_vec</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span>
-<span class="co">#&gt; y </span>
-<span class="co">#&gt; 1</span>
-<span class="va">my_vec</span><span class="op">[</span><span class="st">"y"</span><span class="op">]</span>
-<span class="co">#&gt; y </span>
-<span class="co">#&gt; 1</span>
-<span class="va">my_vec</span><span class="op">[[</span><span class="st">"y"</span><span class="op">]</span><span class="op">]</span>
-<span class="co">#&gt; [1] 1</span></code></pre></div>
-<p>You cannot use the $ operator on an atomic vector, or you will get this very common error.</p>
 <div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">my_vec</span><span class="op">$</span><span class="va">y</span>
-<span class="co">#&gt; Error in my_vec$y: $ operator is invalid for atomic vectors</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">32</span>, <span class="cn">TRUE</span>, <span class="st">"eighteen"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "32"       "TRUE"     "eighteen"</span></span></code></pre></div>
+<p>Another feature of vectors that makes them atomic is that they are always flat. If you embed vectors within vectors, they will be flattened.</p>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">6</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1]  7  1  4 32  2  6</span></span></code></pre></div>
+<p><a href="l.html#list">Lists</a>, on the other hand, can be nested.</p>
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">32</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">6</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; List of 4</span></span>
+<span><span class="co">#&gt;  $ : num 7</span></span>
+<span><span class="co">#&gt;  $ : num [1:3] 1 4 32</span></span>
+<span><span class="co">#&gt;  $ : num 2</span></span>
+<span><span class="co">#&gt;  $ : num 6</span></span></code></pre></div>
+<p>If you try to extract objects inside an atomic vector, you need to use <a href="b.html#brackets">brackets</a> <code>[]</code>. This can be with an index or a name. Single brackets can return one or more elements, and include names, while double brackets can only return one element and don't have names.</p>
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">my_vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">3</span>, y <span class="op">=</span> <span class="fl">1</span>, z <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span><span class="va">my_vec</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span></span>
+<span><span class="co">#&gt; y </span></span>
+<span><span class="co">#&gt; 1</span></span>
+<span><span class="va">my_vec</span><span class="op">[</span><span class="st">"y"</span><span class="op">]</span></span>
+<span><span class="co">#&gt; y </span></span>
+<span><span class="co">#&gt; 1</span></span>
+<span><span class="va">my_vec</span><span class="op">[[</span><span class="st">"y"</span><span class="op">]</span><span class="op">]</span></span>
+<span><span class="co">#&gt; [1] 1</span></span></code></pre></div>
+<p>You cannot use the $ operator on an atomic vector, or you will get this very common error.</p>
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">my_vec</span><span class="op">$</span><span class="va">y</span></span>
+<span><span class="co">#&gt; Error in my_vec$y: $ operator is invalid for atomic vectors</span></span></code></pre></div>
 <p>See the <a href="https://adv-r.hadley.nz/vectors-chap.html#atomic-vectors">Vectors chapter</a> of Advanced R for more advanced discussion of atomic vectors.</p>
 </details>
 </div>
-<div id="attribute" class="section level2" number="2.14">
+<div id="attribute" class="section level2" number="2.16">
 <h2>
-<span class="header-section-number">2.14</span> attribute<a class="anchor" aria-label="anchor" href="#attribute"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.16</span> attribute<a class="anchor" aria-label="anchor" href="#attribute"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Extra information about an R object</dfn></p>
 <p>You can access an <a href="o.html#object">object</a>'s attributes with <code><a href="https://rdrr.io/r/base/attr.html">attr()</a></code>. For example, datasets simulated with <a href="https://debruine.github.io/faux/" target="_blank">faux</a> have an attribute called "design" that details their design.</p>
-<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/sim_design.html">sim_design</a></span><span class="op">(</span>
-  between <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>pet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>cat <span class="op">=</span> <span class="st">"Cat Owners"</span>, 
-                         dog <span class="op">=</span> <span class="st">"Dog Owners"</span><span class="op">)</span><span class="op">)</span>,
-  within <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>am <span class="op">=</span> <span class="st">"Morning"</span>, 
-                         pm <span class="op">=</span> <span class="st">"Night"</span><span class="op">)</span><span class="op">)</span>,
-  mu <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span>,
-  r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>cat <span class="op">=</span> <span class="fl">0.3</span>, dog <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span>,
-  dv <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>score <span class="op">=</span> <span class="st">"Happiness Scale Score"</span><span class="op">)</span>,
-  plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
-
-<span class="va">design</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/attr.html">attr</a></span><span class="op">(</span><span class="va">data</span>, <span class="st">"design"</span><span class="op">)</span>
-
-<span class="va">design</span><span class="op">$</span><span class="va">dv</span>
-<span class="co">#&gt; $score</span>
-<span class="co">#&gt; [1] "Happiness Scale Score"</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">faux</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/faux/man/sim_design.html">sim_design</a></span><span class="op">(</span></span>
+<span>  between <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>pet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>cat <span class="op">=</span> <span class="st">"Cat Owners"</span>, </span>
+<span>                         dog <span class="op">=</span> <span class="st">"Dog Owners"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  within <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>am <span class="op">=</span> <span class="st">"Morning"</span>, </span>
+<span>                         pm <span class="op">=</span> <span class="st">"Night"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  mu <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span>,</span>
+<span>  r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>cat <span class="op">=</span> <span class="fl">0.3</span>, dog <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span>,</span>
+<span>  dv <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>score <span class="op">=</span> <span class="st">"Happiness Scale Score"</span><span class="op">)</span>,</span>
+<span>  plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">design</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/attr.html">attr</a></span><span class="op">(</span><span class="va">data</span>, <span class="st">"design"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">design</span><span class="op">$</span><span class="va">dv</span></span>
+<span><span class="co">#&gt; $score</span></span>
+<span><span class="co">#&gt; [1] "Happiness Scale Score"</span></span></code></pre></div>
 </div>
-<div id="attribute-html" class="section level2" number="2.15">
+<div id="attribute-html" class="section level2" number="2.17">
 <h2>
-<span class="header-section-number">2.15</span> attribute (html)<a class="anchor" aria-label="anchor" href="#attribute-html"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.17</span> attribute (html)<a class="anchor" aria-label="anchor" href="#attribute-html"><i class="fas fa-link"></i></a>
 </h2>
 <p><dfn>Extra information about an HTML element</dfn></p>
 <p>For example, the paragraph <a href="e.html#element-html">element</a> has an attribute of "id" with a value of "feature". This can be used to refer to the element to change its style with <a href="c.html#css">CSS</a> or affect its behaviour with <a href="j.html#javascript">JavaScript</a>.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb36-1"><a href="a.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">id</span><span class="ot">=</span><span class="st">"feature"</span><span class="kw">&gt;</span>This is the main paragraph of my text...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb40-1"><a href="a.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">id</span><span class="ot">=</span><span class="st">"feature"</span><span class="kw">&gt;</span>This is the main paragraph of my text...<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 
 </div>
 </div>
@@ -734,14 +1077,16 @@ $( document ).ready(function() {
 <li><a class="nav-link" href="#alpha-graphics"><span class="header-section-number">2.5</span> alpha (graphics)</a></li>
 <li><a class="nav-link" href="#alternate-hypothesis"><span class="header-section-number">2.6</span> alternate hypothesis</a></li>
 <li><a class="nav-link" href="#ampersand"><span class="header-section-number">2.7</span> ampersand</a></li>
-<li><a class="nav-link" href="#anti_join"><span class="header-section-number">2.8</span> anti_join</a></li>
-<li><a class="nav-link" href="#argument"><span class="header-section-number">2.9</span> argument</a></li>
-<li><a class="nav-link" href="#array"><span class="header-section-number">2.10</span> array</a></li>
-<li><a class="nav-link" href="#aspect-ratio"><span class="header-section-number">2.11</span> aspect ratio</a></li>
-<li><a class="nav-link" href="#assignment-operator"><span class="header-section-number">2.12</span> assignment operator</a></li>
-<li><a class="nav-link" href="#atomic"><span class="header-section-number">2.13</span> atomic</a></li>
-<li><a class="nav-link" href="#attribute"><span class="header-section-number">2.14</span> attribute</a></li>
-<li><a class="nav-link" href="#attribute-html"><span class="header-section-number">2.15</span> attribute (html)</a></li>
+<li><a class="nav-link" href="#ancova"><span class="header-section-number">2.8</span> ancova</a></li>
+<li><a class="nav-link" href="#anova"><span class="header-section-number">2.9</span> ANOVA</a></li>
+<li><a class="nav-link" href="#anti_join"><span class="header-section-number">2.10</span> anti_join</a></li>
+<li><a class="nav-link" href="#argument"><span class="header-section-number">2.11</span> argument</a></li>
+<li><a class="nav-link" href="#array"><span class="header-section-number">2.12</span> array</a></li>
+<li><a class="nav-link" href="#aspect-ratio"><span class="header-section-number">2.13</span> aspect ratio</a></li>
+<li><a class="nav-link" href="#assignment-operator"><span class="header-section-number">2.14</span> assignment operator</a></li>
+<li><a class="nav-link" href="#atomic"><span class="header-section-number">2.15</span> atomic</a></li>
+<li><a class="nav-link" href="#attribute"><span class="header-section-number">2.16</span> attribute</a></li>
+<li><a class="nav-link" href="#attribute-html"><span class="header-section-number">2.17</span> attribute (html)</a></li>
 </ul>
 
       <div class="book-extra">
@@ -759,7 +1104,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-07-09.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-08-08.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

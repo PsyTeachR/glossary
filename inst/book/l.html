@@ -7,7 +7,7 @@
 <title>13 L | Glossary </title>
 <meta name="author" content="psyTeachR Team">
 <meta name="description" content='13.1 LaTeX A typesetting program needed to create PDF files from R Markdown documents. \({\LaTeX}\) is pronounced "lah-tech" or "lay-tech" (the X is a chi) and you can make the fancy version in R...'>
-<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta name="generator" content="bookdown 0.27 with bs4_book()">
 <meta property="og:title" content="13 L | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/l.html">
@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
@@ -116,17 +116,19 @@
 Figure 13.1: Left Join
 </p>
 </div>
-<div class="sourceCode" id="cb133"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
-  id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,
-  x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>
-<span class="op">)</span>
-
-<span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>
-  id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">6</span>,
-  y <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">22</span><span class="op">:</span><span class="fl">26</span><span class="op">]</span>
-<span class="op">)</span></code></pre></div>
-<div class="inline-table"><table class="table table-sm">
+<details><summary>
+More...
+</summary><div class="sourceCode" id="cb160"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,</span>
+<span>  x <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">6</span>,</span>
+<span>  y <span class="op">=</span> <span class="va">LETTERS</span><span class="op">[</span><span class="fl">22</span><span class="op">:</span><span class="fl">26</span><span class="op">]</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<table class="table table-sm">
 <tr>
 <th>
 Table X
@@ -246,12 +248,12 @@ Z
 </table>
 </td>
 </tr>
-</table></div>
+</table>
 <p>If there is no matching data in the right table for a row, the values are set to <a href="n.html#na">NA</a>.</p>
-<div class="sourceCode" id="cb134"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># X is the left table</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">Y</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
-<div class="inline-table"><table class="table table-sm">
+<div class="sourceCode" id="cb161"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># X is the left table</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">Y</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></span></code></pre></div>
+<table class="table table-sm">
 <thead><tr>
 <th style="text-align:right;">
 id
@@ -320,12 +322,12 @@ Y
 </td>
 </tr>
 </tbody>
-</table></div>
+</table>
 <p>Order is important for left joins.</p>
-<div class="sourceCode" id="cb135"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Y is the left table</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">Y</span>, <span class="va">X</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></code></pre></div>
-<div class="inline-table"><table class="table table-sm">
+<div class="sourceCode" id="cb162"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Y is the left table</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">Y</span>, <span class="va">X</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></span></code></pre></div>
+<table class="table table-sm">
 <thead><tr>
 <th style="text-align:right;">
 id
@@ -394,8 +396,7 @@ NA
 </td>
 </tr>
 </tbody>
-</table></div>
-<p>See <a href="j.html#joins">joins</a> for other types of joins and further resources.</p>
+</table></details><p>See <a href="j.html#joins">joins</a> for other types of joins and further resources.</p>
 
 </div>
 <div id="level" class="section level2" number="13.3">
@@ -404,26 +405,26 @@ NA
 </h2>
 <p><dfn>The set of valid values for a <a href="f.html#factor">factor</a></dfn></p>
 <p>Setting the levels for a <a href="f.html#factor">factor</a> can be helpful to make sure they display and plot in the intended order.</p>
-<div class="sourceCode" id="cb136"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># levels in the right order</span>
-<span class="va">day_levels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Mon"</span>, <span class="st">"Tue"</span>, <span class="st">"Wed"</span>, <span class="st">"Thu"</span>, <span class="st">"Fri"</span>, <span class="st">"Sat"</span>, <span class="st">"Sun"</span><span class="op">)</span>
-
-<span class="co"># repeat each day 1:7 times</span>
-<span class="va">days</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="va">day_levels</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">7</span><span class="op">)</span> 
-
-<span class="co"># make into factors with and without levels</span>
-<span class="va">without_levels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">days</span><span class="op">)</span>
-<span class="va">with_levels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">days</span>, levels <span class="op">=</span> <span class="va">day_levels</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb137"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">without_levels</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb163"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># levels in the right order</span></span>
+<span><span class="va">day_levels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Mon"</span>, <span class="st">"Tue"</span>, <span class="st">"Wed"</span>, <span class="st">"Thu"</span>, <span class="st">"Fri"</span>, <span class="st">"Sat"</span>, <span class="st">"Sun"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># repeat each day 1:7 times</span></span>
+<span><span class="va">days</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="va">day_levels</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">7</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="co"># make into factors with and without levels</span></span>
+<span><span class="va">without_levels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">days</span><span class="op">)</span></span>
+<span><span class="va">with_levels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">days</span>, levels <span class="op">=</span> <span class="va">day_levels</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb164"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">without_levels</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:levels-without"></span>
 <img src="_main_files/figure-html/levels-without-1.png" alt="Without setting levels, categories display in alphabetical order." width="100%"><p class="caption">
 Figure 13.2: Without setting levels, categories display in alphabetical order.
 </p>
 </div>
-<div class="sourceCode" id="cb138"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">with_levels</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb165"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">with_levels</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:levels-with"></span>
 <img src="_main_files/figure-html/levels-with-1.png" alt="With setting levels, categories display in the level order" width="100%"><p class="caption">
@@ -445,19 +446,19 @@ Figure 13.3: With setting levels, categories display in the level order
 <p><dfn>The function used to load packages.</dfn></p>
 <p>You can use the <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> function to load <a href="p.html#package">packages</a>. This makes the functions in the package available to use without prefixing them with the package name.</p>
 <p>If you try to use a non-prefixed function without loading its package, you will get an error like this:</p>
-<div class="sourceCode" id="cb139"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"My name is {name}"</span>, name <span class="op">=</span> <span class="st">"Lisa"</span><span class="op">)</span>
-<span class="co">#&gt; Error in glue("My name is {name}", name = "Lisa"): could not find function "glue"</span></code></pre></div>
+<div class="sourceCode" id="cb166"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">glue</span><span class="op">(</span><span class="st">"My name is {name}"</span>, name <span class="op">=</span> <span class="st">"Lisa"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Error in glue("My name is {name}", name = "Lisa"): could not find function "glue"</span></span></code></pre></div>
 <p>You can use this function with its package prefix (helpfully, the <code><a href="https://glue.tidyverse.org/reference/glue.html">glue()</a></code> function comes from the glue package).</p>
-<div class="sourceCode" id="cb140"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"My name is {name}"</span>, name <span class="op">=</span> <span class="st">"Lisa"</span><span class="op">)</span>
-<span class="co">#&gt; My name is Lisa</span></code></pre></div>
+<div class="sourceCode" id="cb167"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"My name is {name}"</span>, name <span class="op">=</span> <span class="st">"Lisa"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; My name is Lisa</span></span></code></pre></div>
 <p>Or you can load the package with <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> and use it without the prefix.</p>
-<div class="sourceCode" id="cb141"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/tidyverse/glue">glue</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"My name is {name}"</span>, name <span class="op">=</span> <span class="st">"Lisa"</span><span class="op">)</span>
-<span class="co">#&gt; My name is Lisa</span></code></pre></div>
+<div class="sourceCode" id="cb168"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/tidyverse/glue">glue</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"My name is {name}"</span>, name <span class="op">=</span> <span class="st">"Lisa"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; My name is Lisa</span></span></code></pre></div>
 </div>
 <div id="library-directory" class="section level2" number="13.6">
 <h2>
@@ -465,13 +466,13 @@ Figure 13.3: With setting levels, categories display in the level order
 </h2>
 <p><dfn>The <a href="d.html#directory">directory</a> where <a href="p.html#package">packages</a> are stored.</dfn></p>
 <p>Find out the location(s) where your packages are stored with the following code:</p>
-<div class="sourceCode" id="cb142"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/libPaths.html">.libPaths</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; [1] "/Library/Frameworks/R.framework/Versions/4.2/Resources/library"</span></code></pre></div>
+<div class="sourceCode" id="cb169"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/libPaths.html">.libPaths</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "/Library/Frameworks/R.framework/Versions/4.2/Resources/library"</span></span></code></pre></div>
 <p>If you have problems installing packages, you may need to change your library location to a directory that you have permission to write to. You can do this by setting the library path.</p>
-<div class="sourceCode" id="cb143"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># use a path relevant to your computer</span>
-<span class="fu"><a href="https://rdrr.io/r/base/libPaths.html">.libPaths</a></span><span class="op">(</span><span class="st">"/Users/myaccount/R/Library"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb170"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># use a path relevant to your computer</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/libPaths.html">.libPaths</a></span><span class="op">(</span><span class="st">"/Users/myaccount/R/Library"</span><span class="op">)</span></span></code></pre></div>
 
 </div>
 <div id="likert" class="section level2" number="13.7">
@@ -527,7 +528,7 @@ Figure 13.3: With setting levels, categories display in the level order
 <p>Most conventional regression models only estimate parameters associated with fixed effects and residual error. Mixed-effects models additionally estimate random effects parameters that capture variability associated with sampling units. In psychology, these sampling units are usually human participants or stimulus items.</p>
 <p>Linear mixed-effects models are often called <strong>multi-level models</strong> or <strong>hierarchical models</strong>; these terms are roughly interchangeable. Linear mixed-effects models (LMEMs) are still <strong>linear models</strong> in the sense that they model a response variable in terms of a linear combination of predictor variables whose values are weighted by parameter estimates.</p>
 <p>Because there is no closed form solution to finding the optimal parameter estimates, their values are typically estimated through an iterative procedure that searches the space of possible values for the optimum.</p>
-<p>The function <code>lmer()</code> from the R package <strong><code>lme4</code></strong> is often used to estimate mixed-effects models. The <strong><code>brms</code></strong> package in R allows Bayesian estimation of mixed-effects models.</p>
+<p>The function <code><a href="https://rdrr.io/pkg/lmerTest/man/lmer.html">lmer()</a></code> from the R package <strong><code>lme4</code></strong> is often used to estimate mixed-effects models. The <strong><code>brms</code></strong> package in R allows Bayesian estimation of mixed-effects models.</p>
 
 </div>
 <div id="list" class="section level2" number="13.9">
@@ -536,36 +537,36 @@ Figure 13.3: With setting levels, categories display in the level order
 </h2>
 <p><dfn>A <a href="c.html#container">container</a> data type that allows items with different data types to be grouped together.</dfn></p>
 <p>Each item in a list can be any type of R <a href="o.html#object">object</a>, but is usually a <a href="v.html#vector">vector</a> or another list.</p>
-<div class="sourceCode" id="cb144"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
-  integers <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>,
-  strings <span class="op">=</span> <span class="va">LETTERS</span>,
-  another_list <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">1</span>, <span class="st">"A"</span>, <span class="cn">TRUE</span><span class="op">)</span>,
-  object <span class="op">=</span> <span class="va">rnorm</span>
-<span class="op">)</span>
-<span class="co">#&gt; $integers</span>
-<span class="co">#&gt;  [1]  1  2  3  4  5  6  7  8  9 10</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $strings</span>
-<span class="co">#&gt;  [1] "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P"</span>
-<span class="co">#&gt; [17] "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $another_list</span>
-<span class="co">#&gt; $another_list[[1]]</span>
-<span class="co">#&gt; [1] 1</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $another_list[[2]]</span>
-<span class="co">#&gt; [1] "A"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $another_list[[3]]</span>
-<span class="co">#&gt; [1] TRUE</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $object</span>
-<span class="co">#&gt; function (n, mean = 0, sd = 1) </span>
-<span class="co">#&gt; .Call(C_rnorm, n, mean, sd)</span>
-<span class="co">#&gt; &lt;bytecode: 0x7ff6f7f6caf0&gt;</span>
-<span class="co">#&gt; &lt;environment: namespace:stats&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb171"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>  integers <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>,</span>
+<span>  strings <span class="op">=</span> <span class="va">LETTERS</span>,</span>
+<span>  another_list <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">1</span>, <span class="st">"A"</span>, <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>  object <span class="op">=</span> <span class="va">rnorm</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; $integers</span></span>
+<span><span class="co">#&gt;  [1]  1  2  3  4  5  6  7  8  9 10</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $strings</span></span>
+<span><span class="co">#&gt;  [1] "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U"</span></span>
+<span><span class="co">#&gt; [22] "V" "W" "X" "Y" "Z"</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $another_list</span></span>
+<span><span class="co">#&gt; $another_list[[1]]</span></span>
+<span><span class="co">#&gt; [1] 1</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $another_list[[2]]</span></span>
+<span><span class="co">#&gt; [1] "A"</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $another_list[[3]]</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $object</span></span>
+<span><span class="co">#&gt; function (n, mean = 0, sd = 1) </span></span>
+<span><span class="co">#&gt; .Call(C_rnorm, n, mean, sd)</span></span>
+<span><span class="co">#&gt; &lt;bytecode: 0x7f8e23b4bba0&gt;</span></span>
+<span><span class="co">#&gt; &lt;environment: namespace:stats&gt;</span></span></code></pre></div>
 
 </div>
 <div id="literal" class="section level2" number="13.10">
@@ -582,43 +583,43 @@ Figure 13.3: With setting levels, categories display in the level order
 </h2>
 <p><dfn>A <a href="d.html#data-type">data type</a> representing <code>TRUE</code> or <code>FALSE</code> values.</dfn></p>
 <p>Sometimes also called <a href="b.html#boolean">boolean</a></p>
-<div class="sourceCode" id="cb145"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">true_logical_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
-  full <span class="op">=</span> <span class="cn">TRUE</span>,
-  abbreviated <span class="op">=</span> <span class="cn">T</span>,
-  integer <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/logical.html">as.logical</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span>,
-  equation <span class="op">=</span> <span class="st">"A"</span> <span class="op">==</span> <span class="st">"A"</span>
-<span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">true_logical_values</span><span class="op">)</span>
-<span class="co">#&gt; List of 4</span>
-<span class="co">#&gt;  $ full       : logi TRUE</span>
-<span class="co">#&gt;  $ abbreviated: logi TRUE</span>
-<span class="co">#&gt;  $ integer    : logi TRUE</span>
-<span class="co">#&gt;  $ equation   : logi TRUE</span></code></pre></div>
-<div class="sourceCode" id="cb146"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">false_logical_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
-  full <span class="op">=</span> <span class="cn">FALSE</span>,
-  abbreviated <span class="op">=</span> <span class="cn">F</span>,
-  integer <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/logical.html">as.logical</a></span><span class="op">(</span><span class="fl">0</span><span class="op">)</span>,
-  equation <span class="op">=</span> <span class="st">"A"</span> <span class="op">==</span> <span class="st">"B"</span>
-<span class="op">)</span>
-
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">false_logical_values</span><span class="op">)</span>
-<span class="co">#&gt; List of 4</span>
-<span class="co">#&gt;  $ full       : logi FALSE</span>
-<span class="co">#&gt;  $ abbreviated: logi FALSE</span>
-<span class="co">#&gt;  $ integer    : logi FALSE</span>
-<span class="co">#&gt;  $ equation   : logi FALSE</span></code></pre></div>
+<div class="sourceCode" id="cb172"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">true_logical_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>  full <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  abbreviated <span class="op">=</span> <span class="cn">T</span>,</span>
+<span>  integer <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/logical.html">as.logical</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span>,</span>
+<span>  equation <span class="op">=</span> <span class="st">"A"</span> <span class="op">==</span> <span class="st">"A"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">true_logical_values</span><span class="op">)</span></span>
+<span><span class="co">#&gt; List of 4</span></span>
+<span><span class="co">#&gt;  $ full       : logi TRUE</span></span>
+<span><span class="co">#&gt;  $ abbreviated: logi TRUE</span></span>
+<span><span class="co">#&gt;  $ integer    : logi TRUE</span></span>
+<span><span class="co">#&gt;  $ equation   : logi TRUE</span></span></code></pre></div>
+<div class="sourceCode" id="cb173"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">false_logical_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>  full <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  abbreviated <span class="op">=</span> <span class="cn">F</span>,</span>
+<span>  integer <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/logical.html">as.logical</a></span><span class="op">(</span><span class="fl">0</span><span class="op">)</span>,</span>
+<span>  equation <span class="op">=</span> <span class="st">"A"</span> <span class="op">==</span> <span class="st">"B"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">false_logical_values</span><span class="op">)</span></span>
+<span><span class="co">#&gt; List of 4</span></span>
+<span><span class="co">#&gt;  $ full       : logi FALSE</span></span>
+<span><span class="co">#&gt;  $ abbreviated: logi FALSE</span></span>
+<span><span class="co">#&gt;  $ integer    : logi FALSE</span></span>
+<span><span class="co">#&gt;  $ equation   : logi FALSE</span></span></code></pre></div>
 
 </div>
 <div id="long" class="section level2" number="13.12">
 <h2>
 <span class="header-section-number">13.12</span> long<a class="anchor" aria-label="anchor" href="#long"><i class="fas fa-link"></i></a>
 </h2>
-<p><dfn>Data where each observation is on a separate row</dfn></p>
+<p><dfn>A data format where each observation is on a separate row</dfn></p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:long-data">Table 13.1: </span>Long data
+<span id="tab:long-data">Table 13.1: </span>Long data format
 </caption>
 <thead><tr>
 <th style="text-align:left;">
@@ -700,7 +701,7 @@ Q3
 </tr>
 </tbody>
 </table></div>
-<p>Contrast with <a href="w.html#wide">wide data</a>.</p>
+<p>Contrast with <a href="w.html#wide">wide</a> data format.</p>
 
 </div>
 </div>
@@ -937,7 +938,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-06-27.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-08-08.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

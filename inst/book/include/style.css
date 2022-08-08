@@ -106,9 +106,17 @@ h2 {
   float: right;
 }
 
-.join_img {
-  height: 150px;
-  width: 200px;
-  float: right;
-  clear: right;
+.figure {
+  max-width: 600px;
+}
+
+details {
+  padding: 1em;
+}
+
+details summary {
+  margin: -1em -1em 0.5em -1em;
+  padding: .1em 1em;
+  background-color: var(--blue);
+  color: white;
 }

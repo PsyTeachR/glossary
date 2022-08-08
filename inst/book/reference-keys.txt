@@ -1,13 +1,16 @@
 fig:img-soundimals-hash
 fig:alpha-plot
+fig:unnamed-chunk-80
 fig:anti-join
 fig:aspect-ratio-1-displ
 fig:aspect-ratio-2-disp
 fig:binom-plot
 fig:bvn-plot
 fig:cor
-fig:unnamed-chunk-141
-fig:unnamed-chunk-142
+fig:unnamed-chunk-200
+fig:unnamed-chunk-201
+fig:unnamed-chunk-236
+fig:unnamed-chunk-249
 fig:full-join
 fig:img-function-help
 fig:geom-boxplot
@@ -19,9 +22,10 @@ fig:left-join
 fig:levels-without
 fig:levels-with
 tab:long-data
-tab:unnamed-chunk-253
+tab:unnamed-chunk-338
 fig:normal-plot
 fig:img-panes
+fig:unnamed-chunk-374
 fig:poisson-plot
 fig:new-project
 fig:qq-density
@@ -31,7 +35,7 @@ fig:right-join
 fig:semi-join
 fig:sd-plot
 fig:unif-plot
-tab:unnamed-chunk-397
+tab:unnamed-chunk-499
 tab:wide-data
 cite
 offline-access
@@ -43,7 +47,10 @@ adjusted-r-squared
 alpha
 alpha-stats
 alpha-graphics
+alternate-hypothesis
 ampersand
+ancova
+anova
 anti_join
 argument
 array
@@ -91,6 +98,7 @@ correlation-matrix
 correlation
 covariance-matrix
 covariance
+covariate
 cran
 cronbachs-alpha
 css
@@ -104,6 +112,7 @@ degrees-of-freedom
 dependent-variable
 descriptive
 deviation-score
+dimension
 directory
 discrete
 distribution
@@ -121,12 +130,16 @@ environment
 error-term
 error
 escape
+estimated-marginal-means
 extension
 extract-operator
 f
 factor
 factor-data-type
 factor-experimental
+factorial
+factorial-stats
+factorial-math
 false-negative
 false-positive
 filtering-joins
@@ -145,6 +158,8 @@ github
 glm
 global-environment
 h
+h0
+h1
 hierarchical-model
 html
 resources
@@ -154,6 +169,7 @@ ide
 in
 independent-variable
 index
+inf
 inferential
 inner-join
 integer
@@ -179,6 +195,7 @@ literal
 logical
 long
 m
+marginal-effects
 markdown
 mask
 match-operator
@@ -192,10 +209,12 @@ multivariate
 mutating-joins
 n
 na
+nan
 nhst
 nominal
 normal-distribution
 null-effect
+null-hypothesis
 numeric
 o
 object
@@ -211,6 +230,8 @@ package
 pandoc
 panes
 parameter
+partial-effects
+partial-eta-squared
 path
 pipe
 poisson-distribution
@@ -250,6 +271,7 @@ sample
 scientific-notation
 scope
 script
+seed
 semi_join
 server
 sesoi
@@ -288,6 +310,8 @@ url
 v
 value
 variable
+variable-coding
+variable-stats
 variance
 vector
 vectorized
