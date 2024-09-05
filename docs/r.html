@@ -7,7 +7,7 @@
 <title>19 R | Glossary </title>
 <meta name="author" content="psyTeachR Team">
 <meta name="description" content="19.1 R markdown The R-specific version of markdown: a way to specify formatting, such as headers, paragraphs, lists, bolding, and links, as well as code blocks and inline code. More... An R...">
-<meta name="generator" content="bookdown 0.27 with bs4_book()">
+<meta name="generator" content="bookdown 0.39 with bs4_book()">
 <meta property="og:title" content="19 R | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/r.html">
@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
@@ -198,62 +198,30 @@ More...
 <span><span class="fu">broom.mixed</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">model</span>, effects <span class="op">=</span> <span class="st">"ran_pars"</span><span class="op">)</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:left;">
-effect
-</th>
-<th style="text-align:left;">
-group
-</th>
-<th style="text-align:left;">
-term
-</th>
-<th style="text-align:right;">
-estimate
-</th>
+<thead><tr class="header">
+<th align="left">effect</th>
+<th align="left">group</th>
+<th align="left">term</th>
+<th align="right">estimate</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-ran_pars
-</td>
-<td style="text-align:left;">
-face_id
-</td>
-<td style="text-align:left;">
-sd__(Intercept)
-</td>
-<td style="text-align:right;">
-0.6040734
-</td>
+<tr class="odd">
+<td align="left">ran_pars</td>
+<td align="left">face_id</td>
+<td align="left">sd__(Intercept)</td>
+<td align="right">0.6040734</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-ran_pars
-</td>
-<td style="text-align:left;">
-rater_id
-</td>
-<td style="text-align:left;">
-sd__(Intercept)
-</td>
-<td style="text-align:right;">
-0.9144817
-</td>
+<tr class="even">
+<td align="left">ran_pars</td>
+<td align="left">rater_id</td>
+<td align="left">sd__(Intercept)</td>
+<td align="right">0.9144817</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-ran_pars
-</td>
-<td style="text-align:left;">
-Residual
-</td>
-<td style="text-align:left;">
-sd__Observation
-</td>
-<td style="text-align:right;">
-1.0434014
-</td>
+<tr class="odd">
+<td align="left">ran_pars</td>
+<td align="left">Residual</td>
+<td align="left">sd__Observation</td>
+<td align="right">1.0434014</td>
 </tr>
 </tbody>
 </table></div>
@@ -464,160 +432,72 @@ More...
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span> <span class="co"># show 5 from each group</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-dv
-</th>
-<th style="text-align:right;">
-group
-</th>
-<th style="text-align:right;">
-predicted
-</th>
-<th style="text-align:right;">
-residual
-</th>
+<thead><tr class="header">
+<th align="right">dv</th>
+<th align="right">group</th>
+<th align="right">predicted</th>
+<th align="right">residual</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-90.03418
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-101.0269
-</td>
-<td style="text-align:right;">
--10.992742
-</td>
+<tr class="odd">
+<td align="right">90.03418</td>
+<td align="right">0</td>
+<td align="right">101.0269</td>
+<td align="right">-10.992742</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-107.21824
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-101.0269
-</td>
-<td style="text-align:right;">
-6.191323
-</td>
+<tr class="even">
+<td align="right">107.21824</td>
+<td align="right">0</td>
+<td align="right">101.0269</td>
+<td align="right">6.191323</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-93.82791
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-101.0269
-</td>
-<td style="text-align:right;">
--7.199007
-</td>
+<tr class="odd">
+<td align="right">93.82791</td>
+<td align="right">0</td>
+<td align="right">101.0269</td>
+<td align="right">-7.199007</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-120.29392
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-101.0269
-</td>
-<td style="text-align:right;">
-19.266997
-</td>
+<tr class="even">
+<td align="right">120.29392</td>
+<td align="right">0</td>
+<td align="right">101.0269</td>
+<td align="right">19.266997</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-110.65416
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-101.0269
-</td>
-<td style="text-align:right;">
-9.627242
-</td>
+<tr class="odd">
+<td align="right">110.65416</td>
+<td align="right">0</td>
+<td align="right">101.0269</td>
+<td align="right">9.627242</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-106.34898
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-105.0191
-</td>
-<td style="text-align:right;">
-1.329843
-</td>
+<tr class="even">
+<td align="right">106.34898</td>
+<td align="right">1</td>
+<td align="right">105.0191</td>
+<td align="right">1.329843</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-106.17582
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-105.0191
-</td>
-<td style="text-align:right;">
-1.156684
-</td>
+<tr class="odd">
+<td align="right">106.17582</td>
+<td align="right">1</td>
+<td align="right">105.0191</td>
+<td align="right">1.156684</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-96.74411
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-105.0191
-</td>
-<td style="text-align:right;">
--8.275028
-</td>
+<tr class="even">
+<td align="right">96.74411</td>
+<td align="right">1</td>
+<td align="right">105.0191</td>
+<td align="right">-8.275028</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-83.64764
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-105.0191
-</td>
-<td style="text-align:right;">
--21.371500
-</td>
+<tr class="odd">
+<td align="right">83.64764</td>
+<td align="right">1</td>
+<td align="right">105.0191</td>
+<td align="right">-21.371500</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-107.14209
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-105.0191
-</td>
-<td style="text-align:right;">
-2.122948
-</td>
+<tr class="even">
+<td align="right">107.14209</td>
+<td align="right">1</td>
+<td align="right">105.0191</td>
+<td align="right">2.122948</td>
 </tr>
 </tbody>
 </table></div>
@@ -668,108 +548,60 @@ Table Y
 <tr>
 <td>
 <table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
-<th style="text-align:left;">
-x
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
+<th align="left">x</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-A
-</td>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">A</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-B
-</td>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">B</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-C
-</td>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">C</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-D
-</td>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">D</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:left;">
-E
-</td>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">E</td>
 </tr>
 </tbody>
 </table>
 </td>
 <td>
 <table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
-<th style="text-align:left;">
-y
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
+<th align="left">y</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-V
-</td>
+<tr class="odd">
+<td align="right">2</td>
+<td align="left">V</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-W
-</td>
+<tr class="even">
+<td align="right">3</td>
+<td align="left">W</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-X
-</td>
+<tr class="odd">
+<td align="right">4</td>
+<td align="left">X</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:left;">
-Y
-</td>
+<tr class="even">
+<td align="right">5</td>
+<td align="left">Y</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:left;">
-Z
-</td>
+<tr class="odd">
+<td align="right">6</td>
+<td align="left">Z</td>
 </tr>
 </tbody>
 </table>
@@ -781,72 +613,36 @@ Z
 <code class="sourceCode R"><span><span class="co"># X is the right table</span></span>
 <span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">Y</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></span></code></pre></div>
 <table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
-<th style="text-align:left;">
-x
-</th>
-<th style="text-align:left;">
-y
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
+<th align="left">x</th>
+<th align="left">y</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-B
-</td>
-<td style="text-align:left;">
-V
-</td>
+<tr class="odd">
+<td align="right">2</td>
+<td align="left">B</td>
+<td align="left">V</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-C
-</td>
-<td style="text-align:left;">
-W
-</td>
+<tr class="even">
+<td align="right">3</td>
+<td align="left">C</td>
+<td align="left">W</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-D
-</td>
-<td style="text-align:left;">
-X
-</td>
+<tr class="odd">
+<td align="right">4</td>
+<td align="left">D</td>
+<td align="left">X</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:left;">
-E
-</td>
-<td style="text-align:left;">
-Y
-</td>
+<tr class="even">
+<td align="right">5</td>
+<td align="left">E</td>
+<td align="left">Y</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-Z
-</td>
+<tr class="odd">
+<td align="right">6</td>
+<td align="left">NA</td>
+<td align="left">Z</td>
 </tr>
 </tbody>
 </table>
@@ -855,72 +651,36 @@ Z
 <code class="sourceCode R"><span><span class="co"># Y is the right table</span></span>
 <span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">Y</span>, <span class="va">X</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></span></code></pre></div>
 <table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
-<th style="text-align:left;">
-y
-</th>
-<th style="text-align:left;">
-x
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
+<th align="left">y</th>
+<th align="left">x</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-V
-</td>
-<td style="text-align:left;">
-B
-</td>
+<tr class="odd">
+<td align="right">2</td>
+<td align="left">V</td>
+<td align="left">B</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-W
-</td>
-<td style="text-align:left;">
-C
-</td>
+<tr class="even">
+<td align="right">3</td>
+<td align="left">W</td>
+<td align="left">C</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-X
-</td>
-<td style="text-align:left;">
-D
-</td>
+<tr class="odd">
+<td align="right">4</td>
+<td align="left">X</td>
+<td align="left">D</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-E
-</td>
+<tr class="even">
+<td align="right">5</td>
+<td align="left">Y</td>
+<td align="left">E</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-A
-</td>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">NA</td>
+<td align="left">A</td>
 </tr>
 </tbody>
 </table></details><p>See <a href="j.html#joins">joins</a> for other types of joins and further resources.</p>
@@ -1174,7 +934,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-08-08.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2024-09-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -1187,7 +947,7 @@ $( document ).ready(function() {
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

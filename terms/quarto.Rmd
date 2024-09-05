@@ -1,0 +1,7 @@
+## quarto
+
+<dfn>An open-source scientific and technical publishing system.</dfn>
+
+Quarto allows you to combine text and code to produce formatted documents, web pages, blog posts, books and more. See <https://quarto.org/> for documentation and examples.
+
+While quarto is similar to [R Markdown](r.html#r-markdown), there are some differences in code chunk syntax, and it does not require R to run, so can be used with many coding languages, or even without code.

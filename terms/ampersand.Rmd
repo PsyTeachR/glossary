@@ -10,7 +10,7 @@ c(T, T, F, F) & c(T, T, F, F)
 
 A double ampersand is not vectorised, so will ignore all but the first item in vectors, unless you have set the environment variable `_R_CHECK_LENGTH_1_LOGIC2_` to true, in which case you will get an error.
 
-```{r}
+```{r, error = TRUE}
 Sys.setenv("_R_CHECK_LENGTH_1_LOGIC2_" = "false")
 c(T, T, F, F) && c(T, T, F, F)
 ```

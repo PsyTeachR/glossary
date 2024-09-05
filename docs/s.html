@@ -7,7 +7,7 @@
 <title>20 S | Glossary </title>
 <meta name="author" content="psyTeachR Team">
 <meta name="description" content="20.1 sample A subset of the population that you wish to make an inference about through your test. The sample is a smaller group obtained from your population, but it is key that the sample is...">
-<meta name="generator" content="bookdown 0.27 with bs4_book()">
+<meta name="generator" content="bookdown 0.39 with bs4_book()">
 <meta property="og:title" content="20 S | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/s.html">
@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
@@ -292,38 +292,22 @@ Figure 20.1: Semi Join
 <span></span>
 <span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter-joins.html">semi_join</a></span><span class="op">(</span><span class="va">all_data</span>, <span class="va">to_keep</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
-<th style="text-align:left;">
-x
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
+<th align="left">x</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-B
-</td>
+<tr class="odd">
+<td align="right">2</td>
+<td align="left">B</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-C
-</td>
+<tr class="even">
+<td align="right">3</td>
+<td align="left">C</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-D
-</td>
+<tr class="odd">
+<td align="right">4</td>
+<td align="left">D</td>
 </tr>
 </tbody>
 </table></div>
@@ -361,26 +345,18 @@ D
 <code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/setops.html">intersect</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-3
-</td>
+<tr class="odd">
+<td align="right">3</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
+<tr class="even">
+<td align="right">4</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
+<tr class="odd">
+<td align="right">5</td>
 </tr>
 </tbody>
 </table></div>
@@ -390,46 +366,30 @@ id
 <code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/setops.html">union</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
+<tr class="odd">
+<td align="right">1</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
+<tr class="even">
+<td align="right">2</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
+<tr class="odd">
+<td align="right">3</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
+<tr class="even">
+<td align="right">4</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
+<tr class="odd">
+<td align="right">5</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-6
-</td>
+<tr class="even">
+<td align="right">6</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-7
-</td>
+<tr class="odd">
+<td align="right">7</td>
 </tr>
 </tbody>
 </table></div>
@@ -439,21 +399,15 @@ id
 <code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/setops.html">setdiff</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
+<tr class="odd">
+<td align="right">1</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
+<tr class="even">
+<td align="right">2</td>
 </tr>
 </tbody>
 </table></div>
@@ -558,94 +512,50 @@ More...
 <span><span class="op">)</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-original
-</th>
-<th style="text-align:right;">
-standardized
-</th>
+<thead><tr class="header">
+<th align="right">original</th>
+<th align="right">standardized</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
--1.4863011
-</td>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">-1.4863011</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
--1.1560120
-</td>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">-1.1560120</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
--0.8257228
-</td>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">-0.8257228</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
--0.4954337
-</td>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">-0.4954337</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
--0.1651446
-</td>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">-0.1651446</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-0.1651446
-</td>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">0.1651446</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-0.4954337
-</td>
+<tr class="odd">
+<td align="right">7</td>
+<td align="right">0.4954337</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-8
-</td>
-<td style="text-align:right;">
-0.8257228
-</td>
+<tr class="even">
+<td align="right">8</td>
+<td align="right">0.8257228</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-9
-</td>
-<td style="text-align:right;">
-1.1560120
-</td>
+<tr class="odd">
+<td align="right">9</td>
+<td align="right">1.1560120</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-10
-</td>
-<td style="text-align:right;">
-1.4863011
-</td>
+<tr class="even">
+<td align="right">10</td>
+<td align="right">1.4863011</td>
 </tr>
 </tbody>
 </table></div>
@@ -668,8 +578,8 @@ standardized
 <p>The result of the <code><a href="https://rdrr.io/r/base/scale.html">scale()</a></code> function is a 2-<a href="d.html#dimension">dimensional</a> <a href="m.html#matrix">matrix</a>, so you usually need to extract the vector of values like this:</p>
 <div class="sourceCode" id="cb258"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">scaled_v</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span>
-<span><span class="co">#&gt;  [1] -1.4863011 -1.1560120 -0.8257228 -0.4954337 -0.1651446  0.1651446  0.4954337</span></span>
-<span><span class="co">#&gt;  [8]  0.8257228  1.1560120  1.4863011</span></span></code></pre></div>
+<span><span class="co">#&gt;  [1] -1.4863011 -1.1560120 -0.8257228 -0.4954337 -0.1651446  0.1651446</span></span>
+<span><span class="co">#&gt;  [7]  0.4954337  0.8257228  1.1560120  1.4863011</span></span></code></pre></div>
 </div>
 </details>
 </div>
@@ -680,7 +590,7 @@ standardized
 <p><dfn>Something that does not change in response to user actions</dfn></p>
 <p>For example, in a <a href="s.html#shiny">shiny</a> app, the following code creates static and <a href="d.html#dynamic">dynamic</a> elements.</p>
 <div class="sourceCode" id="cb259"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">static</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/htmltools/man/builder.html">p</a></span><span class="op">(</span><span class="st">"This text cannot change"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">static</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">p</a></span><span class="op">(</span><span class="st">"This text cannot change"</span><span class="op">)</span></span>
 <span><span class="va">dynamic</span> <span class="op">&lt;-</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/textOutput.html">textOutput</a></span><span class="op">(</span><span class="st">"This text can change"</span><span class="op">)</span></span></code></pre></div>
 
 </div>
@@ -942,7 +852,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-08-08.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2024-09-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -955,7 +865,7 @@ $( document ).ready(function() {
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

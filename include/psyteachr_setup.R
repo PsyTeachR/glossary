@@ -7,6 +7,7 @@ library(ggplot2)
 library(webexercises)
 library(knitr)
 library(readr)
+library(purrr)
 
 # default knitr options
 knitr::opts_chunk$set(

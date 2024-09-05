@@ -7,7 +7,7 @@
 <title>4 C | Glossary </title>
 <meta name="author" content="psyTeachR Team">
 <meta name="description" content="4.1 cache Storing information for later retrieval, usually to save time. In R Markdown documents, you can cache time-consuming code chunks, such as running a complex mixed effects model, by adding...">
-<meta name="generator" content="bookdown 0.27 with bs4_book()">
+<meta name="generator" content="bookdown 0.39 with bs4_book()">
 <meta property="og:title" content="4 C | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/c.html">
@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
@@ -377,7 +377,7 @@ More...
 <p><code>
 ── Conflicts ───── tidyverse_conflicts() ──<br><span style="color:red;">x</span> <span style="color:rgb(52,101,164);">dplyr</span>::<span style="color:green;">filter()</span> masks <span style="color:rgb(52,101,164);">stats</span>::filter()<br><span style="color:red;">x</span> <span style="color:rgb(52,101,164);">lag()</span>::<span style="color:green;">filter()</span> masks <span style="color:rgb(52,101,164);">stats</span>::lag()
 </code></p>
-<p>This means that the stats package has functions called <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> and <code>lag()</code>, but the dplyr package (part of the tidyverse), also has functions with the same name.</p>
+<p>This means that the stats package has functions called <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> and <code><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lag()</a></code>, but the dplyr package (part of the tidyverse), also has functions with the same name.</p>
 <p>Because you loaded dplyr <em>after</em> stats (which is loaded by default when you start R), the functions from dplyr <a href="m.html#mask">mask</a> the functions from stats, but you can still use the functions from stats, you just need to preface them with <code>stats::</code>.</p>
 <details><summary>
 More...
@@ -393,48 +393,24 @@ More...
 <code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu">tidyr</span><span class="fu">::</span><span class="va"><a href="https://tidyr.tidyverse.org/reference/table1.html">table1</a></span>, <span class="va">country</span> <span class="op">==</span> <span class="st">"Afghanistan"</span><span class="op">)</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:left;">
-country
-</th>
-<th style="text-align:right;">
-year
-</th>
-<th style="text-align:right;">
-cases
-</th>
-<th style="text-align:right;">
-population
-</th>
+<thead><tr class="header">
+<th align="left">country</th>
+<th align="right">year</th>
+<th align="right">cases</th>
+<th align="right">population</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Afghanistan
-</td>
-<td style="text-align:right;">
-1999
-</td>
-<td style="text-align:right;">
-745
-</td>
-<td style="text-align:right;">
-19987071
-</td>
+<tr class="odd">
+<td align="left">Afghanistan</td>
+<td align="right">1999</td>
+<td align="right">745</td>
+<td align="right">19987071</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Afghanistan
-</td>
-<td style="text-align:right;">
-2000
-</td>
-<td style="text-align:right;">
-2666
-</td>
-<td style="text-align:right;">
-20595360
-</td>
+<tr class="even">
+<td align="left">Afghanistan</td>
+<td align="right">2000</td>
+<td align="right">2666</td>
+<td align="right">20595360</td>
 </tr>
 </tbody>
 </table></div>
@@ -454,21 +430,13 @@ Afghanistan
 <span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/setops.html">setdiff</a></span><span class="op">(</span><span class="va">t1</span>, <span class="va">t2</span><span class="op">)</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-a
-</th>
-<th style="text-align:right;">
-b
-</th>
+<thead><tr class="header">
+<th align="right">a</th>
+<th align="right">b</th>
 </tr></thead>
-<tbody><tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
+<tbody><tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
 </tr></tbody>
 </table></div>
 </div>
@@ -513,54 +481,30 @@ b
 <span><span class="op">)</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
-<th style="text-align:left;">
-name
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
+<th align="left">name</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-Lisa
-</td>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Lisa</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-Phil
-</td>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Phil</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-Helena
-</td>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">Helena</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-Rachel
-</td>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">Rachel</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:left;">
-Jack
-</td>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">Jack</td>
 </tr>
 </tbody>
 </table></div>
@@ -706,219 +650,102 @@ More...
 <code class="sourceCode R"><span><span class="va">pathogen_alpha</span><span class="op">$</span><span class="va">total</span><span class="op">$</span><span class="va">raw_alpha</span></span>
 <span><span class="co">#&gt; [1] 0.7379495</span></span>
 <span><span class="va">pathogen_alpha</span><span class="op">$</span><span class="va">total</span><span class="op">$</span><span class="va">std.alpha</span></span>
-<span><span class="co">#&gt; [1] 0.7441191</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] 0.744352</span></span></code></pre></div>
 <p>The <code>item.stats</code> section gives you some <a href="d.html#descriptive">descriptive</a> statistics about each item (see <code><a href="https://rdrr.io/pkg/psych/man/alpha.html">?psych::alpha</a></code> for more info).</p>
 <div class="sourceCode" id="cb92"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">pathogen_alpha</span><span class="op">$</span><span class="va">item.stats</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-n
-</th>
-<th style="text-align:right;">
-raw.r
-</th>
-<th style="text-align:right;">
-std.r
-</th>
-<th style="text-align:right;">
-r.cor
-</th>
-<th style="text-align:right;">
-r.drop
-</th>
-<th style="text-align:right;">
-mean
-</th>
-<th style="text-align:right;">
-sd
-</th>
+<colgroup>
+<col width="13%">
+<col width="8%">
+<col width="13%">
+<col width="13%">
+<col width="13%">
+<col width="13%">
+<col width="12%">
+<col width="12%">
+</colgroup>
+<thead><tr class="header">
+<th align="left"></th>
+<th align="right">n</th>
+<th align="right">raw.r</th>
+<th align="right">std.r</th>
+<th align="right">r.cor</th>
+<th align="right">r.drop</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-pathogen1
-</td>
-<td style="text-align:right;">
-19668
-</td>
-<td style="text-align:right;">
-0.6035673
-</td>
-<td style="text-align:right;">
-0.6264342
-</td>
-<td style="text-align:right;">
-0.5293053
-</td>
-<td style="text-align:right;">
-0.4530070
-</td>
-<td style="text-align:right;">
-4.443156
-</td>
-<td style="text-align:right;">
-1.457303
-</td>
+<tr class="odd">
+<td align="left">pathogen1</td>
+<td align="right">19668</td>
+<td align="right">0.6035673</td>
+<td align="right">0.6268390</td>
+<td align="right">0.5298980</td>
+<td align="right">0.4530070</td>
+<td align="right">4.443156</td>
+<td align="right">1.457303</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-pathogen2
-</td>
-<td style="text-align:right;">
-19683
-</td>
-<td style="text-align:right;">
-0.6371098
-</td>
-<td style="text-align:right;">
-0.6287978
-</td>
-<td style="text-align:right;">
-0.5371302
-</td>
-<td style="text-align:right;">
-0.4610671
-</td>
-<td style="text-align:right;">
-3.254026
-</td>
-<td style="text-align:right;">
-1.745723
-</td>
+<tr class="even">
+<td align="left">pathogen2</td>
+<td align="right">19683</td>
+<td align="right">0.6371098</td>
+<td align="right">0.6288656</td>
+<td align="right">0.5372173</td>
+<td align="right">0.4610671</td>
+<td align="right">3.254026</td>
+<td align="right">1.745723</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-pathogen3
-</td>
-<td style="text-align:right;">
-19687
-</td>
-<td style="text-align:right;">
-0.6489288
-</td>
-<td style="text-align:right;">
-0.6599706
-</td>
-<td style="text-align:right;">
-0.5842526
-</td>
-<td style="text-align:right;">
-0.4917248
-</td>
-<td style="text-align:right;">
-3.171941
-</td>
-<td style="text-align:right;">
-1.616815
-</td>
+<tr class="odd">
+<td align="left">pathogen3</td>
+<td align="right">19687</td>
+<td align="right">0.6489288</td>
+<td align="right">0.6601790</td>
+<td align="right">0.5845474</td>
+<td align="right">0.4917248</td>
+<td align="right">3.171941</td>
+<td align="right">1.616815</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-pathogen4
-</td>
-<td style="text-align:right;">
-19683
-</td>
-<td style="text-align:right;">
-0.6217909
-</td>
-<td style="text-align:right;">
-0.6168016
-</td>
-<td style="text-align:right;">
-0.5156972
-</td>
-<td style="text-align:right;">
-0.4397615
-</td>
-<td style="text-align:right;">
-3.657573
-</td>
-<td style="text-align:right;">
-1.755883
-</td>
+<tr class="even">
+<td align="left">pathogen4</td>
+<td align="right">19683</td>
+<td align="right">0.6217909</td>
+<td align="right">0.6169971</td>
+<td align="right">0.5159811</td>
+<td align="right">0.4397615</td>
+<td align="right">3.657573</td>
+<td align="right">1.755883</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-pathogen5
-</td>
-<td style="text-align:right;">
-19678
-</td>
-<td style="text-align:right;">
-0.6384423
-</td>
-<td style="text-align:right;">
-0.6657726
-</td>
-<td style="text-align:right;">
-0.5920388
-</td>
-<td style="text-align:right;">
-0.4997309
-</td>
-<td style="text-align:right;">
-4.282397
-</td>
-<td style="text-align:right;">
-1.435962
-</td>
+<tr class="odd">
+<td align="left">pathogen5</td>
+<td align="right">19678</td>
+<td align="right">0.6384423</td>
+<td align="right">0.6658879</td>
+<td align="right">0.5921973</td>
+<td align="right">0.4997309</td>
+<td align="right">4.282397</td>
+<td align="right">1.435962</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-pathogen6
-</td>
-<td style="text-align:right;">
-19655
-</td>
-<td style="text-align:right;">
-0.6120328
-</td>
-<td style="text-align:right;">
-0.5923052
-</td>
-<td style="text-align:right;">
-0.4785793
-</td>
-<td style="text-align:right;">
-0.4119616
-</td>
-<td style="text-align:right;">
-3.808751
-</td>
-<td style="text-align:right;">
-1.878335
-</td>
+<tr class="even">
+<td align="left">pathogen6</td>
+<td align="right">19655</td>
+<td align="right">0.6120328</td>
+<td align="right">0.5924165</td>
+<td align="right">0.4787382</td>
+<td align="right">0.4119616</td>
+<td align="right">3.808751</td>
+<td align="right">1.878335</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-pathogen7
-</td>
-<td style="text-align:right;">
-19692
-</td>
-<td style="text-align:right;">
-0.6331624
-</td>
-<td style="text-align:right;">
-0.6061906
-</td>
-<td style="text-align:right;">
-0.5020210
-</td>
-<td style="text-align:right;">
-0.4326954
-</td>
-<td style="text-align:right;">
-3.493500
-</td>
-<td style="text-align:right;">
-1.930726
-</td>
+<tr class="odd">
+<td align="left">pathogen7</td>
+<td align="right">19692</td>
+<td align="right">0.6331624</td>
+<td align="right">0.6062995</td>
+<td align="right">0.5021699</td>
+<td align="right">0.4326954</td>
+<td align="right">3.493500</td>
+<td align="right">1.930726</td>
 </tr>
 </tbody>
 </table></div>
@@ -932,104 +759,51 @@ pathogen7
 <span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">mixed_alpha</span><span class="op">$</span><span class="va">alpha.drop</span>, <span class="va">raw_alpha</span>, <span class="va">std.alpha</span><span class="op">)</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-raw_alpha
-</th>
-<th style="text-align:right;">
-std.alpha
-</th>
+<thead><tr class="header">
+<th align="left"></th>
+<th align="right">raw_alpha</th>
+<th align="right">std.alpha</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-pathogen1
-</td>
-<td style="text-align:right;">
-0.6776276
-</td>
-<td style="text-align:right;">
-0.6873220
-</td>
+<tr class="odd">
+<td align="left">pathogen1</td>
+<td align="right">0.6776276</td>
+<td align="right">0.6874901</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-pathogen2
-</td>
-<td style="text-align:right;">
-0.6770689
-</td>
-<td style="text-align:right;">
-0.6903431
-</td>
+<tr class="even">
+<td align="left">pathogen2</td>
+<td align="right">0.6770689</td>
+<td align="right">0.6905960</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-pathogen3
-</td>
-<td style="text-align:right;">
-0.6693926
-</td>
-<td style="text-align:right;">
-0.6799724
-</td>
+<tr class="odd">
+<td align="left">pathogen3</td>
+<td align="right">0.6693926</td>
+<td align="right">0.6801944</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-pathogen4
-</td>
-<td style="text-align:right;">
-0.6787991
-</td>
-<td style="text-align:right;">
-0.6911267
-</td>
+<tr class="even">
+<td align="left">pathogen4</td>
+<td align="right">0.6787991</td>
+<td align="right">0.6913464</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-pathogen5
-</td>
-<td style="text-align:right;">
-0.6704759
-</td>
-<td style="text-align:right;">
-0.6776676
-</td>
+<tr class="odd">
+<td align="left">pathogen5</td>
+<td align="right">0.6704759</td>
+<td align="right">0.6779193</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-pathogen6
-</td>
-<td style="text-align:right;">
-0.6860804
-</td>
-<td style="text-align:right;">
-0.6980331
-</td>
+<tr class="even">
+<td align="left">pathogen6</td>
+<td align="right">0.6860804</td>
+<td align="right">0.6982704</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-pathogen7
-</td>
-<td style="text-align:right;">
-0.6823258
-</td>
-<td style="text-align:right;">
-0.6950028
-</td>
+<tr class="odd">
+<td align="left">pathogen7</td>
+<td align="right">0.6823258</td>
+<td align="right">0.6952413</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-moral1
-</td>
-<td style="text-align:right;">
-0.7379495
-</td>
-<td style="text-align:right;">
-0.7441191
-</td>
+<tr class="even">
+<td align="left">moral1</td>
+<td align="right">0.7379495</td>
+<td align="right">0.7443520</td>
 </tr>
 </tbody>
 </table></div>
@@ -1320,7 +1094,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-08-08.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2024-09-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -1333,7 +1107,7 @@ $( document ).ready(function() {
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

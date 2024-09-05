@@ -7,7 +7,7 @@
 <title>3 B | Glossary </title>
 <meta name="author" content="psyTeachR Team">
 <meta name="description" content="3.1 base R  The set of R functions that come with a basic installation of R, before you add external packages. Contrast with tidyverse.  完成基本安裝，啟動R就自動載入的函式庫。自行安裝的外部套件，例如tidyverse，需要手動載入。   3.2...">
-<meta name="generator" content="bookdown 0.27 with bs4_book()">
+<meta name="generator" content="bookdown 0.39 with bs4_book()">
 <meta property="og:title" content="3 B | Glossary ">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psyteachr.github.io/glossary/b.html">
@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://psyteachr.github.io/glossary/images/logos/logo.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-6NP3MF25W3"></script><script>
       window.dataLayer = window.dataLayer || [];
@@ -150,52 +150,28 @@
 <span>  y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html">bind_cols</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_cols.html">bind_cols</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
-<th style="text-align:left;">
-x
-</th>
-<th style="text-align:left;">
-y
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
+<th align="left">x</th>
+<th align="left">y</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-A
-</td>
-<td style="text-align:left;">
-TRUE
-</td>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">A</td>
+<td align="left">TRUE</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-B
-</td>
-<td style="text-align:left;">
-TRUE
-</td>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">B</td>
+<td align="left">TRUE</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-C
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">C</td>
+<td align="left">FALSE</td>
 </tr>
 </tbody>
 </table></div>
@@ -210,55 +186,31 @@ FALSE
 <span>  x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">T</span>, <span class="cn">T</span>, <span class="cn">F</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html">bind_cols</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_cols.html">bind_cols</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></span>
 <span><span class="co">#&gt; New names:</span></span>
 <span><span class="co">#&gt; • `x` -&gt; `x...2`</span></span>
 <span><span class="co">#&gt; • `x` -&gt; `x...3`</span></span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
-<th style="text-align:left;">
-x...2
-</th>
-<th style="text-align:left;">
-x...3
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
+<th align="left">x...2</th>
+<th align="left">x...3</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-A
-</td>
-<td style="text-align:left;">
-TRUE
-</td>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">A</td>
+<td align="left">TRUE</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-B
-</td>
-<td style="text-align:left;">
-TRUE
-</td>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">B</td>
+<td align="left">TRUE</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-C
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">C</td>
+<td align="left">FALSE</td>
 </tr>
 </tbody>
 </table></div>
@@ -283,85 +235,43 @@ FALSE
 <span>  id <span class="op">=</span> <span class="fl">4</span><span class="op">:</span><span class="fl">6</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html">bind_rows</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
-<th style="text-align:left;">
-x
-</th>
-<th style="text-align:left;">
-y
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
+<th align="left">x</th>
+<th align="left">y</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-A
-</td>
-<td style="text-align:left;">
-TRUE
-</td>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">A</td>
+<td align="left">TRUE</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-B
-</td>
-<td style="text-align:left;">
-TRUE
-</td>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">B</td>
+<td align="left">TRUE</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-C
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">C</td>
+<td align="left">FALSE</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-D
-</td>
-<td style="text-align:left;">
-NA
-</td>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">D</td>
+<td align="left">NA</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:left;">
-E
-</td>
-<td style="text-align:left;">
-NA
-</td>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">E</td>
+<td align="left">NA</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:left;">
-F
-</td>
-<td style="text-align:left;">
-NA
-</td>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">F</td>
+<td align="left">NA</td>
 </tr>
 </tbody>
 </table></div>
@@ -546,30 +456,18 @@ More...
 <span><span class="va">data</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span>, <span class="fl">2</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:left;">
-letter
-</th>
-<th style="text-align:left;">
-vowel
-</th>
+<thead><tr class="header">
+<th align="left">letter</th>
+<th align="left">vowel</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-a
-</td>
-<td style="text-align:left;">
-TRUE
-</td>
+<tr class="odd">
+<td align="left">a</td>
+<td align="left">TRUE</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-b
-</td>
-<td style="text-align:left;">
-FALSE
-</td>
+<tr class="even">
+<td align="left">b</td>
+<td align="left">FALSE</td>
 </tr>
 </tbody>
 </table></div>
@@ -579,27 +477,15 @@ FALSE
 <code class="sourceCode R"><span><span class="va">data</span><span class="op">[</span><span class="fl">1</span>, <span class="op">]</span> <span class="co"># row 1, all columns</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
-<th style="text-align:left;">
-letter
-</th>
-<th style="text-align:left;">
-vowel
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
+<th align="left">letter</th>
+<th align="left">vowel</th>
 </tr></thead>
-<tbody><tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-a
-</td>
-<td style="text-align:left;">
-TRUE
-</td>
+<tbody><tr class="odd">
+<td align="right">1</td>
+<td align="left">a</td>
+<td align="left">TRUE</td>
 </tr></tbody>
 </table></div>
 </div>
@@ -607,38 +493,22 @@ TRUE
 <code class="sourceCode R"><span><span class="va">data</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span> <span class="co"># all rows, columns 1:2</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
-<th style="text-align:left;">
-letter
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
+<th align="left">letter</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-a
-</td>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">a</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-b
-</td>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">b</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-c
-</td>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">c</td>
 </tr>
 </tbody>
 </table></div>
@@ -652,26 +522,18 @@ c
 <code class="sourceCode R"><span><span class="va">data</span><span class="op">[</span>, <span class="fl">1</span>, drop <span class="op">=</span> <span class="cn">FALSE</span><span class="op">]</span> <span class="co"># returns a data frame</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
+<tr class="odd">
+<td align="right">1</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
+<tr class="even">
+<td align="right">2</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
+<tr class="odd">
+<td align="right">3</td>
 </tr>
 </tbody>
 </table></div>
@@ -681,26 +543,18 @@ id
 <code class="sourceCode R"><span><span class="fu">as_tibble</span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span> <span class="co"># returns a tibble</span></span></code></pre></div>
 <div class="kable-table">
 <div class="inline-table"><table class="table table-sm">
-<thead><tr>
-<th style="text-align:right;">
-id
-</th>
+<thead><tr class="header">
+<th align="right">id</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
+<tr class="odd">
+<td align="right">1</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
+<tr class="even">
+<td align="right">2</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
+<tr class="odd">
+<td align="right">3</td>
 </tr>
 </tbody>
 </table></div>
@@ -961,7 +815,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2022-08-08.</p>
+    <p>"<strong>Glossary<br><a href="https://zenodo.org/badge/latestdoi/176944576"><img src="https://zenodo.org/badge/176944576.svg" alt="DOI:10.5281/zenodo.6619215"></a></strong>" was written by psyTeachR Team. It was last built on 2024-09-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -974,7 +828,7 @@ $( document ).ready(function() {
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
